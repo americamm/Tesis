@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/TeX Live for SUSE Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: TesisAmerica.aux
+The style file: cicese.bst
+Database file #1: cicese.bib
+I was expecting a `,' or a `}'---line 340 of file cicese.bib
+ : 
+ : year = {2011}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Barstow:1991"
+Warning--I didn't find a database entry for "Adleman1998"
+Warning--to sort, need author or key in 
+Warning--empty year in ; set to ????
+Warning--empty journal in Arulampalam2002
+Warning--empty journal in Bergh2010
+Warning--empty journal in Chen2007
+Warning--empty year in Duda; set to ????
+Warning--empty publisher in Duda
+Warning--empty journal in Freeman1994
+Warning--empty journal in Mitra2007
+Warning--empty journal in Murthy2009
+Warning--empty journal in Nayakwadi2014
+Warning--empty year in Patwardhan; set to ????
+Warning--empty journal in Patwardhan
+Warning--empty journal in Reifinger2007
+Warning--empty year in Tang2011; set to ????
+Warning--empty journal in Tang2011
+Warning--empty journal in Yao2014
+You've used 31 entries,
+            2727 wiz_defined-function locations,
+            907 strings with 10597 characters,
+and the built_in function-call counts, 14371 in all, are:
+= -- 1316
+> -- 908
+< -- 18
++ -- 264
+- -- 264
+* -- 1549
+:= -- 2198
+add.period$ -- 89
+call.type$ -- 31
+change.case$ -- 183
+chr.to.int$ -- 43
+cite$ -- 112
+duplicate$ -- 534
+empty$ -- 906
+format.name$ -- 306
+if$ -- 2838
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 32
+newline$ -- 154
+num.names$ -- 120
+pop$ -- 323
+preamble$ -- 1
+purify$ -- 150
+quote$ -- 0
+skip$ -- 466
+stack$ -- 0
+substring$ -- 576
+swap$ -- 183
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 273
+warning$ -- 17
+while$ -- 133
+width$ -- 0
+write$ -- 379
+(There was 1 error message)
