@@ -5,8 +5,15 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p
 
+El sistema de reconocimiento de gestos que se propone consta de cuatro etapas: las adquisición de los datos, la detección, extracción de características y el reconocimiento. 
+
+Enseguida se describirán cada una de las etapas. 
+
 \section{Adquisición de los datos}
 
+La captura de los datos se realiza utilizando dos dispositivos Kinect, se toman los datos del sensor de profundidad, estos son representados como una imagen en escala de grises de 8 bits.  
+
+Cada cuadro capturado por el dispositivo es representado de la manera anterior, en las imágenes se puede apreciar pequeños cambios detectados al sensor gracias a la forma en que la imagen es representada. Para lograr esta representación el rango de escala de grises inicia cada 26 cm. es por eso que se pueden apreciar cambios pequeños en las distancias entre los objetos. 
 
 \begin{center}[a]
 \begin{tabular}{ c c c }
