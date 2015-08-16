@@ -75,47 +75,44 @@ En este trabajo, se toma el enfoque basado en la visi\'on ya que se quiere obten
 
 Los métodos basados en la visión se pueden representar por dos modelos \citep{Rautaray2012}, los basados en 3D, da una descripción espacial en 3D de la mano, y los basados en apariencia, como su nombre lo dice se basan en la apariencia de la mano. Los modelos basados en apariencia se dividen en dos categorías, los estáticos (modelo de silueta, de contorno deformables) y de movimiento (de color y movimiento).
 
-\subsection{Etapas del reconocimiento de gestos}
-Enseguida se describen las etapas del reconocimiento de gestos (detección, seguimiento y reconocimiento), con los métodos para llevar cada una de estas.  
-
-
-
-\subsubsection{Detección}
-
-En esta etapa se detecta y segmenta la información relevante de la imagen (la mano), con la del fondo, existen distintos métodos para obtener dichas características como la de color de la piel, forma, movimiento, entre otras que generalmente son combinaciones de alguna de estas, para obtener un mejor resultado. Enseguida se describe brevemente cada una de estas.  
-\begin{itemize}
-\item Color de la piel: Se basa principalmente en escoger un espacio del color, es una organización de colores especifica; como; RGB (rojo, verde, azul), RG (rojo, green), YCrCb (brillo, la diferencia entre el brillo y el rojo, la diferencia entre el brillo y el azul), etc. La desventaja es que si es color de la piel es similar al fondo, la segmentación no es buena, la forma de corregir esta segmentación es suponiendo que el fondo no se mueve con respecto a la cámara.
-\item Forma: Extrae el contorno de las imágenes, si se realiza correctamente se obtiene el contorno de la mano. Aunque si se toman las yemas de los dedos como características, estas pueden ser ocluidas por el resto de la mano, una posible solución es usar más de una cámara.  
-\item Valor de pixeles: Usar imágenes en tonos de gris para detectar la mano en base a la apariencia y textura, esto se logra entrenando un clasificador con un conjunto de imágenes.
-	\item Modelo 3D: Depende de cual modelo se utilice, son las características de la mano requeridas. 
-	\item Movimiento: Generalmente esta se usa con otras formas de detección ya que para utilizarse por sí sola hay que asumir que el único objeto con movimiento es la mano.
-\end{itemize}
-
-\subsubsection{Seguimiento}
-
-Consiste en localizar la mano en cada cuadro (imagen). Se lleva acabo usando los métodos de detección si estos son lo suficientemente rápidos para detectar la mano cuadro por cuadro. Se explica brevemente los métodos para llevar a cabo el seguimiento. 
-\begin{itemize}
-	\item Basado en plantillas: Este se divide en dos categorías (Características basadas en su correlación y basadas en contorno), que son similares a los métodos de detección, aunque supone que las imágenes son adquiridas con la frecuencia suficiente para llevar acabo el seguimiento. Características basadas en su correlación, sigue las características a través de cada cuadro, se asume que las características aparecen en mismo vecindario. Basadas en contorno, se basa en contornos deformables, consiste en colocar el contorno cerca de la región de interés e ir deformando este hasta encontrar la mano. 
-	\item Estimación óptima: Consiste en usar filtros Kalman, un conjunto de ecuaciones matemáticas que proporciona una forma  computacionalmente eficiente y recursiva de estimar el estado de un proceso, de una manera que minimiza la media de un error cuadrático, el filtro soporta estimaciones del pasado, presente y futuros estados, y puede hacerlo incluso cuando la naturaleza precisa del modelo del sistema es desconocida;  para hacer la detección de características en la trayectoria. 
-	\item Filtrado de partículas: Un método de estimación del estado de un sistema que cambia a lo largo del tiempo, este se compone de un conjunto de partículas (muestras) con pesos asignados, las partículas son estados posibles del proceso. Es utilizado cuando no se distingue bien la mano en la imagen. Por medio de partículas localiza la mano la desventaja es que se requieren demasiadas partículas, y el seguimiento se vuelve imposible. 
-	\item Camshift: Busca el objetivo, en este caso la mano, encuentra el patrón de distribución mas similar en una secuencia de imágenes, la distribución puede basada en el color. 
-\end{itemize}
-
-\subsubsection{Reconocimiento}
-
-Es la clasificación del gesto, la etapa final del reconocimiento, la clasificación se puede hacer dependiendo del gesto. Para gestos estáticos basta con usar algún clasificador o empatar el gesto con una plantilla. En los dinámicos se requiere otro tipo de algoritmos de aprendizaje de máquina. A continuación se encuentran los principales métodos para llevar acabo el reconocimiento del gestos. 
-\begin{itemize}
-	\item K-medias: Consiste en determinar los $k$ puntos llamados centros para minimizar el error de agrupamiento, que es la suma de las distancias de todo los puntos al centro de cada grupo. El algoritmo empieza localizando aleatoriamente $k$ grupos en el espacio espectral. Cada p\'ixel en la imagen de entrada es entonces asignadas al centro del grupo mas cercano  
-	\item {K-vecinos cercanos} (KNN, por sus siglas en ingl\'es): 
-	Este es un método para clasificar objetos basado en las muestras de entrenamiento en el espacio de características. 
-	\item Desplazamiento de medias: Es un método iterativo que encuentra el máximo en una función de densidad dada una muestra estadística de los datos.
-	\item Máquinas de soporte vectorial (SVM, por sus siglas en ingl\'es). Consiste en un mapeo no lineal de los datos de entrada a un espacio de dimensi\'on m\'as grande, donde los datos pueden ser separados de forma lineal.  
-	\item Modelo oculto de Markov (HMM, por sus siglas en ingl\'es) es definido como un conjunto de estados donde un estado es el estado inicial, un conjunto de símbolos de salida y un conjunto de estados de transición. En el reconocimiento de gestos se puede caracterizar a    los estados como un conjunto de las posiciones de la mano; las  transiciones de los estados como la probabilidad de transición de cierta posición de la mano a otra; el símbolo de salida como una postura especifica y la secuencia de los símbolos de salida como  el gesto de la mano.   
-	\item Redes neuronales con retraso: Son una clase de redes neuronales artificiales que se enfocan en datos continuos, haciendo que el sistema sea adaptable para redes en linea y les da ventajas sobre aplicaciones en tiempo real. 
-\end{itemize}  
 
 \section{Estado del arte}\label{EstadoDelArte} 
 
+La sección anterior explica los distintos enfoques para llevar acabo el reconocimiento de gestos, a continuación se encuentran los trabajos relevantes de cada uno de estos enfoques. 
+
+\subsection{Modelos de contacto}
+
+\citep{Yoon2012} propone un modelo de mezclas adaptativo, usando un guante de datos, la principal limitante para este sistema es que solo reconoce gestos estáticos. 
+
+Aunque estos sistemas nos evitan algunos problemas que son consecuencia de los modelos basados en la visión, nos son perfectos, lo cual veremos enseguida.  
+
+Uno de los dispositivos recientes es MYO \footnote{https://www.thalmic.com/en/myo/}, aunque de este se hablar\'a en la ultima parte de esta secci\'on. 
+
+Como se describi\'o en la secci\'on anterior en los modelos de contacto la principal limitante es el uso de dispositivos en el cuerpo para el reconocimiento de los gestos, por esta raz\'on la mayor\'ia de los sistemas para el reconocimiento estan enfocados en modelos basados en visi\'on. Por lo que resulta natural que la investigaci\'on propuesta tome un enfoque basado en la visi\'on.
+
+\subsection{Modelos basados en la visi\'on}  
+
+\cite{Premaratne2013} realizan un modelo de reconocimiento de gestos est\'atico y din\'amico basados en el algoritmo de Lucas-Kanade. Las principales ventajas de este m\'etodo son que es invariante a rotaci\'on, escala y al fondo. Aunque el modelo es afectado por los cambios en la iluminaci\'on.
+
+\citep{Huang2011}, propone un método para calculas gestos estáticos y dinámicos usando los filtros Gabor y haciendo una estimación del \'angulo en el que se encuentra la mano. Las principales ventajas son que el sistema funciona con cambios en la iluminaci\'on y es robusto a la rotaci\'on y escala. La desventaja es que el problema de oclusi\'on no es tratado.
+
+\citep{MohdAsaari2014} hacen el seguimiento de la mano para identificar los gestos din\'amicos usando los filtros adaptativos Kalman y el m\'etodo Eigenhand. Con esta combinaci\'on obtienen un excelente resultado pues el sistema es robusto a la iluminaci\'on, cambio de pose, y a la oclusi\'on causada la mano oculta por alg\'un objeto en movimiento. 
+
+ 
+
+A pesar que la mayoría de los modelos vistos en la parte de arriba solucionan muchos de los problemas de los modelos basados en la visi\'on. Ninguno de ellos puede resolver el problema de iluminaci\'on y oclusi\'on, formada por lo dedos. All\'i la importancia de la investigaci\'on propuesta, pues dar\'a soluci\'on a estos inconvenientes al momento de reconocer los gestos.
+ 
+\subsection{Sistemas comerciales}
+
+Existen dispositivos como: Leap Motion \footnote{https://www.leapmotion.com/}, MYO, y software, como Flutter \footnote{https://flutterapp.com/}, que realizan el reconocimiento de gestos, y estos los utilizan como reemplazo del rat\'on de la computadora. 
+ 
+Leap Motion es un dispositivo que detecta los movimientos de manos y dedos por medio de sensores infrarrojos. Leap Motion es robusto con el fondo, escala y rotaci\'on,  pero no cuando existe oclusi\'on pues cuando se realiza un zoom, como el que se hace en cualquier dispositivo touch, produce un error, y se presenta cuando un dedo es cubierto por otro, un problema grave es que tiene problemas de reconocimiento en circunstancias normales de luz.  
+
+MYO este dispositivo, solo se encuentra en pre-ordenamiento, detecta los impulsos el\'ectricos de tus m\'usculos mediante tres sensores, giroscopio, aceler\'ometro y magnet\'ometros. MYO es un brazalete  que promete controlar la computadora y dispositivos tales como el celular o la tableta. La principal desventaja del sensor es que gestos involuntarios pueden producir acciones no deseadas.
+
+Flutter  es un software que reconoce cuatro gestos est\'aticos detectando la palma de la mano, usando la c\'amara web como dispositivo de entrada. Flutter permite controlar aplicaciones multimedia de la computadora. 	Las limitaciones del software son que solo reconoce gestos est\'aticos, realiza acciones no deseadas al hacer gestos involuntarios y no siempre reconoce los gestos. 
+
+Aunque estos dispositivos y software para reconocer gestos  solucionan algunos problemas importantes en el \'area, sigue existiendo el problema de oclusi\'on  e iluminaci\'on. De allí la importancia que existan modelos que puedan resolver estos problemas se presentan frecuentemente en el reconocimiento. 
 
 \section{Organizaci\'on de la tesis}\label{OrganizacionTesis}
 La tesis se encuentra distribuida de la siguiente manera: la segunda sección presenta los fundamentos teóricos como base para la comprensión del tema. La tercera sección presenta el sistema propuesto. En la cuarta sección se encuentran las pruebas realizadas al sistema junto con los resultados y la discusiones de estos. Finalmente la quinta sección presenta las conclusiones generales del sistema y el trabajo futuro. 

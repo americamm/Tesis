@@ -11,27 +11,35 @@
 \BOOKMARK [1][-]{section.1.4}{Objetivos especificos}{chapter.1}% 11
 \BOOKMARK [1][-]{section.1.5}{Limitaciones y suposiciones}{chapter.1}% 12
 \BOOKMARK [1][-]{section.1.6}{Reconocimiento de gestos con la manos}{chapter.1}% 13
-\BOOKMARK [2][-]{subsection.1.6.1}{Etapas del reconocimiento de gestos}{section.1.6}% 14
-\BOOKMARK [3][-]{subsubsection.1.6.1.1}{Detecci\363n}{subsection.1.6.1}% 15
-\BOOKMARK [3][-]{subsubsection.1.6.1.2}{Seguimiento}{subsection.1.6.1}% 16
-\BOOKMARK [3][-]{subsubsection.1.6.1.3}{Reconocimiento}{subsection.1.6.1}% 17
-\BOOKMARK [1][-]{section.1.7}{Estado del arte}{chapter.1}% 18
-\BOOKMARK [1][-]{section.1.8}{Organizaci\363n de la tesis}{chapter.1}% 19
-\BOOKMARK [0][-]{chapter.2}{Marco te\363rico}{}% 20
-\BOOKMARK [1][-]{section.2.1}{Detecci\363n r\341pida de objetos usando caracter\355sticas simples utilizando el clasificador de cascada impulsada}{chapter.2}% 21
-\BOOKMARK [2][-]{subsection.2.1.1}{Caracter\355sticas Haar}{section.2.1}% 22
-\BOOKMARK [2][-]{subsection.2.1.2}{Imagen integral}{section.2.1}% 23
-\BOOKMARK [2][-]{subsection.2.1.3}{Clasificador AdaBoost}{section.2.1}% 24
-\BOOKMARK [2][-]{subsection.2.1.4}{Clasificador AdaBoost en Cascada}{section.2.1}% 25
-\BOOKMARK [0][-]{chapter.3}{Sistema Propuesto}{}% 26
-\BOOKMARK [1][-]{section.3.1}{Adquisici\363n de los datos}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.2}{Detecci\363n}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.3}{Extracci\363n de caracter\355sticas}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.4}{Reconocimiento}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.4.1}{Extracci\363n de par\341metros}{section.3.4}% 31
-\BOOKMARK [2][-]{subsection.3.4.2}{C\341lculo de la demanda de ox\355geno}{section.3.4}% 32
-\BOOKMARK [0][-]{chapter.4}{Resultados}{}% 33
-\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 34
-\BOOKMARK [1][-]{section.5.1}{Trabajo futuro}{chapter.5}% 35
-\BOOKMARK [0][-]{section.5.1}{Lista de referencias}{}% 36
-\BOOKMARK [0][-]{appendix.Alph6}{Ap\351ndice}{}% 37
+\BOOKMARK [1][-]{section.1.7}{Estado del arte}{chapter.1}% 14
+\BOOKMARK [2][-]{subsection.1.7.1}{Modelos de contacto}{section.1.7}% 15
+\BOOKMARK [2][-]{subsection.1.7.2}{Modelos basados en la visi\363n}{section.1.7}% 16
+\BOOKMARK [2][-]{subsection.1.7.3}{Sistemas comerciales}{section.1.7}% 17
+\BOOKMARK [1][-]{section.1.8}{Organizaci\363n de la tesis}{chapter.1}% 18
+\BOOKMARK [0][-]{chapter.2}{Marco te\363rico}{}% 19
+\BOOKMARK [1][-]{section.2.1}{Gestos}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.2}{Reconocimiento de gestos con la manos}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.1}{Etapas del reconocimiento de gestos}{section.2.2}% 22
+\BOOKMARK [3][-]{subsubsection.2.2.1.1}{Detecci\363n}{subsection.2.2.1}% 23
+\BOOKMARK [3][-]{subsubsection.2.2.1.2}{Seguimiento}{subsection.2.2.1}% 24
+\BOOKMARK [3][-]{subsubsection.2.2.1.3}{Reconocimiento}{subsection.2.2.1}% 25
+\BOOKMARK [1][-]{section.2.3}{Imagen}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.4}{Kinect}{chapter.2}% 27
+\BOOKMARK [1][-]{section.2.5}{Detecci\363n r\341pida de objetos usando caracter\355sticas simples utilizando el clasificador de cascada impulsada}{chapter.2}% 28
+\BOOKMARK [2][-]{subsection.2.5.1}{Caracter\355sticas Haar}{section.2.5}% 29
+\BOOKMARK [2][-]{subsection.2.5.2}{Imagen integral}{section.2.5}% 30
+\BOOKMARK [2][-]{subsection.2.5.3}{Clasificador AdaBoost}{section.2.5}% 31
+\BOOKMARK [2][-]{subsection.2.5.4}{Clasificador AdaBoost en Cascada}{section.2.5}% 32
+\BOOKMARK [1][-]{section.2.6}{Ma\341quinas de soporte vectorial}{chapter.2}% 33
+\BOOKMARK [0][-]{chapter.3}{Sistema Propuesto}{}% 34
+\BOOKMARK [1][-]{section.3.1}{Adquisici\363n de los datos}{chapter.3}% 35
+\BOOKMARK [1][-]{section.3.2}{Detecci\363n}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.3}{Extracci\363n de caracter\355sticas}{chapter.3}% 37
+\BOOKMARK [1][-]{section.3.4}{Reconocimiento}{chapter.3}% 38
+\BOOKMARK [2][-]{subsection.3.4.1}{Extracci\363n de par\341metros}{section.3.4}% 39
+\BOOKMARK [2][-]{subsection.3.4.2}{C\341lculo de la demanda de ox\355geno}{section.3.4}% 40
+\BOOKMARK [0][-]{chapter.4}{Resultados}{}% 41
+\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 42
+\BOOKMARK [1][-]{section.5.1}{Trabajo futuro}{chapter.5}% 43
+\BOOKMARK [0][-]{section.5.1}{Lista de referencias}{}% 44
+\BOOKMARK [0][-]{appendix.Alph6}{Ap\351ndice}{}% 45

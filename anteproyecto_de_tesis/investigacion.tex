@@ -1,0 +1,37 @@
+\chapter{Investigaci\'on previa relevante}
+
+La sección anterior explica los distintos enfoques para llevar acabo el reconocimiento de gestos, a continuación se encuentran los trabajos relevantes de cada uno de estos enfoques. 
+
+\section{Modelos de contacto}
+
+\citep{Yoon2012} propone un modelo de mezclas adaptativo, usando un guante de datos, la principal limitante para este sistema es que solo reconoce gestos estáticos. 
+
+Aunque estos sistemas nos evitan algunos problemas que son consecuencia de los modelos basados en la visión, nos son perfectos, lo cual veremos enseguida.  
+
+Uno de los dispositivos recientes es MYO \footnote{https://www.thalmic.com/en/myo/}, aunque de este se hablar\'a en la ultima parte de esta secci\'on. 
+
+Como se describi\'o en la secci\'on anterior en los modelos de contacto la principal limitante es el uso de dispositivos en el cuerpo para el reconocimiento de los gestos, por esta raz\'on la mayor\'ia de los sistemas para el reconocimiento estan enfocados en modelos basados en visi\'on. Por lo que resulta natural que la investigaci\'on propuesta tome un enfoque basado en la visi\'on.
+
+\section{Modelos basados en la visi\'on}  
+
+\cite{Premaratne2013} realizan un modelo de reconocimiento de gestos est\'atico y din\'amico basados en el algoritmo de Lucas-Kanade. Las principales ventajas de este m\'etodo son que es invariante a rotaci\'on, escala y al fondo. Aunque el modelo es afectado por los cambios en la iluminaci\'on.
+
+\citep{Huang2011}, propone un método para calculas gestos estáticos y dinámicos usando los filtros Gabor y haciendo una estimación del \'angulo en el que se encuentra la mano. Las principales ventajas son que el sistema funciona con cambios en la iluminaci\'on y es robusto a la rotaci\'on y escala. La desventaja es que el problema de oclusi\'on no es tratado.
+
+\citep{MohdAsaari2014} hacen el seguimiento de la mano para identificar los gestos din\'amicos usando los filtros adaptativos Kalman y el m\'etodo Eigenhand. Con esta combinaci\'on obtienen un excelente resultado pues el sistema es robusto a la iluminaci\'on, cambio de pose, y a la oclusi\'on causada la mano oculta por alg\'un objeto en movimiento. 
+
+ 
+
+A pesar que la mayoría de los modelos vistos en la parte de arriba solucionan muchos de los problemas de los modelos basados en la visi\'on. Ninguno de ellos puede resolver el problema de iluminaci\'on y oclusi\'on, formada por lo dedos. All\'i la importancia de la investigaci\'on propuesta, pues dar\'a soluci\'on a estos inconvenientes al momento de reconocer los gestos.
+ 
+\section{Sistemas comerciales}
+
+Existen dispositivos como: Leap Motion \footnote{https://www.leapmotion.com/}, MYO, y software, como Flutter \footnote{https://flutterapp.com/}, que realizan el reconocimiento de gestos, y estos los utilizan como reemplazo del rat\'on de la computadora. 
+ 
+Leap Motion es un dispositivo que detecta los movimientos de manos y dedos por medio de sensores infrarrojos. Leap Motion es robusto con el fondo, escala y rotaci\'on,  pero no cuando existe oclusi\'on pues cuando se realiza un zoom, como el que se hace en cualquier dispositivo touch, produce un error, y se presenta cuando un dedo es cubierto por otro, un problema grave es que tiene problemas de reconocimiento en circunstancias normales de luz.  
+
+MYO este dispositivo, solo se encuentra en pre-ordenamiento, detecta los impulsos el\'ectricos de tus m\'usculos mediante tres sensores, giroscopio, aceler\'ometro y magnet\'ometros. MYO es un brazalete  que promete controlar la computadora y dispositivos tales como el celular o la tableta. La principal desventaja del sensor es que gestos involuntarios pueden producir acciones no deseadas.
+
+Flutter  es un software que reconoce cuatro gestos est\'aticos detectando la palma de la mano, usando la c\'amara web como dispositivo de entrada. Flutter permite controlar aplicaciones multimedia de la computadora. 	Las limitaciones del software son que solo reconoce gestos est\'aticos, realiza acciones no deseadas al hacer gestos involuntarios y no siempre reconoce los gestos. 
+
+Aunque estos dispositivos y software para reconocer gestos  solucionan algunos problemas importantes en el \'area, sigue existiendo el problema de oclusi\'on  e iluminaci\'on. De allí la importancia que existan modelos que puedan resolver estos problemas se presentan frecuentemente en el reconocimiento. 

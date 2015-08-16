@@ -1,0 +1,600 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.7.23)  20 AUG 2014 10:19
+entering extended mode
+**anteproyecto_ecuaciones.tex
+
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\an
+teproyecto_ecuaciones.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\ci
+cese.cls"
+Document Class: cicese 2001/04/21 v1.4e Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@appendix=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty"
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty"
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box26
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen111
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen112
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen113
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks18
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks19
+\eqnshift@=\dimen114
+\alignsep@=\dimen115
+\tagshift@=\dimen116
+\tagwidth@=\dimen117
+\totwidth@=\dimen118
+\lineht@=\dimen119
+\@envbody=\toks20
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\na
+tbib.sty"
+Package: natbib 1995/12/06 6.1 (PWD)
+\bibhang=\skip46
+LaTeX Info: Redefining \cite on input line 301.
+\c@NAT@ctr=\count103
+)
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\ci
+cese.sty"
+\c@dal@supervisornum=\count104
+\c@dal@readernum=\count105
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count106
+))
+\Gin@req@height=\dimen120
+\Gin@req@width=\dimen121
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ansinew.def"
+File: ansinew.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen122
+)
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\tc
+ilatex.tex"
+TCILATEX Macros for Scientific Word 5.0 <13 Feb 2003>.
+NOTICE: This macro file is NOT proprietary and may be freely copied and distrib
+uted.
+\msipdfoutput=\count107
+\@hour=\count108
+\@minute=\count109
+\GRAPHICSTYPE=\count110
+\@msidraft=\count111
+\dispkind=\count112
+\theight=\dimen123
+LaTeX Info: Redefining \rm on input line 645.
+LaTeX Info: Redefining \sf on input line 646.
+LaTeX Info: Redefining \tt on input line 647.
+LaTeX Info: Redefining \bf on input line 648.
+LaTeX Info: Redefining \it on input line 649.
+LaTeX Info: Redefining \sl on input line 650.
+LaTeX Info: Redefining \sc on input line 651.
+\c@theorem=\count113
+\c@axiom=\count114
+\c@remark=\count115
+\c@example=\count116
+\c@exercise=\count117
+\c@definition=\count118
+\c@equationnumber=\count119
+)
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\an
+teproyecto_ecuaciones.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=472.03123pt
+* \textheight=624.25346pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count120
+\scratchdimen=\dimen124
+\scratchbox=\box29
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen125
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
+\everyMPtoPDFconversion=\toks25
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 114.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 114.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+pdfTeX warning: pdflatex (file C:/Users/AmericaIvone/Documents/3er cuatri/Semin
+ario/anteproyecto_de_tesis/Figures/logoCicese2009.pdf): PDF inclusion: found PD
+F version <1.6>, but at most version <1.5> allowed
+<Figures/logoCicese2009.pdf, id=8, 505.40819pt x 264.02641pt>
+File: Figures/logoCicese2009.pdf Graphic file (type pdf)
+
+<use Figures/logoCicese2009.pdf>
+Package pdftex.def Info: Figures/logoCicese2009.pdf used on input line 114.
+(pdftex.def)             Requested size: 108.405pt x 56.6276pt.
+ [2 <C:/Users/AmericaIvone/Documents/3er cuatri/Seminario/anteproyecto_de_tesis
+/Figures/logoCicese2009.pdf>]
+! Undefined control sequence.
+\preliminares ...fter {\@posgrado } \@orientacion 
+                                                  . Ensenada, Baja Californi...
+l.114 \preliminares
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (1.17552pt too wide) in paragraph at lines 114--114
+\OT1/cmr/bx/n/12 RESUMEN \OT1/cmr/m/n/12 del an-teproyecto de tesis de \OT1/cmr
+/bx/n/12 AM[]ERICA IVONE MEN-DOZA MORALES\OT1/cmr/m/n/12 ,
+ []
+
+
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\re
+sumen.tex") [1]
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\an
+teproyecto_ecuaciones.toc"
+Overfull \hbox (2.75305pt too wide) detected at line 18
+\OT1/cmr/bx/n/12 VIII. 
+ []
+
+)
+\tf@toc=\write3
+ [2
+
+]
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\in
+troduccion.tex"
+Cap\'{i}tulo I.
+)
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\ma
+rco.tex" [1
+
+] [2]
+Cap\'{i}tulo II.
+
+Package natbib Warning: Citation `Mitra2007' on page 3 undefined on input line 
+7.
+
+
+Package natbib Warning: Citation `Mitra2007' on page 3 undefined on input line 
+7.
+
+
+Package natbib Warning: Citation `Rautaray2012' on page 3 undefined on input li
+ne 9.
+
+
+Overfull \hbox (9.88783pt too wide) in paragraph at lines 9--10
+\OT1/cmr/m/n/12 seguimiento; de-pen-di-endo si los gestos son dinamicos, por 
+ultimo la etapa fi-nal el re-conocimiento
+ []
+
+
+Package natbib Warning: Citation `Rautaray2012' on page 3 undefined on input li
+ne 11.
+
+
+Package natbib Warning: Citation `Nayakwadi2014' on page 3 undefined on input l
+ine 11.
+
+[3
+
+]
+
+Package natbib Warning: Citation `Rautaray2012' on page 4 undefined on input li
+ne 15.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 26.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+ [4] [5]
+Overfull \hbox (21.68587pt too wide) in paragraph at lines 38--39
+[]\OT1/cmr/m/n/12 Estimacion optima: Con-siste en usar fil-tros Kalman, un co
+n-junto de ecua-ciones matematicas
+ []
+
+[6] [7]
+! Missing } inserted.
+<inserted text> 
+                }
+l.69 $$d(X,Y)=\sqrt{(X- Y)^t \Sigma^{-1}(X - Y)$
+                                                $
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Package natbib Warning: Citation `Mitchell2012' on page 8 undefined on input li
+ne 74.
+
+[8]
+
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82 \end{itemize}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.82 \end{itemize}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.82 \end{itemize}
+                  
+Things are pretty mixed up, but I think the worst is over.
+
+)
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\in
+vestigacion.tex" [9]
+Cap\'{i}tulo III.
+
+Package natbib Warning: Citation `Yoon2012' on page 10 undefined on input line 
+7.
+
+
+Package natbib Warning: Citation `Premaratne2013' on page 10 undefined on input
+ line 17.
+
+
+Package natbib Warning: Citation `Huang2011' on page 10 undefined on input line
+ 19.
+
+[10
+
+]
+
+Package natbib Warning: Citation `MohdAsaari2014' on page 11 undefined on input
+ line 21.
+
+
+Overfull \hbox (7.87637pt too wide) in paragraph at lines 33--34
+[]\OT1/cmr/m/n/12 MYO este dis-pos-i-tivo, solo se en-cuen-tra en pre-ordenamie
+nto, de-tecta los im-pul-sos electricos
+ []
+
+[11])
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\im
+portancia.tex" [12]
+Cap\'{i}tulo IV.
+)
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\li
+mitaciones.tex" [13
+
+]
+Cap\'{i}tulo V.
+)
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\co
+ntribucion.tex" [14
+
+]
+Cap\'{i}tulo VI.
+)
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\ob
+jetivos.tex" [15
+
+]
+Cap\'{i}tulo VII.
+
+Overfull \hbox (10.26654pt too wide) in paragraph at lines 12--13
+[]\OT1/cmr/m/n/12 Proponer un mod-elo basado en los metodos de prediccion par
+a re-cono-cer gestos dinamicos,
+ []
+
+[16
+
+])
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\me
+todologia.tex" [17]
+Cap\'{i}tulo VIII.
+)
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\ca
+lendario.tex" [18
+
+]
+Cap\'{i}tulo IX.
+<Figures/cal.png, id=87, 617.30624pt x 529.22719pt>
+File: Figures/cal.png Graphic file (type png)
+ <use Figures/cal.png>
+Package pdftex.def Info: Figures/cal.png used on input line 5.
+(pdftex.def)             Requested size: 531.01431pt x 455.24408pt.
+
+
+! LaTeX Error: No counter 'figure' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 	\caption
+             {Calendario de actividades del proyecto de investigación}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (58.98308pt too wide) in paragraph at lines 5--6
+ [][] 
+ []
+
+! Undefined control sequence.
+\fnum@figure ->\figurename 
+                           \nobreakspace \thefigure 
+l.6 ... actividades del proyecto de investigación}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) [19
+
+
+! Undefined control sequence.
+<write> ...gure}{\protect \numberline {\thefigure 
+                                                  }{\ignorespaces Calendario...
+l.131 	\newpage
+                }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+ <C:/Users/AmericaIvone/Documents/3er cuatri/Seminario/anteproyecto_de_tesis/Fi
+gures/cal.png>]
+! Too many }'s.
+l.131 	\newpage }
+                 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+No file anteproyecto_ecuaciones.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+
+("C:\Users\AmericaIvone\Documents\3er cuatri\Seminario\anteproyecto_de_tesis\an
+teproyecto_ecuaciones.aux") ) 
+Here is how much of TeX's memory you used:
+ 3251 strings out of 493921
+ 43292 string characters out of 3147261
+ 103013 words of memory out of 3000000
+ 6468 multiletter control sequences out of 15000+200000
+ 13106 words of font info for 50 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,8n,26p,838b,355s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.p
+fb>
+Output written on anteproyecto_ecuaciones.pdf (23 pages, 259065 bytes).
+PDF statistics:
+ 129 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+

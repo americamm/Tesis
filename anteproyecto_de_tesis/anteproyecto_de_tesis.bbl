@@ -1,0 +1,71 @@
+\begin{thebibliography}{}
+
+\bibitem[Huang {\em et~al.\/}(2011)Huang, Hu, y Chang]{Huang2011}
+Huang, D.-Y., Hu, W.-C., y Chang, S.-H. (2011).
+\newblock {Gabor filter-based hand-pose angle estimation for hand gesture
+  recognition under varying illumination}.
+\newblock {\em Expert Systems with Applications\/}, {\bf 38}(5): 6031--6042.
+
+\bibitem[Mitchell(2012)Mitchell]{Mitchell2012}
+Mitchell, H. (2012).
+\newblock {\em {Data Fusion: Concepts and Ideas}\/}.
+\newblock Springer, segundo edici\'on.
+\newblock ISBN 9783642272219.
+
+\bibitem[Mitra {\em et~al.\/}(2007)Mitra, Member, y Acharya]{Mitra2007}
+Mitra, S., Member, S., y Acharya, T. (2007).
+\newblock {Gesture Recognition : A Survey}.
+\newblock {\bf 37}(3): 311--324.
+
+\bibitem[{Mohd Asaari} {\em et~al.\/}(2014){Mohd Asaari}, Rosdi, y
+  Suandi]{MohdAsaari2014}
+{Mohd Asaari}, M.~S., Rosdi, B.~A., y Suandi, S.~A. (2014).
+\newblock {Adaptive Kalman Filter Incorporated Eigenhand (AKFIE) for real-time
+  hand tracking system}.
+\newblock {\em Multimedia Tools and Applications\/}.
+
+\bibitem[Murthy y Jadon(2009)Murthy y Jadon]{Murthy2009}
+Murthy, G. R.~S. y Jadon, R.~S. (2009).
+\newblock {A REVIEW OF VISION BASED HAND GESTURES RECOGNITION}.
+\newblock {\bf 2}(2): 405--410.
+
+\bibitem[Nayakwadi(2014)Nayakwadi]{Nayakwadi2014}
+Nayakwadi, V. (2014).
+\newblock {Natural Hand Gestures Recognition System for Intelligent HCI : A
+  Survey}.
+\newblock {\bf 3}(1): 10--19.
+
+\bibitem[Premaratne {\em et~al.\/}(2013)Premaratne, Ajaz, y
+  Premaratne]{Premaratne2013}
+Premaratne, P., Ajaz, S., y Premaratne, M. (2013).
+\newblock {Hand gesture tracking and recognition system using Lucas–Kanade
+  algorithms for control of consumer electronics}.
+\newblock {\em Neurocomputing\/}, {\bf 116}: 242--249.
+
+\bibitem[Rautaray y Agrawal(2012)Rautaray y Agrawal]{Rautaray2012}
+Rautaray, S.~S. y Agrawal, A. (2012).
+\newblock {Vision based hand gesture recognition for human computer
+  interaction: a survey}.
+\newblock {\em Artificial Intelligence Review\/}.
+
+\bibitem[Reifinger {\em et~al.\/}(2007)Reifinger, Wallhoff, Ablassmeier,
+  Poitschke, y Rigoll]{Reifinger2007}
+Reifinger, S., Wallhoff, F., Ablassmeier, M., Poitschke, T., y Rigoll, G.
+  (2007).
+\newblock {Static and Dynamic Hand-Gesture Recognition for Augmented Reality
+  Applications}.
+\newblock p\'aginas 728--737.
+
+\bibitem[Sgouropoulos {\em et~al.\/}(2013)Sgouropoulos, Stergiopoulou, y
+  Papamarkos]{Sgouropoulos2013}
+Sgouropoulos, K., Stergiopoulou, E., y Papamarkos, N. (2013).
+\newblock {A Dynamic Gesture and Posture Recognition System}.
+\newblock {\em Journal of Intelligent \& Robotic Systems\/}.
+
+\bibitem[Yoon {\em et~al.\/}(2012)Yoon, Yang, y Cho]{Yoon2012}
+Yoon, J.~W., Yang, S.~I., y Cho, S.~B. (2012).
+\newblock {Adaptive mixture-of-experts models for data glove interface with
+  multiple users}.
+\newblock {\em Expert Systems with Applications\/}, {\bf 39}(5): 4898--4907.
+
+\end{thebibliography}

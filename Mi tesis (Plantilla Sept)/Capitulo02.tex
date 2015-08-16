@@ -5,6 +5,63 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p
 
+\section{Gestos} 
+La definición de gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran a los dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o de interactuar con el ambiente. De acuerdo con la literatura \citep{Mitra2007} los gestos con las manos se clasifican en estáticos y dinámicos, los primeros están definidos como la posición y orientación de la mano en el espacio manteniendo esta pose durante cierto tiempo, por ejemplo para hacer una se\~nal de aventón, a diferencia de los gestos dinámicos donde hay movimiento de la pose, un ejemplo  es cuando mueves la mano en se\~nal de adiós. De aquí en adelante entiéndase el término gestos con las manos, como gestos. 
+
+\section{Reconocimiento de gestos con la manos}\label{ReconocimientoGestos} 
+El reconocimiento de gestos se divide en tres fases \citep{Rautaray2012}, detección o segmentación; extracci\'on de caracter\'isticas seguimiento; dependiendo si los gestos son dinámicos, por último la etapa final el reconocimiento del gesto.  
+Este se clasifican en dos modelos, basados en la visi\'on y en contacto, esta clasificaci\'on depende de la manera en que son capturados los datos, es decir la forma en que se obtiene el gesto, para posteriormente poderlo reconocer. 
+
+Los primeros acercamientos para llevar acabo el reconocimiento de gestos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario, esto para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visi\'on surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde c\'amaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundida.  
+
+En este trabajo, se toma el enfoque basado en la visi\'on ya que se quiere obtener un sistema que para el usuario sea facil de interactuar, y esta interacci\'on sea natural y una manera de lograr esto es tomando este enfoque.  estos tienen mayor complejidad (acomodra este parrafo :P)
+
+
+Los métodos basados en la visión se pueden representar por dos modelos \citep{Rautaray2012}, los basados en 3D, da una descripción espacial en 3D de la mano, y los basados en apariencia, como su nombre lo dice se basan en la apariencia de la mano. Los modelos basados en apariencia se dividen en dos categorías, los estáticos (modelo de silueta, de contorno deformables) y de movimiento (de color y movimiento).
+
+\subsection{Etapas del reconocimiento de gestos}
+Enseguida se describen las etapas del reconocimiento de gestos (detección, seguimiento y reconocimiento), con los métodos para llevar cada una de estas.  
+
+
+
+\subsubsection{Detección}
+
+En esta etapa se detecta y segmenta la información relevante de la imagen (la mano), con la del fondo, existen distintos métodos para obtener dichas características como la de color de la piel, forma, movimiento, entre otras que generalmente son combinaciones de alguna de estas, para obtener un mejor resultado. Enseguida se describe brevemente cada una de estas.  
+\begin{itemize}
+\item Color de la piel: Se basa principalmente en escoger un espacio del color, es una organización de colores especifica; como; RGB (rojo, verde, azul), RG (rojo, green), YCrCb (brillo, la diferencia entre el brillo y el rojo, la diferencia entre el brillo y el azul), etc. La desventaja es que si es color de la piel es similar al fondo, la segmentación no es buena, la forma de corregir esta segmentación es suponiendo que el fondo no se mueve con respecto a la cámara.
+\item Forma: Extrae el contorno de las imágenes, si se realiza correctamente se obtiene el contorno de la mano. Aunque si se toman las yemas de los dedos como características, estas pueden ser ocluidas por el resto de la mano, una posible solución es usar más de una cámara.  
+\item Valor de pixeles: Usar imágenes en tonos de gris para detectar la mano en base a la apariencia y textura, esto se logra entrenando un clasificador con un conjunto de imágenes.
+	\item Modelo 3D: Depende de cual modelo se utilice, son las características de la mano requeridas. 
+	\item Movimiento: Generalmente esta se usa con otras formas de detección ya que para utilizarse por sí sola hay que asumir que el único objeto con movimiento es la mano.
+\end{itemize}
+
+\subsubsection{Seguimiento}
+
+Consiste en localizar la mano en cada cuadro (imagen). Se lleva acabo usando los métodos de detección si estos son lo suficientemente rápidos para detectar la mano cuadro por cuadro. Se explica brevemente los métodos para llevar a cabo el seguimiento. 
+\begin{itemize}
+	\item Basado en plantillas: Este se divide en dos categorías (Características basadas en su correlación y basadas en contorno), que son similares a los métodos de detección, aunque supone que las imágenes son adquiridas con la frecuencia suficiente para llevar acabo el seguimiento. Características basadas en su correlación, sigue las características a través de cada cuadro, se asume que las características aparecen en mismo vecindario. Basadas en contorno, se basa en contornos deformables, consiste en colocar el contorno cerca de la región de interés e ir deformando este hasta encontrar la mano. 
+	\item Estimación óptima: Consiste en usar filtros Kalman, un conjunto de ecuaciones matemáticas que proporciona una forma  computacionalmente eficiente y recursiva de estimar el estado de un proceso, de una manera que minimiza la media de un error cuadrático, el filtro soporta estimaciones del pasado, presente y futuros estados, y puede hacerlo incluso cuando la naturaleza precisa del modelo del sistema es desconocida;  para hacer la detección de características en la trayectoria. 
+	\item Filtrado de partículas: Un método de estimación del estado de un sistema que cambia a lo largo del tiempo, este se compone de un conjunto de partículas (muestras) con pesos asignados, las partículas son estados posibles del proceso. Es utilizado cuando no se distingue bien la mano en la imagen. Por medio de partículas localiza la mano la desventaja es que se requieren demasiadas partículas, y el seguimiento se vuelve imposible. 
+	\item Camshift: Busca el objetivo, en este caso la mano, encuentra el patrón de distribución mas similar en una secuencia de imágenes, la distribución puede basada en el color. 
+\end{itemize}
+
+\subsubsection{Reconocimiento}
+
+Es la clasificación del gesto, la etapa final del reconocimiento, la clasificación se puede hacer dependiendo del gesto. Para gestos estáticos basta con usar algún clasificador o empatar el gesto con una plantilla. En los dinámicos se requiere otro tipo de algoritmos de aprendizaje de máquina. A continuación se encuentran los principales métodos para llevar acabo el reconocimiento del gestos. 
+\begin{itemize}
+	\item K-medias: Consiste en determinar los $k$ puntos llamados centros para minimizar el error de agrupamiento, que es la suma de las distancias de todo los puntos al centro de cada grupo. El algoritmo empieza localizando aleatoriamente $k$ grupos en el espacio espectral. Cada p\'ixel en la imagen de entrada es entonces asignadas al centro del grupo mas cercano  
+	\item {K-vecinos cercanos} (KNN, por sus siglas en ingl\'es): 
+	Este es un método para clasificar objetos basado en las muestras de entrenamiento en el espacio de características. 
+	\item Desplazamiento de medias: Es un método iterativo que encuentra el máximo en una función de densidad dada una muestra estadística de los datos.
+	\item Máquinas de soporte vectorial (SVM, por sus siglas en ingl\'es). Consiste en un mapeo no lineal de los datos de entrada a un espacio de dimensi\'on m\'as grande, donde los datos pueden ser separados de forma lineal.  
+	\item Modelo oculto de Markov (HMM, por sus siglas en ingl\'es) es definido como un conjunto de estados donde un estado es el estado inicial, un conjunto de símbolos de salida y un conjunto de estados de transición. En el reconocimiento de gestos se puede caracterizar a    los estados como un conjunto de las posiciones de la mano; las  transiciones de los estados como la probabilidad de transición de cierta posición de la mano a otra; el símbolo de salida como una postura especifica y la secuencia de los símbolos de salida como  el gesto de la mano.   
+	\item Redes neuronales con retraso: Son una clase de redes neuronales artificiales que se enfocan en datos continuos, haciendo que el sistema sea adaptable para redes en linea y les da ventajas sobre aplicaciones en tiempo real. 
+\end{itemize}  
+
+
+\section{Imagen} 
+
+\section{Kinect} 
 
 \section{Detección rápida de objetos usando características simples utilizando el clasificador de cascada impulsada}\label{Detec}
 
@@ -14,28 +71,32 @@ La técnica clasifica si el objeto se encuentra en la escena, usando AdaBoost en
 
 En seguida se explica a detalle cada etapa del método. 
 
-\subsection{Características Haar}
+\subsection{Características Haar}  
+
+Las características Haar son operadores rectangulares. Existen distintos tipos \ref{fig:haarFeatures} , enseguida explicare tres tipos de estos:  
+
+Las características con dos rectángulos, contienen dos regiones rectangulares adyacentes, y el valor de la característica se calcula tomando la diferencia de la suma de ambas regiones. 
+
+Las características con tres rectángulos, contienen tres regiones rectangulares adyacentes, y el valor de la característica se calcula la suma de las regiones exteriores y se resta la suma de la región interior. 
+ 
+Las características con cuatro rectángulos, contienen cuatro regiones rectangulares adyacentes, y el valor de la característica se obtiene con la diferencia entre las regiones pares diagonales.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.3]{./Figures/haarFeatures.jpg}
+\end{center}
+\caption{Ejemplo de características Haar}
+\label{haarFeatures}
+\end{figure} 
+
 
 \subsection{Imagen integral} 
 
 \subsection{Clasificador AdaBoost}  
 
-\subsection{Clasificador AdaBoost en Cascada} 
+\subsection{Clasificador AdaBoost en Cascada}  
 
-
-
-
-\begin{figure}%[htbp]
-\centering
-\subfigure[Mi metus, sed bibendum ligula efficitur eu.]{\includegraphics[width=80mm]{./Figures/instauracionFatigaReposo_1_3}} 
-\subfigure[Mi metus, sed bibendum ligula efficitur eu.]{\includegraphics[width=80mm]{./Figures/instauracionFatigaReposo_1_3}}
-\subfigure[Mi metus, sed bibendum ligula efficitur eu.]{\includegraphics[width=160mm]{./Figures/instauracionFatigaReposo_1_3}}
-\caption{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet lobortis turpis. Praesent auctor mi metus.  } \label{fig:instauracionFatigaReposo}
-\end{figure}
-
-
-
-
+\section{Ma\'aquinas de soporte vectorial}
 
 \newpage
 %%=====================================================

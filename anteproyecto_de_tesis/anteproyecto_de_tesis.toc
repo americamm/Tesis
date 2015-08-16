@@ -1,0 +1,20 @@
+\contentsline {chapter}{Resumen en espa\~nol}{i}
+\contentsline {chapter}{\numberline {I.}Introducci\'on}{1}
+\contentsline {chapter}{\numberline {II.}Marco te\'orico}{3}
+\contentsline {section}{\numberline {II.1}Reconocimiento de gestos con las manos}{3}
+\contentsline {section}{\numberline {II.2}M\'etricas de distancia}{8}
+\contentsline {section}{\numberline {II.3}Fusi\'on de datos}{8}
+\contentsline {chapter}{\numberline {III.}Investigaci\'on previa relevante}{10}
+\contentsline {section}{\numberline {III.1}Modelos de contacto}{10}
+\contentsline {section}{\numberline {III.2}Modelos basados en la visi\'on}{10}
+\contentsline {section}{\numberline {III.3}Sistemas comerciales}{11}
+\contentsline {chapter}{\numberline {IV.}Importancia de la investigaci\'on}{13}
+\contentsline {chapter}{\numberline {V.}Limitaciones y suposiciones}{14}
+\contentsline {chapter}{\numberline {VI.}Contribuci\'on al conocimiento}{15}
+\contentsline {chapter}{\numberline {VII.}Objetivos}{16}
+\contentsline {section}{\numberline {VII.1}Objetivo general}{16}
+\contentsline {section}{\numberline {VII.2}Objetivos espec\'ificos}{16}
+\contentsline {section}{\numberline {VII.3}Preguntas de investigaci\'on}{17}
+\contentsline {chapter}{\numberline {VIII.}Metodolog\'ia de la investigaci\'on}{18}
+\contentsline {chapter}{\numberline {IX.}Calendario de actividades}{19}
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Referencias}}{20}
