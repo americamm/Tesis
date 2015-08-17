@@ -1,0 +1,21 @@
+Seccion de deteccion  
+
+La etapa de deteccion utiliza el algoritmo para detectar objetos de manera rapida desarrollado por \citep{viola Jones}, 
+como se vio en el capitulo dos seccion chalalala, este algoritmo  clasifica las imagenes basandose en el valor de caracteristicas,
+las caracteristicas usadas son como las que se muestran en la siguiente figura.  
+
+La seleccion de las caracteristicas se lleva acabo por medio del algoritmo AdaBoost; la implementacion de este se lleva acabo por 
+medio del software OpenCV Haar training classifier. Se entreno con 1000 imagenes positivas (imagenes de la mano) y 2000 negativas 
+(imagenes del fondo). Las imagenes positivas fueron generadas de 100 imagenes de la mano usando el software Create Sample 
+
+
+
+con tres poses distintas, puno, palma abierta 
+y palma cerrada; las cuales fueron tomadas de 6 personas distintas.
+
+las imagenes para entrenar fueron tomadas de nuestra base de datos, se seleccionaron
+
+y se seleccionaron 2000 imagenes negativas. Las muestras se encuentran en el repositorio de github.
+
+
+
