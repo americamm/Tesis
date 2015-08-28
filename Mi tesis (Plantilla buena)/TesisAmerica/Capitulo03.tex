@@ -30,7 +30,7 @@ En la siguiente imagen se puede apreciar un ejemplo de las imágenes de profundi
 \label{fig:ImagenCapturada}
 \end{figure}  
 
-Debido a la naturaleza del funcionamiento del Kinect, las imágenes obtenidas contiene ruido del tipo (poner), el cual nos da una imagen como la figura  , el ruido  es reducido usando un filtros de mediana este es aplicado en toda la imagen en una ventada de tama\~no $13$. La imagen resultante es como la que se muestra en la figura \ref{fig:ImagenCapturada}
+Debido a la naturaleza del funcionamiento del Kinect, las imágenes obtenidas contiene ruido del tipo (poner), el cual nos da una imagen como la figura  , el ruido  es reducido usando un filtros de mediana este es aplicado en toda la imagen en una ventada de tama\~no $13$. La imagen resultante $S(x,y)$ es como la que se muestra en la figura \ref{fig:ImagenCapturada}
 
 \begin{figure}[!h]
 \begin{center}
@@ -40,8 +40,6 @@ Debido a la naturaleza del funcionamiento del Kinect, las imágenes obtenidas co
 \label{fig:ImagenCapturadaNoNoise}
 \end{figure}  
   
-
-
 
 %\begin{center}[a]
 %\begin{tabular}{ c c c }
@@ -146,6 +144,33 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 \label{fig:ImagenFondo}
 \end{figure}  
 
+Para localizar la mano en cada cuadro proveniente de los Kinect, una ventana de tamaño $kahkjgv$ se desliza por la imagen, una vez que la mano se localiza la región de interés $Roi(x,y)$ es seleccionada alrededor de la mano, como se puede ver en la figura \ref{fig:Roi}.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/roi.png}
+\end{center}
+\caption{Mano seleccionada}
+\label{fig:Roi}
+\end{figure}  
+
+Ya que se tiene localizada el área donde se encuentra la mano, el siguiente paso es segmentar la mano del Roi. El siguiente paso es binarizar el Roi, pero antes se aplican las operaciones morfológicas apertura y cerradura, en ese orden. la apertura se aplico con un elemento estructural rectangular de $3$ p\'ixeles de ancho $11$ p\'ixeles de altura, como el que se muestra en la figura (). La cerradura se aplic\'o también con un elemento estructural rectangular del tamaño tal. 
+El resultado de estas operaciones es quitar las uniones pequeñas no deseadas causadas por el sensor, también juntar o cerrar hoyos.  
+Las imágenes siguientes muestran el resultado de aplicar las operaciones apertura y cerradura al Roi. 
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/roi.png}
+\end{center}
+\caption{Mano seleccionada}
+\label{fig:Roi}
+\end{figure}  
+
+
+Las operaciones anteriores son aplicadas antes de la binarizaci\'on pues se obtiene un mejor resultado que aplicarlas después de la binarizaci\'on.  
+Para binarizar el Roi, se aplic\'o el algoritmo desarrollado por NiblacK (citar), se decidió usar este método debido a la naturaleza de la imagen. Los parámetros que fueron usados fue con k=0.5 y una ventana de $3x3$ p\'ixeles. 
+
+ 
 
 
 %\begin{table}
