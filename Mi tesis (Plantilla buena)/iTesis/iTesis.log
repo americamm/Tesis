@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  26 AUG 2015 11:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  27 AUG 2015 19:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1104,10 +1104,6 @@ LaTeX Info: Redefining \sc on input line 651.
 ) (./iTesis.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
-
-
-LaTeX Warning: Label `ReconocimientoGestos' multiply defined.
-
 )
 \openout1 = `iTesis.aux'.
 
@@ -1373,12 +1369,7 @@ Overfull \hbox (6.40569pt too wide) in paragraph at lines 111--112
 Cap\'{\i }tulo 2
 [8
 
-] [9] [10] [11]
-
-LaTeX Warning: Reference `fig:haarFeatures' on page 12 undefined on input line 
-76.
-
-<./Figures/haarFeatures.jpg, id=337, 963.6pt x 722.7pt>
+] [9] [10] [11] <./Figures/haarFeatures.jpg, id=348, 963.6pt x 722.7pt>
 File: ./Figures/haarFeatures.jpg Graphic file (type jpg)
 
 <use ./Figures/haarFeatures.jpg>
@@ -1389,17 +1380,51 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
  [12] [13 <./Figures/haarFeatures.jpg>])
 (./Capitulo03.tex
 Cap\'{\i }tulo 3
+<./Figures/system.png, id=358, 1174.3875pt x 1025.8325pt>
+File: ./Figures/system.png Graphic file (type png)
+
+<use ./Figures/system.png>
+Package pdftex.def Info: ./Figures/system.png used on input line 16.
+(pdftex.def)             Requested size: 234.87334pt x 205.16287pt.
+
+<./Figures/166.png, id=361, 473.51906pt x 346.29375pt>
+File: ./Figures/166.png Graphic file (type png)
+ <use ./Figures/166.png>
+Package pdftex.def Info: ./Figures/166.png used on input line 27.
+(pdftex.def)             Requested size: 236.75894pt x 173.14644pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [14
 
-] [15]) (./Capitulo04.tex
+ <./Figures/system.png>]
+<./Figures/166_W13.png, id=369, 472.76625pt x 345.54094pt>
+File: ./Figures/166_W13.png Graphic file (type png)
+
+<use ./Figures/166_W13.png>
+Package pdftex.def Info: ./Figures/166_W13.png used on input line 37.
+(pdftex.def)             Requested size: 236.38254pt x 172.77003pt.
+ [15 <./Figures/166.png> <./Figures/166_W13.png>]
+<./Figures/TrainingImages.png, id=385, 320.397pt x 142.131pt>
+File: ./Figures/TrainingImages.png Graphic file (type png)
+
+<use ./Figures/TrainingImages.png>
+Package pdftex.def Info: ./Figures/TrainingImages.png used on input line 135.
+(pdftex.def)             Requested size: 160.1981pt x 71.0653pt.
+File: ./Figures/166_W13.png Graphic file (type png)
+ <use ./Figures/166_W13.png>
+Package pdftex.def Info: ./Figures/166_W13.png used on input line 143.
+(pdftex.def)             Requested size: 236.38254pt x 172.77003pt.
+ [16 <./Figures/TrainingImages.png>] [17]) (./Capitulo04.tex
 Cap\'{\i }tulo 4
-[16
+[18
 
 ]) (./Capitulo05.tex
 Cap\'{\i }tulo 5
-[17
+[19
 
-]) (./iTesis.bbl [18
+]) (./iTesis.bbl [20
 
 ] (/usr/share/texmf/tex/latex/ucs/data/uninames.dat
 File: uninames.dat 2013/05/13 UCS: Unicode character names, compressed
@@ -1447,9 +1472,9 @@ PRIVATE USE TWO
 Character is not defined in uni-*.def files.
 Enter I!<RET> to define the glyph.
 
-) (./Apendice.tex [19]
+) (./Apendice.tex [21]
 Ap\'{e}ndice A
-) [20
+) [22
 
 ]
 
@@ -1468,17 +1493,14 @@ Package rerunfilecheck Info: File `iTesis.out' has not changed.
 (rerunfilecheck)             Checksum: 97006DC51D3190F1537810B76A97EE79;3061.
 
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 21346 strings out of 493315
- 327963 string characters out of 6145894
- 483598 words of memory out of 5000000
- 24202 multiletter control sequences out of 15000+600000
+ 21390 strings out of 493315
+ 328960 string characters out of 6145894
+ 484736 words of memory out of 5000000
+ 24235 multiletter control sequences out of 15000+600000
  36996 words of font info for 78 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  53i,8n,92p,1456b,712s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1509,10 +1531,10 @@ lic/amsfonts/cm/cmmi12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr
 texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/hel
 vetic/uhvbo8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/s
 hare/texmf/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on iTesis.pdf (30 pages, 143894 bytes).
+Output written on iTesis.pdf (32 pages, 1430920 bytes).
 PDF statistics:
- 432 PDF objects out of 1000 (max. 8388607)
- 385 compressed objects within 4 object streams
- 83 named destinations out of 1000 (max. 500000)
- 368 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 470 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
+ 90 named destinations out of 1000 (max. 500000)
+ 388 words of extra memory for PDF output out of 10000 (max. 10000000)
 

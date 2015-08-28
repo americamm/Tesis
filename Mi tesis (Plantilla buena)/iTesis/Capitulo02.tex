@@ -5,37 +5,37 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p
 
-\section{Gestos} 
+\section{Gestos}\label{sec:2Gestos}
 La definición de gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran a los dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o de interactuar con el ambiente. De acuerdo con la literatura \citep{Mitra2007} los gestos con las manos se clasifican en estáticos y dinámicos, los primeros están definidos como la posición y orientación de la mano en el espacio manteniendo esta pose durante cierto tiempo, por ejemplo para hacer una se\~nal de aventón, a diferencia de los gestos dinámicos donde hay movimiento de la pose, un ejemplo  es cuando mueves la mano en se\~nal de adiós. De aquí en adelante entiéndase el término gestos con las manos, como gestos. 
 
-\section{Reconocimiento de gestos con la manos}\label{ReconocimientoGestos} 
+\section{Reconocimiento de gestos con la manos}\label{sec:2ReconocimientoGestos} 
 El reconocimiento de gestos se divide en tres fases \citep{Rautaray2012}, detección o segmentación; extracci\'on de caracter\'isticas seguimiento; dependiendo si los gestos son dinámicos, por último la etapa final el reconocimiento del gesto.  
 Este se clasifican en dos modelos, basados en la visi\'on y en contacto, esta clasificaci\'on depende de la manera en que son capturados los datos, es decir la forma en que se obtiene el gesto, para posteriormente poderlo reconocer. 
 
 Los primeros acercamientos para llevar acabo el reconocimiento de gestos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario, esto para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visi\'on surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde c\'amaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundida.  
 
-En este trabajo, se toma el enfoque basado en la visi\'on ya que se quiere obtener un sistema que para el usuario sea facil de interactuar, y esta interacci\'on sea natural y una manera de lograr esto es tomando este enfoque.  estos tienen mayor complejidad (acomodra este parrafo :P)
+En este trabajo, se toma el enfoque basado en la visi\'on ya que se quiere obtener un sistema que para el usuario sea fácil de interactuar, y esta interacci\'on sea natural y una manera de lograr esto es tomando este enfoque.  estos tienen mayor complejidad (acomodar este parrafo :P)
 
 
 Los métodos basados en la visión se pueden representar por dos modelos \citep{Rautaray2012}, los basados en 3D, da una descripción espacial en 3D de la mano, y los basados en apariencia, como su nombre lo dice se basan en la apariencia de la mano. Los modelos basados en apariencia se dividen en dos categorías, los estáticos (modelo de silueta, de contorno deformables) y de movimiento (de color y movimiento).
 
-\subsection{Etapas del reconocimiento de gestos}
+\subsection{Etapas del reconocimiento de gestos}\label{subsec:EtapasReconocimiento} 
 Enseguida se describen las etapas del reconocimiento de gestos (detección, seguimiento y reconocimiento), con los métodos para llevar cada una de estas.  
 
 
 
-\subsubsection{Detección}
+\subsubsection{Detección}\label{sssec:EtapaDeteccion}
 
 En esta etapa se detecta y segmenta la información relevante de la imagen (la mano), con la del fondo, existen distintos métodos para obtener dichas características como la de color de la piel, forma, movimiento, entre otras que generalmente son combinaciones de alguna de estas, para obtener un mejor resultado. Enseguida se describe brevemente cada una de estas.  
 \begin{itemize}
 \item Color de la piel: Se basa principalmente en escoger un espacio del color, es una organización de colores especifica; como; RGB (rojo, verde, azul), RG (rojo, green), YCrCb (brillo, la diferencia entre el brillo y el rojo, la diferencia entre el brillo y el azul), etc. La desventaja es que si es color de la piel es similar al fondo, la segmentación no es buena, la forma de corregir esta segmentación es suponiendo que el fondo no se mueve con respecto a la cámara.
 \item Forma: Extrae el contorno de las imágenes, si se realiza correctamente se obtiene el contorno de la mano. Aunque si se toman las yemas de los dedos como características, estas pueden ser ocluidas por el resto de la mano, una posible solución es usar más de una cámara.  
-\item Valor de pixeles: Usar imágenes en tonos de gris para detectar la mano en base a la apariencia y textura, esto se logra entrenando un clasificador con un conjunto de imágenes.
+\item Valor de p\'ixeles: Usar imágenes en tonos de gris para detectar la mano en base a la apariencia y textura, esto se logra entrenando un clasificador con un conjunto de imágenes.
 	\item Modelo 3D: Depende de cual modelo se utilice, son las características de la mano requeridas. 
 	\item Movimiento: Generalmente esta se usa con otras formas de detección ya que para utilizarse por sí sola hay que asumir que el único objeto con movimiento es la mano.
 \end{itemize}
 
-\subsubsection{Seguimiento}
+\subsubsection{Seguimiento}\label{sssec:EtapaSeguimiento}
 
 Consiste en localizar la mano en cada cuadro (imagen). Se lleva acabo usando los métodos de detección si estos son lo suficientemente rápidos para detectar la mano cuadro por cuadro. Se explica brevemente los métodos para llevar a cabo el seguimiento. 
 \begin{itemize}
@@ -45,7 +45,7 @@ Consiste en localizar la mano en cada cuadro (imagen). Se lleva acabo usando los
 	\item Camshift: Busca el objetivo, en este caso la mano, encuentra el patrón de distribución mas similar en una secuencia de imágenes, la distribución puede basada en el color. 
 \end{itemize}
 
-\subsubsection{Reconocimiento}
+\subsubsection{Reconocimiento}\label{sssec:EtapaReconocimiento}
 
 Es la clasificación del gesto, la etapa final del reconocimiento, la clasificación se puede hacer dependiendo del gesto. Para gestos estáticos basta con usar algún clasificador o empatar el gesto con una plantilla. En los dinámicos se requiere otro tipo de algoritmos de aprendizaje de máquina. A continuación se encuentran los principales métodos para llevar acabo el reconocimiento del gestos. 
 \begin{itemize}
@@ -63,7 +63,7 @@ Es la clasificación del gesto, la etapa final del reconocimiento, la clasificac
 
 \section{Kinect} 
 
-\section{Detección rápida de objetos usando características simples utilizando el clasificador de cascada impulsada}\label{Detec}
+\section{Detección rápida de objetos usando características simples utilizando el clasificador de cascada impulsada}\label{sec:ViolaJones}
 
 El m\'etodo  desarrollado por (ref Viola Jones) fue creado originalmente para atacar el problema de detección de rostros, pero este puede ser usando para detectar cualquier objeto, debido a la forma en que este fue creado, pues detecta un objeto clasificando imágenes basándose en el valor de características simples.
 
@@ -71,7 +71,7 @@ La técnica clasifica si el objeto se encuentra en la escena, usando AdaBoost en
 
 En seguida se explica a detalle cada etapa del método. 
 
-\subsection{Características Haar}  
+\subsection{Características Haar}\label{subsec:CaracteristicasHaar}  
 
 Las características Haar son operadores rectangulares. Existen distintos tipos \ref{fig:haarFeatures} , enseguida explicare tres tipos de estos:  
 
@@ -86,17 +86,17 @@ Las características con cuatro rectángulos, contienen cuatro regiones rectangu
 \includegraphics[scale=.3]{./Figures/haarFeatures.jpg}
 \end{center}
 \caption{Ejemplo de características Haar}
-\label{haarFeatures}
+\label{fig:haarFeatures}
 \end{figure} 
 
 
-\subsection{Imagen integral} 
+\subsection{Imagen integral}\label{subsec:IntegralImage} 
 
-\subsection{Clasificador AdaBoost}  
+\subsection{Clasificador AdaBoost}\label{subsec:AdaboostClasifier}  
 
-\subsection{Clasificador AdaBoost en Cascada}  
+\subsection{Clasificador AdaBoost en Cascada}\label{subsec:AdaboostCascade}  
 
-\section{Ma\'aquinas de soporte vectorial}
+\section{Ma\'aquinas de soporte vectorial}\label{sec:SVM}
 
 \newpage
 %%=====================================================

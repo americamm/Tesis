@@ -20,22 +20,22 @@ Es por eso que se propone crear un sistema que haga el reconocimiento de gestos 
 El sistema se enfoca principalmente en atacar los problemas de gestos con las manos que no tienen movimiento, y despu\'es se abordar\'an los gestos con las manos que involucran movimiento. El sistema aplicar\'a los gestos como control de la computadora, esto con ayuda del dispositivo Kinect como  herramienta para capturar la informaci\'on de entrada. 
   
 
-\section{Definici\'on del problema}\label{DefinicionProblema}
+\section{Definici\'on del problema}\label{sec:DefinicionProblema}
 
 A finales de los an\~os noventa se empezar\'on a desarrollar t\'ecnicas para reconocer gestos con las manos, las primeras fueron basadas en contacto y le siguieron las basadas en la visión, estas fueron las m\'as aceptadas debido a la facilidad de interacción entre el usuario, entre otras cosas, aunque estas tienen sus desventajas pues no es problema fácil de resolver debido a que existen distintas variables a considerar.
 
 Aunque existen diversos m\'etodos para el reconocimiento de gestos con las manos, con buena precisi\'on, sigue siendo un problema abierto ya que no es f\'acil tener un sistema que se adecue a todo tipo de situaciones como: amigable con el usuario, invariante a la iluminación, rotación, al fondo, que funcione en tiempo real o cuando exista oclusión.
 
 
-\section{Justificaci\'on}\label{Just}
+\section{Justificaci\'on}\label{sec:Just}
 
 
 
-\section{Objetivo general}\label{ObjetivoGeneral}
+\section{Objetivo general}\label{sec:ObjetivoGeneral}
  
 Desarrollar un sistema que permita controlar la computadora haciendo uso de gestos con las manos, estáticos y dinámicos. El sistema debe ser robusto, funcionar en circunstancias de baja iluminación, cuando exista oclusión en gestos dinámicos.
 
-\section{Objetivos especificos}\label{bjetivosEspecificos}
+\section{Objetivos especificos}\label{sec:objetivosEspecificos}
 
 \begin{itemize}
 	\item Identificar los m\'etodos actuales de reconocimiento de gestos, estáticos y din\'amicos cuando existe baja iluminación  y en el caso de los gestos dinámicos cuando existe oclusión. 
@@ -50,7 +50,7 @@ Desarrollar un sistema que permita controlar la computadora haciendo uso de gest
 \end{itemize}
 
 
-\section{Limitaciones y suposiciones}\label{Limitaciones&Suposicione}
+\section{Limitaciones y suposiciones}\label{sec:Limitaciones&Suposicione}
 
 Gran porcentaje de los trabajos previos en el \'area de reconocimiento de gestos con las manos basados en el modelo de la visi\'on  utilizan c\'amaras digitales o c\'amaras web. Esta investigaci\'on utiliza el dispositivo Kinect, para obtener la informaci\'on de entrada del sistema. 
 
@@ -60,7 +60,7 @@ Otra limitante es el número de gestos que podr\'a reconocer el sistema.
 
 Se supone el área de trabajo como un cuarto estándar con buena iluminación (enfocado a pruebas con la cámara color del sistema Kinect)
 
-\section{Reconocimiento de gestos con la manos}\label{ReconocimientoGestos} 
+\section{Reconocimiento de gestos con la manos}\label{sec:ReconocimientoGestos} 
 
 
 La definición de gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran a los dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o de interactuar con el ambiente. De acuerdo con la literatura \citep{Mitra2007} los gestos con las manos se clasifican en estáticos y dinámicos, los primeros están definidos como la posición y orientación de la mano en el espacio manteniendo esta pose durante cierto tiempo, por ejemplo para hacer una se\~nal de aventón, a diferencia de los gestos dinámicos donde hay movimiento de la pose, un ejemplo  es cuando mueves la mano en se\~nal de adiós. De aquí en adelante entiéndase el término gestos con las manos, como gestos. 
@@ -76,7 +76,7 @@ En este trabajo, se toma el enfoque basado en la visi\'on ya que se quiere obten
 Los métodos basados en la visión se pueden representar por dos modelos \citep{Rautaray2012}, los basados en 3D, da una descripción espacial en 3D de la mano, y los basados en apariencia, como su nombre lo dice se basan en la apariencia de la mano. Los modelos basados en apariencia se dividen en dos categorías, los estáticos (modelo de silueta, de contorno deformables) y de movimiento (de color y movimiento).
 
 
-\section{Estado del arte}\label{EstadoDelArte} 
+\section{Estado del arte}\label{sec:EstadoDelArte} 
 
 La sección anterior explica los distintos enfoques para llevar acabo el reconocimiento de gestos, a continuación se encuentran los trabajos relevantes de cada uno de estos enfoques. 
 
@@ -114,7 +114,7 @@ Flutter  es un software que reconoce cuatro gestos est\'aticos detectando la pal
 
 Aunque estos dispositivos y software para reconocer gestos  solucionan algunos problemas importantes en el \'area, sigue existiendo el problema de oclusi\'on  e iluminaci\'on. De allí la importancia que existan modelos que puedan resolver estos problemas se presentan frecuentemente en el reconocimiento. 
 
-\section{Organizaci\'on de la tesis}\label{OrganizacionTesis}
+\section{Organizaci\'on de la tesis}\label{sec:OrganizacionTesis}
 La tesis se encuentra distribuida de la siguiente manera: la segunda sección presenta los fundamentos teóricos como base para la comprensión del tema. La tercera sección presenta el sistema propuesto. En la cuarta sección se encuentran las pruebas realizadas al sistema junto con los resultados y la discusiones de estos. Finalmente la quinta sección presenta las conclusiones generales del sistema y el trabajo futuro. 
 	
 

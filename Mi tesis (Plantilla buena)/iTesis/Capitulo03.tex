@@ -7,15 +7,41 @@
 
 En este cap\'itulo se describe el sistema de reconocimiento de gestos propuesto, este consta de cuatro etapas principales. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema; la segunda etapa es la detección aquí la mano es localizada y segmentada del fondo; en la etapa tres se extraen las características de la mano para ser procesadas en la etapa final donde el gesto realizado es reconocido. 
 
-\section{Adquisición de los datos}
+\section{Adquisición de los datos}\label{sec:AdquisicionDatos}
 
-En esta etapa se capturan los datos que son la entrada del sistema. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect, estos se encuentran ubicados uno enfrente del usuario y otro al lado de este. (poner figura)
+En esta etapa se capturan los datos que son la entrada del sistema. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect, estos se encuentran ubicados uno frente al  usuario y otro al lado  izquierdo como se muestra en la figura \ref{fig:SetupSystem}.
 
-
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.2]{./Figures/system.png}
+\end{center}
+\caption{Configuración del sistema de reconocimiento de gestos con las manos}
+\label{fig:SetupSystem}
+\end{figure} 
  
-se utilizan los datos que brinda sensor de profundidad. Estos son representados como una imagen en escala de grises de $8$ bits, de.  
+una vez que le flujo de datos de los sensores de profundidad es capturado este es representado como una imagen en escala de grises de $8$ bits de $640$ p\'ixeles de ancho por $480$ p\'ixeles de largo. En las imágenes se puede apreciar detalles pequeños, es decir cambios en la profundidad de hasta $1$  $mm$ esto debido a que la escala de grises inicia cada $26$  $cm$. %creo que no se entiende bien, explicar un poco mejor.  
+En la siguiente imagen se puede apreciar un ejemplo de las imágenes de profundidad. \ref{fig:ImagenCapturada}
 
-Cada cuadro capturado por el dispositivo es representado de la manera anterior, en las imágenes se puede apreciar pequeños cambios detectados al sensor gracias a la forma en que la imagen es representada. Para lograr esta representación el rango de escala de grises inicia cada 26 cm. es por eso que se pueden apreciar cambios pequeños en las distancias entre los objetos. 
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/166.png}
+\end{center}
+\caption{Representación de los datos capturados por los Kinect}
+\label{fig:ImagenCapturada}
+\end{figure}  
+
+Debido a la naturaleza del funcionamiento del Kinect, las imágenes obtenidas contiene ruido del tipo (poner), el cual nos da una imagen como la figura  , el ruido  es reducido usando un filtros de mediana este es aplicado en toda la imagen en una ventada de tama\~no $13$. La imagen resultante es como la que se muestra en la figura \ref{fig:ImagenCapturada}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/166_W13.png}
+\end{center}
+\caption{Representación de los datos capturados por los Kinect}
+\label{fig:ImagenCapturadaNoNoise}
+\end{figure}  
+  
+
+
 
 %\begin{center}[a]
 %\begin{tabular}{ c c c }
@@ -94,16 +120,31 @@ Cada cuadro capturado por el dispositivo es representado de la manera anterior, 
 %\end{tabular}
 %\end{center}
 
-\section{Detección}
+\section{Detección}\label{sec:DeteccionSystem} 
 
-La etapa de detección utiliza el algoritmo para detectar objetos de manera rápida desarrollado por (citar viola jones), como se vio en el cap\'itulo dos sección chalalala, este algoritmo  clasifica las imágenes basándose en el valor de características, las características usadas son como las que se muestran en la siguiente figura.  
-
-La selección de las características se lleva acabo por medio del algoritmo AdaBoost; la implementaci\'on se lleva acabo por medio del software OpenCV Haar training classifier \footnote{https://github.com/mrnugget/opencv-haar-classifier-training}. Se entren\'o con 1000 imágenes positivas (imágenes de profundidad de la mano), y 2000 negativas, (imágenes de profundidad de distintos fondos). Las imágenes positivas fueron generadas de 100 imágenes de la mano usando el software Create Sample \footnote{http://note.sonouse utilizause utiliza en  en ts.com/SciSoftware/haartraining.html}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{https://github.com/americamm}.
-
-Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de la mano, estas fueron tomadas a una distancia de entre $60 cm$ y $200 cm$. Las imágenes de profundidad de la mano fueron tomadas de 6 personas distintas con tres distintas poses: palma abierta con dedos aciertos, palma abierta con dedos cerrados y finalmente el puno, como se muestra en la figura (tal). Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la figura (tal). El programa para la captura de las imágenes puede ser encontrado en github \footnote{https://github.com/americamm}.  
+En esta etapa del sistema el objetivo es localizar y segmentar la mano para poder extraer las características necesarias para el reconocimiento. 
+En este trabajo se utiliza el algoritmo de detección de objetos desarrollado por (citar viola jones), como se mostró en el cap\'itulo \ref{capit:cap2} sección \ref{sec:ViolaJones}, el algoritmo  clasifica las imágenes basándose en el valor de características. 
 
 
+La selección de las características se llev\'o acabo por medio del algoritmo AdaBoost; la implementaci\'on se realiz\'o utilizando el software OpenCV Haar training classifier \footnote{https://github.com/mrnugget/opencv-haar-classifier-training}. Se entren\'o con 1000 imágenes positivas (imágenes de profundidad de la mano), y 2000 negativas, (imágenes de fondo a distintas profundidades). Las imágenes positivas fueron generadas de 100 imágenes de la mano usando el software Create Samples \footnote{http://note.sonots.com/SciSoftware/haartraining.html}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{https://github.com/americamm}.
 
+Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de mano, estas fueron tomadas a una distancia de entre $60$ $cm$ y $200$ $cm$. Las imágenes de profundidad de la mano fueron tomadas de 6 personas distintas con tres distintas poses: palma abierta con dedos abiertos, palma abierta con dedos juntos y finalmente el pu\~no, como se muestra en la figura \ref{fig:ImagenesPoses}. Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la figura \ref{fig:ImagenFondo}. El programa para la captura de las imágenes puede ser encontrado en github \footnote{https://github.com/americamm}.  
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/TrainingImages.png}
+\end{center}
+\caption{Ejemplo de imágenes de la mano obtenidas de nuestra base de datos}
+\label{fig:ImagenesPoses}
+\end{figure}  
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/166_W13.png}
+\end{center}
+\caption{Ejemplo de imágenes de la mano obtenidas de nuestra base de datos}
+\label{fig:ImagenFondo}
+\end{figure}  
 
 
 
@@ -129,7 +170,7 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 
 
 
-\section{Extracci\'on de caracter\'isticas}\label{secc:pruebasFisicas}
+\section{Extracci\'on de caracter\'isticas}\label{sec:ExtraccionCaracteristicas}
 
 
 %\begin{equation} \label{eq:demandaOxigeno_simple}
@@ -147,7 +188,7 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 %\end{figure}
 
 
-\section{Reconocimiento}\label{secc:disenoMetodoFatiga}
+\section{Reconocimiento}\label{sec:ReconocimientoSVM}
 
 
 

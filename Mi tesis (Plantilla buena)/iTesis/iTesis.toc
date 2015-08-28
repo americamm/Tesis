@@ -34,12 +34,12 @@
 \contentsline {section}{\numberline {2.6}Ma\'aquinas de soporte vectorial}{13}{section.2.6}
 \contentsline {chapter}{\numberline {3}Sistema de reconocimiento de gestos propuesto}{14}{chapter.3}
 \contentsline {section}{\numberline {3.1}Adquisici\IeC {\'o}n de los datos}{14}{section.3.1}
-\contentsline {section}{\numberline {3.2}Detecci\IeC {\'o}n}{14}{section.3.2}
-\contentsline {section}{\numberline {3.3}Extracci\'on de caracter\'isticas}{15}{section.3.3}
-\contentsline {section}{\numberline {3.4}Reconocimiento}{15}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}C\IeC {\'a}lculo de la demanda de ox\IeC {\'\i }geno}{15}{subsection.3.4.1}
-\contentsline {chapter}{\numberline {4}Resultados}{16}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusiones}{17}{chapter.5}
-\contentsline {section}{\numberline {5.1}Trabajo futuro}{17}{section.5.1}
-\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{18}{section.5.1}
-\contentsline {chapter}{\numberline {A}Ap\IeC {\'e}ndice}{20}{appendix.Alph6}
+\contentsline {section}{\numberline {3.2}Detecci\IeC {\'o}n}{15}{section.3.2}
+\contentsline {section}{\numberline {3.3}Extracci\'on de caracter\'isticas}{17}{section.3.3}
+\contentsline {section}{\numberline {3.4}Reconocimiento}{17}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}C\IeC {\'a}lculo de la demanda de ox\IeC {\'\i }geno}{17}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {4}Resultados}{18}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusiones}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Trabajo futuro}{19}{section.5.1}
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{20}{section.5.1}
+\contentsline {chapter}{\numberline {A}Ap\IeC {\'e}ndice}{22}{appendix.Alph6}
