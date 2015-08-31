@@ -168,11 +168,10 @@ Las imágenes siguientes muestran el resultado de aplicar las operaciones apertu
 
 
 Las operaciones anteriores son aplicadas antes de la binarizaci\'on pues se obtiene un mejor resultado que aplicarlas después de la binarizaci\'on.  
-Para binarizar el Roi, se aplic\'o el algoritmo desarrollado por NiblacK (citar), se decidió usar este método debido a la naturaleza de la imagen. Los parámetros que fueron usados fue con k=0.5 y una ventana de $3x3$ p\'ixeles. 
+Para binarizar el Roi, se aplic\'o el algoritmo desarrollado por NiblacK (citar), se decidió usar este método debido a la naturaleza de la imagen. Los parámetros que fueron usados fue con $k=0.5$ y una ventana de $3x3$ p\'ixeles. 
 
+Como resultado obtenemos la imagen binarizada, donde se pueden ver los cambios en esta.
  
-
-
 %\begin{table}
 %\footnotesize
 %\centering
@@ -197,6 +196,11 @@ Para binarizar el Roi, se aplic\'o el algoritmo desarrollado por NiblacK (citar)
 
 \section{Extracci\'on de caracter\'isticas}\label{sec:ExtraccionCaracteristicas}
 
+La idea de esta etapa es encontrar la  características necesarias para reconocer el gestos realizado por la mano.  
+
+Las características  son simple se extraen, el n\'umero de dedos, los ángulos entre ellos y también aquí se extrae la posición del centro de la mano. 
+Para realizar la extracción se usan los algoritmos de casco convexo y el de defectos de convexidad.  
+ 
 
 %\begin{equation} \label{eq:demandaOxigeno_simple}
 %\begin{split} 

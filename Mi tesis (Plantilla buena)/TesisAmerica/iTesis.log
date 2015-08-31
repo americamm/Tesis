@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  27 AUG 2015 19:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  31 AUG 2015 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1410,21 +1410,40 @@ Package pdftex.def Info: ./Figures/166_W13.png used on input line 37.
 File: ./Figures/TrainingImages.png Graphic file (type png)
 
 <use ./Figures/TrainingImages.png>
-Package pdftex.def Info: ./Figures/TrainingImages.png used on input line 135.
+Package pdftex.def Info: ./Figures/TrainingImages.png used on input line 133.
 (pdftex.def)             Requested size: 160.1981pt x 71.0653pt.
 File: ./Figures/166_W13.png Graphic file (type png)
  <use ./Figures/166_W13.png>
-Package pdftex.def Info: ./Figures/166_W13.png used on input line 143.
+Package pdftex.def Info: ./Figures/166_W13.png used on input line 141.
 (pdftex.def)             Requested size: 236.38254pt x 172.77003pt.
- [16 <./Figures/TrainingImages.png>] [17]) (./Capitulo04.tex
+
+
+LaTeX Warning: Reference `fig:Roi' on page 16 undefined on input line 147.
+
+[16 <./Figures/TrainingImages.png>]
+<./Figures/roi.png, id=395, 446.41782pt x 347.04657pt>
+File: ./Figures/roi.png Graphic file (type png)
+ <use ./Figures/roi.png>
+Package pdftex.def Info: ./Figures/roi.png used on input line 151.
+(pdftex.def)             Requested size: 223.20836pt x 173.52286pt.
+File: ./Figures/roi.png Graphic file (type png)
+
+<use ./Figures/roi.png>
+Package pdftex.def Info: ./Figures/roi.png used on input line 163.
+(pdftex.def)             Requested size: 223.20836pt x 173.52286pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17 <./Figures/roi.png>] [18]) (./Capitulo04.tex
 Cap\'{\i }tulo 4
-[18
+[19
 
 ]) (./Capitulo05.tex
 Cap\'{\i }tulo 5
-[19
+[20
 
-]) (./iTesis.bbl [20
+]) (./iTesis.bbl [21
 
 ] (/usr/share/texmf/tex/latex/ucs/data/uninames.dat
 File: uninames.dat 2013/05/13 UCS: Unicode character names, compressed
@@ -1472,9 +1491,9 @@ PRIVATE USE TWO
 Character is not defined in uni-*.def files.
 Enter I!<RET> to define the glyph.
 
-) (./Apendice.tex [21]
+) (./Apendice.tex [22]
 Ap\'{e}ndice A
-) [22
+) [23
 
 ]
 
@@ -1493,14 +1512,17 @@ Package rerunfilecheck Info: File `iTesis.out' has not changed.
 (rerunfilecheck)             Checksum: 97006DC51D3190F1537810B76A97EE79;3061.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 21390 strings out of 493315
- 328960 string characters out of 6145894
+ 21399 strings out of 493315
+ 329104 string characters out of 6145894
  484736 words of memory out of 5000000
- 24235 multiletter control sequences out of 15000+600000
+ 24240 multiletter control sequences out of 15000+600000
  36996 words of font info for 78 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  53i,8n,92p,1456b,712s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1531,10 +1553,10 @@ lic/amsfonts/cm/cmmi12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr
 texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/hel
 vetic/uhvbo8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/s
 hare/texmf/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on iTesis.pdf (32 pages, 1430920 bytes).
+Output written on iTesis.pdf (33 pages, 1495407 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 412 compressed objects within 5 object streams
- 90 named destinations out of 1000 (max. 500000)
- 388 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 479 PDF objects out of 1000 (max. 8388607)
+ 418 compressed objects within 5 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 393 words of extra memory for PDF output out of 10000 (max. 10000000)
 
