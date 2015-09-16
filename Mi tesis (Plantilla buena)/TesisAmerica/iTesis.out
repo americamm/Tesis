@@ -30,16 +30,22 @@
 \BOOKMARK [2][-]{subsection.2.5.2}{Imagen integral}{section.2.5}% 30
 \BOOKMARK [2][-]{subsection.2.5.3}{Clasificador AdaBoost}{section.2.5}% 31
 \BOOKMARK [2][-]{subsection.2.5.4}{Clasificador AdaBoost en Cascada}{section.2.5}% 32
-\BOOKMARK [1][-]{section.2.6}{Casco convexo}{chapter.2}% 33
-\BOOKMARK [1][-]{section.2.7}{Ma\341quinas de soporte vectorial}{chapter.2}% 34
-\BOOKMARK [0][-]{chapter.3}{Sistema de reconocimiento de gestos propuesto}{}% 35
-\BOOKMARK [1][-]{section.3.1}{Adquisici\363n de los datos}{chapter.3}% 36
-\BOOKMARK [1][-]{section.3.2}{Detecci\363n}{chapter.3}% 37
-\BOOKMARK [1][-]{section.3.3}{Extracci\363n de caracter\355sticas}{chapter.3}% 38
-\BOOKMARK [1][-]{section.3.4}{Reconocimiento}{chapter.3}% 39
-\BOOKMARK [2][-]{subsection.3.4.1}{C\341lculo de la demanda de ox\355geno}{section.3.4}% 40
-\BOOKMARK [0][-]{chapter.4}{Resultados}{}% 41
-\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 42
-\BOOKMARK [1][-]{section.5.1}{Trabajo futuro}{chapter.5}% 43
-\BOOKMARK [0][-]{section.5.1}{Lista de referencias bibliogr\341ficas}{}% 44
-\BOOKMARK [0][-]{appendix.Alph6}{Ap\351ndice}{}% 45
+\BOOKMARK [1][-]{section.2.6}{Binarizaci\363n}{chapter.2}% 33
+\BOOKMARK [1][-]{section.2.7}{Operaciones Morfol\363gicas}{chapter.2}% 34
+\BOOKMARK [2][-]{subsection.2.7.1}{Dilataci\363n}{section.2.7}% 35
+\BOOKMARK [2][-]{subsection.2.7.2}{Erosi\363n}{section.2.7}% 36
+\BOOKMARK [2][-]{subsection.2.7.3}{Apertura}{section.2.7}% 37
+\BOOKMARK [2][-]{subsection.2.7.4}{Cierre}{section.2.7}% 38
+\BOOKMARK [1][-]{section.2.8}{Casco convexo}{chapter.2}% 39
+\BOOKMARK [1][-]{section.2.9}{M\341quinas de soporte vectorial}{chapter.2}% 40
+\BOOKMARK [0][-]{chapter.3}{Sistema de reconocimiento de gestos propuesto}{}% 41
+\BOOKMARK [1][-]{section.3.1}{Adquisici\363n de los datos}{chapter.3}% 42
+\BOOKMARK [1][-]{section.3.2}{Detecci\363n}{chapter.3}% 43
+\BOOKMARK [1][-]{section.3.3}{Extracci\363n de caracter\355sticas}{chapter.3}% 44
+\BOOKMARK [1][-]{section.3.4}{Reconocimiento}{chapter.3}% 45
+\BOOKMARK [2][-]{subsection.3.4.1}{C\341lculo de la demanda de ox\355geno}{section.3.4}% 46
+\BOOKMARK [0][-]{chapter.4}{Resultados}{}% 47
+\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 48
+\BOOKMARK [1][-]{section.5.1}{Trabajo futuro}{chapter.5}% 49
+\BOOKMARK [0][-]{section.5.1}{Lista de referencias bibliogr\341ficas}{}% 50
+\BOOKMARK [0][-]{appendix.Alph6}{Ap\351ndice}{}% 51

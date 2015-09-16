@@ -28,19 +28,25 @@
 \contentsline {section}{\numberline {2.4}Sensor Kinect}{12}{section.2.4}
 \contentsline {section}{\numberline {2.5}Detecci\IeC {\'o}n r\IeC {\'a}pida de objetos usando caracter\IeC {\'\i }sticas simples utilizando el clasificador de cascada impulsada}{13}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Caracter\IeC {\'\i }sticas Haar}{14}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Imagen integral}{15}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.2}Imagen integral}{14}{subsection.2.5.2}
 \contentsline {subsection}{\numberline {2.5.3}Clasificador AdaBoost}{15}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Clasificador AdaBoost en Cascada}{15}{subsection.2.5.4}
-\contentsline {section}{\numberline {2.6}Casco convexo}{15}{section.2.6}
-\contentsline {section}{\numberline {2.7}Ma\'aquinas de soporte vectorial}{15}{section.2.7}
-\contentsline {chapter}{\numberline {3}Sistema de reconocimiento de gestos propuesto}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}Adquisici\IeC {\'o}n de los datos}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}Detecci\IeC {\'o}n}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Extracci\'on de caracter\'isticas}{20}{section.3.3}
-\contentsline {section}{\numberline {3.4}Reconocimiento}{20}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}C\IeC {\'a}lculo de la demanda de ox\IeC {\'\i }geno}{20}{subsection.3.4.1}
-\contentsline {chapter}{\numberline {4}Resultados}{21}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusiones}{22}{chapter.5}
-\contentsline {section}{\numberline {5.1}Trabajo futuro}{22}{section.5.1}
-\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{23}{section.5.1}
-\contentsline {chapter}{\numberline {A}Ap\IeC {\'e}ndice}{25}{appendix.Alph6}
+\contentsline {subsection}{\numberline {2.5.4}Clasificador AdaBoost en Cascada}{16}{subsection.2.5.4}
+\contentsline {section}{\numberline {2.6}Binarizaci\IeC {\'o}n}{16}{section.2.6}
+\contentsline {section}{\numberline {2.7}Operaciones Morfol\IeC {\'o}gicas}{17}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Dilataci\IeC {\'o}n}{17}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Erosi\IeC {\'o}n}{18}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Apertura}{18}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Cierre}{18}{subsection.2.7.4}
+\contentsline {section}{\numberline {2.8}Casco convexo}{18}{section.2.8}
+\contentsline {section}{\numberline {2.9}M\'aquinas de soporte vectorial}{18}{section.2.9}
+\contentsline {chapter}{\numberline {3}Sistema de reconocimiento de gestos propuesto}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Adquisici\IeC {\'o}n de los datos}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}Detecci\IeC {\'o}n}{21}{section.3.2}
+\contentsline {section}{\numberline {3.3}Extracci\'on de caracter\'isticas}{24}{section.3.3}
+\contentsline {section}{\numberline {3.4}Reconocimiento}{24}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}C\IeC {\'a}lculo de la demanda de ox\IeC {\'\i }geno}{24}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {4}Resultados}{25}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusiones}{26}{chapter.5}
+\contentsline {section}{\numberline {5.1}Trabajo futuro}{26}{section.5.1}
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{27}{section.5.1}
+\contentsline {chapter}{\numberline {A}Ap\IeC {\'e}ndice}{29}{appendix.Alph6}
