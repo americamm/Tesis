@@ -194,14 +194,14 @@ donde $k \in [0,1]$ el valor de la constante determina que tanta parte del conto
 \section{Operaciones Morfológicas}\label{OperacionesMorfologicas} 
 
 Otra técnica muy utilizada en procesamiento de imágenes son las operaciones morfológicas que son un conjunto de operaciones no lineales, la idea es que al aplicar alguna de estas operaciones el ruido se removido tomando en cuanta la forma y estructura de la imagen. 
-La operaciones morfológicas utilizan un elemento estructural el cual se aplica por toda la imagen, los elementos estructurales pueden ser de distintas formas como \ref{fig:ImagenCapturadaNoNoise}
+La operaciones morfológicas utilizan un elemento estructural el cual se aplica por toda la imagen, los elementos estructurales pueden ser de distintas formas como \ref{fig:EX}
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.3]{./Figures/IntegralImage.png}
-\end{center}
-\caption{Regiones de imagen integral}
-\label{fig:figImageIntegral}
+\begin{figure}%[htbp]
+\centering
+\subfigure[Rectángulo de $3x3$]{\includegraphics[scale=.4]{./Figures/EX1}\label{fig:EX:1}}
+\subfigure[Figura de $3x3$]{\includegraphics[scale=.4]{./Figures/EX3}\label{fig:EX:3}} \\
+\subfigure[Cruz de $5x5$]{\includegraphics[scale=.4]{./Figures/EX2}\label{fig:EX:2}}
+\caption{Ejemplos de elementos estructurales} \label{fig:EX}
 \end{figure} 
 
 Existen distintas operaciones morfológicas, las principales o básicas son la dilatación y erosión las cuales se explican enseguida junto con la apertura y el cierra. 
@@ -229,7 +229,15 @@ $$S \circ EX = (S \ominus EX) \oplus EX $$
 La operación cierre elimina huecos pequeños  y rellena huecos en las
 $$S \bullet EX = (S \oplus EX) \ominus EX $$
 
-\section{Casco convexo}\label{sec:Convexhull}
+\section{Casco convexo y defectos de convexidad}\label{sec:Convexhull} 
+
+Antes de definir el casco convexo se presenta la definición de conjunto convexo. 
+ 
+
+Sea $C$ un conjunto de puntos en el plano Euclidiano, el casco convexo es el conjunto convexo más pequeño que contiene a todos los puntos en $C$. 
+
+Los defectos de convexidad de un con casco convexo, es el conjunto de puntos que no pertenecen al casco convexo. El defecto es el espacio entre la linea y el objeto  
+
 
 
 \section{M\'aquinas de soporte vectorial}\label{sec:SVM} 

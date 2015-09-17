@@ -9,7 +9,10 @@
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{14}{figure.caption.10}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{14}{figure.caption.10}
 \contentsline {figure}{\numberline {4}{\ignorespaces Regiones de imagen integral\relax }}{15}{figure.caption.11}
-\contentsline {figure}{\numberline {5}{\ignorespaces Regiones de imagen integral\relax }}{17}{figure.caption.12}
+\contentsline {figure}{\numberline {5}{\ignorespaces Ejemplos de elementos estructurales\relax }}{17}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rect\IeC {\'a}ngulo de $3x3$}}}{17}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Figura de $3x3$}}}{17}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cruz de $5x5$}}}{17}{figure.caption.12}
 \contentsline {figure}{\numberline {6}{\ignorespaces Clasificaci\IeC {\'o}n de maquina de soporte usando kernel lineal\relax }}{19}{figure.caption.13}
 \addvspace {0\p@ }
 \contentsline {figure}{\numberline {7}{\ignorespaces Configuraci\IeC {\'o}n del sistema de reconocimiento de gestos con las manos\relax }}{20}{figure.caption.14}

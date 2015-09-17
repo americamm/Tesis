@@ -37,7 +37,7 @@
 \contentsline {subsection}{\numberline {2.7.2}Erosi\IeC {\'o}n}{18}{subsection.2.7.2}
 \contentsline {subsection}{\numberline {2.7.3}Apertura}{18}{subsection.2.7.3}
 \contentsline {subsection}{\numberline {2.7.4}Cierre}{18}{subsection.2.7.4}
-\contentsline {section}{\numberline {2.8}Casco convexo}{18}{section.2.8}
+\contentsline {section}{\numberline {2.8}Casco convexo y defectos de convexidad}{18}{section.2.8}
 \contentsline {section}{\numberline {2.9}M\'aquinas de soporte vectorial}{18}{section.2.9}
 \contentsline {chapter}{\numberline {3}Sistema de reconocimiento de gestos propuesto}{20}{chapter.3}
 \contentsline {section}{\numberline {3.1}Adquisici\IeC {\'o}n de los datos}{20}{section.3.1}
