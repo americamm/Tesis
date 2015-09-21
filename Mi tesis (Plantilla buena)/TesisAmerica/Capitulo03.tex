@@ -194,11 +194,11 @@ Como resultado obtenemos la imagen binarizada, donde se pueden ver los cambios e
 
 
 
-\section{Extracci\'on de caracter\'isticas}\label{sec:ExtraccionCaracteristicas}
+\section{Extracci\'on de caracter\'isticas}\label{sec:ExtraccionCaracteristicasSystem}
 
 La idea de esta etapa es encontrar la  características necesarias para reconocer el gestos realizado por la mano.  
 
-Las características  son simple se extraen, el n\'umero de dedos, los ángulos entre ellos y también aquí se extrae la posición del centro de la mano. 
+Las características que se utilizan son geométricas, estas son simple se extraen, el n\'umero de dedos, los ángulos entre ellos y también aquí se extrae la posición del centro de la mano. 
 Para realizar la extracción se usan los algoritmos de casco convexo y el de defectos de convexidad.  
  
 
@@ -217,8 +217,10 @@ Para realizar la extracción se usan los algoritmos de casco convexo y el de def
 %\end{figure}
 
 
-\section{Reconocimiento}\label{sec:ReconocimientoSVM}
+\section{Reconocimiento}\label{sec:ReconocimientoSystem}
 
+Esta es la etapa final del reconocimiento,es donde finalmente el gesto puede ser interpretado por la computadora.   
+El reconocimiento para los gestos estáticos se lleva acabo usando el algoritmo de clasificación de MSV 
 
 
 %\subsection{Extracción de parámetros}
