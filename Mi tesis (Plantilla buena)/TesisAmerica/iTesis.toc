@@ -42,11 +42,10 @@
 \contentsline {chapter}{\numberline {3}Sistema de reconocimiento de gestos propuesto}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Adquisici\IeC {\'o}n de los datos}{21}{section.3.1}
 \contentsline {section}{\numberline {3.2}Detecci\IeC {\'o}n}{22}{section.3.2}
-\contentsline {section}{\numberline {3.3}Extracci\'on de caracter\'isticas}{25}{section.3.3}
-\contentsline {section}{\numberline {3.4}Reconocimiento}{25}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}C\IeC {\'a}lculo de la demanda de ox\IeC {\'\i }geno}{25}{subsection.3.4.1}
-\contentsline {chapter}{\numberline {4}Resultados}{26}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusiones}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Trabajo futuro}{27}{section.5.1}
-\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{28}{section.5.1}
-\contentsline {chapter}{\numberline {A}Ap\IeC {\'e}ndice}{29}{appendix.Alph6}
+\contentsline {section}{\numberline {3.3}Extracci\'on de caracter\'isticas}{26}{section.3.3}
+\contentsline {section}{\numberline {3.4}Reconocimiento}{27}{section.3.4}
+\contentsline {chapter}{\numberline {4}Resultados}{29}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusiones}{30}{chapter.5}
+\contentsline {section}{\numberline {5.1}Trabajo futuro}{30}{section.5.1}
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{31}{section.5.1}
+\contentsline {chapter}{\numberline {A}Ap\IeC {\'e}ndice}{32}{appendix.Alph6}

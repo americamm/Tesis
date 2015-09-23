@@ -120,8 +120,8 @@ Debido a la naturaleza del funcionamiento del Kinect, las imágenes obtenidas co
 
 \section{Detección}\label{sec:DeteccionSystem} 
 
-En esta etapa del sistema el objetivo es localizar y segmentar la mano para poder extraer las características necesarias para el reconocimiento. 
-En este trabajo se utiliza el algoritmo de detección de objetos desarrollado por (citar viola jones), como se mostró en el cap\'itulo \ref{capit:cap2} sección \ref{sec:ViolaJones}, el algoritmo  clasifica las imágenes basándose en el valor de características. 
+En esta etapa del sistema el objetivo es localizar y segmentar la mano para extraer las características necesarias para el reconocimiento. 
+En este trabajo se utiliza el algoritmo de detección de objetos desarrollado por \citep{Viola2001}, como se mostró en el cap\'itulo \ref{capit:cap2} sección \ref{sec:ViolaJones}, el algoritmo  clasifica las imágenes basándose en el valor de características. 
 
 
 La selección de las características se llev\'o acabo por medio del algoritmo AdaBoost; la implementaci\'on se realiz\'o utilizando el software OpenCV Haar training classifier \footnote{https://github.com/mrnugget/opencv-haar-classifier-training}. Se entren\'o con $1000$ imágenes positivas (imágenes de profundidad de la mano), y $2000$ negativas, (imágenes de fondo a distintas profundidades). Las imágenes positivas fueron generadas de $100$ imágenes de la mano usando el software Create Samples \footnote{http://note.sonots.com/SciSoftware/haartraining.html}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{https://github.com/americamm}.
@@ -132,7 +132,7 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 \begin{center}
 \includegraphics[scale=.5]{./Figures/TrainingImages.png}
 \end{center}
-\caption{Ejemplo de imágenes de la mano obtenidas de nuestra base de datos}
+\caption{Imágenes de la mano de nuestra base de datos}
 \label{fig:ImagenesPoses}
 \end{figure}  
 
@@ -140,11 +140,11 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 \begin{center}
 \includegraphics[scale=.5]{./Figures/166_W13.png}
 \end{center}
-\caption{Ejemplo de imágenes de la mano obtenidas de nuestra base de datos}
+\caption{Imágenes del fondo de nuestra base de datos}
 \label{fig:ImagenFondo}
 \end{figure}  
 
-Para localizar la mano en cada cuadro proveniente de los Kinect, una ventana de tamaño $kahkjgv$ se desliza por la imagen, una vez que la mano se localiza la región de interés $Roi(x,y)$ es seleccionada alrededor de la mano, como se puede ver en la figura \ref{fig:Roi}.
+Para localizar la mano en cada cuadro proveniente de los Kinect, una ventana de tamaño $kahkjgv$ se desliza por la imagen, una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionada alrededor de la mano, como se puede ver en la figura \ref{fig:Roi}.
 
 \begin{figure}[!h]
 \begin{center}
@@ -154,23 +154,47 @@ Para localizar la mano en cada cuadro proveniente de los Kinect, una ventana de 
 \label{fig:Roi}
 \end{figure}  
 
-Ya que se tiene localizada el área donde se encuentra la mano, el siguiente paso es segmentar la mano del Roi. El siguiente paso es binarizar el Roi, pero antes se aplican las operaciones morfológicas apertura y cerradura, en ese orden. la apertura se aplico con un elemento estructural rectangular de $3$ p\'ixeles de ancho $11$ p\'ixeles de altura, como el que se muestra en la figura (). La cerradura se aplic\'o también con un elemento estructural rectangular del tamaño tal. 
-El resultado de estas operaciones es quitar las uniones pequeñas no deseadas causadas por el sensor, también juntar o cerrar hoyos.  
-Las imágenes siguientes muestran el resultado de aplicar las operaciones apertura y cerradura al Roi. 
+Ya que se tiene localizada el área donde se encuentra la mano, el siguiente paso es segmentar la mano del ROI. La segmentación se realiza calculando los contornos existentes en la ROI y se toma el contorno más grande como el contorno de la mano, antes de calcular el contorno se realizan una serie de procesamientos al ROI para eliminar ruido y que el cálculo del contorno sea más preciso.    
+
+El primer procesamiento que se aplica al ROI, son las operaciones morfológicas de apertura y cerradura, en ese orden. Se utilizan para eliminar uniones pequeños que existen en la imagen como el que se muestra \ref{fig:RuidoUnion} o unir pequeños hoyos que existen en la imagen, como los que se encuentran en la figura \ref{fig:RuidoHoyo}.\\
+La operaciones utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento $3 \, x \, 7$ pixeles; para la cerradura se aplic\'o con un tamaño  $7 \, x \, 7$ pixeles. 
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=.5]{./Figures/roi.png}
 \end{center}
-\caption{Mano seleccionada}
-\label{fig:Roi}
+\caption{ROI que muestra una unión entre los dedos}
+\label{fig:RuidoUnion}
+\end{figure}   
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/roi.png}
+\end{center}
+\caption{ROI donde se aprecio un hoyo en la mano}
+\label{fig:RuidoHoyo}
 \end{figure}  
 
 
-Las operaciones anteriores son aplicadas antes de la binarizaci\'on pues se obtiene un mejor resultado que aplicarlas después de la binarizaci\'on.  
-Para binarizar el Roi, se aplic\'o el algoritmo desarrollado por NiblacK (citar), se decidió usar este método debido a la naturaleza de la imagen. Los parámetros que fueron usados fue con $k=0.5$ y una ventana de $3x3$ p\'ixeles. 
+El resultado de estas operaciones es mejorar la región de interés. Las imágenes siguientes muestran el resultado de aplicar las operaciones apertura y cerradura al ROI. 
 
-Como resultado obtenemos la imagen binarizada, donde se pueden ver los cambios en esta.
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/roi.png}
+\end{center}
+\caption{Apertura y cerradura}
+\label{fig:ImagenOpenClose}
+\end{figure}  
+
+Una vez aplicadas las operaciones el siguiente paso es binarizar la región de interés, se lleva acabo aplicando el algoritmo desarrollado por \citep{Niblack1985}, se decidió usar este método debido a la naturaleza de la imagen. Los parámetros que fueron usados fueron $k=0.5$ y una ventana de $3x3$ p\'ixeles. La imagen siguiente es una imagen binarizada. 
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/roi.png}
+\end{center}
+\caption{Binarización de ROI}
+\label{fig:BinarizationRoi}
+\end{figure}
  
 %\begin{table}
 %\footnotesize
@@ -192,14 +216,79 @@ Como resultado obtenemos la imagen binarizada, donde se pueden ver los cambios e
 %%}
 %\end{table}
 
+Una vez que la ROI es binarizada, el siguiente paso es encontrar los contornos existentes dentro de esta. Los contornos se calcularon utilizando el algoritmo de $blabla$ con tales parámetros.  
 
+Ya que le contorno de la mano es identificado, se calcula el casco convexo de la mano y posteriormente los defectos de convexidad 
 
 \section{Extracci\'on de caracter\'isticas}\label{sec:ExtraccionCaracteristicasSystem}
 
-La idea de esta etapa es encontrar la  características necesarias para reconocer el gestos realizado por la mano.  
+La idea de esta etapa es encontrar las características que sean capaces de describir la mano, de manera que con estas características se pueda reconocer los gestos realizados por la o las manos.  
+Las características se guardan en un vector, llamado vector de características, donde la dimension del vector es el número de características que describen, es este caso, la mano.  
 
-Las características que se utilizan son geométricas, estas son simple se extraen, el n\'umero de dedos, los ángulos entre ellos y también aquí se extrae la posición del centro de la mano. 
-Para realizar la extracción se usan los algoritmos de casco convexo y el de defectos de convexidad.  
+Las características que se extraen son geométricas, se extraen: el n\'umero de dedos, los ángulos entre ellos, el centro de la mano, la distancia del centro a la punta de los dedos, el área y perímetro de la mano. 
+
+Para la extracción de características se utilizan los algoritmos de casco convexo y el de defectos de convexidad, la figura muestra la mano con el casco convexo y sus defectos. 
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/roi.png}
+\end{center}
+\caption{En esta dibujado el casco convexo los punto en son los defectos de convexidad}
+\label{fig:Convex&Defects}
+\end{figure}
+
+
+Una vez aplicados estos dos algoritmos se pueden calcular el número de dedos y las puntas de estos que son fundamentales para calcular las demás características. Enseguida se describe el algoritmo () para calcular el numero de dedos. 
+Sea $CD={cd_1, cd_2, \cdots, cd_n}$ los defectos de convexidad de un conjunto casco convexo. Cada defecto esta compuesto de tres elementos $s_i(x,y),d_i(x,y),e_i(x,y) \in cd_i$. $\delta_i$ es la distancia de $d_i(x,y)$ a la orilla del casco convexo.  
+
+\begin{algorithm}
+\begin{algorithmic}[1]
+
+\REQUIRE $d_i$
+\ENSURE Número de dedos, $Nf$.  
+
+\FOR{$i=1$ hasta $n$}  
+	\STATE $minDist=20$, $maxAng=60$, $antecesor=0$, $sucesor=0$. 	
+	
+	\IF{$\delta_i < minDepth$ } 
+	\STATE continuar
+	\ENDIF 
+	
+	\IF{i=0} 
+	\STATE $antecesor=n-1$
+	\ELSE
+	\STATE $antecesor=i-1$
+	\ENDIF 
+
+	\IF{i=n-1} 
+	\STATE $sucesor=0$
+	\ELSE
+	\STATE $sucesor=i+1$
+	\ENDIF   
+	
+	\STATE Calcular el $angulo$ entre $s_{antecesor}(x,y)$ y $s_{sucesor}(x,y)$
+	
+	\IF{$angulo \geqslant maxAng$}
+	\RETURN \FALSE
+	\ENDIF  
+	
+	\STATE $Nf=Nf+1$.
+
+\ENDFOR 
+
+Calculo del $angulo$
+
+$$ \alpha_{f_j} = \tan^{-1}{ \bigg| \frac{m_{j+1}-m_j}{1+m{j+1}m_j} \bigg|}$$
+
+$$ \theta_{f_j} = \tan^{-1} | {m_j} - 90^\circ |$$
+
+\end{algorithmic}
+\end{algorithm}
+
+
+
+
+
  
 
 %\begin{equation} \label{eq:demandaOxigeno_simple}
@@ -217,10 +306,14 @@ Para realizar la extracción se usan los algoritmos de casco convexo y el de def
 %\end{figure}
 
 
+Las características se guardan en un vector de características de dimensión $26$.
+
 \section{Reconocimiento}\label{sec:ReconocimientoSystem}
 
-Esta es la etapa final del reconocimiento,es donde finalmente el gesto puede ser interpretado por la computadora.   
-El reconocimiento para los gestos estáticos se lleva acabo usando el algoritmo de clasificación de MSV 
+Es la etapa final del reconocimiento,es donde finalmente el gesto puede ser interpretado por la computadora.   
+El reconocimiento de los gestos estáticos se lleva acabo usando el algoritmo de clasificación de MSV. 
+
+
 
 
 %\subsection{Extracción de parámetros}
@@ -231,8 +324,6 @@ El reconocimiento para los gestos estáticos se lleva acabo usando el algoritmo 
 %\end{equation} 
 
 %Donde $A_{d}$ representan la aceleración que se aplica a un dispositivo, $g$ la constante de gravedad de 9.81 m/$s^{2}$, y $\sum F$ las fuerzas que se aplican al propia sensor.
-
-\subsection{Cálculo de la demanda de oxígeno} \label{secc:calculoDemandaOxigeno}
 
 %Text  \ref{eq:demandaOxigeno_personalizada} and more $O_{2}$ text:
 %

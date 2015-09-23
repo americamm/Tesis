@@ -1,7 +1,7 @@
 \select@language {spanish}
 \addvspace {0\p@ }
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Sensor Kinect para Windows\relax }}{12}{figure.caption.8}
+\contentsline {figure}{\numberline {1}{\ignorespaces Sensor Kinect para Windows\relax }}{13}{figure.caption.8}
 \contentsline {figure}{\numberline {2}{\ignorespaces Componentes del sensor Kinect\relax }}{13}{figure.caption.9}
 \contentsline {figure}{\numberline {3}{\ignorespaces Ejemplo de operadores Haar\relax }}{15}{figure.caption.10}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{15}{figure.caption.10}
@@ -18,10 +18,14 @@
 \contentsline {figure}{\numberline {7}{\ignorespaces Configuraci\IeC {\'o}n del sistema de reconocimiento de gestos con las manos\relax }}{21}{figure.caption.14}
 \contentsline {figure}{\numberline {8}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{22}{figure.caption.15}
 \contentsline {figure}{\numberline {9}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{22}{figure.caption.16}
-\contentsline {figure}{\numberline {10}{\ignorespaces Ejemplo de im\IeC {\'a}genes de la mano obtenidas de nuestra base de datos\relax }}{23}{figure.caption.17}
-\contentsline {figure}{\numberline {11}{\ignorespaces Ejemplo de im\IeC {\'a}genes de la mano obtenidas de nuestra base de datos\relax }}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {10}{\ignorespaces Im\IeC {\'a}genes de la mano de nuestra base de datos\relax }}{23}{figure.caption.17}
+\contentsline {figure}{\numberline {11}{\ignorespaces Im\IeC {\'a}genes del fondo de nuestra base de datos\relax }}{23}{figure.caption.18}
 \contentsline {figure}{\numberline {12}{\ignorespaces Mano seleccionada\relax }}{24}{figure.caption.19}
-\contentsline {figure}{\numberline {13}{\ignorespaces Mano seleccionada\relax }}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {13}{\ignorespaces ROI que muestra una uni\IeC {\'o}n entre los dedos\relax }}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {14}{\ignorespaces ROI donde se aprecio un hoyo en la mano\relax }}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {15}{\ignorespaces Apertura y cerradura\relax }}{25}{figure.caption.22}
+\contentsline {figure}{\numberline {16}{\ignorespaces Binarizaci\IeC {\'o}n de ROI\relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {17}{\ignorespaces En esta dibujado el casco convexo los punto en son los defectos de convexidad\relax }}{27}{figure.caption.24}
 \addvspace {0\p@ }
 \addvspace {0\p@ }
 \addvspace {0\p@ }

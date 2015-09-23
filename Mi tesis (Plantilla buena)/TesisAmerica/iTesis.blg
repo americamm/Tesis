@@ -3,53 +3,101 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: iTesis.aux
 The style file: cicese.bst
 Database file #1: iTesis.bib
-Repeated entry---line 88 of file iTesis.bib
+Repeated entry---line 97 of file iTesis.bib
  : @article{Premaratne2013
  :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 158 of file iTesis.bib
+ : @book{Chaki2014
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 170 of file iTesis.bib
+ : @book{Gonzalez2002
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 183 of file iTesis.bib
+ : @article{Huang2011
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 200 of file iTesis.bib
+ : @article{Mitra2007
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 210 of file iTesis.bib
+ : @article{MohdAsaari2014
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 223 of file iTesis.bib
+ : @article{Nayakwadi2014
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 234 of file iTesis.bib
+ : @book{Niblack1985
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 243 of file iTesis.bib
+ : @book{Premaratne2013
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 254 of file iTesis.bib
+ : @article{Premaratne2013
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 270 of file iTesis.bib
+ : @article{Rautaray2012
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 283 of file iTesis.bib
+ : @article{Viola2001
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 297 of file iTesis.bib
+ : @article{Yoon2012
+ :                  ,
 I'm skipping whatever remains of this entry
 Warning--can't use both author and editor fields in Chaki2014
 Warning--empty publisher in Gonzalez2002
 Warning--empty journal in Mitra2007
 Warning--empty journal in Nayakwadi2014
-You've used 10 entries,
+You've used 11 entries,
             2727 wiz_defined-function locations,
-            780 strings with 7131 characters,
-and the built_in function-call counts, 4462 in all, are:
-= -- 410
-> -- 247
-< -- 12
-+ -- 69
-- -- 69
-* -- 446
-:= -- 684
-add.period$ -- 32
-call.type$ -- 10
-change.case$ -- 54
-chr.to.int$ -- 22
-cite$ -- 34
-duplicate$ -- 186
-empty$ -- 294
-format.name$ -- 85
-if$ -- 902
+            788 strings with 7290 characters,
+and the built_in function-call counts, 4833 in all, are:
+= -- 447
+> -- 258
+< -- 14
++ -- 72
+- -- 72
+* -- 467
+:= -- 740
+add.period$ -- 36
+call.type$ -- 11
+change.case$ -- 57
+chr.to.int$ -- 23
+cite$ -- 37
+duplicate$ -- 208
+empty$ -- 323
+format.name$ -- 89
+if$ -- 986
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 13
-newline$ -- 55
-num.names$ -- 40
-pop$ -- 97
+missing$ -- 15
+newline$ -- 61
+num.names$ -- 44
+pop$ -- 107
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 46
 quote$ -- 0
-skip$ -- 161
+skip$ -- 180
 stack$ -- 0
-substring$ -- 160
-swap$ -- 73
-text.length$ -- 3
+substring$ -- 169
+swap$ -- 82
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 81
+type$ -- 87
 warning$ -- 4
-while$ -- 43
+while$ -- 47
 width$ -- 0
-write$ -- 131
-(There was 1 error message)
+write$ -- 145
+(There were 13 error messages)
