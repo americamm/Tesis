@@ -3,352 +3,234 @@
 \noindent
 \rule{\textwidth}{0.5pt}
 \vspace{-5.5ex}% 
-\newcommand{\pushline}{\Indp}% Indent puede ir o no :p
+\newcommand{\pushline}{\Indp}% Indent puede ir o no :p 
 
-En este cap\'itulo se describe el sistema de reconocimiento de gestos propuesto, este consta de cuatro etapas principales. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema; la segunda etapa es la detección aquí la mano es localizada y segmentada del fondo; en la etapa tres se extraen las características de la mano para ser procesadas en la etapa final donde el gesto realizado es reconocido. 
+El sistema de reconocimiento de gestos propuesto consta de cuatro etapas principales. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema; la segunda etapa es la detección aquí la mano es localizada y segmentada del fondo; en la etapa tres se extraen las características de la mano para ser procesadas en la etapa final donde el gesto realizado es reconocido.   
 
-\section{Adquisición de los datos}\label{sec:AdquisicionDatos}
+En este cap\'itulo se describen las etapas del sistema de reconocimiento, junto con los métodos o herramientas que son utilizados en cada una de ellas.   
 
-En esta etapa se capturan los datos que son la entrada del sistema. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect, estos se encuentran ubicados uno frente al  usuario y otro al lado  izquierdo como se muestra en la figura \ref{fig:SetupSystem}.
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.2]{./Figures/system.png}
-\end{center}
-\caption{Configuración del sistema de reconocimiento de gestos con las manos}
-\label{fig:SetupSystem}
-\end{figure} 
- 
-una vez que le flujo de datos de los sensores de profundidad es capturado este es representado como una imagen en escala de grises de $8$ bits de $640$ p\'ixeles de ancho por $480$ p\'ixeles de largo. En las imágenes se puede apreciar detalles pequeños, es decir cambios en la profundidad de hasta $1$  $mm$ esto debido a que la escala de grises inicia cada $26$  $cm$. %creo que no se entiende bien, explicar un poco mejor.  
-En la siguiente imagen se puede apreciar un ejemplo de las imágenes de profundidad. \ref{fig:ImagenCapturada}
+\section{Adquisición de los datos: sensor Kinect}\label{KinectSensor} 
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/166.png}
-\end{center}
-\caption{Representación de los datos capturados por los Kinect}
-\label{fig:ImagenCapturada}
-\end{figure}  
+Es la primera etapa del sistema, es donde se capturan los datos que son la entrada del sistema. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect. A continuación se describe las características de este dispositivo. 
 
-Debido a la naturaleza del funcionamiento del Kinect, las imágenes obtenidas contiene ruido del tipo (poner), el cual nos da una imagen como la figura  , el ruido  es reducido usando un filtros de mediana este es aplicado en toda la imagen en una ventada de tama\~no $13$. La imagen resultante $S(x,y)$ es como la que se muestra en la figura \ref{fig:ImagenCapturada}
+En noviembre del 2010 la compa\'nia Microsoft lanz\'o el sensor Kinect para consolas de vídeo juego Xbox 360 y en febrero del 2011 lanz\'o la versi\'on para Windows, que se muestra en la figura \ref{fig:KinectPic}.  
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/166_W13.png}
-\end{center}
-\caption{Representación de los datos capturados por los Kinect}
-\label{fig:ImagenCapturadaNoNoise}
-\end{figure}  
+El dispositivo Kinect esta equipado con una serie de sensores que permiten obtener imágenes a color y de profundidad (imágenes que indican a la distancia que esta un objeto del sensor), los cuales permiten hacer detección y seguimiento de personas. Detecta $6$ personas y hace el seguimiento de $2$ personas \footnote{https://msdn.microsoft.com/en-us/library/hh973074.aspx}.    
   
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.6]{./Figures/Kinect.jpg}
+\end{center}
+\caption{Sensor Kinect para Windows}
+\label{fig:KinectPic}
+\end{figure} 
 
-%\begin{center}[a]
-%\begin{tabular}{ c c c }
-% cell1 & cell2 & cell3 \\ 
-% cell4 & cell5 & cell6 \\  
-% cell7 & cell8 & cell9    
-%\end{tabular}
-%\end{center}
-%
-%\begin{center}[b]
-%\begin{tabular}{ |c|c|c| } 
-% \hline
-% cell1 & cell2 & cell3 \\ 
-% cell4 & cell5 & cell6 \\ 
-% cell7 & cell8 & cell9 \\ 
-% \hline
-%\end{tabular}
-%\end{center}
-%
-%\begin{center}[c]
-% \begin{tabular}{||c c c c||} 
-% \hline
-% Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
-% \hline\hline
-% 1 & 6 & 87837 & 787 \\ 
-% \hline
-% 2 & 7 & 78 & 5415 \\
-% \hline
-% 3 & 545 & 778 & 7507 \\
-% \hline
-% 4 & 545 & 18744 & 7560 \\
-% \hline
-% 5 & 88 & 788 & 6344 \\ [1ex] 
-% \hline
-%\end{tabular}
-%\end{center}
-%
-%\begin{center}[d]
-%\begin{tabular}{ | b{5cm} | m{2cm}| m{2cm} | } 
-%\hline
-%The aligning options are m for middle, p for top and b for bottom.& cell2 & cell3 \\ 
-%\hline
-%cell1 dummy text dummy text dummy text & cell5 & cell6 \\ 
-%\hline
-%cell7 & cell8 & cell9 \\ 
-%\hline
-%\end{tabular}
-%\end{center}
-%
-%\begin{center}[e]
-%\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
-% \hline
-% \multicolumn{4}{|c|}{Country List} \\
-% \hline
-% Country Name     or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 Code&ISO numeric Code\\
-% \hline
-% Afghanistan   & AF    &AFG&   004\\
-% Aland Islands&   AX  & ALA   &248\\
-% Albania &AL & ALB&  008\\
-% Algeria    &DZ & DZA&  012\\
-% American Samoa&   AS  & ASM&016\\
-% Andorra& AD  & AND   &020\\
-% Angola& AO  & AGO&024\\
-% \hline
-%\end{tabular}
-%\end{center}
-%\begin{center}[f]
-%\begin{tabular}{ |c|c|c|c| } 
-%\hline
-%col1 & col2 & col3 \\
-%\hline
-%\multirow{3}{4em}{Multiple row} & cell2 & cell3 \\ 
-%& cell5 & cell6 \\ 
-%& cell8 & cell9 \\ 
-%\hline
-%\end{tabular}
-%\end{center}
+El sensor esta equipado con los siguientes componentes: un cámara de color o sensor de color, un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED \ref{fig:KinectComponentes}. 
 
-\section{Detección}\label{sec:DeteccionSystem} 
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.6]{./Figures/sensor.png}
+\end{center}
+\caption{Componentes del sensor Kinect}
+\label{fig:KinectComponentes}
+\end{figure} 
+
+Enseguida se describen brevemente cada uno de los componentes del sensor Kinect. 
+\begin{itemize}
+\item La cámara de color captura y transmite datos de vídeo a color, detectando los colores rojo, verde y azul (RGB, por sus siglas en ingl\'es, red, green and blue). La transmisión de datos que brinda la cámara es una secuencia de imágenes (cuadros), a una velocidad de hasta $30$ cuadros por segundo con una resolución de hasta $1280\, x \, 960$ p\'ixeles. La velocidad de los cuadros por segundo varia según la resolución de la imagen.  
+
+\item El emisor infrarrojo proyecta puntos de luz infrarroja frente al sensor, con estos puntos y el sensor de profundidad se puede medir la profundidad que existe del sensor.
+
+\item El sensor infrarrojo lee los puntos infrarrojos proyectados y calcula la distancia que existe entre el objeto y el sensor. El sensor transmite los datos de profundidad con una velocidad de $30$ cuadros por segundo con una resolución de hasta $640 \, x \, 480$ pixeles.   
+
+\item El motor de inclinación controla el \'angulo de la posición vertical de los sensores del dispositivo. El motor puede moverse desde el \'angulo de $-27^ \circ$ a $+27^\circ$. 
+
+\item Arreglo de micrófonos, consta de $4$ micrófonos, captura el sonido y localiza la dirección en la que proviene. 
+
+\item LED indica el estado del sensor.
+ 
+\end{itemize}
+
+
+ 
+\section{Detección: detección rápida de objetos usando características simples utilizando el clasificador de cascada impulsada.}\label{sec:ViolaJones}
 
 En esta etapa del sistema el objetivo es localizar y segmentar la mano para extraer las características necesarias para el reconocimiento. 
-En este trabajo se utiliza el algoritmo de detección de objetos desarrollado por \citep{Viola2001}, como se mostró en el cap\'itulo \ref{capit:cap2} sección \ref{sec:ViolaJones}, el algoritmo  clasifica las imágenes basándose en el valor de características. 
 
+El m\'etodo  desarrollado por \citep{Viola2001} fue creado originalmente para atacar el problema de detección de rostros, este puede ser usando para detectar cualquier objeto, debido a la forma en que este fue creado, pues detecta un objeto clasificando imágenes basándose en el valor de características simples.
 
-La selección de las características se llev\'o acabo por medio del algoritmo AdaBoost; la implementaci\'on se realiz\'o utilizando el software OpenCV Haar training classifier \footnote{https://github.com/mrnugget/opencv-haar-classifier-training}. Se entren\'o con $1000$ imágenes positivas (imágenes de profundidad de la mano), y $2000$ negativas, (imágenes de fondo a distintas profundidades). Las imágenes positivas fueron generadas de $100$ imágenes de la mano usando el software Create Samples \footnote{http://note.sonots.com/SciSoftware/haartraining.html}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{https://github.com/americamm}.
+La técnica clasifica si el objeto se encuentra en la escena, usando AdaBoost en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características, se usan las características Haar, el valor de estas es calculado mediante una imagen integral.
 
-Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de mano, estas fueron tomadas a una distancia de entre $60$ $cm$ y $200$ $cm$. Las imágenes de profundidad de la mano fueron tomadas de $6$ personas distintas con tres distintas poses: palma abierta con dedos abiertos, palma abierta con dedos juntos y finalmente el pu\~no, como se muestra en la figura \ref{fig:ImagenesPoses}. Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la figura \ref{fig:ImagenFondo}. El programa para la captura de las imágenes puede ser encontrado en github \footnote{https://github.com/americamm}.  
+(Parece que falta explicar mas el algoritmo de cascada) 
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/TrainingImages.png}
-\end{center}
-\caption{Imágenes de la mano de nuestra base de datos}
-\label{fig:ImagenesPoses}
-\end{figure}  
+En seguida se explica a detalle cada etapa del método. 
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/166_W13.png}
-\end{center}
-\caption{Imágenes del fondo de nuestra base de datos}
-\label{fig:ImagenFondo}
-\end{figure}  
+\subsection{Características Haar}\label{subsec:CaracteristicasHaar}  
 
-Para localizar la mano en cada cuadro proveniente de los Kinect, una ventana de tamaño $kahkjgv$ se desliza por la imagen, una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionada alrededor de la mano, como se puede ver en la figura \ref{fig:Roi}.
+Las características Haar son operadores rectangulares como los de la figura \ref{fig:haarFeatures}.\\ 
+Las características con dos rectángulos \ref{fig:haarFeatures:1}, \ref{fig:haarFeatures:2} , contienen dos regiones rectangulares adyacentes, y el valor de la característica se calcula tomando la diferencia de la suma de ambas regiones.\\ 
+Las características con tres rectángulos \ref{fig:haarFeatures:3}, contienen tres regiones rectangulares adyacentes, y el valor de la característica se calcula la suma de las regiones exteriores y se resta la suma de la región interior.\\ 
+Las características con cuatro rectángulos \ref{fig:haarFeatures:4}, contienen cuatro regiones rectangulares adyacentes, y el valor de la característica se obtiene con la diferencia entre las regiones pares diagonales.
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
-\end{center}
-\caption{Mano seleccionada}
-\label{fig:Roi}
-\end{figure}  
-
-Ya que se tiene localizada el área donde se encuentra la mano, el siguiente paso es segmentar la mano del ROI. La segmentación se realiza calculando los contornos existentes en la ROI y se toma el contorno más grande como el contorno de la mano, antes de calcular el contorno se realizan una serie de procesamientos al ROI para eliminar ruido y que el cálculo del contorno sea más preciso.    
-
-El primer procesamiento que se aplica al ROI, son las operaciones morfológicas de apertura y cerradura, en ese orden. Se utilizan para eliminar uniones pequeños que existen en la imagen como el que se muestra \ref{fig:RuidoUnion} o unir pequeños hoyos que existen en la imagen, como los que se encuentran en la figura \ref{fig:RuidoHoyo}.\\
-La operaciones utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento $3 \, x \, 7$ pixeles; para la cerradura se aplic\'o con un tamaño  $7 \, x \, 7$ pixeles. 
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
-\end{center}
-\caption{ROI que muestra una unión entre los dedos}
-\label{fig:RuidoUnion}
-\end{figure}   
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
-\end{center}
-\caption{ROI donde se aprecio un hoyo en la mano}
-\label{fig:RuidoHoyo}
-\end{figure}  
-
-
-El resultado de estas operaciones es mejorar la región de interés. Las imágenes siguientes muestran el resultado de aplicar las operaciones apertura y cerradura al ROI. 
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
-\end{center}
-\caption{Apertura y cerradura}
-\label{fig:ImagenOpenClose}
-\end{figure}  
-
-Una vez aplicadas las operaciones el siguiente paso es binarizar la región de interés, se lleva acabo aplicando el algoritmo desarrollado por \citep{Niblack1985}, se decidió usar este método debido a la naturaleza de la imagen. Los parámetros que fueron usados fueron $k=0.5$ y una ventana de $3x3$ p\'ixeles. La imagen siguiente es una imagen binarizada. 
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
-\end{center}
-\caption{Binarización de ROI}
-\label{fig:BinarizationRoi}
+\begin{figure}%[htbp]
+\centering
+\subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures1}\label{fig:haarFeatures:1}}
+\subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures2}\label{fig:haarFeatures:2}}
+\subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures3}\label{fig:haarFeatures:3}}
+\subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures4}\label{fig:haarFeatures:4}}
+\caption{Ejemplo de operadores Haar} \label{fig:haarFeatures}
 \end{figure}
+
+\subsection{Imagen integral}\label{subsec:IntegralImage} 
+
+Uno de los aportes de este método es el concepto de imagen integral con la cual se calcula el valor de las características. La imagen integral, $SI$, se calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición.    
+
+$$SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1)$$ 
+
+La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de dicha región, la cual se obtiene como:   
+
+$$REG(\alpha)=SI(A)+SI(D)-SI(B)-SI(C)$$
+
+donde $REG(\alpha)$ es la región a la cual se le quiere calcular el valor de la suma de sus pixeles; $A,B,C,D$ son las esquinas de dicha región, como se muestra en la figura \ref{fig:figImageIntegral}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.3]{./Figures/IntegralImage.png}
+\end{center}
+\caption{Regiones de imagen integral}
+\label{fig:figImageIntegral}
+\end{figure} 
+
+\subsection{Clasificador AdaBoost}\label{subsec:AdaboostClasifier}  
+
+El algoritmo AdaBoost realiza su clasificación construyendo un clasificador fuerte $h(x)$ de clasificadores débiles $h_i(x)$. Los clasificares débiles son calculados de la siguiente manera: 
+
+$$h_i(x)=
+\begin{cases}   
+1, \quad Si \quad  p_if_i<p_i \theta_i \\
+0, \quad de \quad otra \quad forma.\\
+\end{cases}$$
+
+donde $f_i(x)$ es una característica, $\theta$ es un umbral, y $p_i(x)$ representa el signo de la desigualdad.   
+
+El clasificador fuerte es una combinación lineal de los clasificadores débiles, y se define de la siguiente forma: 
+
+$$h(x)= \alpha_1h_1(x)+\alpha_2h_2(x)+ \cdots +\alpha_nh_n(x)$$ 
+
+donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a cada característica, el cual va entre $0$ y $1$.
+
+
+\subsection{Clasificador AdaBoost en Cascada}\label{subsec:AdaboostCascade}   
+
+
+\section{Binarización}\label{Binarization} 
+
+La binarización es una técnica de procesamiento de imágenes, la cual se encarga de transformar una imagen en escala de grises $S(x,y)$ en una imagen binaria $B(x,y)$ es decir, los pixeles de la imagen toman un valor de $0$ ó $1$.   
+Para formar la imagen binaria un valor, umbral, de la imagen en escala de grises es seleccionado. Ya que se tiene el umbral, $T$,     
+los pixeles de la imagen son discriminados dependiendo si su valor es mayor o igual al umbral entonces el valor de los pixeles en la imagen binaria es $1$ el resto toma valor de $0$. Es decir: 
+
+$$B(x,y)=
+\begin{cases}   
+1, \quad Si \quad  S(x,y)\geq T \\
+0, \quad de \quad otra \quad forma.\\
+\end{cases}$$
+
+Existen diversas técnicas para binarizar una imagen, estas se pueden clasificar en dos grupos dependiendo de la manera es que es calcula el umbral, global o local. Los métodos globales calculan un umbral que es usado en toda la imagen y los métodos locales calculan varios umbrales para ciertas regiones de la imagen.  
+
+Un método de binarización muy utilizado es el de NiBlack, \citep{Chaki2014} es un método local y adaptativo ya que adapta el umbral basándose en la media $m(i,j)=$ y la desviación estándar $\sigma(i,j)$ de una ventana deslizante de tamaño $bxb$. El umbral $T$  se calcula como: 
+
+$$T(i,j)=m(i,j)+k \cdot \sigma(i,j)$$ 
+
+donde $k \in [0,1]$ el valor de la constante determina que tanta parte del contorno es preservado.
+
+
+  
+\section{Operaciones Morfológicas}\label{OperacionesMorfologicas} 
+
+Otra técnica muy utilizada en procesamiento de imágenes son las operaciones morfológicas que son un conjunto de operaciones no lineales, la idea es que al aplicar alguna de estas operaciones el ruido se removido tomando en cuanta la forma y estructura de la imagen. 
+La operaciones morfológicas utilizan un elemento estructural el cual se aplica por toda la imagen, los elementos estructurales pueden ser de distintas formas como \ref{fig:EX}
+
+\begin{figure}
+\centering
+\subfigure[Rectángulo de $3x3$.]{\includegraphics[scale=.7]{./Figures/EX1}\label{fig:EX:1}} %\hspace{20mm}
+\qquad
+\subfigure[Figura de $3x2$.]{\includegraphics[scale=.7]{./Figures/EX3}\label{fig:EX:3}} 
+\\
+\subfigure[Cruz de $5x5$.]{\includegraphics[scale=.7]{./Figures/EX2}\label{fig:EX:2}}
+\caption{Ejemplos de elementos estructurales} \label{fig:EX}
+\end{figure} 
+
+Existen distintas operaciones morfológicas, las principales o básicas son la dilatación y erosión las cuales se explican enseguida junto con la apertura y el cierra. 
  
-%\begin{table}
-%\footnotesize
-%\centering
-%\caption{Mauris et imperdiet     tortor. Maecenas consectetur lacus elit, dignissim eleifend dolor  ornare ut. Aenean euismod porta nisi, et volutpat ex laoreet sit amet. Sed ac elit vestibulum neque ultrices feugiat}
-%\label{tab:recopilacionDeCuestionarios}
-%%\rotatebox{90}{
-%\begin{tabular}{m{0.2cm}m{2.5cm}m{2.5cm}m{2.5cm}m{2.5cm}m{2.5cm}}
-%\hline\noalign{\smallskip}
-% & \textbf{FFS} & \textbf{SOFA} & \textbf{FQ} & \textbf{CIS20R} & \textbf{FACIT}
-%\\ \noalign{\smallskip}
-%\hline
-%\noalign{\smallskip}
-%1	&	TAF	&	TAF	&	PF	&	PF	&	PF\\
-%2	&	TAF	&	CM	&	CS	&	EE	&	PF\\
-%3	&	PF	&	TAF	&	CS	&	CM	&	EE\\
-%\hline
-%\end{tabular}
-%%}
-%\end{table}
+\subsection{Dilatación}\label{Dilatation}
 
-Una vez que la ROI es binarizada, el siguiente paso es encontrar los contornos existentes dentro de esta. Los contornos se calcularon utilizando el algoritmo de $blabla$ con tales parámetros.  
+La dilatación es una operación que añade pixeles a la orilla de los objetos que se encuentran en la imagen. La dilatación se define como:  
+$$S \oplus EX = \lbrace S|EX_S \subseteq S \rbrace$$  
+donde $EX_S$ es el elemento estructural trasladado con la imagen. 
 
-Ya que le contorno de la mano es identificado, se calcula el casco convexo de la mano y posteriormente los defectos de convexidad 
+\subsection{Erosión}\label{OMerosion}
 
-\section{Extracci\'on de caracter\'isticas}\label{sec:ExtraccionCaracteristicasSystem}
+La erosión remueve pixeles a la orilla de los objetos que se encuentran en la imagen. La erosión se define como: 
+$$S \ominus EX = \lbrace S|EX_S \subseteq S \rbrace$$ 
+donde $EX_S$ es el elemento estructural trasladado con la imagen. 
+
+\subsection{Apertura}\label{Opening} 
+
+La operación apertura abre huecos entre objetos conectados por un enlace delgado de pixeles.  
+
+$$S \circ EX = (S \ominus EX) \oplus EX $$
+
+\subsection{Cierre}\label{Closure}
+
+La operación cierre elimina huecos pequeños  y rellena huecos en las
+$$S \bullet EX = (S \oplus EX) \ominus EX $$
+
+\section{Extracción de características: casco convexo y defectos de convexidad}\label{sec:Convexhull} 
 
 La idea de esta etapa es encontrar las características que sean capaces de describir la mano, de manera que con estas características se pueda reconocer los gestos realizados por la o las manos.  
 Las características se guardan en un vector, llamado vector de características, donde la dimension del vector es el número de características que describen, es este caso, la mano.  
 
 Las características que se extraen son geométricas, se extraen: el n\'umero de dedos, los ángulos entre ellos, el centro de la mano, la distancia del centro a la punta de los dedos, el área y perímetro de la mano. 
 
-Para la extracción de características se utilizan los algoritmos de casco convexo y el de defectos de convexidad, la figura muestra la mano con el casco convexo y sus defectos. 
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
-\end{center}
-\caption{En esta dibujado el casco convexo los punto en son los defectos de convexidad}
-\label{fig:Convex&Defects}
-\end{figure}
-
-
-Una vez aplicados estos dos algoritmos se pueden calcular el número de dedos y las puntas de estos que son fundamentales para calcular las demás características. Enseguida se describe el algoritmo () para calcular el numero de dedos. 
-Sea $CD={cd_1, cd_2, \cdots, cd_n}$ los defectos de convexidad de un conjunto casco convexo. Cada defecto esta compuesto de tres elementos $s_i(x,y),d_i(x,y),e_i(x,y) \in cd_i$. $\delta_i$ es la distancia de $d_i(x,y)$ a la orilla del casco convexo.  
-
-\begin{algorithm}
-\begin{algorithmic}[1]
-
-\REQUIRE $d_i$
-\ENSURE Número de dedos, $Nf$.  
-
-\FOR{$i=1$ hasta $n$}  
-	\STATE $minDist=20$, $maxAng=60$, $antecesor=0$, $sucesor=0$. 	
-	
-	\IF{$\delta_i < minDepth$ } 
-	\STATE continuar
-	\ENDIF 
-	
-	\IF{i=0} 
-	\STATE $antecesor=n-1$
-	\ELSE
-	\STATE $antecesor=i-1$
-	\ENDIF 
-
-	\IF{i=n-1} 
-	\STATE $sucesor=0$
-	\ELSE
-	\STATE $sucesor=i+1$
-	\ENDIF   
-	
-	\STATE Calcular el $angulo$ entre $s_{antecesor}(x,y)$ y $s_{sucesor}(x,y)$
-	
-	\IF{$angulo \geqslant maxAng$}
-	\RETURN \FALSE
-	\ENDIF  
-	
-	\STATE $Nf=Nf+1$.
-
-\ENDFOR 
-
-Calculo del $angulo$
-
-$$ \alpha_{f_j} = \tan^{-1}{ \bigg| \frac{m_{j+1}-m_j}{1+m{j+1}m_j} \bigg|}$$
-
-$$ \theta_{f_j} = \tan^{-1} | {m_j} - 90^\circ |$$
-
-\end{algorithmic}
-\end{algorithm}
-
-
-
-
-
+Antes de definir el casco convexo se presenta la definición de conjunto convexo. 
  
 
-%\begin{equation} \label{eq:demandaOxigeno_simple}
-%\begin{split} 
-%& K = R + H + V \\ 
-%& R = \textrm{consumo de oxígeno} \times kg^{-1} \times min^{-1}\\ 
-%& H = \textrm{constante horizontal} \times \textrm{velocidad de desplazamiento}\\ 
-%& V = \textrm{constante vertical} \times \textrm{velocidad de desplazamiento}\\ 
-%\end{split} 
-%\end{equation} 
-%
-%\begin{figure}\label{eq:testing}
-%\[ e = m c^2 \]
-%\caption{A $ \dfrac{3}{2} $ famous equation, where $ e = m c^2  $ represent $ e = m c^2  $ energy something and $  A_{d} = -g - \frac{\sum F}{mass} $  another $\protect\pi=\protect\varpi + \protect\xi$ thing. }
-%\end{figure}
+Sea $C$ un conjunto de puntos en el plano Euclidiano, el casco convexo es el conjunto convexo más pequeño que contiene a todos los puntos en $C$. 
 
-
-Las características se guardan en un vector de características de dimensión $26$.
-
-\section{Reconocimiento}\label{sec:ReconocimientoSystem}
-
-Es la etapa final del reconocimiento,es donde finalmente el gesto puede ser interpretado por la computadora.   
-El reconocimiento de los gestos estáticos se lleva acabo usando el algoritmo de clasificación de MSV. 
+Los defectos de convexidad de un con casco convexo, es el conjunto de puntos que no pertenecen al casco convexo. El defecto es el espacio entre la linea y el objeto  
 
 
 
+\section{Reconocimiento: m\'aquinas de soporte vectorial}\label{sec:SVM} 
+Es la etapa final del reconocimiento,es donde finalmente el gesto puede ser interpretado por la computadora.  
 
-%\subsection{Extracción de parámetros}
-%Ecuación \ref{eq:gravedad}. 
-%
-%\begin{equation} \label{eq:gravedad}
-%A_{d} = -g - \frac{\sum F}{mass}
-%\end{equation} 
+$N$ puntos de entrenamiento de dimensión $D$, dos clases distintas $y_i=-1$
+o $+1$ es decir: 
 
-%Donde $A_{d}$ representan la aceleración que se aplica a un dispositivo, $g$ la constante de gravedad de 9.81 m/$s^{2}$, y $\sum F$ las fuerzas que se aplican al propia sensor.
+${x_i,y_i}$ donde $i=1, \cdots ,N$, $y\in{-1,1}$, $x \in \Re^D$  
 
-%Text  \ref{eq:demandaOxigeno_personalizada} and more $O_{2}$ text:
-%
-%\begin{equation} \label{eq:demandaOxigeno_personalizada}
-%\begin{split} 
-%& K = R + H + V \\ 
-%& R = 3.5 - (0.0367 \times BMI) - (0.0038 \times age) + (0.1790 \times gender)\\
-%& H = 0.1 \times \textrm{velocidad de desplazamiento}\\ 
-%& V = 1.8 \times \textrm{velocidad de desplazamiento}\\ 
-%\end{split} 
-%\end{equation} 
-%
-%Donde $1 + 2$ representan el consumo de $O_{2}$ en reposo personalizado al usuario $(ml \times kg^{-1} \times min^{-1})$ \citep{Barstow:1991}, $H$ el componente horizontal relativo a la velocidad de desplazamiento (m/min), $V$ el componente vertical relativo a la velocidad (m/min) y pendiente de desplazamiento (\%).
-%
-%\begin{description}
-%  \item[Velocidad:] \hfill \\
-%  	Para obtener la velocidad de desplazamiento se utiliza el número de pasos realizados por el usuario como se muestra a continuación (Ecuación \ref{eq:velocidad}).
-%  
-%\begin{equation} \label{eq:velocidad}
-%  S_{k} = D_{k}/W \hspace{10 mm} 
-%  D_{k} = ST_{k} \times SL \hspace{10 mm}
-%  SL = D_{total}/ST_{total} 
-%\end{equation}
-%\end{description}
-	
+Hiperplano óptimo 
+ 
+$$ w \cdot x + b = 0$$ 
+
+donde $w$ es la normal al hiperplano, $\frac{b}{|w|}$ es la distancia perpendicular desde el hiperplano al origen.   
+
+$$ w \cdot x + b = +1 \textrm{ para } y_i=+1$$ 
+$$ w \cdot x + b = -1 \textrm{ para } y_i=-1$$ 
+
+Maximizar el margen, encontrar el mínimo de $w$.  
+
+$Min$ $\Vert w \Vert$ tal que $y_i(w \cdots x_i + b) -1 \geq 0$
+ 
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.3]{./Figures/maquinaSoporte.jpg}
+\end{center}
+\caption{Clasificación de maquina de soporte usando kernel lineal}
+\label{fig:SVM}
+\end{figure} 
+
+
 \newpage
 %%=====================================================
-

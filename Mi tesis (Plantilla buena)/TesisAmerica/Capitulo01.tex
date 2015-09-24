@@ -9,11 +9,15 @@ La interacción entre humanos se lleva a cabo gracias a la comunicación  que ex
 Estos gestos sirven como complemento de la comunicación y ayudan a que el mensaje sea percibido de manera correcta.
 
 
-El creciente desarrollo de la tecnología, a llevado  a crear y estudiar distintas áreas de las ciencias computacionales, particularmente el área de interacción humano computadora (HCI, por sus siglas en ingl\'es Human Computer Interaction), la área encarga del estudio y diseño de la forma en que el humano interactua con la computadora. 
+El creciente desarrollo de la tecnología, a llevado  a crear y estudiar distintas áreas de las ciencias computacionales, particularmente el área de interacción humano computadora (HCI, por sus siglas en ingl\'es Human Computer Interaction), la área encargada del estudio y diseño de la forma en que el humano interactua con la computadora. 
 Uno de los objetivos principales de esta área es que la interacción se lleve acabo de manera natural. 
 No resulta extraño que los investigadores de HCI se hayan interesado en los gestos corporales, en especial los gestos realizados con las manos, para crear un ambiente natural entre el usuario y la computadora.  
 Por lo que es necesario que la computadora pueda identificar la o las manos del usuario y reconocer el gesto que este realiza. 
-(Pone rlo de cantacto y vision i dondt know)
+
+A finales de los años noventa se empezar\'on a desarrollar t\'ecnicas para  el reconocimiento de gestos con las manos. Los primeros acercamientos utilizaban sensores como: guantes de datos, marcadores de colores y acelerómetros; los cuales se colocaban en la o las manos para poder capturar la posición, la pose de la o las manos, entre otros datos para poder reconocer el gesto realizado. 
+Las técnicas desarrolladas posteriormente obtienen la información necesaria de la mano usando distintos tipos de imágenes o vídeos, que son obtenidos mediante diversos tipos de cámaras.
+
+Los métodos que utilizan imágenes o vídeo son los más utilizados ya que el usuario y la computadora interactuan de manera natural, el detalle con estos métodos es que es un problema difícil de resolver pues existen distintas variables que entran en juego para obtener una buena precision en el reconocimiento tomando en cuenta todas la variables. 
 
 Aunque existe gran variedad de métodos y sistemas que hacen el reconocimiento de gestos de las manos no existe alguno que su reconocimiento tenga un alto grado de precisión en todas las situaciones que se presentan en el mundo real.  
 
@@ -21,22 +25,12 @@ Es por eso que se propone crear un sistema que reconozca gestos realizados con l
 El sistema se enfoca en atacar estos problemas cuando las manos no se encuentran en movimiento, pero también se abordar\'an los gestos con las manos que involucran movimiento. El objetivo del sistema es el de controlar la computadora mediante gestos, con la ayuda del sensor Kinect como herramienta para la captura de la información de entrada. 
   
 
+
 \section{Definici\'on del problema}\label{sec:DefinicionProblema}
 
-\textbf{Creo que esto no. si, si, hay que corregirlo, no si poner esta parte en introuccion} 
-A finales de los años noventa se empezar\'on a desarrollar t\'ecnicas para  el reconocimiento de gestos con las manos. Los primeros acercamientos utilizaban sensores como:(ponerlos); los cuales se colocaban en la o las manos para así poder capturar la posición, la pose de la o las manos, entre otros datos para poder reconocer el gesto realizado. 
-Las técnicas posteriores obtienen la información necesaria de la mano usando distintos tipos de imágenes o vídeos, que son obtenidos mediante diversos tipos de cámaras.
-
-Los métodos basados en la visión son los más utilizados ya que el usuario y la computadora interactuan de manera natural, el detalle con estos métodos es que es un problema difícil de resolver pues existen distintas variables que entran en juego para obtener una buena precision en el reconocimiento tomando en cuenta todas la variables. 
-
 Existen diversas técnicas que logran obtener buena precisión en el reconocimiento de gestos realizados con las manos, pero hay técnicas que puedan tener buena precision y que se adecue a todo tipo de situaciones de la vida real como: amigable con el usuario, invariante a la iluminación, rotación, al fondo, que funcione en tiempo real o cuando exista oclusión.
 
-\textbf{Si lo otro esta bien pues esto se quita}
-Los métodos que realizan el reconocimiento de gestos hechos con las manos, llevan acabo el reconocimiento por medio de etapas, una de estas es la forma en que se capturan los datos de entrada del sistema, es decir como se capturan los gestos para posteriormente ser procesados. Una manera de capturar los datos es por medio de dispositivos de visión, es decir distintos tipos cámaras. 
 
-Existen diversas técnicas que logran obtener buena precisión en el reconocimiento de gestos realizados con las manos, pero hay técnicas que puedan tener buena precision y que se adecue a todo tipo de situaciones de la vida real como: amigable con el usuario, invariante a la iluminación, rotación, al fondo, que funcione en tiempo real o cuando exista oclusión.
-
-%Le siguieron las basadas en la visión, estas fueron las m\'as aceptadas debido a la facilidad de interacción entre el usuario, entre otras cosas, aunque estas tienen sus desventajas pues no es problema fácil de resolver debido a que existen distintas variables a considerar. 
 
 \section{Justificaci\'on}\label{sec:Just}
 
@@ -44,9 +38,13 @@ Debido a la complejidad del problema de reconocimiento de gestos con las manos, 
 
 Una vez logrado lo anterior se pueden desarrollar nuevas aplicaciones y tecnologías que ayuden a interactuar con naturalidad al usuario y la computadora.
 
+
+
 \section{Objetivo general}\label{sec:ObjetivoGeneral}
  
 Desarrollar un sistema que permita controlar la computadora haciendo uso de gestos con las manos, estáticos y dinámicos. El sistema debe ser robusto, funcionar en circunstancias de baja iluminación, cuando exista oclusión en gestos dinámicos.
+
+
 
 \section{Objetivos espec\'ificos}\label{sec:objetivosEspecificos}
 
@@ -63,30 +61,28 @@ Desarrollar un sistema que permita controlar la computadora haciendo uso de gest
 \end{itemize}
 
 
+
 \section{Limitaciones y suposiciones}\label{sec:Limitaciones&Suposiciones}
 
-Gran porcentaje de los trabajos previos en el \'area de reconocimiento de gestos con las manos basados en el modelo de la visión  utilizan c\'amaras digitales o c\'amaras web. Esta investigación utiliza el dispositivo Kinect, para obtener la información de entrada del sistema. 
+Gran porcentaje de los trabajos previos en el \'area de reconocimiento de gestos con las manos basados en el modelo de la visión  utilizan c\'amaras digitales o c\'amaras web. Esta investigación utiliza dos dispositivos Kinect, para obtener la información de entrada del sistema.
 
-De  manera que las limitaciones del sistema propuesto están dadas por las características de dicho dispositivo, tales como la distancia a la que se encuentra el dispositivo con el usuario, $0.4m$ a $3m$ , la resolución de las imágenes a color $640 \, x \, 480$ pixeles y la resolución del sensor infrarrojo $640 \, x \, 480$ pixeles.\\
-También el sistema depende de dos sensores Kinect, que se utilizar\'an en el caso que exista oclusión. \\
+De  manera que las limitaciones del sistema propuesto están dadas por las características de dicho dispositivo, tales como la distancia  a la que se encuentran los dispositivos con el usuario y la resolución del sensor. 
+
 Otra limitante es el número de gestos que podrá reconocer el sistema.
 
-Se supone el área de trabajo como un cuarto estándar con buena iluminación (enfocado a pruebas con la cámara color del sistema Kinect).
+Se supone el área de trabajo como un cuarto estándar con buena iluminación.
+
+
+
 
 \section{Reconocimiento de gestos con la manos}\label{sec:ReconocimientoGestos} 
 
+La definición de gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran a los dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o de interactuar con el ambiente. De aquí en adelante entiéndase el término gestos con las manos, como gestos. 
 
-La definición de gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran a los dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o de interactuar con el ambiente. De acuerdo con la literatura \citep{Mitra2007} los gestos con las manos se clasifican en estáticos y dinámicos, los primeros están definidos como la posición y orientación de la mano en el espacio manteniendo esta pose durante cierto tiempo, por ejemplo para hacer una se\~nal de aventón, a diferencia de los gestos dinámicos donde hay movimiento de la pose, un ejemplo  es cuando mueves la mano en se\~nal de adiós. De aquí en adelante entiéndase el término gestos con las manos, como gestos. 
+Los primeros acercamientos para llevar acabo el reconocimiento de gestos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario, esto para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visi\'on surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde c\'amaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundidad.  
 
-El reconocimiento de gestos se divide en tres fases \citep{Rautaray2012}, detección o segmentación; extracci\'on de caracter\'isticas seguimiento; dependiendo si los gestos son dinámicos, por último la etapa final el reconocimiento del gesto.  
-Este se clasifican en dos modelos, basados en la visi\'on y en contacto, esta clasificaci\'on depende de la manera en que son capturados los datos, es decir la forma en que se obtiene el gesto, para posteriormente poderlo reconocer. 
+En este trabajo, se toma el enfoque basado en la visi\'on ya que se quiere obtener un sistema que para el usuario la interaccion interacción sea natural y una manera de lograr esto es tomando este enfoque.  
 
-Los primeros acercamientos para llevar acabo el reconocimiento de gestos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario, esto para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visi\'on surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde c\'amaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundida.  
-
-En este trabajo, se toma el enfoque basado en la visi\'on ya que se quiere obtener un sistema que para el usuario sea facil de interactuar, y esta interacci\'on sea natural y una manera de lograr esto es tomando este enfoque.  estos tienen mayor complejidad (acomodra este parrafo :P)
-
-
-Los métodos basados en la visión se pueden representar por dos modelos \citep{Rautaray2012}, los basados en 3D, da una descripción espacial en 3D de la mano, y los basados en apariencia, como su nombre lo dice se basan en la apariencia de la mano. Los modelos basados en apariencia se dividen en dos categorías, los estáticos (modelo de silueta, de contorno deformables) y de movimiento (de color y movimiento).
 
 
 \section{Estado del arte}\label{sec:EstadoDelArte} 
@@ -128,7 +124,7 @@ Flutter  es un software que reconoce cuatro gestos est\'aticos detectando la pal
 Aunque estos dispositivos y software para reconocer gestos  solucionan algunos problemas importantes en el \'area, sigue existiendo el problema de oclusi\'on  e iluminaci\'on. De allí la importancia que existan modelos que puedan resolver estos problemas se presentan frecuentemente en el reconocimiento. 
 
 \section{Organizaci\'on de la tesis}\label{sec:OrganizacionTesis}
-La tesis se encuentra distribuida de la siguiente manera: la segunda sección presenta los fundamentos teóricos como base para la comprensión del tema. La tercera sección presenta el sistema propuesto. En la cuarta sección se encuentran las pruebas realizadas al sistema junto con los resultados y la discusiones de estos. Finalmente la quinta sección presenta las conclusiones generales del sistema y el trabajo futuro. 
+La tesis se encuentra distribuida de la siguiente manera: la segunda sección presenta los fundamentos teóricos como base para la comprensión del tema. La tercera sección presenta el sistema propuesto. En la cuarta sección se encuentra a detalle la implementación del sistema. En la quinta sección se presentan las pruebas realizadas al sistema junto con los resultados y la discusiones de estos. Finalmente la sexta sección presenta las conclusiones generales del sistema y el trabajo futuro. 
 	
 
 
