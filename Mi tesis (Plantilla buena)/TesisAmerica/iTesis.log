@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  23 SEP 2015 17:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  24 SEP 2015 10:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1104,10 +1104,6 @@ LaTeX Info: Redefining \sc on input line 651.
 ) (./iTesis.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
-
-
-LaTeX Warning: Label `capit:cap4' multiply defined.
-
 )
 \openout1 = `iTesis.aux'.
 
@@ -1386,16 +1382,16 @@ Cap\'{\i }tulo 3
 File: ./Figures/Kinect.jpg Graphic file (type jpg)
 
 <use ./Figures/Kinect.jpg>
-Package pdftex.def Info: ./Figures/Kinect.jpg used on input line 23.
+Package pdftex.def Info: ./Figures/Kinect.jpg used on input line 24.
 (pdftex.def)             Requested size: 277.33826pt x 72.27054pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 25.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 26.
 
 <./Figures/sensor.png, id=424, 390.70969pt x 214.55156pt>
 File: ./Figures/sensor.png Graphic file (type png)
 
 <use ./Figures/sensor.png>
-Package pdftex.def Info: ./Figures/sensor.png used on input line 33.
+Package pdftex.def Info: ./Figures/sensor.png used on input line 34.
 (pdftex.def)             Requested size: 234.42761pt x 128.73192pt.
  [13
 
@@ -1404,35 +1400,35 @@ pg, id=443, 141.52875pt x 240.14719pt>
 File: ./Figures/haarFeatures1.jpg Graphic file (type jpg)
 
 <use ./Figures/haarFeatures1.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures1.jpg used on input line 78.
+Package pdftex.def Info: ./Figures/haarFeatures1.jpg used on input line 77.
 (pdftex.def)             Requested size: 56.61049pt x 96.05716pt.
 
 <./Figures/haarFeatures2.jpg, id=444, 134.75343pt x 243.15843pt>
 File: ./Figures/haarFeatures2.jpg Graphic file (type jpg)
 
 <use ./Figures/haarFeatures2.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures2.jpg used on input line 79.
+Package pdftex.def Info: ./Figures/haarFeatures2.jpg used on input line 78.
 (pdftex.def)             Requested size: 53.9004pt x 97.26164pt.
 
 <./Figures/haarFeatures3.jpg, id=445, 240.9pt x 100.12407pt>
 File: ./Figures/haarFeatures3.jpg Graphic file (type jpg)
 
 <use ./Figures/haarFeatures3.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures3.jpg used on input line 80.
+Package pdftex.def Info: ./Figures/haarFeatures3.jpg used on input line 79.
 (pdftex.def)             Requested size: 96.35828pt x 40.0489pt.
 
 <./Figures/haarFeatures4.jpg, id=446, 243.91125pt x 244.66406pt>
 File: ./Figures/haarFeatures4.jpg Graphic file (type jpg)
 
 <use ./Figures/haarFeatures4.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures4.jpg used on input line 81.
+Package pdftex.def Info: ./Figures/haarFeatures4.jpg used on input line 80.
 (pdftex.def)             Requested size: 97.56276pt x 97.86388pt.
  [15]
 <./Figures/IntegralImage.png, id=458, 822.07124pt x 566.86781pt>
 File: ./Figures/IntegralImage.png Graphic file (type png)
 
 <use ./Figures/IntegralImage.png>
-Package pdftex.def Info: ./Figures/IntegralImage.png used on input line 99.
+Package pdftex.def Info: ./Figures/IntegralImage.png used on input line 98.
 (pdftex.def)             Requested size: 246.62328pt x 170.06165pt.
  [16 <./Figures/haarFeatures1.jpg> <./Figures/haarFeatures2.jpg> <./Figures/haa
 rFeatures3.jpg> <./Figures/haarFeatures4.jpg> <./Figures/IntegralImage.png>] [1
@@ -1440,19 +1436,19 @@ rFeatures3.jpg> <./Figures/haarFeatures4.jpg> <./Figures/IntegralImage.png>] [1
 <./Figures/EX1.png, id=472, 178.41656pt x 137.01187pt>
 File: ./Figures/EX1.png Graphic file (type png)
  <use ./Figures/EX1.png>
-Package pdftex.def Info: ./Figures/EX1.png used on input line 156.
+Package pdftex.def Info: ./Figures/EX1.png used on input line 155.
 (pdftex.def)             Requested size: 124.89072pt x 95.90765pt.
 
 <./Figures/EX3.png, id=473, 120.45pt x 137.01187pt>
 File: ./Figures/EX3.png Graphic file (type png)
  <use ./Figures/EX3.png>
-Package pdftex.def Info: ./Figures/EX3.png used on input line 158.
+Package pdftex.def Info: ./Figures/EX3.png used on input line 157.
 (pdftex.def)             Requested size: 84.3144pt x 95.90765pt.
 
 <./Figures/EX2.png, id=474, 293.59688pt x 219.82124pt>
 File: ./Figures/EX2.png Graphic file (type png)
  <use ./Figures/EX2.png>
-Package pdftex.def Info: ./Figures/EX2.png used on input line 160.
+Package pdftex.def Info: ./Figures/EX2.png used on input line 159.
 (pdftex.def)             Requested size: 205.5164pt x 153.87381pt.
 
 [18] [19 <./Figures/EX1.png> <./Figures/EX3.png> <./Figures/EX2.png>] [20]
@@ -1460,7 +1456,7 @@ Package pdftex.def Info: ./Figures/EX2.png used on input line 160.
 File: ./Figures/maquinaSoporte.jpg Graphic file (type jpg)
 
 <use ./Figures/maquinaSoporte.jpg>
-Package pdftex.def Info: ./Figures/maquinaSoporte.jpg used on input line 228.
+Package pdftex.def Info: ./Figures/maquinaSoporte.jpg used on input line 227.
 (pdftex.def)             Requested size: 159.29634pt x 159.29634pt.
  [21 <./Figures/maquinaSoporte.jpg>])
 (./Capitulo04.tex
@@ -1593,14 +1589,14 @@ Package rerunfilecheck Info: File `iTesis.out' has not changed.
 (rerunfilecheck)             Checksum: 73257BFA21B83BB26020101A89C9F64C;3771.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 21443 strings out of 493315
- 330137 string characters out of 6145894
- 485354 words of memory out of 5000000
- 24217 multiletter control sequences out of 15000+600000
+ 21444 strings out of 493315
+ 330149 string characters out of 6145894
+ 485404 words of memory out of 5000000
+ 24218 multiletter control sequences out of 15000+600000
  39288 words of font info for 84 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  53i,12n,92p,1456b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1640,7 +1636,7 @@ y8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
 hare/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/ur
 w/helvetic/uhvbo8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></
 usr/share/texmf/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on iTesis.pdf (43 pages, 1746497 bytes).
+Output written on iTesis.pdf (43 pages, 1746493 bytes).
 PDF statistics:
  686 PDF objects out of 1000 (max. 8388607)
  594 compressed objects within 6 object streams
