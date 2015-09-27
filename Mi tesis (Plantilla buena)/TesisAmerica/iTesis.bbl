@@ -6,6 +6,18 @@ Chaki, N., Shaikh, S.~H., y Saeed, K. (2014).
 \newblock Springer, primera edici\'on.
 \newblock p.~90.
 
+\bibitem[Chang y Lin(2011)Chang y Lin]{Chang2011}
+Chang, C.-C. y Lin, C.-J. (2011).
+\newblock {Libsvm}.
+\newblock {\em ACM Transactions on Intelligent Systems and Technology\/}, {\bf
+  2}(3): 1--27.
+
+\bibitem[Freund y Schapire(1995)Freund y Schapire]{Freund1995}
+Freund, Y. y Schapire, R. (1995).
+\newblock {A desicion-theoretic generalization of on-line learning and an
+  application to boosting}.
+\newblock {\em Computational learning theory\/}, {\bf 55}(1): 119--139.
+
 \bibitem[Gonzalez y Woods(2002)Gonzalez y Woods]{Gonzalez2002}
 Gonzalez, R. y Woods, R. (2002).
 \newblock {\em {Digital image processing}\/}.
@@ -37,7 +49,7 @@ Nayakwadi, V. (2014).
 
 \bibitem[Niblack(1985)Niblack]{Niblack1985}
 Niblack, W. (1985).
-\newblock {\em {An introduction to digital image processing No Title}\/}.
+\newblock {\em {An introduction to digital image processing}\/}.
 \newblock Strandberg Publishing Company Birkeroed, Denmark,.
 \newblock p. 215.
 
@@ -53,11 +65,22 @@ Rautaray, S.~S. y Agrawal, A. (2012).
   interaction: a survey}.
 \newblock {\em Artificial Intelligence Review\/}.
 
+\bibitem[Silva y Santos-Victor(2001)Silva y Santos-Victor]{Silva2001}
+Silva, C. y Santos-Victor, J. (2001).
+\newblock {Motion from occlusions}.
+\newblock {\em Robotics and Autonomous Systems\/}, {\bf 35}(3-4): 153--162.
+
 \bibitem[Viola y Jones(2001)Viola y Jones]{Viola2001}
 Viola, P. y Jones, M. (2001).
 \newblock {Rapid object detection using a boosted cascade of simple features}.
 \newblock {\em Proceedings of the 2001 IEEE Computer Society Conference on
   Computer Vision and Pattern Recognition. CVPR 2001\/}, {\bf 1}.
+
+\bibitem[{Yilmaz, A., Javed, O., and Shah}(2006){Yilmaz, A., Javed, O., and
+  Shah}]{YilmazA.JavedO.andShah2006}
+{Yilmaz, A., Javed, O., and Shah}, M. (2006).
+\newblock {Object tracking: a survey}.
+\newblock {\em ACM Computing Surveys (CSUR)\/}, {\bf 38}(4): 45.
 
 \bibitem[Yoon {\em \mbox{et al.}\/}(2012)Yoon, Yang, y Cho]{Yoon2012}
 Yoon, J.~W., Yang, S.~I., y Cho, S.~B. (2012).
