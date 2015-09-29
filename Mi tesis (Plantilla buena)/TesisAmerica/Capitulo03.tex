@@ -37,9 +37,9 @@ El sensor esta equipado con los siguientes componentes: un cámara de color o se
 \label{fig:KinectComponentes}
 \end{figure} 
 
-Enseguida se describen brevemente cada uno de los componentes del sensor Kinect. 
+Enseguida se describen brevemente cada uno de los componentes del sensor Kinect, \citep{Jana2013}. 
 \begin{itemize}
-\item La cámara de color captura y transmite datos de vídeo a color, detectando los colores rojo, verde y azul (RGB, por sus siglas en ingl\'es, red, green and blue). La transmisión de datos que brinda la cámara es una secuencia de imágenes (cuadros), a una velocidad de hasta $30$ cuadros por segundo con una resolución de hasta $1280\, x \, 960$ p\'ixeles. La velocidad de los cuadros por segundo varia según la resolución de la imagen.  
+\item La cámara de color captura y transmite datos de vídeo a color, detectando los colores rojo, verde y azul (RGB, por sus siglas en ingl\'es, red, green and blue). La transmisión de datos que brinda la cámara es una secuencia de imágenes (cuadros), a una velocidad de hasta $30$ cuadros por segundo con una resolución de hasta $1280\, x \, 960$ p\'ixeles. La velocidad de los cuadros por segundo varia según la resolución de la imagen.
 
 \item El emisor infrarrojo proyecta puntos de luz infrarroja frente al sensor, con estos puntos y el sensor de profundidad se puede medir la profundidad que existe del sensor.
 
@@ -55,22 +55,27 @@ Enseguida se describen brevemente cada uno de los componentes del sensor Kinect.
 
 
  
-\section{Detección: detección rápida de objetos usando características simples utilizando el clasificador de cascada impulsada.}\label{sec:ViolaJones}
+\section{Detección: detección rápida de objetos usando características simples utilizando el clasificador AdaBoost en forma de cascada.}\label{sec:ViolaJones}
 
 En esta etapa del sistema el objetivo es localizar y segmentar la mano para extraer las características necesarias para el reconocimiento. 
 
-El m\'etodo  desarrollado por \citep{Viola2001} fue creado originalmente para atacar el problema de detección de rostros, este puede ser usando para detectar cualquier objeto, debido a la forma en que este fue creado, pues detecta un objeto clasificando imágenes basándose en el valor de características simples.
+En este trabajo se utiliza el método detección rapida de objetos usando caracteristicas simples utilizando el clasificador AdaBoost en forma de cascada, \citep{Viola2001}, el cual fue creado originalmente para atacar el problema de detección de rostros, este puede ser usando para detectar cualquier objeto, debido a la forma en que este fue creado, pues detecta un objeto clasificando imágenes basándose en el valor de características simples.
 
-La técnica clasifica si el objeto se encuentra en la escena, usando AdaBoost en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características, se usan las características Haar, el valor de estas es calculado mediante una imagen integral.
+La técnica clasifica si el objeto se encuentra en la escena, usando el clasificador AdaBoost \citep{Freund1995} en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}, el valor de estas es calculado mediante el uso de una imagen integral \citep{Viola2001}.
 
-En seguida se explica a detalle cada etapa del método. 
+Enseguida se explica a detalle cada etapa del método. 
+
 
 \subsection{Características Haar}\label{subsec:CaracteristicasHaar}  
 
-Las características Haar son operadores rectangulares como los de la figura \ref{fig:haarFeatures}.\\ 
-Las características con dos rectángulos \ref{fig:haarFeatures:1}, \ref{fig:haarFeatures:2} , contienen dos regiones rectangulares adyacentes, y el valor de la característica se calcula tomando la diferencia de la suma de ambas regiones.\\ 
-Las características con tres rectángulos \ref{fig:haarFeatures:3}, contienen tres regiones rectangulares adyacentes, y el valor de la característica se calcula la suma de las regiones exteriores y se resta la suma de la región interior.\\ 
-Las características con cuatro rectángulos \ref{fig:haarFeatures:4}, contienen cuatro regiones rectangulares adyacentes, y el valor de la característica se obtiene con la diferencia entre las regiones pares diagonales.
+Las características Haar, son operadores rectangulares como los que se muestran en la figura \ref{fig:haarFeatures}. A continuación se explicaran los operadores Haar básicos:
+\begin{itemize}
+\item Las características con dos rectángulos \ref{fig:haarFeatures:1}, \ref{fig:haarFeatures:2}, contienen dos regiones rectangulares adyacentes, y el valor de la característica se calcula tomando la diferencia de la suma de ambas regiones. 
+
+\item Las características con tres rectángulos \ref{fig:haarFeatures:3}, contienen tres regiones rectangulares adyacentes, y el valor de la característica se calcula la suma de las regiones exteriores y se resta la suma de la región interior.
+
+\item Las características con cuatro rectángulos \ref{fig:haarFeatures:4}, contienen cuatro regiones rectangulares adyacentes, y el valor de la característica se obtiene con la diferencia entre las regiones pares diagonales.
+\end{itemize} 
 
 \begin{figure}%[htbp]
 \centering
@@ -81,13 +86,14 @@ Las características con cuatro rectángulos \ref{fig:haarFeatures:4}, contienen
 \caption{Ejemplo de operadores Haar} \label{fig:haarFeatures}
 \end{figure}
 
+
 \subsection{Imagen integral}\label{subsec:IntegralImage} 
 
-Uno de los aportes de este método es el concepto de imagen integral con la cual se calcula el valor de las características. La imagen integral, $SI$, se calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición.    
+Uno de los aportes del método desarrolla por Viola y Jones es el concepto de imagen integral con la cual se calcula el valor de las características. La imagen integral, $SI$, de un imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}     
 
-$$SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1)$$ 
+$$SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1)$$
 
-La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de dicha región, la cual se obtiene como:   
+La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de dicha región, la cual se obtiene como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}   
 
 $$REG(\alpha)=SI(A)+SI(D)-SI(B)-SI(C)$$
 
@@ -100,6 +106,7 @@ donde $REG(\alpha)$ es la región a la cual se le quiere calcular el valor de la
 \caption{Regiones de imagen integral}
 \label{fig:figImageIntegral}
 \end{figure} 
+
 
 \subsection{Clasificador AdaBoost}\label{subsec:AdaboostClasifier}  
 

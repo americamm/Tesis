@@ -27,7 +27,7 @@
 \BOOKMARK [1][-]{section.2.4}{Oclusi\363n}{chapter.2}% 27
 \BOOKMARK [0][-]{chapter.3}{Sistema de reconocimiento de gestos propuesto}{}% 28
 \BOOKMARK [1][-]{section.3.1}{Adquisici\363n de los datos: sensor Kinect}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.2}{Detecci\363n: detecci\363n r\341pida de objetos usando caracter\355sticas simples utilizando el clasificador de cascada impulsada.}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.2}{Detecci\363n: detecci\363n r\341pida de objetos usando caracter\355sticas simples utilizando el clasificador AdaBoost en forma de cascada.}{chapter.3}% 30
 \BOOKMARK [2][-]{subsection.3.2.1}{Caracter\355sticas Haar}{section.3.2}% 31
 \BOOKMARK [2][-]{subsection.3.2.2}{Imagen integral}{section.3.2}% 32
 \BOOKMARK [2][-]{subsection.3.2.3}{Clasificador AdaBoost}{section.3.2}% 33
@@ -50,4 +50,3 @@
 \BOOKMARK [1][-]{section.6.1}{Limitaciones del sistema}{chapter.6}% 50
 \BOOKMARK [1][-]{section.6.2}{Trabajo futuro}{chapter.6}% 51
 \BOOKMARK [0][-]{section.6.2}{Lista de referencias bibliogr\341ficas}{}% 52
-\BOOKMARK [0][-]{appendix.Alph7}{Ap\351ndice}{}% 53

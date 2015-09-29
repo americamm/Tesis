@@ -3,53 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: iTesis.aux
 The style file: cicese.bst
 Database file #1: iTesis.bib
-Repeated entry---line 129 of file iTesis.bib
+Repeated entry---line 160 of file iTesis.bib
  : @article{Premaratne2013
  :                        ,
 I'm skipping whatever remains of this entry
 Warning--can't use both author and editor fields in Chaki2014
 Warning--empty publisher in Gonzalez2002
+Warning--can't use both author and editor fields in Jana2013
 Warning--empty journal in Mitra2007
 Warning--empty journal in Nayakwadi2014
-You've used 15 entries,
+Warning--empty year in Ye; set to ????
+Warning--empty journal in Ye
+You've used 18 entries,
             2727 wiz_defined-function locations,
-            818 strings with 7855 characters,
-and the built_in function-call counts, 6466 in all, are:
-= -- 609
-> -- 335
-< -- 18
-+ -- 93
-- -- 93
-* -- 640
-:= -- 990
-add.period$ -- 48
-call.type$ -- 15
-change.case$ -- 76
-chr.to.int$ -- 27
-cite$ -- 49
-duplicate$ -- 268
-empty$ -- 439
-format.name$ -- 120
-if$ -- 1310
+            840 strings with 8324 characters,
+and the built_in function-call counts, 8183 in all, are:
+= -- 766
+> -- 439
+< -- 22
++ -- 123
+- -- 123
+* -- 816
+:= -- 1239
+add.period$ -- 58
+call.type$ -- 18
+change.case$ -- 96
+chr.to.int$ -- 36
+cite$ -- 61
+duplicate$ -- 340
+empty$ -- 545
+format.name$ -- 153
+if$ -- 1666
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 19
-newline$ -- 81
-num.names$ -- 60
-pop$ -- 126
+missing$ -- 23
+newline$ -- 97
+num.names$ -- 72
+pop$ -- 169
 preamble$ -- 1
-purify$ -- 61
+purify$ -- 77
 quote$ -- 0
-skip$ -- 237
+skip$ -- 296
 stack$ -- 0
-substring$ -- 253
-swap$ -- 103
-text.length$ -- 4
+substring$ -- 329
+swap$ -- 138
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 123
-warning$ -- 4
-while$ -- 66
+type$ -- 147
+warning$ -- 7
+while$ -- 82
 width$ -- 0
-write$ -- 197
+write$ -- 237
 (There was 1 error message)
