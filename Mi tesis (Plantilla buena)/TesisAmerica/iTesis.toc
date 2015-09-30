@@ -27,8 +27,8 @@
 \contentsline {section}{\numberline {2.3}Imagen}{12}{section.2.3}
 \contentsline {section}{\numberline {2.4}Oclusi\IeC {\'o}n}{12}{section.2.4}
 \contentsline {chapter}{\numberline {3}Sistema de reconocimiento de gestos propuesto}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Adquisici\IeC {\'o}n de los datos: sensor Kinect}{13}{section.3.1}
-\contentsline {section}{\numberline {3.2}Detecci\IeC {\'o}n: detecci\IeC {\'o}n r\IeC {\'a}pida de objetos usando caracter\IeC {\'\i }sticas simples utilizando el clasificador AdaBoost en forma de cascada.}{15}{section.3.2}
+\contentsline {section}{\numberline {3.1}Adquisici\IeC {\'o}n de los datos}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Detecci\IeC {\'o}n}{15}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Caracter\IeC {\'\i }sticas Haar}{15}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Imagen integral}{16}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Clasificador AdaBoost}{17}{subsection.3.2.3}
@@ -39,8 +39,8 @@
 \contentsline {subsection}{\numberline {3.4.2}Erosi\IeC {\'o}n}{20}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Apertura}{21}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Cierre}{21}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas: casco convexo y defectos de convexidad}{21}{section.3.5}
-\contentsline {section}{\numberline {3.6}Reconocimiento: m\'aquinas de soporte vectorial}{22}{section.3.6}
+\contentsline {section}{\numberline {3.5}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{21}{section.3.5}
+\contentsline {section}{\numberline {3.6}Reconocimiento}{22}{section.3.6}
 \contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{23}{section.4.1}
 \contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{24}{section.4.2}

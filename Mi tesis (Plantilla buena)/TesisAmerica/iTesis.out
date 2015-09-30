@@ -26,8 +26,8 @@
 \BOOKMARK [1][-]{section.2.3}{Imagen}{chapter.2}% 26
 \BOOKMARK [1][-]{section.2.4}{Oclusi\363n}{chapter.2}% 27
 \BOOKMARK [0][-]{chapter.3}{Sistema de reconocimiento de gestos propuesto}{}% 28
-\BOOKMARK [1][-]{section.3.1}{Adquisici\363n de los datos: sensor Kinect}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.2}{Detecci\363n: detecci\363n r\341pida de objetos usando caracter\355sticas simples utilizando el clasificador AdaBoost en forma de cascada.}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.1}{Adquisici\363n de los datos}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.2}{Detecci\363n}{chapter.3}% 30
 \BOOKMARK [2][-]{subsection.3.2.1}{Caracter\355sticas Haar}{section.3.2}% 31
 \BOOKMARK [2][-]{subsection.3.2.2}{Imagen integral}{section.3.2}% 32
 \BOOKMARK [2][-]{subsection.3.2.3}{Clasificador AdaBoost}{section.3.2}% 33
@@ -38,8 +38,8 @@
 \BOOKMARK [2][-]{subsection.3.4.2}{Erosi\363n}{section.3.4}% 38
 \BOOKMARK [2][-]{subsection.3.4.3}{Apertura}{section.3.4}% 39
 \BOOKMARK [2][-]{subsection.3.4.4}{Cierre}{section.3.4}% 40
-\BOOKMARK [1][-]{section.3.5}{Extracci\363n de caracter\355sticas: casco convexo y defectos de convexidad}{chapter.3}% 41
-\BOOKMARK [1][-]{section.3.6}{Reconocimiento: m\341quinas de soporte vectorial}{chapter.3}% 42
+\BOOKMARK [1][-]{section.3.5}{Extracci\363n de caracter\355sticas}{chapter.3}% 41
+\BOOKMARK [1][-]{section.3.6}{Reconocimiento}{chapter.3}% 42
 \BOOKMARK [0][-]{chapter.4}{Implementaci\363n del sistema de reconocimiento de gestos propuesto}{}% 43
 \BOOKMARK [1][-]{section.4.1}{Adquisici\363n de los datos}{chapter.4}% 44
 \BOOKMARK [1][-]{section.4.2}{Detecci\363n}{chapter.4}% 45

@@ -11,7 +11,7 @@ El sistema de reconocimiento de gestos propuesto consta de cuatro etapas princip
  
   
   
-\section{Adquisición de los datos: sensor Kinect}\label{KinectSensor} 
+\section{Adquisición de los datos}\label{KinectSensor} 
 
 Es la primera etapa del sistema, donde se capturan los datos que son la entrada del sistema. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect. A continuación se describe las características de este dispositivo. 
 
@@ -55,13 +55,13 @@ Enseguida se describen brevemente cada uno de los componentes del sensor Kinect,
 
 
  
-\section{Detección: detección rápida de objetos usando características simples utilizando el clasificador AdaBoost en forma de cascada.}\label{sec:ViolaJones}
+\section{Detección}\label{sec:ViolaJones}
 
 En esta etapa del sistema el objetivo es localizar y segmentar la mano para extraer las características necesarias para el reconocimiento. 
 
 En este trabajo se utiliza el método detección rapida de objetos usando caracteristicas simples utilizando el clasificador AdaBoost en forma de cascada, \citep{Viola2001}, el cual fue creado originalmente para atacar el problema de detección de rostros, este puede ser usando para detectar cualquier objeto, debido a la forma en que este fue creado, pues detecta un objeto clasificando imágenes basándose en el valor de características simples.
 
-La técnica clasifica si el objeto se encuentra en la escena, usando el clasificador AdaBoost \citep{Freund1995} en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}, las caracteristicas son seleccionadas usando también el clasificador AdaBoost y el valor de estas es calculado mediante el uso de una imagen integral \citep{Viola2001}. 
+La técnica clasifica si el objeto se encuentra en la escena, usando una version modificada del clasificador AdaBoost \citep{Freund1995} en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}, las caracteristicas son seleccionadas usando también el clasificador AdaBoost y el valor de estas es calculado mediante el uso de una imagen integral \citep{Viola2001}. 
 
 El diagrama () muestra como funciona el algoritmo de detección, 
 
@@ -241,7 +241,7 @@ $$S \circ EX = (S \ominus EX) \oplus EX $$
 La operación cierre elimina huecos pequeños  y rellena huecos en las
 $$S \bullet EX = (S \oplus EX) \ominus EX $$
 
-\section{Extracción de características: casco convexo y defectos de convexidad}\label{sec:Convexhull} 
+\section{Extracción de características}\label{sec:Convexhull} 
 
 La idea de esta etapa es encontrar las características que sean capaces de describir la mano, de manera que con estas características se pueda reconocer los gestos realizados por la o las manos.  
 Las características se guardan en un vector, llamado vector de características, donde la dimension del vector es el número de características que describen, es este caso, la mano.  
@@ -257,7 +257,7 @@ Los defectos de convexidad de un con casco convexo, es el conjunto de puntos que
 
 
 
-\section{Reconocimiento: m\'aquinas de soporte vectorial}\label{sec:SVM} 
+\section{Reconocimiento}\label{sec:SVM} 
 Es la etapa final del reconocimiento,es donde finalmente el gesto puede ser interpretado por la computadora.  
 
 $N$ puntos de entrenamiento de dimensión $D$, dos clases distintas $y_i=-1$
