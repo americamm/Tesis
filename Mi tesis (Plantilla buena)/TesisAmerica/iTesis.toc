@@ -31,23 +31,23 @@
 \contentsline {section}{\numberline {3.2}Detecci\IeC {\'o}n: detecci\IeC {\'o}n r\IeC {\'a}pida de objetos usando caracter\IeC {\'\i }sticas simples utilizando el clasificador AdaBoost en forma de cascada.}{15}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Caracter\IeC {\'\i }sticas Haar}{15}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Imagen integral}{16}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Clasificador AdaBoost}{16}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Clasificador AdaBoost en Cascada}{17}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Binarizaci\IeC {\'o}n}{17}{section.3.3}
-\contentsline {section}{\numberline {3.4}Operaciones Morfol\IeC {\'o}gicas}{18}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Dilataci\IeC {\'o}n}{19}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Erosi\IeC {\'o}n}{19}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Apertura}{20}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Cierre}{20}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas: casco convexo y defectos de convexidad}{20}{section.3.5}
-\contentsline {section}{\numberline {3.6}Reconocimiento: m\'aquinas de soporte vectorial}{21}{section.3.6}
-\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{22}{section.4.1}
-\contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{23}{section.4.2}
-\contentsline {section}{\numberline {4.3}Extracci\'on de caracter\'isticas}{27}{section.4.3}
-\contentsline {section}{\numberline {4.4}Reconocimiento}{28}{section.4.4}
-\contentsline {chapter}{\numberline {5}Resultados}{30}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusiones}{31}{chapter.6}
-\contentsline {section}{\numberline {6.1}Limitaciones del sistema}{31}{section.6.1}
-\contentsline {section}{\numberline {6.2}Trabajo futuro}{31}{section.6.2}
-\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{32}{section.6.2}
+\contentsline {subsection}{\numberline {3.2.3}Clasificador AdaBoost}{17}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Clasificador AdaBoost en Cascada}{18}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Binarizaci\IeC {\'o}n}{18}{section.3.3}
+\contentsline {section}{\numberline {3.4}Operaciones Morfol\IeC {\'o}gicas}{19}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Dilataci\IeC {\'o}n}{20}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Erosi\IeC {\'o}n}{20}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Apertura}{21}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Cierre}{21}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas: casco convexo y defectos de convexidad}{21}{section.3.5}
+\contentsline {section}{\numberline {3.6}Reconocimiento: m\'aquinas de soporte vectorial}{22}{section.3.6}
+\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{24}{section.4.2}
+\contentsline {section}{\numberline {4.3}Extracci\'on de caracter\'isticas}{28}{section.4.3}
+\contentsline {section}{\numberline {4.4}Reconocimiento}{29}{section.4.4}
+\contentsline {chapter}{\numberline {5}Resultados}{31}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusiones}{32}{chapter.6}
+\contentsline {section}{\numberline {6.1}Limitaciones del sistema}{32}{section.6.1}
+\contentsline {section}{\numberline {6.2}Trabajo futuro}{32}{section.6.2}
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{33}{section.6.2}

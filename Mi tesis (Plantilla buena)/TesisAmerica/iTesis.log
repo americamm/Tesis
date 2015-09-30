@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  28 SEP 2015 20:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  29 SEP 2015 22:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1395,40 +1395,40 @@ Package pdftex.def Info: ./Figures/sensor.png used on input line 34.
 (pdftex.def)             Requested size: 234.42761pt x 128.73192pt.
  [13
 
- <./Figures/Kinect.jpg>] [14 <./Figures/sensor.png>] <./Figures/haarFeatures1.j
-pg, id=438, 141.52875pt x 240.14719pt>
+ <./Figures/Kinect.jpg>] [14 <./Figures/sensor.png>] [15] <./Figures/haarFeatur
+es1.jpg, id=448, 141.52875pt x 240.14719pt>
 File: ./Figures/haarFeatures1.jpg Graphic file (type jpg)
 
 <use ./Figures/haarFeatures1.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures1.jpg used on input line 82.
+Package pdftex.def Info: ./Figures/haarFeatures1.jpg used on input line 83.
 (pdftex.def)             Requested size: 56.61049pt x 96.05716pt.
 
-<./Figures/haarFeatures2.jpg, id=439, 134.75343pt x 243.15843pt>
+<./Figures/haarFeatures2.jpg, id=449, 134.75343pt x 243.15843pt>
 File: ./Figures/haarFeatures2.jpg Graphic file (type jpg)
 
 <use ./Figures/haarFeatures2.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures2.jpg used on input line 83.
+Package pdftex.def Info: ./Figures/haarFeatures2.jpg used on input line 84.
 (pdftex.def)             Requested size: 53.9004pt x 97.26164pt.
 
-<./Figures/haarFeatures3.jpg, id=440, 240.9pt x 100.12407pt>
+<./Figures/haarFeatures3.jpg, id=450, 240.9pt x 100.12407pt>
 File: ./Figures/haarFeatures3.jpg Graphic file (type jpg)
 
 <use ./Figures/haarFeatures3.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures3.jpg used on input line 84.
+Package pdftex.def Info: ./Figures/haarFeatures3.jpg used on input line 85.
 (pdftex.def)             Requested size: 96.35828pt x 40.0489pt.
 
-<./Figures/haarFeatures4.jpg, id=441, 243.91125pt x 244.66406pt>
+<./Figures/haarFeatures4.jpg, id=451, 243.91125pt x 244.66406pt>
 File: ./Figures/haarFeatures4.jpg Graphic file (type jpg)
 
 <use ./Figures/haarFeatures4.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures4.jpg used on input line 85.
+Package pdftex.def Info: ./Figures/haarFeatures4.jpg used on input line 86.
 (pdftex.def)             Requested size: 97.56276pt x 97.86388pt.
- [15]
+
 <./Figures/IntegralImage.png, id=455, 822.07124pt x 566.86781pt>
 File: ./Figures/IntegralImage.png Graphic file (type png)
 
 <use ./Figures/IntegralImage.png>
-Package pdftex.def Info: ./Figures/IntegralImage.png used on input line 104.
+Package pdftex.def Info: ./Figures/IntegralImage.png used on input line 106.
 (pdftex.def)             Requested size: 246.62328pt x 170.06165pt.
 
 
@@ -1436,32 +1436,54 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [16 <./Figures/haarFeatures1.jpg> <./Figures/haarFeatures2.jpg> <./Figures/haar
 Features3.jpg> <./Figures/haarFeatures4.jpg>] [17 <./Figures/IntegralImage.png>
-] <./Figures/EX1.png, id=471, 178.41656pt x 137.01187pt>
+]
+! Extra }, or forgotten $.
+l.155 	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}
+                                                  $$.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156     \ENDFOR
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[18] <./Figures/EX1.png, id=486, 178.41656pt x 137.01187pt>
 File: ./Figures/EX1.png Graphic file (type png)
 
 <use ./Figures/EX1.png>
-Package pdftex.def Info: ./Figures/EX1.png used on input line 162.
+Package pdftex.def Info: ./Figures/EX1.png used on input line 211.
 (pdftex.def)             Requested size: 124.89072pt x 95.90765pt.
- <./Figures/EX3.png, id=472, 120.45pt x 137.01187pt>
+ <./Figures/EX3.png, id=487, 120.45pt x 137.01187pt>
 File: ./Figures/EX3.png Graphic file (type png)
 
 <use ./Figures/EX3.png>
-Package pdftex.def Info: ./Figures/EX3.png used on input line 164.
+Package pdftex.def Info: ./Figures/EX3.png used on input line 213.
 (pdftex.def)             Requested size: 84.3144pt x 95.90765pt.
- <./Figures/EX2.png, id=473, 293.59688pt x 219.82124pt>
+ <./Figures/EX2.png, id=488, 293.59688pt x 219.82124pt>
 File: ./Figures/EX2.png Graphic file (type png)
 
 <use ./Figures/EX2.png>
-Package pdftex.def Info: ./Figures/EX2.png used on input line 166.
+Package pdftex.def Info: ./Figures/EX2.png used on input line 215.
 (pdftex.def)             Requested size: 205.5164pt x 153.87381pt.
- [18] [19 <./Figures/EX1.png> <./Figures/EX3.png> <./Figures/EX2.png>] [20]
-<./Figures/maquinaSoporte.jpg, id=491, 530.98375pt x 530.98375pt>
+ [19] [20 <./Figures/EX1.png> <./Figures/EX3.png> <./Figures/EX2.png>] [21]
+<./Figures/maquinaSoporte.jpg, id=507, 530.98375pt x 530.98375pt>
 File: ./Figures/maquinaSoporte.jpg Graphic file (type jpg)
 
 <use ./Figures/maquinaSoporte.jpg>
-Package pdftex.def Info: ./Figures/maquinaSoporte.jpg used on input line 234.
+Package pdftex.def Info: ./Figures/maquinaSoporte.jpg used on input line 283.
 (pdftex.def)             Requested size: 159.29634pt x 159.29634pt.
- [21 <./Figures/maquinaSoporte.jpg>])
+ [22 <./Figures/maquinaSoporte.jpg>])
 (./Capitulo04.tex
 Cap\'{\i }tulo 4
 
@@ -1470,14 +1492,14 @@ Overfull \hbox (9.76324pt too wide) in paragraph at lines 1--1
 
  []
 
-<./Figures/system.png, id=498, 1174.3875pt x 1025.8325pt>
+<./Figures/system.png, id=513, 1174.3875pt x 1025.8325pt>
 File: ./Figures/system.png Graphic file (type png)
 
 <use ./Figures/system.png>
 Package pdftex.def Info: ./Figures/system.png used on input line 16.
 (pdftex.def)             Requested size: 234.87334pt x 205.16287pt.
 
-<./Figures/166.png, id=500, 473.51906pt x 346.29375pt>
+<./Figures/166.png, id=515, 473.51906pt x 346.29375pt>
 File: ./Figures/166.png Graphic file (type png)
  <use ./Figures/166.png>
 Package pdftex.def Info: ./Figures/166.png used on input line 27.
@@ -1486,7 +1508,7 @@ Package pdftex.def Info: ./Figures/166.png used on input line 27.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/166_W13.png, id=502, 472.76625pt x 345.54094pt>
+<./Figures/166_W13.png, id=517, 472.76625pt x 345.54094pt>
 File: ./Figures/166_W13.png Graphic file (type png)
 
 <use ./Figures/166_W13.png>
@@ -1496,10 +1518,10 @@ Package pdftex.def Info: ./Figures/166_W13.png used on input line 37.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22
+[23
 
- <./Figures/system.png>] [23 <./Figures/166.png> <./Figures/166_W13.png>]
-<./Figures/TrainingImages.png, id=523, 320.397pt x 142.131pt>
+ <./Figures/system.png>] [24 <./Figures/166.png> <./Figures/166_W13.png>]
+<./Figures/TrainingImages.png, id=538, 320.397pt x 142.131pt>
 File: ./Figures/TrainingImages.png Graphic file (type png)
 
 <use ./Figures/TrainingImages.png>
@@ -1510,7 +1532,7 @@ File: ./Figures/166_W13.png Graphic file (type png)
 Package pdftex.def Info: ./Figures/166_W13.png used on input line 141.
 (pdftex.def)             Requested size: 236.38254pt x 172.77003pt.
 
-<./Figures/roi.png, id=525, 446.41782pt x 347.04657pt>
+<./Figures/roi.png, id=540, 446.41782pt x 347.04657pt>
 File: ./Figures/roi.png Graphic file (type png)
  <use ./Figures/roi.png>
 Package pdftex.def Info: ./Figures/roi.png used on input line 151.
@@ -1519,7 +1541,7 @@ Package pdftex.def Info: ./Figures/roi.png used on input line 151.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24 <./Figures/TrainingImages.png>]
+[25 <./Figures/TrainingImages.png>]
 File: ./Figures/roi.png Graphic file (type png)
  <use ./Figures/roi.png>
 Package pdftex.def Info: ./Figures/roi.png used on input line 164.
@@ -1552,24 +1574,24 @@ Package pdftex.def Info: ./Figures/roi.png used on input line 193.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25 <./Figures/roi.png>]
+[26 <./Figures/roi.png>]
 
-LaTeX Warning: Text page 26 contains only floats.
+LaTeX Warning: Text page 27 contains only floats.
 
-[26]
+[27]
 File: ./Figures/roi.png Graphic file (type png)
  <use ./Figures/roi.png>
 Package pdftex.def Info: ./Figures/roi.png used on input line 229.
 (pdftex.def)             Requested size: 223.20836pt x 173.52286pt.
- [27] [28] [29]) (./Capitulo05.tex
+ [28] [29] [30]) (./Capitulo05.tex
 Cap\'{\i }tulo 5
-[30
+[31
 
 ]) (./Capitulo06.tex
 Cap\'{\i }tulo 6
-[31
+[32
 
-]) (./iTesis.bbl [32
+]) (./iTesis.bbl [33
 
 ])
 
@@ -1577,7 +1599,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 270.
-[33]
+[34]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 270.
  (./iTesis.aux
 LaTeX Info: Redefining \. on input line 25.
@@ -1593,13 +1615,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 21448 strings out of 493315
- 330195 string characters out of 6145894
- 485739 words of memory out of 5000000
+ 21458 strings out of 493315
+ 330319 string characters out of 6145894
+ 485742 words of memory out of 5000000
  24224 multiletter control sequences out of 15000+600000
  39288 words of font info for 84 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 53i,12n,92p,1456b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,14n,92p,1456b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -1642,10 +1664,10 @@ y8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
 hare/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/ur
 w/helvetic/uhvbo8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></
 usr/share/texmf/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on iTesis.pdf (43 pages, 1749454 bytes).
+Output written on iTesis.pdf (44 pages, 1756999 bytes).
 PDF statistics:
- 686 PDF objects out of 1000 (max. 8388607)
- 594 compressed objects within 6 object streams
- 151 named destinations out of 1000 (max. 500000)
+ 701 PDF objects out of 1000 (max. 8388607)
+ 607 compressed objects within 7 object streams
+ 161 named destinations out of 1000 (max. 500000)
  507 words of extra memory for PDF output out of 10000 (max. 10000000)
 

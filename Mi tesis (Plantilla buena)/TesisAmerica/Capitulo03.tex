@@ -61,10 +61,11 @@ En esta etapa del sistema el objetivo es localizar y segmentar la mano para extr
 
 En este trabajo se utiliza el método detección rapida de objetos usando caracteristicas simples utilizando el clasificador AdaBoost en forma de cascada, \citep{Viola2001}, el cual fue creado originalmente para atacar el problema de detección de rostros, este puede ser usando para detectar cualquier objeto, debido a la forma en que este fue creado, pues detecta un objeto clasificando imágenes basándose en el valor de características simples.
 
-La técnica clasifica si el objeto se encuentra en la escena, usando el clasificador AdaBoost \citep{Freund1995} en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}, el valor de estas es calculado mediante el uso de una imagen integral \citep{Viola2001}.
+La técnica clasifica si el objeto se encuentra en la escena, usando el clasificador AdaBoost \citep{Freund1995} en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}, las caracteristicas son seleccionadas usando también el clasificador AdaBoost y el valor de estas es calculado mediante el uso de una imagen integral \citep{Viola2001}. 
+
+El diagrama () muestra como funciona el algoritmo de detección, 
 
 Enseguida se explica a detalle cada etapa del método. 
-
 
 \subsection{Características Haar}\label{subsec:CaracteristicasHaar}  
 
@@ -89,28 +90,33 @@ Las características Haar, son operadores rectangulares como los que se muestran
 
 \subsection{Imagen integral}\label{subsec:IntegralImage} 
 
-Uno de los aportes del método desarrolla por Viola y Jones es el concepto de imagen integral con la cual se calcula el valor de las características. La imagen integral, $SI$, de un imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}     
+Uno de los aportes del método desarrolla por Viola y Jones es el concepto de imagen integral con la cual se calcula el valor de las características de manera rápida, es decir el tiempo constante. 
+
+La imagen integral, $SI$, de un imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}     
 
 $$SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1)$$
 
-La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de dicha región, la cual se obtiene como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}   
+La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de la imagen integral de dicha región, la cual se obtiene como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}   
 
 $$REG(\alpha)=SI(A)+SI(D)-SI(B)-SI(C)$$
 
-donde $REG(\alpha)$ es la región a la cual se le quiere calcular el valor de la suma de sus pixeles; $A,B,C,D$ son las esquinas de dicha región, como se muestra en la figura \ref{fig:figImageIntegral}
-
+donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la suma de sus pixeles; $A,B,C,D$ son las esquinas de dicha región, como se muestra en la figura \ref{fig:figImageIntegral}, la region $\alpha$ se encuentra resaltada en color azul.  
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=.3]{./Figures/IntegralImage.png}
 \end{center}
-\caption{Regiones de imagen integral}
+\caption{Regiones de la imagen integral}
 \label{fig:figImageIntegral}
 \end{figure} 
 
 
 \subsection{Clasificador AdaBoost}\label{subsec:AdaboostClasifier}  
 
-El algoritmo AdaBoost realiza su clasificación construyendo un clasificador fuerte $h(x)$ de clasificadores débiles $h_i(x)$. Los clasificares débiles son calculados de la siguiente manera: 
+En el método de detección el clasificador AdaBoost es utilizado para seleccionar las características. 
+
+El algoritmo AdaBoost es un algoritmo de clasificación que se basa en aprendizaje de maquina.  
+
+El algoritmo AdaBoost realiza su clasificación construyendo un clasificador fuerte, $h(x)$, llamado así debido a que tiene una precision mayor que los otros clasificadores con los que es construido, clasificadores débiles, $h_i(x)$. Los clasificares débiles son calculados de la siguiente manera: 
 
 $$h_i(x)=
 \begin{cases}   
@@ -125,6 +131,49 @@ El clasificador fuerte es una combinación lineal de los clasificadores débiles
 $$h(x)= \alpha_1h_1(x)+\alpha_2h_2(x)+ \cdots +\alpha_nh_n(x)$$ 
 
 donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a cada característica, el cual va entre $0$ y $1$.
+
+
+Enseguida se presenta el algoritmo de AdaBoost:
+
+\begin{algorithm}
+\begin{algorithmic}[1]
+
+\REQUIRE El conjunto $\lbrace (x_1,y_1), \cdots, (x_n,y_n) \rbrace$ donde $x_i$ representa las imágenes de entrenamiento, $y_i=0,1$ representa las imágenes negativas y positivas respectivamente. 
+\ENSURE El clasificador fuerte $h(x)$.  
+
+\STATE Se inicializan los pesos $w_{1,i}=\frac{1}{2m} , \frac{1}{2l}$ para $y_i=0,1$ respectivamente, donde $m$ y $l$ son el número de imágenes negativas y positivas respectivamente.  
+
+\FOR {$t=1$ hasta $T$}   
+
+	\STATE Se normalizan los pesos 
+	$$w_{t,i}=\frac{w_{t,i}}{\sum_{j=1}^n w_{t,j}}$$ 
+	para que $w_t$ sea una distribución  de probabilidad. 	
+	
+	\FOR {cada características $j$} 
+	Entrenar un clasificador $h_j$ donde se utiliza una sola característica. 
+	El error $\epsilon$ es evaluado con respecto a $w_t$, 
+	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}$$. 
+    \ENDFOR
+	
+	\STATE Escoger el clasificador $h_i$ con el error más pequeño. 
+	
+	\STATE Se actualizan los pesos  
+	$$w_{t+1,i}=w_{t,i} \beta_t^{1-e_i}$$ 
+	donde $\beta_t = \frac{\epsilon_T}{1-\epsilon_t}$, 
+	$e_i=0$ si $x_i$ es clasificado correctamente de otra forma $e_i=1$. 
+	
+\ENDFOR  
+
+\STATE El clasificador final o clasificador fuerte es: 
+$$ h(x) = 
+\begin{cases}  
+1, \quad \sum_{t=1}^T \alpha_th_t(x) \geqslant \frac{1}{2}\sum_{t=1}^T \alpha_t. \\  
+0, \quad de \quad otra \quad forma. 
+\end{cases} $$
+donde $\alpha_t = \log{\frac{1}{\beta_t}}$.
+
+\end{algorithmic}
+\end{algorithm} 
 
 
 \subsection{Clasificador AdaBoost en Cascada}\label{subsec:AdaboostCascade}   
