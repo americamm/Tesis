@@ -128,7 +128,7 @@ La selección de las características se llev\'o acabo por medio del algoritmo A
 
 Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de mano, estas fueron tomadas a una distancia de entre $60$ $cm$ y $200$ $cm$. Las imágenes de profundidad de la mano fueron tomadas de $6$ personas distintas con tres distintas poses: palma abierta con dedos abiertos, palma abierta con dedos juntos y finalmente el pu\~no, como se muestra en la figura \ref{fig:ImagenesPoses}. Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la figura \ref{fig:ImagenFondo}. El programa para la captura de las imágenes puede ser encontrado en github \footnote{https://github.com/americamm}.  
 
-\begin{figure}[!h]
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.5]{./Figures/TrainingImages.png}
 \end{center}
@@ -136,7 +136,7 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 \label{fig:ImagenesPoses}
 \end{figure}  
 
-\begin{figure}[!h]
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.5]{./Figures/166_W13.png}
 \end{center}
@@ -146,7 +146,7 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 
 Para localizar la mano en cada cuadro proveniente de los Kinect, una ventana de tamaño $kahkjgv$ se desliza por la imagen, una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionada alrededor de la mano, como se puede ver en la figura \ref{fig:Roi}.
 
-\begin{figure}[!h]
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.5]{./Figures/roi.png}
 \end{center}
@@ -159,7 +159,7 @@ Ya que se tiene localizada el área donde se encuentra la mano, el siguiente pas
 El primer procesamiento que se aplica al ROI, son las operaciones morfológicas de apertura y cerradura, en ese orden. Se utilizan para eliminar uniones pequeños que existen en la imagen como el que se muestra \ref{fig:RuidoUnion} o unir pequeños hoyos que existen en la imagen, como los que se encuentran en la figura \ref{fig:RuidoHoyo}.\\
 La operaciones utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento $3 \, x \, 7$ pixeles; para la cerradura se aplic\'o con un tamaño  $7 \, x \, 7$ pixeles. 
 
-\begin{figure}[!h]
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.5]{./Figures/roi.png}
 \end{center}
@@ -167,7 +167,7 @@ La operaciones utilizan un elemento estructural rectangular; para la operación 
 \label{fig:RuidoUnion}
 \end{figure}   
 
-\begin{figure}[!h]
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.5]{./Figures/roi.png}
 \end{center}
@@ -304,7 +304,7 @@ Las características se guardan en un vector de características de dimensión $
 \section{Reconocimiento}\label{sec:ReconocimientoSystem}
 
 Es la etapa final del reconocimiento,es donde finalmente el gesto puede ser interpretado por la computadora.   
-El reconocimiento de los gestos estáticos se lleva acabo usando el algoritmo de clasificación de MSV. 
+El reconocimiento de los gestos estáticos se lleva acabo usando el algoritmo de clasificación de SVM. 
 
 
 

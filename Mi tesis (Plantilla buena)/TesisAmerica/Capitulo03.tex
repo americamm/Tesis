@@ -7,9 +7,15 @@
 
 En este cap\'itulo se describen las etapas del sistema de reconocimiento, junto con los métodos o herramientas que son utilizados en cada una de ellas.   
 
-El sistema de reconocimiento de gestos propuesto consta de cuatro etapas principales. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema; la segunda etapa es la detección, aquí la mano es localizada y segmentada del fondo; en la etapa tres se extraen las características de la mano para ser procesadas; en la etapa final el gesto realizado es reconocido.   
- 
-  
+El sistema de reconocimiento de gestos propuesto consta de cuatro etapas principales \ref{fig:MyHGR}. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema; la segunda etapa es la detección, aquí la mano es localizada y segmentada del fondo; en la etapa tres se extraen las características de la mano para ser procesadas; en la etapa final el gesto realizado es reconocido.   
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/MyHGR.png}
+\end{center}
+\caption{Metodología del sistema propuesto.}
+\label{fig:MyHGR}
+\end{figure}  
   
 \section{Adquisición de los datos}\label{KinectSensor} 
 
@@ -21,7 +27,7 @@ El dispositivo Kinect esta equipado con una serie de sensores que permiten obten
   
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.6]{./Figures/Kinect.jpg}
+\includegraphics[scale=.60]{./Figures/Kinect.jpg}
 \end{center}
 \caption{Sensor Kinect para Windows}
 \label{fig:KinectPic}
@@ -29,45 +35,61 @@ El dispositivo Kinect esta equipado con una serie de sensores que permiten obten
 
 El sensor esta equipado con los siguientes componentes: un cámara de color o sensor de color, un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED \ref{fig:KinectComponentes}. 
 
-\begin{figure}[!h]
+Enseguida se describen brevemente cada uno de los componentes del sensor Kinect, \citep{Jana2013}. 
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.6]{./Figures/sensor.png}
 \end{center}
 \caption{Componentes del sensor Kinect}
 \label{fig:KinectComponentes}
-\end{figure} 
+\end{figure}   
 
-Enseguida se describen brevemente cada uno de los componentes del sensor Kinect, \citep{Jana2013}. 
 \begin{itemize}
 \item La cámara de color captura y transmite datos de vídeo a color, detectando los colores rojo, verde y azul (RGB, por sus siglas en ingl\'es, red, green and blue). La transmisión de datos que brinda la cámara es una secuencia de imágenes (cuadros), a una velocidad de hasta $30$ cuadros por segundo con una resolución de hasta $1280\, x \, 960$ p\'ixeles. La velocidad de los cuadros por segundo varia según la resolución de la imagen.
-
 \item El emisor infrarrojo proyecta puntos de luz infrarroja frente al sensor, con estos puntos y el sensor de profundidad se puede medir la profundidad que existe del sensor.
-
 \item El sensor infrarrojo lee los puntos infrarrojos proyectados y calcula la distancia que existe entre el objeto y el sensor. El sensor transmite los datos de profundidad con una velocidad de $30$ cuadros por segundo con una resolución de hasta $640 \, x \, 480$ pixeles.   
-
 \item El motor de inclinación controla el \'angulo de la posición vertical de los sensores del dispositivo. El motor puede moverse desde el \'angulo de $-27^ \circ$ a $+27^\circ$. 
-
 \item Arreglo de micrófonos, consta de $4$ micrófonos, captura el sonido y localiza la dirección en la que proviene. 
-
 \item LED indica el estado del sensor.
- 
 \end{itemize}
 
 
+
+
  
-\section{Detección}\label{sec:ViolaJones}
+\section{Detección}\label{sec:Detection}
 
-En esta etapa del sistema el objetivo es localizar y segmentar la mano para extraer las características necesarias para el reconocimiento. 
+En esta etapa del sistema el objetivo es localizar y segmentar la mano para extraer las características necesarias para el reconocimiento.\\
+Este procedimiento se lleve acabo de la siguiente manera, figura  \ref{fig:ProcesoDeteccion} el primer paso es localizar la mano, se lleva acabo usando el método de detección rápida de objetos; el siguiente paso es mejorar la imagen de la mano aplicando operaciones morfológicas y finalmente se la imagen que contiene la mano es binarizada. 
 
-En este trabajo se utiliza el método detección rapida de objetos usando caracteristicas simples utilizando el clasificador AdaBoost en forma de cascada, \citep{Viola2001}, el cual fue creado originalmente para atacar el problema de detección de rostros, este puede ser usando para detectar cualquier objeto, debido a la forma en que este fue creado, pues detecta un objeto clasificando imágenes basándose en el valor de características simples.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.7]{./Figures/Detection.png}
+\end{center}
+\caption{Proceso de detección de la mano.}
+\label{fig:ProcesoDeteccion}
+\end{figure} 
 
-La técnica clasifica si el objeto se encuentra en la escena, usando una version modificada del clasificador AdaBoost \citep{Freund1995} en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}, las caracteristicas son seleccionadas usando también el clasificador AdaBoost y el valor de estas es calculado mediante el uso de una imagen integral \citep{Viola2001}. 
+\subsection{Método detección rápida de objetos usando características simples utilizando el clasificador AdaBoost en forma de cascada}\label{ViolaJones}
 
-El diagrama () muestra como funciona el algoritmo de detección, 
+En este trabajo se utiliza el método detección rápida de objetos usando características simples utilizando el clasificador AdaBoost en forma de cascada, \citep{Viola2001}, el cual fue creado originalmente para atacar el problema de detección de rostros, este puede ser usando para detectar cualquier objeto, debido a la forma en que este fue creado, pues detecta un objeto clasificando imágenes basándose en el valor de características simples.
 
-Enseguida se explica a detalle cada etapa del método. 
+La técnica clasifica si el objeto se encuentra en la escena, usando una versión modificada del clasificador AdaBoost \citep{Freund1995} en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}, las características son seleccionadas usando también el clasificador AdaBoost y el valor de estas es calculado mediante el uso de una imagen integral \citep{Viola2001}. 
 
-\subsection{Características Haar}\label{subsec:CaracteristicasHaar}  
+La figura \ref{fig:ViolaJonesDiagram} muestra un diagrama del proceso del método de detección, el primer paso es obtener la muestras de entrenamiento con las cuales se construirá el clasificador; el siguiente paso es seleccionar las características que formaran el clasificador, estas se escogen mediante el algoritmo de AdaBoost y su valor es calculado usando la imagen integral; el paso final que es construir el clasificador es utilizando 
+Adaboost en forma de cascada.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.6]{./Figures/ViolaJonesDiagram.png}
+\end{center}
+\caption{Procedimiento del algoritmo de detección}
+\label{fig:ViolaJonesDiagram}
+\end{figure}
+
+Enseguida se explica a detalle cada etapa del método \citep{Viola2001}. 
+
+\subsubsection{Características Haar}\label{sssec:CaracteristicasHaar}  
 
 Las características Haar, son operadores rectangulares como los que se muestran en la figura \ref{fig:haarFeatures}. A continuación se explicaran los operadores Haar básicos:
 \begin{itemize}
@@ -78,7 +100,7 @@ Las características Haar, son operadores rectangulares como los que se muestran
 \item Las características con cuatro rectángulos \ref{fig:haarFeatures:4}, contienen cuatro regiones rectangulares adyacentes, y el valor de la característica se obtiene con la diferencia entre las regiones pares diagonales.
 \end{itemize} 
 
-\begin{figure}%[htbp]
+\begin{figure}[h!]
 \centering
 \subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures1}\label{fig:haarFeatures:1}}
 \subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures2}\label{fig:haarFeatures:2}}
@@ -88,18 +110,23 @@ Las características Haar, son operadores rectangulares como los que se muestran
 \end{figure}
 
 
-\subsection{Imagen integral}\label{subsec:IntegralImage} 
+\subsubsection{Imagen integral}\label{sssec:IntegralImage} 
 
 Uno de los aportes del método desarrolla por Viola y Jones es el concepto de imagen integral con la cual se calcula el valor de las características de manera rápida, es decir el tiempo constante. 
 
 La imagen integral, $SI$, de un imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}     
+$$SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1)$$ 
+La figura \ref{fig:FigIntegralImage} muestra un  ejemplo donde se calcula la imagen intregral, fig. \ref{fig:FigIntegralImage:2}, de la imagen original \ref{fig:FigIntegralImage:1}.
+\begin{figure}[h!]
+\centering
+\subfigure[Imagen original]{\includegraphics[scale=.7]{./Figures/ImagetoIntegral}\label{fig:FigIntegralImage:1}} \qquad
+\subfigure[Imagen integral]{\includegraphics[scale=.7]{./Figures/CalculationIntegral}\label{fig:FigIntegralImage:2}}
+\caption{Ejemplo del cálculo de la imagen integral} \label{fig:FigIntegralImage}
+\end{figure}
 
-$$SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1)$$
 
 La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de la imagen integral de dicha región, la cual se obtiene como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}   
-
 $$REG(\alpha)=SI(A)+SI(D)-SI(B)-SI(C)$$
-
 donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la suma de sus pixeles; $A,B,C,D$ son las esquinas de dicha región, como se muestra en la figura \ref{fig:figImageIntegral}, la region $\alpha$ se encuentra resaltada en color azul.  
 \begin{figure}[!h]
 \begin{center}
@@ -110,26 +137,22 @@ donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la su
 \end{figure} 
 
 
-\subsection{Clasificador AdaBoost}\label{subsec:AdaboostClasifier}  
+\subsubsection{Algoritmo AdaBoost}\label{sssec:AdaboostClasifier}  
 
 En el método de detección el clasificador AdaBoost es utilizado para seleccionar las características. 
 
 El algoritmo AdaBoost es un algoritmo de clasificación que se basa en aprendizaje de maquina.  
 
 El algoritmo AdaBoost realiza su clasificación construyendo un clasificador fuerte, $h(x)$, llamado así debido a que tiene una precision mayor que los otros clasificadores con los que es construido, clasificadores débiles, $h_i(x)$. Los clasificares débiles son calculados de la siguiente manera: 
-
 $$h_i(x)=
 \begin{cases}   
 1, \quad Si \quad  p_if_i<p_i \theta_i \\
 0, \quad de \quad otra \quad forma.\\
 \end{cases}$$
-
 donde $f_i(x)$ es una característica, $\theta$ es un umbral, y $p_i(x)$ representa el signo de la desigualdad.   
 
 El clasificador fuerte es una combinación lineal de los clasificadores débiles, y se define de la siguiente forma: 
-
 $$h(x)= \alpha_1h_1(x)+\alpha_2h_2(x)+ \cdots +\alpha_nh_n(x)$$ 
-
 donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a cada característica, el cual va entre $0$ y $1$.
 
 
@@ -176,32 +199,30 @@ donde $\alpha_t = \log{\frac{1}{\beta_t}}$.
 \end{algorithm} 
 
 
-\subsection{Clasificador AdaBoost en Cascada}\label{subsec:AdaboostCascade}   
+\subsubsection{Clasificador AdaBoost en Cascada}\label{sssec:AdaboostCascade}   
 
 
-\section{Binarización}\label{Binarization} 
+
+\subsection{Binarización}\label{subsec:Binarization} 
 
 La binarización es una técnica de procesamiento de imágenes, la cual se encarga de transformar una imagen en escala de grises $S(x,y)$ en una imagen binaria $B(x,y)$ es decir, los pixeles de la imagen toman un valor de $0$ ó $1$.   
 Para formar la imagen binaria un valor, umbral, de la imagen en escala de grises es seleccionado. Ya que se tiene el umbral, $T$,     
 los pixeles de la imagen son discriminados dependiendo si su valor es mayor o igual al umbral entonces el valor de los pixeles en la imagen binaria es $1$ el resto toma valor de $0$. Es decir: 
-
 $$B(x,y)=
 \begin{cases}   
-1, \quad Si \quad  S(x,y)\geq T \\
+1, \quad Si \quad S(x,y)\geq T \\
 0, \quad de \quad otra \quad forma.\\
 \end{cases}$$
 
-Existen diversas técnicas para binarizar una imagen, estas se pueden clasificar en dos grupos dependiendo de la manera es que es calcula el umbral, global o local. Los métodos globales calculan un umbral que es usado en toda la imagen y los métodos locales calculan varios umbrales para ciertas regiones de la imagen.  
+Existen diversas técnicas para binarizar una imagen, estas se pueden clasificar en dos grupos dependiendo de la manera es que es calcula el umbral, global o local. Los métodos globales calculan un umbral que es usado en toda la imagen y los métodos locales calculan varios umbrales para ciertas regiones de la imagen \citep{Chaki2014}.  
 
-Un método de binarización muy utilizado es el de NiBlack, \citep{Chaki2014} es un método local y adaptativo ya que adapta el umbral basándose en la media $m(i,j)=$ y la desviación estándar $\sigma(i,j)$ de una ventana deslizante de tamaño $bxb$. El umbral $T$  se calcula como: 
-
+Un método de binarización muy utilizado es el de NiBlack,\citep{Niblack1985} es un método local y adaptativo ya que adapta el umbral basándose en la media $m(i,j)=$ y la desviación estándar $\sigma(i,j)$ de una ventana deslizante de tamaño $bxb$. El umbral $T$  se calcula como: 
 $$T(i,j)=m(i,j)+k \cdot \sigma(i,j)$$ 
-
-donde $k \in [0,1]$ el valor de la constante determina que tanta parte del contorno es preservado.
+donde $k \in [0,1]$ el valor de la constante determina que tanta parte del contorno es preservado \citep{Chaki2014}.
 
 
   
-\section{Operaciones Morfológicas}\label{OperacionesMorfologicas} 
+\subsection{Operaciones Morfológicas}\label{subsec:OperacionesMorfologicas} 
 
 Otra técnica muy utilizada en procesamiento de imágenes son las operaciones morfológicas que son un conjunto de operaciones no lineales, la idea es que al aplicar alguna de estas operaciones el ruido se removido tomando en cuanta la forma y estructura de la imagen. 
 La operaciones morfológicas utilizan un elemento estructural el cual se aplica por toda la imagen, los elementos estructurales pueden ser de distintas formas como \ref{fig:EX}
@@ -216,68 +237,76 @@ La operaciones morfológicas utilizan un elemento estructural el cual se aplica 
 \caption{Ejemplos de elementos estructurales} \label{fig:EX}
 \end{figure} 
 
-Existen distintas operaciones morfológicas, las principales o básicas son la dilatación y erosión las cuales se explican enseguida junto con la apertura y el cierra. 
+Existen distintas operaciones morfológicas, las principales o básicas son la dilatación y erosión las cuales se explican enseguida junto con la apertura y cierre. 
  
-\subsection{Dilatación}\label{Dilatation}
+\subsubsection{Dilatación}\label{sssec:Dilatation}
 
 La dilatación es una operación que añade pixeles a la orilla de los objetos que se encuentran en la imagen. La dilatación se define como:  
 $$S \oplus EX = \lbrace S|EX_S \subseteq S \rbrace$$  
 donde $EX_S$ es el elemento estructural trasladado con la imagen. 
 
-\subsection{Erosión}\label{OMerosion}
+\subsubsection{Erosión}\label{sssec:OMerosion}
 
 La erosión remueve pixeles a la orilla de los objetos que se encuentran en la imagen. La erosión se define como: 
 $$S \ominus EX = \lbrace S|EX_S \subseteq S \rbrace$$ 
 donde $EX_S$ es el elemento estructural trasladado con la imagen. 
 
-\subsection{Apertura}\label{Opening} 
+\subsubsection{Apertura}\label{sssec:Opening} 
 
 La operación apertura abre huecos entre objetos conectados por un enlace delgado de pixeles.  
-
 $$S \circ EX = (S \ominus EX) \oplus EX $$
 
-\subsection{Cierre}\label{Closure}
+\subsubsection{Cierre}\label{sssec:Closure}
 
 La operación cierre elimina huecos pequeños  y rellena huecos en las
 $$S \bullet EX = (S \oplus EX) \ominus EX $$
 
+
+\begin{figure}
+\centering
+\subfigure[original]{\includegraphics[scale=.7]{./Figures/originalMO}\label{fig:OM:1}} \hspace{10mm}
+\subfigure[dilatación]{\includegraphics[scale=.7]{./Figures/dilatationMO}\label{fig:OM:2}} \hspace{10mm}
+\subfigure[erosión]{\includegraphics[scale=.7]{./Figures/erosionMO}\label{fig:OM:3}} \hspace{10mm}
+\subfigure[apertura]{\includegraphics[scale=.7]{./Figures/openingMO}\label{fig:OM:4}} \hspace{10mm}
+\subfigure[cierre]{\includegraphics[scale=.7]{./Figures/closingMO}\label{fig:OM:5}}
+\caption{Aplicación de operaciones morfológicas (citar)} \label{fig:OM}
+\end{figure} 
+
+
+
 \section{Extracción de características}\label{sec:Convexhull} 
 
-La idea de esta etapa es encontrar las características que sean capaces de describir la mano, de manera que con estas características se pueda reconocer los gestos realizados por la o las manos.  
-Las características se guardan en un vector, llamado vector de características, donde la dimension del vector es el número de características que describen, es este caso, la mano.  
+La idea de esta etapa es encontrar las características que sean capaces de describir la mano, de manera que con estas, se pueda reconocer los gestos realizados por la o las manos.  
+Las características se guardan en un vector, llamado vector de características, donde la dimensión del vector es el número de características que describen en este caso, la mano.  
 
-Las características que se extraen son geométricas, se extraen: el n\'umero de dedos, los ángulos entre ellos, el centro de la mano, la distancia del centro a la punta de los dedos, el área y perímetro de la mano. 
+En este trabajo se utilizan características geométricas. Para extraerlas se hace uso de la envolvente convexa y de los defectos de convexidad. A continuación se definen los conceptos anteriores.
 
-Antes de definir el casco convexo se presenta la definición de conjunto convexo. 
- 
+Sea $C$ un conjunto en el espacio euclidiano $\Re^d$, $C$ es un conjunto convexo \footnote{Weisstein, Eric W. "Convex." From MathWorld--A Wolfram Web Resource. http://mathworld.wolfram.com/Convex.html} si contiene todos los segmentos de línea que unen a cualquier par de puntos pertenecientes al conjunto. Donde $d$ es la dimensión del espacio euclidiano. 
 
-Sea $C$ un conjunto de puntos en el plano Euclidiano, el casco convexo es el conjunto convexo más pequeño que contiene a todos los puntos en $C$. 
+Sea $C$ un conjunto de puntos en el plano Euclidiano, la envolvente convexa de $C$ es el conjunto convexo más pequeño que contiene a todos los puntos en $C$. 
 
-Los defectos de convexidad de un con casco convexo, es el conjunto de puntos que no pertenecen al casco convexo. El defecto es el espacio entre la linea y el objeto  
+Los defectos de convexidad de un con casco convexo, es el conjunto de puntos que no pertenecen al casco convexo. El defecto es el espacio entre la linea y el objeto.  
 
 
 
 \section{Reconocimiento}\label{sec:SVM} 
-Es la etapa final del reconocimiento,es donde finalmente el gesto puede ser interpretado por la computadora.  
 
-$N$ puntos de entrenamiento de dimensión $D$, dos clases distintas $y_i=-1$
+Es la etapa final del reconocimiento, es donde finalmente el gesto puede ser interpretado por la computadora.  
+
+En este trabajo el reconocimiento se realiza con el método de máquinas de soporte vectorial (SVM, por sus siglas en ingles, support vector machine), un método de aprendizaje de máquina supervisado que es utilizado para resolver problemas de clasificación y regresión. El cual tiene como objetivo crear un modelo basado en datos conocimos (datos de entrenamiento), que predice a que clase pertenecen datos nuevos. 
+
+SVM realiza la clasificación separando las clases buscando el hiperplano que tengan el margen  de separación más grande. Enseguida se explica a detalle el funcionamiento del método. 
+
+Dado $N$ puntos de entrenamiento $x_i$, de dimensión $D$, dos clases distintas $y_i=-1$
 o $+1$ es decir: 
-
-${x_i,y_i}$ donde $i=1, \cdots ,N$, $y\in{-1,1}$, $x \in \Re^D$  
-
-Hiperplano óptimo 
- 
+$$\lbrace x_i,y_i \rbrace \quad \text{donde} \quad  i=1, \cdots ,N \quad y\in{-1,1} \quad x \in \Re^D$$  
+Hiperplano óptimo  
 $$ w \cdot x + b = 0$$ 
-
 donde $w$ es la normal al hiperplano, $\frac{b}{|w|}$ es la distancia perpendicular desde el hiperplano al origen.   
-
 $$ w \cdot x + b = +1 \textrm{ para } y_i=+1$$ 
 $$ w \cdot x + b = -1 \textrm{ para } y_i=-1$$ 
-
 Maximizar el margen, encontrar el mínimo de $w$.  
-
-$Min$ $\Vert w \Vert$ tal que $y_i(w \cdots x_i + b) -1 \geq 0$
- 
+$$Min\Vert w \Vert \quad \text{tal que} \quad y_i(w \cdot x_i + b) -1 \geq 0$$
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=.3]{./Figures/maquinaSoporte.jpg}

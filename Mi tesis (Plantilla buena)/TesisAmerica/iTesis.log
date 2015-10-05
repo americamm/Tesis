@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  30 SEP 2015 09:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  2 OCT 2015 19:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1242,7 +1242,7 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <18> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 208.
 
-<./Figures/logoCicese2009.pdf, id=211, 540.60239pt x 270.30113pt>
+<./Figures/logoCicese2009.pdf, id=215, 540.60239pt x 270.30113pt>
 File: ./Figures/logoCicese2009.pdf Graphic file (type pdf)
 
 <use ./Figures/logoCicese2009.pdf>
@@ -1280,7 +1280,7 @@ LaTeX Font Info:    Try loading font information for TS1+phv on input line 208.
 (/usr/share/texmf/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
-<Figures/logotipos/compu.jpg, id=228, 102.3825pt x 132.495pt>
+<Figures/logotipos/compu.jpg, id=232, 102.3825pt x 132.495pt>
 File: Figures/logotipos/compu.jpg Graphic file (type jpg)
 
 <use Figures/logotipos/compu.jpg>
@@ -1313,7 +1313,13 @@ Overfull \hbox (3.66335pt too wide) in paragraph at lines 208--208
 (./iTesis.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [6
+
+Overfull \hbox (3.98135pt too wide) in paragraph at lines 32--32
+ [][] [][]\OT1/phv/m/n/12 M[]eto-do de-tec-ci[]on r[]api-da de ob-je-tos usan-d
+o ca-rac-ter[]^^Psti-cas sim- 
+ []
+
+[6
 
 ])
 \tf@toc=\write7
@@ -1369,7 +1375,19 @@ Overfull \hbox (6.40569pt too wide) in paragraph at lines 120--121
 Cap\'{\i }tulo 2
 [8
 
-] [9] [10] [11] [12])
+] <./Figures/HGR.png, id=414, 596.2275pt x 84.315pt>
+File: ./Figures/HGR.png Graphic file (type png)
+ <use ./Figures/HGR.png>
+Package pdftex.def Info: ./Figures/HGR.png used on input line 34.
+(pdftex.def)             Requested size: 476.98265pt x 67.45207pt.
+
+Overfull \hbox (4.95142pt too wide) in paragraph at lines 34--35
+ [] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 36.
+[9 <./Figures/HGR.png>] [10] [11] [12] [13])
 ! Too many }'s.
 l.222 \newpage }
                 
@@ -1378,67 +1396,108 @@ Such booboos are generally harmless, so keep going.
 
 (./Capitulo03.tex
 Cap\'{\i }tulo 3
-<./Figures/Kinect.jpg, id=416, 462.22687pt x 120.45pt>
+<./Figures/MyHGR.png, id=441, 957.5775pt x 84.315pt>
+File: ./Figures/MyHGR.png Graphic file (type png)
+ <use ./Figures/MyHGR.png>
+Package pdftex.def Info: ./Figures/MyHGR.png used on input line 14.
+(pdftex.def)             Requested size: 478.78758pt x 42.15738pt.
+
+Overfull \hbox (6.75635pt too wide) in paragraph at lines 14--15
+ [] 
+ []
+
+<./Figures/Kinect.jpg, id=444, 462.22687pt x 120.45pt>
 File: ./Figures/Kinect.jpg Graphic file (type jpg)
 
 <use ./Figures/Kinect.jpg>
-Package pdftex.def Info: ./Figures/Kinect.jpg used on input line 24.
+Package pdftex.def Info: ./Figures/Kinect.jpg used on input line 30.
 (pdftex.def)             Requested size: 277.33826pt x 72.27054pt.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 26.
-
-<./Figures/sensor.png, id=418, 390.70969pt x 214.55156pt>
-File: ./Figures/sensor.png Graphic file (type png)
-
-<use ./Figures/sensor.png>
-Package pdftex.def Info: ./Figures/sensor.png used on input line 34.
-(pdftex.def)             Requested size: 234.42761pt x 128.73192pt.
- [13
-
- <./Figures/Kinect.jpg>] [14 <./Figures/sensor.png>] <./Figures/haarFeatures1.j
-pg, id=437, 141.52875pt x 240.14719pt>
-File: ./Figures/haarFeatures1.jpg Graphic file (type jpg)
-
-<use ./Figures/haarFeatures1.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures1.jpg used on input line 83.
-(pdftex.def)             Requested size: 56.61049pt x 96.05716pt.
-
-<./Figures/haarFeatures2.jpg, id=438, 134.75343pt x 243.15843pt>
-File: ./Figures/haarFeatures2.jpg Graphic file (type jpg)
-
-<use ./Figures/haarFeatures2.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures2.jpg used on input line 84.
-(pdftex.def)             Requested size: 53.9004pt x 97.26164pt.
-
-<./Figures/haarFeatures3.jpg, id=439, 240.9pt x 100.12407pt>
-File: ./Figures/haarFeatures3.jpg Graphic file (type jpg)
-
-<use ./Figures/haarFeatures3.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures3.jpg used on input line 85.
-(pdftex.def)             Requested size: 96.35828pt x 40.0489pt.
-
-<./Figures/haarFeatures4.jpg, id=440, 243.91125pt x 244.66406pt>
-File: ./Figures/haarFeatures4.jpg Graphic file (type jpg)
-
-<use ./Figures/haarFeatures4.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures4.jpg used on input line 86.
-(pdftex.def)             Requested size: 97.56276pt x 97.86388pt.
- [15]
-<./Figures/IntegralImage.png, id=454, 822.07124pt x 566.86781pt>
-File: ./Figures/IntegralImage.png Graphic file (type png)
-
-<use ./Figures/IntegralImage.png>
-Package pdftex.def Info: ./Figures/IntegralImage.png used on input line 106.
-(pdftex.def)             Requested size: 246.62328pt x 170.06165pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16 <./Figures/haarFeatures1.jpg> <./Figures/haarFeatures2.jpg> <./Figures/haar
-Features3.jpg> <./Figures/haarFeatures4.jpg>] [17 <./Figures/IntegralImage.png>
-]
+<./Figures/sensor.png, id=446, 390.70969pt x 214.55156pt>
+File: ./Figures/sensor.png Graphic file (type png)
+
+<use ./Figures/sensor.png>
+Package pdftex.def Info: ./Figures/sensor.png used on input line 41.
+(pdftex.def)             Requested size: 234.42761pt x 128.73192pt.
+ [14
+
+ <./Figures/MyHGR.png>] [15 <./Figures/Kinect.jpg> <./Figures/sensor.png>]
+<./Figures/Detection.png, id=463, 656.4525pt x 92.345pt>
+File: ./Figures/Detection.png Graphic file (type png)
+
+<use ./Figures/Detection.png>
+Package pdftex.def Info: ./Figures/Detection.png used on input line 67.
+(pdftex.def)             Requested size: 459.51361pt x 64.64104pt.
+ [16 <./Figures/Detection.png>]
+<./Figures/ViolaJonesDiagram.png, id=470, 755.82375pt x 143.53625pt>
+File: ./Figures/ViolaJonesDiagram.png Graphic file (type png)
+
+<use ./Figures/ViolaJonesDiagram.png>
+Package pdftex.def Info: ./Figures/ViolaJonesDiagram.png used on input line 84.
+
+(pdftex.def)             Requested size: 453.49774pt x 86.1224pt.
+
+<./Figures/haarFeatures1.jpg, id=476, 141.52875pt x 240.14719pt>
+File: ./Figures/haarFeatures1.jpg Graphic file (type jpg)
+
+<use ./Figures/haarFeatures1.jpg>
+Package pdftex.def Info: ./Figures/haarFeatures1.jpg used on input line 105.
+(pdftex.def)             Requested size: 56.61049pt x 96.05716pt.
+
+<./Figures/haarFeatures2.jpg, id=477, 134.75343pt x 243.15843pt>
+File: ./Figures/haarFeatures2.jpg Graphic file (type jpg)
+
+<use ./Figures/haarFeatures2.jpg>
+Package pdftex.def Info: ./Figures/haarFeatures2.jpg used on input line 106.
+(pdftex.def)             Requested size: 53.9004pt x 97.26164pt.
+
+<./Figures/haarFeatures3.jpg, id=478, 240.9pt x 100.12407pt>
+File: ./Figures/haarFeatures3.jpg Graphic file (type jpg)
+
+<use ./Figures/haarFeatures3.jpg>
+Package pdftex.def Info: ./Figures/haarFeatures3.jpg used on input line 107.
+(pdftex.def)             Requested size: 96.35828pt x 40.0489pt.
+
+<./Figures/haarFeatures4.jpg, id=479, 243.91125pt x 244.66406pt>
+File: ./Figures/haarFeatures4.jpg Graphic file (type jpg)
+
+<use ./Figures/haarFeatures4.jpg>
+Package pdftex.def Info: ./Figures/haarFeatures4.jpg used on input line 108.
+(pdftex.def)             Requested size: 97.56276pt x 97.86388pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17 <./Figures/ViolaJonesDiagram.png>]
+<./Figures/ImagetoIntegral.png, id=493, 175.40532pt x 134.00063pt>
+File: ./Figures/ImagetoIntegral.png Graphic file (type png)
+
+<use ./Figures/ImagetoIntegral.png>
+Package pdftex.def Info: ./Figures/ImagetoIntegral.png used on input line 122.
+(pdftex.def)             Requested size: 122.78287pt x 93.79977pt.
+
+<./Figures/CalculationIntegral.png, id=494, 173.89969pt x 134.00063pt>
+File: ./Figures/CalculationIntegral.png Graphic file (type png)
+
+<use ./Figures/CalculationIntegral.png>
+Package pdftex.def Info: ./Figures/CalculationIntegral.png used on input line 1
+23.
+(pdftex.def)             Requested size: 121.72893pt x 93.79977pt.
+
+<./Figures/IntegralImage.png, id=497, 822.07124pt x 566.86781pt>
+File: ./Figures/IntegralImage.png Graphic file (type png)
+
+<use ./Figures/IntegralImage.png>
+Package pdftex.def Info: ./Figures/IntegralImage.png used on input line 133.
+(pdftex.def)             Requested size: 246.62328pt x 170.06165pt.
+ [18 <./Figures/haarFeatures1.jpg> <./Figures/haarFeatures2.jpg> <./Figures/haa
+rFeatures3.jpg> <./Figures/haarFeatures4.jpg> <./Figures/ImagetoIntegral.png> <
+./Figures/CalculationIntegral.png>] [19 <./Figures/IntegralImage.png>]
 ! Extra }, or forgotten $.
-l.155 	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}
+l.178 	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}
                                                   $$.
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1453,37 +1512,78 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.156     \ENDFOR
+l.179     \ENDFOR
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[18] <./Figures/EX1.png, id=485, 178.41656pt x 137.01187pt>
+[20] <./Figures/EX1.png, id=530, 178.41656pt x 137.01187pt>
 File: ./Figures/EX1.png Graphic file (type png)
 
 <use ./Figures/EX1.png>
-Package pdftex.def Info: ./Figures/EX1.png used on input line 211.
+Package pdftex.def Info: ./Figures/EX1.png used on input line 232.
 (pdftex.def)             Requested size: 124.89072pt x 95.90765pt.
- <./Figures/EX3.png, id=486, 120.45pt x 137.01187pt>
+ <./Figures/EX3.png, id=531, 120.45pt x 137.01187pt>
 File: ./Figures/EX3.png Graphic file (type png)
 
 <use ./Figures/EX3.png>
-Package pdftex.def Info: ./Figures/EX3.png used on input line 213.
+Package pdftex.def Info: ./Figures/EX3.png used on input line 234.
 (pdftex.def)             Requested size: 84.3144pt x 95.90765pt.
- <./Figures/EX2.png, id=487, 293.59688pt x 219.82124pt>
+ <./Figures/EX2.png, id=532, 293.59688pt x 219.82124pt>
 File: ./Figures/EX2.png Graphic file (type png)
 
 <use ./Figures/EX2.png>
-Package pdftex.def Info: ./Figures/EX2.png used on input line 215.
+Package pdftex.def Info: ./Figures/EX2.png used on input line 236.
 (pdftex.def)             Requested size: 205.5164pt x 153.87381pt.
- [19] [20 <./Figures/EX1.png> <./Figures/EX3.png> <./Figures/EX2.png>] [21]
-<./Figures/maquinaSoporte.jpg, id=506, 530.98375pt x 530.98375pt>
+ [21] [22 <./Figures/EX1.png> <./Figures/EX3.png> <./Figures/EX2.png>] <./Figur
+es/originalMO.png, id=547, 167.12437pt x 167.12437pt>
+File: ./Figures/originalMO.png Graphic file (type png)
+
+<use ./Figures/originalMO.png>
+Package pdftex.def Info: ./Figures/originalMO.png used on input line 267.
+(pdftex.def)             Requested size: 116.98625pt x 116.98625pt.
+
+<./Figures/dilatationMO.png, id=548, 167.12437pt x 167.12437pt>
+File: ./Figures/dilatationMO.png Graphic file (type png)
+
+<use ./Figures/dilatationMO.png>
+Package pdftex.def Info: ./Figures/dilatationMO.png used on input line 268.
+(pdftex.def)             Requested size: 116.98625pt x 116.98625pt.
+
+<./Figures/erosionMO.png, id=549, 167.12437pt x 164.11313pt>
+File: ./Figures/erosionMO.png Graphic file (type png)
+
+<use ./Figures/erosionMO.png>
+Package pdftex.def Info: ./Figures/erosionMO.png used on input line 269.
+(pdftex.def)             Requested size: 116.98625pt x 114.87839pt.
+
+<./Figures/openingMO.png, id=550, 167.12437pt x 166.37157pt>
+File: ./Figures/openingMO.png Graphic file (type png)
+
+<use ./Figures/openingMO.png>
+Package pdftex.def Info: ./Figures/openingMO.png used on input line 270.
+(pdftex.def)             Requested size: 116.98625pt x 116.45929pt.
+
+<./Figures/closingMO.png, id=551, 167.12437pt x 167.12437pt>
+File: ./Figures/closingMO.png Graphic file (type png)
+
+<use ./Figures/closingMO.png>
+Package pdftex.def Info: ./Figures/closingMO.png used on input line 271.
+(pdftex.def)             Requested size: 116.98625pt x 116.98625pt.
+ [23 <./Figures/originalMO.png> <./Figures/dilatationMO.png> <./Figures/erosion
+MO.png> <./Figures/openingMO.png> <./Figures/closingMO.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+[][]\OT1/phv/m/n/10 Weisstein, Eric W. []onvex."From MathWorld--A Wol-fram Web 
+Re-sour-ce.
+ []
+
+[24] <./Figures/maquinaSoporte.jpg, id=567, 530.98375pt x 530.98375pt>
 File: ./Figures/maquinaSoporte.jpg Graphic file (type jpg)
 
 <use ./Figures/maquinaSoporte.jpg>
-Package pdftex.def Info: ./Figures/maquinaSoporte.jpg used on input line 283.
+Package pdftex.def Info: ./Figures/maquinaSoporte.jpg used on input line 312.
 (pdftex.def)             Requested size: 159.29634pt x 159.29634pt.
- [22 <./Figures/maquinaSoporte.jpg>])
+ [25 <./Figures/maquinaSoporte.jpg>])
 (./Capitulo04.tex
 Cap\'{\i }tulo 4
 
@@ -1492,14 +1592,14 @@ Overfull \hbox (9.76324pt too wide) in paragraph at lines 1--1
 
  []
 
-<./Figures/system.png, id=512, 1174.3875pt x 1025.8325pt>
+<./Figures/system.png, id=573, 1174.3875pt x 1025.8325pt>
 File: ./Figures/system.png Graphic file (type png)
 
 <use ./Figures/system.png>
 Package pdftex.def Info: ./Figures/system.png used on input line 16.
 (pdftex.def)             Requested size: 234.87334pt x 205.16287pt.
 
-<./Figures/166.png, id=514, 473.51906pt x 346.29375pt>
+<./Figures/166.png, id=575, 473.51906pt x 346.29375pt>
 File: ./Figures/166.png Graphic file (type png)
  <use ./Figures/166.png>
 Package pdftex.def Info: ./Figures/166.png used on input line 27.
@@ -1508,7 +1608,7 @@ Package pdftex.def Info: ./Figures/166.png used on input line 27.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/166_W13.png, id=516, 472.76625pt x 345.54094pt>
+<./Figures/166_W13.png, id=577, 472.76625pt x 345.54094pt>
 File: ./Figures/166_W13.png Graphic file (type png)
 
 <use ./Figures/166_W13.png>
@@ -1518,10 +1618,14 @@ Package pdftex.def Info: ./Figures/166_W13.png used on input line 37.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23
 
- <./Figures/system.png>] [24 <./Figures/166.png> <./Figures/166_W13.png>]
-<./Figures/TrainingImages.png, id=537, 320.397pt x 142.131pt>
+LaTeX Warning: Reference `sec:ViolaJones' on page 26 undefined on input line 12
+4.
+
+[26
+
+ <./Figures/system.png>] [27 <./Figures/166.png> <./Figures/166_W13.png>]
+<./Figures/TrainingImages.png, id=599, 320.397pt x 142.131pt>
 File: ./Figures/TrainingImages.png Graphic file (type png)
 
 <use ./Figures/TrainingImages.png>
@@ -1532,7 +1636,7 @@ File: ./Figures/166_W13.png Graphic file (type png)
 Package pdftex.def Info: ./Figures/166_W13.png used on input line 141.
 (pdftex.def)             Requested size: 236.38254pt x 172.77003pt.
 
-<./Figures/roi.png, id=539, 446.41782pt x 347.04657pt>
+<./Figures/roi.png, id=601, 446.41782pt x 347.04657pt>
 File: ./Figures/roi.png Graphic file (type png)
  <use ./Figures/roi.png>
 Package pdftex.def Info: ./Figures/roi.png used on input line 151.
@@ -1541,7 +1645,7 @@ Package pdftex.def Info: ./Figures/roi.png used on input line 151.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25 <./Figures/TrainingImages.png>]
+[28 <./Figures/TrainingImages.png>]
 File: ./Figures/roi.png Graphic file (type png)
  <use ./Figures/roi.png>
 Package pdftex.def Info: ./Figures/roi.png used on input line 164.
@@ -1574,24 +1678,24 @@ Package pdftex.def Info: ./Figures/roi.png used on input line 193.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[26 <./Figures/roi.png>]
+[29 <./Figures/roi.png>]
 
-LaTeX Warning: Text page 27 contains only floats.
+LaTeX Warning: Text page 30 contains only floats.
 
-[27]
+[30]
 File: ./Figures/roi.png Graphic file (type png)
  <use ./Figures/roi.png>
 Package pdftex.def Info: ./Figures/roi.png used on input line 229.
 (pdftex.def)             Requested size: 223.20836pt x 173.52286pt.
- [28] [29] [30]) (./Capitulo05.tex
+ [31] [32] [33]) (./Capitulo05.tex
 Cap\'{\i }tulo 5
-[31
+[34
 
 ]) (./Capitulo06.tex
 Cap\'{\i }tulo 6
-[32
+[35
 
-]) (./iTesis.bbl [33
+]) (./iTesis.bbl [36
 
 ])
 
@@ -1599,7 +1703,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 270.
-[34]
+[37]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 270.
  (./iTesis.aux
 LaTeX Info: Redefining \. on input line 25.
@@ -1608,22 +1712,28 @@ LaTeX Info: Redefining \% on input line 25.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 270.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 270.
 Package rerunfilecheck Info: File `iTesis.out' has not changed.
-(rerunfilecheck)             Checksum: CBA02F01A7629A93CD7E06F7E53CE4D5;3512.
+(rerunfilecheck)             Checksum: A2DD8C957EB2BEF056F330A617F0C062;3790.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 21458 strings out of 493315
- 330319 string characters out of 6145894
- 485536 words of memory out of 5000000
- 24224 multiletter control sequences out of 15000+600000
+ 21560 strings out of 493315
+ 332613 string characters out of 6145894
+ 486932 words of memory out of 5000000
+ 24297 multiletter control sequences out of 15000+600000
  39288 words of font info for 84 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 53i,14n,92p,1456b,845s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not ex
+ 53i,14n,92p,1456b,846s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
 , replaced by a fixed one
@@ -1664,10 +1774,10 @@ y8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
 hare/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/ur
 w/helvetic/uhvbo8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></
 usr/share/texmf/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on iTesis.pdf (44 pages, 1756452 bytes).
+Output written on iTesis.pdf (47 pages, 1819981 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
- 606 compressed objects within 7 object streams
- 161 named destinations out of 1000 (max. 500000)
- 507 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 763 PDF objects out of 1000 (max. 8388607)
+ 651 compressed objects within 7 object streams
+ 179 named destinations out of 1000 (max. 500000)
+ 570 words of extra memory for PDF output out of 10000 (max. 10000000)
 

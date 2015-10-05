@@ -5,26 +5,21 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p
 
-
-%\begin{figure}[!hbp]
-%\begin{center}
-%\includegraphics[scale=1.5]
-%{./Figures/doge.jpeg}
-%\end{center}
-%\caption{Wow sdf.}
-%\label{doge}
-%\end{figure}
+En este trabajo
 
 \section{Limitaciones del sistema}
 
-Gran porcentaje de los trabajos previos en el \'area de reconocimiento de gestos con las manos basados en el modelo de la visión  utilizan c\'amaras digitales o c\'amaras web. Esta investigación utiliza el dispositivo Kinect, para obtener la información de entrada del sistema. 
-
-De  manera que las limitaciones del sistema propuesto están dadas por las características de dicho dispositivo, tales como la distancia a la que se encuentra el dispositivo con el usuario, $0.4m$ a $3m$ , la resolución de las imágenes a color $640 \, x \, 480$ pixeles y la resolución del sensor infrarrojo $640 \, x \, 480$ pixeles.\\
+Esta investigación utiliza el dispositivo Kinect, para obtener la información de entrada del sistema. De  manera que las limitaciones del sistema propuesto están dadas por las características de dicho dispositivo, tales como la distancia a la que se encuentra el dispositivo con el usuario, $0.4m$ a $3m$ , la resolución de las imágenes a color $640 \, x \, 480$ pixeles y la resolución del sensor infrarrojo $640 \, x \, 480$ pixeles.\\
 También el sistema depende de dos sensores Kinect, que se utilizar\'an en el caso que exista oclusión. \\
-Otra limitante es el número de gestos que podrá reconocer el sistema.
+Otra limitante es el número de gestos que reconoce el sistema, pues solo reconoce dos gestos estáticos y (numero) dinámicos.
 
-Se supone el área de trabajo como un cuarto estándar con buena iluminación (enfocado a pruebas con la cámara color del sistema Kinect).
+\section{Trabajo futuro}\label{futureWork}  
 
-\section{Trabajo futuro}\label{futureWork} 
+Como se expreso en la sección anterior una limitante es la resolución del sensor, una opción seria probar con la nueva versión del sensor Kinect, ya que tiene una mejor resolución y la reducción del ruido es notable. 
+
+El sistema podría mejorarse y alcanzar un mayor grado de precisión, si se mejora la detección, la propuesta es entrenar nuevamente el clasificador; incrementando el número de imágenes de entrenamiento, que contengan distintas poses, para así tener un número mayor de gestos a reconocer.
+
+Otro punto que se puede explorar es atacar de manera distintas el reconocimiento de los gestos dinámicos, utilizando por ejemplo un modelo estadístico como el Modelo Oculto de Markov, el cual permitiría implementar gestos más complejos.  
+
 \newpage
 %%=====================================================

@@ -1,31 +1,44 @@
 \select@language {spanish}
 \addvspace {0\p@ }
 \addvspace {0\p@ }
+\contentsline {figure}{\numberline {1}{\ignorespaces Procedimiento del algoritmo de detecci\IeC {\'o}n\relax }}{9}{figure.caption.8}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Sensor Kinect para Windows\relax }}{13}{figure.caption.8}
-\contentsline {figure}{\numberline {2}{\ignorespaces Componentes del sensor Kinect\relax }}{14}{figure.caption.9}
-\contentsline {figure}{\numberline {3}{\ignorespaces Ejemplo de operadores Haar\relax }}{16}{figure.caption.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{16}{figure.caption.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{16}{figure.caption.10}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{16}{figure.caption.10}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{16}{figure.caption.10}
-\contentsline {figure}{\numberline {4}{\ignorespaces Regiones de la imagen integral\relax }}{17}{figure.caption.11}
-\contentsline {figure}{\numberline {5}{\ignorespaces Ejemplos de elementos estructurales\relax }}{20}{figure.caption.12}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rect\IeC {\'a}ngulo de $3x3$.}}}{20}{figure.caption.12}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Figura de $3x2$.}}}{20}{figure.caption.12}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cruz de $5x5$.}}}{20}{figure.caption.12}
-\contentsline {figure}{\numberline {6}{\ignorespaces Clasificaci\IeC {\'o}n de maquina de soporte usando kernel lineal\relax }}{22}{figure.caption.13}
+\contentsline {figure}{\numberline {2}{\ignorespaces Metodolog\IeC {\'\i }a del sistema propuesto.\relax }}{14}{figure.caption.9}
+\contentsline {figure}{\numberline {3}{\ignorespaces Sensor Kinect para Windows\relax }}{15}{figure.caption.10}
+\contentsline {figure}{\numberline {4}{\ignorespaces Componentes del sensor Kinect\relax }}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {5}{\ignorespaces Proceso de detecci\IeC {\'o}n de la mano.\relax }}{16}{figure.caption.12}
+\contentsline {figure}{\numberline {6}{\ignorespaces Procedimiento del algoritmo de detecci\IeC {\'o}n\relax }}{17}{figure.caption.13}
+\contentsline {figure}{\numberline {7}{\ignorespaces Ejemplo de operadores Haar\relax }}{18}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{18}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{18}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{18}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{18}{figure.caption.14}
+\contentsline {figure}{\numberline {8}{\ignorespaces Ejemplo del c\IeC {\'a}lculo de la imagen integral\relax }}{18}{figure.caption.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagen original}}}{18}{figure.caption.15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagen integral}}}{18}{figure.caption.15}
+\contentsline {figure}{\numberline {9}{\ignorespaces Regiones de la imagen integral\relax }}{19}{figure.caption.16}
+\contentsline {figure}{\numberline {10}{\ignorespaces Ejemplos de elementos estructurales\relax }}{22}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rect\IeC {\'a}ngulo de $3x3$.}}}{22}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Figura de $3x2$.}}}{22}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cruz de $5x5$.}}}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {11}{\ignorespaces Aplicaci\IeC {\'o}n de operaciones morfol\IeC {\'o}gicas (citar)\relax }}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {original}}}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {dilataci\IeC {\'o}n}}}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {erosi\IeC {\'o}n}}}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {apertura}}}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {cierre}}}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {12}{\ignorespaces Clasificaci\IeC {\'o}n de maquina de soporte usando kernel lineal\relax }}{25}{figure.caption.19}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {7}{\ignorespaces Configuraci\IeC {\'o}n del sistema de reconocimiento de gestos con las manos\relax }}{23}{figure.caption.14}
-\contentsline {figure}{\numberline {8}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{24}{figure.caption.15}
-\contentsline {figure}{\numberline {9}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{24}{figure.caption.16}
-\contentsline {figure}{\numberline {10}{\ignorespaces Im\IeC {\'a}genes de la mano de nuestra base de datos\relax }}{25}{figure.caption.17}
-\contentsline {figure}{\numberline {11}{\ignorespaces Im\IeC {\'a}genes del fondo de nuestra base de datos\relax }}{25}{figure.caption.18}
-\contentsline {figure}{\numberline {12}{\ignorespaces Mano seleccionada\relax }}{26}{figure.caption.19}
-\contentsline {figure}{\numberline {13}{\ignorespaces ROI que muestra una uni\IeC {\'o}n entre los dedos\relax }}{27}{figure.caption.20}
-\contentsline {figure}{\numberline {14}{\ignorespaces ROI donde se aprecio un hoyo en la mano\relax }}{27}{figure.caption.21}
-\contentsline {figure}{\numberline {15}{\ignorespaces Apertura y cerradura\relax }}{27}{figure.caption.22}
-\contentsline {figure}{\numberline {16}{\ignorespaces Binarizaci\IeC {\'o}n de ROI\relax }}{28}{figure.caption.23}
-\contentsline {figure}{\numberline {17}{\ignorespaces En esta dibujado el casco convexo los punto en son los defectos de convexidad\relax }}{28}{figure.caption.24}
+\contentsline {figure}{\numberline {13}{\ignorespaces Configuraci\IeC {\'o}n del sistema de reconocimiento de gestos con las manos\relax }}{26}{figure.caption.20}
+\contentsline {figure}{\numberline {14}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{27}{figure.caption.21}
+\contentsline {figure}{\numberline {15}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{27}{figure.caption.22}
+\contentsline {figure}{\numberline {16}{\ignorespaces Im\IeC {\'a}genes de la mano de nuestra base de datos\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {17}{\ignorespaces Im\IeC {\'a}genes del fondo de nuestra base de datos\relax }}{28}{figure.caption.24}
+\contentsline {figure}{\numberline {18}{\ignorespaces Mano seleccionada\relax }}{29}{figure.caption.25}
+\contentsline {figure}{\numberline {19}{\ignorespaces ROI que muestra una uni\IeC {\'o}n entre los dedos\relax }}{30}{figure.caption.26}
+\contentsline {figure}{\numberline {20}{\ignorespaces ROI donde se aprecio un hoyo en la mano\relax }}{30}{figure.caption.27}
+\contentsline {figure}{\numberline {21}{\ignorespaces Apertura y cerradura\relax }}{30}{figure.caption.28}
+\contentsline {figure}{\numberline {22}{\ignorespaces Binarizaci\IeC {\'o}n de ROI\relax }}{31}{figure.caption.29}
+\contentsline {figure}{\numberline {23}{\ignorespaces En esta dibujado el casco convexo los punto en son los defectos de convexidad\relax }}{31}{figure.caption.30}
 \addvspace {0\p@ }
 \addvspace {0\p@ }
