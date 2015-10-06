@@ -44,7 +44,7 @@
 \contentsline {section}{\numberline {3.4}Reconocimiento}{24}{section.3.4}
 \contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{26}{chapter.4}
 \contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{26}{section.4.1}
-\contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{27}{section.4.2}
+\contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{28}{section.4.2}
 \contentsline {section}{\numberline {4.3}Extracci\'on de caracter\'isticas}{31}{section.4.3}
 \contentsline {section}{\numberline {4.4}Reconocimiento}{32}{section.4.4}
 \contentsline {chapter}{\numberline {5}Resultados}{34}{chapter.5}

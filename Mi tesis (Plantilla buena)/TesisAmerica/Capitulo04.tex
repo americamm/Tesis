@@ -5,24 +5,25 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p
 
-En este cap\'itulo se describe los detalles de implementación del sistema.  
+
+En este cap\'itulo se describen los detalles de implementación de cada etapa del sistema.   
+
 
 \section{Adquisición de los datos}\label{sec:AdquisicionDatos}
 
-En esta etapa se capturan los datos que son la entrada del sistema. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect, estos se encuentran ubicados uno frente al  usuario y otro al lado  izquierdo como se muestra en la figura \ref{fig:SetupSystem}.
-
+Como se vio en el capítulo \ref{capit:cap3} sección \ref{sec:KinectSensor} los datos provienen de los sensores de profundidad de dos dispositivos Kinect, estos se encuentran ubicados uno frente al usuario y otro al lado  izquierdo, con una distancia de $74$ y $79$ $cm.$ respectivamente; y entre ellos de $46$ $cm.$ como se muestra en la figura \ref{fig:SetupSystem}.
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=.2]{./Figures/system.png}
 \end{center}
-\caption{Configuración del sistema de reconocimiento de gestos con las manos}
+\caption{Configuración del sistema de reconocimiento de gestos}
 \label{fig:SetupSystem}
-\end{figure} 
- 
-una vez que le flujo de datos de los sensores de profundidad es capturado este es representado como una imagen en escala de grises de $8$ bits de $640$ p\'ixeles de ancho por $480$ p\'ixeles de largo. En las imágenes se puede apreciar detalles pequeños, es decir cambios en la profundidad de hasta $1$  $mm$ esto debido a que la escala de grises inicia cada $26$  $cm$. %creo que no se entiende bien, explicar un poco mejor.  
+\end{figure}  
+
+Una vez que le flujo de datos de los sensores de profundidad es capturado este es representado como una imagen en escala de grises de $8$ bits de $640$ p\'ixeles de ancho por $480$ p\'ixeles de largo. En las imágenes se puede apreciar detalles pequeños, es decir cambios en la profundidad de hasta $1$  $mm.$ esto debido a que la escala de grises inicia cada $26$  $cm$. 
 En la siguiente imagen se puede apreciar un ejemplo de las imágenes de profundidad. \ref{fig:ImagenCapturada}
 
-\begin{figure}[!h]
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.5]{./Figures/166.png}
 \end{center}
@@ -30,103 +31,26 @@ En la siguiente imagen se puede apreciar un ejemplo de las imágenes de profundi
 \label{fig:ImagenCapturada}
 \end{figure}  
 
-Debido a la naturaleza del funcionamiento del Kinect, las imágenes obtenidas contiene ruido del tipo (poner), el cual nos da una imagen como la figura  , el ruido  es reducido usando un filtros de mediana este es aplicado en toda la imagen en una ventada de tama\~no $13$. La imagen resultante $S(x,y)$ es como la que se muestra en la figura \ref{fig:ImagenCapturada}
-
-\begin{figure}[!h]
+Debido a la naturaleza del funcionamiento del Kinect, las imágenes obtenidas de ambos sensores contiene ruido del tipo (poner tipo) (referencia), de manera que la imágenes provenientes de los sensores son como la figura \ref{fig:ImagenCapturadaNoNoise}; el ruido  es reducido usando filtros de mediana este es aplicado en toda la imagen usando una ventada de tamaño $13$. La imagen resultante $S(x,y)$ es como la que se muestra en la figura \ref{fig:ImagenCapturadaNoNoise}.\\ 
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.5]{./Figures/166_W13.png}
 \end{center}
 \caption{Representación de los datos capturados por los Kinect}
 \label{fig:ImagenCapturadaNoNoise}
 \end{figure}  
-  
+Como se aprecia en la imagen siguiente gran parte del ruido es reducido obteniendo una mejor imagen, pero desafortunadamente todavía sigue habiendo ruido en la imagen, este puede ser eliminado casi en su mayoría  si el tamaño de la ventana aumenta pero se pierde información de la imagen de ,manera que se decidió optar por ese tamaño de ventana; la perdida de información será subsanada posteriormente. En la imagen también se aprecia el fondo negro, esto es debido a que se discrimino el fondo que estuviera a un distancia de más de $2$ $m.$ del sensor. 
 
-%\begin{center}[a]
-%\begin{tabular}{ c c c }
-% cell1 & cell2 & cell3 \\ 
-% cell4 & cell5 & cell6 \\  
-% cell7 & cell8 & cell9    
-%\end{tabular}
-%\end{center}
-%
-%\begin{center}[b]
-%\begin{tabular}{ |c|c|c| } 
-% \hline
-% cell1 & cell2 & cell3 \\ 
-% cell4 & cell5 & cell6 \\ 
-% cell7 & cell8 & cell9 \\ 
-% \hline
-%\end{tabular}
-%\end{center}
-%
-%\begin{center}[c]
-% \begin{tabular}{||c c c c||} 
-% \hline
-% Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
-% \hline\hline
-% 1 & 6 & 87837 & 787 \\ 
-% \hline
-% 2 & 7 & 78 & 5415 \\
-% \hline
-% 3 & 545 & 778 & 7507 \\
-% \hline
-% 4 & 545 & 18744 & 7560 \\
-% \hline
-% 5 & 88 & 788 & 6344 \\ [1ex] 
-% \hline
-%\end{tabular}
-%\end{center}
-%
-%\begin{center}[d]
-%\begin{tabular}{ | b{5cm} | m{2cm}| m{2cm} | } 
-%\hline
-%The aligning options are m for middle, p for top and b for bottom.& cell2 & cell3 \\ 
-%\hline
-%cell1 dummy text dummy text dummy text & cell5 & cell6 \\ 
-%\hline
-%cell7 & cell8 & cell9 \\ 
-%\hline
-%\end{tabular}
-%\end{center}
-%
-%\begin{center}[e]
-%\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
-% \hline
-% \multicolumn{4}{|c|}{Country List} \\
-% \hline
-% Country Name     or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 Code&ISO numeric Code\\
-% \hline
-% Afghanistan   & AF    &AFG&   004\\
-% Aland Islands&   AX  & ALA   &248\\
-% Albania &AL & ALB&  008\\
-% Algeria    &DZ & DZA&  012\\
-% American Samoa&   AS  & ASM&016\\
-% Andorra& AD  & AND   &020\\
-% Angola& AO  & AGO&024\\
-% \hline
-%\end{tabular}
-%\end{center}
-%\begin{center}[f]
-%\begin{tabular}{ |c|c|c|c| } 
-%\hline
-%col1 & col2 & col3 \\
-%\hline
-%\multirow{3}{4em}{Multiple row} & cell2 & cell3 \\ 
-%& cell5 & cell6 \\ 
-%& cell8 & cell9 \\ 
-%\hline
-%\end{tabular}
-%\end{center}
+
 
 \section{Detección}\label{sec:DeteccionSystem} 
 
-En esta etapa del sistema el objetivo es localizar y segmentar la mano para extraer las características necesarias para el reconocimiento. 
-En este trabajo se utiliza el algoritmo de detección de objetos desarrollado por \citep{Viola2001}, como se mostró en el cap\'itulo \ref{capit:cap2} sección \ref{sec:ViolaJones}, el algoritmo  clasifica las imágenes basándose en el valor de características. 
+En este trabajo se utiliza el algoritmo de detección de objetos desarrollado por \citep{Viola2001}, como se mostró en el cap\'itulo \ref{capit:cap3} sección \ref{subsec:ViolaJones}, el algoritmo clasifica las imágenes basándose en el valor de características, el clasificador es construido usando el algoritmo de AdaBoost en forma de cascada. 
 
 
-La selección de las características se llev\'o acabo por medio del algoritmo AdaBoost; la implementaci\'on se realiz\'o utilizando el software OpenCV Haar training classifier \footnote{https://github.com/mrnugget/opencv-haar-classifier-training}. Se entren\'o con $1000$ imágenes positivas (imágenes de profundidad de la mano), y $2000$ negativas, (imágenes de fondo a distintas profundidades). Las imágenes positivas fueron generadas de $100$ imágenes de la mano usando el software Create Samples \footnote{http://note.sonots.com/SciSoftware/haartraining.html}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{https://github.com/americamm}.
+La selección de las características se llev\'o acabo por medio de una versión modificada del algoritmo AdaBoost; la implementaci\'on se realiz\'o utilizando el software OpenCV Haar training classifier \footnote{https://github.com/mrnugget/opencv-haar-classifier-training}. Se entren\'o con $1000$ imágenes positivas (imágenes de profundidad de la mano), y $2000$ negativas, (imágenes de fondo de distintos escenarios). Las imágenes positivas fueron generadas de $100$ imágenes de la mano usando el software Create Samples \footnote{http://note.sonots.com/SciSoftware/haartraining.html}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{https://github.com/americamm}.
 
-Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de mano, estas fueron tomadas a una distancia de entre $60$ $cm$ y $200$ $cm$. Las imágenes de profundidad de la mano fueron tomadas de $6$ personas distintas con tres distintas poses: palma abierta con dedos abiertos, palma abierta con dedos juntos y finalmente el pu\~no, como se muestra en la figura \ref{fig:ImagenesPoses}. Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la figura \ref{fig:ImagenFondo}. El programa para la captura de las imágenes puede ser encontrado en github \footnote{https://github.com/americamm}.  
+Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de mano, estas fueron tomadas a una distancia de entre $60$ y $200$ $cm.$. Las imágenes de profundidad de la mano fueron tomadas de $6$ personas distintas con tres distintas poses: palma abierta con dedos abiertos, palma abierta con dedos juntos y finalmente el pu\~no, como se muestra en la figura \ref{fig:ImagenesPoses}. Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la figura \ref{fig:ImagenFondo}. El programa para la captura de las imágenes puede ser encontrado en github \footnote{https://github.com/americamm}.  
 
 \begin{figure}[h!]
 \begin{center}
