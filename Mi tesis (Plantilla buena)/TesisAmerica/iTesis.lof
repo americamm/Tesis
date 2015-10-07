@@ -32,13 +32,17 @@
 \contentsline {figure}{\numberline {13}{\ignorespaces Configuraci\IeC {\'o}n del sistema de reconocimiento de gestos\relax }}{26}{figure.caption.20}
 \contentsline {figure}{\numberline {14}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{27}{figure.caption.21}
 \contentsline {figure}{\numberline {15}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{27}{figure.caption.22}
-\contentsline {figure}{\numberline {16}{\ignorespaces Im\IeC {\'a}genes de la mano de nuestra base de datos\relax }}{28}{figure.caption.23}
-\contentsline {figure}{\numberline {17}{\ignorespaces Im\IeC {\'a}genes del fondo de nuestra base de datos\relax }}{29}{figure.caption.24}
+\contentsline {figure}{\numberline {16}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{29}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{29}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{29}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Palma de la mano con los dedos juntos.}}}{29}{figure.caption.23}
+\contentsline {figure}{\numberline {17}{\ignorespaces Imagen del fondo de nuestra base de datos\relax }}{29}{figure.caption.24}
 \contentsline {figure}{\numberline {18}{\ignorespaces Mano seleccionada\relax }}{29}{figure.caption.25}
 \contentsline {figure}{\numberline {19}{\ignorespaces ROI que muestra una uni\IeC {\'o}n entre los dedos\relax }}{30}{figure.caption.26}
 \contentsline {figure}{\numberline {20}{\ignorespaces ROI donde se aprecio un hoyo en la mano\relax }}{30}{figure.caption.27}
 \contentsline {figure}{\numberline {21}{\ignorespaces Apertura y cerradura\relax }}{31}{figure.caption.28}
 \contentsline {figure}{\numberline {22}{\ignorespaces Binarizaci\IeC {\'o}n de ROI\relax }}{31}{figure.caption.29}
-\contentsline {figure}{\numberline {23}{\ignorespaces En esta dibujado el casco convexo los punto en son los defectos de convexidad\relax }}{32}{figure.caption.30}
+\contentsline {figure}{\numberline {23}{\ignorespaces Contorno de la mano\relax }}{32}{figure.caption.30}
+\contentsline {figure}{\numberline {24}{\ignorespaces En esta dibujado el casco convexo los punto en son los defectos de convexidad\relax }}{32}{figure.caption.31}
 \addvspace {0\p@ }
 \addvspace {0\p@ }

@@ -50,25 +50,27 @@ En este trabajo se utiliza el algoritmo de detección de objetos desarrollado po
 
 La selección de las características se llev\'o acabo por medio de una versión modificada del algoritmo AdaBoost; la implementaci\'on se realiz\'o utilizando el software OpenCV Haar training classifier \footnote{https://github.com/mrnugget/opencv-haar-classifier-training}. Se entren\'o con $1000$ imágenes positivas (imágenes de profundidad de la mano), y $2000$ negativas, (imágenes de fondo de distintos escenarios). Las imágenes positivas fueron generadas de $100$ imágenes de la mano usando el software Create Samples \footnote{http://note.sonots.com/SciSoftware/haartraining.html}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{https://github.com/americamm}.
 
-Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de mano, estas fueron tomadas a una distancia de entre $60$ y $200$ $cm.$. Las imágenes de profundidad de la mano fueron tomadas de $6$ personas distintas con tres distintas poses: palma abierta con dedos abiertos, palma abierta con dedos juntos y finalmente el pu\~no, como se muestra en la figura \ref{fig:ImagenesPoses}. Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la figura \ref{fig:ImagenFondo}. El programa para la captura de las imágenes puede ser encontrado en github \footnote{https://github.com/americamm}.  
+Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de mano, estas fueron tomadas a una distancia de entre $60$ y $200$ $cm.$. Las imágenes de profundidad de la mano fueron tomadas de $6$ personas distintas con tres distintas poses: palma con los dedos separados \ref{fig:ImagenesPoses:2}, palma con dedos juntos \ref{fig:ImagenesPoses:3} y finalmente el pu\~no \ref{fig:ImagenesPoses:1}, como se muestran en la figura \ref{fig:ImagenesPoses}. Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la figura \ref{fig:ImagenFondo}. El programa para la captura de las imágenes puede ser encontrado en github \footnote{https://github.com/americamm}.  
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/TrainingImages.png}
+\subfigure[Palma de la mano con los dedos separados.]{\includegraphics[scale=1]{./Figures/TrainingImage2.png}\label{fig:ImagenesPoses:2}}      \quad
+\subfigure[Puño.]{\includegraphics[scale=1.55]{./Figures/TrainingImage1.png}\label{fig:ImagenesPoses:1}}   \quad
+\subfigure[Palma de la mano con los dedos juntos.]{\includegraphics[scale=.99]{./Figures/TrainingImage3.png}\label{fig:ImagenesPoses:3}}
 \end{center}
-\caption{Imágenes de la mano de nuestra base de datos}
+\caption{Ejemplo de imágenes de poses de nuestra base de datos.}
 \label{fig:ImagenesPoses}
 \end{figure}  
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/166_W13.png}
+\includegraphics[scale=.4]{./Figures/Fondo5262.png}
 \end{center}
-\caption{Imágenes del fondo de nuestra base de datos}
+\caption{Imagen del fondo de nuestra base de datos}
 \label{fig:ImagenFondo}
 \end{figure}  
 
-Para localizar la mano en cada cuadro proveniente de los Kinect, una ventana de tamaño $kahkjgv$ se desliza por la imagen, una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionada alrededor de la mano, como se puede ver en la figura \ref{fig:Roi}.
+Para localizar la mano en cada cuadro proveniente de los dispositivos  Kinect, una ventana de tamaño $ka$ se desliza por la imagen, una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionada alrededor de la mano, como se puede ver en la figura \ref{fig:Roi}.
 
 \begin{figure}[h!]
 \begin{center}
@@ -78,92 +80,76 @@ Para localizar la mano en cada cuadro proveniente de los Kinect, una ventana de 
 \label{fig:Roi}
 \end{figure}  
 
-Ya que se tiene localizada el área donde se encuentra la mano, el siguiente paso es segmentar la mano del ROI. La segmentación se realiza calculando los contornos existentes en la ROI y se toma el contorno más grande como el contorno de la mano, antes de calcular el contorno se realizan una serie de procesamientos al ROI para eliminar ruido y que el cálculo del contorno sea más preciso.    
+Ya que se tiene localizada el área donde se encuentra la mano, el siguiente paso es segmentar la mano del ROI. La segmentación se realiza encontrando los contornos existentes en la ROI y se toma el contorno más grande como el contorno de la mano, antes de calcular el contorno se realizan una serie de procesamientos al ROI para eliminar ruido y que el cálculo del contorno sea más preciso.    
 
-El primer procesamiento que se aplica al ROI, son las operaciones morfológicas de apertura y cerradura, en ese orden. Se utilizan para eliminar uniones pequeños que existen en la imagen como el que se muestra \ref{fig:RuidoUnion} o unir pequeños hoyos que existen en la imagen, como los que se encuentran en la figura \ref{fig:RuidoHoyo}.\\
-La operaciones utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento $3 \, x \, 7$ pixeles; para la cerradura se aplic\'o con un tamaño  $7 \, x \, 7$ pixeles. 
-
+El primer procesamiento que se aplica al ROI, son las operaciones morfológicas: apertura y cierre, en ese orden. Se utilizan para eliminar uniones pequeñas que existen en la imagen como el de la figura \ref{fig:RuidoUnion} o unir pequeños hoyos que existen en la imagen, como los que se encuentran en la figura \ref{fig:RuidoHoyo}.\\
+Las operaciones anteriores utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento es de $3 \, x \, 7$ pixeles; para el cierre se aplic\'o con un tamaño  $7 \, x \, 7$ pixeles.\\
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
+\includegraphics[scale=.5]{./Figures/pusheen.png}
 \end{center}
 \caption{ROI que muestra una unión entre los dedos}
 \label{fig:RuidoUnion}
 \end{figure}   
-
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
+\includegraphics[scale=.5]{./Figures/pusheen.png}
 \end{center}
 \caption{ROI donde se aprecio un hoyo en la mano}
 \label{fig:RuidoHoyo}
 \end{figure}  
-
-
-El resultado de estas operaciones es mejorar la región de interés. Las imágenes siguientes muestran el resultado de aplicar las operaciones apertura y cerradura al ROI. 
-
-\begin{figure}[!h]
+Las imágenes siguientes muestran el resultado de aplicar las operaciones apertura y cierre al ROI. 
+\begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
+\includegraphics[scale=.5]{./Figures/pusheen.png}
 \end{center}
 \caption{Apertura y cerradura}
 \label{fig:ImagenOpenClose}
 \end{figure}  
 
-Una vez aplicadas las operaciones el siguiente paso es binarizar la región de interés, se lleva acabo aplicando el algoritmo desarrollado por \citep{Niblack1985}, se decidió usar este método debido a la naturaleza de la imagen. Los parámetros que fueron usados fueron $k=0.5$ y una ventana de $3x3$ p\'ixeles. La imagen siguiente es una imagen binarizada. 
+Una vez aplicadas las operaciones morfológicas el siguiente paso es binarizar la región de interés, se lleva acabo aplicando el algoritmo desarrollado por \citep{Niblack1985}, se decidió usar este método debido a la naturaleza de la imagen. Los parámetros que fueron usados fueron $k=0.5$ y una ventana de $3x3$ p\'ixeles. La figura siguiente es la imagen binarizada. 
 
-\begin{figure}[!h]
+\begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
+\includegraphics[scale=.5]{./Figures/pusheen.png}
 \end{center}
 \caption{Binarización de ROI}
 \label{fig:BinarizationRoi}
 \end{figure}
  
-%\begin{table}
-%\footnotesize
-%\centering
-%\caption{Mauris et imperdiet     tortor. Maecenas consectetur lacus elit, dignissim eleifend dolor  ornare ut. Aenean euismod porta nisi, et volutpat ex laoreet sit amet. Sed ac elit vestibulum neque ultrices feugiat}
-%\label{tab:recopilacionDeCuestionarios}
-%%\rotatebox{90}{
-%\begin{tabular}{m{0.2cm}m{2.5cm}m{2.5cm}m{2.5cm}m{2.5cm}m{2.5cm}}
-%\hline\noalign{\smallskip}
-% & \textbf{FFS} & \textbf{SOFA} & \textbf{FQ} & \textbf{CIS20R} & \textbf{FACIT}
-%\\ \noalign{\smallskip}
-%\hline
-%\noalign{\smallskip}
-%1	&	TAF	&	TAF	&	PF	&	PF	&	PF\\
-%2	&	TAF	&	CM	&	CS	&	EE	&	PF\\
-%3	&	PF	&	TAF	&	CS	&	CM	&	EE\\
-%\hline
-%\end{tabular}
-%%}
-%\end{table}
-
-Una vez que la ROI es binarizada, el siguiente paso es encontrar los contornos existentes dentro de esta. Los contornos se calcularon utilizando el algoritmo de $blabla$ con tales parámetros.  
-
-Ya que le contorno de la mano es identificado, se calcula el casco convexo de la mano y posteriormente los defectos de convexidad 
-
-\section{Extracci\'on de caracter\'isticas}\label{sec:ExtraccionCaracteristicasSystem}
-
-Para la extracción de características se utilizan los algoritmos de casco convexo y el de defectos de convexidad, la figura muestra la mano con el casco convexo y sus defectos. 
+Cuando la ROI es binarizada el siguiente paso es encontrar los contornos existentes dentro del ROI. Los contornos se calcularon utilizando el algoritmo de $blabla$ con tales parámetros. La fig. \ref{fig:ImageHandContour} muestra en color blabla el contorno de la mano. 
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
+\includegraphics[scale=.5]{./Figures/pusheen.png}
+\end{center}
+\caption{Contorno de la mano}
+\label{fig:ImageHandContour}
+\end{figure}
+  
+
+
+\section{Extracción de características}\label{sec:ExtraccionCaracteristicasSystem}
+
+Como se vio en el capítulo \ref{capit:cap3} sección \ref{sec:Convexhull} las características de la mano son extraídas utilizando los algoritmos de envolvente convexa y  defectos de convexidad.\\
+La figura muestra un ejemplo de la aplicación de estos algoritmos al ROI.  
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/pusheen.png}
 \end{center}
 \caption{En esta dibujado el casco convexo los punto en son los defectos de convexidad}
 \label{fig:Convex&Defects}
 \end{figure}
 
 
-Una vez aplicados estos dos algoritmos se pueden calcular el número de dedos y las puntas de estos que son fundamentales para calcular las demás características. Enseguida se describe el algoritmo () para calcular el numero de dedos. 
-Sea $CD={cd_1, cd_2, \cdots, cd_n}$ los defectos de convexidad de un conjunto casco convexo. Cada defecto esta compuesto de tres elementos $s_i(x,y),d_i(x,y),e_i(x,y) \in cd_i$. $\delta_i$ es la distancia de $d_i(x,y)$ a la orilla del casco convexo.  
+Una vez aplicados estos dos algoritmos se pueden calcular el número de dedos y las puntas de estos que son fundamentales para calcular las demás características. Enseguida se describe el algoritmo \ref{alg:NumDedos} para calcular el numero de dedos.\\ 
+Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ los defectos de convexidad de un conjunto casco convexo. Cada defecto esta compuesto de tres elementos $\lbrace s_i(x,y),d_i(x,y),e_i(x,y) \rbrace \in cd_i$. Sea $\D$ el conjunto de las distancias de $d_i(x,y)$ a la orilla de la envolvente convexa.  
 
 \begin{algorithm}
 \begin{algorithmic}[1]
 
-\REQUIRE $d_i$
+\REQUIRE $D=\lbrace \delta_1, \delta_2, \cdots, \delta_n \rbrace$.  
 \ENSURE Número de dedos, $Nf$.  
 
 \FOR{$i=1$ hasta $n$}  
@@ -194,34 +180,16 @@ Sea $CD={cd_1, cd_2, \cdots, cd_n}$ los defectos de convexidad de un conjunto ca
 	\STATE $Nf=Nf+1$.
 
 \ENDFOR 
-
+\caption{Calcula el número de dedos de la mano.}
+\label{alg:NumDedos}
 \end{algorithmic}
 \end{algorithm}
-
 
 Calculo del $angulo$
 
 $$ \alpha_{f_j} = \tan^{-1}{ \bigg| \frac{m_{j+1}-m_j}{1+m{j+1}m_j} \bigg|}$$
 
 $$ \theta_{f_j} = \tan^{-1} | {m_j} - 90^\circ |$$
-
-
- 
-
-%\begin{equation} \label{eq:demandaOxigeno_simple}
-%\begin{split} 
-%& K = R + H + V \\ 
-%& R = \textrm{consumo de oxígeno} \times kg^{-1} \times min^{-1}\\ 
-%& H = \textrm{constante horizontal} \times \textrm{velocidad de desplazamiento}\\ 
-%& V = \textrm{constante vertical} \times \textrm{velocidad de desplazamiento}\\ 
-%\end{split} 
-%\end{equation} 
-%
-%\begin{figure}\label{eq:testing}
-%\[ e = m c^2 \]
-%\caption{A $ \dfrac{3}{2} $ famous equation, where $ e = m c^2  $ represent $ e = m c^2  $ energy something and $  A_{d} = -g - \frac{\sum F}{mass} $  another $\protect\pi=\protect\varpi + \protect\xi$ thing. }
-%\end{figure}
-
 
 Las características se guardan en un vector de características de dimensión $26$.
 
