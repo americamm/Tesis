@@ -143,8 +143,8 @@ La figura muestra un ejemplo de la aplicación de estos algoritmos al ROI.
 \end{figure}
 
 
-Una vez aplicados estos dos algoritmos se pueden calcular el número de dedos y las puntas de estos que son fundamentales para calcular las demás características. Enseguida se describe el algoritmo \ref{alg:NumDedos} para calcular el numero de dedos.\\ 
-Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ los defectos de convexidad de un conjunto casco convexo. Cada defecto esta compuesto de tres elementos $\lbrace s_i(x,y),d_i(x,y),e_i(x,y) \rbrace \in cd_i$. Sea $\D$ el conjunto de las distancias de $d_i(x,y)$ a la orilla de la envolvente convexa.  
+Una vez aplicados estos dos algoritmos se pueden calcular el número de dedos y las puntas de estos que son fundamentales para calcular las demás características. Enseguida se describe el algoritmo \ref{alg:NumDedos} para calcular el número de dedos.\\ 
+Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ los defectos de convexidad de una envolvente convexa. Cada defecto esta compuesto de tres elementos $\lbrace s_i(x,y),d_i(x,y),e_i(x,y) \rbrace \in cd_i, \quad i=\lbrace 1, 2, \cdots, n\rbrace$. Sea $D$ el conjunto de las distancias de $d_i(x,y)$ a la orilla de la envolvente convexa.  
 
 \begin{algorithm}
 \begin{algorithmic}[1]
@@ -185,21 +185,44 @@ Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ los defectos de convexidad de 
 \end{algorithmic}
 \end{algorithm}
 
-Calculo del $angulo$
+El ángulo $\alpha$ entre los dedos $f_j$ y $f_{j+1}$ es calculado como:  
+$$ \alpha_{f_j} = \tan^{-1}{ \bigg| \frac{m_{j+1}-m_j}{1+m_{j+1}m_j} \bigg|}$$
+donde $m_{j+1},m_j$ son las pendientes de las rectas que pasa por los puntos $d_j(x,y)$ y $s_{j+1}(x,y)$; $d_j(x,y)$ y $s_j(x,y)$; $j=\lbrace 1,2,3,4,5 \rbrace$.  
 
-$$ \alpha_{f_j} = \tan^{-1}{ \bigg| \frac{m_{j+1}-m_j}{1+m{j+1}m_j} \bigg|}$$
-
+El ángulo del centro de la mano a la punta de los dedos puede ser obtenido como: 
 $$ \theta_{f_j} = \tan^{-1} | {m_j} - 90^\circ |$$
+donde $m_j$ es la pendiente de la recta que pasa por el centro de la mano y la punta de los dedos $s_i(x,y)$.
 
 Las características se guardan en un vector de características de dimensión $26$.
 
+
+
 \section{Reconocimiento}\label{sec:ReconocimientoSystem}
 
-Es la etapa final del reconocimiento,es donde finalmente el gesto puede ser interpretado por la computadora.   
-El reconocimiento de los gestos estáticos se lleva acabo usando el algoritmo de clasificación de SVM. 
+En este trabajo se reconocen gestos estáticos y dinámicos utilizando el algoritmo de clasificación de máquina de soporte vectorial.  
 
+Como se vio en el capitulo \ref{capit:cap3} sección \ref{sec:SVM} SVM es un algoritmo de aprendizaje de máquina supervisado, por lo que es necesario tener imágenes de los gestos a reconocer ya que con estas el clasificador es entrenado y el modelo de clasificación puede ser creado. 
 
+La implementación de SVM se lleva acabo usando LibSVMSharp \footnote{https://github.com/ccerhan/LibSVMsharp} un wrapper de la librería LibSVM \citep{Chang2011}.
 
+\subsection{Reconocimiento de gestos estáticos}\label{RecognitionEstatic}
+
+El sistema reconoce dos gestos estáticos: el puño y la palma de la mano con los dedos separados.  Para el entrenamiento se tomaron $num$ imágenes de los dos distintos gestos como los de la fig \ref{fig:SVMTrainingStatic}, divididas en partes iguales. De tamaño $640$ por $480$ pixeles.   
+
+\begin{figure}[h!]
+\begin{center}
+\subfigure[Palma de la mano con los dedos separados.]{\includegraphics[scale=.5]{./Figures/pusheen.png}\label{fig:SVMTrainingStatic:1}}      \quad
+\subfigure[Puño.]{\includegraphics[scale=.5]{./Figures/pusheen.png}\label{fig:SVMTrainingStatic:2}}
+\end{center}
+\caption{Ejemplo de imágenes de poses de nuestra base de datos.}
+\label{fig:SVMTrainingStatic}
+\end{figure}
+
+Para el entrenamiento de la máquina de soporte se utilizo un kernel exponencial, (poner los demás parámetros) y se utilizó validación cruzada con 5 pliegues. 
+
+\subsection{Reconocimiento de gestos dinámicos}\label{RecognitionDynamic}
+
+El sistema reconoce numero de gestos dinámicos.  
 
 %\subsection{Extracción de parámetros}
 %Ecuación \ref{eq:gravedad}. 

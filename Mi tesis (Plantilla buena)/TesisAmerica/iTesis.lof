@@ -44,5 +44,8 @@
 \contentsline {figure}{\numberline {22}{\ignorespaces Binarizaci\IeC {\'o}n de ROI\relax }}{31}{figure.caption.29}
 \contentsline {figure}{\numberline {23}{\ignorespaces Contorno de la mano\relax }}{32}{figure.caption.30}
 \contentsline {figure}{\numberline {24}{\ignorespaces En esta dibujado el casco convexo los punto en son los defectos de convexidad\relax }}{32}{figure.caption.31}
+\contentsline {figure}{\numberline {25}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{35}{figure.caption.32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{35}{figure.caption.32}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{35}{figure.caption.32}
 \addvspace {0\p@ }
 \addvspace {0\p@ }
