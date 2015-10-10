@@ -277,15 +277,29 @@ $$S \bullet EX = (S \oplus EX) \ominus EX $$
 \section{Extracción de características}\label{sec:Convexhull} 
 
 La idea de esta etapa es encontrar las características que sean capaces de describir la mano, de manera que con estas, se pueda reconocer los gestos realizados por la o las manos.  
-Las características se guardan en un vector, llamado vector de características, donde la dimensión del vector es el número de características que describen en este caso, la mano.  
+Las características se guardan en un vector, llamado vector de características, donde la dimensión del vector es el número de características que describen la mano.  
 
-En este trabajo se utilizan características geométricas. Para extraerlas se hace uso de la envolvente convexa y de los defectos de convexidad. A continuación se definen los conceptos anteriores.
+En este trabajo se utilizan características geométricas, para extraerlas se hace uso de la envolvente convexa y de los defectos de convexidad. A continuación se definen los conceptos anteriores y el de conjunto convexo.
 
-Sea $C$ un conjunto en el espacio euclidiano $\Re^d$, $C$ es un conjunto convexo \footnote{Weisstein, Eric W. "Convex." From MathWorld--A Wolfram Web Resource. http://mathworld.wolfram.com/Convex.html} si contiene todos los segmentos de línea que unen a cualquier par de puntos pertenecientes al conjunto. Donde $d$ es la dimensión del espacio euclidiano. 
+Sea $A$ un conjunto en el espacio euclidiano $\bold{R}^d$, $A$ es un conjunto convexo \footnote{Weisstein, Eric W. "Convex." From MathWorld--A Wolfram Web Resource. http://mathworld.wolfram.com/Convex.html} si contiene todos los segmentos de línea que unen a cualquier par de puntos pertenecientes al conjunto. Donde $d$ es la dimensión del espacio euclidiano. 
+\begin{figure}[h!]
+\centering
+\subfigure[Conexo]{\includegraphics[scale=.8]{./Figures/ConvexSet.png}\label{fig:Sets:Convex}} \hspace{10mm}
+\subfigure[convexo]{\includegraphics[scale=.75]{./Figures/ConcaveSet.png}\label{fig:OM:Concave}} \hspace{10mm}
+\caption{Conjunto conexo y convexo (citar)}\label{fig:Sets}
+\end{figure} 
 
-Sea $C$ un conjunto de puntos en el plano Euclidiano, la envolvente convexa de $C$ es el conjunto convexo más pequeño que contiene a todos los puntos en $C$. 
+Sea $B$ un conjunto de puntos en el plano Euclidiano, la envolvente convexa de $B$ es el conjunto convexo más pequeño que contiene a todos los puntos en $B$. En la imagen \ref{fig:FigConvexHullDefects} se muestra de color rojo la envolvente convexa de la figura cuyo contorno se encuentra de color negro. 
 
-Los defectos de convexidad de un con casco convexo, es el conjunto de puntos que no pertenecen al casco convexo. El defecto es el espacio entre la linea y el objeto.  
+Los defectos de convexidad de un con casco convexo, es el conjunto de puntos que no pertenecen al casco convexo. El defecto es el espacio entre la linea y el objeto. Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ los defectos de convexidad de una envolvente convexa. Cada defecto esta compuesto de tres elementos $\lbrace s_i(x,y),d_i(x,y),e_i(x,y) \rbrace \in cd_i, \quad i=\lbrace 1, 2, \cdots, n\rbrace$. En la imagen \ref{fig:FigConvexHullDefects} se encuentran de color amarillo los puntos de profundidad de los defectos de convexidad. 
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.45]{./Figures/ConvexHullAndDefects.png}
+\end{center}
+\caption{En la imagen se aprecia de color rojo la envolvente convexa, de negro el contorno de la figura, y los puntos amarillos son el punto de profundidad de los defectos de convexidad.}
+\label{fig:FigConvexHullDefects}
+\end{figure} 
 
 
 
@@ -307,7 +321,7 @@ $$ w \cdot x + b = +1 \textrm{ para } y_i=+1$$
 $$ w \cdot x + b = -1 \textrm{ para } y_i=-1$$ 
 Maximizar el margen, encontrar el mínimo de $w$.  
 $$Min\Vert w \Vert \quad \text{tal que} \quad y_i(w \cdot x_i + b) -1 \geq 0$$
-\begin{figure}[!h]
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.3]{./Figures/maquinaSoporte.jpg}
 \end{center}

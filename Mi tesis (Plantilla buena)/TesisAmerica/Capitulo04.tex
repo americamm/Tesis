@@ -5,9 +5,7 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p
 
-
 En este cap\'itulo se describen los detalles de implementación de cada etapa del sistema.   
-
 
 \section{Adquisición de los datos}\label{sec:AdquisicionDatos}
 
@@ -82,29 +80,25 @@ Para localizar la mano en cada cuadro proveniente de los dispositivos  Kinect, u
 
 Ya que se tiene localizada el área donde se encuentra la mano, el siguiente paso es segmentar la mano del ROI. La segmentación se realiza encontrando los contornos existentes en la ROI y se toma el contorno más grande como el contorno de la mano, antes de calcular el contorno se realizan una serie de procesamientos al ROI para eliminar ruido y que el cálculo del contorno sea más preciso.    
 
-El primer procesamiento que se aplica al ROI, son las operaciones morfológicas: apertura y cierre, en ese orden. Se utilizan para eliminar uniones pequeñas que existen en la imagen como el de la figura \ref{fig:RuidoUnion} o unir pequeños hoyos que existen en la imagen, como los que se encuentran en la figura \ref{fig:RuidoHoyo}.\\
+El primer procesamiento que se aplica al ROI, son las operaciones morfológicas: apertura y cierre, en ese orden. Se utilizan para eliminar uniones pequeñas que existen en la imagen como el de la figura \ref{fig:HandNoises:1} o unir pequeños hoyos que existen en la imagen, como los que se encuentran en la figura \ref{fig:HandNoises:2}.\\
 Las operaciones anteriores utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento es de $3 \, x \, 7$ pixeles; para el cierre se aplic\'o con un tamaño  $7 \, x \, 7$ pixeles.\\
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/pusheen.png}
+\begin{center} 
+\subfigure[ROI donde existe una unión entre los dedos.]{\includegraphics[scale=1]{./Figures/Union.png}\label{fig:HandNoises:1}}      \qquad
+\subfigure[ROI donde se aprecian hoyos en la mano.]{\includegraphics[scale=1.001]{./Figures/Hoyos.png}\label{fig:HandNoises:2}}  
 \end{center}
-\caption{ROI que muestra una unión entre los dedos}
-\label{fig:RuidoUnion}
-\end{figure}   
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/pusheen.png}
-\end{center}
-\caption{ROI donde se aprecio un hoyo en la mano}
-\label{fig:RuidoHoyo}
+\caption{La imágenes anteriores muestras los distintos casos que aparece el ruido en la imagen aun después de haber aplicado un filtro de medianas}
+\label{fig:HandNoises}
 \end{figure}  
+
 Las imágenes siguientes muestran el resultado de aplicar las operaciones apertura y cierre al ROI. 
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/pusheen.png}
+\begin{center} 
+\subfigure[]{\includegraphics[scale=0.4]{./Figures/pusheen.png}\label{fig:HandNoNoises:1}}   \qquad
+\subfigure[]{\includegraphics[scale=0.4]{./Figures/pusheen.png}\label{fig:HandNoNoises:2}}  
 \end{center}
-\caption{Apertura y cerradura}
-\label{fig:ImagenOpenClose}
+\caption{La imágenes muestran el resultado de aplicar las operaciones morfológicas de apertura y cierre.}
+\label{fig:HandNoNoises}
 \end{figure}  
 
 Una vez aplicadas las operaciones morfológicas el siguiente paso es binarizar la región de interés, se lleva acabo aplicando el algoritmo desarrollado por \citep{Niblack1985}, se decidió usar este método debido a la naturaleza de la imagen. Los parámetros que fueron usados fueron $k=0.5$ y una ventana de $3x3$ p\'ixeles. La figura siguiente es la imagen binarizada. 
@@ -138,7 +132,7 @@ La figura muestra un ejemplo de la aplicación de estos algoritmos al ROI.
 \begin{center}
 \includegraphics[scale=.5]{./Figures/pusheen.png}
 \end{center}
-\caption{En esta dibujado el casco convexo los punto en son los defectos de convexidad}
+\caption{En esta dibujado la envolvente convexa, los punto en son los defectos de convexidad}
 \label{fig:Convex&Defects}
 \end{figure}
 

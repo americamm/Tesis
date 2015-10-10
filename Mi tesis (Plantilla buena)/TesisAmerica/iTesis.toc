@@ -42,15 +42,17 @@
 \contentsline {subsubsection}{\numberline {3.2.3.4}Cierre}{23}{subsubsection.3.2.3.4}
 \contentsline {section}{\numberline {3.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{23}{section.3.3}
 \contentsline {section}{\numberline {3.4}Reconocimiento}{24}{section.3.4}
-\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{26}{chapter.4}
-\contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{26}{section.4.1}
-\contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{28}{section.4.2}
-\contentsline {section}{\numberline {4.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{31}{section.4.3}
-\contentsline {section}{\numberline {4.4}Reconocimiento}{34}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Reconocimiento de gestos est\IeC {\'a}ticos}{34}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Reconocimiento de gestos din\IeC {\'a}micos}{34}{subsection.4.4.2}
-\contentsline {chapter}{\numberline {5}Resultados}{36}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusiones}{37}{chapter.6}
-\contentsline {section}{\numberline {6.1}Limitaciones del sistema}{37}{section.6.1}
-\contentsline {section}{\numberline {6.2}Trabajo futuro}{37}{section.6.2}
-\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{38}{section.6.2}
+\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{27}{section.4.1}
+\contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{29}{section.4.2}
+\contentsline {section}{\numberline {4.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{32}{section.4.3}
+\contentsline {section}{\numberline {4.4}Reconocimiento}{35}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Reconocimiento de gestos est\IeC {\'a}ticos}{35}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Reconocimiento de gestos din\IeC {\'a}micos}{36}{subsection.4.4.2}
+\contentsline {chapter}{\numberline {5}Resultados}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experimentos de gestos est\IeC {\'a}ticos}{37}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experimentos de gestos din\IeC {\'a}micos}{37}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusiones}{38}{chapter.6}
+\contentsline {section}{\numberline {6.1}Limitaciones del sistema}{38}{section.6.1}
+\contentsline {section}{\numberline {6.2}Trabajo futuro}{38}{section.6.2}
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{39}{section.6.2}
