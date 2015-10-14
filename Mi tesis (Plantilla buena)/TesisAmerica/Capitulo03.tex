@@ -124,11 +124,10 @@ La figura \ref{fig:FigIntegralImage} muestra un  ejemplo donde se calcula la ima
 \caption{Ejemplo del cálculo de la imagen integral} \label{fig:FigIntegralImage}
 \end{figure}
 
-
 La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de la imagen integral de dicha región, la cual se obtiene como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}   
 $$REG(\alpha)=SI(A)+SI(D)-SI(B)-SI(C)$$
 donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la suma de sus pixeles; $A,B,C,D$ son las esquinas de dicha región, como se muestra en la figura \ref{fig:figImageIntegral}, la region $\alpha$ se encuentra resaltada en color azul.  
-\begin{figure}[!h]
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.3]{./Figures/IntegralImage.png}
 \end{center}
@@ -146,10 +145,10 @@ El algoritmo AdaBoost es un algoritmo de clasificación que se basa en aprendiza
 El algoritmo AdaBoost realiza su clasificación construyendo un clasificador fuerte, $h(x)$, llamado así debido a que tiene una precision mayor que los otros clasificadores con los que es construido, clasificadores débiles, $h_i(x)$. Los clasificares débiles son calculados de la siguiente manera: 
 $$h_i(x)=
 \begin{cases}   
-1, \quad Si \quad  p_if_i<p_i \theta_i \\
+1, \quad Si \quad  p_if_i(x)<p_i \theta_i \\
 0, \quad de \quad otra \quad forma.\\
 \end{cases}$$
-donde $f_i(x)$ es una característica, $\theta$ es un umbral, y $p_i(x)$ representa el signo de la desigualdad.   
+donde $x$ es una sub ventana de la imagen, $f_i(x)$ es una característica, $\theta$ es un umbral, y $p_i(x)$ representa el signo de la desigualdad.   
 
 El clasificador fuerte es una combinación lineal de los clasificadores débiles, y se define de la siguiente forma: 
 $$h(x)= \alpha_1h_1(x)+\alpha_2h_2(x)+ \cdots +\alpha_nh_n(x)$$ 
@@ -175,7 +174,7 @@ Enseguida se presenta el algoritmo de AdaBoost:
 	\FOR {cada características $j$} 
 	Entrenar un clasificador $h_j$ donde se utiliza una sola característica. 
 	El error $\epsilon$ es evaluado con respecto a $w_t$, 
-	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}$$. 
+	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}$$ 
     \ENDFOR
 	
 	\STATE Escoger el clasificador $h_i$ con el error más pequeño. 
@@ -201,6 +200,44 @@ donde $\alpha_t = \log{\frac{1}{\beta_t}}$.
 
 \subsubsection{Clasificador AdaBoost en Cascada}\label{sssec:AdaboostCascade}   
 
+El objetivo de realizar la detección de objetos utilizando un clasificador en forma de cascada es descartar de manera rápida las regiones donde no se encuentra el objeto.  
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.3]{./Figures/pusheen.png}
+\end{center}
+\caption{Clasificador en forma de cascada }
+\label{fig:Cascade}
+\end{figure} 
+
+
+
+\begin{algorithm}
+\begin{algorithmic}[1]
+\REQUIRE 
+\ENSURE El clasificador en forma de cascada, .  
+
+\STATE  $F_0 = 1$, $D_0=1$
+
+\STATE  $i=0$ 
+
+\WHILE {$F_i > F_{Tarjet}$} 
+	\STATE $i=i+1$
+	\STATE $n_i=0$, $F_i=F_{i-1}$
+	\WHILE {$F_I > F \times fp_{i-1}$} 
+		\STATE $n_i = n_i +1$ 
+		\STATE Entrenar un clasificador usando AdaBoost con $P$, $N$ y $n_i$ características. 
+		\STATE Evaluar el clasificador de cascada para determinar $F_i$ y $D_i$ en el conjunto de validación. 
+		\STATE Decrementar el umbral para el $i$-ésimo clasificador hasta que el actual clasificador en cascada tenga un grado 			de detección de por lo menos $d \times D_i-1$.
+	\ENDWHILE
+	\STATE $N=0$ 
+	\IF {$F_i > F_{Tarjet}$} 
+		\STATE Evaluar el actual clasificador en cascada en el conjunto de imágenes negativas y poner cualquier detección 				falsa en el conjunto $N$.
+	\ENDIF
+
+\ENDWHILE 
+\end{algorithmic}
+\end{algorithm} 
 
 
 \subsection{Binarización}\label{subsec:Binarization} 

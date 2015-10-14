@@ -17,42 +17,43 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagen original}}}{18}{figure.caption.15}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagen integral}}}{18}{figure.caption.15}
 \contentsline {figure}{\numberline {9}{\ignorespaces Regiones de la imagen integral\relax }}{19}{figure.caption.16}
-\contentsline {figure}{\numberline {10}{\ignorespaces Ejemplos de elementos estructurales\relax }}{22}{figure.caption.17}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rect\IeC {\'a}ngulo de $3x3$.}}}{22}{figure.caption.17}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Figura de $3x2$.}}}{22}{figure.caption.17}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cruz de $5x5$.}}}{22}{figure.caption.17}
-\contentsline {figure}{\numberline {11}{\ignorespaces Aplicaci\IeC {\'o}n de operaciones morfol\IeC {\'o}gicas (citar)\relax }}{23}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {original}}}{23}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {dilataci\IeC {\'o}n}}}{23}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {erosi\IeC {\'o}n}}}{23}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {apertura}}}{23}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {cierre}}}{23}{figure.caption.18}
-\contentsline {figure}{\numberline {12}{\ignorespaces Conjunto conexo y convexo (citar)\relax }}{24}{figure.caption.19}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Conexo}}}{24}{figure.caption.19}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {convexo}}}{24}{figure.caption.19}
-\contentsline {figure}{\numberline {13}{\ignorespaces En la imagen se aprecia de color rojo la envolvente convexa, de negro el contorno de la figura, y los puntos amarillos son el punto de profundidad de los defectos de convexidad.\relax }}{25}{figure.caption.20}
-\contentsline {figure}{\numberline {14}{\ignorespaces Clasificaci\IeC {\'o}n de maquina de soporte usando kernel lineal\relax }}{26}{figure.caption.21}
+\contentsline {figure}{\numberline {10}{\ignorespaces Clasificador en forma de cascada \relax }}{21}{figure.caption.17}
+\contentsline {figure}{\numberline {11}{\ignorespaces Ejemplos de elementos estructurales\relax }}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rect\IeC {\'a}ngulo de $3x3$.}}}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Figura de $3x2$.}}}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cruz de $5x5$.}}}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {12}{\ignorespaces Aplicaci\IeC {\'o}n de operaciones morfol\IeC {\'o}gicas (citar)\relax }}{24}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {original}}}{24}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {dilataci\IeC {\'o}n}}}{24}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {erosi\IeC {\'o}n}}}{24}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {apertura}}}{24}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {cierre}}}{24}{figure.caption.19}
+\contentsline {figure}{\numberline {13}{\ignorespaces Conjunto conexo y convexo (citar)\relax }}{25}{figure.caption.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Conexo}}}{25}{figure.caption.20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {convexo}}}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {14}{\ignorespaces En la imagen se aprecia de color rojo la envolvente convexa, de negro el contorno de la figura, y los puntos amarillos son el punto de profundidad de los defectos de convexidad.\relax }}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {15}{\ignorespaces Clasificaci\IeC {\'o}n de maquina de soporte usando kernel lineal\relax }}{26}{figure.caption.22}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {15}{\ignorespaces Configuraci\IeC {\'o}n del sistema de reconocimiento de gestos\relax }}{27}{figure.caption.22}
-\contentsline {figure}{\numberline {16}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {16}{\ignorespaces Configuraci\IeC {\'o}n del sistema de reconocimiento de gestos\relax }}{27}{figure.caption.23}
 \contentsline {figure}{\numberline {17}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{28}{figure.caption.24}
-\contentsline {figure}{\numberline {18}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{30}{figure.caption.25}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{30}{figure.caption.25}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{30}{figure.caption.25}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Palma de la mano con los dedos juntos.}}}{30}{figure.caption.25}
-\contentsline {figure}{\numberline {19}{\ignorespaces Imagen del fondo de nuestra base de datos\relax }}{30}{figure.caption.26}
-\contentsline {figure}{\numberline {20}{\ignorespaces Mano seleccionada\relax }}{30}{figure.caption.27}
-\contentsline {figure}{\numberline {21}{\ignorespaces La im\IeC {\'a}genes anteriores muestras los distintos casos que aparece el ruido en la imagen aun despu\IeC {\'e}s de haber aplicado un filtro de medianas\relax }}{31}{figure.caption.28}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ROI donde existe una uni\IeC {\'o}n entre los dedos.}}}{31}{figure.caption.28}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ROI donde se aprecian hoyos en la mano.}}}{31}{figure.caption.28}
-\contentsline {figure}{\numberline {22}{\ignorespaces La im\IeC {\'a}genes muestran el resultado de aplicar las operaciones morfol\IeC {\'o}gicas de apertura y cierre.\relax }}{31}{figure.caption.29}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{31}{figure.caption.29}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{31}{figure.caption.29}
-\contentsline {figure}{\numberline {23}{\ignorespaces Binarizaci\IeC {\'o}n de ROI\relax }}{32}{figure.caption.30}
-\contentsline {figure}{\numberline {24}{\ignorespaces Contorno de la mano\relax }}{32}{figure.caption.31}
-\contentsline {figure}{\numberline {25}{\ignorespaces En esta dibujado la envolvente convexa, los punto en son los defectos de convexidad\relax }}{33}{figure.caption.32}
-\contentsline {figure}{\numberline {26}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{35}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{35}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{35}{figure.caption.33}
+\contentsline {figure}{\numberline {18}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{28}{figure.caption.25}
+\contentsline {figure}{\numberline {19}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{30}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{30}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{30}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Palma de la mano con los dedos juntos.}}}{30}{figure.caption.26}
+\contentsline {figure}{\numberline {20}{\ignorespaces Imagen del fondo de nuestra base de datos\relax }}{30}{figure.caption.27}
+\contentsline {figure}{\numberline {21}{\ignorespaces Mano seleccionada\relax }}{30}{figure.caption.28}
+\contentsline {figure}{\numberline {22}{\ignorespaces La im\IeC {\'a}genes anteriores muestras los distintos casos que aparece el ruido en la imagen aun despu\IeC {\'e}s de haber aplicado un filtro de medianas\relax }}{31}{figure.caption.29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ROI donde existe una uni\IeC {\'o}n entre los dedos.}}}{31}{figure.caption.29}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ROI donde se aprecian hoyos en la mano.}}}{31}{figure.caption.29}
+\contentsline {figure}{\numberline {23}{\ignorespaces La im\IeC {\'a}genes muestran el resultado de aplicar las operaciones morfol\IeC {\'o}gicas de apertura y cierre.\relax }}{31}{figure.caption.30}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{31}{figure.caption.30}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{31}{figure.caption.30}
+\contentsline {figure}{\numberline {24}{\ignorespaces Binarizaci\IeC {\'o}n de ROI\relax }}{32}{figure.caption.31}
+\contentsline {figure}{\numberline {25}{\ignorespaces Contorno de la mano\relax }}{32}{figure.caption.32}
+\contentsline {figure}{\numberline {26}{\ignorespaces En esta dibujado la envolvente convexa, los punto en son los defectos de convexidad\relax }}{33}{figure.caption.33}
+\contentsline {figure}{\numberline {27}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{35}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{35}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{35}{figure.caption.34}
 \addvspace {0\p@ }
 \addvspace {0\p@ }
