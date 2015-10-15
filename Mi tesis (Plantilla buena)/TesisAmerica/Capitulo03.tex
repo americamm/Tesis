@@ -138,9 +138,7 @@ donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la su
 
 \subsubsection{Algoritmo AdaBoost}\label{sssec:AdaboostClasifier}  
 
-En el método de detección el clasificador AdaBoost es utilizado para seleccionar las características. 
-
-El algoritmo AdaBoost es un algoritmo de clasificación que se basa en aprendizaje de maquina.  
+En el método de detección el clasificador AdaBoost es utilizado para seleccionar las características relevantes, con las cuales se podrá detectar el objeto. 
 
 El algoritmo AdaBoost realiza su clasificación construyendo un clasificador fuerte, $h(x)$, llamado así debido a que tiene una precision mayor que los otros clasificadores con los que es construido, clasificadores débiles, $h_i(x)$. Los clasificares débiles son calculados de la siguiente manera: 
 $$h_i(x)=
@@ -194,28 +192,30 @@ $$ h(x) =
 \end{cases} $$
 donde $\alpha_t = \log{\frac{1}{\beta_t}}$.
 
+\caption{}\label{alg:AdaBoost}
 \end{algorithmic}
 \end{algorithm} 
 
 
 \subsubsection{Clasificador AdaBoost en Cascada}\label{sssec:AdaboostCascade}   
 
-El objetivo de realizar la detección de objetos utilizando un clasificador en forma de cascada es descartar de manera rápida las regiones donde no se encuentra el objeto.  
+El objetivo de realizar la detección utilizando un clasificador en forma de cascada es descartar de manera rápida las regiones donde no se encuentra el objeto. Lo cual se realiza seleccionando las características relevantes que se evalúan primero.  
+Esta selección se realiza como lo muestra el algoritmo \ref{alg:Cascade}  cumpliendo cierto valor en la precision  de la detección y del número de falsos positivos. 
+El clasificador en cascada \ref{fig:Cascade} esta compuesto por etapas cada una de estas es un clasificador fuerte que es entrenado por medio de AdaBoost. 
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.3]{./Figures/pusheen.png}
+\includegraphics[scale=.3]{./Figures/cascade.png}
 \end{center}
-\caption{Clasificador en forma de cascada }
+\caption{Clasificador en forma de cascada}
 \label{fig:Cascade}
 \end{figure} 
 
 
-
 \begin{algorithm}
 \begin{algorithmic}[1]
-\REQUIRE 
-\ENSURE El clasificador en forma de cascada, .  
+\REQUIRE Imágenes positivas $P$, negativas $N$, $f$ el valor máximo de precisión de falsos positivos por etapa, $d$ es el valor mínimo de precisión de la detección por etapa, . 
+\ENSURE El clasificador en forma de cascada.  
 
 \STATE  $F_0 = 1$, $D_0=1$
 
@@ -235,7 +235,8 @@ El objetivo de realizar la detección de objetos utilizando un clasificador en f
 		\STATE Evaluar el actual clasificador en cascada en el conjunto de imágenes negativas y poner cualquier detección 				falsa en el conjunto $N$.
 	\ENDIF
 
-\ENDWHILE 
+\ENDWHILE    
+\caption{}\label{alg:Cascade} 
 \end{algorithmic}
 \end{algorithm} 
 

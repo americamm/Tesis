@@ -97,7 +97,7 @@ Aunque estos sistemas nos evitan algunos problemas que son consecuencia de los m
 
 Uno de los dispositivos recientes es MYO \footnote{https://www.thalmic.com/en/myo/}, aunque de este se hablar\'a en la ultima parte de esta secci\'on. 
 
-Como se describi\'o en la secci\'on anterior en los modelos de contacto la principal limitante es el uso de dispositivos en el cuerpo para el reconocimiento de los gestos, por esta raz\'on la mayor\'ia de los sistemas para el reconocimiento estan enfocados en modelos basados en visi\'on. Por lo que resulta natural que la investigaci\'on propuesta tome un enfoque basado en la visi\'on.
+Como se describi\'o en la secci\'on anterior en los modelos de contacto la principal limitante es el uso de dispositivos en el cuerpo para el reconocimiento de los gestos, por esta raz\'on la mayor\'ia de los sistemas para el reconocimiento están enfocados en modelos basados en visi\'on. Por lo que resulta natural que la investigaci\'on propuesta tome un enfoque basado en la visi\'on.
 
 \subsection{Modelos basados en la visi\'on}  
 
@@ -105,9 +105,18 @@ Como se describi\'o en la secci\'on anterior en los modelos de contacto la princ
 
 \citep{Huang2011}, propone un método para calculas gestos estáticos y dinámicos usando los filtros Gabor y haciendo una estimación del \'angulo en el que se encuentra la mano. Las principales ventajas son que el sistema funciona con cambios en la iluminaci\'on y es robusto a la rotaci\'on y escala. La desventaja es que el problema de oclusi\'on no es tratado.
 
-\citep{MohdAsaari2014} hacen el seguimiento de la mano para identificar los gestos din\'amicos usando los filtros adaptativos Kalman y el m\'etodo Eigenhand. Con esta combinaci\'on obtienen un excelente resultado pues el sistema es robusto a la iluminaci\'on, cambio de pose, y a la oclusi\'on causada la mano oculta por alg\'un objeto en movimiento. 
-
+El método propuesto reconoce 11 gestos estáticos y dinámicos,  la aportación del trabajo es en la parte de la segmentación de la mano que se lleva acabo usando filtros Gabor. El sistema propuesto utiliza una cámara ccd para obtener la información de entrada. El sistema es robusto a la iluminación. 
  
+Antes de hacer la segmentación de la (el brazo creo) se le aplica a la imagen un preprocesamiento. El primer paso es aplicar un filtro de Gabor luego  se escoge uno de los tres modelos del color; YCbCr, Gaussiano, Soriano, escogiendo el nivel de gris reference white[], reference White modificado[], mundo gris[], después se procede a calcular el ángulo de la mano mediante .  
+Ya que se realizó el preprocesamiento el paso siguiente es segmentar la mano del antebrazo para esto se hace un barrido de la imagen por filas. Y se segmenta la imagen respecto a la distancia de arriba de la imagen a un valor que denota el número máximo de pixeles de un solo valor (el valor mayor el histograma).
+
+Una vez realizada la segmentación el siguiente paso es obtener las características para el reconocimiento, las características son obtenidas mediante análisis de componentes principales y para encontrar la matriz de dispersión encuentra el eigenvector de la matriz de reducción. 
+
+La clasificación la hacen usando SVM aquí van comparando las imágenes de dos en dos, ya que SVM es un clasificador binario, por lo que se requieren m(m-1)/2 clasificaciones.   
+
+La precisión del reconocimiento varía dependiendo de si son imágenes reales o imágenes que contienen filtros de Gabor, también cambia si el usuario usa manga corto o larga. Hacen el reconocimiento de gestos dinámicos pero no me queda muy claro si cuadro a cuadro van haciendo el mismo proceso que con los gestos estáticos, que es el mencionado anteriormente.  
+ 
+
 
 A pesar que la mayoría de los modelos vistos en la parte de arriba solucionan muchos de los problemas de los modelos basados en la visi\'on. Ninguno de ellos puede resolver el problema de iluminaci\'on y oclusi\'on, formada por lo dedos. All\'i la importancia de la investigaci\'on propuesta, pues dar\'a soluci\'on a estos inconvenientes al momento de reconocer los gestos.
  
