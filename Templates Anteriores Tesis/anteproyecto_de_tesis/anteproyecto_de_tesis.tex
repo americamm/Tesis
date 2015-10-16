@@ -1,0 +1,149 @@
+% CARGA EL ESTILO CON LAS ESPECIFICACIONES PARA LA TESIS
+% SEGUN LA DEP
+
+% La compilacion se debe hacer con la instruccion de Latex a PDF (PDF Texify si se utiliza WinEdt)
+% para evitar problemas de tamaï¿½o de hoja.
+% Todos los archivos de figuras deben estar en formato PDF.
+% Al momento de imprimir el documento, se debe hacer sin escala de pagina.
+
+\documentclass[letterpaper,12pt]{cicese}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[letterpaper,left=2.5cm,right=2.5cm,top=3cm,bottom=3cm]{geometry} % ivy
+\usepackage{makeidx}
+\usepackage{eurosym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{cicese}
+\usepackage{graphicx}
+\usepackage[ansinew]{inputenc}   %este paquete es para poner acentos directamente en el codigo de latex. sin barra
+\usepackage{multirow}		% ivy
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=Latex.dll}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="2">}
+%TCIDATA{LastRevised=Tuesday, June 02, 2009 16:25:45}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="PrintViewPercent" CONTENT="100">}
+
+\input{tcilatex}
+
+\begin{document}
+
+\keywords{Hand gestures recognition, Kinect.}
+
+% Escribe tu nombre, tal y como aparece en los registros
+% de Posgrado. De ser necesario, separa con \- las sï¿½labas
+% de tu nombre
+\autor{América Ivone Mendoza Morales} %ivy
+
+% Escribe el tï¿½tulo de tu tesis (Si el titulo es mayor de 2 renglones es necesario
+% cambiar el valor de espacio vertical para que conserve las dimensiones del margen.
+% La modificacion se hace en el archivo cicese.sty en la seccion de la portada que
+% ya esta indicado las dimensiones que debe tener para 3 renglones.)
+\titulo{Control de computadora basado en gestos con las manos en circunstancias de baja iluminación} % ivy
+
+% Para el resumen, escribe aqui el tï¿½tulo en inglï¿½s
+\tituloIN{Light Propagation and Scattering in Confined Systems}
+
+% Aquï¿½ va el nombre de tu programa de posgrado
+\posgrado{Ciencias de la Computaci\'on}
+
+% Aquï¿½ va el nombre de orientacion para el que aplique (sino comentarlo)
+%\orientacion{con orientaci\'on en \uppercase\expandafter{\'Optica F\'{i}sica}} % ivy
+
+% Escribe aquï¿½ el nombre del posgrado en inglï¿½s
+\posgradoIN{Optics}
+
+% Escribe aquï¿½ el nombre de orientacion para el que aplique (sino comentarlo)
+%\orientacionIN{with orientation in \uppercase\expandafter{Physical Optics}}
+
+% El nombre del grado en inglï¿½s
+\gradoIN{Doctor in Sciences}
+
+% Este comando especifica si la tesis es de maestria (usa \mc) o de
+% doctorado (usa \dc)
+\mc %ivy
+
+% Fecha (mes y aï¿½o) de la defensa de tesis, en espaï¿½ol y en ingles
+\fechaexamen{agosto de 2014}\fechaexamenIN{july 2014} % ivy
+
+% Fecha (dia, mes y aï¿½o) de la defensa de tesis para la hoja de firmas
+\fechaexamencompleta{28 de agosto de 2014}
+
+% Nombre de tu director de tesis, si tienes codirector repite el comando
+\director{Dr. Vitaly Kober} % ivy
+
+
+% Nombres de los sinodales, en el orden que aparecerï¿½n en la
+% pï¿½gina de firmas
+\sinodal{Dr.} % ivy
+
+\sinodal{Dr.} %ivy
+
+\sinodal{Dr. } % ivy
+
+% Nombre del Director de Estudios de Posgrado
+\dirposgrado{Dr. David Hilario Covarrubias Rosales}
+% Nombre del Coordinador del Programa de Posgrado
+\cpp{Dr. Ana Isabel Mart\'inez García} % ivy
+
+% Escribe aqui el nombre del archivo .tex que contiene el texto del
+% resumen en espaï¿½ol. Omite escribir la extensiï¿½n .tex
+\resumenES{resumen}
+
+% Palabras clave del resumen en espaï¿½ol
+\palabrasclave{Reconocimiento de gestos con las manos, Baja iluminaci\'on, Oclusión, Kinect} % ivy
+
+% Escribe aqui el nombre del archivo .tex que contiene el texto del
+% resumen en inglï¿½s. Omite escribir la extensiï¿½n .tex
+\resumenIN{Abstract}
+
+% Palabras clave del resumen en inglï¿½s
+
+% Nombre del archivo .tex con el texto de la dedicatoria, omite
+% la extensiï¿½n .tex
+\dedicatoria{Dedicatoria}
+
+% Nombre del archivo .tex con el texto de los agradecimientos, omite
+% la extensiï¿½n .tex
+\agradecimientos{Agradecimientos}
+
+% Este comando crea todas las pï¿½ginas preliminares de la tesis
+\preliminares
+
+%----------DOCUMENTO PRINCIPAL-------------------------%
+
+\thispagestyle{empty}
+\linespread{1.75}
+
+{	\normalsize
+	\input{introduccion.tex}
+	\input{marco.tex}
+	\input{investigacion.tex}
+	\input{importancia.tex}
+	\input{limitaciones.tex}
+	\input{contribucion.tex}
+	\input{objetivos.tex}
+	\input{metodologia.tex}
+	\input{calendario.tex}
+	\newpage }
+
+\linespread{1.0}
+
+\addcontentsline{toc}{chapter}{\normalsize\expandafter{Referencias}}
+{\normalsize
+ \bibliographystyle{cicese}
+ \bibliography{referencias} }
+
+%\linespread{1.75}
+%{\normalsize
+%TCIMACRO{\QSubDoc{Include Apendice}{\input{Apendice.tex}} }%
+%BeginExpansion
+%\input{calendario.tex}
+%EndExpansion
+%\newpage }
+
+
+\end{document}

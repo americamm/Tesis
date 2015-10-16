@@ -87,23 +87,29 @@ En este trabajo, se toma el enfoque basado en la visi\'on ya que se quiere obten
 
 \section{Estado del arte}\label{sec:EstadoDelArte} 
 
-La sección anterior explica los distintos enfoques para llevar acabo el reconocimiento de gestos, a continuación se encuentran los trabajos relevantes de cada uno de estos enfoques. 
+La sección anterior explica los modelos para llevar acabo el reconocimiento de gestos, enseguida se presentan los trabajos relevantes de cada uno de estos enfoques. 
 
 \subsection{Modelos de contacto}
+ 
+En la sección anterior se presentó la definición de este modelo, a pesar que este modelo no es tan utilizado existen diversos trabajos que se basan en este enfoque, en los párrafos siguientes se presentan dos trabajos relevantes en esta área. 
 
-\citep{Yoon2012} propone un modelo de mezclas adaptativo, usando un guante de datos, la principal limitante para este sistema es que solo reconoce gestos estáticos. 
+El primer trabajo que se presenta es el realizado por \citep{Yoon2012} el cual propone un modelo de mezclas adaptativo, usando un guante de datos, la principal limitante para este sistema es que solo reconoce gestos estáticos. 
 
 Aunque estos sistemas nos evitan algunos problemas que son consecuencia de los modelos basados en la visión, nos son perfectos, lo cual veremos enseguida.  
 
-Uno de los dispositivos recientes es MYO \footnote{https://www.thalmic.com/en/myo/}, aunque de este se hablar\'a en la ultima parte de esta secci\'on. 
+Por otra parte uno de los dispositivos recientes es MYO \footnote{https://www.thalmic.com/en/myo/}, aunque de este se hablar\'a en la ultima parte de esta secci\'on. 
 
 Como se describi\'o en la secci\'on anterior en los modelos de contacto la principal limitante es el uso de dispositivos en el cuerpo para el reconocimiento de los gestos, por esta raz\'on la mayor\'ia de los sistemas para el reconocimiento están enfocados en modelos basados en visi\'on. Por lo que resulta natural que la investigaci\'on propuesta tome un enfoque basado en la visi\'on.
 
-\subsection{Modelos basados en la visi\'on}  
+\subsection{Modelos basados en la visi\'on}   
 
-\cite{Premaratne2013} realizan un modelo de reconocimiento de gestos est\'atico y din\'amico basados en el algoritmo de Lucas-Kanade. Las principales ventajas de este m\'etodo son que es invariante a rotaci\'on, escala y al fondo. Aunque el modelo es afectado por los cambios en la iluminaci\'on.
+Este modelo es el mas popular debido a la variedad de sus aplicaciones y la diversidad de camaras existentes que nos pueden proporcionar gran cantidad de información que hace que el reconocimiento tenga mayor precision. Enseguida se presenta tres  trabajos relevantes los cuales utilizaron distintos tipos de cámaras y número de ellas. 
 
-\citep{Huang2011}, propone un método para calculas gestos estáticos y dinámicos usando los filtros Gabor y haciendo una estimación del \'angulo en el que se encuentra la mano. Las principales ventajas son que el sistema funciona con cambios en la iluminaci\'on y es robusto a la rotaci\'on y escala. La desventaja es que el problema de oclusi\'on no es tratado.
+En el trabajo propuesto por \cite{Premaratne2013} realizan un modelo de reconocimiento de gestos est\'atico y din\'amico basados en el algoritmo de Lucas-Kanade. Las principales ventajas de este m\'etodo son que es invariante a rotaci\'on, escala y al fondo. Aunque el modelo es afectado por los cambios en la iluminaci\'on.
+
+%::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Por otro lado \citep{Huang2011}, propone un método para calculas gestos estáticos y dinámicos usando los filtros Gabor y haciendo una estimación del \'angulo en el que se encuentra la mano. Las principales ventajas son que el sistema funciona con cambios en la iluminaci\'on y es robusto a la rotaci\'on y escala. La desventaja es que el problema de oclusi\'on no es tratado.
 
 El método propuesto reconoce 11 gestos estáticos y dinámicos,  la aportación del trabajo es en la parte de la segmentación de la mano que se lleva acabo usando filtros Gabor. El sistema propuesto utiliza una cámara ccd para obtener la información de entrada. El sistema es robusto a la iluminación. 
  
@@ -115,14 +121,26 @@ Una vez realizada la segmentación el siguiente paso es obtener las característ
 La clasificación la hacen usando SVM aquí van comparando las imágenes de dos en dos, ya que SVM es un clasificador binario, por lo que se requieren m(m-1)/2 clasificaciones.   
 
 La precisión del reconocimiento varía dependiendo de si son imágenes reales o imágenes que contienen filtros de Gabor, también cambia si el usuario usa manga corto o larga. Hacen el reconocimiento de gestos dinámicos pero no me queda muy claro si cuadro a cuadro van haciendo el mismo proceso que con los gestos estáticos, que es el mencionado anteriormente.  
- 
 
+%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+El trabajo propuesto por (Manuel Caputo referenciar) realiza el reconocimiento de gestos dinámicos y estáticos, estos últimos son utilizados para determinar el inicio y el término de los gestos dinámicos.  Se utilizan  dos sensores Kinect y una cámara Logitech C910 de alta definición para capturar los gestos. El trabajo esta compuesto (numero) de etapas, las cuales se explican enseguida. 
+
+La cámara y los dispositivos Kinect no son sincronizados entre si. Los dos sensores Kinect son calibrados entre ellos para generar un sistema de coordenadas que esta basado en la ubicación de la  manos y la cabeza. 
+
+La parte de la detección y seguimiento, se lleva acabo utilizando la librería OPENNI, en específico usando la detección del esqueleto proporcionado por esta librería. El esqueleto nos proporciona el punto de la palma de la mano por la cual un ROI es seleccionado, para tener la localización exacta de la mano, se utiliza la cámara RGB. La localización de la mano se realiza convirtiendo la imagen en una imagen binaria, usando un umbral que es determinado por el espacio del color HSV (Matiz, Saturación, Valor); son utilizados guantes neón color rosa o verde para ubicar con mayor facilidad las manos.   
+
+Una vez obtenida la imagen binaria se calcula el contorno de la mano usando el algoritmo de Chang y Chen, dicho contorno es extraído como polígono y  es simplificado con el algoritmo de Douglas Peuker. 
+
+El reconocimiento del gesto se basa en empatamiento de polígonos, basados en la distancia de dos polígonos. Esto usando Distancia de momentos HU (Hu-moments distance) y ángulo de giro (turning angle). 
+Los gestos 3D son calculados usando la diferencia de las posiciones de la mano, en cada cuadro. Las fórmulas para calcular estos gestos depende de que gesto se  realice.  
+Para probar la precisión del sistema se crearon dos bases de datos, una con 120 polígonos etiquetados que representan 11 gestos y otra con 144 gestos de 3 personas distintas que utilizaron los 11 gestos. La presición obtenida usando la distancia de angulo de giro es de $85 \%$, usando la distancia de momentos HU la presición es de $58 \%$. 
 
 A pesar que la mayoría de los modelos vistos en la parte de arriba solucionan muchos de los problemas de los modelos basados en la visi\'on. Ninguno de ellos puede resolver el problema de iluminaci\'on y oclusi\'on, formada por lo dedos. All\'i la importancia de la investigaci\'on propuesta, pues dar\'a soluci\'on a estos inconvenientes al momento de reconocer los gestos.
  
 \subsection{Sistemas comerciales}
 
-Existen dispositivos como: Leap Motion \footnote{https://www.leapmotion.com/}, MYO, y software, como Flutter \footnote{https://flutterapp.com/}, que realizan el reconocimiento de gestos, y estos los utilizan como reemplazo del rat\'on de la computadora. 
+Existen dispositivos como: Leap Motion \footnote{https://www.leapmotion.com/}, MYO, y software como: Flutter \footnote{https://flutterapp.com/}, que realizan el reconocimiento de gestos, y el reconocimiento lo aplican  para controlar la computadora.
  
 Leap Motion es un dispositivo que detecta los movimientos de manos y dedos por medio de sensores infrarrojos. Leap Motion es robusto con el fondo, escala y rotaci\'on,  pero no cuando existe oclusi\'on pues cuando se realiza un zoom, como el que se hace en cualquier dispositivo touch, produce un error, y se presenta cuando un dedo es cubierto por otro, un problema grave es que tiene problemas de reconocimiento en circunstancias normales de luz.  
 

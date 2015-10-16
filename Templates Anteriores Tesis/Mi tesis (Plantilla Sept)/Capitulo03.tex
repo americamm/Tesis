@@ -1,0 +1,189 @@
+\chapter{Sistema Propuesto}\label{capit:cap3}
+\vspace{-2.0325ex}%
+\noindent
+\rule{\textwidth}{0.5pt}
+\vspace{-5.5ex}% 
+\newcommand{\pushline}{\Indp}% Indent puede ir o no :p
+
+El sistema de reconocimiento de gestos que se propone consta de cuatro etapas: las adquisición de los datos, la detección, extracción de características y el reconocimiento. 
+
+Enseguida se describirán cada una de las etapas. 
+
+\section{Adquisición de los datos}
+
+La captura de los datos se realiza utilizando dos dispositivos Kinect, se toman los datos del sensor de profundidad, estos son representados como una imagen en escala de grises de 8 bits.  
+
+Cada cuadro capturado por el dispositivo es representado de la manera anterior, en las imágenes se puede apreciar pequeños cambios detectados al sensor gracias a la forma en que la imagen es representada. Para lograr esta representación el rango de escala de grises inicia cada 26 cm. es por eso que se pueden apreciar cambios pequeños en las distancias entre los objetos. 
+
+%\begin{center}[a]
+%\begin{tabular}{ c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular}
+%\end{center}
+%
+%\begin{center}[b]
+%\begin{tabular}{ |c|c|c| } 
+% \hline
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\ 
+% cell7 & cell8 & cell9 \\ 
+% \hline
+%\end{tabular}
+%\end{center}
+%
+%\begin{center}[c]
+% \begin{tabular}{||c c c c||} 
+% \hline
+% Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
+% \hline\hline
+% 1 & 6 & 87837 & 787 \\ 
+% \hline
+% 2 & 7 & 78 & 5415 \\
+% \hline
+% 3 & 545 & 778 & 7507 \\
+% \hline
+% 4 & 545 & 18744 & 7560 \\
+% \hline
+% 5 & 88 & 788 & 6344 \\ [1ex] 
+% \hline
+%\end{tabular}
+%\end{center}
+%
+%\begin{center}[d]
+%\begin{tabular}{ | b{5cm} | m{2cm}| m{2cm} | } 
+%\hline
+%The aligning options are m for middle, p for top and b for bottom.& cell2 & cell3 \\ 
+%\hline
+%cell1 dummy text dummy text dummy text & cell5 & cell6 \\ 
+%\hline
+%cell7 & cell8 & cell9 \\ 
+%\hline
+%\end{tabular}
+%\end{center}
+%
+%\begin{center}[e]
+%\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+% \hline
+% \multicolumn{4}{|c|}{Country List} \\
+% \hline
+% Country Name     or Area Name& ISO ALPHA 2 Code &ISO ALPHA 3 Code&ISO numeric Code\\
+% \hline
+% Afghanistan   & AF    &AFG&   004\\
+% Aland Islands&   AX  & ALA   &248\\
+% Albania &AL & ALB&  008\\
+% Algeria    &DZ & DZA&  012\\
+% American Samoa&   AS  & ASM&016\\
+% Andorra& AD  & AND   &020\\
+% Angola& AO  & AGO&024\\
+% \hline
+%\end{tabular}
+%\end{center}
+%\begin{center}[f]
+%\begin{tabular}{ |c|c|c|c| } 
+%\hline
+%col1 & col2 & col3 \\
+%\hline
+%\multirow{3}{4em}{Multiple row} & cell2 & cell3 \\ 
+%& cell5 & cell6 \\ 
+%& cell8 & cell9 \\ 
+%\hline
+%\end{tabular}
+%\end{center}
+
+\section{Detección}
+
+La etapa de detección utiliza el algoritmo para detectar objetos de manera rápida desarrollado por (citar viola jones), como se vio en el cap\'itulo dos sección chalalala, este algoritmo  clasifica las imágenes basándose en el valor de características, las características usadas son como las que se muestran en la siguiente figura.  
+
+La selección de las características se lleva acabo por medio del algoritmo AdaBoost; la implementaci\'on se lleva acabo por medio del software OpenCV Haar training classifier \footnote{https://github.com/mrnugget/opencv-haar-classifier-training}. Se entren\'o con 1000 imágenes positivas (imágenes de profundidad de la mano), y 2000 negativas, (imágenes de profundidad de distintos fondos). Las imágenes positivas fueron generadas de 100 imágenes de la mano usando el software Create Sample \footnote{http://note.sonouse utilizause utiliza en  en ts.com/SciSoftware/haartraining.html}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{https://github.com/americamm}.
+
+Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de la mano, estas fueron tomadas a una distancia de entre $60 cm$ y $200 cm$. Las imágenes de profundidad de la mano fueron tomadas de 6 personas distintas con tres distintas poses: palma abierta con dedos aciertos, palma abierta con dedos cerrados y finalmente el puno, como se muestra en la figura (tal). Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la figura (tal). El programa para la captura de las imágenes puede ser encontrado en github \footnote{https://github.com/americamm}.  
+
+
+
+
+
+
+%\begin{table}
+%\footnotesize
+%\centering
+%\caption{Mauris et imperdiet     tortor. Maecenas consectetur lacus elit, dignissim eleifend dolor  ornare ut. Aenean euismod porta nisi, et volutpat ex laoreet sit amet. Sed ac elit vestibulum neque ultrices feugiat}
+%\label{tab:recopilacionDeCuestionarios}
+%%\rotatebox{90}{
+%\begin{tabular}{m{0.2cm}m{2.5cm}m{2.5cm}m{2.5cm}m{2.5cm}m{2.5cm}}
+%\hline\noalign{\smallskip}
+% & \textbf{FFS} & \textbf{SOFA} & \textbf{FQ} & \textbf{CIS20R} & \textbf{FACIT}
+%\\ \noalign{\smallskip}
+%\hline
+%\noalign{\smallskip}
+%1	&	TAF	&	TAF	&	PF	&	PF	&	PF\\
+%2	&	TAF	&	CM	&	CS	&	EE	&	PF\\
+%3	&	PF	&	TAF	&	CS	&	CM	&	EE\\
+%\hline
+%\end{tabular}
+%%}
+%\end{table}
+
+
+
+\section{Extracci\'on de caracter\'isticas}\label{secc:pruebasFisicas}
+
+
+%\begin{equation} \label{eq:demandaOxigeno_simple}
+%\begin{split} 
+%& K = R + H + V \\ 
+%& R = \textrm{consumo de oxígeno} \times kg^{-1} \times min^{-1}\\ 
+%& H = \textrm{constante horizontal} \times \textrm{velocidad de desplazamiento}\\ 
+%& V = \textrm{constante vertical} \times \textrm{velocidad de desplazamiento}\\ 
+%\end{split} 
+%\end{equation} 
+%
+%\begin{figure}\label{eq:testing}
+%\[ e = m c^2 \]
+%\caption{A $ \dfrac{3}{2} $ famous equation, where $ e = m c^2  $ represent $ e = m c^2  $ energy something and $  A_{d} = -g - \frac{\sum F}{mass} $  another $\protect\pi=\protect\varpi + \protect\xi$ thing. }
+%\end{figure}
+
+
+\section{Reconocimiento}\label{secc:disenoMetodoFatiga}
+
+
+
+%\subsection{Extracción de parámetros}
+%Ecuación \ref{eq:gravedad}. 
+%
+%\begin{equation} \label{eq:gravedad}
+%A_{d} = -g - \frac{\sum F}{mass}
+%\end{equation} 
+
+%Donde $A_{d}$ representan la aceleración que se aplica a un dispositivo, $g$ la constante de gravedad de 9.81 m/$s^{2}$, y $\sum F$ las fuerzas que se aplican al propia sensor.
+
+\subsection{Cálculo de la demanda de oxígeno} \label{secc:calculoDemandaOxigeno}
+
+%Text  \ref{eq:demandaOxigeno_personalizada} and more $O_{2}$ text:
+%
+%\begin{equation} \label{eq:demandaOxigeno_personalizada}
+%\begin{split} 
+%& K = R + H + V \\ 
+%& R = 3.5 - (0.0367 \times BMI) - (0.0038 \times age) + (0.1790 \times gender)\\
+%& H = 0.1 \times \textrm{velocidad de desplazamiento}\\ 
+%& V = 1.8 \times \textrm{velocidad de desplazamiento}\\ 
+%\end{split} 
+%\end{equation} 
+%
+%Donde $1 + 2$ representan el consumo de $O_{2}$ en reposo personalizado al usuario $(ml \times kg^{-1} \times min^{-1})$ \citep{Barstow:1991}, $H$ el componente horizontal relativo a la velocidad de desplazamiento (m/min), $V$ el componente vertical relativo a la velocidad (m/min) y pendiente de desplazamiento (\%).
+%
+%\begin{description}
+%  \item[Velocidad:] \hfill \\
+%  	Para obtener la velocidad de desplazamiento se utiliza el número de pasos realizados por el usuario como se muestra a continuación (Ecuación \ref{eq:velocidad}).
+%  
+%\begin{equation} \label{eq:velocidad}
+%  S_{k} = D_{k}/W \hspace{10 mm} 
+%  D_{k} = ST_{k} \times SL \hspace{10 mm}
+%  SL = D_{total}/ST_{total} 
+%\end{equation}
+%\end{description}
+	
+\newpage
+%%=====================================================
+
