@@ -140,26 +140,20 @@ A pesar que la mayoría de los modelos vistos en la parte de arriba solucionan m
  
 \subsection{Sistemas comerciales}
 
-Existen dispositivos como: Leap Motion \footnote{https://www.leapmotion.com/}, MYO, y software como: Flutter \footnote{https://flutterapp.com/}, que realizan el reconocimiento de gestos, y el reconocimiento lo aplican  para controlar la computadora.
+Existen dispositivos como: Leap Motion \footnote{https://www.leapmotion.com/}, MYO, y software como: Flutter \footnote{https://flutterapp.com/}, que realizan el reconocimiento de gestos, y el reconocimiento lo aplican  para controlar la computadora. Algunos de estos dispositivos comerciales tienen  buen rendimiento en cuanto a la precision y a sobrellevar los problemas del reconocimiento de gestos, el detalle es que los desarrolladores de los dispositivos o software no dan a conocer los detalles de como es que lo solucionan algunos de los problemas o como mejoran la precision.
  
-Leap Motion es un dispositivo que detecta los movimientos de manos y dedos por medio de sensores infrarrojos. Leap Motion es robusto con el fondo, escala y rotaci\'on,  pero no cuando existe oclusi\'on pues cuando se realiza un zoom, como el que se hace en cualquier dispositivo touch, produce un error, y se presenta cuando un dedo es cubierto por otro, un problema grave es que tiene problemas de reconocimiento en circunstancias normales de luz.  
+El dispositivo Leap Motion fue creado para el seguimiento de manos y dedos, este también hace el reconocimiento de ciertos gestos estáticos y dinámicos. El dispositivo consta (referenciar articulo internet) de tres emisores y dos cámaras infrarrojas, estos sensores capturan los datos crudos en un rango de $60 \times 60 \times 60$ $cm.$ y con la información capturada se construye un modelo 3D de las manos. 
 
-MYO este dispositivo, solo se encuentra en pre-ordenamiento, detecta los impulsos el\'ectricos de tus m\'usculos mediante tres sensores, giroscopio, aceler\'ometro y magnet\'ometros. MYO es un brazalete  que promete controlar la computadora y dispositivos tales como el celular o la tableta. La principal desventaja del sensor es que gestos involuntarios pueden producir acciones no deseadas.
+El proceso de como se capturan los datos, la segmentación, la extracción de características, el seguimiento y el reconocimiento del dispositivo no se conoce a detalle, lo único que se conoce \footnote{http://blog.leapmotion.com/hardware-to-software-how-does-the-leap-motion-controller-work/} es que con la imágenes obtenidas con el dispositivo, se hace una representación 3D de las manos, antes de realizar el modelo las imágenes son segmentadas del fondo para quitar la iluminación u otros objetos que causen ruido en la imágenes.
+Para realizar el seguimiento se extraen la características como los dedos y otras, el algoritmo de seguimiento interpreta la información 3D e infiere la posición de los objetos ocluidos. Se aplican filtros para suavizar los datos. 
 
-Flutter  es un software que reconoce cuatro gestos est\'aticos detectando la palma de la mano, usando la c\'amara web como dispositivo de entrada. Flutter permite controlar aplicaciones multimedia de la computadora. 	Las limitaciones del software son que solo reconoce gestos est\'aticos, realiza acciones no deseadas al hacer gestos involuntarios y no siempre reconoce los gestos. 
+Un dispositivo de reconocimiento de gestos basado en el modelo de contacto, es el MYO, este aparato es un brazalete que detecta los impulsos eléctricos de tus músculos mediante tres sensores, giroscopio, acelerometro y magnetómetros.
+MYO es un brazalete que promete controlar la computadora y dispositivos tales como el celular o la tableta. La principal desventaja del sensor es que gestos involuntarios pueden producir acciones no deseadas. 
 
-Aunque estos dispositivos y software para reconocer gestos  solucionan algunos problemas importantes en el \'area, sigue existiendo el problema de oclusi\'on  e iluminaci\'on. De allí la importancia que existan modelos que puedan resolver estos problemas se presentan frecuentemente en el reconocimiento. 
+Flutter es un software que reconoce cuatro gestos estáticos detectando la palma de la mano, usando la cámara web como dispositivo de entrada. Flutter permite controlar aplicaciones multimedia de la computadora. Las limitaciones del software son que solo reconoce gestos estáticos, realiza acciones no deseadas al hacer gestos involuntarios y no siempre reconoce los gestos.
 
-\section{Organizaci\'on de la tesis}\label{sec:OrganizacionTesis}
-La tesis se encuentra distribuida de la siguiente manera: la segunda sección presenta los fundamentos teóricos como base para la comprensión del tema. La tercera sección presenta el sistema propuesto. La cuarta sección se encuentra a detalle la implementación del sistema. En la quinta sección se presentan las pruebas realizadas al sistema junto con los resultados y la discusiones de estos. Finalmente la sexta sección presenta las conclusiones generales del sistema y el trabajo futuro. 
-	
-
-\newpage
-%%=====================================================
-
-
-
-
+Aunque estos dispositivos y software para reconocer gestos solucionan algunos problemas importantes en el área, sigue existiendo el problema de oclusiones iluminación.
+De allí la importancia que existan modelos que puedan resolver estos problemas se presentan frecuentemente en el reconocimiento.
 
 
 
