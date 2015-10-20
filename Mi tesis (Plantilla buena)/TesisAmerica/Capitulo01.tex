@@ -79,9 +79,9 @@ Se supone el área de trabajo como un cuarto estándar con buena iluminación.
 
 La definición de gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran a los dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o de interactuar con el ambiente. De aquí en adelante entiéndase el término gestos con las manos, como gestos. 
 
-Los primeros acercamientos para llevar acabo el reconocimiento de gestos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario, esto para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visi\'on surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde c\'amaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundidad.  
+Los primeros acercamientos para llevar acabo el reconocimiento de gestos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario, esto para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visión surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde cámaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundidad.  
 
-En este trabajo, se toma el enfoque basado en la visi\'on ya que se quiere obtener un sistema que para el usuario la interaccion interacción sea natural y una manera de lograr esto es tomando este enfoque.  
+En este trabajo, se toma el enfoque basado en la visión ya que se quiere obtener un sistema que para el usuario la interacción interacción sea natural y una manera de lograr esto es tomando este enfoque.  
 
 
 
@@ -142,15 +142,43 @@ A pesar que la mayoría de los modelos vistos en la parte de arriba solucionan m
 
 Existen dispositivos como: Leap Motion \footnote{https://www.leapmotion.com/}, MYO, y software como: Flutter \footnote{https://flutterapp.com/}, que realizan el reconocimiento de gestos, y el reconocimiento lo aplican  para controlar la computadora. Algunos de estos dispositivos comerciales tienen  buen rendimiento en cuanto a la precision y a sobrellevar los problemas del reconocimiento de gestos, el detalle es que los desarrolladores de los dispositivos o software no dan a conocer los detalles de como es que lo solucionan algunos de los problemas o como mejoran la precision.
  
-El dispositivo Leap Motion fue creado para el seguimiento de manos y dedos, este también hace el reconocimiento de ciertos gestos estáticos y dinámicos. El dispositivo consta (referenciar articulo internet) de tres emisores y dos cámaras infrarrojas, estos sensores capturan los datos crudos en un rango de $60 \times 60 \times 60$ $cm.$ y con la información capturada se construye un modelo 3D de las manos. 
+El dispositivo Leap Motion, fig \ref{fig:LeapMotion} fue creado para el seguimiento de manos y dedos, este también hace el reconocimiento de ciertos gestos estáticos y dinámicos. El dispositivo consta (referenciar articulo internet) de tres emisores y dos cámaras infrarrojas, estos sensores capturan los datos crudos en un rango de $60 \times 60 \times 60$ $cm.$ y con la información capturada se construye un modelo 3D de las manos. 
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.3]{./Figures/LeapMotion.png}
+\end{center}
+\caption{Ejemplo del reconocimiento del gesto usando Leap Motion, que es el dispositivo que se encuentra conectado a la Laptop.}
+\label{fig:LeapMotion}
+\end{figure}
 
 El proceso de como se capturan los datos, la segmentación, la extracción de características, el seguimiento y el reconocimiento del dispositivo no se conoce a detalle, lo único que se conoce \footnote{http://blog.leapmotion.com/hardware-to-software-how-does-the-leap-motion-controller-work/} es que con la imágenes obtenidas con el dispositivo, se hace una representación 3D de las manos, antes de realizar el modelo las imágenes son segmentadas del fondo para quitar la iluminación u otros objetos que causen ruido en la imágenes.
 Para realizar el seguimiento se extraen la características como los dedos y otras, el algoritmo de seguimiento interpreta la información 3D e infiere la posición de los objetos ocluidos. Se aplican filtros para suavizar los datos. 
 
-Un dispositivo de reconocimiento de gestos basado en el modelo de contacto, es el MYO, este aparato es un brazalete que detecta los impulsos eléctricos de tus músculos mediante tres sensores, giroscopio, acelerometro y magnetómetros.
-MYO es un brazalete que promete controlar la computadora y dispositivos tales como el celular o la tableta. La principal desventaja del sensor es que gestos involuntarios pueden producir acciones no deseadas. 
+Un dispositivo de reconocimiento de gestos basado en el modelo de contacto, es el MYO, este aparato es un brazalete que reconoce 5 gestos dinámicos, leyendo la actividad de los músculos del antebrazo y mandando estas señales vía Bluetooth a la computadora donde son procesadas estas señales. \footnote{http://www.digitaltrends.com/pc-accessory-reviews/myo-gesture-control-armband-review/} 
+
+No se cuenta con la informacion detallada del funcionamiento de MYO, lo único que se conoce es que el reconocimiento consta de tres etapas \footnote{https://www.quora.com/How-does-MYO-wearable-gesture-control-work}. La primera es la adquisición de la señales eléctricas que producen los músculos del antebrazo, las cuales son capturadas mediante sensores EMG (), giroscopio, acelerómetro y magnetómetro; en la segunda esta se amplifica la señal y se aplican filtro pasa banda  y por último el procesamiento de la señal donde se reconoce el gesto usando un algoritmo de aprendizaje de máquina desarrollado por la compañía.  
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.5]{./Figures/MYO.png}
+\end{center}
+\caption{Ejemplo del reconocimiento del gesto usando MYO, es el dispositivo que esta colocado en el brazo.}
+\label{fig:Myo}
+\end{figure}
+
+MYO funciona en cualquier ambiente donde haya variaciones en la iluminación y es invariante a rotación. La desventaja que tiene es que la calibración puede ser tediosa ya que requiere algunos intentos, pues requiere varias repeticiones de los gestos; el use del dispositivo requiere uso de manga corta; otra desventaja es que tiene una cantidad considerable de falsos positivos. \footnote{)} 
 
 Flutter es un software que reconoce cuatro gestos estáticos detectando la palma de la mano, usando la cámara web como dispositivo de entrada. Flutter permite controlar aplicaciones multimedia de la computadora. Las limitaciones del software son que solo reconoce gestos estáticos, realiza acciones no deseadas al hacer gestos involuntarios y no siempre reconoce los gestos.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.3]{./Figures/LeapMotion.png}
+\end{center}
+\caption{Ejemplo del reconocimiento del gesto usando , que es el dispositivo que se encuentra conectado a la Laptop.}
+\label{fig:Flutter}
+\end{figure}
+
 
 Aunque estos dispositivos y software para reconocer gestos solucionan algunos problemas importantes en el área, sigue existiendo el problema de oclusiones iluminación.
 De allí la importancia que existan modelos que puedan resolver estos problemas se presentan frecuentemente en el reconocimiento.
