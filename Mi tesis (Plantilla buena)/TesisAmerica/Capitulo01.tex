@@ -97,21 +97,21 @@ El primer trabajo que se presenta es el realizado por \citep{Yoon2012} el cual p
 
 Aunque estos sistemas nos evitan algunos problemas que son consecuencia de los modelos basados en la visión, nos son perfectos, lo cual veremos enseguida.  
 
-Por otra parte uno de los dispositivos recientes es MYO \footnote{https://www.thalmic.com/en/myo/}, aunque de este se hablar\'a en la ultima parte de esta secci\'on. 
+A finales del año 2014 se lanzo el dispositivo MYO \footnote{https://www.thalmic.com/en/myo/}, que reconoce gestos . aunque de este se hablar\'a en la ultima parte de esta sección. 
 
-Como se describi\'o en la secci\'on anterior en los modelos de contacto la principal limitante es el uso de dispositivos en el cuerpo para el reconocimiento de los gestos, por esta raz\'on la mayor\'ia de los sistemas para el reconocimiento están enfocados en modelos basados en visi\'on. Por lo que resulta natural que la investigaci\'on propuesta tome un enfoque basado en la visi\'on.
+Como se describi\'o en la sección anterior en los modelos de contacto la principal limitante es el uso de dispositivos en el cuerpo para el reconocimiento de los gestos, por esta razón la mayor\'ia de los sistemas para el reconocimiento están enfocados en modelos basados en visión. Por lo que resulta natural que la investigación propuesta tome un enfoque basado en la visión.
 
-\subsection{Modelos basados en la visi\'on}   
+\subsection{Modelos basados en la visión}   
 
-Este modelo es el mas popular debido a la variedad de sus aplicaciones y la diversidad de camaras existentes que nos pueden proporcionar gran cantidad de información que hace que el reconocimiento tenga mayor precision. Enseguida se presenta tres  trabajos relevantes los cuales utilizaron distintos tipos de cámaras y número de ellas. 
+Este modelo es el más popular debido a la variedad de sus aplicaciones y la diversidad de cámaras existentes que proporcionan distinto tipo de información la cual puede hacer que el reconocimiento tenga mayor precisión. Enseguida se presenta tres  trabajos relevantes los cuales utilizaron distintos tipos de cámaras y número de ellas. 
 
-En el trabajo propuesto por \cite{Premaratne2013} realizan un modelo de reconocimiento de gestos est\'atico y din\'amico basados en el algoritmo de Lucas-Kanade. Las principales ventajas de este m\'etodo son que es invariante a rotaci\'on, escala y al fondo. Aunque el modelo es afectado por los cambios en la iluminaci\'on.
+En el trabajo propuesto por \cite{Premaratne2013} realizan un modelo de reconocimiento de gestos estático y dinámico basados en el algoritmo de Lucas-Kanade. Las principales ventajas de este método son que es invariante a rotación, escala y al fondo. Aunque el modelo es afectado por los cambios en la iluminación.
 
 %::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Por otro lado \citep{Huang2011}, propone un método para calculas gestos estáticos y dinámicos usando los filtros Gabor y haciendo una estimación del \'angulo en el que se encuentra la mano. Las principales ventajas son que el sistema funciona con cambios en la iluminaci\'on y es robusto a la rotaci\'on y escala. La desventaja es que el problema de oclusi\'on no es tratado.
+Por otro lado \citep{Huang2011}, propone un método para calculas gestos estáticos y dinámicos usando los filtros Gabor y haciendo una estimación del ángulo en el que se encuentra la mano. Las principales ventajas son que el sistema funciona con cambios en la iluminación y es robusto a la rotación y escala. La desventaja es que el problema de oclusi\'on no es tratado.
 
-El método propuesto reconoce 11 gestos estáticos y dinámicos,  la aportación del trabajo es en la parte de la segmentación de la mano que se lleva acabo usando filtros Gabor. El sistema propuesto utiliza una cámara ccd para obtener la información de entrada. El sistema es robusto a la iluminación. 
+El método propuesto reconoce $11$ gestos estáticos y dinámicos,  la aportación del trabajo es en la parte de la segmentación de la mano que se lleva acabo usando filtros Gabor. El sistema propuesto utiliza una cámara ccd para obtener la información de entrada. El sistema es robusto a la iluminación. 
  
 Antes de hacer la segmentación de la (el brazo creo) se le aplica a la imagen un preprocesamiento. El primer paso es aplicar un filtro de Gabor luego  se escoge uno de los tres modelos del color; YCbCr, Gaussiano, Soriano, escogiendo el nivel de gris reference white[], reference White modificado[], mundo gris[], después se procede a calcular el ángulo de la mano mediante .  
 Ya que se realizó el preprocesamiento el paso siguiente es segmentar la mano del antebrazo para esto se hace un barrido de la imagen por filas. Y se segmenta la imagen respecto a la distancia de arriba de la imagen a un valor que denota el número máximo de pixeles de un solo valor (el valor mayor el histograma).
@@ -134,9 +134,25 @@ Una vez obtenida la imagen binaria se calcula el contorno de la mano usando el a
 
 El reconocimiento del gesto se basa en empatamiento de polígonos, basados en la distancia de dos polígonos. Esto usando Distancia de momentos HU (Hu-moments distance) y ángulo de giro (turning angle). 
 Los gestos 3D son calculados usando la diferencia de las posiciones de la mano, en cada cuadro. Las fórmulas para calcular estos gestos depende de que gesto se  realice.  
-Para probar la precisión del sistema se crearon dos bases de datos, una con 120 polígonos etiquetados que representan 11 gestos y otra con 144 gestos de 3 personas distintas que utilizaron los 11 gestos. La presición obtenida usando la distancia de angulo de giro es de $85 \%$, usando la distancia de momentos HU la presición es de $58 \%$. 
+Para probar la precisión del sistema se crearon dos bases de datos, una con $120$ polígonos etiquetados que representan $11$ gestos y otra con $144$ gestos de $3$ personas distintas que utilizaron los $11$ gestos. La precisión obtenida usando la distancia de angulo de giro es de $85 \%$, usando la distancia de momentos HU la precisión es de $58 \%$.  
 
-A pesar que la mayoría de los modelos vistos en la parte de arriba solucionan muchos de los problemas de los modelos basados en la visi\'on. Ninguno de ellos puede resolver el problema de iluminaci\'on y oclusi\'on, formada por lo dedos. All\'i la importancia de la investigaci\'on propuesta, pues dar\'a soluci\'on a estos inconvenientes al momento de reconocer los gestos.
+%::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Otra aportación fue hecha por (Chanseok kaug) ellos proponen un sistema de reconocimiento de  gestos estáticos utilizando el sensor Kinect como dispositivo de captura de los gestos. El sistema reconoce $24$ gestos, los cuales son del lenguaje de señas Americano (American Sign Language), el reconocimiento es realizado en cuatro etapas, las cuales se explican a continuación.  
+
+En la primera etapa la imagen es capturada y la mano junto con el antebrazo son segmentados del fondo. Las imágenes de entrada del sistema son proporcionadas por el sensor de profundidad del Kinect, la mano es detectada usando el SDK (Software Developmet Kit) del Kinect, que proporciona el punto de la palma de la mano, la región de interés es seleccionada usando este punto, donde  solo se encuentra la mano y parte del antebrazo.   
+
+El siguiente paso es extraer las características, las cuales son extraídas usando Histogramas Orientados a Gradientes, HOG (Histogram of Oriented Gredient).  
+
+El paso siguiente es clasificar los gestos, se utiliza el algoritmo de aprendizaje de máquina, Máquina de Soporte Vectorial, (SVM).\\
+Para el entrenamiento del se utilizaron $2400$ imágenes, $100$ por cada letra del alfabeto. Se encontró que existe gesto ambiguos, es decir que no se pueden clasificar correctamente, estos son los gestos que representan la letras A, E, M, N, S, T. 
+Se realizo una prueba en linea, donde los gestos aparecían aleatoriamente para ser clasificados. La precisión de todos los gestos se encuentra alrededor de $92.8 \%$, pero el de los gestos ambiguos es $72.9 \%$
+
+Por ultimo una interfaz gráfica es mostrada donde se observa el reconocimiento de los gestos en tiempo real.  
+
+%::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+La SECCIÓN A pesar que la mayoría de los modelos vistos en la parte de arriba solucionan muchos de los problemas de los modelos basados en la visi\'on. Ninguno de ellos puede resolver el problema de iluminaci\'on y oclusi\'on, formada por lo dedos. All\'i la importancia de la investigaci\'on propuesta, pues dar\'a soluci\'on a estos inconvenientes al momento de reconocer los gestos.
  
 \subsection{Sistemas comerciales}
 
@@ -155,7 +171,8 @@ El dispositivo Leap Motion, fig \ref{fig:LeapMotion} fue creado para el seguimie
 El proceso de como se capturan los datos, la segmentación, la extracción de características, el seguimiento y el reconocimiento del dispositivo no se conoce a detalle, lo único que se conoce \footnote{http://blog.leapmotion.com/hardware-to-software-how-does-the-leap-motion-controller-work/} es que con la imágenes obtenidas con el dispositivo, se hace una representación 3D de las manos, antes de realizar el modelo las imágenes son segmentadas del fondo para quitar la iluminación u otros objetos que causen ruido en la imágenes.
 Para realizar el seguimiento se extraen la características como los dedos y otras, el algoritmo de seguimiento interpreta la información 3D e infiere la posición de los objetos ocluidos. Se aplican filtros para suavizar los datos. 
 
-Un dispositivo de reconocimiento de gestos basado en el modelo de contacto, es el MYO, este aparato es un brazalete que reconoce 5 gestos dinámicos, leyendo la actividad de los músculos del antebrazo y mandando estas señales vía Bluetooth a la computadora donde son procesadas estas señales. \footnote{http://www.digitaltrends.com/pc-accessory-reviews/myo-gesture-control-armband-review/} 
+
+Un dispositivo de reconocimiento de gestos basado en el modelo de contacto, es el MYO, este aparato es un brazalete que reconoce $5$ gestos dinámicos, leyendo la actividad de los músculos del antebrazo y mandando estas señales vía Bluetooth a la computadora donde son procesadas estas señales. \footnote{http://www.digitaltrends.com/pc-accessory-reviews/myo-gesture-control-armband-review/} 
 
 No se cuenta con la informacion detallada del funcionamiento de MYO, lo único que se conoce es que el reconocimiento consta de tres etapas \footnote{https://www.quora.com/How-does-MYO-wearable-gesture-control-work}. La primera es la adquisición de la señales eléctricas que producen los músculos del antebrazo, las cuales son capturadas mediante sensores EMG (), giroscopio, acelerómetro y magnetómetro; en la segunda esta se amplifica la señal y se aplican filtro pasa banda  y por último el procesamiento de la señal donde se reconoce el gesto usando un algoritmo de aprendizaje de máquina desarrollado por la compañía.  
 
@@ -167,18 +184,23 @@ No se cuenta con la informacion detallada del funcionamiento de MYO, lo único q
 \label{fig:Myo}
 \end{figure}
 
-MYO funciona en cualquier ambiente donde haya variaciones en la iluminación y es invariante a rotación. La desventaja que tiene es que la calibración puede ser tediosa ya que requiere algunos intentos, pues requiere varias repeticiones de los gestos; el use del dispositivo requiere uso de manga corta; otra desventaja es que tiene una cantidad considerable de falsos positivos. \footnote{)} 
+MYO funciona en cualquier ambiente donde haya variaciones en la iluminación y es invariante a rotación. La desventaja que tiene es que la calibración puede ser tediosa ya que requiere realizar repeticiones de algunos gestos y puede llagar a tomar varios intentos; el use del dispositivo requiere uso de manga corta; otra desventaja es que tiene una cantidad considerable de falsos positivos. \footnote{ksakgh} 
 
-Flutter es un software que reconoce cuatro gestos estáticos detectando la palma de la mano, usando la cámara web como dispositivo de entrada. Flutter permite controlar aplicaciones multimedia de la computadora. Las limitaciones del software son que solo reconoce gestos estáticos, realiza acciones no deseadas al hacer gestos involuntarios y no siempre reconoce los gestos.
 
+Enseguida se explica el software de reconocimiento de gestos estáticos Flutter, fig:\ref{fig:Flutter} el cual reconoce cuatro gestos estáticos usando la cámara web como dispositivo de entrada. 
+
+Se conoce muy superficialmente como funciona el software, pues solo se sabe que la mano es detectada por la cámara, para que la detección se correcta la mano tiene que estar totalmente frente a la cámara web. Los algoritmos utilizados para el reconocimiento no se conocen.  
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.3]{./Figures/LeapMotion.png}
+\includegraphics[scale=.4]{./Figures/Flutter.jpg}
 \end{center}
-\caption{Ejemplo del reconocimiento del gesto usando , que es el dispositivo que se encuentra conectado a la Laptop.}
+\caption{Funcionamiento del software Flutter}
 \label{fig:Flutter}
 \end{figure}
 
+Flutter permite controlar aplicaciones multimedia como: YouTube \footnote{https://www.youtube.com/} ,VLC \footnote{http://www.videolan.org/vlc/}, Spotify \footnote{https://www.spotify.com/}, Netflix \footnote{https://www.netflix.com/}. Las limitaciones del software son que solo reconoce gestos estáticos, realiza acciones no deseadas al hacer gestos involuntarios y no siempre reconoce los gestos.  
+
+%::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
 
 Aunque estos dispositivos y software para reconocer gestos solucionan algunos problemas importantes en el área, sigue existiendo el problema de oclusiones iluminación.
 De allí la importancia que existan modelos que puedan resolver estos problemas se presentan frecuentemente en el reconocimiento.
