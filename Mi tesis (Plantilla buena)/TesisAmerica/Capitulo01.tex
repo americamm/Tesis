@@ -93,11 +93,17 @@ La sección anterior explica los modelos para llevar acabo el reconocimiento de 
  
 En la sección anterior se presentó la definición de este modelo, a pesar que este modelo no es tan utilizado existen diversos trabajos que se basan en este enfoque, en los párrafos siguientes se presentan dos trabajos relevantes en esta área. 
 
-El primer trabajo que se presenta es el realizado por \citep{Yoon2012} el cual propone un modelo de mezclas adaptativo, usando un guante de datos, la principal limitante para este sistema es que solo reconoce gestos estáticos. 
+El primer trabajo que se presenta es el realizado por \citep{Yoon2012} el cual propone un sistema de reconocimiento de gestos estáticos usando un guante de datos, el cual reconoce 24 gestos tomados del Lenguaje de Señas Americano, ASL (por sus siglas en inglés, American Sign Lenguaje). Este modelo consta de tres etapas, las cuales se explican enseguida. 
 
-Aunque estos sistemas nos evitan algunos problemas que son consecuencia de los modelos basados en la visión, nos son perfectos, lo cual veremos enseguida.  
+La primera etapa del sistema es capturar la información proporcionada por el guante de datos, la cual esta siendo enviada por un protocolo de control de transmisión TCP, (por sus siglas en inglés, transmission control protocol). 
+ 
+Una vez que la información es recibida, los datos son preprocesados, es decir estos se normalizan y se extraen las características necesarias para el reconocimiento, las características son las correlación que existe entre los ejes.    
+ 
+La clasificación de gesto se realiza con un modelo de mezclas adaptativo. Para entrenar el modelo de mezclas se tomaron los datos de $5$ personas, se tomaron $300$ muestras de cada gestos, $8000$ por cada participante. Se realizaron pruebas con estos mismos usuarios; con un sujeto se alcanzo una precision de $93.38 \%$ con los demás participantes se obtuvo una precision de $89.97  \%$.  
 
-A finales del año 2014 se lanzo el dispositivo MYO \footnote{https://www.thalmic.com/en/myo/}, que reconoce gestos . aunque de este se hablar\'a en la ultima parte de esta sección. 
+La principal desventaja del sistema es que baja la precision cuando se cambia de usuario, aunque después se adapta y mejora la precision, otra desventaja para este sistema es que solo reconoce gestos estáticos. 
+
+A finales del año 2014 se lanzo el dispositivo MYO \footnote{https://www.thalmic.com/en/myo/}, que reconoce gestos dinámicos, aunque de este se hablar\'a en la ultima parte de esta sección. 
 
 Como se describi\'o en la sección anterior en los modelos de contacto la principal limitante es el uso de dispositivos en el cuerpo para el reconocimiento de los gestos, por esta razón la mayor\'ia de los sistemas para el reconocimiento están enfocados en modelos basados en visión. Por lo que resulta natural que la investigación propuesta tome un enfoque basado en la visión.
 
@@ -109,9 +115,7 @@ En el trabajo propuesto por \cite{Premaratne2013} realizan un modelo de reconoci
 
 %::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Por otro lado \citep{Huang2011}, propone un método para calculas gestos estáticos y dinámicos usando los filtros Gabor y haciendo una estimación del ángulo en el que se encuentra la mano. Las principales ventajas son que el sistema funciona con cambios en la iluminación y es robusto a la rotación y escala. La desventaja es que el problema de oclusi\'on no es tratado.
-
-El método propuesto reconoce $11$ gestos estáticos y dinámicos,  la aportación del trabajo es en la parte de la segmentación de la mano que se lleva acabo usando filtros Gabor. El sistema propuesto utiliza una cámara ccd para obtener la información de entrada. El sistema es robusto a la iluminación. 
+Por otro lado \citep{Huang2011}, propone un método que reconoce $11$ gestos estáticos y dinámicos,  la aportación del trabajo es en la parte de la segmentación de la mano que se lleva acabo usando filtros Gabor. El sistema propuesto utiliza una cámara ccd para obtener la información de entrada. El sistema es robusto a la iluminación. 
  
 Antes de hacer la segmentación de la (el brazo creo) se le aplica a la imagen un preprocesamiento. El primer paso es aplicar un filtro de Gabor luego  se escoge uno de los tres modelos del color; YCbCr, Gaussiano, Soriano, escogiendo el nivel de gris reference white[], reference White modificado[], mundo gris[], después se procede a calcular el ángulo de la mano mediante .  
 Ya que se realizó el preprocesamiento el paso siguiente es segmentar la mano del antebrazo para esto se hace un barrido de la imagen por filas. Y se segmenta la imagen respecto a la distancia de arriba de la imagen a un valor que denota el número máximo de pixeles de un solo valor (el valor mayor el histograma).
@@ -120,7 +124,8 @@ Una vez realizada la segmentación el siguiente paso es obtener las característ
 
 La clasificación la hacen usando SVM aquí van comparando las imágenes de dos en dos, ya que SVM es un clasificador binario, por lo que se requieren m(m-1)/2 clasificaciones.   
 
-La precisión del reconocimiento varía dependiendo de si son imágenes reales o imágenes que contienen filtros de Gabor, también cambia si el usuario usa manga corto o larga. Hacen el reconocimiento de gestos dinámicos pero no me queda muy claro si cuadro a cuadro van haciendo el mismo proceso que con los gestos estáticos, que es el mencionado anteriormente.  
+La precisión del reconocimiento varía dependiendo de si son imágenes reales o imágenes que contienen filtros de Gabor, también cambia si el usuario usa manga corto o larga. Hacen el reconocimiento de gestos dinámicos pero no me queda muy claro si cuadro a cuadro van haciendo el mismo proceso que con los gestos estáticos, que es el mencionado anteriormente. 
+Las principales ventajas son que el sistema funciona con cambios en la iluminación y es robusto a la rotación y escala. La desventaja es que el problema de oclusi\'on no es tratado. 
 
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
