@@ -95,7 +95,7 @@ Las imágenes siguientes muestran el resultado de aplicar las operaciones apertu
 \begin{figure}[h!]
 \begin{center} 
 \subfigure[]{\includegraphics[scale=0.4]{./Figures/pusheen.png}\label{fig:HandNoNoises:1}}   \qquad
-\subfigure[]{\includegraphics[scale=0.4]{./Figures/pusheen.png}\label{fig:HandNoNoises:2}}  
+\subfigure[]{\includegraphics[scale=1.1]{./Figures/65_C.png}\label{fig:HandNoNoises:2}}  
 \end{center}
 \caption{La imágenes muestran el resultado de aplicar las operaciones morfológicas de apertura y cierre.}
 \label{fig:HandNoNoises}
@@ -137,55 +137,7 @@ La figura muestra un ejemplo de la aplicación de estos algoritmos al ROI.
 \end{figure}
 
 
-Una vez aplicados estos dos algoritmos se pueden calcular el número de dedos y las puntas de estos que son fundamentales para calcular las demás características. Enseguida se describe el algoritmo \ref{alg:NumDedos} para calcular el número de dedos.\\ 
-Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ los defectos de convexidad de una envolvente convexa. Cada defecto esta compuesto de tres elementos $\lbrace s_i(x,y),d_i(x,y),e_i(x,y) \rbrace \in cd_i, \quad i=\lbrace 1, 2, \cdots, n\rbrace$. Sea $D$ el conjunto de las distancias de $d_i(x,y)$ a la orilla de la envolvente convexa.  
-
-\begin{algorithm}
-\begin{algorithmic}[1]
-
-\REQUIRE $D=\lbrace \delta_1, \delta_2, \cdots, \delta_n \rbrace$.  
-\ENSURE Número de dedos, $Nf$.  
-
-\FOR{$i=1$ hasta $n$}  
-	\STATE $minDist=20$, $maxAng=60$, $antecesor=0$, $sucesor=0$. 	
-	
-	\IF{$\delta_i < minDepth$ } 
-	\STATE continuar
-	\ENDIF 
-	
-	\IF{i=0} 
-	\STATE $antecesor=n-1$
-	\ELSE
-	\STATE $antecesor=i-1$
-	\ENDIF 
-
-	\IF{i=n-1} 
-	\STATE $sucesor=0$
-	\ELSE
-	\STATE $sucesor=i+1$
-	\ENDIF   
-	
-	\STATE Calcular el $angulo$ entre $s_{antecesor}(x,y)$ y $s_{sucesor}(x,y)$
-	
-	\IF{$angulo \geqslant maxAng$}
-	\RETURN \FALSE
-	\ENDIF  
-	
-	\STATE $Nf=Nf+1$.
-
-\ENDFOR 
-\caption{Calcula el número de dedos de la mano.}
-\label{alg:NumDedos}
-\end{algorithmic}
-\end{algorithm}
-
-El ángulo $\alpha$ entre los dedos $f_j$ y $f_{j+1}$ es calculado como:  
-$$ \alpha_{f_j} = \tan^{-1}{ \bigg| \frac{m_{j+1}-m_j}{1+m_{j+1}m_j} \bigg|}$$
-donde $m_{j+1},m_j$ son las pendientes de las rectas que pasa por los puntos $d_j(x,y)$ y $s_{j+1}(x,y)$; $d_j(x,y)$ y $s_j(x,y)$; $j=\lbrace 1,2,3,4,5 \rbrace$.  
-
-El ángulo del centro de la mano a la punta de los dedos puede ser obtenido como: 
-$$ \theta_{f_j} = \tan^{-1} | {m_j} - 90^\circ |$$
-donde $m_j$ es la pendiente de la recta que pasa por el centro de la mano y la punta de los dedos $s_i(x,y)$.
+Una vez aplicados estos dos algoritmos se pueden calcular el número de dedos y las puntas de estos que son fundamentales para calcular las demás características. Enseguida se describe el algoritmo \ref{alg:NumDedos} para calcular el número de dedos. 
 
 Las características se guardan en un vector de características de dimensión $26$.
 
