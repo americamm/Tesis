@@ -205,7 +205,7 @@ El clasificador en cascada \ref{fig:Cascade} esta compuesto por etapas cada una 
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.3]{./Figures/cascade.png}
+\includegraphics[scale=.5]{./Figures/DCascade.png}
 \end{center}
 \caption{Clasificador en forma de cascada}
 \label{fig:Cascade}
@@ -319,7 +319,7 @@ En este trabajo se extraen características geométricas, las cuales son extraí
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.45]{./Figures/pusheen.png}
+\includegraphics[scale=.7]{./Figures/DExtraccion.png}
 \end{center}
 \caption{Proceso de la extracción de características.}
 \label{fig:DiagramaExtraccionCaracteristicas}
@@ -338,7 +338,7 @@ Sea $A$ un conjunto en el espacio euclidiano $\bold{R}^d$, $A$ es un conjunto co
 Sea $B$ un conjunto de puntos en el plano Euclidiano, la envolvente convexa de $B$ es el conjunto convexo más pequeño que contiene a todos los puntos en $B$. En la imagen \ref{fig:FigConvexHullDefects} se muestra de color rojo la envolvente convexa de la figura cuyo contorno se encuentra de color negro. 
 
 Los defectos de convexidad de la envolvente convexa, son el conjunto de puntos que no pertenecen al casco convexo. El defecto es el espacio que existe entre el contorno de la envolvente convexa y del objeto.\\
-Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ el conjunto de defectos de convexidad de una envolvente convexa. Cada defecto esta compuesto por tres elementos: el punto de inicio del defecto $s_i(x,y)$; el punto con mayor distancia de la envolvente al objeto, $d_i(x,y)$ y el punto final del defecto.
+Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ el conjunto de defectos de convexidad de una envolvente convexa. Cada defecto esta compuesto por tres elementos: el punto de inicio del defecto $s_i(x,y)$; el punto con mayor distancia de la envolvente al objeto, $d_i(x,y)$ y el punto final del defecto, $e_i(x,y)$.
 En la imagen \ref{fig:FigConvexHullDefects} los puntos amarillos representan los puntos de profundidad de los defectos de convexidad. 
 
 \begin{figure}[h!]
@@ -351,9 +351,7 @@ En la imagen \ref{fig:FigConvexHullDefects} los puntos amarillos representan los
 
 Usando las técnicas anteriores podemos extraer características importantes como el numero de dedos, la posición del centro de la mano, el ángulo que existe entre cada dedo. 
 
-El número de dedos que se encuentran levantados es calculado con el algoritmo \ref{alg:NumDedos}, \textbf{referenciar}, que utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$ y los de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$; donde $n$ es el número total de defectos de la envolvente convexa.  
-
-
+El número de dedos que se encuentran levantados es calculado con el algoritmo \ref{alg:NumDedos}, \textbf{referenciar}, que utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$ y el de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa.  
 
 \begin{algorithm}[h!]
 \begin{algorithmic}[1]
@@ -393,15 +391,15 @@ El número de dedos que se encuentran levantados es calculado con el algoritmo \
 \end{algorithmic}
 \end{algorithm} 
 
-El ángulo $\alpha$ entre los dedos $f_j$ y $f_{j+1}$ es calculado como:  
+El ángulo $\alpha$ entre los dedos $Nf_j$ y $Nf_{j+1}$ es calculado como:  
 $$ \alpha_{f_j} = \tan^{-1}{ \bigg| \frac{m_{j+1}-m_j}{1+m_{j+1}m_j} \bigg|}$$
 donde $m_{j+1},m_j$ son las pendientes de las rectas que pasa por los puntos $d_j(x,y)$ y $s_{j+1}(x,y)$; $d_j(x,y)$ y $s_j(x,y)$; $j=\lbrace 1,2,3,4,5 \rbrace$.  
 
 El ángulo del centro de la mano a la punta de los dedos puede ser obtenido como: 
-$$ \theta_{f_j} = \tan^{-1} | {m_j} - 90^\circ |$$
+$$ \theta_{Nf_j} = \tan^{-1} | {m_j} - 90^\circ |$$
 donde $m_j$ es la pendiente de la recta que pasa por el centro de la mano y la punta de los dedos $s_i(x,y)$.
 
-Una vez que todas las características son calculas están se guardan en un vector, llamado vector de caracteristicas. La dimension del vector es el numero de características que este contiene. 
+Una vez que todas las características son calculas están se guardan en un vector, llamado vector de características. La dimension del vector es el numero de características que este contiene. 
 
 
 \section{Reconocimiento}\label{sec:SVM} 
