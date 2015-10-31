@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {1.4}Objetivos espec\'ificos}{3}{section.1.4}
 \contentsline {section}{\numberline {1.5}Limitaciones y suposiciones}{3}{section.1.5}
 \contentsline {section}{\numberline {1.6}Reconocimiento de gestos con la manos}{3}{section.1.6}
-\contentsline {section}{\numberline {1.7}Estado del arte}{4}{section.1.7}
+\contentsline {section}{\numberline {1.7}Estado del arte}{5}{section.1.7}
 \contentsline {subsection}{\numberline {1.7.1}Modelos de contacto}{5}{subsection.1.7.1}
 \contentsline {subsection}{\numberline {1.7.2}Modelos basados en la visi\IeC {\'o}n}{6}{subsection.1.7.2}
 \contentsline {subsection}{\numberline {1.7.3}Sistemas comerciales}{9}{subsection.1.7.3}
