@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  30 OCT 2015 16:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  2 NOV 2015 09:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7120,8 +7120,8 @@ Overfull \hbox (48.0557pt too wide) in paragraph at lines 104--104
 ! Undefined control sequence.
 \@footnotetext ...tins {\reset@font \footnotesize 
                                                   \interlinepenalty \interfo...
-l.106 \footnotetext{}
-                     
+l.106 ...2562-driver-de-microsoft-lifecam-vx-3000}
+                                                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -7131,13 +7131,53 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \@footnotetext ...}\color@begingroup \@makefntext 
                                                   {\rule \z@ \footnotesep \i...
-l.106 \footnotetext{}
-                     
+l.106 ...2562-driver-de-microsoft-lifecam-vx-3000}
+                                                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (172.38924pt too wide) in paragraph at lines 106--106
+[][]\/cmr/m/n/10 http://es.ccm.net/download/descargar-
+ []
+
+
+Overfull \hbox (23.33339pt too wide) in paragraph at lines 106--106
+\/cmr/m/n/10 2562-
+ []
+
+
+Overfull \hbox (28.94449pt too wide) in paragraph at lines 106--106
+\/cmr/m/n/10 driver-
+ []
+
+
+Overfull \hbox (13.33334pt too wide) in paragraph at lines 106--106
+\/cmr/m/n/10 de-
+ []
+
+
+Overfull \hbox (43.69453pt too wide) in paragraph at lines 106--106
+\/cmr/m/n/10 microsoft-
+ []
+
+
+Overfull \hbox (34.16673pt too wide) in paragraph at lines 106--106
+\/cmr/m/n/10 lifecam-
+ []
+
+
+Overfull \hbox (13.88893pt too wide) in paragraph at lines 106--106
+\/cmr/m/n/10 vx-
+ []
+
+
+Overfull \hbox (20.00006pt too wide) in paragraph at lines 106--106
+\/cmr/m/n/10 3000| 
+ []
 
 ! Undefined control sequence.
 \@footnotetext ...tins {\reset@font \footnotesize 
@@ -18607,6 +18647,167 @@ Overfull \hbox (8.47226pt too wide) in paragraph at lines 219--220
 [] 
  []
 
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}
+! Undefined control sequence.
+<write> \newlabel{capit:cap1}{{}{\thepage 
+                                          }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{capit:cap1}{{}{}}
+! Undefined control sequence.
+<write> ...el{sec:DefinicionProblema}{{}{\thepage 
+                                                  }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{sec:DefinicionProblema}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{sec:Just}{{}{\thepage 
+                                        }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{sec:Just}{{}{}}
+! Undefined control sequence.
+<write> ...label{sec:ObjetivoGeneral}{{}{\thepage 
+                                                  }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{sec:ObjetivoGeneral}{{}{}}
+! Undefined control sequence.
+<write> ...{sec:objetivosEspecificos}{{}{\thepage 
+                                                  }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{sec:objetivosEspecificos}{{}{}}
+! Undefined control sequence.
+<write> ...Limitaciones&Suposiciones}{{}{\thepage 
+                                                  }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{sec:Limitaciones&Suposiciones}{{}{}}
+! Undefined control sequence.
+<write> ...{sec:ReconocimientoGestos}{{}{\thepage 
+                                                  }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{sec:ReconocimientoGestos}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:Modelos:1}{{}{\thepage 
+                                             }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:Modelos:1}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:Modelos:2}{{}{\thepage 
+                                             }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:Modelos:2}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:Modelos}{{}{\thepage 
+                                           }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:Modelos}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{sec:EstadoDelArte}{{}{\thepage 
+                                                 }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{sec:EstadoDelArte}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:LeapMotion}{{}{\thepage 
+                                              }}
+l.222 E
+       nseguida se explica el software de reconocimiento de gestos estático...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:LeapMotion}{{}{}}
+]
 Missing character: There is no E in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -18681,6 +18882,7 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no : in font nullfont!
+
 ! Undefined control sequence.
 <write> ...ference `fig:Flutter' on page \thepage 
                                                   \space undefined\on@line .
@@ -19484,190 +19686,6 @@ Overfull \hbox (8.47226pt too wide) in paragraph at lines 233--234
 []
  []
 
-
-! LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.234 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}
-! Undefined control sequence.
-<write> \newlabel{capit:cap1}{{}{\thepage 
-                                          }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{capit:cap1}{{}{}}
-! Undefined control sequence.
-<write> ...el{sec:DefinicionProblema}{{}{\thepage 
-                                                  }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{sec:DefinicionProblema}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{sec:Just}{{}{\thepage 
-                                        }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{sec:Just}{{}{}}
-! Undefined control sequence.
-<write> ...label{sec:ObjetivoGeneral}{{}{\thepage 
-                                                  }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{sec:ObjetivoGeneral}{{}{}}
-! Undefined control sequence.
-<write> ...{sec:objetivosEspecificos}{{}{\thepage 
-                                                  }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{sec:objetivosEspecificos}{{}{}}
-! Undefined control sequence.
-<write> ...Limitaciones&Suposiciones}{{}{\thepage 
-                                                  }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{sec:Limitaciones&Suposiciones}{{}{}}
-! Undefined control sequence.
-<write> ...{sec:ReconocimientoGestos}{{}{\thepage 
-                                                  }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{sec:ReconocimientoGestos}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:Modelos:1}{{}{\thepage 
-                                             }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:Modelos:1}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:Modelos:2}{{}{\thepage 
-                                             }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:Modelos:2}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:Modelos}{{}{\thepage 
-                                           }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:Modelos}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{sec:EstadoDelArte}{{}{\thepage 
-                                                 }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{sec:EstadoDelArte}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:LeapMotion}{{}{\thepage 
-                                              }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:LeapMotion}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:Myo}{{}{\thepage 
-                                       }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:Myo}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:Flutter}{{}{\thepage 
-                                           }}
-l.234 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:Flutter}{{}{}}
-]
 Missing character: There is no A in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no n in font nullfont!

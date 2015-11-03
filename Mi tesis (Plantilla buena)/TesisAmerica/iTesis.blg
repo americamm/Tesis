@@ -3,56 +3,57 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: iTesis.aux
 The style file: cicese.bst
 Database file #1: iTesis.bib
-Repeated entry---line 160 of file iTesis.bib
+Repeated entry---line 180 of file iTesis.bib
  : @article{Premaratne2013
  :                        ,
 I'm skipping whatever remains of this entry
 Warning--can't use both author and editor fields in Chaki2014
 Warning--empty publisher in Gonzalez2002
 Warning--can't use both author and editor fields in Jana2013
+Warning--empty journal in Kang2013
 Warning--empty journal in Mitra2007
 Warning--empty journal in Nayakwadi2014
 Warning--empty year in Ye; set to ????
 Warning--empty journal in Ye
-You've used 18 entries,
+You've used 21 entries,
             2727 wiz_defined-function locations,
-            840 strings with 8324 characters,
-and the built_in function-call counts, 8183 in all, are:
-= -- 766
-> -- 439
-< -- 22
-+ -- 123
-- -- 123
-* -- 816
-:= -- 1239
-add.period$ -- 58
-call.type$ -- 18
-change.case$ -- 96
-chr.to.int$ -- 36
-cite$ -- 61
-duplicate$ -- 340
-empty$ -- 545
-format.name$ -- 153
-if$ -- 1666
+            857 strings with 8958 characters,
+and the built_in function-call counts, 9895 in all, are:
+= -- 919
+> -- 568
+< -- 23
++ -- 162
+- -- 162
+* -- 1002
+:= -- 1499
+add.period$ -- 66
+call.type$ -- 21
+change.case$ -- 118
+chr.to.int$ -- 39
+cite$ -- 71
+duplicate$ -- 399
+empty$ -- 641
+format.name$ -- 195
+if$ -- 2007
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 23
-newline$ -- 97
-num.names$ -- 72
-pop$ -- 169
+missing$ -- 26
+newline$ -- 111
+num.names$ -- 84
+pop$ -- 209
 preamble$ -- 1
-purify$ -- 77
+purify$ -- 96
 quote$ -- 0
-skip$ -- 296
+skip$ -- 354
 stack$ -- 0
-substring$ -- 329
-swap$ -- 138
-text.length$ -- 6
+substring$ -- 401
+swap$ -- 162
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 147
-warning$ -- 7
-while$ -- 82
+type$ -- 174
+warning$ -- 8
+while$ -- 96
 width$ -- 0
-write$ -- 237
+write$ -- 273
 (There was 1 error message)
