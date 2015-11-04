@@ -73,36 +73,39 @@ Otra limitante es el número de gestos que podrá reconocer el sistema.
 
 \section{Reconocimiento de gestos con la manos}\label{sec:ReconocimientoGestos} 
 
-La definición de gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran a los dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o de interactuar con el ambiente. De aquí en adelante entiéndase el término gestos con las manos, como gestos. 
+La definición de gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran a los dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o de interactuar con el ambiente.
 
-Los primeros acercamientos para llevar acabo el reconocimiento de gestos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario \ref{fig:Modelos:1}, para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visión \ref{fig:Modelos:2} , surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde cámaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundidad.   
+Los primeros acercamientos para llevar acabo el reconocimiento de gestos con las manos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario \ref{fig:Modelos:1}, para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visión \ref{fig:Modelos:2} , surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde cámaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundidad.   
 
 \begin{figure}[h!]
 \centering 
-\subfigure[Dispositivos basados en contacto: en la parte izquierda de la imagen se observan los guantes de datos \protect\footnotemark, en el centro los guantes de colores \footnotetext{http://www.technologyreview.com/article/414021/open-source-data-glove/} \protect\footnotemark y a la derecha se encuentra el dispositivo wii \footnotetext{http://www.digitaltrends.com/computing/the-gloves-that-could-change-the-world/} \protect\footnotemark{} \footnotetext{https://www.nintendo.es/Wii/Wii-94559.html} ]
-{
-{\includegraphics[scale=.25]{./Figures/Dataglove.jpg}}  \qquad
-{\includegraphics[scale=.20]{./Figures/colorGloves.jpg}} \qquad   
-{\includegraphics[scale=.29]{./Figures/wii.jpg}} 
-\label{fig:Modelos:1} 
-}
-
-\subfigure[Dispositivos basados en visión: en la imagen se observan distintos tipos de cámaras en la parte izquierda de la imagen se observa una web \footnotemark{}, en el centro una digital \footnotemark{} y a la derecha de la imagen una TOF \protect\footnotemark{}.]
-{
-{\includegraphics[scale=.3]{./Figures/webcam.jpg}}			\qquad
-{\includegraphics[scale=.2]{./Figures/digitalCamera.jpg}}  \qquad
-{\includegraphics[scale=.15]{./Figures/TOF.jpg}} 
-\label{fig:Modelos:2} 			
-}
+	\begin{subfigure}
+		{\includegraphics[scale=.25]{./Figures/Dataglove.jpg} } \qquad
+		{\includegraphics[scale=.20]{./Figures/colorGloves.jpg}}\qquad   
+        {\includegraphics[scale=.29]{./Figures/wii.jpg} }	 
+	 	\caption{Dispositivos basados en contacto: en la parte izquierda de la imagen se observan los guantes de datos \footnotemark{}, en el centro los guantes de colores  \footnotemark{}  y a la derecha se encuentra el dispositivo wii \footnotemark{}}
+		\label{fig:Modelos:1} 
+	\end{subfigure} 
+ 
+	\begin{subfigure}
+		{\includegraphics[scale=.3]{./Figures/webcam.jpg}}		\qquad
+		{\includegraphics[scale=.2]{./Figures/digitalCamera.jpg}}  \qquad
+		{\includegraphics[scale=.15]{./Figures/TOF.jpg} }
+		\caption{Dispositivos basados en visión: en la imagen se observan distintos tipos de cámaras en la parte izquierda de la imagen se observa una web \footnotemark{}, en el centro una digital \footnotemark{} y a la derecha de la imagen una TOF \footnotemark{}.} 
+		\label{fig:Modelos:2} 
+		\end{subfigure}
 \caption{Dispositivos utilizados para la captura de gestos.} 
 \label{fig:Modelos}
 \end{figure} 
 
 
+\footnotetext{http://www.technologyreview.com/article/414021/open-source-data-glove/}
+\footnotetext{http://www.digitaltrends.com/computing/the-gloves-that-could-change-the-world/}
+\footnotetext{https://www.nintendo.es/Wii/Wii-94559.html} 
+
 \footnotetext{http://es.ccm.net/download/descargar-2562-driver-de-microsoft-lifecam-vx-3000}
 \footnotetext{http://www.canon.com.mx/ficha.aspx?id=722} 
-\footnotetext{http://us.creative.com/p/web-cameras/creative-senz3d}
-
+\footnotetext{http://us.creative.com/p/web-cameras/creative-senz3d} 
 
 En este trabajo, se toma el enfoque basado en la visión ya que se quiere obtener un sistema que para el usuario la interacción sea natural y la manera de lograrlo es tomando este enfoque.  
 
@@ -110,11 +113,11 @@ En este trabajo, se toma el enfoque basado en la visión ya que se quiere obtene
 
 \section{Estado del arte}\label{sec:EstadoDelArte} 
 
-La sección anterior explica los modelos utilizados para llevar acabo el reconocimiento de gestos, enseguida se presentan los trabajos relevantes de cada uno de estos enfoques y también se mencionan algunos de los sistemas comerciales importantes. 
+La sección anterior explica los modelos utilizados para llevar acabo el reconocimiento de gestos con las manos, enseguida se presentan los trabajos relevantes de cada uno de estos enfoques y también se mencionan algunos de los sistemas comerciales importantes. 
 
 \subsection{Modelos de contacto}
  
-Como se menciono en la sección anterior los primeros trabajos de reconocimiento de gestos utilizaba este modelo, actualmente se sigue utilizando pero en menor grado. En los párrafos siguientes se presentan dos trabajos relevantes en esta área. 
+Como se menciono en la sección anterior los primeros trabajos de reconocimiento de gestos con las manosutilizaba este modelo, actualmente se sigue utilizando pero en menor grado. En los párrafos siguientes se presentan dos trabajos relevantes en esta área. 
 
 El primer trabajo que se presenta es el realizado por \citep{Yoon2012} el cual propone un sistema de reconocimiento de gestos estáticos usando un guante de datos, el cual reconoce $24$ gestos tomados del Lenguaje de Señas Americano, ASL (por sus siglas en inglés, American Sign Lenguaje). Este modelo consta de tres etapas, las cuales se explican enseguida. 
 

@@ -3,57 +3,59 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: iTesis.aux
 The style file: cicese.bst
 Database file #1: iTesis.bib
-Repeated entry---line 180 of file iTesis.bib
+Repeated entry---line 201 of file iTesis.bib
  : @article{Premaratne2013
  :                        ,
 I'm skipping whatever remains of this entry
 Warning--can't use both author and editor fields in Chaki2014
 Warning--empty publisher in Gonzalez2002
+Warning--empty journal in Hasan2012
 Warning--can't use both author and editor fields in Jana2013
 Warning--empty journal in Kang2013
 Warning--empty journal in Mitra2007
+Warning--empty journal in Murthy2009
 Warning--empty journal in Nayakwadi2014
 Warning--empty year in Ye; set to ????
 Warning--empty journal in Ye
-You've used 21 entries,
+You've used 24 entries,
             2727 wiz_defined-function locations,
-            857 strings with 8958 characters,
-and the built_in function-call counts, 9895 in all, are:
-= -- 919
-> -- 568
-< -- 23
-+ -- 162
-- -- 162
-* -- 1002
-:= -- 1499
-add.period$ -- 66
-call.type$ -- 21
-change.case$ -- 118
-chr.to.int$ -- 39
-cite$ -- 71
-duplicate$ -- 399
-empty$ -- 641
-format.name$ -- 195
-if$ -- 2007
+            874 strings with 9278 characters,
+and the built_in function-call counts, 11143 in all, are:
+= -- 1037
+> -- 625
+< -- 29
++ -- 177
+- -- 177
+* -- 1115
+:= -- 1687
+add.period$ -- 76
+call.type$ -- 24
+change.case$ -- 133
+chr.to.int$ -- 48
+cite$ -- 82
+duplicate$ -- 455
+empty$ -- 727
+format.name$ -- 217
+if$ -- 2265
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 26
-newline$ -- 111
-num.names$ -- 84
-pop$ -- 209
+missing$ -- 30
+newline$ -- 127
+num.names$ -- 96
+pop$ -- 236
 preamble$ -- 1
-purify$ -- 96
+purify$ -- 107
 quote$ -- 0
-skip$ -- 354
+skip$ -- 405
 stack$ -- 0
-substring$ -- 401
-swap$ -- 162
-text.length$ -- 7
+substring$ -- 445
+swap$ -- 184
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 174
-warning$ -- 8
-while$ -- 96
+type$ -- 198
+warning$ -- 10
+while$ -- 109
 width$ -- 0
-write$ -- 273
+write$ -- 312
 (There was 1 error message)

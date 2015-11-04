@@ -8,35 +8,45 @@
 En este capítulo se definen una serie de conceptos importantes del área de procesamiento de imágenes y reconocimiento de patrones, estas definiciones son importantes para la comprensión del tema.
 
 
-
 \section{Gestos}\label{sec:2Gestos}
-Los gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o interactuar con el ambiente. De acuerdo con la literatura \citep{Mitra2007} los gestos con las manos se clasifican en estáticos y dinámicos, los primeros están definidos como la posición y orientación de la mano en el espacio manteniendo esta pose durante cierto tiempo, por ejemplo para hacer una se\~nal de aventón, a diferencia de los gestos dinámicos donde hay movimiento de la pose, un ejemplo  es cuando mueves la mano en se\~nal de adiós. De aquí en adelante entiéndase el término gestos con las manos, como gestos.  
+Los gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o interactuar con el ambiente. \\
+De acuerdo con la literatura \citep{Mitra2007} los gestos con las manos se clasifican en estáticos y dinámicos, los primeros están definidos como la posición y orientación de la mano en el espacio manteniendo esta pose durante cierto tiempo, por ejemplo para hacer una se\~nal de aventón, a diferencia de los gestos dinámicos donde hay movimiento de la pose, un ejemplo  es cuando mueves la mano en se\~nal de adiós. 
 
 
+\section{Reconocimiento de gestos con la manos}\label{sec:2ReconocimientoGestos}   
 
-\section{Reconocimiento de gestos con la manos}\label{sec:2ReconocimientoGestos}  
+El reconocimiento de gestos con las manos consiste no solo en el seguimiento del movimiento de la o las manos realizados por un emisor, también en la interpretación de este movimiento por un receptor, \citep{Mitra2007}, \citep{Murthy2009}.\\
+De aquí en adelante entiéndase el término gestos con las manos, como gestos.   
 
-El reconocimiento de gestos se divide en tres fases \citep{Rautaray2012}, detección o segmentación; extracción de características seguimiento; dependiendo si los gestos son dinámicos, por último la etapa final el reconocimiento del gesto.  
-Este se clasifican en dos modelos, basados en la visión y en contacto, esta clasificación depende de la manera en que son capturados los datos, es decir la forma en que se obtiene el gesto, para posteriormente poderlo reconocer. 
+En el capítulo \ref{capit:cap1} sección \ref{sec:ReconocimientoGestos}, se explicó que existen dos modelos utilizados para el reconocimiento de gestos dependiendo del dispositivo de captura, los basados en contacto y en la visión.\\
+Los métodos basados en la visión realizan la representación del gesto con diferentes técnicas las cuales se separan en dos categorías \citep{Rautaray2012}: basados en apariencia y basados en un modelo 3D. Los basados en un modelos 3D convierten los datos en entrada en una forma espacial y los basados en apariencia utilizan los datos 2D de la imagen de entrada.      
 
-Los primeros acercamientos para llevar acabo el reconocimiento de gestos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario, esto para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visión surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde c\'amaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundidad.  
+De acuerdo con la literatura el proceso de reconocimiento de gestos basados en la visión se dividen en tres \citep{Rautaray2012} fases que son: detección; extracción de características o seguimiento, dependiendo si los gestos son dinámicos; por último el reconocimiento del gesto. Otros autores \citep{Hasan2012} incluyen la etapa de adquisición de datos. Las etapas se abordaran en la sección siguiente. 
 
-Los métodos basados en la visión se pueden representar por dos modelos \citep{Rautaray2012}, los basados en 3D, da una descripción espacial en 3D de la mano, y los basados en apariencia, como su nombre lo dice se basan en la apariencia de la mano. Los modelos basados en apariencia se dividen en dos categorías, los estáticos (modelo de silueta, de contorno deformables) y de movimiento (de color y movimiento).
 
-\subsection{Etapas del reconocimiento}\label{subsec:EtapasReconocimiento} 
-Enseguida se describen las etapas del reconocimiento de gestos \ref{fig:HGR}, con los métodos para llevar cada una de estas.  
+\subsection{Etapas del reconocimiento}\label{subsec:EtapasReconocimiento}  
+En la sección se abordaron las estas etapas del reconocimiento y se mencionan los principales algoritmos utilizados en cada una de estas etapas. El diagrama de la figura \ref{fig:HGR} muestra las etapas del reconocimiento.  
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.8]{./Figures/HGR.png}
+\includegraphics[scale=.6]{./Figures/HGR.png}
 \end{center}
-\caption{Procedimiento del algoritmo de detección}
+\caption{El diagrama ejemplifica el procedimiento del reconocimiento de gestos.}
 \label{fig:HGR}
 \end{figure}
 
+El proceso de reconocimiento varia un poco dependiendo del tipo de gesto, si es estático o dinámico. Por ejemplo el diagrama \ref{fig:HGR} ejemplifica perfectamente el proceso de reconocimiento de un gestos estático, para los gestos dinámicos se necesita una fase extra, el seguimiento el cual se realizada una vez detectada la mano, esta puede estar englobada en la fase de extracción de características o viceversa. 
+
+\subsubsection{Adquisición de datos}\label{sssec:EtapaAdquisicion}
+
+Es la primera etapa del reconocimiento en la cual los datos son capturados. En el modelo basado en la visión se utilizan cámaras como: 
+
+La información obtenida es representado como imágenes. 
+
 \subsubsection{Detección}\label{sssec:EtapaDeteccion}
 
-En esta etapa se detecta y segmenta la información relevante de la imagen (la mano), con la del fondo, existen distintos métodos para obtener dichas características como la de color de la piel, forma, movimiento, entre otras que generalmente son combinaciones de alguna de estas, para obtener un mejor resultado. Enseguida se describe brevemente cada una de estas.  
+En esta etapa se localiza y segmenta la mano del fondo de la imagen para obtener las características necesarias para identificar el gesto.\\
+Existen distintos métodos para obtener dichas características como la de color de la piel, forma, movimiento, entre otras que generalmente son combinaciones de alguna de estas, para obtener un mejor resultado. Enseguida se describe brevemente cada una de estas.  
 \begin{itemize}
 \item Color de la piel: Se basa principalmente en escoger un espacio del color, es una organización de colores especifica; como; RGB (rojo, verde, azul), RG (rojo, green), YCrCb (brillo, la diferencia entre el brillo y el rojo, la diferencia entre el brillo y el azul), etc. La desventaja es que si es color de la piel es similar al fondo, la segmentación no es buena, la forma de corregir esta segmentación es suponiendo que el fondo no se mueve con respecto a la cámara.
 \item Forma: Extrae el contorno de las imágenes, si se realiza correctamente se obtiene el contorno de la mano. Aunque si se toman las yemas de los dedos como características, estas pueden ser ocluidas por el resto de la mano, una posible solución es usar más de una cámara.  
@@ -45,7 +55,9 @@ En esta etapa se detecta y segmenta la información relevante de la imagen (la m
 	\item Movimiento: Generalmente esta se usa con otras formas de detección ya que para utilizarse por sí sola hay que asumir que el único objeto con movimiento es la mano.
 \end{itemize}
 
-\subsubsection{Seguimiento}\label{sssec:EtapaSeguimiento}
+\subsubsection{Extracción de características y seguimiento}\label{sssec:EtapaSeguimiento} 
+
+La extracción de características 
 
 Consiste en localizar la mano en cada cuadro (imagen). Se lleva acabo usando los métodos de detección si estos son lo suficientemente rápidos para detectar la mano cuadro por cuadro. Se explica brevemente los métodos para llevar a cabo el seguimiento. 
 \begin{itemize}
@@ -73,9 +85,15 @@ Es la clasificación del gesto, la etapa final del reconocimiento, la clasificac
 \section{Imagen}\label{ImagenDef} 
 
 Una imagen se puede definir como una función bidimensional, $S(x,y)$ donde $x$, $y$ representan las coordenadas en el plano y el valor de la función es la intensidad o nivel de gris en el punto $(x,y)$. 
-Si el valor de la función y los puntos de la imagen son finitos, esta es una imagen digital, la cual se puede representar en una matriz donde cada valor o pixel es el nivel de gris de la imagen, y los indices de esta indican la posición, \citep{Gonzalez2002}. 
+Si el valor de la función y los puntos de la imagen son finitos, esta es una imagen digital, la cual se puede representar en una matriz donde cada valor o pixel es el nivel de gris de la imagen \ref{fig:image}, y los indices de esta indican la posición, \citep{Gonzalez2002}. 
 
-
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.50]{./Figures/image.png}
+\end{center}
+\caption{Representación de un imagen digital. Recuperada de \citep{Shin2013}}
+\label{fig:image}
+\end{figure}
 
 \section{Oclusión}\label{OclusionDef} 
 

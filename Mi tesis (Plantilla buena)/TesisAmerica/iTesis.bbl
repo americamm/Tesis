@@ -31,6 +31,12 @@ Gonzalez, R. y Woods, R. (2002).
 \newblock {\em {Digital image processing}\/}.
 \newblock p. 190.
 
+\bibitem[Hasan y Mishra(2012)Hasan y Mishra]{Hasan2012}
+Hasan, M.~M. y Mishra, P.~K. (2012).
+\newblock {Hand Gesture Modeling and Recognition using Geometric Features : A
+  Review}.
+\newblock {\bf 3}(1).
+
 \bibitem[Huang {\em \mbox{et al.}\/}(2011)Huang, Hu, y Chang]{Huang2011}
 Huang, D.-Y., Hu, W.-C., y Chang, S.-H. (2011).
 \newblock {Gabor filter-based hand-pose angle estimation for hand gesture
@@ -61,6 +67,11 @@ Mitra, S., Member, S., y Acharya, T. (2007).
   hand tracking system}.
 \newblock {\em Multimedia Tools and Applications\/}.
 
+\bibitem[Murthy y Jadon(2009)Murthy y Jadon]{Murthy2009}
+Murthy, G. R.~S. y Jadon, R.~S. (2009).
+\newblock {A REVIEW OF VISION BASED HAND GESTURES RECOGNITION}.
+\newblock {\bf 2}(2): 405--410.
+
 \bibitem[Nayakwadi(2014)Nayakwadi]{Nayakwadi2014}
 Nayakwadi, V. (2014).
 \newblock {Natural Hand Gestures Recognition System for Intelligent HCI : A
@@ -89,6 +100,12 @@ Rautaray, S.~S. y Agrawal, A. (2012).
 \newblock {Vision based hand gesture recognition for human computer
   interaction: a survey}.
 \newblock {\em Artificial Intelligence Review\/}.
+
+\bibitem[Shin(2013)Shin]{Shin2013}
+Shin, S. (2013).
+\newblock {\em {Emgu CV Essentials}\/}.
+\newblock Packt Publishing, primera edici\'on.
+\newblock p. 118.
 
 \bibitem[Silva y Santos-Victor(2001)Silva y Santos-Victor]{Silva2001}
 Silva, C. y Santos-Victor, J. (2001).
