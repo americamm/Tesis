@@ -55,9 +55,19 @@ Existen distintos métodos para obtener dichas características como la de color
 	\item Movimiento: Generalmente esta se usa con otras formas de detección ya que para utilizarse por sí sola hay que asumir que el único objeto con movimiento es la mano.
 \end{itemize}
 
-\subsubsection{Extracción de características y seguimiento}\label{sssec:EtapaSeguimiento} 
+\subsubsection{Extracción de características y seguimiento}\label{sssec:EtapaSeguimiento}  
 
-La extracción de características 
+La extracción de características consiste en obtener ciertas entradas medibles de la imagen de la mano, generalmente segmentada, las cuales son utilizadas para reconocer el gesto realizado, \citep{Premaratne2013}, \citep{Nayakwadi2014}.\\
+Existen dos tipos de características geométricas tales como: las yemas de los dedos, la dirección de los dedos, el contorno de la mano y entre otras características; y las características no geométricas como el color, siluetas y texturas. \citep{Murthy2009}. 
+
+Enseguida se mencionan algunas de los métodos para la obtención de características \citep{Premaratne2013}. 
+\begin{itemize}
+\item Descriptores de Fourier los cuales describen formas en la imagen, haciendo uso de la serie de Fourier. Estas características son invariantes a escala.
+\item Descriptores de Contorno nos dan el contorno  o el límite del objeto con invariancia a traslación, escala  y reflexión.     
+\item Características descritas por histogramas. Histogramas de gradientes orientados (HOG) es un descriptor de características. Se trata de contar la orientación de los gradientes en cierta porción de la imagen.  
+\end{itemize}
+
+
 
 Consiste en localizar la mano en cada cuadro (imagen). Se lleva acabo usando los métodos de detección si estos son lo suficientemente rápidos para detectar la mano cuadro por cuadro. Se explica brevemente los métodos para llevar a cabo el seguimiento. 
 \begin{itemize}
@@ -69,14 +79,14 @@ Consiste en localizar la mano en cada cuadro (imagen). Se lleva acabo usando los
 
 \subsubsection{Reconocimiento}\label{sssec:EtapaReconocimiento}
 
-Es la clasificación del gesto, la etapa final del reconocimiento, la clasificación se puede hacer dependiendo del gesto. Para gestos estáticos basta con usar algún clasificador o empatar el gesto con una plantilla. En los dinámicos se requiere otro tipo de algoritmos de aprendizaje de máquina. A continuación se encuentran los principales métodos para llevar acabo el reconocimiento del gestos. 
+Es reconocimiento es la etapa final de este proceso, la cual consiste en identificar el gesto utilizando alguna técnica de clasificación.\\
+El método de clasificación a utilizar se elige dependiendo del tipo de gesto a reconocer, por ejemplo para los gestos estáticos se realiza el empatamiento del gesto con una plantilla previamente calculada; en los gestos dinámicos generalmente  se usan algoritmos de aprendizaje de máquina. Aunque los más utilizados son los algoritmos de redes neuronales, maquina de soporte vectorial y modelo oculto de Markov\\ 
+A continuación se encuentran los principales métodos para llevar acabo el reconocimiento del gestos \citep{Rautaray2012}. 
 \begin{itemize}
-	\item K-medias: Consiste en determinar los $k$ puntos llamados centros para minimizar el error de agrupamiento, que es la suma de las distancias de todo los puntos al centro de cada grupo. El algoritmo empieza localizando aleatoriamente $k$ grupos en el espacio espectral. Cada p\'ixel en la imagen de entrada es entonces asignadas al centro del grupo mas cercano  
-	\item {K-vecinos cercanos} (KNN, por sus siglas en ingl\'es): 
-	Este es un método para clasificar objetos basado en las muestras de entrenamiento en el espacio de características. 
+	\item K-medias: Es un método de agrupamiento el cual consiste en determinar los $k$ puntos llamados centros para minimizar el error de agrupamiento, que es la suma de las distancias de todo los puntos al centro de cada grupo. El algoritmo empieza localizando aleatoriamente $k$ grupos en el espacio espectral. Cada p\'ixel en la imagen de entrada es entonces asignadas al centro del grupo mas cercano  
 	\item Desplazamiento de medias: Es un método iterativo que encuentra el máximo en una función de densidad dada una muestra estadística de los datos.
-	\item Máquinas de soporte vectorial (SVM, por sus siglas en ingl\'es). Consiste en un mapeo no lineal de los datos de entrada a un espacio de dimensi\'on m\'as grande, donde los datos pueden ser separados de forma lineal.  
-	\item Modelo oculto de Markov (HMM, por sus siglas en ingl\'es) es definido como un conjunto de estados donde un estado es el estado inicial, un conjunto de símbolos de salida y un conjunto de estados de transición. En el reconocimiento de gestos se puede caracterizar a    los estados como un conjunto de las posiciones de la mano; las  transiciones de los estados como la probabilidad de transición de cierta posición de la mano a otra; el símbolo de salida como una postura especifica y la secuencia de los símbolos de salida como  el gesto de la mano.   
+	\item Máquinas de soporte vectorial: Consiste en un mapeo no lineal de los datos de entrada a un espacio de dimensi\'on m\'as grande, donde los datos pueden ser separados de forma lineal.  
+	\item Modelo oculto de Markov: Es definido como un conjunto de estados donde, un estado inicial, un conjunto de símbolos de salida y un conjunto de estados de transición. En el reconocimiento de gestos se puede caracterizar a    los estados como un conjunto de las posiciones de la mano; las  transiciones de los estados como la probabilidad de transición de cierta posición de la mano a otra; el símbolo de salida como una postura especifica y la secuencia de los símbolos de salida como  el gesto de la mano.   
 	\item Redes neuronales con retraso: Son una clase de redes neuronales artificiales que se enfocan en datos continuos, haciendo que el sistema sea adaptable para redes en linea y les da ventajas sobre aplicaciones en tiempo real. 
 \end{itemize}  
 

@@ -5,7 +5,7 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p 
 
-En este cap\'itulo se describen las etapas del sistema de reconocimiento, junto con los métodos o herramientas que son utilizados en cada una de ellas.   
+En este cap\'itulo se describen las etapas del sistema de reconocimiento de gestos propuesto, junto con los métodos o algoritmos que son utilizados en cada una de ellas.   
 
 El sistema de reconocimiento de gestos propuesto consta de cuatro etapas principales \ref{fig:MyHGR}. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema; la segunda etapa es la detección, aquí la mano es localizada y segmentada del fondo; en la etapa tres se extraen las características de la mano para ser procesadas; en la etapa final el gesto realizado es reconocido.   
 
@@ -55,8 +55,6 @@ Enseguida se describen brevemente cada uno de los componentes del sensor Kinect,
 
 
 
-
- 
 \section{Detección}\label{sec:Detection}
 
 En esta etapa del sistema el objetivo es localizar y segmentar la mano para extraer las características necesarias para el reconocimiento.\\
@@ -314,7 +312,7 @@ $$S \bullet EX = (S \oplus EX) \ominus EX $$
 
 \section{Extracción de características}\label{sec:Convexhull} 
 
-La idea de esta etapa es extraer las características de la imagen que sean capaces de describir la mano, de manera que con estas, se pueda reconocer los gestos realizados.\\     
+La idea de esta etapa es obtener las características de la imagen que sean capaces de describir la mano, de manera que con estas, se pueda reconocer los gestos realizados.\\     
 En este trabajo se extraen características geométricas, las cuales son extraídas de la siguiente forma: el primer paso es encontrar la envolvente convexa de la mano para posteriormente calcular los defectos de convexidad una vez realizado lo anterior se pueden calcular el numero de dedos de la mano entre otras características; finalmente las características calculadas  se guardan en un vector.  
 
 \begin{figure}[h!]
