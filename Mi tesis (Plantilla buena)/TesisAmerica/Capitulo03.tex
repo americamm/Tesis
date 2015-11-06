@@ -29,9 +29,11 @@ El dispositivo Kinect esta equipado con una serie de sensores que permiten obten
 \begin{center}
 \includegraphics[scale=.60]{./Figures/Kinect.jpg}
 \end{center}
-\caption{Sensor Kinect para Windows}
+\caption{Sensor Kinect para Windows, imagen recuperada de \footnotemark{}.}
 \label{fig:KinectPic}
 \end{figure} 
+
+\footnotetext{http://blogs.msdn.com/b/eternalcoding/archive/2012/02/01/official-kinect-for-windows-sdk-and-kinect-toolbox-1-1-1-are-out.aspx}
 
 El sensor esta equipado con los siguientes componentes: un cámara de color o sensor de color, un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED \ref{fig:KinectComponentes}. 
 
@@ -40,9 +42,11 @@ Enseguida se describen brevemente cada uno de los componentes del sensor Kinect,
 \begin{center}
 \includegraphics[scale=.6]{./Figures/sensor.png}
 \end{center}
-\caption{Componentes del sensor Kinect}
+\caption{Componentes del sensor Kinect, imagen recuperada de \footnotemark{}.} 
 \label{fig:KinectComponentes}
 \end{figure}   
+
+\footnotetext{https://msdn.microsoft.com/en-us/library/jj131033.aspx}
 
 \begin{itemize}
 \item La cámara de color captura y transmite datos de vídeo a color, detectando los colores rojo, verde y azul (RGB, por sus siglas en ingl\'es, red, green and blue). La transmisión de datos que brinda la cámara es una secuencia de imágenes (cuadros), a una velocidad de hasta $30$ cuadros por segundo con una resolución de hasta $1280\, x \, 960$ p\'ixeles. La velocidad de los cuadros por segundo varia según la resolución de la imagen.
@@ -81,7 +85,7 @@ Adaboost en forma de cascada.
 \begin{center}
 \includegraphics[scale=.6]{./Figures/ViolaJonesDiagram.png}
 \end{center}
-\caption{Procedimiento del algoritmo de detección}
+\caption{Procedimiento del algoritmo de detección.}
 \label{fig:ViolaJonesDiagram}
 \end{figure}
 
@@ -104,7 +108,7 @@ Las características Haar, son operadores rectangulares como los que se muestran
 \subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures2}\label{fig:haarFeatures:2}}
 \subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures3}\label{fig:haarFeatures:3}}
 \subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures4}\label{fig:haarFeatures:4}}
-\caption{Ejemplo de operadores Haar} \label{fig:haarFeatures}
+\caption{Ejemplo de operadores Haar.} \label{fig:haarFeatures}
 \end{figure}
 
 
@@ -119,7 +123,7 @@ La figura \ref{fig:FigIntegralImage} muestra un  ejemplo donde se calcula la ima
 \centering
 \subfigure[Imagen original]{\includegraphics[scale=.7]{./Figures/ImagetoIntegral}\label{fig:FigIntegralImage:1}} \qquad
 \subfigure[Imagen integral]{\includegraphics[scale=.7]{./Figures/CalculationIntegral}\label{fig:FigIntegralImage:2}}
-\caption{Ejemplo del cálculo de la imagen integral} \label{fig:FigIntegralImage}
+\caption{Ejemplo del cálculo de la imagen integral.} \label{fig:FigIntegralImage}
 \end{figure}
 
 La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de la imagen integral de dicha región, la cual se obtiene como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}   
@@ -129,7 +133,7 @@ donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la su
 \begin{center}
 \includegraphics[scale=.3]{./Figures/IntegralImage.png}
 \end{center}
-\caption{Regiones de la imagen integral}
+\caption{Regiones de la imagen integral.}
 \label{fig:figImageIntegral}
 \end{figure} 
 
@@ -153,7 +157,7 @@ donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a 
 
 Enseguida se presenta el algoritmo de AdaBoost:
 
-\begin{algorithm}
+\begin{algorithm}[h!]
 \begin{algorithmic}[1]
 
 \REQUIRE El conjunto $\lbrace (x_1,y_1), \cdots, (x_n,y_n) \rbrace$ donde $x_i$ representa las imágenes de entrenamiento, $y_i=0,1$ representa las imágenes negativas y positivas respectivamente. 
@@ -203,14 +207,13 @@ El clasificador en cascada \ref{fig:Cascade} esta compuesto por etapas cada una 
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/DCascade.png}
+\includegraphics[scale=.45]{./Figures/DCascade.png}
 \end{center}
-\caption{Clasificador en forma de cascada}
+\caption{Clasificador en forma de cascada.}
 \label{fig:Cascade}
 \end{figure} 
 
-
-\begin{algorithm}
+\begin{algorithm}[h!]
 \begin{algorithmic}[1]
 \REQUIRE Imágenes positivas $P$, negativas $N$, $f$ el valor máximo de precisión de falsos positivos por etapa, $d$ es el valor mínimo de precisión de la detección por etapa, . 
 \ENSURE El clasificador en forma de cascada.  
@@ -263,14 +266,14 @@ donde $k \in [0,1]$ el valor de la constante determina que tanta parte del conto
 Otra técnica muy utilizada en procesamiento de imágenes son las operaciones morfológicas que son un conjunto de operaciones no lineales, la idea es que al aplicar alguna de estas operaciones el ruido se removido tomando en cuanta la forma y estructura de la imagen. 
 La operaciones morfológicas utilizan un elemento estructural el cual se aplica por toda la imagen, los elementos estructurales pueden ser de distintas formas como \ref{fig:EX}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfigure[Rectángulo de $3x3$.]{\includegraphics[scale=.7]{./Figures/EX1}\label{fig:EX:1}} %\hspace{20mm}
 \qquad
 \subfigure[Figura de $3x2$.]{\includegraphics[scale=.7]{./Figures/EX3}\label{fig:EX:3}} 
 \\
 \subfigure[Cruz de $5x5$.]{\includegraphics[scale=.7]{./Figures/EX2}\label{fig:EX:2}}
-\caption{Ejemplos de elementos estructurales} \label{fig:EX}
+\caption{Ejemplos de elementos estructurales.} \label{fig:EX}
 \end{figure} 
 
 Existen distintas operaciones morfológicas, las principales o básicas son la dilatación y erosión las cuales se explican enseguida junto con la apertura y cierre. 
@@ -297,15 +300,14 @@ $$S \circ EX = (S \ominus EX) \oplus EX $$
 La operación cierre elimina huecos pequeños  y rellena huecos en las
 $$S \bullet EX = (S \oplus EX) \ominus EX $$
 
-
-\begin{figure}
+\begin{figure}[h!]
 \centering
-\subfigure[original]{\includegraphics[scale=.7]{./Figures/originalMO}\label{fig:OM:1}} \hspace{10mm}
-\subfigure[dilatación]{\includegraphics[scale=.7]{./Figures/dilatationMO}\label{fig:OM:2}} \hspace{10mm}
-\subfigure[erosión]{\includegraphics[scale=.7]{./Figures/erosionMO}\label{fig:OM:3}} \hspace{10mm}
-\subfigure[apertura]{\includegraphics[scale=.7]{./Figures/openingMO}\label{fig:OM:4}} \hspace{10mm}
-\subfigure[cierre]{\includegraphics[scale=.7]{./Figures/closingMO}\label{fig:OM:5}}
-\caption{Aplicación de operaciones morfológicas (citar)} \label{fig:OM}
+\subfigure[original]{\includegraphics[scale=.55]{./Figures/originalMO}\label{fig:OM:1}} \hspace{10mm}
+\subfigure[dilatación]{\includegraphics[scale=.55]{./Figures/dilatationMO}\label{fig:OM:2}} \hspace{10mm}
+\subfigure[erosión]{\includegraphics[scale=.55]{./Figures/erosionMO}\label{fig:OM:3}} \hspace{10mm}
+\subfigure[apertura]{\includegraphics[scale=.55]{./Figures/openingMO}\label{fig:OM:4}} \hspace{10mm}
+\subfigure[cierre]{\includegraphics[scale=.55]{./Figures/closingMO}\label{fig:OM:5}}
+\caption{Aplicación de operaciones morfológicas \citep{Smith1999} \label{fig:OM}}
 \end{figure} 
 
 
@@ -330,8 +332,9 @@ Sea $A$ un conjunto en el espacio euclidiano $\bold{R}^d$, $A$ es un conjunto co
 \centering
 \subfigure[Conexo]{\includegraphics[scale=.8]{./Figures/ConvexSet.png}\label{fig:Sets:Convex}} \hspace{10mm}
 \subfigure[convexo]{\includegraphics[scale=.75]{./Figures/ConcaveSet.png}\label{fig:OM:Concave}} \hspace{10mm}
-\caption{Conjunto conexo y convexo (citar)}\label{fig:Sets}
+\caption{Conjunto conexo y convexo \footnotemark{}}\label{fig:Sets}
 \end{figure} 
+\footnotetext{}
 
 Sea $B$ un conjunto de puntos en el plano Euclidiano, la envolvente convexa de $B$ es el conjunto convexo más pequeño que contiene a todos los puntos en $B$. En la imagen \ref{fig:FigConvexHullDefects} se muestra de color rojo la envolvente convexa de la figura cuyo contorno se encuentra de color negro. 
 

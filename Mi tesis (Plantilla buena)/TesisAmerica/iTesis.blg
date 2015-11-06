@@ -15,47 +15,48 @@ Warning--empty journal in Kang2013
 Warning--empty journal in Mitra2007
 Warning--empty journal in Murthy2009
 Warning--empty journal in Nayakwadi2014
+Warning--empty publisher in Smith1999
 Warning--empty year in Ye; set to ????
 Warning--empty journal in Ye
-You've used 24 entries,
+You've used 25 entries,
             2727 wiz_defined-function locations,
-            874 strings with 9278 characters,
-and the built_in function-call counts, 11143 in all, are:
-= -- 1037
-> -- 625
-< -- 29
-+ -- 177
-- -- 177
-* -- 1115
-:= -- 1687
-add.period$ -- 76
-call.type$ -- 24
-change.case$ -- 133
-chr.to.int$ -- 48
-cite$ -- 82
-duplicate$ -- 455
-empty$ -- 727
-format.name$ -- 217
-if$ -- 2265
+            882 strings with 9386 characters,
+and the built_in function-call counts, 11510 in all, are:
+= -- 1072
+> -- 636
+< -- 31
++ -- 180
+- -- 180
+* -- 1139
+:= -- 1741
+add.period$ -- 79
+call.type$ -- 25
+change.case$ -- 136
+chr.to.int$ -- 49
+cite$ -- 86
+duplicate$ -- 477
+empty$ -- 756
+format.name$ -- 221
+if$ -- 2347
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 30
-newline$ -- 127
-num.names$ -- 96
-pop$ -- 236
+missing$ -- 32
+newline$ -- 132
+num.names$ -- 100
+pop$ -- 247
 preamble$ -- 1
-purify$ -- 107
+purify$ -- 110
 quote$ -- 0
-skip$ -- 405
+skip$ -- 424
 stack$ -- 0
-substring$ -- 445
-swap$ -- 184
-text.length$ -- 8
+substring$ -- 454
+swap$ -- 193
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 198
-warning$ -- 10
-while$ -- 109
+type$ -- 204
+warning$ -- 11
+while$ -- 113
 width$ -- 0
-write$ -- 312
+write$ -- 324
 (There was 1 error message)
