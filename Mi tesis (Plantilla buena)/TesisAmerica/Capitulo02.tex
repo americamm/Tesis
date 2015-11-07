@@ -55,8 +55,12 @@ Existen distintos métodos para obtener dichas características como la de color
 \item Movimiento: Generalmente esta se usa con otras formas de detección ya que para utilizarse por sí sola hay que asumir que el único objeto con movimiento es la mano.
 \end{itemize} 
 
-La segmentación es la partición o separación de la imagen en regiones representativas, es decir separar la mano del fondo de la imagen. Existen diversos métodos para llevar acabo la segmentación de la mano los cuales se clasifican en cuatro clases, basados en pixeles los cuales hacen la separación usando el valor del nivel de gris en la imagen; en el borde estos métodos utilizan los pixeles que representan las orillas del objeto y encuentran el correspondiente contorno; en regiones los cuales van agrupando vecindarios de la imagen de acuerdo a ciertas propiedades; por ultimo la segmentación basada en un modelo la cual hacen uso de algún modelo definido, estos requieren imágenes de entrenamiento para representar la probabilidad de las muestras registradas y finalmente hace inferencias en la imagen.
-
+La segmentación es la partición o separación de la imagen en regiones representativas, es decir separar la mano del fondo de la imagen. Existen diversos métodos para llevar acabo la segmentación de la mano los cuales se clasifican en cuatro clases, basados en pixeles los cuales hacen la separación usando el valor del nivel de gris en la imagen; en el borde estos métodos utilizan los pixeles que representan las orillas del objeto y encuentran el correspondiente contorno; en regiones los cuales van agrupando vecindarios de la imagen de acuerdo a ciertas propiedades; por ultimo la segmentación basada en un modelo la cual hacen uso de algún modelo definido, estos requieren imágenes de entrenamiento para representar la probabilidad de las muestras registradas y finalmente hace inferencias en la imagen \citep{Ibraheem2013}.
+Enseguida se presentan algunas técnicas para realizar la segmentación.
+\begin{itemize}
+\item Color de la piel: Se basa principalmente en escoger un espacio del color, es una organización de colores especifica; como; RGB (rojo, verde, azul), RG (rojo, green), YCrCb (brillo, la diferencia entre el brillo y el rojo, la diferencia entre el brillo y el azul), etc. La desventaja es que si es color de la piel es similar al fondo, la segmentación no es buena, la forma de corregir esta segmentación es suponiendo que el fondo no se mueve con respecto a la cámara.
+\item yk
+\end{itemize}
 
 \subsubsection{Extracción de características y seguimiento}\label{sssec:EtapaSeguimiento}  
 

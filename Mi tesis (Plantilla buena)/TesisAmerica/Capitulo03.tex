@@ -5,9 +5,9 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p 
 
-En este cap\'itulo se describen las etapas del sistema de reconocimiento de gestos propuesto, junto con los métodos o algoritmos que son utilizados en cada una de ellas.   
-
-El sistema de reconocimiento de gestos propuesto consta de cuatro etapas principales \ref{fig:MyHGR}. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema; la segunda etapa es la detección, aquí la mano es localizada y segmentada del fondo; en la etapa tres se extraen las características de la mano para ser procesadas; en la etapa final el gesto realizado es reconocido.   
+En este cap\'itulo se describen las etapas del sistema propuesto junto con los métodos o algoritmos que son utilizados en cada una de las fases.
+ 
+El sistema de reconocimiento de gestos propuesto consta de cuatro etapas principales \ref{fig:MyHGR}. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema; es la detección, aquí la mano es localizada y segmentada del fondo; en la etapa tres se extraen las características de la mano para ser procesadas; en la etapa final el gesto realizado es reconocido.   
 
 \begin{figure}[h!]
 \begin{center}
@@ -19,11 +19,11 @@ El sistema de reconocimiento de gestos propuesto consta de cuatro etapas princip
   
 \section{Adquisición de los datos}\label{sec:KinectSensor} 
 
-Es la primera etapa del sistema, donde se capturan los datos que son la entrada del sistema. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect. A continuación se describe las características de este dispositivo. 
+Es la primera etapa del sistema, donde los datos de entrada del sistema son capturados. En este trabajo los datos provienen de los sensores de profundidad de dos dispositivos Kinect. A continuación se describe las características de este dispositivo. 
 
 En noviembre del 2010 la compa\'nia Microsoft lanz\'o el sensor Kinect para consolas de vídeo juego Xbox 360 y en febrero del 2011 lanz\'o la versi\'on para Windows, que se muestra en la figura \ref{fig:KinectPic}.  
 
-El dispositivo Kinect esta equipado con una serie de sensores que permiten obtener imágenes a color y de profundidad (imágenes que indican a la distancia que esta un objeto del sensor), los cuales permiten hacer detección y seguimiento de personas. Detecta $6$ personas y hace el seguimiento de $2$ personas \footnote{https://msdn.microsoft.com/en-us/library/hh973074.aspx}.    
+El dispositivo Kinect esta equipado con una serie de sensores que permiten obtener imágenes a color y de profundidad (las cuales indican la distancia a la que esta ubicada un objeto del sensor). Los sensores permiten hacer detección y seguimiento de personas. El dispositivo tiene la capacidad de detectar $6$ personas y hacer el seguimiento de $2$ personas \footnote{https://msdn.microsoft.com/en-us/library/hh973074.aspx}.    
   
 \begin{figure}[h!]
 \begin{center}
@@ -35,8 +35,7 @@ El dispositivo Kinect esta equipado con una serie de sensores que permiten obten
 
 \footnotetext{http://blogs.msdn.com/b/eternalcoding/archive/2012/02/01/official-kinect-for-windows-sdk-and-kinect-toolbox-1-1-1-are-out.aspx}
 
-El sensor esta equipado con los siguientes componentes: un cámara de color o sensor de color, un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED \ref{fig:KinectComponentes}. 
-
+El sensor esta equipado con los siguientes componentes: un cámara de color o sensor de color, un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED \ref{fig:KinectComponentes}. \\
 Enseguida se describen brevemente cada uno de los componentes del sensor Kinect, \citep{Jana2013}. 
 \begin{figure}[h!]
 \begin{center}
@@ -50,11 +49,16 @@ Enseguida se describen brevemente cada uno de los componentes del sensor Kinect,
 
 \begin{itemize}
 \item La cámara de color captura y transmite datos de vídeo a color, detectando los colores rojo, verde y azul (RGB, por sus siglas en ingl\'es, red, green and blue). La transmisión de datos que brinda la cámara es una secuencia de imágenes (cuadros), a una velocidad de hasta $30$ cuadros por segundo con una resolución de hasta $1280\, x \, 960$ p\'ixeles. La velocidad de los cuadros por segundo varia según la resolución de la imagen.
-\item El emisor infrarrojo proyecta puntos de luz infrarroja frente al sensor, con estos puntos y el sensor de profundidad se puede medir la profundidad que existe del sensor.
-\item El sensor infrarrojo lee los puntos infrarrojos proyectados y calcula la distancia que existe entre el objeto y el sensor. El sensor transmite los datos de profundidad con una velocidad de $30$ cuadros por segundo con una resolución de hasta $640 \, x \, 480$ pixeles.   
-\item El motor de inclinación controla el \'angulo de la posición vertical de los sensores del dispositivo. El motor puede moverse desde el \'angulo de $-27^ \circ$ a $+27^\circ$. 
-\item Arreglo de micrófonos, consta de $4$ micrófonos, captura el sonido y localiza la dirección en la que proviene. 
-\item LED indica el estado del sensor.
+
+\item El emisor infrarrojo proyecta puntos de luz infrarroja, estos puntos son proyectados frente al sensor. Estos puntos junto con el sensor de profundidad es posible medir la distancia que existe del sensor a algún objeto que este frente a el.  
+
+\item El sensor infrarrojo lee los puntos infrarrojos proyectados por el emisor infrarrojo y calcula la distancia que existe entre el objeto y el sensor. El sensor transmite los datos de profundidad con una velocidad de $30$ cuadros por segundo con una resolución de hasta $640 \, x \, 480$ pixeles.   
+
+\item El motor de inclinación controla el \'angulo de la posición vertical de los sensores del dispositivo. El motor puede moverse desde el \'angulo de $-27^ \circ$ a $+27^\circ$.  
+
+\item El arreglo de micrófonos, consta de $4$ micrófonos. También se captura el sonido y localiza la dirección de la cual proviene. 
+
+\item LED este indica el estado del sensor.
 \end{itemize}
 
 
@@ -62,7 +66,7 @@ Enseguida se describen brevemente cada uno de los componentes del sensor Kinect,
 \section{Detección}\label{sec:Detection}
 
 En esta etapa del sistema el objetivo es localizar y segmentar la mano para extraer las características necesarias para el reconocimiento.\\
-Este procedimiento se lleve acabo de la siguiente manera, figura  \ref{fig:ProcesoDeteccion} el primer paso es localizar la mano, se lleva acabo usando el método de detección rápida de objetos; el siguiente paso es mejorar la imagen de la mano aplicando operaciones morfológicas y finalmente se la imagen que contiene la mano es binarizada. 
+Este procedimiento se lleva acabo de la siguiente manera, figura  \ref{fig:ProcesoDeteccion}. El primer paso es localizar la mano, en este trabajo se utiliza el método de detección rápida de objetos; el siguiente paso es mejorar la imagen de la mano aplicando operaciones morfológicas y finalmente la imagen que contiene la mano es binarizada. 
 
 \begin{figure}[h!]
 \begin{center}

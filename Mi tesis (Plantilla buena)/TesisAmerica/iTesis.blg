@@ -3,13 +3,14 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: iTesis.aux
 The style file: cicese.bst
 Database file #1: iTesis.bib
-Repeated entry---line 201 of file iTesis.bib
+Repeated entry---line 212 of file iTesis.bib
  : @article{Premaratne2013
  :                        ,
 I'm skipping whatever remains of this entry
 Warning--can't use both author and editor fields in Chaki2014
 Warning--empty publisher in Gonzalez2002
 Warning--empty journal in Hasan2012
+Warning--empty journal in Ibraheem2013
 Warning--can't use both author and editor fields in Jana2013
 Warning--empty journal in Kang2013
 Warning--empty journal in Mitra2007
@@ -18,45 +19,45 @@ Warning--empty journal in Nayakwadi2014
 Warning--empty publisher in Smith1999
 Warning--empty year in Ye; set to ????
 Warning--empty journal in Ye
-You've used 25 entries,
+You've used 26 entries,
             2727 wiz_defined-function locations,
-            882 strings with 9386 characters,
-and the built_in function-call counts, 11510 in all, are:
-= -- 1072
-> -- 636
-< -- 31
-+ -- 180
-- -- 180
-* -- 1139
-:= -- 1741
-add.period$ -- 79
-call.type$ -- 25
-change.case$ -- 136
-chr.to.int$ -- 49
-cite$ -- 86
-duplicate$ -- 477
-empty$ -- 756
-format.name$ -- 221
-if$ -- 2347
+            888 strings with 9497 characters,
+and the built_in function-call counts, 11865 in all, are:
+= -- 1108
+> -- 647
+< -- 32
++ -- 183
+- -- 183
+* -- 1172
+:= -- 1796
+add.period$ -- 82
+call.type$ -- 26
+change.case$ -- 140
+chr.to.int$ -- 50
+cite$ -- 90
+duplicate$ -- 492
+empty$ -- 785
+format.name$ -- 225
+if$ -- 2417
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 32
-newline$ -- 132
-num.names$ -- 100
-pop$ -- 247
+missing$ -- 33
+newline$ -- 137
+num.names$ -- 104
+pop$ -- 253
 preamble$ -- 1
-purify$ -- 110
+purify$ -- 113
 quote$ -- 0
-skip$ -- 424
+skip$ -- 436
 stack$ -- 0
-substring$ -- 454
-swap$ -- 193
+substring$ -- 476
+swap$ -- 195
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 204
-warning$ -- 11
-while$ -- 113
+type$ -- 213
+warning$ -- 12
+while$ -- 118
 width$ -- 0
-write$ -- 324
+write$ -- 336
 (There was 1 error message)
