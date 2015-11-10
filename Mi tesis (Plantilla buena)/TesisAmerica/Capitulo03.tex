@@ -82,14 +82,13 @@ En este trabajo se utiliza el método detección rápida de objetos usando carac
 
 La técnica clasifica si el objeto se encuentra en la escena, usando una versión modificada del clasificador AdaBoost \citep{Freund1995} en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}, las características son seleccionadas usando también el clasificador AdaBoost y el valor de estas es calculado mediante el uso de una imagen integral \citep{Viola2001}. 
 
-La figura \ref{fig:ViolaJonesDiagram} muestra un diagrama del proceso del método de detección, el primer paso es obtener la muestras de entrenamiento con las cuales se construirá el clasificador; el siguiente paso es seleccionar las características que formaran el clasificador, estas se escogen mediante el algoritmo de AdaBoost y su valor es calculado usando la imagen integral; el paso final que es construir el clasificador es utilizando 
-Adaboost en forma de cascada.
+La figura \ref{fig:ViolaJonesDiagram} muestra un diagrama del proceso del método de detección, el primer paso es obtener la muestras de entrenamiento con las cuales se construirá el clasificador; el siguiente paso es seleccionar las características que formaran el clasificador, estas se escogen mediante el algoritmo de AdaBoost y su valor es calculado usando la imagen integral; el paso final que es construir el clasificador mediante el uso de Adaboost,  en forma de cascada.
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.6]{./Figures/ViolaJonesDiagram.png}
 \end{center}
-\caption{Procedimiento del algoritmo de detección.}
+\caption{Procedimiento del algoritmo de detección rápida de objetos.}
 \label{fig:ViolaJonesDiagram}
 \end{figure}
 
@@ -97,13 +96,13 @@ Enseguida se explica a detalle cada etapa del método \citep{Viola2001}.
 
 \subsubsection{Características Haar}\label{sssec:CaracteristicasHaar}  
 
-Las características Haar, son operadores rectangulares como los que se muestran en la figura \ref{fig:haarFeatures}. A continuación se explicaran los operadores Haar básicos:
+Las características Haar, son operadores rectangulares como los que se muestran en la figura \ref{fig:haarFeatures}. A continuación se explicarán los operadores Haar básicos:
 \begin{itemize}
 \item Las características con dos rectángulos \ref{fig:haarFeatures:1}, \ref{fig:haarFeatures:2}, contienen dos regiones rectangulares adyacentes, y el valor de la característica se calcula tomando la diferencia de la suma de ambas regiones. 
 
-\item Las características con tres rectángulos \ref{fig:haarFeatures:3}, contienen tres regiones rectangulares adyacentes, y el valor de la característica se calcula la suma de las regiones exteriores y se resta la suma de la región interior.
+\item Las características con tres rectángulos \ref{fig:haarFeatures:3}, contienen tres regiones rectangulares adyacentes, y el valor de la característica se calcula sumando las regiones exteriores y restando la suma de la región interior.
 
-\item Las características con cuatro rectángulos \ref{fig:haarFeatures:4}, contienen cuatro regiones rectangulares adyacentes, y el valor de la característica se obtiene con la diferencia entre las regiones pares diagonales.
+\item Las características con cuatro rectángulos \ref{fig:haarFeatures:4}, contienen cuatro regiones rectangulares adyacentes, y el valor de la característica se obtiene con la diferencia entre la suma de las regiones pares diagonales.
 \end{itemize} 
 
 \begin{figure}[h!]
@@ -112,30 +111,31 @@ Las características Haar, son operadores rectangulares como los que se muestran
 \subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures2}\label{fig:haarFeatures:2}}
 \subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures3}\label{fig:haarFeatures:3}}
 \subfigure[]{\includegraphics[scale=.4]{./Figures/haarFeatures4}\label{fig:haarFeatures:4}}
-\caption{Ejemplo de operadores Haar.} \label{fig:haarFeatures}
+\caption{Ejemplo de tipos de operadores Haar.} \label{fig:haarFeatures}
 \end{figure}
 
 
 \subsubsection{Imagen integral}\label{sssec:IntegralImage} 
 
-Uno de los aportes del método desarrolla por Viola y Jones es el concepto de imagen integral con la cual se calcula el valor de las características de manera rápida, es decir el tiempo constante. 
+Uno de los aportes del método desarrollado por Viola y Jones es el concepto de imagen integral con la cual se calcula el valor de las características de manera rápida, es decir en tiempo constante. 
 
-La imagen integral, $SI$, de un imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}     
-$$SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1)$$ 
-La figura \ref{fig:FigIntegralImage} muestra un  ejemplo donde se calcula la imagen intregral, fig. \ref{fig:FigIntegralImage:2}, de la imagen original \ref{fig:FigIntegralImage:1}.
+La imagen integral, $SI$, de un imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se le quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}     
+$$SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1).$$ 
+La figura \ref{fig:FigIntegralImage} muestra un  ejemplo donde se calcula la imagen integral, fig. \ref{fig:FigIntegralImage:2}, de la imagen original \ref{fig:FigIntegralImage:1}.
 \begin{figure}[h!]
 \centering
-\subfigure[Imagen original]{\includegraphics[scale=.7]{./Figures/ImagetoIntegral}\label{fig:FigIntegralImage:1}} \qquad
-\subfigure[Imagen integral]{\includegraphics[scale=.7]{./Figures/CalculationIntegral}\label{fig:FigIntegralImage:2}}
-\caption{Ejemplo del cálculo de la imagen integral.} \label{fig:FigIntegralImage}
+\subfigure[Imagen original]{\includegraphics[scale=.6]{./Figures/ImagetoIntegral}\label{fig:FigIntegralImage:1}} \qquad
+\subfigure[Imagen integral]{\includegraphics[scale=.6]{./Figures/CalculationIntegral}\label{fig:FigIntegralImage:2}}
+\caption{Ejemplo del cálculo de la imagen integral.} 
+\label{fig:FigIntegralImage}
 \end{figure}
 
 La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de la imagen integral de dicha región, la cual se obtiene como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}   
-$$REG(\alpha)=SI(A)+SI(D)-SI(B)-SI(C)$$
-donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la suma de sus pixeles; $A,B,C,D$ son las esquinas de dicha región, como se muestra en la figura \ref{fig:figImageIntegral}, la region $\alpha$ se encuentra resaltada en color azul.  
+$$REG(\alpha)=SI(A)+SI(D)-SI(B)-SI(C),$$
+donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la suma de sus pixeles; $A,B,C,D$ son las esquinas de dicha región, como se muestra en la figura \ref{fig:figImageIntegral}, la región $\alpha$ se encuentra resaltada en color azul.  
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.3]{./Figures/IntegralImage.png}
+\includegraphics[scale=.25]{./Figures/IntegralImage.png}
 \end{center}
 \caption{Regiones de la imagen integral.}
 \label{fig:figImageIntegral}
@@ -144,58 +144,55 @@ donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la su
 
 \subsubsection{Algoritmo AdaBoost}\label{sssec:AdaboostClasifier}  
 
-En el método de detección el clasificador AdaBoost es utilizado para seleccionar las características relevantes, con las cuales se podrá detectar el objeto. 
+En el método de detección el clasificador AdaBoost es utilizado para seleccionar las características relevantes, con las cuales se podrá detectar el objeto. También es utilizado para construir el clasificador final pero en forma de cascada, el cual se explicará en la sección \ref{sssec:AdaboostCascade}. 
 
-El algoritmo AdaBoost realiza su clasificación construyendo un clasificador fuerte, $h(x)$, llamado así debido a que tiene una precision mayor que los otros clasificadores con los que es construido, clasificadores débiles, $h_i(x)$. Los clasificares débiles son calculados de la siguiente manera: 
+El algoritmo AdaBoost realiza la discriminación de objetos construyendo un clasificador fuerte, $h(x)$, llamado así debido a que tiene una precisión mayor en comparación con los clasificadores con los que es construido, clasificadores débiles, $h_i(x)$. Los clasificadores débiles son calculados de la siguiente manera: 
 $$h_i(x)=
 \begin{cases}   
-1, \quad Si \quad  p_if_i(x)<p_i \theta_i \\
+1, \quad si \quad  p_if_i(x)<p_i \theta_i \\
 0, \quad de \quad otra \quad forma.\\
-\end{cases}$$
-donde $x$ es una sub ventana de la imagen, $f_i(x)$ es una característica, $\theta$ es un umbral, y $p_i(x)$ representa el signo de la desigualdad.   
+\end{cases} ,$$
+donde $x$ es una sub-ventana de la imagen, $f_i(x)$ es una característica, $\theta$ es un umbral, y $p_i(x)$ representa el signo de la desigualdad.   
 
 El clasificador fuerte es una combinación lineal de los clasificadores débiles, y se define de la siguiente forma: 
-$$h(x)= \alpha_1h_1(x)+\alpha_2h_2(x)+ \cdots +\alpha_nh_n(x)$$ 
+$$h(x)= \alpha_1h_1(x)+\alpha_2h_2(x)+ \cdots +\alpha_nh_n(x) ,$$ 
 donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a cada característica, el cual va entre $0$ y $1$.
 
-
-Enseguida se presenta el algoritmo de AdaBoost:
+Enseguida se presenta el algoritmo AdaBoost:
 
 \begin{algorithm}[h!]
 \begin{algorithmic}[1]
 
-\REQUIRE El conjunto $\lbrace (x_1,y_1), \cdots, (x_n,y_n) \rbrace$ donde $x_i$ representa las imágenes de entrenamiento, $y_i=0,1$ representa las imágenes negativas y positivas respectivamente. 
+\REQUIRE El conjunto $\lbrace (x_1,y_1), \cdots, (x_n,y_n) \rbrace$ donde $x_i$ representa las imágenes de entrenamiento, $y_i= 0,1,$ representa las imágenes negativas y positivas respectivamente. 
 \ENSURE El clasificador fuerte $h(x)$.  
 
-\STATE Se inicializan los pesos $w_{1,i}=\frac{1}{2m} , \frac{1}{2l}$ para $y_i=0,1$ respectivamente, donde $m$ y $l$ son el número de imágenes negativas y positivas respectivamente.  
+\STATE Se inicializan los pesos $w_{1,i}=\frac{1}{2m} , \frac{1}{2l},$ para $y_i=0,1$ respectivamente, donde $m$ y $l$ son el número de imágenes negativas y positivas respectivamente.  
 
 \FOR {$t=1$ hasta $T$}   
-
 	\STATE Se normalizan los pesos 
-	$$w_{t,i}=\frac{w_{t,i}}{\sum_{j=1}^n w_{t,j}}$$ 
+	$$w_{t,i}=\frac{w_{t,i}}{\sum_{j=1}^n w_{t,j}},$$ 
 	para que $w_t$ sea una distribución  de probabilidad. 	
 	
 	\FOR {cada características $j$} 
-	Entrenar un clasificador $h_j$ donde se utiliza una sola característica. 
+	Entrenar un clasificador $h_j,$ donde se utiliza una sola característica. 
 	El error $\epsilon$ es evaluado con respecto a $w_t$, 
-	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}$$ 
+	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}.$$ 
     \ENDFOR
 	
 	\STATE Escoger el clasificador $h_i$ con el error más pequeño. 
 	
 	\STATE Se actualizan los pesos  
-	$$w_{t+1,i}=w_{t,i} \beta_t^{1-e_i}$$ 
-	donde $\beta_t = \frac{\epsilon_T}{1-\epsilon_t}$, 
+	$$w_{t+1,i}=w_{t,i} \beta_t^{1-e_i},$$ 
+	donde $\beta_t = \frac{\epsilon_T}{1-\epsilon_t}$, el valor de  
 	$e_i=0$ si $x_i$ es clasificado correctamente de otra forma $e_i=1$. 
-	
 \ENDFOR  
 
 \STATE El clasificador final o clasificador fuerte es: 
 $$ h(x) = 
 \begin{cases}  
-1, \quad \sum_{t=1}^T \alpha_th_t(x) \geqslant \frac{1}{2}\sum_{t=1}^T \alpha_t. \\  
+1, \quad \sum_{t=1}^T \alpha_th_t(x) \geqslant \frac{1}{2}\sum_{t=1}^T \alpha_t\\  
 0, \quad de \quad otra \quad forma. 
-\end{cases} $$
+\end{cases} ,$$
 donde $\alpha_t = \log{\frac{1}{\beta_t}}$.
 
 \caption{}\label{alg:AdaBoost}
@@ -203,39 +200,56 @@ donde $\alpha_t = \log{\frac{1}{\beta_t}}$.
 \end{algorithm} 
 
 
-\subsubsection{Clasificador AdaBoost en Cascada}\label{sssec:AdaboostCascade}   
+\subsubsection{Clasificador AdaBoost en cascada}\label{sssec:AdaboostCascade}   
 
-El objetivo de realizar la detección utilizando un clasificador en forma de cascada es descartar de manera rápida las regiones donde no se encuentra el objeto. Lo cual se realiza seleccionando las características relevantes que se evalúan primero.  
-Esta selección se realiza como lo muestra el algoritmo \ref{alg:Cascade}  cumpliendo cierto valor en la precision  de la detección y del número de falsos positivos. 
-El clasificador en cascada \ref{fig:Cascade} esta compuesto por etapas cada una de estas es un clasificador fuerte que es entrenado por medio de AdaBoost. 
+El objetivo de realizar la detección utilizando un clasificador en forma de cascada es descartar de manera rápida las regiones donde no se encuentra el objeto.
+
+El clasificador en cascada  esta compuesto por etapas \ref{fig:Cascade}, cada una de estas es un clasificador fuerte. Este clasificador es entrenado por medio de AdaBoost.El cual se encarga de encontrar el orden de evaluación de las características relevantes.  
+
+La selección se realiza como se muestra en el algoritmo \ref{alg:Cascade} , cumpliendo cierta precisión en la detección $D$, ver ecuacion \ref{eq:D} , y cierta tasa de falsos positivos $F$, ver ecuación \ref{eq:F} .
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.45]{./Figures/DCascade.png}
+\includegraphics[scale=.60]{./Figures/DCascade.png}
 \end{center}
-\caption{Clasificador en forma de cascada.}
+\caption{Proceso del clasificador en forma de cascada, donde F representa la tasa de falsos positivos del clasificador de cascada y T .}
 \label{fig:Cascade}
-\end{figure} 
+\end{figure}
+
+El proceso de detección funciona de la siguiente manera: la sub-ventana es evaluada en el primer clasificador; un resultado positivo desencadena la evaluación de un segundo clasificador, el cual también ha sido ajustado para alcanzar cierta precision; un resultado positivo en el segundo clasificador desencadena una tercera evaluación en el siguiente clasificador, y así sucesivamente. Un resultado negativo en cualquier punto del proceso de evaluación conduce al rechazo inmediato de la sub-ventana.
+
+La tasa de detección del clasificador en forma de cascada es: 
+\begin{equation} \label{eq:D}
+D = \prod^K_{i=1} d_i ,
+\end{equation}
+donde $d_i$ es la tasa de precisión de detección del $i$-ésimo clasificador fuerte.  
+
+La tasa de precisión de falsos positivos, $F$ del clasificador de cascada es: 
+\begin{equation} \label{eq:F}
+F = \prod^K_{i=1} f_i ,
+\end{equation}
+donde $K$ es el número de clasificadores fuertes y $f_i$ es la tasa de precisión del $i$-ésimo clasificador. 
 
 \begin{algorithm}[h!]
-\begin{algorithmic}[1]
-\REQUIRE Imágenes positivas $P$, negativas $N$, $f$ el valor máximo de precisión de falsos positivos por etapa, $d$ es el valor mínimo de precisión de la detección por etapa, . 
+\begin{algorithmic}[2]
+
+\REQUIRE Imágenes positivas $P$, negativas $N$, $f$ el valor máximo de precisión de falsos positivos por etapa, $d$ es el valor mínimo de precisión en la detección por etapa. 
 \ENSURE El clasificador en forma de cascada.  
 
-\STATE  $F_0 = 1$, $D_0=1$
+\STATE  $F_0 = 1$, $D_0=1.$
 
-\STATE  $i=0$ 
+\STATE  $i=0.$ 
 
 \WHILE {$F_i > F_{Tarjet}$} 
-	\STATE $i=i+1$
-	\STATE $n_i=0$, $F_i=F_{i-1}$
+	\STATE $i=i+1.$
+	\STATE $n_i=0$, $F_i=F_{i-1}.$
 	\WHILE {$F_I > F \times fp_{i-1}$} 
-		\STATE $n_i = n_i +1$ 
+		\STATE $n_i = n_i +1.$ 
 		\STATE Entrenar un clasificador usando AdaBoost con $P$, $N$ y $n_i$ características. 
 		\STATE Evaluar el clasificador de cascada para determinar $F_i$ y $D_i$ en el conjunto de validación. 
 		\STATE Decrementar el umbral para el $i$-ésimo clasificador hasta que el actual clasificador en cascada tenga un grado 			de detección de por lo menos $d \times D_i-1$.
 	\ENDWHILE
-	\STATE $N=0$ 
+	\STATE $N=0.$ 
 	\IF {$F_i > F_{Tarjet}$} 
 		\STATE Evaluar el actual clasificador en cascada en el conjunto de imágenes negativas y poner cualquier detección 				falsa en el conjunto $N$.
 	\ENDIF
@@ -248,61 +262,60 @@ El clasificador en cascada \ref{fig:Cascade} esta compuesto por etapas cada una 
 
 \subsection{Binarización}\label{subsec:Binarization} 
 
-La binarización es una técnica de procesamiento de imágenes, la cual se encarga de transformar una imagen en escala de grises $S(x,y)$ en una imagen binaria $B(x,y)$ es decir, los pixeles de la imagen toman un valor de $0$ ó $1$.   
-Para formar la imagen binaria un valor, umbral, de la imagen en escala de grises es seleccionado. Ya que se tiene el umbral, $T$,     
-los pixeles de la imagen son discriminados dependiendo si su valor es mayor o igual al umbral entonces el valor de los pixeles en la imagen binaria es $1$ el resto toma valor de $0$. Es decir: 
+La binarización es una técnica de procesamiento de imágenes, la cual se encarga de transformar una imagen en escala de grises $S(x,y)$ en una imagen binaria $B(x,y)$ es decir, los pixeles de la imagen toman un valor de $0$ ó $1$. Para formar la imagen binaria un valor o umbral de la imagen en escala de grises es seleccionado. \\ 
+Una vez seleccionado el umbral, $T$, los pixeles de la imagen son discriminados. Si el valor de los pixeles de la imagen es mayor o igual al umbral entonces el valor de los pixeles de la imagen binaria es $1$, si no toma el valor de $0$. Es decir: 
 $$B(x,y)=
 \begin{cases}   
 1, \quad Si \quad S(x,y)\geq T \\
-0, \quad de \quad otra \quad forma.\\
-\end{cases}$$
+0, \quad de \quad otra \quad forma\\
+\end{cases}.$$
 
-Existen diversas técnicas para binarizar una imagen, estas se pueden clasificar en dos grupos dependiendo de la manera es que es calcula el umbral, global o local. Los métodos globales calculan un umbral que es usado en toda la imagen y los métodos locales calculan varios umbrales para ciertas regiones de la imagen \citep{Chaki2014}.  
+Existen diversas técnicas para binarizar una imagen, estas se pueden clasificar en dos grupos: global y local. Los métodos globales calculan un umbral, el cual es utilizado para todos los pixeles de la imagen y los métodos locales que calculan varios umbrales para ciertas regiones de la imagen \citep{Chaki2014}.  
 
-Un método de binarización muy utilizado es el de NiBlack,\citep{Niblack1985} es un método local y adaptativo ya que adapta el umbral basándose en la media $m(i,j)=$ y la desviación estándar $\sigma(i,j)$ de una ventana deslizante de tamaño $bxb$. El umbral $T$  se calcula como: 
-$$T(i,j)=m(i,j)+k \cdot \sigma(i,j)$$ 
-donde $k \in [0,1]$ el valor de la constante determina que tanta parte del contorno es preservado \citep{Chaki2014}.
+Un método de binarización muy utilizado es el de \citep{Niblack1985}, es un método local y adaptativo ya que ajusta el umbral basándose en la media $m(i,j)$, y la desviación estándar $\sigma(i,j)$, de una ventana deslizante de tamaño $bxb$. El umbral $T$ se calcula como: 
+$$T(i,j)=m(i,j)+k \cdot \sigma(i,j),$$ 
+donde $k \in [0,1]$. El valor de la constante $k$ determina que tanta parte del contorno es preservado \citep{Chaki2014}.
 
 
   
 \subsection{Operaciones Morfológicas}\label{subsec:OperacionesMorfologicas} 
 
-Otra técnica muy utilizada en procesamiento de imágenes son las operaciones morfológicas que son un conjunto de operaciones no lineales, la idea es que al aplicar alguna de estas operaciones el ruido se removido tomando en cuanta la forma y estructura de la imagen. 
-La operaciones morfológicas utilizan un elemento estructural el cual se aplica por toda la imagen, los elementos estructurales pueden ser de distintas formas como \ref{fig:EX}
-
+Otra técnica muy utilizada en procesamiento de imágenes son las operaciones morfológicas que son un conjunto de operaciones no lineales, la idea es que al aplicar alguna de estas operaciones el ruido sea removido tomando en cuenta la forma y estructura de la imagen.\\ 
+La operaciones morfológicas \citep{Premaratne2013} utilizan un elemento estructural el cual se aplica por toda la imagen, los elementos estructurales pueden ser de distintas formas como los que se muestran en la figura \ref{fig:EX}.
 \begin{figure}[h!]
 \centering
-\subfigure[Rectángulo de $3x3$.]{\includegraphics[scale=.7]{./Figures/EX1}\label{fig:EX:1}} %\hspace{20mm}
-\qquad
-\subfigure[Figura de $3x2$.]{\includegraphics[scale=.7]{./Figures/EX3}\label{fig:EX:3}} 
-\\
-\subfigure[Cruz de $5x5$.]{\includegraphics[scale=.7]{./Figures/EX2}\label{fig:EX:2}}
+\subfigure[Rectángulo de $3x3$.]{\includegraphics[scale=.68]{./Figures/EX1}\label{fig:EX:1}} \qquad
+\subfigure[Figura de $3x2$.]{\includegraphics[scale=.68]{./Figures/EX3}\label{fig:EX:3}} \qquad
+\subfigure[Cruz de $5x5$.]{\includegraphics[scale=.42]{./Figures/EX2}\label{fig:EX:2}} 
 \caption{Ejemplos de elementos estructurales.} \label{fig:EX}
 \end{figure} 
 
-Existen distintas operaciones morfológicas, las principales o básicas son la dilatación y erosión las cuales se explican enseguida junto con la apertura y cierre. 
+Existen distintas operaciones morfológicas, las básicas o principales son la dilatación y erosión las cuales se explican enseguida junto con la apertura y cierre. 
  
 \subsubsection{Dilatación}\label{sssec:Dilatation}
-
-La dilatación es una operación que añade pixeles a la orilla de los objetos que se encuentran en la imagen. La dilatación se define como:  
-$$S \oplus EX = \lbrace S|EX_S \subseteq S \rbrace$$  
+La dilatación es una operación que añade pixeles a la orilla de los objetos que se encuentran en la imagen. En la figura \ref{fig:OM:2} 
+se aplica esta operación a la figura \ref{fig:OM:1}.\\
+La dilatación se define como:  
+$$S \oplus EX = \lbrace S|EX_S \subseteq S \rbrace,$$  
 donde $EX_S$ es el elemento estructural trasladado con la imagen. 
 
 \subsubsection{Erosión}\label{sssec:OMerosion}
-
-La erosión remueve pixeles a la orilla de los objetos que se encuentran en la imagen. La erosión se define como: 
-$$S \ominus EX = \lbrace S|EX_S \subseteq S \rbrace$$ 
+La erosión remueve pixeles a la orilla de los objetos que se encuentran en la imagen. En la figura \ref{fig:OM:3} se muestra el resultado de aplicar la operación a la figura \ref{fig:OM:1}.\\ 
+La erosión se define como: 
+$$S \ominus EX = \lbrace S|EX_S \subseteq S \rbrace,$$ 
 donde $EX_S$ es el elemento estructural trasladado con la imagen. 
 
 \subsubsection{Apertura}\label{sssec:Opening} 
-
-La operación apertura abre huecos entre objetos conectados por un enlace delgado de pixeles.  
-$$S \circ EX = (S \ominus EX) \oplus EX $$
+La operación apertura abre huecos entre objetos conectados por un enlace delgado de pixeles, también suaviza los contornos del objeto. Esta operación se calculada realizado dos operaciones básicas una erosión seguida de una dilatación \\ 
+La apertura se define como:  
+$$S \circ EX = (S \ominus EX) \oplus EX.$$ 
+La figura \ref{fig:OM:4} muestra el resultado de aplicar la operación apertura a la figura \ref{fig:OM:1}.
 
 \subsubsection{Cierre}\label{sssec:Closure}
-
-La operación cierre elimina huecos pequeños  y rellena huecos en las
-$$S \bullet EX = (S \oplus EX) \ominus EX $$
+La operación cierre elimina huecos pequeños y rellena huecos en los contornos. El cierre es calculado realizando las operación de dilatación seguida de la erosión.\\
+El cierre se define como:
+$$S \bullet EX = (S \oplus EX) \ominus EX.$$
+La figura \ref{fig:OM:5} muestra el resultado de aplicar la operación a la figura \ref{fig:OM:1}.
 
 \begin{figure}[h!]
 \centering
@@ -311,7 +324,7 @@ $$S \bullet EX = (S \oplus EX) \ominus EX $$
 \subfigure[erosión]{\includegraphics[scale=.55]{./Figures/erosionMO}\label{fig:OM:3}} \hspace{10mm}
 \subfigure[apertura]{\includegraphics[scale=.55]{./Figures/openingMO}\label{fig:OM:4}} \hspace{10mm}
 \subfigure[cierre]{\includegraphics[scale=.55]{./Figures/closingMO}\label{fig:OM:5}}
-\caption{Aplicación de operaciones morfológicas \citep{Smith1999} \label{fig:OM}}
+\caption{Aplicación de las principales operaciones morfológicas a la imagen que se encuentra en el inciso a, \citep{Smith1999}.\quad }\label{fig:OM}
 \end{figure} 
 
 
@@ -319,7 +332,7 @@ $$S \bullet EX = (S \oplus EX) \ominus EX $$
 \section{Extracción de características}\label{sec:Convexhull} 
 
 La idea de esta etapa es obtener las características de la imagen que sean capaces de describir la mano, de manera que con estas, se pueda reconocer los gestos realizados.\\     
-En este trabajo se extraen características geométricas, las cuales son extraídas de la siguiente forma: el primer paso es encontrar la envolvente convexa de la mano para posteriormente calcular los defectos de convexidad una vez realizado lo anterior se pueden calcular el numero de dedos de la mano entre otras características; finalmente las características calculadas  se guardan en un vector.  
+En este trabajo se extraen características geométricas, las cuales son extraídas de la siguiente forma \ref{fig:DiagramaExtraccionCaracteristicas}: el primer paso es encontrar la envolvente convexa de la mano para posteriormente calcular los defectos de convexidad, una vez aplicados estos algoritmos se calcula el número de dedos de la mano entre otras características; finalmente las características calculadas  se guardan en un vector.  
 
 \begin{figure}[h!]
 \begin{center}
@@ -331,14 +344,13 @@ En este trabajo se extraen características geométricas, las cuales son extraí
 
 A continuación se definen los conceptos anteriores y el de conjunto convexo.
 
-Sea $A$ un conjunto en el espacio euclidiano $\bold{R}^d$, $A$ es un conjunto convexo \footnote{Weisstein, Eric W. "Convex." From MathWorld--A Wolfram Web Resource. http://mathworld.wolfram.com/Convex.html} si contiene todos los segmentos de línea que unen a cualquier par de puntos pertenecientes al conjunto. Donde $d$ es la dimensión del espacio euclidiano. 
+Sea $A$ un conjunto en el espacio euclidiano $\bold{\Re}^d$, donde $d$ es la dimensión del espacio euclidiano. $A$ es un conjunto convexo \footnote{\label{ConvexFN} Weisstein, Eric W. "Convex." From MathWorld--A Wolfram Web Resource. http://mathworld.wolfram.com/Convex.html} si contiene todos los segmentos de línea que unen a cualquier par de puntos pertenecientes al conjunto.  
 \begin{figure}[h!]
 \centering
-\subfigure[Conexo]{\includegraphics[scale=.8]{./Figures/ConvexSet.png}\label{fig:Sets:Convex}} \hspace{10mm}
-\subfigure[convexo]{\includegraphics[scale=.75]{./Figures/ConcaveSet.png}\label{fig:OM:Concave}} \hspace{10mm}
-\caption{Conjunto conexo y convexo \footnotemark{}}\label{fig:Sets}
+\subfigure[Convexo]{\includegraphics[scale=.8]{./Figures/ConvexSet.png}\label{fig:Sets:Convex}} \hspace{10mm}
+\subfigure[conexo]{\includegraphics[scale=.75]{./Figures/ConcaveSet.png}\label{fig:OM:Concave}} \hspace{10mm}
+\caption{Ejemplo de un conjunto conexo y un convexo. Image recuperada de \ref{ConvexFN} }\label{fig:Sets}
 \end{figure} 
-\footnotetext{}
 
 Sea $B$ un conjunto de puntos en el plano Euclidiano, la envolvente convexa de $B$ es el conjunto convexo más pequeño que contiene a todos los puntos en $B$. En la imagen \ref{fig:FigConvexHullDefects} se muestra de color rojo la envolvente convexa de la figura cuyo contorno se encuentra de color negro. 
 
@@ -354,9 +366,10 @@ En la imagen \ref{fig:FigConvexHullDefects} los puntos amarillos representan los
 \label{fig:FigConvexHullDefects}
 \end{figure}  
 
-Usando las técnicas anteriores podemos extraer características importantes como el numero de dedos, la posición del centro de la mano, el ángulo que existe entre cada dedo. 
+Usando las técnicas anteriores podemos extraer características importantes como el número de dedos, la posición del centro de la mano, el ángulo que existe entre cada dedo, el ángulo del centro de la mano a la punta de los dedos, entre otras. 
 
-El número de dedos que se encuentran levantados es calculado con el algoritmo \ref{alg:NumDedos}, \textbf{referenciar}, que utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$ y el de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa.  
+El número de dedos que se encuentran levantados es calculado con el algoritmo \ref{alg:NumDedos}, \textbf{referenciar}, que utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$ y el de mayor distancia, \\ 
+$\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa.  
 
 \begin{algorithm}[h!]
 \begin{algorithmic}[1]
@@ -371,18 +384,18 @@ El número de dedos que se encuentran levantados es calculado con el algoritmo \
 	\ENDIF 
 	
 	\IF{i=0} 
-	\STATE $antecesor=n-1$
+	\STATE $antecesor=n-1$,
 	\ELSE
-	\STATE $antecesor=i-1$
+	\STATE $antecesor=i-1$,
 	\ENDIF 
 
 	\IF{i=n-1} 
-	\STATE $sucesor=0$
+	\STATE $sucesor=0$,
 	\ELSE
-	\STATE $sucesor=i+1$
+	\STATE $sucesor=i+1$,
 	\ENDIF   
 	
-	\STATE Calcular el ángulo entre $s_{antecesor}(x,y)$, $d_i}$  $s_{sucesor}(x,y)$
+	\STATE Calcular el ángulo entre $s_{antecesor}(x,y)$, $d_i}$  $s_{sucesor}(x,y)$.
 	
 	\IF{$ \text{ángulo} \geqslant maxAng$}
 	\STATE \textbf{continuar}
@@ -397,23 +410,31 @@ El número de dedos que se encuentran levantados es calculado con el algoritmo \
 \end{algorithm} 
 
 El ángulo $\alpha$ entre los dedos $Nf_j$ y $Nf_{j+1}$ es calculado como:  
-$$ \alpha_{f_j} = \tan^{-1}{ \bigg| \frac{m_{j+1}-m_j}{1+m_{j+1}m_j} \bigg|}$$
-donde $m_{j+1},m_j$ son las pendientes de las rectas que pasa por los puntos $d_j(x,y)$ y $s_{j+1}(x,y)$; $d_j(x,y)$ y $s_j(x,y)$; $j=\lbrace 1,2,3,4,5 \rbrace$.  
+$$ \alpha_{f_j} = \tan^{-1}{ \bigg| \frac{m_{j+1}-m_j}{1+m_{j+1}m_j} \bigg|},$$
+donde $m_{j+1}$, $m_j$, son las pendientes de las rectas que pasa por los puntos $d_j(x,y)$ y $s_{j+1}(x,y)$, $d_j(x,y)$ y $s_j(x,y)$, $j=\lbrace 1,2,3,4,5 \rbrace$.  
 
 El ángulo del centro de la mano a la punta de los dedos puede ser obtenido como: 
-$$ \theta_{Nf_j} = \tan^{-1} | {m_j} - 90^\circ |$$
-donde $m_j$ es la pendiente de la recta que pasa por el centro de la mano y la punta de los dedos $s_i(x,y)$.
+$$ \theta_{Nf_j} = \tan^{-1} | {m_j} - 90^\circ |,$$
+donde $m_j$, es la pendiente de la recta que pasa por el centro de la mano y la punta de los dedos $s_i(x,y)$.
 
-Una vez que todas las características son calculas están se guardan en un vector, llamado vector de características. La dimension del vector es el numero de características que este contiene. 
+Una vez que todas las características son calculas están se guardan en un vector, llamado vector de características. La dimensión del vector es el numero de características que este contiene. 
 
 
 \section{Reconocimiento}\label{sec:SVM} 
 
 Es la etapa final del reconocimiento, es donde finalmente el gesto puede ser interpretado por la computadora.  
 
-En este trabajo el reconocimiento se realiza con el método de máquinas de soporte vectorial (SVM, por sus siglas en ingles, support vector machine), un método de aprendizaje de máquina supervisado que es utilizado para resolver problemas de clasificación y regresión. El cual tiene como objetivo crear un modelo basado en datos conocimos (datos de entrenamiento), que predice a que clase pertenecen datos nuevos. 
+En este trabajo el reconocimiento se realiza utilizando el algoritmo de máquinas de soporte vectorial SVM, \citep{Cortes1995}, un método de aprendizaje de máquina supervisado que es utilizado para resolver problemas de clasificación y regresión. El cual tiene como objetivo crear un modelo basado en datos conocimos (datos de entrenamiento), que predice a que clase pertenecen datos nuevos. 
 
-SVM realiza la clasificación separando las clases buscando el hiperplano que tengan el margen  de separación más grande. Enseguida se explica a detalle el funcionamiento del método. 
+SVM realiza la clasificación separando las clases calculando el hiperplano que tengan el margen  de separación más grande \ref{fig:SVM} . Enseguida se explica a detalle el funcionamiento del método. 
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.3]{./Figures/maquinaSoporte.jpg}
+\end{center}
+\caption{Clasificación de maquina de soporte usando kernel lineal}
+\label{fig:SVM}
+\end{figure} 
 
 Dado $N$ puntos de entrenamiento $x_i$, de dimensión $D$, dos clases distintas $y_i=-1$
 o $+1$ es decir: 
@@ -425,13 +446,7 @@ $$ w \cdot x + b = +1 \textrm{ para } y_i=+1$$
 $$ w \cdot x + b = -1 \textrm{ para } y_i=-1$$ 
 Maximizar el margen, encontrar el mínimo de $w$.  
 $$Min\Vert w \Vert \quad \text{tal que} \quad y_i(w \cdot x_i + b) -1 \geq 0$$
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=.3]{./Figures/maquinaSoporte.jpg}
-\end{center}
-\caption{Clasificación de maquina de soporte usando kernel lineal}
-\label{fig:SVM}
-\end{figure} 
+
 
 
 \newpage

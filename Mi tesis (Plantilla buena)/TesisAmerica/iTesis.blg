@@ -3,11 +3,19 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: iTesis.aux
 The style file: cicese.bst
 Database file #1: iTesis.bib
-Repeated entry---line 212 of file iTesis.bib
+Repeated entry---line 252 of file iTesis.bib
  : @article{Premaratne2013
  :                        ,
 I'm skipping whatever remains of this entry
+Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at the end for entry Chih-WeiHsuChih-ChungChang2008
+while executing---line 1442 of file cicese.bst
+Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at the end for entry Chih-WeiHsuChih-ChungChang2008
+while executing---line 1442 of file cicese.bst
 Warning--can't use both author and editor fields in Chaki2014
+Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at the end for entry Chih-WeiHsuChih-ChungChang2008
+while executing---line 1513 of file cicese.bst
+Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at the end for entry Chih-WeiHsuChih-ChungChang2008
+while executing---line 1513 of file cicese.bst
 Warning--empty publisher in Gonzalez2002
 Warning--empty journal in Hasan2012
 Warning--empty journal in Ibraheem2013
@@ -19,45 +27,45 @@ Warning--empty journal in Nayakwadi2014
 Warning--empty publisher in Smith1999
 Warning--empty year in Ye; set to ????
 Warning--empty journal in Ye
-You've used 26 entries,
+You've used 28 entries,
             2727 wiz_defined-function locations,
-            888 strings with 9497 characters,
-and the built_in function-call counts, 11865 in all, are:
-= -- 1108
-> -- 647
-< -- 32
-+ -- 183
-- -- 183
-* -- 1172
-:= -- 1796
-add.period$ -- 82
-call.type$ -- 26
-change.case$ -- 140
-chr.to.int$ -- 50
-cite$ -- 90
-duplicate$ -- 492
-empty$ -- 785
-format.name$ -- 225
-if$ -- 2417
+            905 strings with 9818 characters,
+and the built_in function-call counts, 12770 in all, are:
+= -- 1199
+> -- 691
+< -- 34
++ -- 195
+- -- 195
+* -- 1271
+:= -- 1931
+add.period$ -- 88
+call.type$ -- 28
+change.case$ -- 150
+chr.to.int$ -- 52
+cite$ -- 96
+duplicate$ -- 522
+empty$ -- 848
+format.name$ -- 243
+if$ -- 2597
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 33
-newline$ -- 137
-num.names$ -- 104
-pop$ -- 253
+missing$ -- 35
+newline$ -- 147
+num.names$ -- 112
+pop$ -- 263
 preamble$ -- 1
-purify$ -- 113
+purify$ -- 121
 quote$ -- 0
-skip$ -- 436
+skip$ -- 466
 stack$ -- 0
-substring$ -- 476
-swap$ -- 195
+substring$ -- 535
+swap$ -- 207
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 213
+type$ -- 231
 warning$ -- 12
-while$ -- 118
+while$ -- 128
 width$ -- 0
-write$ -- 336
-(There was 1 error message)
+write$ -- 362
+(There were 5 error messages)

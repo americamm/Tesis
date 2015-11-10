@@ -34,15 +34,15 @@
 \contentsline {subsubsection}{\numberline {3.2.1.1}Caracter\IeC {\'\i }sticas Haar}{22}{subsubsection.3.2.1.1}
 \contentsline {subsubsection}{\numberline {3.2.1.2}Imagen integral}{23}{subsubsection.3.2.1.2}
 \contentsline {subsubsection}{\numberline {3.2.1.3}Algoritmo AdaBoost}{24}{subsubsection.3.2.1.3}
-\contentsline {subsubsection}{\numberline {3.2.1.4}Clasificador AdaBoost en Cascada}{26}{subsubsection.3.2.1.4}
-\contentsline {subsection}{\numberline {3.2.2}Binarizaci\IeC {\'o}n}{26}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Operaciones Morfol\IeC {\'o}gicas}{27}{subsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.3.1}Dilataci\IeC {\'o}n}{28}{subsubsection.3.2.3.1}
+\contentsline {subsubsection}{\numberline {3.2.1.4}Clasificador AdaBoost en cascada}{25}{subsubsection.3.2.1.4}
+\contentsline {subsection}{\numberline {3.2.2}Binarizaci\IeC {\'o}n}{27}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Operaciones Morfol\IeC {\'o}gicas}{28}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Dilataci\IeC {\'o}n}{29}{subsubsection.3.2.3.1}
 \contentsline {subsubsection}{\numberline {3.2.3.2}Erosi\IeC {\'o}n}{29}{subsubsection.3.2.3.2}
 \contentsline {subsubsection}{\numberline {3.2.3.3}Apertura}{29}{subsubsection.3.2.3.3}
-\contentsline {subsubsection}{\numberline {3.2.3.4}Cierre}{29}{subsubsection.3.2.3.4}
+\contentsline {subsubsection}{\numberline {3.2.3.4}Cierre}{30}{subsubsection.3.2.3.4}
 \contentsline {section}{\numberline {3.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{30}{section.3.3}
-\contentsline {section}{\numberline {3.4}Reconocimiento}{32}{section.3.4}
+\contentsline {section}{\numberline {3.4}Reconocimiento}{33}{section.3.4}
 \contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{35}{chapter.4}
 \contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{35}{section.4.1}
 \contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{37}{section.4.2}

@@ -20,6 +20,17 @@ Chang, C.-C. y Lin, C.-J. (2011).
 \newblock {\em ACM Transactions on Intelligent Systems and Technology\/}, {\bf
   2}(3): 1--27.
 
+\bibitem[{Chih-Wei Hsu, Chih-Chung Chang} y Lin(2008){Chih-Wei Hsu, Chih-Chung
+  Chang} y Lin]{Chih-WeiHsuChih-ChungChang2008}
+{Chih-Wei Hsu, Chih-Chung Chang} y Lin, C.-J. (2008).
+\newblock {A Practical Guide to Support Vector Classification}.
+\newblock {\em BJU international\/}, {\bf 101}(1): 1396--400.
+
+\bibitem[Cortes y Vapnik(1995)Cortes y Vapnik]{Cortes1995}
+Cortes, C. y Vapnik, V. (1995).
+\newblock {Support-vector networks}.
+\newblock {\em Machine Learning\/}, {\bf 20}(3): 273--297.
+
 \bibitem[Freund y Schapire(1995)Freund y Schapire]{Freund1995}
 Freund, Y. y Schapire, R. (1995).
 \newblock {A desicion-theoretic generalization of on-line learning and an
