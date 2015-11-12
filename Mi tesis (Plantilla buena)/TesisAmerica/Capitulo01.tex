@@ -78,34 +78,36 @@ La definición de gestos \citep{Mitra2007} son movimientos del cuerpo expresivos
 Los primeros acercamientos para llevar acabo el reconocimiento de gestos con las manos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario \ref{fig:Modelos:1}, para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visión \ref{fig:Modelos:2} , surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde cámaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundidad.   
 
 \begin{figure}[h!]
-\centering 
-	\begin{subfigure}
-		{\includegraphics[scale=.25]{./Figures/Dataglove.jpg} } \qquad
-		{\includegraphics[scale=.20]{./Figures/colorGloves.jpg}}\qquad   
-        {\includegraphics[scale=.29]{./Figures/wii.jpg} }	 
-	 	\caption{Dispositivos basados en contacto: en la parte izquierda de la imagen se observan los guantes de datos \footnotemark{}, en el centro los guantes de colores  \footnotemark{}  y a la derecha se encuentra el dispositivo wii \footnotemark{}}
-		\label{fig:Modelos:1} 
-	\end{subfigure} 
+\centering
  
-	\begin{subfigure}
-		{\includegraphics[scale=.3]{./Figures/webcam.jpg}}		\qquad
-		{\includegraphics[scale=.2]{./Figures/digitalCamera.jpg}}  \qquad
-		{\includegraphics[scale=.15]{./Figures/TOF.jpg} }
-		\caption{Dispositivos basados en visión: en la imagen se observan distintos tipos de cámaras en la parte izquierda de la imagen se observa una web \footnotemark{}, en el centro una digital \footnotemark{} y a la derecha de la imagen una TOF \footnotemark{}.} 
-		\label{fig:Modelos:2} 
-		\end{subfigure}
+\subfigure [Dispositivos basados en contacto: en la parte izquierda de la imagen se observan los guantes de datos \protect\footnotemark{}
+, en el centro los guantes de colores  \protect\footnotemark{}  y a la derecha se encuentra el dispositivo wii \protect\footnotemark{} . \addtocounter{footnote}{-3}]
+{
+    {\includegraphics[scale=.25]{./Figures/Dataglove.jpg}}  \qquad
+	{\includegraphics[scale=.25]{./Figures/colorGloves.jpg}} \qquad   	
+	{\includegraphics[scale=.29]{./Figures/wii.jpg}} 	  	
+	\label{fig:Modelos:1}
+}
+ 
+\subfigure [Dispositivos basados en visión: en la imagen se observan distintos tipos de cámaras en la parte izquierda de la imagen se observa una web \protect\footnotemark{}, en el centro una digital \protect\footnotemark{} y a la derecha de la imagen una TOF \protect\footnotemark{} .]
+{
+	{\includegraphics[scale=.3]{./Figures/webcam.jpg}} 		\qquad
+	{\includegraphics[scale=.2]{./Figures/digitalCamera.jpg}}  \qquad
+	{\includegraphics[scale=.15]{./Figures/TOF.jpg}} 
+    \label{fig:Modelos:2} 
+}
 \caption{Dispositivos utilizados para la captura de gestos.} 
 \label{fig:Modelos}
 \end{figure} 
 
 
-\footnotetext{http://www.technologyreview.com/article/414021/open-source-data-glove/}
-\footnotetext{http://www.digitaltrends.com/computing/the-gloves-that-could-change-the-world/}
-\footnotetext{https://www.nintendo.es/Wii/Wii-94559.html} 
+\footnotetext[1] {\url{ http://www.technologyreview.com/article/414021/open-source-data-glove/}} \stepcounter{footnote}
+\footnotetext[2] {\url{http://www.digitaltrends.com/computing/the-gloves-that-could-change-the-world/}}
+\footnotetext[3] {\url{https://www.nintendo.es/Wii/Wii-94559.html}}
 
-\footnotetext{http://es.ccm.net/download/descargar-2562-driver-de-microsoft-lifecam-vx-3000}
-\footnotetext{http://www.canon.com.mx/ficha.aspx?id=722} 
-\footnotetext{http://us.creative.com/p/web-cameras/creative-senz3d} 
+\footnotetext[4] {\url{http://es.ccm.net/download/descargar-2562-driver-de-microsoft-lifecam-vx-3000}}
+\footnotetext[5] {\url{http://www.canon.com.mx/ficha.aspx?id=722}} 
+\footnotetext[6] {\url{http://us.creative.com/p/web-cameras/creative-senz3d}}
 
 En este trabajo, se toma el enfoque basado en la visión ya que se quiere obtener un sistema que para el usuario la interacción sea natural y la manera de lograrlo es tomando este enfoque.  
 

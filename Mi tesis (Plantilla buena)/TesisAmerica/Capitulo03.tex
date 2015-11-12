@@ -417,35 +417,63 @@ El ángulo del centro de la mano a la punta de los dedos puede ser obtenido como
 $$ \theta_{Nf_j} = \tan^{-1} | {m_j} - 90^\circ |,$$
 donde $m_j$, es la pendiente de la recta que pasa por el centro de la mano y la punta de los dedos $s_i(x,y)$.
 
-Una vez que todas las características son calculas están se guardan en un vector, llamado vector de características. La dimensión del vector es el numero de características que este contiene. 
+Una vez que todas las características son calculadas estas son guardadas en un vector, llamado vector de características. La dimensión del vector es el número de características que este contiene. 
 
 
 \section{Reconocimiento}\label{sec:SVM} 
 
 Es la etapa final del reconocimiento, es donde finalmente el gesto puede ser interpretado por la computadora.  
 
-En este trabajo el reconocimiento se realiza utilizando el algoritmo de máquinas de soporte vectorial SVM, \citep{Cortes1995}, un método de aprendizaje de máquina supervisado que es utilizado para resolver problemas de clasificación y regresión. El cual tiene como objetivo crear un modelo basado en datos conocimos (datos de entrenamiento), que predice a que clase pertenecen datos nuevos. 
+En este trabajo el reconocimiento se realiza utilizando el algoritmo de máquinas de soporte vectorial SVM, \citep{Cortes1995}, un método de aprendizaje de máquina supervisado el cual es utilizado para resolver problemas de clasificación y regresión. SVM tiene como objetivo crear un modelo basado en datos conocimos, datos de entrenamiento, donde este modelo es capaz de predecir a que clase pertenecen datos nuevos. 
 
-SVM realiza la clasificación separando las clases calculando el hiperplano que tengan el margen  de separación más grande \ref{fig:SVM} . Enseguida se explica a detalle el funcionamiento del método. 
+SVM realiza la clasificación separando las clases calculando el hiperplano que tengan el margen de separación más grande \ref{fig:SVM} .  
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.3]{./Figures/maquinaSoporte.jpg}
+\includegraphics[scale=.4]{./Figures/maquinaSoporte.jpg}
 \end{center}
-\caption{Clasificación de maquina de soporte usando kernel lineal}
+\caption{Ejemplo de clasificación de dos clases con SVM, usando kernel lineal}
 \label{fig:SVM}
 \end{figure} 
 
-Dado $N$ puntos de entrenamiento $x_i$, de dimensión $D$, dos clases distintas $y_i=-1$
-o $+1$ es decir: 
-$$\lbrace x_i,y_i \rbrace \quad \text{donde} \quad  i=1, \cdots ,N \quad y\in{-1,1} \quad x \in \Re^D$$  
-Hiperplano óptimo  
-$$ w \cdot x + b = 0$$ 
-donde $w$ es la normal al hiperplano, $\frac{b}{|w|}$ es la distancia perpendicular desde el hiperplano al origen.   
-$$ w \cdot x + b = +1 \textrm{ para } y_i=+1$$ 
-$$ w \cdot x + b = -1 \textrm{ para } y_i=-1$$ 
-Maximizar el margen, encontrar el mínimo de $w$.  
-$$Min\Vert w \Vert \quad \text{tal que} \quad y_i(w \cdot x_i + b) -1 \geq 0$$
+Enseguida se explica el caso cuando las clases son linealmente separables.\\
+Dado $N$ muestras de entrenamiento $x_i$, de dimensión $D$, dos clases distintas $y_i=-1$ ó $+1$ es decir: 
+$$\lbrace x_i,y_i \rbrace \quad \text{donde} \quad  i=1, \cdots ,N \quad y\in \lbrace -1,1 \rbrace \quad x \in \Re^D.$$
+Sea  
+\begin{equation}\label{eq:hiper}
+w \cdot x + b = 0 ,
+\end{equation}  
+el hiperplano óptimo que separa a las clases, donde $w$ es la normal al hiperplano, $\frac{b}{ \Vert w \Vert}$ es la distancia perpendicular desde el hiperplano al origen.
+
+Sea $d_+$, la menor distancia del hiperplano que separa a las muestras positivas de las negativas y $d_-$, la menor distancia del hiperplano que separa a las muestras negativas de las positivas. Se define el margen del hiperplano como la suma de estas distancias, es decir: $d_+ + d_-$.
+
+Para el caso cuando las clases son linealmente separables basta con encontrar el hiperplano con el margen mayor. Es decir que el hiperplano puede ser calculado seleccionando $w$ y $b$ de manera que los datos de entrenamiento cumplan con:  
+\begin{equation}\label{eq:des+1}
+w \cdot x_i + b \geqslant +1 \quad \textrm{ para } \quad y_i=+1
+\end{equation} 
+\begin{equation}\label{eq:des-1}
+w \cdot x_i + b \leqslant -1 \quad \textrm{ para } \quad y_i=-1
+\end{equation} 
+Combinando las desigualdades anteriores, se obtiene:  
+\begin{equation}
+y_i(x_i \cdot w + b) -1 \geqslant 0 \qquad \forall i 
+\end{equation} 
+
+Tomando en cuenta los puntos en donde se cumple la igualdad de \ref{eq:des+1}. Estos puntos se encuentran sobre el hiperplano $H_1$, el cual se escribe como: 
+\begin{equation}\label{eq:eq+1}
+w \cdot x_i + b = +1,  
+\end{equation} 
+con normal $w$ y una distancia perpendicular desde el origen de $\frac{\vert 1-b \vert}{ \Vert w \Vert}$. 
+Similarmente para la ecuación \ref{eq:des-1}, entonces el hiperplano $H_2$ se describe como: 
+\begin{equation}\label{eq:eq+1}
+w \cdot x_i + b = -1,  
+\end{equation} 
+con normal $w$ y una distancia perpendicular desde el origen de $\frac{\vert-1-b\vert}{ \Vert w \Vert}$.\\ 
+Como $d_+ = d_- = \frac{1}{\Vert w \Vert}$, el margen es $\frac{2}{\Vert w \Vert}$. Los hiperplanos son paralelos pues tienen la misma normal, también ninguna muestra de entrenamiento caen entre ellos. Entonces se puede encontrar un par de hiperplanos  que tengan un margen máximo minimizando $\Vert w \Vert^2$, es decir:  
+\begin{equation}
+\text{min} \quad \frac{1}{2} \Vert w \Vert \quad \text{tal que} \quad y_i(w \cdot x_i + b) -1 \geq 0.
+\end{equation}  
+
 
 
 
