@@ -1,0 +1,27 @@
+\chapter{Conclusiones}\label{capit:cap6}
+\vspace{-2.0325ex}%
+\noindent
+\rule{\textwidth}{0.5pt}
+\vspace{-5.5ex}% 
+\newcommand{\pushline}{\Indp}% Indent puede ir o no :p
+
+El objetivo del trabajo era reconocer gestos con las manos bajo distintas circunstancias. 
+
+%Para ello se utilizo el sensor Kinect información de profundidad y  pode  se utilizaron dos dispositivos Kinect para obtener mayor información del gesto y sobrellevar problema de oclusión, gracias a esto.
+
+\section{Limitaciones del sistema}
+
+Esta investigación utiliza el dispositivo Kinect, para obtener la información de entrada del sistema. De  manera que las limitaciones del sistema propuesto están dadas por las características de dicho dispositivo, tales como la distancia a la que se encuentra el dispositivo con el usuario, $0.4m$ a $3m$ , la resolución de las imágenes a color $640 \, x \, 480$ pixeles y la resolución del sensor infrarrojo $640 \, x \, 480$ pixeles.\\
+También el sistema depende de dos sensores Kinect, que se utilizar\'an en el caso que exista oclusión. \\
+Otra limitante es el número de gestos que reconoce el sistema, pues solo reconoce dos gestos estáticos y (numero) dinámicos.
+
+\section{Trabajo futuro}\label{futureWork}  
+
+Como se expreso en la sección anterior una limitante es la resolución del sensor, una opción seria probar con la nueva versión del sensor Kinect, pues debido a como obtiene los datos el sensor cuanta con mayor resolución y el ruido de las . 
+
+El sistema podría mejorarse y alcanzar un mayor grado de precisión, si se mejora la detección, la propuesta es entrenar nuevamente el clasificador; incrementando el número de imágenes de entrenamiento, que contengan distintas poses, para así tener un número mayor de gestos a reconocer.
+
+Otro punto que se puede explorar es atacar de manera distintas el reconocimiento de los gestos dinámicos, utilizando por ejemplo un modelo estadístico como el Modelo Oculto de Markov, el cual permitiría implementar gestos más complejos.  
+
+\newpage
+%%=====================================================

@@ -1,0 +1,183 @@
+\begin{thebibliography}{}
+
+\bibitem[Burges(1998)Burges]{Burges1998}
+Burges, C. (1998).
+\newblock {A Tutorial on Support Vector Machines for Pattern Recognition}.
+\newblock {\em Data Mining and Knowledge Discovery\/}, {\bf 2}(2): 121--167.
+
+\bibitem[Caputo {\em \mbox{et al.}\/}(2012)Caputo, Denker, Dums, y
+  Umlauf]{Caputo2012}
+Caputo, M., Denker, K., Dums, B., y Umlauf, G. (2012).
+\newblock {3D Hand Gesture Recognition Based on Sensor Fusion of Commodity
+  Hardware}.
+\newblock {\em Mensch \& Computer 2012: interaktiv informiert –
+  allgegenw\"{a}rtig und allumfassend!?\/}, pp. 293--302.
+
+\bibitem[Chaki {\em \mbox{et al.}\/}(2014)Chaki, Shaikh, y Saeed]{Chaki2014}
+Chaki, N., Shaikh, S.~H., y Saeed, K. (2014).
+\newblock {\em {Exploring Image Binarization Techniques}\/}.
+\newblock Springer, primera edici\'on.
+\newblock p.~90.
+
+\bibitem[Chang y Lin(2011)Chang y Lin]{Chang2011}
+Chang, C.-C. y Lin, C.-J. (2011).
+\newblock {Libsvm}.
+\newblock {\em ACM Transactions on Intelligent Systems and Technology\/}, {\bf
+  2}(3): 1--27.
+
+\bibitem[{Chih-Wei Hsu, Chih-Chung Chang} y Lin(2008){Chih-Wei Hsu, Chih-Chung
+  Chang} y Lin]{Chih-WeiHsuChih-ChungChang2008}
+{Chih-Wei Hsu, Chih-Chung Chang} y Lin, C.-J. (2008).
+\newblock {A Practical Guide to Support Vector Classification}.
+\newblock {\em BJU international\/}, {\bf 101}(1): 1396--400.
+
+\bibitem[Cortes y Vapnik(1995)Cortes y Vapnik]{Cortes1995}
+Cortes, C. y Vapnik, V. (1995).
+\newblock {Support-vector networks}.
+\newblock {\em Machine Learning\/}, {\bf 20}(3): 273--297.
+
+\bibitem[Freund y Schapire(1995)Freund y Schapire]{Freund1995}
+Freund, Y. y Schapire, R. (1995).
+\newblock {A desicion-theoretic generalization of on-line learning and an
+  application to boosting}.
+\newblock {\em Computational learning theory\/}, {\bf 55}(1): 119--139.
+
+\bibitem[Gonzalez y Woods(2002)Gonzalez y Woods]{Gonzalez2002}
+Gonzalez, R. y Woods, R. (2002).
+\newblock {\em {Digital image processing}\/}.
+\newblock p. 190.
+
+\bibitem[Hasan y Mishra(2012)Hasan y Mishra]{Hasan2012}
+Hasan, M.~M. y Mishra, P.~K. (2012).
+\newblock {Hand Gesture Modeling and Recognition using Geometric Features : A
+  Review}.
+\newblock {\bf 3}(1).
+
+\bibitem[Huang {\em \mbox{et al.}\/}(2011)Huang, Hu, y Chang]{Huang2011}
+Huang, D.-Y., Hu, W.-C., y Chang, S.-H. (2011).
+\newblock {Gabor filter-based hand-pose angle estimation for hand gesture
+  recognition under varying illumination}.
+\newblock {\em Expert Systems with Applications\/}, {\bf 38}(5): 6031--6042.
+
+\bibitem[Ibraheem(2013)Ibraheem]{Ibraheem2013}
+Ibraheem, N.~A. (2013).
+\newblock {Comparative Study of Skin Color based Segmentation Techniques}.
+\newblock {\bf 5}(10): 24--38.
+
+\bibitem[Jana(2013)Jana]{Jana2013}
+Jana, A. (2013).
+\newblock {\em {Kinect for Windows SDK - Programming Guide - Face Tracking}\/}.
+\newblock Packt, primera edici\'on.
+\newblock p. 392.
+
+\bibitem[Kang {\em \mbox{et al.}\/}(2013)Kang, Bernhard, Kim, Srinivasa, y
+  Satti]{Kang2013}
+Kang, C., Bernhard, P., Kim, S., Srinivasa, P., y Satti, R. (2013).
+\newblock {A Framework for Hand Gesture Recognition with Machine Learning
+  Techniques}.
+
+\bibitem[Kathuria(2011)Kathuria]{Kathuria2011}
+Kathuria, P. (2011).
+\newblock {Hand Gesture Recognition}.
+\newblock {\bf 2012}(25): 63--69.
+
+\bibitem[Mitra {\em \mbox{et al.}\/}(2007)Mitra, Member, y Acharya]{Mitra2007}
+Mitra, S., Member, S., y Acharya, T. (2007).
+\newblock {Gesture Recognition : A Survey}.
+\newblock {\bf 37}(3): 311--324.
+
+\bibitem[{Mohd Asaari} {\em \mbox{et al.}\/}(2014){Mohd Asaari}, Rosdi, y
+  Suandi]{MohdAsaari2014}
+{Mohd Asaari}, M.~S., Rosdi, B.~A., y Suandi, S.~A. (2014).
+\newblock {Adaptive Kalman Filter Incorporated Eigenhand (AKFIE) for real-time
+  hand tracking system}.
+\newblock {\em Multimedia Tools and Applications\/}.
+
+\bibitem[Murthy y Jadon(2009)Murthy y Jadon]{Murthy2009}
+Murthy, G. R.~S. y Jadon, R.~S. (2009).
+\newblock {A REVIEW OF VISION BASED HAND GESTURES RECOGNITION}.
+\newblock {\bf 2}(2): 405--410.
+
+\bibitem[Nayakwadi(2014)Nayakwadi]{Nayakwadi2014}
+Nayakwadi, V. (2014).
+\newblock {Natural Hand Gestures Recognition System for Intelligent HCI : A
+  Survey}.
+\newblock {\bf 3}(1): 10--19.
+
+\bibitem[Niblack(1985)Niblack]{Niblack1985}
+Niblack, W. (1985).
+\newblock {\em {An introduction to digital image processing}\/}.
+\newblock Strandberg Publishing Company Birkeroed, Denmark,.
+\newblock p. 215.
+
+\bibitem[Ong {\em \mbox{et al.}\/}(1998)Ong, Teh, y Tan]{Ong1998}
+Ong, K.~C., Teh, H.~C., y Tan, T.~S. (1998).
+\newblock {Resolving occlusion in image sequence made easy}.
+\newblock {\em The Visual Computer\/}, {\bf 14}(4): 153--165.
+
+\bibitem[Premaratne(2013)Premaratne]{Premaratne2013}
+Premaratne, P. (2013).
+\newblock {\em {Human Computer Interaction Using Hand Gestures}\/}.
+\newblock Springer, primera edici\'on.
+\newblock p. 182.
+
+\bibitem[Rautaray y Agrawal(2012)Rautaray y Agrawal]{Rautaray2012}
+Rautaray, S.~S. y Agrawal, A. (2012).
+\newblock {Vision based hand gesture recognition for human computer
+  interaction: a survey}.
+\newblock {\em Artificial Intelligence Review\/}.
+
+\bibitem[Sgouropoulos {\em \mbox{et al.}\/}(2014)Sgouropoulos, Stergiopoulou, y
+  Papamarkos]{Sgouropoulos2014}
+Sgouropoulos, K., Stergiopoulou, E., y Papamarkos, N. (2014).
+\newblock {A Dynamic Gesture and Posture Recognition System}.
+\newblock {\em Journal of Intelligent \& Robotic Systems\/}, {\bf 76}(2):
+  283--296.
+
+\bibitem[Shin(2013)Shin]{Shin2013}
+Shin, S. (2013).
+\newblock {\em {Emgu CV Essentials}\/}.
+\newblock Packt Publishing, primera edici\'on.
+\newblock p. 118.
+
+\bibitem[Silva y Santos-Victor(2001)Silva y Santos-Victor]{Silva2001}
+Silva, C. y Santos-Victor, J. (2001).
+\newblock {Motion from occlusions}.
+\newblock {\em Robotics and Autonomous Systems\/}, {\bf 35}(3-4): 153--162.
+
+\bibitem[Smith(1999)Smith]{Smith1999}
+Smith, S.~W. (1999).
+\newblock {\em {Digital signal processing}\/}.
+\newblock p. 688.
+
+\bibitem[Viola y Jones(2001)Viola y Jones]{Viola2001}
+Viola, P. y Jones, M. (2001).
+\newblock {Rapid object detection using a boosted cascade of simple features}.
+\newblock {\em Proceedings of the 2001 IEEE Computer Society Conference on
+  Computer Vision and Pattern Recognition. CVPR 2001\/}, {\bf 1}.
+
+\bibitem[Weichert {\em \mbox{et al.}\/}(2013)Weichert, Bachmann, Rudak, y
+  Fisseler]{Weichert2013}
+Weichert, F., Bachmann, D., Rudak, B., y Fisseler, D. (2013).
+\newblock {Analysis of the Accuracy and Robustness of the Leap Motion
+  Controller}.
+\newblock {\em Sensors\/}, {\bf 13}(5): 6380--6393.
+
+\bibitem[Ye {\em \mbox{et al.}\/}(????)Ye, Zhang, Wang, y Zhu]{Ye}
+Ye, M., Zhang, Q., Wang, L., y Zhu, J. (????).
+\newblock {A Survey on Human Motion Analysis}.
+\newblock pp. 149--187.
+
+\bibitem[Yilmaz {\em \mbox{et al.}\/}(2006)Yilmaz, Omar, y
+  Mubarak]{YilmazA.JavedO.andShah2006}
+Yilmaz, A., Omar, J., y Mubarak, S. (2006).
+\newblock {Object tracking: a survey}.
+\newblock {\em ACM Computing Surveys (CSUR)\/}, {\bf 38}(4): 45.
+
+\bibitem[Yoon {\em \mbox{et al.}\/}(2012)Yoon, Yang, y Cho]{Yoon2012}
+Yoon, J.~W., Yang, S.~I., y Cho, S.~B. (2012).
+\newblock {Adaptive mixture-of-experts models for data glove interface with
+  multiple users}.
+\newblock {\em Expert Systems with Applications\/}, {\bf 39}(5): 4898--4907.
+
+\end{thebibliography}
