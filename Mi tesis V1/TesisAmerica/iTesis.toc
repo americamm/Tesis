@@ -39,21 +39,21 @@
 \contentsline {subsection}{\numberline {3.2.3}Operaciones Morfol\IeC {\'o}gicas}{28}{subsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.3.1}Dilataci\IeC {\'o}n}{29}{subsubsection.3.2.3.1}
 \contentsline {subsubsection}{\numberline {3.2.3.2}Erosi\IeC {\'o}n}{29}{subsubsection.3.2.3.2}
-\contentsline {subsubsection}{\numberline {3.2.3.3}Apertura}{29}{subsubsection.3.2.3.3}
+\contentsline {subsubsection}{\numberline {3.2.3.3}Apertura}{30}{subsubsection.3.2.3.3}
 \contentsline {subsubsection}{\numberline {3.2.3.4}Cierre}{30}{subsubsection.3.2.3.4}
-\contentsline {section}{\numberline {3.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{30}{section.3.3}
-\contentsline {section}{\numberline {3.4}Reconocimiento}{33}{section.3.4}
-\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{36}{chapter.4}
-\contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{36}{section.4.1}
-\contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{38}{section.4.2}
+\contentsline {section}{\numberline {3.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{31}{section.3.3}
+\contentsline {section}{\numberline {3.4}Reconocimiento}{34}{section.3.4}
+\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{37}{section.4.1}
+\contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{39}{section.4.2}
 \contentsline {section}{\numberline {4.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{41}{section.4.3}
-\contentsline {section}{\numberline {4.4}Reconocimiento}{42}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Reconocimiento de gestos est\IeC {\'a}ticos}{42}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Reconocimiento de gestos din\IeC {\'a}micos}{43}{subsection.4.4.2}
-\contentsline {chapter}{\numberline {5}Resultados}{44}{chapter.5}
-\contentsline {section}{\numberline {5.1}Experimentos de gestos est\IeC {\'a}ticos}{44}{section.5.1}
-\contentsline {section}{\numberline {5.2}Experimentos de gestos din\IeC {\'a}micos}{44}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclusiones}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Limitaciones del sistema}{45}{section.6.1}
-\contentsline {section}{\numberline {6.2}Trabajo futuro}{45}{section.6.2}
-\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{46}{section.6.2}
+\contentsline {section}{\numberline {4.4}Reconocimiento}{43}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Reconocimiento de gestos est\IeC {\'a}ticos}{44}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Reconocimiento de gestos din\IeC {\'a}micos}{44}{subsection.4.4.2}
+\contentsline {chapter}{\numberline {5}Resultados}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experimentos de gestos est\IeC {\'a}ticos}{45}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experimentos de gestos din\IeC {\'a}micos}{45}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusiones}{46}{chapter.6}
+\contentsline {section}{\numberline {6.1}Limitaciones del sistema}{46}{section.6.1}
+\contentsline {section}{\numberline {6.2}Trabajo futuro}{46}{section.6.2}
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{47}{section.6.2}

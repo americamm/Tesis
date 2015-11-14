@@ -19,17 +19,29 @@ El sistema de reconocimiento de gestos propuesto consta de cuatro etapas princip
   
 \section{Adquisición de los datos}\label{sec:KinectSensor} 
 
-Es la primera etapa del sistema, donde los datos de entrada del sistema son capturados. En este trabajo los datos provienen de los sensores de profundidad de dos dispositivos Kinect. A continuación se describe las características de este dispositivo. 
+Es la primera etapa del sistema, donde los datos de entrada del sistema son capturados y preprocesados para eliminar ruido existente en la imagen. 
 
-En noviembre del 2010 la compa\'nia Microsoft lanz\'o el sensor Kinect para consolas de vídeo juego Xbox 360 y en febrero del 2011 lanz\'o la versi\'on para Windows, que se muestra en la figura \ref{fig:KinectPic}.  
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.6]{./Figures/Adquisicion.png}
+\end{center}
+\caption{Proceso de la etapa de adquisición de datos.} 
+\label{fig:Dadquisicion}
+\end{figure}   
+
+En este trabajo la adquisicion de los datos se divide en dos partes, \ref{fig:Dadquisicion} los datos provienen de los sensores de profundidad de dos dispositivos Kinect, debido a la naturaleza del sensor las imágenes capturadas tiene ruido tipo de [poner referenciar], este puede ser reducido utilizando filtro de medianas. 
+
+A continuación se describe las características de este dispositivo. 
+
+En noviembre del 2010 la compa\'nia Microsoft lanz\'o el sensor Kinect para consolas de vídeo juego Xbox 360 y en febrero del 2011 lanz\'o la versi\'on para Windows, que se muestra en la figura \ref{fig:KinectPic}.   
 
 El dispositivo Kinect esta equipado con una serie de sensores que permiten obtener imágenes a color y de profundidad (las cuales indican la distancia a la que esta ubicada un objeto del sensor). Los sensores permiten hacer detección y seguimiento de personas. El dispositivo tiene la capacidad de detectar $6$ personas y hacer el seguimiento de $2$ personas \footnote{https://msdn.microsoft.com/en-us/library/hh973074.aspx}.    
   
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.60]{./Figures/Kinect.jpg}
+\includegraphics[scale=.65]{./Figures/Kinect.jpg}
 \end{center}
-\caption{Sensor Kinect para Windows, imagen recuperada de \footnotemark{}.}
+\caption{Componentes del sensor Kinect, imagen recuperada de \footnotemark{}.} 
 \label{fig:KinectPic}
 \end{figure} 
 
@@ -37,6 +49,7 @@ El dispositivo Kinect esta equipado con una serie de sensores que permiten obten
 
 El sensor esta equipado con los siguientes componentes: un cámara de color o sensor de color, un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED \ref{fig:KinectComponentes}. \\
 Enseguida se describen brevemente cada uno de los componentes del sensor Kinect, \citep{Jana2013}. 
+
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.6]{./Figures/sensor.png}
@@ -371,7 +384,7 @@ En la imagen \ref{fig:FigConvexHullDefects} los puntos amarillos representan los
 \label{fig:FigConvexHullDefects}
 \end{figure}  
 
-Usando las técnicas anteriores podemos extraer características importantes como el número de dedos, la posición del centro de la mano, el ángulo TC. Enseguida se explica como son obtenidas estas características. 
+Usando las técnicas anteriores podemos extraer características importantes como el número de dedos, la posición del centro de la palma de mano, la posición de la punta de los dedos, la posición del inicio o raíz de los dedos, el ángulo del centro de la palma de la mano a la punta de los dedos, ángulo $TC$, el ángulo del centro de la palma de la mano a al inicio de los dedos, ángulo $RC$ y la distancia del centro de la palma de la mana al inicio de los dedos. Enseguida se explica como son obtenidas estas características. 
 
 El número de dedos que se encuentran levantados es calculado con el algoritmo \ref{alg:NumDedos} desarrollado por \citep{Kathuria2011}, el cual utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$, los puntos de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, las distancias del punto de inicio al de mayor distancia, $\mathcal{\delta}=\lbrace \delta_1(x,y), \delta_2(x,y), \cdots, \delta_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa .\\
 Sea $C_r(x,y)$, el punto que representa el centroide del rectángulo más pequeño que encierra a la mano, $L_r$, la altura del rectángulo y $k$ una constante. 
@@ -393,8 +406,31 @@ Sea $C_r(x,y)$, el punto que representa el centroide del rectángulo más peque�
 \end{algorithmic}
 \end{algorithm} 
 
+La posición de la raíz de los dedos, $Fr(s,y)$ puede ser calculada usando los defectos de convexidad, en especifico los puntos de profundidad, $d(x,y)$. Se calcula tomando el punto medio de los puntos de profundidad consecutivos encontrados en medio de los dedos, como se muestra en la figura \ref{fig:RootFingers} . Es decir: 
+$$ Fr_i(x,y)= \left( \frac{ x_{d_i}+x_{d_{i-1}} }{2},\frac{y_{d_i}+y_{d_{i-1}}}{2}  \right), $$ 
+donde $i$ representa el número de dedo, cuando $i=0$ se toma el punto de profundidad anterior al dedo, si $i=6$ se toma el punto de profundidad posterior al dedo. 
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.55]{./Figures/pusheen.png}
+\end{center}
+\caption{Se muestra en color azul los puntos de profundidad y en color rojo los puntos medios.}
+\label{fig:RootFingers}
+\end{figure} 
+
+El ángulo $RC$ es el formado por el eje $y$  y la línea que une al punto que representa la posición de la raíz de los dedos, $Fr(x,y)$ con el centro de la palma de la mano, $Ch(x,y)$. 
+$$ \angle RC = 90^\circ - \tan^{-1} \left( \frac{ y_{Fr}-y_{Ch} }{ x_{Fr}-x_{Ch} } \right).$$
+
 El ángulo $TC$ es el formado por el eje $y$ y la línea que une al centro de la mano, $Ch(x,y)$ y con el de la punta de los dedos, $Ft(x,y)$, el cual se representar como:
 $$ \angle TC = 90^\circ - \tan^{-1} \left( \frac{ y_{Ft}-y_{Ch} }{ x_{Ft}-x_{Ch} } \right).$$
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.55]{./Figures/pusheen.png}
+\end{center}
+\caption{Se muestra los ángulos.}
+\label{fig:anglesFingers}
+\end{figure} 
 
 
 Una vez que todas las características son calculadas estas son guardadas en un vector, llamado vector de características. La dimensión del vector es el número de características que este contiene. 
