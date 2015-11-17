@@ -69,9 +69,9 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 \label{fig:ImagenFondo}
 \end{figure}  
 
-Los parámetros utilizados para la obtención del clasificador final fueron: el porcentaje de precision de detección de [$\%$] y la tasa de falsos positivos aceptados de [$\%$]. El resultado final del entrenamiento fue en clasificador AdoBoost en forma de cascada, que consta de 19 etapas. El clasificador resultante se encuentra en Github \ref{myrepo} y en el apéndice [numero ponerlo], en el formato XML.  
+Los parámetros utilizados para la obtención del clasificador final fueron: el porcentaje de precision de detección de [$\%$] y la tasa de falsos positivos aceptados de [$\%$]. El resultado final del entrenamiento fue en clasificador AdoBoost en forma de cascada, que consta de 19 etapas. El clasificador resultante se encuentra en Github \ref{myrepo}, en formato XML.  
 
-Con el clasificado obtenido, se localiza la mano en cada cuadro proveniente de los dispositivos  Kinect, una ventana  inicial de tamaño $ka$ se desliza por la imagen. Para eliminar falsos positivos que pudieran ocurrir en la detección de la mano se utiliza un algoritmo equivalente al de [referencia], este se muestra en el apéndice [refereciarlo y poner el apendice].\\ 
+Con el clasificado obtenido, se localiza la mano en cada cuadro proveniente de los dispositivos  Kinect, una ventana  inicial de tamaño $ka$ se desliza por la imagen. Para eliminar falsos positivos que pudieran ocurrir en la detección de la mano se utiliza un algoritmo equivalente al de [referencia], este se muestra en el apéndice \ref{chap:apendA}.\\ 
 Una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionada alrededor de la mano, como se observa en la figura \ref{fig:Roi}.
 
 \begin{figure}[h!]
@@ -93,7 +93,7 @@ Ya que se tiene localizada el área donde se encuentra la mano, el siguiente pas
 \end{figure} 
 
 En la imagen [agregar imagen feita binarizada], se observa que el resultado de la bianrizacion no es el esperado. Para mejorar la binarizacion, el ruido existe en la imagen es eliminado aplicando dos operaciones morfológicas, apertura y cierre, en ese orden.\\
-Las operaciones anteriores utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento es de [$ \, x \, b$] pixeles; para el cierre se aplic\'o con un tamaño  [$b\, x \, b$] pixeles.
+Las operaciones anteriores utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento es de $3 \, x \, 9$ pixeles; para el cierre se aplic\'o con un tamaño  $3\, x \, 11$ pixeles.
 Las imágenes siguientes muestran el resultado de aplicar las operaciones apertura y cierre al ROI.  
 
 \begin{figure}[h!]

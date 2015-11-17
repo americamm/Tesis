@@ -5,17 +5,58 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p
 
-El sistema propuesto fue implementado en una computadora de escritorio Dell con un procesador Intel(R) Xeon(R) CPU E5-1603, 16GB de memoria RAM, Windows 7 de 64 bits. La implementación del sistema se realizó en C\# utilizando Emgu 2.410 \footnote{http://www.emgu.com/wiki/index.php/Main\_Page} un wrapper de OpenCV\footnote{http://opencv.org/}.  
+En este capítulo se presentan los resultados de las pruebas realizadas al sistema. El desempeño del sistema es evaluado con respecto al error de clasificación.   
 
-Para probar la precisión del sistema se realizaron diversas pruebas con los distintos tipos de gestos y en diferentes circunstancias. En las secciones siguientes se explica cada experimento y resultados de estos.  
+El sistema propuesto fue implementado en una computadora de escritorio Dell con un procesador Intel(R) Xeon(R) CPU E5-1603, 16GB de memoria RAM, Windows 7 de 64 bits. La implementación del sistema se realizó en C\# utilizando Emgu 2.410 \footnote{http://www.emgu.com/wiki/index.php/Main\_Page} un wrapper de OpenCV\footnote{http://opencv.org/}. Los experimentos se realizaron en la misma computadora. 
 
-\section{Experimentos de gestos estáticos}\label{TestStaticGestures} 
+Se utilizaron imágenes reales capturadas por los sensores de profundidad de $640 \times 480$ pixeles. Las imágenes son de 5 personas distintas, realizando los gestos de puño y el de palma de la mano con los dedos separados.   
+
+Se realizaron experimentos en distintas circunstancias como variación en la iluminación y a diferentes distancias. En las secciones siguientes se explica cada experimento y resultados de estos.  
+
+\section{Experimentos de gestos estáticos}\label{TestStaticGestures}  
+
+\subsection{Experimento con iluminación} 
+Para este experimento se capturaron imágenes con iluminación estandar, como la que se muestra en la figura . Las pruebas se realizaron con al usuario en a diferentes distintas a $70$, $80$ y $90$ $cm.$ del Kinect frontal. 
+
+\begin{figure}[h!]
+\begin{center} 
+\includegraphics[scale=0.3]{./Figures/pusheen.png}
+\end{center}
+\caption{Laboratorio en condiciones estándar de iluminación.}
+\label{fig:LabIluminado}
+\end{figure}
+
+
+\subsection{Experimento con iluminación media} 
+Para este experimento se capturaron imágenes con iluminación media, como la que se muestra en la figura . Las pruebas se realizaron con al usuario en a diferentes distintas a $70$, $80$ y $90$ $cm.$ del Kinect frontal. 
+
+\begin{figure}[h!]
+\begin{center} 
+\includegraphics[scale=0.3]{./Figures/pusheen.png}
+\end{center}
+\caption{Laboratorio en condiciones con iluminación media.}
+\label{fig:LabMedioIluminado} 
+\end{figure} 
+
+Para este experimento se capturaron imágenes con baja iluminación, como la que se muestra en la figura . Las pruebas se realizaron con al usuario en a diferentes distintas a $70$, $80$ y $90$ $cm.$ del Kinect frontal. 
+
+\begin{figure}[h!]
+\begin{center} 
+\includegraphics[scale=0.3]{./Figures/pusheen.png}
+\end{center}
+\caption{Laboratorio en condiciones con baja iluminación.}
+\label{fig:LabNoIluminado} 
+\end{figure}
+
+%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 \section{Experimentos de gestos dinámicos}\label{TestDinamicGestures} 
- 
+
+
+%---------------------------------------------------------------------------------------------------------------------- 
 \newpage
 %%=====================================================
-%\begin{tabular}{ c c c }
+%\begin{tabular} { c c c }
 % cell1 & cell2 & cell3 \\ 
 % cell4 & cell5 & cell6 \\  
 % cell7 & cell8 & cell9    
@@ -90,8 +131,8 @@ Para probar la precisión del sistema se realizaron diversas pruebas con los dis
 %\hline
 %\end{tabular}
 %\end{center} 
-
-
+%
+%
 %\begin{table}
 %\footnotesize
 %\centering
