@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  16 NOV 2015 19:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/TeX Live for SUSE Linux) (format=pdflatex 2015.4.1)  17 NOV 2015 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,28 +6,8 @@ entering extended mode
 (./iTesis.tex
 LaTeX2e <2011/06/27>
 Babel <3.9f> and hyphenation patterns for 78 languages loaded.
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 q
-     ue %La compilacion se debe hacer con la instruccion de PdfLatex
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no q in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
 (./cicese.cls
 Document Class: cicese 2001/04/21 v1.4e Standard LaTeX document class
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--52
-[]
- []
-
 (/usr/share/texmf/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
@@ -44,8 +24,8 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
- [1{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (/usr/share/texmf/te
-x/latex/marvosym/marvosym.sty
+)
+(/usr/share/texmf/tex/latex/marvosym/marvosym.sty
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 )
 (/usr/share/texmf/tex/latex/geometry/geometry.sty
@@ -1309,7 +1289,7 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <18> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 212.
 
-<./Figures/logoCicese2009.pdf, id=255, 540.60239pt x 270.30113pt>
+<./Figures/logoCicese2009.pdf, id=259, 540.60239pt x 270.30113pt>
 File: ./Figures/logoCicese2009.pdf Graphic file (type pdf)
 
 <use ./Figures/logoCicese2009.pdf>
@@ -1323,15 +1303,17 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 212.
- [2
+ [1
 
 \openout3 = `iTesis.ist'.
 
- <./Figures/logoCicese2009.pdf>]
+{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Figures/logoCicese2009
+.pdf>]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 212.
 LaTeX Font Info:    Try loading font information for U+msa on input line 212.
- (/usr/share/texmf/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 212.
@@ -1345,7 +1327,7 @@ LaTeX Font Info:    Try loading font information for TS1+phv on input line 212.
 (/usr/share/texmf/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
-<Figures/logotipos/compu.jpg, id=272, 102.3825pt x 132.495pt>
+<Figures/logotipos/compu.jpg, id=276, 102.3825pt x 132.495pt>
 File: Figures/logotipos/compu.jpg Graphic file (type jpg)
 
 <use Figures/logotipos/compu.jpg>
@@ -1379,7 +1361,7 @@ Overfull \hbox (3.66335pt too wide) in paragraph at lines 212--212
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
-Overfull \hbox (3.98135pt too wide) in paragraph at lines 33--33
+Overfull \hbox (3.98135pt too wide) in paragraph at lines 35--35
  [][] [][]\OT1/phv/m/n/12 M[]eto-do de-tec-ci[]on r[]api-da de ob-je-tos usan-d
 o ca-rac-ter[]^^Psti-cas sim- 
  []
@@ -1446,14 +1428,14 @@ Runaway argument?
 <to be read again> 
                    \par 
 l.33 ...el inciso a, \let \reserved@d = *\def \par
-                                                   }}{30}{figure.caption.25}
+                                                   }}{31}{figure.caption.25}
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 ! Extra }, or forgotten \endgroup.
 l.33 ... inciso a, \let \reserved@d = *\def \par }
-                                                  }{30}{figure.caption.25}
+                                                  }{31}{figure.caption.25}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1462,7 +1444,65 @@ deleted material, e.g., by typing `I$}'.
 
 ! Extra }, or forgotten \endgroup.
 l.33 ...inciso a, \let \reserved@d = *\def \par }}
-                                                  {30}{figure.caption.25}
+                                                  {31}{figure.caption.25}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Runaway argument?
+{\numberline {22}{\ignorespaces La figura muestra parte de la mano y \ETC.
+! Paragraph ended before \contentsline was complete.
+<to be read again> 
+                   \par 
+l.44 ...ntos medios, \let \reserved@d = *\def \par
+                                                   }}{34}{figure.caption.29}
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra }, or forgotten \endgroup.
+l.44 ...os medios, \let \reserved@d = *\def \par }
+                                                  }{34}{figure.caption.29}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.44 ...s medios, \let \reserved@d = *\def \par }}
+                                                  {34}{figure.caption.29}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Runaway argument?
+{\numberline {23}{\ignorespaces En la imagen se representan los sigui\ETC.
+! Paragraph ended before \contentsline was complete.
+<to be read again> 
+                   \par 
+l.45 ...e los dedos, \let \reserved@d = *\def \par
+                                                   }}{35}{figure.caption.30}
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra }, or forgotten \endgroup.
+l.45 ...los dedos, \let \reserved@d = *\def \par }
+                                                  }{35}{figure.caption.30}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.45 ...os dedos, \let \reserved@d = *\def \par }}
+                                                  {35}{figure.caption.30}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1475,14 +1515,14 @@ Runaway argument?
 <to be read again> 
                    \par 
 l.46 ...o al origen. \let \reserved@d = *\def \par
-                                                   }}{35}{figure.caption.31}
+                                                   }}{36}{figure.caption.31}
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 ! Extra }, or forgotten \endgroup.
 l.46 ...al origen. \let \reserved@d = *\def \par }
-                                                  }{35}{figure.caption.31}
+                                                  }{36}{figure.caption.31}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1491,7 +1531,7 @@ deleted material, e.g., by typing `I$}'.
 
 ! Extra }, or forgotten \endgroup.
 l.46 ...l origen. \let \reserved@d = *\def \par }}
-                                                  {35}{figure.caption.31}
+                                                  {36}{figure.caption.31}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1532,41 +1572,40 @@ LaTeX Info: Redefining \% on input line 1.
 
 ] (./Capitulo01.tex
 Cap\'{\i }tulo 1
-[1
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.55 	\item D
-             esarrollar un sistema de reconocimiento de gestos estáticos y ...
-[2]
+l.25 
+      [1
+
+] [2]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 76.
- [3] <./Figures/Dataglove.jpg, id=486, 411.78844pt x 295.85532pt>
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 75.
+ [3] <./Figures/Dataglove.jpg, id=487, 411.78844pt x 295.85532pt>
 File: ./Figures/Dataglove.jpg Graphic file (type jpg)
 
 <use ./Figures/Dataglove.jpg>
-Package pdftex.def Info: ./Figures/Dataglove.jpg used on input line 90.
+Package pdftex.def Info: ./Figures/Dataglove.jpg used on input line 88.
 (pdftex.def)             Requested size: 102.94685pt x 73.96364pt.
 
-<./Figures/colorGloves.jpg, id=487, 478.78876pt x 319.94531pt>
+<./Figures/colorGloves.jpg, id=488, 478.78876pt x 319.94531pt>
 File: ./Figures/colorGloves.jpg Graphic file (type jpg)
 
 <use ./Figures/colorGloves.jpg>
-Package pdftex.def Info: ./Figures/colorGloves.jpg used on input line 90.
+Package pdftex.def Info: ./Figures/colorGloves.jpg used on input line 88.
 (pdftex.def)             Requested size: 119.69688pt x 79.98613pt.
 
-<./Figures/wii.jpg, id=488, 230.36063pt x 248.42813pt>
+<./Figures/wii.jpg, id=489, 230.36063pt x 248.42813pt>
 File: ./Figures/wii.jpg Graphic file (type jpg)
  <use ./Figures/wii.jpg>
-Package pdftex.def Info: ./Figures/wii.jpg used on input line 90.
+Package pdftex.def Info: ./Figures/wii.jpg used on input line 88.
 (pdftex.def)             Requested size: 66.80286pt x 72.04231pt.
 
 ! Undefined control sequence.
 \@calc@post@scan ...st@scan \else \def \calc@next 
                                                   {\calc@error #1}\fi \fi \f...
-l.90 }
+l.88 }
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1577,7 +1616,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \@calc@post@scan ...fi \fi \fi \fi \fi \calc@next 
                                                   
-l.90 }
+l.88 }
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1585,64 +1624,54 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<./Figures/webcam.jpg, id=495, 180.675pt x 225.84375pt>
+<./Figures/webcam.jpg, id=496, 180.675pt x 225.84375pt>
 File: ./Figures/webcam.jpg Graphic file (type jpg)
 
 <use ./Figures/webcam.jpg>
-Package pdftex.def Info: ./Figures/webcam.jpg used on input line 98.
+Package pdftex.def Info: ./Figures/webcam.jpg used on input line 95.
 (pdftex.def)             Requested size: 54.20291pt x 67.75363pt.
 
-<./Figures/digitalCamera.jpg, id=496, 381.67593pt x 344.03531pt>
+<./Figures/digitalCamera.jpg, id=497, 381.67593pt x 344.03531pt>
 File: ./Figures/digitalCamera.jpg Graphic file (type jpg)
 
 <use ./Figures/digitalCamera.jpg>
-Package pdftex.def Info: ./Figures/digitalCamera.jpg used on input line 98.
+Package pdftex.def Info: ./Figures/digitalCamera.jpg used on input line 95.
 (pdftex.def)             Requested size: 76.33383pt x 68.80583pt.
 
-<./Figures/TOF.jpg, id=497, 743.02594pt x 432.11438pt>
+<./Figures/TOF.jpg, id=498, 743.02594pt x 432.11438pt>
 File: ./Figures/TOF.jpg Graphic file (type jpg)
  <use ./Figures/TOF.jpg>
-Package pdftex.def Info: ./Figures/TOF.jpg used on input line 98.
+Package pdftex.def Info: ./Figures/TOF.jpg used on input line 95.
 (pdftex.def)             Requested size: 111.44908pt x 64.81435pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 99.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 96.
 
 [4 <./Figures/Dataglove.jpg> <./Figures/colorGloves.jpg> <./Figures/wii.jpg> <.
 /Figures/webcam.jpg> <./Figures/digitalCamera.jpg> <./Figures/TOF.jpg>]
-[5] [6] [7] [8] <./Figures/LeapMotion.png, id=549, 974.89218pt x 416.30531pt>
+[5] [6] [7] [8] <./Figures/LeapMotion.png, id=555, 974.89218pt x 416.30531pt>
 File: ./Figures/LeapMotion.png Graphic file (type png)
 
 <use ./Figures/LeapMotion.png>
-Package pdftex.def Info: ./Figures/LeapMotion.png used on input line 196.
+Package pdftex.def Info: ./Figures/LeapMotion.png used on input line 194.
 (pdftex.def)             Requested size: 292.46991pt x 124.89255pt.
- [9 <./Figures/LeapMotion.png (PNG copy)>]
-<./Figures/MYO.png, id=563, 526.96875pt x 441.14813pt>
+
+Overfull \hbox (17.71472pt too wide) in paragraph at lines 201--201
+[][][]$\OT1/cmtt/m/n/10 http : / / blog . leapmotion . com / hardware-[]to-[]so
+ftware-[]how-[]does-[]the-[]leap-[]motion-[]controller-[]work/$[]| 
+ []
+
+[9 <./Figures/LeapMotion.png (PNG copy)>]
+<./Figures/MYO.png, id=572, 526.96875pt x 441.14813pt>
 File: ./Figures/MYO.png Graphic file (type png)
  <use ./Figures/MYO.png>
-Package pdftex.def Info: ./Figures/MYO.png used on input line 213.
+Package pdftex.def Info: ./Figures/MYO.png used on input line 211.
 (pdftex.def)             Requested size: 263.48372pt x 220.57352pt.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.219 ...efits-disadvantages-for-business_24.html}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.219 ...efits-disadvantages-for-business_24.html}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-<./Figures/Flutter.jpg, id=568, 1121.18875pt x 421.575pt>
+<./Figures/Flutter.jpg, id=578, 1121.18875pt x 421.575pt>
 File: ./Figures/Flutter.jpg Graphic file (type jpg)
 
 <use ./Figures/Flutter.jpg>
-Package pdftex.def Info: ./Figures/Flutter.jpg used on input line 227.
+Package pdftex.def Info: ./Figures/Flutter.jpg used on input line 225.
 (pdftex.def)             Requested size: 448.46756pt x 168.627pt.
 
 
@@ -1653,7 +1682,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Cap\'{\i }tulo 2
 [12
 
-] <./Figures/HGR.png, id=598, 796.9775pt x 84.315pt>
+] <./Figures/HGR.png, id=609, 796.9775pt x 84.315pt>
 File: ./Figures/HGR.png Graphic file (type png)
 
 <use ./Figures/HGR.png>
@@ -1665,7 +1694,7 @@ Overfull \hbox (6.15895pt too wide) in paragraph at lines 32--33
  []
 
 [13 <./Figures/HGR.png>] [14] [15] [16]
-<./Figures/image.png, id=621, 628.59843pt x 402.00188pt>
+<./Figures/image.png, id=632, 628.59843pt x 402.00188pt>
 File: ./Figures/image.png Graphic file (type png)
 
 <use ./Figures/image.png>
@@ -1700,13 +1729,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17] [18 <./Figures/image.png>]) (./Capitulo03.tex
 Cap\'{\i }tulo 3
-<./Figures/MyHGR.png, id=633, 766.865pt x 84.315pt>
+<./Figures/MyHGR.png, id=644, 766.865pt x 84.315pt>
 File: ./Figures/MyHGR.png Graphic file (type png)
  <use ./Figures/MyHGR.png>
 Package pdftex.def Info: ./Figures/MyHGR.png used on input line 14.
 (pdftex.def)             Requested size: 460.12256pt x 50.58937pt.
 
-<./Figures/Adquisicion.png, id=634, 415.5525pt x 92.345pt>
+<./Figures/Adquisicion.png, id=645, 415.5525pt x 92.345pt>
 File: ./Figures/Adquisicion.png Graphic file (type png)
 
 <use ./Figures/Adquisicion.png>
@@ -1715,103 +1744,104 @@ Package pdftex.def Info: ./Figures/Adquisicion.png used on input line 26.
  [19
 
  <./Figures/MyHGR.png> <./Figures/Adquisicion.png>] <./Figures/Kinect.jpg, id=6
-45, 462.22687pt x 120.45pt>
+55, 462.22687pt x 120.45pt>
 File: ./Figures/Kinect.jpg Graphic file (type jpg)
 
 <use ./Figures/Kinect.jpg>
-Package pdftex.def Info: ./Figures/Kinect.jpg used on input line 42.
+Package pdftex.def Info: ./Figures/Kinect.jpg used on input line 43.
 (pdftex.def)             Requested size: 300.44391pt x 78.29155pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <7> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 44.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 45.
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
 [][]\OT1/phv/m/n/10 http://blogs.msdn.com/b/eternalcoding/archive/2012/02/01/of
 ficial-kinect-for-windows-sdk-and-kinect-
  []
 
-<./Figures/sensor.png, id=649, 390.70969pt x 214.55156pt>
+<./Figures/sensor.png, id=659, 390.70969pt x 214.55156pt>
 File: ./Figures/sensor.png Graphic file (type png)
 
 <use ./Figures/sensor.png>
-Package pdftex.def Info: ./Figures/sensor.png used on input line 55.
+Package pdftex.def Info: ./Figures/sensor.png used on input line 56.
 (pdftex.def)             Requested size: 234.42761pt x 128.73192pt.
  [20 <./Figures/Kinect.jpg> <./Figures/sensor.png>]
-<./Figures/Detection.png, id=661, 656.4525pt x 92.345pt>
+[21] <./Figures/Detection.png, id=677, 656.4525pt x 92.345pt>
 File: ./Figures/Detection.png Graphic file (type png)
 
 <use ./Figures/Detection.png>
-Package pdftex.def Info: ./Figures/Detection.png used on input line 87.
+Package pdftex.def Info: ./Figures/Detection.png used on input line 98.
 (pdftex.def)             Requested size: 459.51361pt x 64.64104pt.
+ [22 <./Figures/Detection.png>]
+<./Figures/ViolaJonesDiagram.png, id=684, 755.82375pt x 143.53625pt>
+File: ./Figures/ViolaJonesDiagram.png Graphic file (type png)
+
+<use ./Figures/ViolaJonesDiagram.png>
+Package pdftex.def Info: ./Figures/ViolaJonesDiagram.png used on input line 114
+.
+(pdftex.def)             Requested size: 453.49774pt x 86.1224pt.
+
+<./Figures/haarFeatures1.jpg, id=690, 141.52875pt x 240.14719pt>
+File: ./Figures/haarFeatures1.jpg Graphic file (type jpg)
+
+<use ./Figures/haarFeatures1.jpg>
+Package pdftex.def Info: ./Figures/haarFeatures1.jpg used on input line 135.
+(pdftex.def)             Requested size: 56.61049pt x 96.05716pt.
+
+<./Figures/haarFeatures2.jpg, id=691, 134.75343pt x 243.15843pt>
+File: ./Figures/haarFeatures2.jpg Graphic file (type jpg)
+
+<use ./Figures/haarFeatures2.jpg>
+Package pdftex.def Info: ./Figures/haarFeatures2.jpg used on input line 136.
+(pdftex.def)             Requested size: 53.9004pt x 97.26164pt.
+
+<./Figures/haarFeatures3.jpg, id=692, 240.9pt x 100.12407pt>
+File: ./Figures/haarFeatures3.jpg Graphic file (type jpg)
+
+<use ./Figures/haarFeatures3.jpg>
+Package pdftex.def Info: ./Figures/haarFeatures3.jpg used on input line 137.
+(pdftex.def)             Requested size: 96.35828pt x 40.0489pt.
+
+<./Figures/haarFeatures4.jpg, id=693, 243.91125pt x 244.66406pt>
+File: ./Figures/haarFeatures4.jpg Graphic file (type jpg)
+
+<use ./Figures/haarFeatures4.jpg>
+Package pdftex.def Info: ./Figures/haarFeatures4.jpg used on input line 138.
+(pdftex.def)             Requested size: 97.56276pt x 97.86388pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21] <./Figures/ViolaJonesDiagram.png, id=668, 755.82375pt x 143.53625pt>
-File: ./Figures/ViolaJonesDiagram.png Graphic file (type png)
-
-<use ./Figures/ViolaJonesDiagram.png>
-Package pdftex.def Info: ./Figures/ViolaJonesDiagram.png used on input line 103
-.
-(pdftex.def)             Requested size: 453.49774pt x 86.1224pt.
- [22 <./Figures/Detection.png> <./Figures/ViolaJonesDiagram.png>]
-<./Figures/haarFeatures1.jpg, id=680, 141.52875pt x 240.14719pt>
-File: ./Figures/haarFeatures1.jpg Graphic file (type jpg)
-
-<use ./Figures/haarFeatures1.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures1.jpg used on input line 124.
-(pdftex.def)             Requested size: 56.61049pt x 96.05716pt.
-
-<./Figures/haarFeatures2.jpg, id=681, 134.75343pt x 243.15843pt>
-File: ./Figures/haarFeatures2.jpg Graphic file (type jpg)
-
-<use ./Figures/haarFeatures2.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures2.jpg used on input line 125.
-(pdftex.def)             Requested size: 53.9004pt x 97.26164pt.
-
-<./Figures/haarFeatures3.jpg, id=682, 240.9pt x 100.12407pt>
-File: ./Figures/haarFeatures3.jpg Graphic file (type jpg)
-
-<use ./Figures/haarFeatures3.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures3.jpg used on input line 126.
-(pdftex.def)             Requested size: 96.35828pt x 40.0489pt.
-
-<./Figures/haarFeatures4.jpg, id=683, 243.91125pt x 244.66406pt>
-File: ./Figures/haarFeatures4.jpg Graphic file (type jpg)
-
-<use ./Figures/haarFeatures4.jpg>
-Package pdftex.def Info: ./Figures/haarFeatures4.jpg used on input line 127.
-(pdftex.def)             Requested size: 97.56276pt x 97.86388pt.
-
-<./Figures/ImagetoIntegral.png, id=688, 175.40532pt x 134.00063pt>
+[23 <./Figures/ViolaJonesDiagram.png>]
+<./Figures/ImagetoIntegral.png, id=707, 175.40532pt x 134.00063pt>
 File: ./Figures/ImagetoIntegral.png Graphic file (type png)
 
 <use ./Figures/ImagetoIntegral.png>
-Package pdftex.def Info: ./Figures/ImagetoIntegral.png used on input line 141.
+Package pdftex.def Info: ./Figures/ImagetoIntegral.png used on input line 152.
 (pdftex.def)             Requested size: 105.24399pt x 80.40097pt.
 
-<./Figures/CalculationIntegral.png, id=689, 173.89969pt x 134.00063pt>
+<./Figures/CalculationIntegral.png, id=708, 173.89969pt x 134.00063pt>
 File: ./Figures/CalculationIntegral.png Graphic file (type png)
 
 <use ./Figures/CalculationIntegral.png>
 Package pdftex.def Info: ./Figures/CalculationIntegral.png used on input line 1
-42.
+53.
 (pdftex.def)             Requested size: 104.3406pt x 80.40097pt.
+
+<./Figures/IntegralImage.png, id=711, 822.07124pt x 566.86781pt>
+File: ./Figures/IntegralImage.png Graphic file (type png)
+
+<use ./Figures/IntegralImage.png>
+Package pdftex.def Info: ./Figures/IntegralImage.png used on input line 163.
+(pdftex.def)             Requested size: 205.5173pt x 141.7166pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23 <./Figures/haarFeatures1.jpg> <./Figures/haarFeatures2.jpg> <./Figures/haar
-Features3.jpg> <./Figures/haarFeatures4.jpg>]
-<./Figures/IntegralImage.png, id=703, 822.07124pt x 566.86781pt>
-File: ./Figures/IntegralImage.png Graphic file (type png)
-
-<use ./Figures/IntegralImage.png>
-Package pdftex.def Info: ./Figures/IntegralImage.png used on input line 152.
-(pdftex.def)             Requested size: 205.5173pt x 141.7166pt.
- [24 <./Figures/ImagetoIntegral.png> <./Figures/CalculationIntegral.png> <./Fig
-ures/IntegralImage.png>]
+[24 <./Figures/haarFeatures1.jpg> <./Figures/haarFeatures2.jpg> <./Figures/haar
+Features3.jpg> <./Figures/haarFeatures4.jpg> <./Figures/ImagetoIntegral.png> <.
+/Figures/CalculationIntegral.png>]
 ! Extra }, or forgotten $.
-l.193 	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}
+l.204 	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}
                                                   .$$
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1826,89 +1856,87 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.194     \ENDFOR
+l.205     \ENDFOR
                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 212.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./Figures/DCascade.png, id=715, 760.8425pt x 296.10625pt>
+put line 223.
+[25 <./Figures/IntegralImage.png>]
+<./Figures/DCascade.png, id=733, 760.8425pt x 296.10625pt>
 File: ./Figures/DCascade.png Graphic file (type png)
 
 <use ./Figures/DCascade.png>
-Package pdftex.def Info: ./Figures/DCascade.png used on input line 227.
+Package pdftex.def Info: ./Figures/DCascade.png used on input line 238.
 (pdftex.def)             Requested size: 456.50902pt x 177.66512pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25] [26]
+[26]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27 <./Figures/DCascade.png>]
-<./Figures/EX1.png, id=750, 178.41656pt x 137.01187pt>
+[27 <./Figures/DCascade.png>] [28]
+<./Figures/EX1.png, id=781, 178.41656pt x 137.01187pt>
 File: ./Figures/EX1.png Graphic file (type png)
  <use ./Figures/EX1.png>
-Package pdftex.def Info: ./Figures/EX1.png used on input line 300.
+Package pdftex.def Info: ./Figures/EX1.png used on input line 308.
 (pdftex.def)             Requested size: 121.32164pt x 93.16684pt.
 
-<./Figures/EX3.png, id=751, 120.45pt x 137.01187pt>
+<./Figures/EX3.png, id=782, 120.45pt x 137.01187pt>
 File: ./Figures/EX3.png Graphic file (type png)
  <use ./Figures/EX3.png>
-Package pdftex.def Info: ./Figures/EX3.png used on input line 301.
+Package pdftex.def Info: ./Figures/EX3.png used on input line 309.
 (pdftex.def)             Requested size: 81.9049pt x 93.16684pt.
 
-<./Figures/EX2.png, id=752, 293.59688pt x 219.82124pt>
+<./Figures/EX2.png, id=783, 293.59688pt x 219.82124pt>
 File: ./Figures/EX2.png Graphic file (type png)
  <use ./Figures/EX2.png>
-Package pdftex.def Info: ./Figures/EX2.png used on input line 302.
+Package pdftex.def Info: ./Figures/EX2.png used on input line 310.
 (pdftex.def)             Requested size: 123.30983pt x 92.32428pt.
 
-[28] [29 <./Figures/EX1.png> <./Figures/EX3.png> <./Figures/EX2.png>]
-<./Figures/originalMO.png, id=791, 167.12437pt x 167.12437pt>
+[29 <./Figures/EX1.png> <./Figures/EX3.png> <./Figures/EX2.png>]
+<./Figures/originalMO.png, id=803, 167.12437pt x 167.12437pt>
 File: ./Figures/originalMO.png Graphic file (type png)
 
 <use ./Figures/originalMO.png>
-Package pdftex.def Info: ./Figures/originalMO.png used on input line 335.
+Package pdftex.def Info: ./Figures/originalMO.png used on input line 343.
 (pdftex.def)             Requested size: 91.91867pt x 91.91867pt.
 
-<./Figures/dilatationMO.png, id=792, 167.12437pt x 167.12437pt>
+<./Figures/dilatationMO.png, id=804, 167.12437pt x 167.12437pt>
 File: ./Figures/dilatationMO.png Graphic file (type png)
 
 <use ./Figures/dilatationMO.png>
-Package pdftex.def Info: ./Figures/dilatationMO.png used on input line 336.
+Package pdftex.def Info: ./Figures/dilatationMO.png used on input line 344.
 (pdftex.def)             Requested size: 91.91867pt x 91.91867pt.
 
-<./Figures/erosionMO.png, id=793, 167.12437pt x 164.11313pt>
+<./Figures/erosionMO.png, id=805, 167.12437pt x 164.11313pt>
 File: ./Figures/erosionMO.png Graphic file (type png)
 
 <use ./Figures/erosionMO.png>
-Package pdftex.def Info: ./Figures/erosionMO.png used on input line 337.
+Package pdftex.def Info: ./Figures/erosionMO.png used on input line 345.
 (pdftex.def)             Requested size: 91.91867pt x 90.26248pt.
 
-<./Figures/openingMO.png, id=794, 167.12437pt x 166.37157pt>
+<./Figures/openingMO.png, id=806, 167.12437pt x 166.37157pt>
 File: ./Figures/openingMO.png Graphic file (type png)
 
 <use ./Figures/openingMO.png>
-Package pdftex.def Info: ./Figures/openingMO.png used on input line 338.
+Package pdftex.def Info: ./Figures/openingMO.png used on input line 346.
 (pdftex.def)             Requested size: 91.91867pt x 91.50462pt.
 
-<./Figures/closingMO.png, id=795, 167.12437pt x 167.12437pt>
+<./Figures/closingMO.png, id=807, 167.12437pt x 167.12437pt>
 File: ./Figures/closingMO.png Graphic file (type png)
 
 <use ./Figures/closingMO.png>
-Package pdftex.def Info: ./Figures/closingMO.png used on input line 339.
+Package pdftex.def Info: ./Figures/closingMO.png used on input line 347.
 (pdftex.def)             Requested size: 91.91867pt x 91.91867pt.
 
 ! Argument of \caption@ydblarg has an extra }.
 <inserted text> 
                 \par 
-l.340 ...en el inciso a, \citep{Smith1999}.\quad }
+l.348 ...en el inciso a, \citep{Smith1999}.\quad }
                                                   \label{fig:OM}
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -1922,58 +1950,64 @@ Runaway argument?
 ! Paragraph ended before \caption@ydblarg was complete.
 <to be read again> 
                    \par 
-l.340 ...en el inciso a, \citep{Smith1999}.\quad }
+l.348 ...en el inciso a, \citep{Smith1999}.\quad }
                                                   \label{fig:OM}
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-[30 <./Figures/originalMO.png> <./Figures/dilatationMO.png> <./Figures/erosionM
-O.png> <./Figures/openingMO.png> <./Figures/closingMO.png>]
-<./Figures/DExtraccion.png, id=804, 656.4525pt x 92.345pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./Figures/DExtraccion.png, id=809, 656.4525pt x 92.345pt>
 File: ./Figures/DExtraccion.png Graphic file (type png)
 
 <use ./Figures/DExtraccion.png>
-Package pdftex.def Info: ./Figures/DExtraccion.png used on input line 357.
+Package pdftex.def Info: ./Figures/DExtraccion.png used on input line 365.
 (pdftex.def)             Requested size: 459.51361pt x 64.64104pt.
-
+ [30]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 365.
+d on input line 373.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 373--373
 [][][] \OT1/phv/m/n/10 Weiss-tein, Eric W. []onvex."From MathWorld--A Wol-fram 
 Web Re-sour-ce.
  []
 
-<./Figures/ConvexSet.png, id=806, 146.79843pt x 127.97812pt>
+<./Figures/ConvexSet.png, id=818, 146.79843pt x 127.97812pt>
 File: ./Figures/ConvexSet.png Graphic file (type png)
 
 <use ./Figures/ConvexSet.png>
-Package pdftex.def Info: ./Figures/ConvexSet.png used on input line 368.
+Package pdftex.def Info: ./Figures/ConvexSet.png used on input line 376.
 (pdftex.def)             Requested size: 117.43889pt x 102.38261pt.
 
-<./Figures/ConcaveSet.png, id=807, 143.03438pt x 130.23656pt>
+<./Figures/ConcaveSet.png, id=819, 143.03438pt x 130.23656pt>
 File: ./Figures/ConcaveSet.png Graphic file (type png)
 
 <use ./Figures/ConcaveSet.png>
-Package pdftex.def Info: ./Figures/ConcaveSet.png used on input line 369.
+Package pdftex.def Info: ./Figures/ConcaveSet.png used on input line 377.
 (pdftex.def)             Requested size: 107.2755pt x 97.67717pt.
- [31 <./Figures/DExtraccion.png> <./Figures/ConvexSet.png (PNG copy)> <./Figure
-s/ConcaveSet.png>]
-<./Figures/ConvexHullAndDefects.png, id=821, 517.935pt x 301.8778pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[31 <./Figures/originalMO.png> <./Figures/dilatationMO.png> <./Figures/erosionM
+O.png> <./Figures/openingMO.png> <./Figures/closingMO.png> <./Figures/DExtracci
+on.png>] <./Figures/ConvexHullAndDefects.png, id=831, 517.935pt x 301.8778pt>
 File: ./Figures/ConvexHullAndDefects.png Graphic file (type png)
 
 <use ./Figures/ConvexHullAndDefects.png>
 Package pdftex.def Info: ./Figures/ConvexHullAndDefects.png used on input line 
-381.
+389.
 (pdftex.def)             Requested size: 207.17032pt x 120.74898pt.
-
+ [32 <./Figures/ConvexSet.png (PNG copy)> <./Figures/ConcaveSet.png> <./Figures
+/ConvexHullAndDefects.png (PNG copy)>]
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.399 ... \textbf{Y} $ \delta_i > \frac{L_r}{k}$ }
+l.407 ... \textbf{Y} $ \delta_i > \frac{L_r}{k}$ }
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1981,31 +2015,17 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[32 <./Figures/ConvexHullAndDefects.png (PNG copy)>]
-<./Figures/pusheen.png, id=829, 330.48468pt x 335.75438pt>
-File: ./Figures/pusheen.png Graphic file (type png)
+<./Figures/rootFingers.png, id=841, 400.49625pt x 393.72093pt>
+File: ./Figures/rootFingers.png Graphic file (type png)
 
-<use ./Figures/pusheen.png>
-Package pdftex.def Info: ./Figures/pusheen.png used on input line 415.
-(pdftex.def)             Requested size: 181.76714pt x 184.66547pt.
- [33 <./Figures/pusheen.png>]
-File: ./Figures/pusheen.png Graphic file (type png)
-
-<use ./Figures/pusheen.png>
-Package pdftex.def Info: ./Figures/pusheen.png used on input line 429.
-(pdftex.def)             Requested size: 181.76714pt x 184.66547pt.
- [34]
-<./Figures/SVMarticle.png, id=847, 622.57594pt x 413.29407pt>
-File: ./Figures/SVMarticle.png Graphic file (type png)
-
-<use ./Figures/SVMarticle.png>
-Package pdftex.def Info: ./Figures/SVMarticle.png used on input line 452.
-(pdftex.def)             Requested size: 342.41782pt x 227.31242pt.
+<use ./Figures/rootFingers.png>
+Package pdftex.def Info: ./Figures/rootFingers.png used on input line 423.
+(pdftex.def)             Requested size: 220.2736pt x 216.54718pt.
 
 ! Argument of \caption@ydblarg has an extra }.
 <inserted text> 
                 \par 
-l.454 ...iperplano al origen. \citep{Burges1998}.}
+l.425 ...do los puntos medios, \citep{Hummel2014}}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -2019,15 +2039,90 @@ Runaway argument?
 ! Paragraph ended before \caption@ydblarg was complete.
 <to be read again> 
                    \par 
-l.454 ...iperplano al origen. \citep{Burges1998}.}
+l.425 ...do los puntos medios, \citep{Hummel2014}}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <10> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 425.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <10> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 425.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[33] <./Figures/angles.png, id=856, 323.70938pt x 302.63063pt>
+File: ./Figures/angles.png Graphic file (type png)
+
+<use ./Figures/angles.png>
+Package pdftex.def Info: ./Figures/angles.png used on input line 441.
+(pdftex.def)             Requested size: 194.22713pt x 181.57977pt.
+
+! Argument of \caption@ydblarg has an extra }.
+<inserted text> 
+                \par 
+l.443 ... de los dedos, \citep{Sgouropoulos2014}.}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@caption \@captype }{\def \reserved@a *{\cite *[]}\reserved@a }\def \ETC.
+! Paragraph ended before \caption@ydblarg was complete.
+<to be read again> 
+                   \par 
+l.443 ... de los dedos, \citep{Sgouropoulos2014}.}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34 <./Figures/rootFingers.png>]
+<./Figures/SVMarticle.png, id=862, 622.57594pt x 413.29407pt>
+File: ./Figures/SVMarticle.png Graphic file (type png)
+
+<use ./Figures/SVMarticle.png>
+Package pdftex.def Info: ./Figures/SVMarticle.png used on input line 464.
+(pdftex.def)             Requested size: 342.41782pt x 227.31242pt.
+
+! Argument of \caption@ydblarg has an extra }.
+<inserted text> 
+                \par 
+l.466 ...iperplano al origen. \citep{Burges1998}.}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+{\@caption \@captype }{\def \reserved@a *{\cite *[]}\reserved@a }\def \ETC.
+! Paragraph ended before \caption@ydblarg was complete.
+<to be read again> 
+                   \par 
+l.466 ...iperplano al origen. \citep{Burges1998}.}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <5> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 454.
-[35 <./Figures/SVMarticle.png>] [36]) (./Capitulo04.tex
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 466.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[35 <./Figures/angles.png>] [36 <./Figures/SVMarticle.png>] [37])
+(./Capitulo04.tex
 Cap\'{\i }tulo 4
 
 Overfull \hbox (9.76324pt too wide) in paragraph at lines 1--1
@@ -2035,14 +2130,14 @@ Overfull \hbox (9.76324pt too wide) in paragraph at lines 1--1
 
  []
 
-<./Figures/system.png, id=871, 1174.3875pt x 1025.8325pt>
+<./Figures/system.png, id=892, 1174.3875pt x 1025.8325pt>
 File: ./Figures/system.png Graphic file (type png)
 
 <use ./Figures/system.png>
 Package pdftex.def Info: ./Figures/system.png used on input line 15.
 (pdftex.def)             Requested size: 234.87334pt x 205.16287pt.
 
-<./Figures/166.png, id=873, 473.51906pt x 346.29375pt>
+<./Figures/166.png, id=894, 473.51906pt x 346.29375pt>
 File: ./Figures/166.png Graphic file (type png)
  <use ./Figures/166.png>
 Package pdftex.def Info: ./Figures/166.png used on input line 26.
@@ -2051,30 +2146,30 @@ Package pdftex.def Info: ./Figures/166.png used on input line 26.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/166_W13.png, id=876, 472.76625pt x 345.54094pt>
+<./Figures/166_W13.png, id=897, 472.76625pt x 345.54094pt>
 File: ./Figures/166_W13.png Graphic file (type png)
 
 <use ./Figures/166_W13.png>
 Package pdftex.def Info: ./Figures/166_W13.png used on input line 35.
 (pdftex.def)             Requested size: 236.38254pt x 172.77003pt.
- [37
+ [38
 
- <./Figures/system.png>] [38 <./Figures/166.png> <./Figures/166_W13.png>]
-<./Figures/TrainingImage2.png, id=900, 94.10156pt x 118.94438pt>
+ <./Figures/system.png>] [39 <./Figures/166.png> <./Figures/166_W13.png>]
+<./Figures/TrainingImage2.png, id=921, 94.10156pt x 118.94438pt>
 File: ./Figures/TrainingImage2.png Graphic file (type png)
 
 <use ./Figures/TrainingImage2.png>
 Package pdftex.def Info: ./Figures/TrainingImage2.png used on input line 55.
 (pdftex.def)             Requested size: 94.10132pt x 118.94408pt.
 
-<./Figures/TrainingImage1.png, id=901, 61.73062pt x 76.78688pt>
+<./Figures/TrainingImage1.png, id=922, 61.73062pt x 76.78688pt>
 File: ./Figures/TrainingImage1.png Graphic file (type png)
 
 <use ./Figures/TrainingImage1.png>
 Package pdftex.def Info: ./Figures/TrainingImage1.png used on input line 56.
 (pdftex.def)             Requested size: 95.68239pt x 119.01958pt.
 
-<./Figures/TrainingImage3.png, id=902, 79.04532pt x 120.45pt>
+<./Figures/TrainingImage3.png, id=923, 79.04532pt x 120.45pt>
 File: ./Figures/TrainingImage3.png Graphic file (type png)
 
 <use ./Figures/TrainingImage3.png>
@@ -2088,14 +2183,17 @@ Underfull \hbox (badness 1540) in paragraph at lines 57--57
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figures/Fondo5262.png, id=903, 642.4pt x 481.8pt>
+<./Figures/Fondo5262.png, id=924, 642.4pt x 481.8pt>
 File: ./Figures/Fondo5262.png Graphic file (type png)
 
 <use ./Figures/Fondo5262.png>
 Package pdftex.def Info: ./Figures/Fondo5262.png used on input line 65.
 (pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+
+<./Figures/pusheen.png, id=925, 330.48468pt x 335.75438pt>
 File: ./Figures/pusheen.png Graphic file (type png)
- <use ./Figures/pusheen.png>
+
+<use ./Figures/pusheen.png>
 Package pdftex.def Info: ./Figures/pusheen.png used on input line 66.
 (pdftex.def)             Requested size: 99.14616pt x 100.72708pt.
 
@@ -2106,7 +2204,7 @@ Underfull \hbox (badness 1776) in paragraph at lines 66--66
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[39] <./Figures/roi.png, id=917, 446.41782pt x 347.04657pt>
+[40] <./Figures/roi.png, id=939, 446.41782pt x 347.04657pt>
 File: ./Figures/roi.png Graphic file (type png)
 
 <use ./Figures/roi.png>
@@ -2124,15 +2222,14 @@ Package pdftex.def Info: ./Figures/pusheen.png used on input line 89.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[40 <./Figures/TrainingImage2.png> <./Figures/TrainingImage1.png> <./Figures/Tr
-ainingImage3.png> <./Figures/Fondo5262.png (PNG copy)>]
+[41 <./Figures/TrainingImage2.png> <./Figures/TrainingImage1.png> <./Figures/Tr
+ainingImage3.png> <./Figures/Fondo5262.png (PNG copy)> <./Figures/pusheen.png>]
 File: ./Figures/pusheen.png Graphic file (type png)
-
 <use ./Figures/pusheen.png>
 Package pdftex.def Info: ./Figures/pusheen.png used on input line 101.
 (pdftex.def)             Requested size: 132.19153pt x 134.29936pt.
 
-<./Figures/65_C.png, id=928, 114.4275pt x 121.20282pt>
+<./Figures/65_C.png, id=950, 114.4275pt x 121.20282pt>
 File: ./Figures/65_C.png Graphic file (type png)
 
 <use ./Figures/65_C.png>
@@ -2150,7 +2247,7 @@ Package pdftex.def Info: ./Figures/pusheen.png used on input line 116.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[41 <./Figures/roi.png>]
+[42 <./Figures/roi.png>]
 File: ./Figures/pusheen.png Graphic file (type png)
  <use ./Figures/pusheen.png>
 Package pdftex.def Info: ./Figures/pusheen.png used on input line 127.
@@ -2166,7 +2263,7 @@ c-ter[]^^Psti-cas de di-men-si[]on $\OML/cmm/m/it/12 dimension$\OT1/phv/m/n/12
 .
  []
 
-[42 <./Figures/65_C.png>]
+[43 <./Figures/65_C.png>]
 File: ./Figures/pusheen.png Graphic file (type png)
  <use ./Figures/pusheen.png>
 Package pdftex.def Info: ./Figures/pusheen.png used on input line 153.
@@ -2180,41 +2277,77 @@ Package pdftex.def Info: ./Figures/pusheen.png used on input line 154.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[43] [44]) (./Capitulo05.tex
+[44] [45]) (./Capitulo05.tex
 Cap\'{\i }tulo 5
-File: ./Figures/pusheen.png Graphic file (type png)
-<use ./Figures/pusheen.png>
-Package pdftex.def Info: ./Figures/pusheen.png used on input line 23.
-(pdftex.def)             Requested size: 99.14616pt x 100.72708pt.
- [45
+<./Figures/iluminacion.jpg, id=990, 2463.2025pt x 1734.48pt>
+File: ./Figures/iluminacion.jpg Graphic file (type jpg)
 
-]
-File: ./Figures/pusheen.png Graphic file (type png)
- <use ./Figures/pusheen.png>
-Package pdftex.def Info: ./Figures/pusheen.png used on input line 35.
-(pdftex.def)             Requested size: 99.14616pt x 100.72708pt.
-File: ./Figures/pusheen.png Graphic file (type png)
+<use ./Figures/iluminacion.jpg>
+Package pdftex.def Info: ./Figures/iluminacion.jpg used on input line 25.
+(pdftex.def)             Requested size: 270.95311pt x 190.79338pt.
 
-<use ./Figures/pusheen.png>
-Package pdftex.def Info: ./Figures/pusheen.png used on input line 45.
-(pdftex.def)             Requested size: 99.14616pt x 100.72708pt.
- [46]) (./Capitulo06.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+! Missing # inserted in alignment preamble.
+<to be read again> 
+                   \cr 
+l.33 \begin{tabular}{ | l | c | r | }
+                                     
+There should be exactly one # between &'s, when an
+\halign or \valign is being set up. In this case you had
+none, so I've put one in; maybe that will work.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.35   1 &
+           2 & 3 \\
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.35   1 & 2 &
+               3 \\
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+[46
+
+] <./Figures/mediailuminacion.jpg, id=997, 2652.91125pt x 1719.42375pt>
+File: ./Figures/mediailuminacion.jpg Graphic file (type jpg)
+
+<use ./Figures/mediailuminacion.jpg>
+Package pdftex.def Info: ./Figures/mediailuminacion.jpg used on input line 47.
+(pdftex.def)             Requested size: 291.82114pt x 189.13719pt.
+
+<./Figures/noIluminacion.jpg, id=998, 2637.10219pt x 1717.91812pt>
+File: ./Figures/noIluminacion.jpg Graphic file (type jpg)
+
+<use ./Figures/noIluminacion.jpg>
+Package pdftex.def Info: ./Figures/noIluminacion.jpg used on input line 57.
+(pdftex.def)             Requested size: 290.08214pt x 188.97157pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[47 <./Figures/iluminacion.jpg> <./Figures/mediailuminacion.jpg>])
+(./Capitulo06.tex [48 <./Figures/noIluminacion.jpg>]
 Cap\'{\i }tulo 6
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
-
- []
-
-[47
-
-] [48]) (./iTesis.bbl (/usr/share/texmf/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
 [49
 
-]) (./Apendice.tex [50]
+] [50]) (./iTesis.bbl (/usr/share/texmf/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+[51
+
+]) (./Apendice.tex [52]
 Ap\'{e}ndice A
-) [51
+) [53
 
 ]
 
@@ -2230,20 +2363,20 @@ LaTeX Info: Redefining \% on input line 25.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 274.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 274.
 Package rerunfilecheck Info: File `iTesis.out' has not changed.
-(rerunfilecheck)             Checksum: BCC952AD0716E41E8F74AEA37A65B7F5;4578.
+(rerunfilecheck)             Checksum: 8851483E7526A22621673D345052903E;4709.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 22613 strings out of 493315
- 349871 string characters out of 6145894
- 514527 words of memory out of 5000000
- 25219 multiletter control sequences out of 15000+600000
- 41625 words of font info for 88 fonts, out of 8000000 for 9000
+ 22648 strings out of 493315
+ 350680 string characters out of 6145894
+ 514390 words of memory out of 5000000
+ 25244 multiletter control sequences out of 15000+600000
+ 43384 words of font info for 90 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 53i,14n,92p,1456b,896s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,14n,92p,1456b,900s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.37} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -2344,18 +2477,17 @@ i10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share
 ublic/amsfonts/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cm
 r10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
 texmf/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-mf/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmtt10
-.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/sha
-re/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/type1/urw/
-helvetic/uhvbo8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></us
-r/share/texmf/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on iTesis.pdf (63 pages, 3104057 bytes).
+lic/amsfonts/cm/cmr8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
+xmf/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/publ
+ic/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/symbols
+/msam10.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/t
+exmf/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texmf/fonts/type1/urw/hel
+vetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on iTesis.pdf (64 pages, 5647641 bytes).
 PDF statistics:
- 1121 PDF objects out of 1200 (max. 8388607)
- 945 compressed objects within 10 object streams
- 264 named destinations out of 1000 (max. 500000)
- 747 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1149 PDF objects out of 1200 (max. 8388607)
+ 967 compressed objects within 10 object streams
+ 268 named destinations out of 1000 (max. 500000)
+ 788 words of extra memory for PDF output out of 10000 (max. 10000000)
 

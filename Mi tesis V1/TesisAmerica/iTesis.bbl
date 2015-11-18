@@ -59,6 +59,11 @@ Huang, D.-Y., Hu, W.-C., y Chang, S.-H. (2011).
   recognition under varying illumination}.
 \newblock {\em Expert Systems with Applications\/}, {\bf 38}(5): 6031--6042.
 
+\bibitem[Hummel {\em \mbox{et al.}\/}(2014)Hummel, H\"{a}fner, H\"{a}fner, y
+  Ovtcharova]{Hummel2014}
+Hummel, S., H\"{a}fner, V., H\"{a}fner, P., y Ovtcharova, J. (2014).
+\newblock {New Techniques for Hand Pose Estimation Based on Kinect Depth Data}.
+
 \bibitem[Ibraheem(2013)Ibraheem]{Ibraheem2013}
 Ibraheem, N.~A. (2013).
 \newblock {Comparative Study of Skin Color based Segmentation Techniques}.
@@ -104,16 +109,16 @@ Nayakwadi, V. (2014).
   Survey}.
 \newblock {\bf 3}(1): 10--19.
 
-\bibitem[Niblack(1985)Niblack]{Niblack1985}
-Niblack, W. (1985).
-\newblock {\em {An introduction to digital image processing}\/}.
-\newblock Strandberg Publishing Company Birkeroed, Denmark,.
-\newblock p. 215.
-
 \bibitem[Ong {\em \mbox{et al.}\/}(1998)Ong, Teh, y Tan]{Ong1998}
 Ong, K.~C., Teh, H.~C., y Tan, T.~S. (1998).
 \newblock {Resolving occlusion in image sequence made easy}.
 \newblock {\em The Visual Computer\/}, {\bf 14}(4): 153--165.
+
+\bibitem[Otsu(1979)Otsu]{Otsu1979}
+Otsu, N. (1979).
+\newblock {A Threshold Selection Method from Gray-Level Histograms}.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics\/}, {\bf
+  9}(1): 62--66.
 
 \bibitem[Premaratne(2013)Premaratne]{Premaratne2013}
 Premaratne, P. (2013).

@@ -60,7 +60,6 @@ Desarrollar un sistema que permita controlar la computadora haciendo uso de gest
 \end{itemize}
 
 
-
 \section{Limitaciones y suposiciones}\label{sec:Limitaciones&Suposiciones}
 
 Gran porcentaje de los trabajos previos en el \'area de reconocimiento de gestos con las manos basados en el modelo de la visión  utilizan c\'amaras digitales o c\'amaras web. Esta investigación utiliza dos dispositivos Kinect, para obtener la información de entrada del sistema.
@@ -78,8 +77,7 @@ La definición de gestos \citep{Mitra2007} son movimientos del cuerpo expresivos
 Los primeros acercamientos para llevar acabo el reconocimiento de gestos con las manos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}, como su nombre lo dice utilizan dispositivos que est\'an en contacto f\'isico con la mano del usuario \ref{fig:Modelos:1}, para capturar el gesto a reconocer, por ejemplo existen guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch, aunque estos no son tan aceptados pues entorpecen la naturalidad entre la interacción del humano y la computadora. Los modelos basados en la visión \ref{fig:Modelos:2} , surgieron como respuesta a esta desventaja, estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento, los dispositivos van desde cámaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundidad.   
 
 \begin{figure}[h!]
-\centering
- 
+\begin{center}
 \subfigure [Dispositivos basados en contacto: en la parte izquierda de la imagen se observan los guantes de datos \protect\footnotemark{}
 , en el centro los guantes de colores  \protect\footnotemark{}  y a la derecha se encuentra el dispositivo wii \protect\footnotemark{} . \addtocounter{footnote}{-3}]
 {
@@ -88,7 +86,6 @@ Los primeros acercamientos para llevar acabo el reconocimiento de gestos con las
 	{\includegraphics[scale=.29]{./Figures/wii.jpg}} 	  	
 	\label{fig:Modelos:1}
 }
- 
 \subfigure [Dispositivos basados en visión: en la imagen se observan distintos tipos de cámaras en la parte izquierda de la imagen se observa una web \protect\footnotemark{}, en el centro una digital \protect\footnotemark{} y a la derecha de la imagen una TOF \protect\footnotemark{} .]
 {
 	{\includegraphics[scale=.3]{./Figures/webcam.jpg}} 		\qquad
@@ -97,7 +94,8 @@ Los primeros acercamientos para llevar acabo el reconocimiento de gestos con las
     \label{fig:Modelos:2} 
 }
 \caption{Dispositivos utilizados para la captura de gestos.} 
-\label{fig:Modelos}
+\label{fig:Modelos} 
+\end{center}
 \end{figure} 
 
 
@@ -119,7 +117,7 @@ La sección anterior explica los modelos utilizados para llevar acabo el reconoc
 
 \subsection{Modelos de contacto}
  
-Como se menciono en la sección anterior los primeros trabajos de reconocimiento de gestos con las manosutilizaba este modelo, actualmente se sigue utilizando pero en menor grado. En los párrafos siguientes se presentan dos trabajos relevantes en esta área. 
+Como se menciono en la sección anterior los primeros trabajos de reconocimiento de gestos con las manos utilizaba este modelo, actualmente se sigue utilizando pero en menor grado. En los párrafos siguientes se presentan dos trabajos relevantes en esta área. 
 
 El primer trabajo que se presenta es el realizado por \citep{Yoon2012} el cual propone un sistema de reconocimiento de gestos estáticos usando un guante de datos, el cual reconoce $24$ gestos tomados del Lenguaje de Señas Americano, ASL (por sus siglas en inglés, American Sign Lenguaje). Este modelo consta de tres etapas, las cuales se explican enseguida. 
 
@@ -131,7 +129,7 @@ La clasificación de gesto se realiza con un modelo de mezclas adaptativo. Para 
 
 La principal desventaja del sistema es que baja la precisión cuando se cambia de usuario, aunque después se adapta y mejora la precisión, otra desventaja para este sistema es que solo reconoce gestos estáticos. 
 
-A finales del año 2014 se lanzó el dispositivo MYO \footnote{https://www.thalmic.com/en/myo/}, el cual reconoce gestos dinámicos, los detalles del dispositivo se encuentran en ultima parte de esta sección. 
+A finales del año 2014 se lanzó el dispositivo MYO \footnote{\url{https://www.thalmic.com/en/myo/}}, el cual reconoce gestos dinámicos, los detalles del dispositivo se encuentran en ultima parte de esta sección. 
 
 
 \subsection{Modelos basados en la visión}   
@@ -186,7 +184,7 @@ Por ultimo una interfaz gráfica es mostrada donde se aprecia el reconocimiento 
  
 \subsection{Sistemas comerciales}
 
-Existen dispositivos como: Leap Motion \footnote{\label{LeapMotionFN} https://www.leapmotion.com/}, MYO \footnote{\label{MyoFN} https://www.myo.com/}, y software como: Flutter \footnote{\label{FlutterFN} https://flutterapp.com/}, que realizan el reconocimiento de gestos, y este reconocimiento es aplicado para controlar la computadora. Algunos de estos dispositivos comerciales tienen  buen rendimiento en cuanto a la precisión y a sobrellevar los problemas del reconocimiento de gestos, el inconveniente es que los desarrolladores de los dispositivos o software no dan a conocer los detalles de como solucionan algunos de los problemas o como mejoran la precisión. \\ 
+Existen dispositivos como: Leap Motion \footnote{\label{LeapMotionFN} \url{https://www.leapmotion.com/}}, MYO \footnote{\label{MyoFN}  \url{https://www.myo.com/}}, y software como: Flutter \footnote{\label{FlutterFN} \url{ https://flutterapp.com/}}, que realizan el reconocimiento de gestos, y este reconocimiento es aplicado para controlar la computadora. Algunos de estos dispositivos comerciales tienen  buen rendimiento en cuanto a la precisión y a sobrellevar los problemas del reconocimiento de gestos, el inconveniente es que los desarrolladores de los dispositivos o software no dan a conocer los detalles de como solucionan algunos de los problemas o como mejoran la precisión. \\ 
 Enseguida se describen los sistemas mencionados anteriormente.
  
 El dispositivo Leap Motion, fig \ref{fig:LeapMotion} fue creado para el seguimiento de manos y dedos, este también hace el reconocimiento de ciertos gestos estáticos y dinámicos. El dispositivo consta de tres emisores y dos cámaras infrarrojas, estos sensores capturan los datos crudos en un rango de $60 \times 60 \times 60$ $cm.$ y con la información capturada se construye un modelo 3D de las manos \citep{Weichert2013}. 
@@ -200,23 +198,23 @@ El dispositivo Leap Motion, fig \ref{fig:LeapMotion} fue creado para el seguimie
 \end{figure}
 
 El proceso de como se capturan los datos, la segmentación, la extracción de características, el seguimiento y el reconocimiento del dispositivo no se conoce a detalle.\\ 
-Solo se conoce \footnote{http://blog.leapmotion.com/hardware-to-software-how-does-the-leap-motion-controller-work/} que se utilizan tres cámaras infrarrojas, con la imágenes obtenidas con se hace una representación 3D de las manos, antes de realizar el modelo las imágenes son segmentadas del fondo para eliminar el ruido generado por la iluminación u otros objetos que causen ruido en la imágenes. \\
+Solo se conoce \footnote{ \url{http://blog.leapmotion.com/hardware-to-software-how-does-the-leap-motion-controller-work/}} que se utilizan tres cámaras infrarrojas, con la imágenes obtenidas con se hace una representación 3D de las manos, antes de realizar el modelo las imágenes son segmentadas del fondo para eliminar el ruido generado por la iluminación u otros objetos que causen ruido en la imágenes. \\
 Para realizar el seguimiento se extraen la características, una de ellas son el dedos, el algoritmo de seguimiento interpreta la información 3D e infiere la posición de los objetos ocluidos. Se aplican filtros para suavizar los datos. 
 
 
-Un dispositivo de reconocimiento de gestos basado en el modelo de contacto, es el MYO, este aparato es un brazalete que reconoce $5$ gestos dinámicos. Leyendo la actividad de los músculos del antebrazo y mandando estas señales vía Bluetooth a la computadora donde estas señales son procesadas. \footnote{http://www.digitaltrends.com/pc-accessory-reviews/myo-gesture-control-armband-review/} 
+Un dispositivo de reconocimiento de gestos basado en el modelo de contacto, es el MYO, este aparato es un brazalete que reconoce $5$ gestos dinámicos. Leyendo la actividad de los músculos del antebrazo y mandando estas señales vía Bluetooth a la computadora donde estas señales son procesadas. \footnote{\url{http://www.digitaltrends.com/pc-accessory-reviews/myo-gesture-control-armband-review/}} 
 
-No se cuenta con la informacion detallada del funcionamiento de MYO, lo único que se conoce es que el reconocimiento consta de tres etapas \footnote{https://www.quora.com/How-does-MYO-wearable-gesture-control-work}. La primera es la adquisición de la señales eléctricas que producen los músculos del antebrazo, las cuales son capturadas mediante sensores EMG (estos detectan la actividad eléctrica), giroscopio, acelerómetro y magnetómetro; en la segunda etapa se amplifica la señal y se aplica un filtro pasa banda. Por último se realiza el procesamiento de la señal donde se reconoce el gesto usando un algoritmo de aprendizaje de máquina desarrollado por la compañía.  
+No se cuenta con la informacion detallada del funcionamiento de MYO, lo único que se conoce es que el reconocimiento consta de tres etapas \footnote{\url{https://www.quora.com/How-does-MYO-wearable-gesture-control-work}}. La primera es la adquisición de la señales eléctricas que producen los músculos del antebrazo, las cuales son capturadas mediante sensores EMG (estos detectan la actividad eléctrica), giroscopio, acelerómetro y magnetómetro; en la segunda etapa se amplifica la señal y se aplica un filtro pasa banda. Por último se realiza el procesamiento de la señal donde se reconoce el gesto usando un algoritmo de aprendizaje de máquina desarrollado por la compañía.  
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.5]{./Figures/MYO.png}
 \end{center}
-\caption{Ejemplo del reconocimiento del gesto usando MYO, controlando el volumen de la computadora. El dispositivo es el aparece en el brazo del sujeto. Imagen recuperade de \ref{MyoFN}.}
+\caption{Ejemplo del reconocimiento del gesto usando MYO, controlando el volumen de la computadora. El dispositivo es el aparece en el brazo del sujeto. Imagen recuperada de \ref{MyoFN}.}
 \label{fig:Myo}
 \end{figure}
 
-MYO funciona en cualquier ambiente donde haya variaciones en la iluminación y es invariante a rotación. La desventaja que tiene la calibración pues esta puede ser tediosa ya que requiere realizar repeticiones de algunos gestos y esta requiere de varios intentos; el use del dispositivo requiere uso de manga corta; otra desventaja es que tiene una cantidad considerable de falsos positivos. \footnote{http://myogroupfive.blogspot.mx/2013/11/benefits-disadvantages-for-business_24.html} 
+MYO funciona en cualquier ambiente donde haya variaciones en la iluminación y es invariante a rotación. La desventaja que tiene la calibración pues esta puede ser tediosa ya que requiere realizar repeticiones de algunos gestos y esta requiere de varios intentos; el use del dispositivo requiere uso de manga corta; otra desventaja es que tiene una cantidad considerable de falsos positivos. \footnote{ \url{http://myogroupfive.blogspot.mx/2013/11/benefits-disadvantages-for-business\_ 24.html}} 
 
 
 Enseguida se explica el software de reconocimiento de gestos estáticos Flutter, fig:\ref{fig:Flutter} el cual reconoce cuatro gestos estáticos usando la cámara web como dispositivo de entrada. 
@@ -230,14 +228,12 @@ Se conoce muy superficialmente como funciona el software, pues solo se sabe que 
 \label{fig:Flutter}
 \end{figure}
 
-Flutter permite controlar aplicaciones multimedia como: YouTube \footnote{https://www.youtube.com/} ,VLC \footnote{http://www.videolan.org/vlc/}, Spotify \footnote{https://www.spotify.com/}, Netflix \footnote{https://www.netflix.com/}. Las limitaciones del software son que solo reconoce gestos estáticos, realiza acciones no deseadas al hacer gestos involuntarios y no siempre reconoce los gestos.  
+Flutter permite controlar aplicaciones multimedia como: YouTube \footnote{\url{https://www.youtube.com/}} ,VLC \footnote{\url{http://www.videolan.org/vlc/}}, Spotify \footnote{\url{https://www.spotify.com/}}, Netflix \footnote{\url{https://www.netflix.com/}}. Las limitaciones del software son que solo reconoce gestos estáticos, realiza acciones no deseadas al hacer gestos involuntarios y no siempre reconoce los gestos.  
 
 %::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
 
 Aunque estos dispositivos y software para reconocer gestos solucionan algunos problemas importantes en el área, sigue existiendo el problema de oclusiones e iluminación.
 De allí la importancia que existan nuevos modelos que ataquen estos problemas que se presentan frecuentemente en el reconocimiento de los gestos.
-
-
   
 \section{Organizaci\'on de la tesis}\label{OrganizacionTesis}
 
