@@ -46,7 +46,7 @@ Se aprecia en la imagen siguiente  que gran parte del ruido es reducido obtenien
 En este trabajo se utiliza el algoritmo de detección de objetos desarrollado por Viola y Jones (2001), como se mostró en el cap\'itulo \ref{capit:cap3} sección \ref{subsec:ViolaJones}, el algoritmo clasifica las imágenes basándose en el valor de características, el clasificador es construido usando el algoritmo de AdaBoost en forma de cascada. 
 
 
-La selección de las características se llev\'o acabo por medio de una versión modificada del algoritmo AdaBoost; la implementaci\'on se realiz\'o utilizando el software OpenCV Haar training classifier \footnote{https://github.com/mrnugget/opencv-haar-classifier-training}. Se entren\'o con $1000$ imágenes positivas (imágenes de profundidad de la mano), y $2000$ negativas, (imágenes de fondo de distintos escenarios). Las imágenes positivas fueron generadas de $300$ imágenes de poses; $3$ poses distintas, $100$ de cada pose, usando el software Create Samples \footnote{http://note.sonots.com/SciSoftware/haartraining.html}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{\label{myrepo} https://github.com/americamm}.
+La selección de las características se llev\'o acabo por medio de una versión modificada del algoritmo AdaBoost; la implementaci\'on se realiz\'o utilizando el software OpenCV Haar training classifier \footnote{{https://github.com/mrnugget/opencv-haar-classifier-training}}. Se entren\'o con $1000$ imágenes positivas (imágenes de profundidad de la mano), y $2000$ negativas, (imágenes de fondo de distintos escenarios). Las imágenes positivas fueron generadas de $300$ imágenes de poses; $3$ poses distintas, $100$ de cada pose, usando el software Create Samples \footnote{\url{http://note.sonots.com/SciSoftware/haartraining.html}}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{\label{myrepo} https://github.com/americamm}.
 
 Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de poses de la mano, estas fueron tomadas a una distancia de entre $60$ y $200$ $cm$. Las imágenes de profundidad de la mano fueron tomadas de $6$ personas distintas con tres distintas poses: palma con los dedos separados \ref{fig:ImagenesPoses:2}, palma con dedos juntos \ref{fig:ImagenesPoses:3} y finalmente el pu\~no \ref{fig:ImagenesPoses:1}, como se muestran en la figura \ref{fig:ImagenesPoses}. Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la figura \ref{fig:ImagenFondo}. El programa de captura de las imágenes puede ser encontrado en Github \ref{myrepo}.  
 
@@ -142,11 +142,13 @@ En este trabajo se reconocen gestos estáticos y dinámicos utilizando el algori
 
 Como se vio en el capitulo \ref{capit:cap3} sección \ref{sec:SVM} SVM es un algoritmo de aprendizaje de máquina supervisado, por lo que es necesario tener imágenes de los gestos a reconocer ya que con estas el clasificador es entrenado y el modelo de clasificación puede ser creado. 
 
-La implementación de SVM se lleva acabo usando LibSVMSharp \footnote{https://github.com/ccerhan/LibSVMsharp} un wrapper de la librería LibSVM \citep{Chang2011}.
+La implementación de SVM se lleva acabo usando LibSVMSharp \footnote{\url{https://github.com/ccerhan/LibSVMsharp}} un wrapper de la librería LibSVM \citep{Chang2011}.
 
 \subsection{Reconocimiento de gestos estáticos}\label{RecognitionEstatic}
 
-El sistema reconoce dos gestos estáticos: el puño y la palma de la mano con los dedos separados.  Para el entrenamiento se tomaron $num$ imágenes de los dos distintos gestos como los de la fig \ref{fig:SVMTrainingStatic}, divididas en partes iguales. De tamaño $640$ por $480$ pixeles.   
+El sistema reconoce dos gestos estáticos: el puño y la palma de la mano con los dedos separados. El reconocimiento del gesto se lleva analizando un solo cuadro o imagen.  
+
+El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento se tomaron $200$ imágenes de las dos distintas pose como las que se muestran en la fig \ref{fig:SVMTrainingStatic}. Se utilizo un kernel exponencial, (poner los demás parámetros) y se utilizó validación cruzada con 5 pliegues.   
 
 \begin{figure}[h!]
 \begin{center}
@@ -157,44 +159,38 @@ El sistema reconoce dos gestos estáticos: el puño y la palma de la mano con lo
 \label{fig:SVMTrainingStatic}
 \end{figure}
 
-Para el entrenamiento de la máquina de soporte se utilizo un kernel exponencial, (poner los demás parámetros) y se utilizó validación cruzada con 5 pliegues. 
+
 
 \subsection{Reconocimiento de gestos dinámicos}\label{RecognitionDynamic}
 
-El sistema reconoce numero de gestos dinámicos.  
 
-%\subsection{Extracción de parámetros}
-%Ecuación \ref{eq:gravedad}. 
-%
-%\begin{equation} \label{eq:gravedad}
-%A_{d} = -g - \frac{\sum F}{mass}
-%\end{equation} 
 
-%Donde $A_{d}$ representan la aceleración que se aplica a un dispositivo, $g$ la constante de gravedad de 9.81 m/$s^{2}$, y $\sum F$ las fuerzas que se aplican al propia sensor.
+En este trabajo se toma un gesto dinámico como una secuencia de $60$ cuadros consecutivos que realizan el mismo gesto estático siguiendo una trayectoria. De manera que el sistema reconoce el gesto dinámico identificando y siguiendo cada pose en cada cuadro en una secuencia. La trayectoria del gesto es obtenida tomando en cuenta la posición del centro de la mano el cual es calculado en cada cuadro. 
+ 
+El sistema reconoce dos gestos dinámicos, los cuales son los mismos gestos estáticos en movimiento.
+\begin{figure}[h!]
+\begin{center}
+\subfigure[Cuadro inicial]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G1:1}}      \quad
+\subfigure[Cuadro número 15 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G1:2}}
+\subfigure[Cuadro número 30 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G1:3}}
+\subfigure[Cuadro número 45 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G1:4}}
+\subfigure[Cuadro final]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G1:5}}
+\end{center}
+\caption{Secuencia del gesto dinámico de la palma de la mano abierta, la vista es desde el Kinect frontal.}
+\label{fig:G1}
+\end{figure}
 
-%Text  \ref{eq:demandaOxigeno_personalizada} and more $O_{2}$ text:
-%
-%\begin{equation} \label{eq:demandaOxigeno_personalizada}
-%\begin{split} 
-%& K = R + H + V \\ 
-%& R = 3.5 - (0.0367 \times BMI) - (0.0038 \times age) + (0.1790 \times gender)\\
-%& H = 0.1 \times \textrm{velocidad de desplazamiento}\\ 
-%& V = 1.8 \times \textrm{velocidad de desplazamiento}\\ 
-%\end{split} 
-%\end{equation} 
-%
-%Donde $1 + 2$ representan el consumo de $O_{2}$ en reposo personalizado al usuario $(ml \times kg^{-1} \times min^{-1})$ \citep{Barstow:1991}, $H$ el componente horizontal relativo a la velocidad de desplazamiento (m/min), $V$ el componente vertical relativo a la velocidad (m/min) y pendiente de desplazamiento (\%).
-%
-%\begin{description}
-%  \item[Velocidad:] \hfill \\
-%  	Para obtener la velocidad de desplazamiento se utiliza el número de pasos realizados por el usuario como se muestra a continuación (Ecuación \ref{eq:velocidad}).
-%  
-%\begin{equation} \label{eq:velocidad}
-%  S_{k} = D_{k}/W \hspace{10 mm} 
-%  D_{k} = ST_{k} \times SL \hspace{10 mm}
-%  SL = D_{total}/ST_{total} 
-%\end{equation}
-%\end{description}
+\begin{figure}[h!]
+\begin{center}
+\subfigure[Cuadro inicial]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G2:1}}      \quad
+\subfigure[Cuadro número 15 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G2:2}}
+\subfigure[Cuadro número 30 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G2:3}}
+\subfigure[Cuadro número 45 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G2:4}}
+\subfigure[Cuadro final]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G2:5}}
+\end{center}
+\caption{Secuencia del gesto dinámico del puño, la vista es desde el Kinect frontal.}
+\label{fig:G2}
+\end{figure}
 	
 \newpage
 %%=====================================================

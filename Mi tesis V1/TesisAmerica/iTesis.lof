@@ -65,9 +65,156 @@
 \contentsline {figure}{\numberline {35}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{45}{figure.caption.42}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{45}{figure.caption.42}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{45}{figure.caption.42}
+\contentsline {figure}{\numberline {36}{\ignorespaces Secuencia del gesto din\IeC {\'a}mico de la palma de la mano abierta, la vista es desde el Kinect frontal.\relax }}{46}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{46}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 15 }}}{46}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 30 }}}{46}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro n\IeC {\'u}mero 45 }}}{46}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Cuadro final}}}{46}{figure.caption.43}
+\contentsline {figure}{\numberline {37}{\ignorespaces Secuencia del gesto din\IeC {\'a}mico del pu\IeC {\~n}o, la vista es desde el Kinect frontal.\relax }}{46}{figure.caption.44}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{46}{figure.caption.44}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 15 }}}{46}{figure.caption.44}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 30 }}}{46}{figure.caption.44}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro n\IeC {\'u}mero 45 }}}{46}{figure.caption.44}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Cuadro final}}}{46}{figure.caption.44}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {36}{\ignorespaces Laboratorio en condiciones est\IeC {\'a}ndar de iluminaci\IeC {\'o}n.\relax }}{47}{figure.caption.43}
-\contentsline {figure}{\numberline {37}{\ignorespaces Laboratorio en condiciones con iluminaci\IeC {\'o}n media.\relax }}{47}{figure.caption.44}
-\contentsline {figure}{\numberline {38}{\ignorespaces Laboratorio en condiciones con baja iluminaci\IeC {\'o}n.\relax }}{48}{figure.caption.45}
+\contentsline {figure}{\numberline {38}{\ignorespaces Laboratorio en condiciones est\IeC {\'a}ndar de iluminaci\IeC {\'o}n.\relax }}{48}{figure.caption.45}
+\contentsline {figure}{\numberline {39}{\ignorespaces Ejemplo de la imagenes capturadas a una distancia de $70$ $cm$.\relax }}{48}{figure.caption.46}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gesto 1 vista desde el Kinect frontal}}}{48}{figure.caption.46}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gesto 1 viata desde el Kinect lateral}}}{48}{figure.caption.46}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Gesto 2 vista desde Kinect frontal}}}{48}{figure.caption.46}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Gesto 2 vista desde Kinect lateral}}}{48}{figure.caption.46}
+\contentsline {figure}{\numberline {40}{\ignorespaces Ejemplo de la imagenes capturadas a una distancia de $80$ $cm$.\relax }}{49}{figure.caption.48}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gesto 1 vista desde el Kinect frontal}}}{49}{figure.caption.48}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gesto 1 viata desde el Kinect lateral}}}{49}{figure.caption.48}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Gesto 2 vista desde Kinect frontal}}}{49}{figure.caption.48}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Gesto 2 vista desde Kinect lateral}}}{49}{figure.caption.48}
+\contentsline {figure}{\numberline {41}{\ignorespaces Ejemplo de la imagenes capturadas a una distancia de $90$ $cm$.\relax }}{49}{figure.caption.49}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gesto 1 vista desde el Kinect frontal}}}{49}{figure.caption.49}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gesto 1 viata desde el Kinect lateral}}}{49}{figure.caption.49}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Gesto 2 vista desde Kinect frontal}}}{49}{figure.caption.49}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Gesto 2 vista desde Kinect lateral}}}{49}{figure.caption.49}
+\contentsline {figure}{\numberline {42}{\ignorespaces Laboratorio en condiciones con iluminaci\IeC {\'o}n media.\relax }}{50}{figure.caption.50}
+\contentsline {figure}{\numberline {43}{\ignorespaces Ejemplo de la imagenes capturadas a una distancia de $70$ $cm$.\relax }}{50}{figure.caption.51}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gesto 1 vista desde el Kinect frontal}}}{50}{figure.caption.51}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gesto 1 viata desde el Kinect lateral}}}{50}{figure.caption.51}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Gesto 2 vista desde Kinect frontal}}}{50}{figure.caption.51}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Gesto 2 vista desde Kinect lateral}}}{50}{figure.caption.51}
+\contentsline {figure}{\numberline {44}{\ignorespaces Ejemplo de la imagenes capturadas a una distancia de $80$ $cm$.\relax }}{50}{figure.caption.52}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gesto 1 vista desde el Kinect frontal}}}{50}{figure.caption.52}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gesto 1 viata desde el Kinect lateral}}}{50}{figure.caption.52}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Gesto 2 vista desde Kinect frontal}}}{50}{figure.caption.52}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Gesto 2 vista desde Kinect lateral}}}{50}{figure.caption.52}
+\contentsline {figure}{\numberline {45}{\ignorespaces Ejemplo de la imagenes capturadas a una distancia de $90$ $cm$.\relax }}{51}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gesto 1 vista desde el Kinect frontal}}}{51}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gesto 1 viata desde el Kinect lateral}}}{51}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Gesto 2 vista desde Kinect frontal}}}{51}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Gesto 2 vista desde Kinect lateral}}}{51}{figure.caption.53}
+\contentsline {figure}{\numberline {46}{\ignorespaces Laboratorio en condiciones con baja iluminaci\IeC {\'o}n.\relax }}{51}{figure.caption.54}
+\contentsline {figure}{\numberline {47}{\ignorespaces Ejemplo de la imagenes capturadas a una distancia de $70$ $cm$.\relax }}{52}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gesto 1 vista desde el Kinect frontal}}}{52}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gesto 1 viata desde el Kinect lateral}}}{52}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Gesto 2 vista desde Kinect frontal}}}{52}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Gesto 2 vista desde Kinect lateral}}}{52}{figure.caption.55}
+\contentsline {figure}{\numberline {48}{\ignorespaces Ejemplo de la imagenes capturadas a una distancia de $80$ $cm$.\relax }}{52}{figure.caption.56}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gesto 1 vista desde el Kinect frontal}}}{52}{figure.caption.56}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gesto 1 viata desde el Kinect lateral}}}{52}{figure.caption.56}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Gesto 2 vista desde Kinect frontal}}}{52}{figure.caption.56}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Gesto 2 vista desde Kinect lateral}}}{52}{figure.caption.56}
+\contentsline {figure}{\numberline {49}{\ignorespaces Ejemplo de la imagenes capturadas a una distancia de $90$ $cm$.\relax }}{52}{figure.caption.57}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gesto 1 vista desde el Kinect frontal}}}{52}{figure.caption.57}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gesto 1 viata desde el Kinect lateral}}}{52}{figure.caption.57}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Gesto 2 vista desde Kinect frontal}}}{52}{figure.caption.57}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Gesto 2 vista desde Kinect lateral}}}{52}{figure.caption.57}
+\contentsline {figure}{\numberline {50}{\ignorespaces Gesto de la palma con los dedos abiertas a $70$ $cm$.\relax }}{53}{figure.caption.58}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{53}{figure.caption.58}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{53}{figure.caption.58}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{53}{figure.caption.58}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{53}{figure.caption.58}
+\contentsline {figure}{\numberline {51}{\ignorespaces Gesto del pu\IeC {\~n}o de la mano a $70$ $cm$.\relax }}{53}{figure.caption.59}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{53}{figure.caption.59}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{53}{figure.caption.59}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{53}{figure.caption.59}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{53}{figure.caption.59}
+\contentsline {figure}{\numberline {52}{\ignorespaces Gesto de la palma con los dedos abiertas a $80$ $cm$.\relax }}{54}{figure.caption.60}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{54}{figure.caption.60}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{54}{figure.caption.60}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{54}{figure.caption.60}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{54}{figure.caption.60}
+\contentsline {figure}{\numberline {53}{\ignorespaces Gesto del pu\IeC {\~n}o de la mano a $80$ $cm$.\relax }}{54}{figure.caption.61}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{54}{figure.caption.61}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{54}{figure.caption.61}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{54}{figure.caption.61}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{54}{figure.caption.61}
+\contentsline {figure}{\numberline {54}{\ignorespaces Gesto de la palma con los dedos abiertas $90$ $cm$.\relax }}{54}{figure.caption.62}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{54}{figure.caption.62}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{54}{figure.caption.62}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{54}{figure.caption.62}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{54}{figure.caption.62}
+\contentsline {figure}{\numberline {55}{\ignorespaces Gesto del pu\IeC {\~n}o de la mano $90$ $cm$.\relax }}{55}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{55}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{55}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{55}{figure.caption.63}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{55}{figure.caption.63}
+\contentsline {figure}{\numberline {56}{\ignorespaces Gesto de la palma con los dedos abiertas a $70$ $cm$.\relax }}{55}{figure.caption.64}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{55}{figure.caption.64}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{55}{figure.caption.64}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{55}{figure.caption.64}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{55}{figure.caption.64}
+\contentsline {figure}{\numberline {57}{\ignorespaces Gesto del pu\IeC {\~n}o de la mano a $70$ $cm$.\relax }}{55}{figure.caption.65}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{55}{figure.caption.65}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{55}{figure.caption.65}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{55}{figure.caption.65}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{55}{figure.caption.65}
+\contentsline {figure}{\numberline {58}{\ignorespaces Gesto de la palma con los dedos abiertas a $80$ $cm$.\relax }}{56}{figure.caption.66}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{56}{figure.caption.66}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{56}{figure.caption.66}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{56}{figure.caption.66}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{56}{figure.caption.66}
+\contentsline {figure}{\numberline {59}{\ignorespaces Gesto del pu\IeC {\~n}o de la mano a $80$ $cm$.\relax }}{56}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{56}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{56}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{56}{figure.caption.67}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{56}{figure.caption.67}
+\contentsline {figure}{\numberline {60}{\ignorespaces Gesto de la palma con los dedos abiertas $90$ $cm$.\relax }}{56}{figure.caption.68}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{56}{figure.caption.68}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{56}{figure.caption.68}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{56}{figure.caption.68}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{56}{figure.caption.68}
+\contentsline {figure}{\numberline {61}{\ignorespaces Gesto del pu\IeC {\~n}o de la mano $90$ $cm$.\relax }}{56}{figure.caption.69}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{56}{figure.caption.69}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{56}{figure.caption.69}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{56}{figure.caption.69}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{56}{figure.caption.69}
+\contentsline {figure}{\numberline {62}{\ignorespaces Gesto de la palma con los dedos abiertas a $70$ $cm$.\relax }}{57}{figure.caption.70}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{57}{figure.caption.70}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{57}{figure.caption.70}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{57}{figure.caption.70}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{57}{figure.caption.70}
+\contentsline {figure}{\numberline {63}{\ignorespaces Gesto del pu\IeC {\~n}o de la mano a $70$ $cm$.\relax }}{57}{figure.caption.71}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{57}{figure.caption.71}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{57}{figure.caption.71}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{57}{figure.caption.71}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{57}{figure.caption.71}
+\contentsline {figure}{\numberline {64}{\ignorespaces Gesto de la palma con los dedos abiertas a $80$ $cm$.\relax }}{57}{figure.caption.72}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{57}{figure.caption.72}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{57}{figure.caption.72}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{57}{figure.caption.72}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{57}{figure.caption.72}
+\contentsline {figure}{\numberline {65}{\ignorespaces Gesto del pu\IeC {\~n}o de la mano a $80$ $cm$.\relax }}{58}{figure.caption.73}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{58}{figure.caption.73}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{58}{figure.caption.73}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{58}{figure.caption.73}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{58}{figure.caption.73}
+\contentsline {figure}{\numberline {66}{\ignorespaces Gesto de la palma con los dedos abiertas $90$ $cm$.\relax }}{58}{figure.caption.74}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{58}{figure.caption.74}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{58}{figure.caption.74}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{58}{figure.caption.74}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{58}{figure.caption.74}
+\contentsline {figure}{\numberline {67}{\ignorespaces Gesto del pu\IeC {\~n}o de la mano $90$ $cm$.\relax }}{58}{figure.caption.75}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{58}{figure.caption.75}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 20}}}{58}{figure.caption.75}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 40}}}{58}{figure.caption.75}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro final}}}{58}{figure.caption.75}
 \addvspace {0\p@ }
 \addvspace {0\p@ }

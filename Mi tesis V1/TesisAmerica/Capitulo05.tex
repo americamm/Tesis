@@ -7,63 +7,461 @@
 
 En este capítulo se presentan los resultados de las pruebas realizadas al sistema. El desempeño del sistema es evaluado con respecto al error de clasificación.   
 
-El sistema propuesto fue implementado en una computadora de escritorio Dell con un procesador Intel(R) Xeon(R) CPU E5-1603, 16GB de memoria RAM, Windows 7 de 64 bits. La implementación del sistema se realizó en C\# utilizando Emgu 2.410 \footnote{http://www.emgu.com/wiki/index.php/Main\_Page} un wrapper de OpenCV\footnote{http://opencv.org/}. Los experimentos se realizaron en la misma computadora. 
+Los experimentos y el sistema propuesto fue implementado en una computadora de escritorio Dell con un procesador Intel(R) Xeon(R) CPU E5-1603, 16GB de memoria RAM, Windows 7 de 64 bits. La implementación del sistema se realizó en C\# utilizando Emgu 2.410 \footnote{\url{http://www.emgu.com/wiki/index.php/Main\_Page}} un wrapper de OpenCV\footnote{\url{http://opencv.org/}}. 
 
-Se utilizaron imágenes reales capturadas por los sensores de profundidad de $640 \times 480$ pixeles. Las imágenes son de 5 personas distintas, realizando los gestos de puño y el de palma de la mano con los dedos separados.   
+Para analizar la tasa de precisión de reconocimiento del sistema propuesto se realizaron varios experimentos en distintas circunstancias. Por ejemplo se analizó el rendimiento del sistema a tres diferentes distancias $70$, $80$, $90$ $cm.$ del Kinect frontal. También en diferentes circunstancias de iluminación, con iluminación estándar, media y sin iluminación. 
 
-Se realizaron experimentos en distintas circunstancias como variación en la iluminación y a diferentes distancias. En las secciones siguientes se explica cada experimento y resultados de estos.  
+
+Se utilizaron imágenes reales capturadas por los sensores de profundidad de $640 \times 480$ pixeles. Las imágenes son de 5 personas distintas, realizando los gestos de puño y el de palma de la mano con los dedos separados, para los gestos estáticos. Para los gestos dinámicos se tomaron los gestos de $3$ personas cada una de ellas realizaron los gestos estáticos anteriores en movimiento.   
+
+En las secciones siguientes se explica cada experimento y resultados de estos.  
 
 \section{Experimentos de gestos estáticos}\label{TestStaticGestures}  
 
-La imágenes capturadas estaban divididas en $200$ de cada gestos de $5$ usuarios distintos. Las pruebas se realizaron con el usuario a una  distancia de $70$, $80$ y $90$ $cm.$ del Kinect frontal. 
+La evaluación del sistema en cuanto al reconocimiento de los gestos estáticos, se determino conforme al resultado de los experimentos realizados en circunstancias de iluminación, (estándar, media, baja). En cada conjunto de experimentos se tomo en cuenta la distancia, ya que en cada grupo se analizaron tres distancias, $70$, $80$, $90$ $cm$.  
 
-\subsection{Experimento con iluminación} 
-Para este experimento se capturaron $400$ imágenes con iluminación estándar,como la que se muestra en la figura \ref{fig:LabIluminado}. La imágenes capturadas estaban divididas en $200$ de cada gestos de $5$ usuarios distintos. Las pruebas se realizaron con el usuario a una  distancia de $70$, $80$ y $90$ $cm.$ del Kinect frontal. 
+Se analizaron dos gestos estáticos la palma de la mano con los dedos separados, Gesto 1 y el puño, Gesto 2, de $5$ usuarios distintos. Para cada experimento se escogió al azar $200$ imágenes de cada gesto del conjunto de las imágenes capturadas. 
+
+Enseguida se presentan los resultados de cada experimento realizado.
+
+\subsection{Experimentos con iluminación} 
+Para este experimento las imágenes se capturaron en un laboratorio con iluminación estándar,como la que se muestra en la figura \ref{fig:LabIluminado}.
 
 \begin{figure}[h!]
 \begin{center} 
-\includegraphics[scale=0.11]{./Figures/iluminacion.jpg}
+\includegraphics[scale=0.09]{./Figures/iluminacion.jpg}
 \end{center}
 \caption{Laboratorio en condiciones estándar de iluminación.}
 \label{fig:LabIluminado}
 \end{figure} 
 
-En las siguientes tablas se muestras los resultados de la iluminación. 
+En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario, para las imágenes de los demás usuarios ver el apéndice . En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  
 
-\begin{tabular}{ | l | c | r | }
-\hline
-  1 & 2 & 3 \\
-%  4 & 5 & 6 \\
-%  7 & 8 & 9 \\ 
-\hline
+\begin{figure}[h!]
+\centering
+\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion70:1}}
+\subfigure[Gesto 1 viata desde el Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion70:2}}
+\subfigure[Gesto 2 vista desde Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion70:3}}
+\subfigure[Gesto 2 vista desde Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion70:4}}
+\caption{Ejemplo de la imagenes capturadas a una distancia de $70$ $cm$.} \label{fig:iluminacion70}
+\end{figure}
+
+
+\begin{table}[h!] 
+\begin{center}
+\begin{tabular}{ r || c | c |} 
+ 
+        & Gesto 1 & Gesto 2 \\ \hline \hline  
+Gesto 1 & 183     &  17     \\ \hline  
+Gesto 2 & 11      & 189     \\   
+
 \end{tabular}
+\end{center} 
+\caption{Matriz de confusión}
+\end{table}
 
 
-\subsection{Experimento con iluminación media} 
-Para este experimento se capturaron imágenes con iluminación media, como la que se muestra en la figura . Las pruebas se realizaron con al usuario en a diferentes distintas a $70$, $80$ y $90$ $cm.$ del Kinect frontal. 
+En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
+
+\begin{figure}[h!]
+\centering
+\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion80:1}}
+\subfigure[Gesto 1 viata desde el Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion80:2}}
+\subfigure[Gesto 2 vista desde Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion80:3}}
+\subfigure[Gesto 2 vista desde Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion80:4}}
+\caption{Ejemplo de la imagenes capturadas a una distancia de $80$ $cm$.} \label{fig:iluminacion80}
+\end{figure}
+
+
+
+
+En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+
+\begin{figure}[h!]
+\centering
+\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion90:1}}
+\subfigure[Gesto 1 viata desde el Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion90:2}}
+\subfigure[Gesto 2 vista desde Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion90:3}}
+\subfigure[Gesto 2 vista desde Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion90:4}}
+\caption{Ejemplo de la imagenes capturadas a una distancia de $90$ $cm$.} \label{fig:iluminacion70}
+\end{figure}
+
+
+
+\subsection{Experimentos con iluminación media} 
+Para el conjunto de estos experimentos, las imágenes se capturaron en un laboratorio con iluminación media, como la que se muestra en la figura. A tres distancias $70$, $80$ y $90$ $cm$.  
 
 \begin{figure}[h!]
 \begin{center} 
-\includegraphics[scale=0.11]{./Figures/mediailuminacion.jpg}
+\includegraphics[scale=0.09]{./Figures/mediailuminacion.jpg}
 \end{center}
 \caption{Laboratorio en condiciones con iluminación media.}
 \label{fig:LabMedioIluminado} 
-\end{figure} 
+\end{figure}  
 
-Para este experimento se capturaron imágenes con baja iluminación, como la que se muestra en la figura . Las pruebas se realizaron con al usuario en a diferentes distintas a $70$, $80$ y $90$ $cm.$ del Kinect frontal. 
+En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  
+
+\begin{figure}[h!]
+\centering
+\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM70:1}}
+\subfigure[Gesto 1 viata desde el Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM70:2}}
+\subfigure[Gesto 2 vista desde Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM70:3}}
+\subfigure[Gesto 2 vista desde Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM70:4}}
+\caption{Ejemplo de la imagenes capturadas a una distancia de $70$ $cm$.} \label{fig:iluminacionM70}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular}
+
+En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
+
+\begin{figure}[h!]
+\centering
+\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM80:1}}
+\subfigure[Gesto 1 viata desde el Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM80:2}}
+\subfigure[Gesto 2 vista desde Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM80:3}}
+\subfigure[Gesto 2 vista desde Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM80:4}}
+\caption{Ejemplo de la imagenes capturadas a una distancia de $80$ $cm$.} \label{fig:iluminacionM80}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular} 
+
+En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+
+\begin{figure}[h!]
+\centering
+\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM90:1}}
+\subfigure[Gesto 1 viata desde el Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM90:2}}
+\subfigure[Gesto 2 vista desde Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM90:3}}
+\subfigure[Gesto 2 vista desde Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM90:4}}
+\caption{Ejemplo de la imagenes capturadas a una distancia de $90$ $cm$.} \label{fig:iluminacionM90}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular}
+
+
+\subsection{Experimentos sin iluminación}
+Para este experimento las imágenes se capturaron en un laboratorio sin iluminación, como la que se muestra en la figura.
 
 \begin{figure}[h!]
 \begin{center} 
-\includegraphics[scale=0.11]{./Figures/noIluminacion.jpg}
+\includegraphics[scale=0.09]{./Figures/noIluminacion.jpg}
 \end{center}
 \caption{Laboratorio en condiciones con baja iluminación.}
 \label{fig:LabNoIluminado} 
+\end{figure} 
+
+En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  
+
+\begin{figure}[h!]
+\centering
+\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo70:1}}
+\subfigure[Gesto 1 viata desde el Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo70:2}}
+\subfigure[Gesto 2 vista desde Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo70:3}}
+\subfigure[Gesto 2 vista desde Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo70:4}}
+\caption{Ejemplo de la imagenes capturadas a una distancia de $70$ $cm$.} \label{fig:iluminacionNo70}
 \end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular}
+
+En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
+
+\begin{figure}[h!]
+\centering
+\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo80:1}}
+\subfigure[Gesto 1 viata desde el Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo80:2}}
+\subfigure[Gesto 2 vista desde Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo80:3}}
+\subfigure[Gesto 2 vista desde Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo80:4}}
+\caption{Ejemplo de la imagenes capturadas a una distancia de $80$ $cm$.} \label{fig:iluminacionNo80}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular} 
+
+En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+
+\begin{figure}[h!]
+\centering
+\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo90:1}}
+\subfigure[Gesto 1 viata desde el Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo90:2}}
+\subfigure[Gesto 2 vista desde Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo90:3}}
+\subfigure[Gesto 2 vista desde Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionNo90:4}}
+\caption{Ejemplo de la imagenes capturadas a una distancia de $90$ $cm$.} \label{fig:iluminacionNo70}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular}
+
 
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+
 \section{Experimentos de gestos dinámicos}\label{TestDinamicGestures} 
 
+La evaluación del sistema en cuanto al reconocimiento de los gestos dinámicos se realizo de la siguiente forma; al igual que en los gestos estáticos se hicieron tres conjuntos de experimentos cada uno con diferentes tipos de iluminación, estándar, iluminación media y sin iluminación. En cada conjunto de experimentos se tomo en cuenta la distancia, ya que en cada grupo se analizaron tres distancias, $70$, $80$, $90$ $cm$. 
+
+Los gestos analizados fueron dos el primero es la palma con los dedos separados, en movimiento y el segundo el puño de la mano también en movimiento. Estos gestos fueron realizados por tres usuarios distintos. Para cada experimento se analizaron $num$ cuadros por lo que se analizaron $num$ gestos y cada uno tenia una duración de $60$ cuadros.  
+
+Enseguida se presentan los resultados de cada experimento realizado. 
+
+\subsection{Experimentos con iluminación} 
+Para este experimento las imágenes se capturaron en un laboratorio con iluminación estándar,como la que se muestra en la figura \ref{fig:LabIluminado}.
+
+En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario, para las imágenes de los demás usuarios ver el apéndice . En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I70:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I70:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I70:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I70:4}}
+\caption{Gesto de la palma con los dedos abiertas a $70$ $cm$.} \label{fig:G1I70}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I70:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I70:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I70:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I70:4}}
+\caption{Gesto del puño de la mano a $70$ $cm$.} \label{fig:G2I70}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular}
+
+En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I80:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I80:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I80:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I80:4}}
+\caption{Gesto de la palma con los dedos abiertas a $80$ $cm$.} \label{fig:G1I80}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I80:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I80:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I80:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I80:4}}
+\caption{Gesto del puño de la mano a $80$ $cm$.} \label{fig:G2I0}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular} 
+
+En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I90:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I90:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I90:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I90:4}}
+\caption{Gesto de la palma con los dedos abiertas $90$ $cm$.} \label{fig:G1I90}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I90:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I90:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I90:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I90:4}}
+\caption{Gesto del puño de la mano $90$ $cm$.} \label{fig:G2I90}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular}
+
+
+\subsection{Experimentos con iluminación media} 
+Para el conjunto de estos experimentos, las imágenes se capturaron en un laboratorio con iluminación media, como la que se muestra en la figura.
+
+En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario, para las imágenes de los demás usuarios ver el apéndice . En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM70:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM70:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM70:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM70:4}}
+\caption{Gesto de la palma con los dedos abiertas a $70$ $cm$.} \label{fig:G1IM70}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM70:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM70:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM70:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM70:4}}
+\caption{Gesto del puño de la mano a $70$ $cm$.} \label{fig:G2IM70}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular}
+
+En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM80:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM80:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM80:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM80:4}}
+\caption{Gesto de la palma con los dedos abiertas a $80$ $cm$.} \label{fig:G1I80}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM80:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM80:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM80:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM80:4}}
+\caption{Gesto del puño de la mano a $80$ $cm$.} \label{fig:G2I80}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular} 
+
+En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM90:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM90:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM90:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM90:4}}
+\caption{Gesto de la palma con los dedos abiertas $90$ $cm$.} \label{fig:G1IM90}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM90:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM90:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM90:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM90:4}}
+\caption{Gesto del puño de la mano $90$ $cm$.} \label{fig:G2IM90}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular}
+
+\subsection{Experimentos sin iluminación}
+Para este experimento las imágenes se capturaron en un laboratorio sin iluminación, como la que se muestra en la figura.
+
+En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario, para las imágenes de los demás usuarios ver el apéndice . En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO70:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO70:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO70:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO70:4}}
+\caption{Gesto de la palma con los dedos abiertas a $70$ $cm$.} \label{fig:G1INO70}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO70:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO70:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO70:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO70:4}}
+\caption{Gesto del puño de la mano a $70$ $cm$.} \label{fig:G2INO70}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular}
+
+En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO80:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO80:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INOM80:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO80:4}}
+\caption{Gesto de la palma con los dedos abiertas a $80$ $cm$.} \label{fig:G1NO80}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO80:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO80:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO80:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO80:4}}
+\caption{Gesto del puño de la mano a $80$ $cm$.} \label{fig:G2INO80}
+\end{figure}
+
+%\begin{tabular} { c c c }
+% cell1 & cell2 & cell3 \\ 
+% cell4 & cell5 & cell6 \\  
+% cell7 & cell8 & cell9    
+%\end{tabular} 
+
+En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO90:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO90:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO90:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1INO90:4}}
+\caption{Gesto de la palma con los dedos abiertas $90$ $cm$.} \label{fig:G1INO90}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO90:1}}
+\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO90:2}}
+\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO90:3}}
+\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2INO90:4}}
+\caption{Gesto del puño de la mano $90$ $cm$.} \label{fig:G2INO90}
+\end{figure}
 
 %---------------------------------------------------------------------------------------------------------------------- 
 \newpage
