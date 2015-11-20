@@ -62,8 +62,8 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 
 \begin{figure}[h!]
 \begin{center}
-\subfigure[Ejemplo de imagen de fondo, donde se encuentra una silla y escritorio]{\includegraphics[scale=.3]{./Figures/Fondo5262.png}}\quad 
-\subfigure[Ejemplo de imagen de fondo, ]{\includegraphics[scale=.3]{./Figures/pusheen.png}}\quad 
+\subfigure[Ejemplo de imagen de fondo, donde se encuentra una silla y escritorio.]{\includegraphics[scale=.3]{./Figures/Fondo5262.png}}\quad 
+\subfigure[Ejemplo de imagen de fondo, donde se aprecian objetos en un escritorio.]{\includegraphics[scale=.3]{./Figures/Fondo11313.png}}\quad 
 \end{center}
 \caption{Imágenes del fondo de nuestra base de datos.}
 \label{fig:ImagenFondo}
@@ -76,34 +76,33 @@ Una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionad
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/roi.png}
+\includegraphics[scale=.4]{./Figures/DS_252.png}
 \end{center}
-\caption{Localización y selección de la mano, en la imagen de entrada del Kinect 1.}
+\caption{Localización y selección de la mano, en la imagen de entrada del Kinect 2.}
 \label{fig:Roi}
 \end{figure}  
 
-Ya que se tiene localizada el área donde se encuentra la mano, el siguiente paso es segmentar la mano del ROI. La segmentación se realiza binarizando el área del ROI, solo se toma esta área, para que el proceso sea más rápido. La binarizacion se lleva acabo usando el algoritmo de Otsu, el resultado se muestra en la figura \ref{fig:BinarizationRoi}. 
+Ya que se tiene localizada el área donde se encuentra la mano, el siguiente paso es segmentar la mano del ROI. La segmentación se realiza binarizando el área del ROI, solo se toma esta área, para que el proceso sea más rápido. La binarizaci\'on se lleva acabo usando el algoritmo de Otsu, el resultado se muestra en la figura \ref{fig:BinarizationRoi}. 
   
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/pusheen.png}
+\includegraphics[scale=1]{./Figures/250B_Otsu.png}
 \end{center}
-\caption{Binarización de ROI}
+\caption{Binarización de ROI y aplicación de las operaciones morfológicas a la mano localizada en la figura anterior.}
 \label{fig:BinarizationRoi}
 \end{figure} 
 
-En la imagen [agregar imagen feita binarizada], se observa que el resultado de la bianrizacion no es el esperado. Para mejorar la binarizacion, el ruido existe en la imagen es eliminado aplicando dos operaciones morfológicas, apertura y cierre, en ese orden.\\
-Las operaciones anteriores utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento es de $3 \, x \, 9$ pixeles; para el cierre se aplic\'o con un tamaño  $3\, x \, 11$ pixeles.
-Las imágenes siguientes muestran el resultado de aplicar las operaciones apertura y cierre al ROI.  
+%En la imagen [agregar imagen feita binarizada], se observa que el resultado de la bianrizacion no es el esperado. 
+Para mejorar la binarizaci\'on, el ruido existe en la imagen es eliminado aplicando dos operaciones morfológicas, apertura y cierre, en ese orden. Las operaciones anteriores utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento es de $3 \, x \, 9$ pixeles; para el cierre se aplic\'o con un tamaño  $3\, x \, 11$ pixeles.
 
-\begin{figure}[h!]
-\begin{center} 
-\subfigure[]{\includegraphics[scale=0.4]{./Figures/pusheen.png}\label{fig:HandNoNoises:1}}   \qquad
-\subfigure[]{\includegraphics[scale=1.1]{./Figures/65_C.png}\label{fig:HandNoNoises:2}}  
-\end{center}
-\caption{La imágenes muestran el resultado de aplicar las operaciones morfológicas de apertura y cierre.}
-\label{fig:HandNoNoises}
-\end{figure}  
+%\begin{figure}[h!]
+%\begin{center} 
+%\subfigure[]{\includegraphics[scale=0.4]{./Figures/pusheen.png}\label{fig:HandNoNoises:1}}   \qquad
+%\subfigure[]{\includegraphics[scale=1.1]{./Figures/65_C.png}\label{fig:HandNoNoises:2}}  
+%\end{center}
+%\caption{La imágenes muestran el resultado de aplicar las operaciones morfológicas de apertura y cierre.}
+%\label{fig:HandNoNoises}
+%\end{figure}  
 
 
 \section{Extracción de características}\label{sec:ExtraccionCaracteristicasSystem}
@@ -111,20 +110,20 @@ Las imágenes siguientes muestran el resultado de aplicar las operaciones apertu
 Como se vio en el capítulo \ref{capit:cap3} sección \ref{sec:Convexhull} las características de la mano son extraídas utilizando los algoritmos de envolvente convexa y  defectos de convexidad.\\
 La figura muestra un ejemplo de la aplicación de estos algoritmos al ROI binarizado.  
 
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=.5]{./Figures/pusheen.png}
-\end{center}
-\caption{En esta dibujado la envolvente convexa, los puntos dibujados son los defectos de convexidad, en azul se encuentran los puntos de profundidad y en rojo los puntos de inicio.}
-\label{fig:Convex&Defects}
-\end{figure}
+%\begin{figure}[!h]
+%\begin{center}
+%\includegraphics[scale=.5]{./Figures/pusheen.png}
+%\end{center}
+%\caption{En esta dibujado la envolvente convexa, los puntos dibujados son los defectos de convexidad, en azul se encuentran los puntos de profundidad y en rojo los puntos de inicio.}
+%\label{fig:Convex&Defects}
+%\end{figure}
 
 
 Una vez aplicados estos dos algoritmos se calcula: el número de dedos levantados, la posición de la punta de los dedos, \ref{fig:FeaturesOfHand} , la posición de la raíz de los dedos, \ref{fig:FeaturesOfHand} , el centro de la palma de mano, \ref{fig:FeaturesOfHand} , los ángulos que existe del centro de la mano a la punta de los dedos, los ángulos que existen del centro a la raíz de los dedos, la distancia que existe del centro de los dedos a la raíz de los dedos. y las puntas de estos que son fundamentales para calcular las demás características. En la imagen siguiente se muestran algunas de estas características.  
 
 \begin{figure}[h!]
 \begin{center} 
-\includegraphics[scale=0.6]{./Figures/pusheen.png}
+\includegraphics[scale=1]{./Figures/250_Dedos.png}
 \end{center}
 \caption{Resultado del cálculo de las características de la mano.Se muestra en color azul la punta de los dedos, en color verde la posición de la raíz de los dedos y en rojo el centro de la palma de la mano.}
 \label{fig:FeaturesOfHand}
@@ -132,7 +131,7 @@ Una vez aplicados estos dos algoritmos se calcula: el número de dedos levantado
 
 Para la implementación de las características, se tomo parte del código proveniente de \footnote{buscar la pagina ;/}. 
 
-Las características se guardan en un vector de características de dimensión $ dimension$. La valor de la dimension del vector esta dada por la unión del conjunto de características obtenidas por cada imagen de la mano  obtenida por cada Kinect. En cada vector las características provenientes del Kinect 1 son almacenadas primero seguidas de las del Kinect 2.
+Las características se guardan en un vector de características de dimensión $32$. La valor de la dimension del vector esta dada por la unión del conjunto de características obtenidas por cada imagen de la mano  obtenida por cada Kinect. En cada vector las características provenientes del Kinect 1 son almacenadas primero seguidas de las del Kinect 2.
 
 
 
@@ -152,8 +151,8 @@ El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento
 
 \begin{figure}[h!]
 \begin{center}
-\subfigure[Palma de la mano con los dedos separados.]{\includegraphics[scale=.5]{./Figures/pusheen.png}\label{fig:SVMTrainingStatic:1}}      \quad
-\subfigure[Puño.]{\includegraphics[scale=.5]{./Figures/pusheen.png}\label{fig:SVMTrainingStatic:2}}
+\subfigure[Palma de la mano con los dedos separados.]{\includegraphics[scale=.3]{./Figures/G1.png}\label{fig:SVMTrainingStatic:1}}      \quad
+\subfigure[Puño.]{\includegraphics[scale=.3]{./Figures/G2.png}\label{fig:SVMTrainingStatic:2}}
 \end{center}
 \caption{Ejemplo de imágenes de poses de nuestra base de datos.}
 \label{fig:SVMTrainingStatic}
@@ -170,26 +169,26 @@ En este trabajo se toma un gesto dinámico como una secuencia de $60$ cuadros co
 El sistema reconoce dos gestos dinámicos, los cuales son los mismos gestos estáticos en movimiento.
 \begin{figure}[h!]
 \begin{center}
-\subfigure[Cuadro inicial]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G1:1}}      \quad
-\subfigure[Cuadro número 15 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G1:2}}
-\subfigure[Cuadro número 30 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G1:3}}
-\subfigure[Cuadro número 45 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G1:4}}
-\subfigure[Cuadro final]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G1:5}}
+\subfigure[Cuadro inicial]{\includegraphics[scale=.25]{./Figures/G3_1.png}\label{fig:G3:1}}
+\subfigure[Cuadro número 15 ]{\includegraphics[scale=.25]{./Figures/G3_15.png}\label{fig:G3:2}}
+\subfigure[Cuadro número 30 ]{\includegraphics[scale=.25]{./Figures/G3_30.png}\label{fig:G3:3}}
+\subfigure[Cuadro número 45 ]{\includegraphics[scale=.25]{./Figures/G3_45.png}\label{fig:G3:4}}
+\subfigure[Cuadro final]{\includegraphics[scale=.25]{./Figures/G3_60.png}\label{fig:G3:5}}
 \end{center}
 \caption{Secuencia del gesto dinámico de la palma de la mano abierta, la vista es desde el Kinect frontal.}
-\label{fig:G1}
+\label{fig:G3}
 \end{figure}
 
 \begin{figure}[h!]
 \begin{center}
-\subfigure[Cuadro inicial]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G2:1}}      \quad
-\subfigure[Cuadro número 15 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G2:2}}
-\subfigure[Cuadro número 30 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G2:3}}
-\subfigure[Cuadro número 45 ]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G2:4}}
-\subfigure[Cuadro final]{\includegraphics[scale=.25]{./Figures/pusheen.png}\label{fig:G2:5}}
+\subfigure[Cuadro inicial]{\includegraphics[scale=.25]{./Figures/G4_1.png}\label{fig:G4:1}}  
+\subfigure[Cuadro número 15 ]{\includegraphics[scale=.25]{./Figures/G4_15.png}\label{fig:G4:2}}
+\subfigure[Cuadro número 30 ]{\includegraphics[scale=.25]{./Figures/G4_30.png}\label{fig:G4:3}}
+\subfigure[Cuadro número 45 ]{\includegraphics[scale=.25]{./Figures/G4_45.png}\label{fig:G4:4}}
+\subfigure[Cuadro final]{\includegraphics[scale=.25]{./Figures/G4_60.png}\label{fig:G4:5}}
 \end{center}
 \caption{Secuencia del gesto dinámico del puño, la vista es desde el Kinect frontal.}
-\label{fig:G2}
+\label{fig:G3}
 \end{figure}
 	
 \newpage
