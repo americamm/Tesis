@@ -8,10 +8,15 @@
 En este capítulo se definen una serie de conceptos importantes del área de procesamiento de imágenes y reconocimiento de patrones, estas definiciones son importantes para la comprensión del tema.
 
 
+%--------------------------------------------------------------------------------------------------------------------------------
+
+
 \section{Gestos}\label{sec:2Gestos}
 Los gestos \citep{Mitra2007} son movimientos del cuerpo expresivos y significativos que involucran dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o interactuar con el ambiente. \\
 De acuerdo con la literatura \citep{Mitra2007} los gestos con las manos se clasifican en estáticos y dinámicos, los primeros están definidos como la posición y orientación de la mano en el espacio manteniendo esta pose durante cierto tiempo, por ejemplo para hacer una se\~nal de aventón, a diferencia de los gestos dinámicos donde hay movimiento de la pose, un ejemplo  es cuando mueves la mano en se\~nal de adiós. 
 
+
+%--------------------------------------------------------------------------------------------------------------------------------
 
 \section{Reconocimiento de gestos con la manos}\label{sec:2ReconocimientoGestos}   
 
@@ -59,7 +64,6 @@ La segmentación es la partición o separación de la imagen en regiones represe
 Enseguida se presentan algunas técnicas para realizar la segmentación.
 \begin{itemize}
 \item Color de la piel: Se basa principalmente en escoger un espacio del color, es una organización de colores especifica; como; RGB (rojo, verde, azul), RG (rojo, green), YCrCb (brillo, la diferencia entre el brillo y el rojo, la diferencia entre el brillo y el azul), etc. La desventaja es que si es color de la piel es similar al fondo, la segmentación no es buena, la forma de corregir esta segmentación es suponiendo que el fondo no se mueve con respecto a la cámara.
-\item yk
 \end{itemize}
 
 \subsubsection{Extracción de características y seguimiento}\label{sssec:EtapaSeguimiento}  
@@ -98,6 +102,7 @@ A continuación se encuentran los principales métodos para llevar acabo el reco
 \end{itemize}  
 
 
+%--------------------------------------------------------------------------------------------------------------------------------
 
 \section{Imagen}\label{ImagenDef} 
 
@@ -112,6 +117,16 @@ Si el valor de la función y los puntos de la imagen son finitos, esta es una im
 \label{fig:image}
 \end{figure}
 
+
+%--------------------------------------------------------------------------------------------------------------------------------
+
+
+\section{Ruido}\label{RuidoImage}
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------
+
 \section{Oclusión}\label{OclusionDef} 
 
 Se puede definir una oclusión como discontinuidades del movimiento y profundidad que se es percibida por un observador que se encuentra en movimiento en un ambiente estático.\\
@@ -119,6 +134,11 @@ Los puntos de oclusión en una imagen o cuadro son pixeles que aparecen o desapa
 
 Existen tres tipos distintos de oclusiones la cuales depende de la forma en que es causada. Estas son: oclusión por el mismo objeto, entre objetos y por el fondo. La oclusión por el mismo objeto se presenta cuando parte del objeto ocluye a otra. La oclusión entre objetos es cuando dos objetos que se siguen se ocluyen entre ellos mismos. La oclusión por el fondo es cuando parte del fondo ocluye al objeto que se sigue, \citep{YilmazA.JavedO.andShah2006}
 
+
+%-------------------------------------------------------------------------------------------------------------------------------- 
+
+
+\section{Métricas de desempeño}\label{Metricas}
 
 \newpage
 %%=====================================================

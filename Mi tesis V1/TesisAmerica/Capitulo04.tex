@@ -9,7 +9,7 @@ En este cap\'itulo se describen los detalles de implementación de cada etapa de
 
 \section{Adquisición de los datos}\label{sec:AdquisicionDatos}
 
-Como se vio en el capítulo \ref{capit:cap3} sección \ref{sec:KinectSensor} los datos provienen de los sensores de profundidad de dos dispositivos Kinect, estos se encuentran ubicados uno frente al usuario (Kinect 1), y otro al lado  izquierdo (Kinect 2), con una distancia de $74$ y $79$ $cm.$ respectivamente; y entre ellos de $46$ $cm.$ como se muestra en la figura \ref{fig:SetupSystem}.
+Como se vio en el capítulo \ref{capit:cap3} sección \ref{sec:KinectSensor} los datos provienen de los sensores de profundidad de dos dispositivos Kinect, estos se encuentran ubicados uno frente al usuario (Kinect frontal), y otro al lado  izquierdo (Kinect lateral), con una distancia de $74$ y $79$ $cm.$ respectivamente; y entre ellos de $46$ $cm.$ como se muestra en la figura \ref{fig:SetupSystem}.
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=.2]{./Figures/system.png}
@@ -23,7 +23,7 @@ En la siguiente imagen se puede apreciar un ejemplo de las imágenes de profundi
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/166.png}
+\includegraphics[scale=.35]{./Figures/166.png}
 \end{center}
 \caption{Representación de los datos capturados por los Kinect}
 \label{fig:ImagenCapturada}
@@ -32,7 +32,7 @@ En la siguiente imagen se puede apreciar un ejemplo de las imágenes de profundi
 Por la naturaleza del Kinect, las imágenes obtenidas de ambos sensores contiene ruido, como el se muestra en la figura \ref{fig:ImagenCapturadaNoNoise}; el ruido es reducido usando un filtro de mediana, este es aplicado en toda la imagen usando una ventada de tamaño $13$. La imagen resultante $S(x,y)$ es como la que se muestra en la figura \ref{fig:ImagenCapturadaNoNoise}.\\ 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.5]{./Figures/166_W13.png}
+\includegraphics[scale=.35]{./Figures/166_W13.png}
 \end{center}
 \caption{Representación de los datos capturados por los Kinect}
 \label{fig:ImagenCapturadaNoNoise}
@@ -76,7 +76,7 @@ Una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionad
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=.4]{./Figures/DS_252.png}
+\includegraphics[scale=.35]{./Figures/DS_252.png}
 \end{center}
 \caption{Localización y selección de la mano, en la imagen de entrada del Kinect 2.}
 \label{fig:Roi}
@@ -147,7 +147,7 @@ La implementación de SVM se lleva acabo usando LibSVMSharp \footnote{\url{https
 
 El sistema reconoce dos gestos estáticos: el puño y la palma de la mano con los dedos separados. El reconocimiento del gesto se lleva analizando un solo cuadro o imagen.  
 
-El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento se tomaron $200$ imágenes de las dos distintas pose como las que se muestran en la fig \ref{fig:SVMTrainingStatic}. Se utilizo un kernel exponencial, (poner los demás parámetros) y se utilizó validación cruzada con 5 pliegues.   
+El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento se tomaron $200$ imágenes de las dos distintas pose como las que se muestran en la fig \ref{fig:SVMTrainingStatic}. Se utilizo un kernel exponencial y validación cruzada con 5 pliegues.   
 
 \begin{figure}[h!]
 \begin{center}
@@ -159,12 +159,10 @@ El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento
 \end{figure}
 
 
-
 \subsection{Reconocimiento de gestos dinámicos}\label{RecognitionDynamic}
 
 
-
-En este trabajo se toma un gesto dinámico como una secuencia de $60$ cuadros consecutivos que realizan el mismo gesto estático siguiendo una trayectoria. De manera que el sistema reconoce el gesto dinámico identificando y siguiendo cada pose en cada cuadro en una secuencia. La trayectoria del gesto es obtenida tomando en cuenta la posición del centro de la mano el cual es calculado en cada cuadro. 
+En este trabajo se toma un gesto dinámico como una secuencia de $30$ cuadros consecutivos en los cuales se realiza misma pose solo que esta en movimiento. De manera que el sistema reconoce el gesto dinámico identificando y siguiendo cada pose en cada cuadro en una secuencia. La trayectoria del gesto es obtenida tomando en cuenta la posición del centro de la mano el cual es calculado en cada cuadro. 
  
 El sistema reconoce dos gestos dinámicos, los cuales son los mismos gestos estáticos en movimiento.
 \begin{figure}[h!]

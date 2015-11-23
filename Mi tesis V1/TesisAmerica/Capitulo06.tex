@@ -7,7 +7,10 @@
 
 El objetivo del trabajo era reconocer gestos con las manos bajo distintas circunstancias. 
 
-%Para ello se utilizo el sensor Kinect información de profundidad y  pode  se utilizaron dos dispositivos Kinect para obtener mayor información del gesto y sobrellevar problema de oclusión, gracias a esto.
+Se decidió como dispositivo de captura de las imágenes dos sensores Kinect, esto para sobrellevar la oclusión de los dedos. Para reconocer los gestos se analizo la información proveniente de cada uno de estos sensores por separado y cuadro por cuadro, sin necesidad de calibrar los dispositivos.  Por lo que la detección y extracción de características se realizo por separado, la cual se funciono en un vector de características para así poder ser entrenado mediante SVM. 
+
+Los resultados sugieren que el sistema propuesto cumple con su objetivo pues funciona bajo distintas circunstancias y se justifica el uso de los dos dispositivos gracias a la mejora de la precision en comparación cuando se utiliza solo un dispositivo.
+
 
 \section{Limitaciones del sistema}
 
