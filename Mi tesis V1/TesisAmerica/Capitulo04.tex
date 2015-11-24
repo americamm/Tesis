@@ -107,7 +107,7 @@ Para mejorar la binarizaci\'on, el ruido existe en la imagen es eliminado aplica
 
 \section{Extracción de características}\label{sec:ExtraccionCaracteristicasSystem}
 
-Como se vio en el capítulo \ref{capit:cap3} sección \ref{sec:Convexhull} las características de la mano son extraídas utilizando los algoritmos de envolvente convexa y  defectos de convexidad.
+Como se vio en el Capítulo \ref{capit:cap3} Sección \ref{sec:Convexhull} las características de la mano son extraídas utilizando los algoritmos de envolvente convexa y  defectos de convexidad.
 
 %\begin{figure}[!h]
 %\begin{center}
@@ -117,7 +117,7 @@ Como se vio en el capítulo \ref{capit:cap3} sección \ref{sec:Convexhull} las c
 %\label{fig:Convex&Defects}
 %\end{figure}
 
-Una vez aplicados estos dos algoritmos se calcula: el número de dedos levantados, la posición de la punta de los dedos, la posición de la raíz de los dedos, el centro de la palma de mano, los ángulos que existe del centro de la mano a la punta de los dedos, los ángulos que existen del centro a la raíz de los dedos, la distancia que existe del centro de los dedos a la raíz de los dedos. En la imagen \ref{fig:FeaturesOfHand} se muestran algunas de estas características. Para la implementación de la extracción de las características, se tomo parte del código proveniente de \footnote{buscar la pagina ;/}. 
+Una vez aplicados estos dos algoritmos se calcula: el número de dedos levantados, la posición de la punta de los dedos, la posición de la raíz de los dedos, el centro de la palma de mano, los ángulos que existe del centro de la mano a la punta de los dedos, los ángulos que existen del centro a la raíz de los dedos, la distancia que existe del centro de los dedos a la raíz de los dedos. En la Figura \ref{fig:FeaturesOfHand} se muestran algunas de estas características. Para la implementación de la extracción de las características, se tomo parte del código proveniente de \footnote{buscar la pagina ;/}. 
 
 \begin{figure}[h!]
 \begin{center} 
@@ -138,7 +138,7 @@ Las características calculadas se guardan en un vector de características de d
 
 En este trabajo se reconocen gestos estáticos y dinámicos utilizando el método de maquinas de soporte vectorial.  
 
-Como se vio en el capitulo \ref{capit:cap3} sección \ref{sec:SVM} SVM es un algoritmo de aprendizaje de máquina supervisado, por lo que es necesario tener imágenes de los gestos a reconocer. Con el conjunto de imágenes el clasificador es entrenado y el modelo de clasificación puede ser calculado. 
+Como se vio en el Capitulo \ref{capit:cap3} Sección \ref{sec:SVM} SVM es un algoritmo de aprendizaje de máquina supervisado, por lo que es necesario tener imágenes de los gestos a reconocer. Con el conjunto de imágenes el clasificador es entrenado y el modelo de clasificación puede ser calculado. 
 
 La implementación de SVM se lleva acabo usando LibSVMSharp \footnote{\url{https://github.com/ccerhan/LibSVMsharp}} un wrapper de la librería LibSVM \citep{Chang2011}.
 

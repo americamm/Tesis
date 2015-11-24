@@ -58,10 +58,10 @@
 \contentsline {subsection}{\numberline {5.1.1}Experimentos con iluminaci\IeC {\'o}n}{50}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Experimentos con iluminaci\IeC {\'o}n media}{53}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Experimentos sin iluminaci\IeC {\'o}n}{55}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Experimentos de gestos din\IeC {\'a}micos}{58}{section.5.2}
+\contentsline {section}{\numberline {5.2}Experimentos de gestos din\IeC {\'a}micos}{57}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Experimentos con iluminaci\IeC {\'o}n media}{58}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Experimentos sin iluminaci\IeC {\'o}n}{61}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Comparaci\IeC {\'o}n con estado del arte.}{64}{section.5.3}
-\contentsline {chapter}{\numberline {6}Conclusiones}{66}{chapter.6}
-\contentsline {section}{\numberline {6.1}Trabajo futuro}{67}{section.6.1}
-\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{68}{section.6.1}
+\contentsline {chapter}{\numberline {6}Conclusiones}{65}{chapter.6}
+\contentsline {section}{\numberline {6.1}Trabajo futuro}{66}{section.6.1}
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{67}{section.6.1}
