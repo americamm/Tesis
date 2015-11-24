@@ -121,24 +121,61 @@ Si el valor de la función y los puntos de la imagen son finitos, esta es una im
 %--------------------------------------------------------------------------------------------------------------------------------
 
 
-\section{Ruido}\label{RuidoImage}
+%\section{Ruido}\label{RuidoImage}
 
 
 
 %--------------------------------------------------------------------------------------------------------------------------------
 
-\section{Oclusión}\label{OclusionDef} 
+\section{Obstrucción}\label{OclusionDef} 
 
-Se puede definir una oclusión como discontinuidades del movimiento y profundidad que se es percibida por un observador que se encuentra en movimiento en un ambiente estático.\\
-Los puntos de oclusión en una imagen o cuadro son pixeles que aparecen o desaparecen en dos cuadros consecutivos, estos son llamados puntos de oclusión o punto de no oclusión, \citep{Silva2001}.  
+Se puede definir una obstrucción como discontinuidades del movimiento y profundidad que se es percibida por un observador que se encuentra en movimiento en un ambiente estático.\\
+Los puntos de obstrucción en una imagen o cuadro son pixeles que aparecen o desaparecen en dos cuadros consecutivos, estos son llamados puntos de obstrucción o punto de no obstrucción, \citep{Silva2001}.  
 
-Existen tres tipos distintos de oclusiones la cuales depende de la forma en que es causada. Estas son: oclusión por el mismo objeto, entre objetos y por el fondo. La oclusión por el mismo objeto se presenta cuando parte del objeto ocluye a otra. La oclusión entre objetos es cuando dos objetos que se siguen se ocluyen entre ellos mismos. La oclusión por el fondo es cuando parte del fondo ocluye al objeto que se sigue, \citep{YilmazA.JavedO.andShah2006}
+Existen tres tipos distintos de obstrucción la cuales depende de la forma en que es causada. Estas son: obstrucción por el mismo objeto, entre objetos y por el fondo. La obstrucción por el mismo objeto se presenta cuando parte del objeto obstruye a otra. La obstrucción entre objetos es cuando dos objetos que se siguen se obstruyen entre ellos mismos. La obstrucción por el fondo es cuando parte del fondo obstruye al objeto que se sigue, \citep{YilmazA.JavedO.andShah2006}
 
 
 %-------------------------------------------------------------------------------------------------------------------------------- 
 
 
 \section{Métricas de desempeño}\label{Metricas}
+
+Existen diversos métodos para medir el rendimiento de un algoritmo de clasificación, una manera de representarlo es mediante una matriz de confusión. 
+
+Considerando una clasificación de solo dos clases. Cada instancia es mapeada a un elemento del conjunto de etiquetas (positiva o negativa). El clasificador se encarga de mapear las instancias a las clases existentes, indicando la clase a a la que pertenece la instancia.\\
+El resultado de clasificación de alguna instancia puede resultar en cuatro posibles estados. Si la instancia es positiva y la clasificación es positiva, es un verdadero positivo; si la clasificación es negativa es un falso negativo. Si la instancia es negativa y la clasificación es negativa, es un verdadero negativo; si la clasificación es positiva, es un falso positivo. \\ 
+Dado un clasificador y un conjunto de instancias, una matriz de confusión de $2 \times 2$, como la que se muestra en la figura \ref{fig:Matrix} , puede ser construida por el resultado del conjunto de instancias.   
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=.4]{./Figures/MatrixConfusion.png}
+\end{center}
+\caption{La siguiente imagen representa matriz de confusión, de un problema de clasificación de dos clases.}
+\label{fig:Matrix}
+\end{figure}
+Los valores de la diaginal de la matriz de confusion representan las predicciones correctas, y los valores fuera de la diagonal representan los errores.
+
+Distintas métricas de desempeño pueden ser calculadas gracias a esta matriz.\\ 
+La tasa de precision del clasificador puede ser calculado como: 
+\begin{equation}
+Presicion = \frac{Verdaderos \quad positivos}{Verdaderos \quad positivos + Falsos \quad positivos}
+\end{equation}
+La tasa de exactitud del clasificador puede ser calculado como: 
+\begin{equation}
+Exactitud = \frac{Verdaderos \quad positivos + Verdaderos \quad negativos}{Total \quad de \quad positivos + Total \quad de \quad negativos}
+\end{equation}
+La tasa de verdaderos positivos $Tp$, del clasificador puede ser calculada como: 
+\begin{equation}
+Tp \approx \frac{Positivos \quad clasificados \quad correctamente}{Total \quad de \quad  positivos}
+\end{equation} 
+La tasa de falsos positivos $Fp$, del clasificador puede ser calculada como: 
+\begin{equation}
+Fp \approx \frac{Negativos \quad clasificados \quad correctamente}{Total \quad de \quad negativos}
+\end{equation}
+
+
+
+
+
 
 \newpage
 %%=====================================================

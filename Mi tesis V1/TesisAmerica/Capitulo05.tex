@@ -5,27 +5,35 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p
 
-En este capítulo se presentan los resultados de las pruebas realizadas al sistema. El desempeño del sistema es evaluado con respecto al error de clasificación.   
+En este capítulo se presentan los resultados de las pruebas realizadas al sistema. El desempeño del sistema es evaluado con respecto a la precisi\'on de la clasificación.   
 
 Los experimentos y el sistema propuesto fue implementado en una computadora de escritorio Dell con un procesador Intel(R) Xeon(R) CPU E5-1603, 16GB de memoria RAM, Windows 7 de 64 bits. La implementación del sistema se realizó en C\# utilizando Emgu 2.410 \footnote{\url{http://www.emgu.com/wiki/index.php/Main\_Page}} un wrapper de OpenCV\footnote{\url{http://opencv.org/}}. 
 
-Para analizar la tasa de precisión de reconocimiento del sistema propuesto se realizaron varios experimentos en distintas circunstancias. Por ejemplo se analizó el rendimiento del sistema a tres diferentes distancias $70$, $80$, $90$ $cm.$ del Kinect frontal. También en diferentes circunstancias de iluminación, con iluminación estándar, media y sin iluminación. 
+Para analizar la tasa de precisión de reconocimiento del sistema propuesto se realizaron varios experimentos en distintas circunstancias. Por ejemplo se analizó el rendimiento del sistema a tres diferentes distancias $70$, $80$, $90$ $cm.$ del Kinect frontal. También en diferentes circunstancias de iluminación, con iluminación estándar, media y sin iluminación. Se escogió este tipo de escenarios para evaluar el sistema, para obtener el rendimiento en situaciones que representen o estén en condiciones naturales o reales.
+
+Se utilizaron imágenes reales capturadas por ambos sensores de profundidad del Kinect de $640 \times 480$ pixeles. Las imágenes son $5$ personas distintas, realizando los gestos de puño y el de palma de la mano con los dedos separados, para los gestos estáticos. Para los gestos dinámicos se tomaron los gestos de $3$ personas cada una de ellas realizando los gestos estáticos en movimiento.\\
+Los gestos se realizaron usando una sola mano, en este caso todos los usuarios optaron por usar la mano derecha. Pero el sistema este hecho para que funcione no importando la mano que se utilice. La mano del usuario tiene que tener una ligera rotación en el eje vertical para que el sistema pueda detectar el gesto.
+
+En cada experimento se analizo el rendimiento del sistema usando un solo Kinect (kinect frontal) y usando los dos dispositivos.  
 
 
-Se utilizaron imágenes reales capturadas por los sensores de profundidad de $640 \times 480$ pixeles. Las imágenes son de 5 personas distintas, realizando los gestos de puño y el de palma de la mano con los dedos separados, para los gestos estáticos. Para los gestos dinámicos se tomaron los gestos de $3$ personas cada una de ellas realizaron los gestos estáticos anteriores en movimiento.   
+%::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-En las secciones siguientes se explica cada experimento y resultados de estos.  
 
 \section{Experimentos de gestos estáticos}\label{TestStaticGestures}  
 
-La evaluación del sistema en cuanto al reconocimiento de los gestos estáticos, se determino conforme al resultado de los experimentos realizados en circunstancias de iluminación, (estándar, media, baja). En cada conjunto de experimentos se tomo en cuenta la distancia, ya que en cada grupo se analizaron tres distancias, $70$, $80$, $90$ $cm$.  
+La evaluación del sistema en cuanto al reconocimiento de los gestos estáticos, se determino conforme al resultado de los experimentos realizados en circunstancias de iluminación, (estándar, media, baja). En cada conjunto de experimentos se tomo en cuenta la distancia, ya que en cada grupo se analizaron tres diferentes distancias: $70$, $80$, $90$ $cm$.  
 
-Se analizaron dos gestos estáticos la palma de la mano con los dedos separados, Gesto 1 y el puño, Gesto 2, de $5$ usuarios distintos. Para cada experimento se escogió al azar $200$ imágenes de cada gesto del conjunto de las imágenes capturadas. 
+Se analizaron dos gestos estáticos la palma de la mano con los dedos separados, Gesto 1 y el puño, Gesto 2, de $5$ usuarios distintos. Para cada experimento se escogió al azar $200$ imágenes de cada gesto del conjunto de las imágenes capturadas. Cada imagen de un gesto tenia su correspondiente imagen con el Kinect lateral, de manera que eran $400$ imágenes por cada gesto. 
+
+En el análisis del sistema con un solo Kinect, solo se tomaron las imágenes provenientes del Kinect frontal. Para el análisis con dos Kinect se tomaron estas mismas imágenes del Kinect frontal con su correspondiente imagen del Kinect lateral.
 
 Enseguida se presentan los resultados de cada experimento realizado.
 
+%----
+
 \subsection{Experimentos con iluminación} 
-Para este experimento las imágenes se capturaron en un laboratorio con iluminación estándar,como la que se muestra en la figura \ref{fig:LabIluminado}.
+Para este experimento se usaron imágenes capturadas en un laboratorio con iluminación estándar, como la que se muestra en la figura \ref{fig:LabIluminado}. Se tomo en cuenta tres distancias distintas. 
 
 \begin{figure}[h!]
 \begin{center} 
@@ -35,7 +43,9 @@ Para este experimento las imágenes se capturaron en un laboratorio con iluminac
 \label{fig:LabIluminado}
 \end{figure} 
 
-En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario, para las imágenes de los demás usuarios ver el apéndice . En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  
+\begin{itemize}
+
+\item En el primer experimento el usuario se encuentra a una distancia de $70$ $cm.$ del Kinect frontal. En la tabla \ref{table:70L2K} se encuentran los resultados del reconocimiento de los dos gestos utilizando los dos dispositivos, y en la tabla \ref{table:70L1K} los resultados usando un dispositivo.  
 
 %\begin{figure}[h!]
 %\centering
@@ -48,32 +58,37 @@ En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinec
 
 \begin{table}[h!] 
 \begin{center}
-\begin{tabular}{ r || c | c |} 
- 
+\begin{tabular}{ r || c | c |}  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 170  &  30  \\ \hline  
 Gesto 2 & 21   & 179 \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento uno, utilizando ambos Kinect.}
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $70$ $cm$, utilizando ambos Kinect.} 
+\label{table:70L2K}
 \end{table}
+
+La matriz de confusión muestra que $170$ gestos de la clase 1 y $179$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $87.25 \%$  
 
 \begin{table}[h!] 
 \begin{center}
 \begin{tabular}{ r || c | c |} 
- 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 127  &  73  \\ \hline  
 Gesto 2 & 6    &  194 \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento uno, utilizando solo el Kinect frontal.}
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $70$ $cm$, utilizando el Kinect frontal.}
+\label{table:70L1K}
 \end{table}
+
+La matriz de confusión muestra que $127$ gestos de la clase 1 y $194$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $80.25\%$ 
+
+Como se observa en las matrices de confusión, se obtiene una mayor exactitud en el reconocimiento del gesto utilizando dos dispositivos Kinect.
+
 %----
 
-En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
+\item En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  En la tabla \ref{table:80LK2} se encuentran los resultados del reconocimiento de los dos gestos utilizando los dos dispositivos, y en la tabla \ref{table:80LK1} los resultados usando un dispositivo.   
 
 %\begin{figure}[h!]
 %\centering
@@ -87,33 +102,38 @@ En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kine
 \begin{table}[h!] 
 \begin{center}
 \begin{tabular}{ r || c | c |} 
- 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 96     &  104     \\ \hline  
 Gesto 2 & 16     & 185     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento dos, con dos Kinect} 
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $80$ $cm$, utilizando ambos Kinect.} 
+\label{table:80LK2}
 \end{table}
+
+La matriz de confusión muestra que $96$ gestos de la clase 1 y $185$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $70.25\%$  
 
 \begin{table}[h!] 
 \begin{center}
-\begin{tabular}{ r || c | c |} 
- 
+\begin{tabular}{ r || c | c |}  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 88     &  112     \\ \hline  
 Gesto 2 & 6     & 183     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento dos, utilizando solo el Kinect frontal.} 
-\end{table}
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $80$ $cm$, utilizando el Kinect frontal.} 
+\label{table:80LK1}
+\end{table}  
 
-%---
+La matriz de confusión muestra que $88$ gestos de la clase 1 y $183$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $70.5\%$ 
 
-En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+En este experimento la exactitud del reconocimiento es baja para el uso de ambos o un dispositivo Kinect. Se observa que clasifica los gestos de la clase uno como de la clase dos, esto es debido a la calidad de la imágenes debido a que el sensor no siempre proporciona información detallada o completa de la mano.  
 
+
+%--- 
+
+\item En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  En la tabla \ref{table:90LK2} se encuentran los resultados del reconocimiento de los dos gestos utilizando los dos dispositivos, y en la tabla \ref{table:90LK1} los resultados usando un dispositivo.   
+ 
 %\begin{figure}[h!]
 %\centering
 %\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacion90:1}}
@@ -126,31 +146,40 @@ En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinec
 \begin{table}[h!] 
 \begin{center}
 \begin{tabular}{ r || c | c |} 
- 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 &  93    & 107      \\ \hline  
 Gesto 2 &  10    & 190     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión, los datos se capturaron usando dos Kinect.}
-\end{table}
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $90$ $cm$, utilizando ambos Kinect.}
+\label{table:90LK2}
+\end{table} 
+
+La matriz de confusión muestra que $93$ gestos de la clase 1 y $190$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $70.75\%$ 
 
 \begin{table}[h!] 
 \begin{center}
 \begin{tabular}{ r || c | c |} 
- 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 &  101   & 99      \\ \hline  
 Gesto 2 &  17    & 183     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión de los gestos 1 y 2. Utilizando un Kinect.}
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $70$ $cm$, utilizando el Kinect frontal.}
+\label{table:90LK1}
 \end{table} 
 
+La matriz de confusión muestra que $101$ gestos de la clase 1 y $183$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $71 \%$  
+
+\end{itemize}
+
+En este experimento se observa un resultado similar al anterior, pues otra vez se obtiene baja exactitud en el reconocimiento por que clasifica mal el gesto 1. Esto por la misma razón de que el experimento anterior.
+
+%::::::
+
+
 \subsection{Experimentos con iluminación media} 
-Para el conjunto de estos experimentos, las imágenes se capturaron en un laboratorio con iluminación media, como la que se muestra en la figura. A tres distancias $70$, $80$ y $90$ $cm$.  
+Para el conjunto de estos experimentos, las imágenes se capturaron en un laboratorio con iluminación media, como la que se muestra en la figura. A dos distancias $70$ y $90$ $cm$.  
 
 \begin{figure}[h!]
 \begin{center} 
@@ -162,7 +191,9 @@ Para el conjunto de estos experimentos, las imágenes se capturaron en un labora
 
 %----
 
-En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  
+\begin{itemize}
+
+\item En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  En la tabla \ref{table:70LMK2} se encuentran los resultados del reconocimiento de los dos gestos utilizando los dos dispositivos, y en la tabla \ref{table:70LMK1} los resultados usando un dispositivo.  
 
 %\begin{figure}[h!]
 %\centering
@@ -175,73 +206,38 @@ En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinec
 
 \begin{table}[h!] 
 \begin{center}
-\begin{tabular}{ r || c | c |} 
- 
+\begin{tabular}{ r || c | c |}  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 178    &  22     \\ \hline  
 Gesto 2 & 84     & 105     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión}
+\caption{Matriz de confusión del experimento con iluminación media a una distancia de $70$ $cm$, utilizando ambos Kinect.}
+\label{table:70LMK2}
 \end{table}
 
+La matriz de confusión muestra que $178$ gestos de la clase 1 y $105$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $72.75 \%$ 
 
 \begin{table}[h!] 
 \begin{center}
 \begin{tabular}{ r || c | c |} 
- 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 136    &  64     \\ \hline  
 Gesto 2 & 7     &  193     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión. Se utilizo un Kinect para el análisis del reconocimiento}
-\end{table}
-
-%---
-
-En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
-
-%\begin{figure}[h!]
-%\centering
-%\subfigure[Gesto 1 vista desde el Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM80:1}}
-%\subfigure[Gesto 1 viata desde el Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM80:2}}
-%\subfigure[Gesto 2 vista desde Kinect frontal]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM80:3}}
-%\subfigure[Gesto 2 vista desde Kinect lateral]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:iluminacionM80:4}}
-%\caption{Ejemplo de la imagenes capturadas a una distancia de $80$ $cm$.} \label{fig:iluminacionM80}
-%\end{figure}
-
-\begin{table}[h!] 
-\begin{center}
-\begin{tabular}{ r || c | c |} 
- 
-        & Gesto 1 & Gesto 2 \\ \hline \hline  
-Gesto 1 &      &       \\ \hline  
-Gesto 2 &      &     \\   
-
-\end{tabular}
-\end{center} 
-\caption{Matriz de confusión}
+\caption{Matriz de confusión del experimento con iluminación media a una distancia de $70$ $cm$, utilizando el Kinect frontal.} 
+\label{table:70LMK1}
 \end{table} 
 
-\begin{table}[h!] 
-\begin{center}
-\begin{tabular}{ r || c | c |} 
- 
-        & Gesto 1 & Gesto 2 \\ \hline \hline  
-Gesto 1 &      &     \\ \hline  
-Gesto 2 &      &     \\   
+La matriz de confusión muestra que $136$ gestos de la clase 1 y $193$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $82.25 \%$  
 
-\end{tabular}
-\end{center} 
-\caption{Matriz de confusión, utilizando un Kinect} 
-\end{table} 
- 
+En este caso se observa una mejor exactitud cuando se utiliza solo un Kinect. 
+
+%--- 
 %---
 
-En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+\item En el segundo experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos. En la tabla \ref{table:90LMK2} se encuentran los resultados del reconocimiento de los dos gestos utilizando los dos dispositivos, y en la tabla \ref{table:90LMK1} los resultados usando un dispositivo.     
 
 %\begin{figure}[h!]
 %\centering
@@ -254,32 +250,36 @@ En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinec
 
 \begin{table}[h!] 
 \begin{center}
-\begin{tabular}{ r || c | c |} 
- 
+\begin{tabular}{ r || c | c |}  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 153     &  47     \\ \hline  
 Gesto 2 & 26      & 174     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión}
+\caption{Matriz de confusión del experimento con iluminación media a una distancia de $90$ $cm$, utilizando ambos Kinect.} 
+\label{table:90LMK2}
 \end{table}
+
+La matriz de confusión muestra que $153$ gestos de la clase 1 y $174$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $81.75 \%$ 
 
 \begin{table}[h!] 
 \begin{center}
 \begin{tabular}{ r || c | c |} 
- 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 &  54    &   95    \\ \hline  
-Gesto 2 &  0     &  0   \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión, utilizando un Kinect} 
+\caption{Matriz de confusión del experimento con iluminación media a una distancia de $90$ $cm$, utilizando el Kinect frontal.} 
+\label{table:90LMK1} 
 \end{table}  
 
-Para el análisis de uno y dos Kinect, como en todos los casos se analizaron las mismas imágenes. Debido a la posición de la mano solo se detectaron $149$ gestos de la clase uno y $0$ de la clase dos, cuando se utiliza el Kinect frontal.  
+En este caso cuando solo se utilizo un Kinect, este no pudo identificar el gesto 2, ni tampoco todos los gestos 1. Debido a la posición que se encontraba la mano, solo se detectaron $149$ gestos de la clase uno de los cuales $54$ fueron clasificados correctamente.
 
+El experimento muestra que el uso de dos Kinect brinda en algunos casos mayor exactitud en el reconocimiento. Pues se tiene otra perspectiva de la mano. 
+
+\end{itemize}
+
+%:::::
 
 \subsection{Experimentos sin iluminación}
 Para este experimento las imágenes se capturaron en un laboratorio sin iluminación, como la que se muestra en la figura.
@@ -294,7 +294,9 @@ Para este experimento las imágenes se capturaron en un laboratorio sin iluminac
 
 %---- 
 
-En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  
+\begin{itemize}
+
+\item En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos. En la tabla \ref{table:70LnoK2} se encuentran los resultados del reconocimiento de los dos gestos utilizando los dos dispositivos, y en la tabla \ref{table:70LnoK1} los resultados usando un dispositivo.   
 
 %\begin{figure}[h!]
 %\centering
@@ -315,26 +317,29 @@ Gesto 2 & 196     &  4     \\
 
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión}
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $70$ $cm$, utilizando ambos Kinect.} 
+\label{table:70LnoK2}
 \end{table}  
+
+La matriz de confusión muestra que $190$ gestos de la clase 1 y $4$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $48.5 \%$ 
 
 \begin{table}[h!] 
 \begin{center}
 \begin{tabular}{ r || c | c |} 
- 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 154     &  46     \\ \hline  
 Gesto 2 & 167     &  33     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del reconocimiento de los dos gestos estáticos.}
-\end{table} 
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $70$ $cm$, utilizando el Kinect frontal.}
+\label{table:70LnoK1} 
+\end{table}  
 
+La matriz de confusión muestra que $154$ gestos de la clase 1 y $133$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $46.75 \%$ 
 
-%----
+%---- 
 
-En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
+\item En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos. En la tabla \ref{table:80LnoK2} se encuentran los resultados del reconocimiento de los dos gestos utilizando los dos dispositivos, y en la tabla \ref{table:80LnoK1} los resultados usando un dispositivo.   
 
 %\begin{figure}[h!]
 %\centering
@@ -355,8 +360,11 @@ Gesto 2 & 90     &  110     \\
 
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión}
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $80$ $cm$, utilizando ambos Kinect.}
+\label{table:80LnoK2}
 \end{table}  
+
+La matriz de confusión muestra que $187$ gestos de la clase 1 y $110$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $74.25 \%$ 
 
 \begin{table}[h!] 
 \begin{center}
@@ -365,26 +373,19 @@ Gesto 2 & 90     &  110     \\
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 162     &  37     \\ \hline  
 Gesto 2 & 4     &  166     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del reconocimiento de los dos gestos estáticos.}
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $80$ $cm$, utilizando el Kinect frontal.}
+\label{table:80LnoK1}
 \end{table} 
-\begin{center}
-\begin{tabular}{ r || c | c |} 
- 
-        & Gesto 1 & Gesto 2 \\ \hline \hline  
-Gesto 1 & 187     &  13     \\ \hline  
-Gesto 2 & 90      & 110     \\   
 
-\end{tabular}
-\end{center} 
-\caption{Matriz de confusión}
-\end{table}
+La matriz de confusión muestra que $162$ gestos de la clase 1 y $166$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $88.8\%$  
+
+En este caso se obtiene una mayor exactitud utilizando un Kinect, sin embargo se observa que el uso de dos dispositivos ayuda a clasificar mejor el gesto 1, pues se tiene mayor información con la cual se puede saber si es una palma con los dedos extendidos o solo es ruido proveniente del sensor.
 
 %---
 
-En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+\item En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos. En la tabla \ref{table:90LnoK2} se encuentran los resultados del reconocimiento de los dos gestos utilizando los dos dispositivos, y en la tabla \ref{table:90LnoK1} los resultados usando un dispositivo.    
 
 %\begin{figure}[h!]
 %\centering
@@ -398,15 +399,16 @@ En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinec
 \begin{table}[h!] 
 \begin{center}
 \begin{tabular}{ r || c | c |} 
- 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 150     &  50     \\ \hline  
 Gesto 2 & 6      &  194     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión}
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $90$ $cm$, utilizando ambos Kinect.}
+\label{table:90LnoK2}
 \end{table}
+
+La matriz de confusión muestra que $150$ gestos de la clase 1 y $194$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $86 \%$ 
 
 \begin{table}[h!] 
 \begin{center}
@@ -414,27 +416,33 @@ Gesto 2 & 6      &  194     \\
  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 138     &  61     \\ \hline  
-Gesto 2 & 0      &  0     \\   
-
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión}
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $90$ $cm$, utilizando el Kinect frontal.}
+\label{table:90LnoK1}
 \end{table} 
 
-No se detecto ningún elemento de la clase dos y solo se detectaron 98 elementos d ela primera clase. Debido que por la vista del kinect frontal no se pudo detectar la pose. 
+En el caso cuando se toma como entrada solo un Kinect, al igual que en el experimento de iluminación media y con distancia también de $90$ $cm$. Solo se detectaron los gestos de la clase 1, $199$, de los cuales se clasificaron correctamente $138$. 
 
-Por las matrices anteriores se observa que hay un error mayor cuando se quieres identificar el gesto uno, esto debido a las imágenes provenientes del sensor, ya que no siempre es posible obtener una imagen completa de la mano, ni utilizando los dos dispositivos.  
+En este experimento se observa que hay mayor exactitud en el reconocimiento utilizando dos Kinect y al igual que en la mayoría de los casos, hay un error mayor en la clasificación de la clase 1. 
+
+
+\end{itemize}
+
+Lo experimentos explicados anteriormente muestran que el gesto uno produce un error mayor, debido a la resolución de sensor, pues no en todas las imágenes la mano esta completa, en los casos que no esta completamente vista por el sensor frontal y logra ser detectada por el sensor lateral con información favorable, es cuando se puede apreciar una mayor exactitud de reconocimiento usando ambos Kinect. 
+Seria conveniente hacer un experimento donde las imágenes tengan una buena resolución y ninguna obstrucción para validar el rendimiento del sistema. Debido a que la imágenes utilizadas no eran ideales pues contenían  ruido o obstrucciones. SE decidió hacer este tipo de pruebas para lograr resaltado mas apegados a la realidad es decir en ambientes naturales. 
+  
 
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 \section{Experimentos de gestos dinámicos}\label{TestDinamicGestures} 
 
-La evaluación del sistema en cuanto al reconocimiento de los gestos dinámicos se realizo de la siguiente forma; al igual que en los gestos estáticos se hicieron dos conjuntos de experimentos cada uno con diferentes tipos de iluminación, media y sin iluminación. En cada conjunto de experimentos se tomo en cuenta la distancia, ya que en cada grupo se analizaron tres distancias, $70$, $80$, $90$ $cm$. 
+La evaluación del sistema en cuanto al reconocimiento de los gestos dinámicos se realizo de la siguiente forma: al igual que en los gestos estáticos se hicieron dos conjuntos de experimentos cada uno con diferentes tipos de iluminación, media y sin iluminación. En cada conjunto de experimentos se tomo en cuenta la distancia, debido a que en cada grupo se analizaron tres distancias, $70$, $80$, $90$ $cm$. 
 
-Los gestos analizados fueron dos. El primero corresponde a la palma de la mano con los dedos separados, Gesto 3, en movimiento y el segundo el puño de la mano, Gesto 4, también en movimiento. Estos gestos fueron realizados por tres usuarios distintos. Para cada experimento se analizaron $150$ cuadros por lo que se analizaron $5$ repeticiones del gesto y cada uno tenia una duración de $30$ cuadros por segundo. Se tomo como gesto valido si el porcentaje de reconocimiento de cada gestos estático presente en cada segundo es mayor o igual a $80 \%$.  
-
-Enseguida se presentan los resultados de cada experimento realizado, por usuario. También se presenta el rendimiento del sistema usando solo un solo Kinect. 
+Los gestos analizados fueron dos. El primero corresponde a la palma de la mano con los dedos separados, Gesto 3, en movimiento y el segundo el puño de la mano, Gesto 4, también en movimiento. Estos gestos fueron realizados por $3$ usuarios distintos. Para cada experimento se realizaron $5$ repeticiones de cada gesto y cada uno tenia una duración de $30$ cuadros por segundo. Se tomo como gesto valido si el porcentaje de reconocimiento de cada gestos estático presente en cada segundo es mayor o igual a $80 \%$, esto en base al trabajo realizado por \citep{Sultana2012}. \\
+También se probo el sistema usando un solo Kinect, el frontal, en las mismas circunstancias mencionadas anteriormente. 
+Enseguida se presentan los resultados de cada experimento realizado, por usuario. 
 
 %\subsection{Experimentos con iluminación} 
 %Para este experimento las imágenes se capturaron en un laboratorio con iluminación estándar,como la que se muestra en la figura \ref{fig:LabIluminado}.
@@ -527,9 +535,11 @@ Enseguida se presentan los resultados de cada experimento realizado, por usuario
 %
 
 \subsection{Experimentos con iluminación media} 
-Para el conjunto de estos experimentos, las imágenes se capturaron en un laboratorio con iluminación media, como la que se muestra en la figura.
+Para el conjunto de estos experimentos, las imágenes se capturaron en un laboratorio con iluminación media, véase la figura \ref{fig:LabMedioIluminado}.
 
-En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario, para las imágenes de los demás usuarios ver el apéndice. En la tabla se encuentran los resultados del reconocimiento de los dos gestos y por usuario.  
+\begin{itemize}
+
+\item En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. En la tabla \ref{table:D70LK1} se encuentran los resultados del reconocimiento de los dos gestos utilizando solo el Kinect frontal. En la tabla \ref{table:D70LK2} se presentan los resultados utilizando los dos dispositivos Kinect.  
 
 %\begin{figure}[h!]
 %\centering
@@ -549,9 +559,11 @@ En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinec
 %\caption{Gesto del puño de la mano a $70$ $cm$.} \label{fig:G2IM70}
 %\end{figure}
 
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 1 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de precision del reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 77 & 80 & 83 & 73 & 70 \\ \cline{2-7}
                       & {G4} & 93 & 100 & 100 & 93 & 97 \\ \hline \hline
@@ -559,11 +571,19 @@ En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinec
                       & {G4} & 97 & 93 & 97 & 93 & 93 \\ \hline \hline
 {\multirow{2}{*}{P3}} & {G3} & 83 & 100 & 80 & 53 & 90 \\ \cline{2-7}
                       & {G4} & 100 & 93 & 93 & 87 & 100 \\ \hline
-\end{tabular}\\
+\end{tabular}
+\end{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $70$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D70LK1}
+\end{table} 
 
+En la tabla anterior se observa que arriba del $90\%$ de los gestos realizados por cada participante son reconocidos correctamente. A excepción del participante uno al realizar el gesto 3, pues solo reconoció $2$ gestos dinámicos de los $5$ realizados. Esto se debe al sensor, pues las manos del participante uno no son tan grandes y el sensor no logra captar en todas la imágenes los dedos del participante. 
+
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 2 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de precision del reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 73 & 63 & 77 & 73 & 63 \\ \cline{2-7}
                       & {G4} & 100 & 100 & 100 & 100 & 100 \\ \hline \hline
@@ -571,11 +591,16 @@ En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinec
                       & {G4} & 93 & 77 & 77 & 67 & 60 \\ \hline \hline
 {\multirow{2}{*}{P3}} & {G3} & 100 & 100 & 93 & 97 & 93 \\ \cline{2-7}
                       & {G4} & 73 & 90 & 83 & 63 & 83 \\ \hline
-\end{tabular}\\  
+\end{tabular}  
+\end{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $70$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.}
+\label{table:D70LK2}
+\end{table} 
 
+Al utilizar ambos Kinect se observa que hay menor exactitud de reconocimiento de los gestos. Como se usan las mismas imágenes para uno y dos Kinect en cada prueba, pues se tiene la misma justificación en la exactitud del participante 1. 
 %---
 
-En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
+\item En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos. En la tabla \ref{table:D80LK1} se encuentran los resultados del reconocimiento de los dos gestos utilizando solo el Kinect frontal. En la tabla \ref{table:D80LK2} se presentan los resultados utilizando los dos dispositivos Kinect.   
 
 %\begin{figure}[h!]
 %\centering
@@ -596,9 +621,11 @@ En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kine
 %\end{figure}
 
 % 1 kinect 80 LM 
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 1 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 33 & 27 & 30 & 50 & 57 \\ \cline{2-7}
                       & {G4} & 100 & 100 & 70 & 87 & 77 \\ \hline \hline
@@ -606,13 +633,17 @@ En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kine
                       & {G4} & 100 & 93 & 90 & 80 & 75 \\ \hline \hline
 {\multirow{2}{*}{P3}} & {G3} & 47 & 87 & 60 & 60 & 63 \\ \cline{2-7}
                       & {G4} & 100 & 90 & 97 & 92 & 95 \\ \hline
-\end{tabular}\\ 
+\end{tabular} 
+\end{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $80$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D80LK1}
+\end{table}
 
-
-
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 2 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 83 & 86 & 67 & 87 & 70 \\ \cline{2-7}
                       & {G4} & 35 & 53 & 70 & 77 & 57 \\ \hline \hline
@@ -620,12 +651,17 @@ En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kine
                       & {G4} & 93 & 93 & 90 & 90 & 80 \\ \hline \hline
 {\multirow{2}{*}{P3}} & {G3} & 93 & 100 & 67 & 100 & 80 \\ \cline{2-7}
                       & {G4} & 100 & 93 & 87 & 83 & 90 \\ \hline
-\end{tabular}\\
+\end{tabular}
+\end{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $80$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D80LK2}
+\end{table} 
 
+Para ambas pruebas con uno y dos Kinect se tuvieron resultados similares, desafortunadamente hubo mayores casos de reconocimiento fallido, en especial cuando se realiza el gesto 3. Aquí se puede observar un mejor reconocimiento con el uso de ambos Kinect.
 
 %---
 
-En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+\item En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. En la tabla se encuentran los resultados del reconocimiento de los dos gestos. En la tabla \ref{table:D90LK1} se encuentran los resultados del reconocimiento de los dos gestos utilizando solo el Kinect frontal. En la tabla \ref{table:D90LK2} se presentan los resultados utilizando los dos dispositivos Kinect.    
 
 %\begin{figure}[h!]
 %\centering
@@ -645,10 +681,11 @@ En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinec
 %\caption{Gesto del puño de la mano $90$ $cm$.} \label{fig:G2IM90}
 %\end{figure}
 
-
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 1 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 87 & 87 & 53 & 87 & 67 \\ \cline{2-7}
                       & {G4} & 100 & 100 & 100 & 90 & 92 \\ \hline \hline
@@ -657,10 +694,16 @@ En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinec
 {\multirow{2}{*}{P3}} & {G3} & 90 & 97 & 97 & 100 & 90 \\ \cline{2-7}
                       & {G4} & 77 & 90 & 80 & 75 & 80 \\ \hline
 \end{tabular}
+\end{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $90$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D90LK1}
+\end{table}
 
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 2 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 30 & 37 & 13 & 13 & 30 \\ \cline{2-7}
                       & {G4} & 100 & 98 & 95 & 100 & 98 \\ \hline \hline
@@ -669,12 +712,22 @@ En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinec
 {\multirow{2}{*}{P3}} & {G3} & 77 & 73 & 80 & 97 & 90 \\ \cline{2-7}
                       & {G4} & 77 & 90 & 91 & 80 & 75 \\ \hline
 \end{tabular}
+\end{center}
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $90$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D90LK2}
+\end{table}
+
+En este caso el experimento mostró un mejor reconocimiento al usar un solo dispositivo, si existe gran diferencia en el uso de dos dispositivos generalmente en la realización del gesto 3.
+
+\end{itemize}
 
 
 \subsection{Experimentos sin iluminación}
-Para este experimento las imágenes se capturaron en un laboratorio sin iluminación, como la que se muestra en la figura.
+Para este experimento las imágenes se capturaron en un laboratorio sin iluminación, véase la figura \ref{fig:LabNoIluminado}.
 
-En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario, para las imágenes de los demás usuarios ver el apéndice . En la tabla se encuentran los resultados del reconocimiento de los dos gestos.  
+\begin{itemize}
+
+\item En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. En la tabla \ref{table:D70LMK1} se encuentran los resultados del reconocimiento de los dos gestos utilizando solo el Kinect frontal. En la tabla \ref{table:D70LMK2} se presentan los resultados utilizando los dos dispositivos Kinect. 
 
 %\begin{figure}[h!]
 %\centering
@@ -694,10 +747,11 @@ En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinec
 %\caption{Gesto del puño de la mano a $70$ $cm$.} \label{fig:G2INO70}
 %\end{figure}
 
-
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 1 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 77 & 80 & 57 & 70 & 60 \\ \cline{2-7}
                       & {G4} & 100 & 97 & 93 & 100 & 97 \\ \hline \hline
@@ -706,11 +760,16 @@ En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinec
 {\multirow{2}{*}{P3}} & {G3} & 73 & 43 & 43 & 47 & 60 \\ \cline{2-7}
                       & {G4} & 100 & 93 & 97 & 93 & 93 \\ \hline
 \end{tabular}
+\end{center} 
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $70$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D70LMK1}
+\end{table}
 
-
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 2 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 93 & 83 & 100 & 77 & 87 \\ \cline{2-7}
                       & {G4} & 100 & 100 & 97 & 97 & 100 \\ \hline \hline
@@ -719,11 +778,17 @@ En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinec
 {\multirow{2}{*}{P3}} & {G3} & 83 & 87 & 97 & 97 & 100 \\ \cline{2-7}
                       & {G4} & 100 & 97 & 93 & 87 & 90 \\ \hline
 \end{tabular}
+\end{center} 
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $70$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones} 
+\label{table:D70LMK2}
+\end{table}
 
+
+Analizando cada repetición de cada gesto se observa que una mayor reconocimiento cuando se utilizan los dos dispositivos, en especial cuando se reconoce el gesto 3 de los participantes 1 y 3. 
 
 %---
 
-En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.   
+\item En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos. En la tabla \ref{table:D80LMK1} se encuentran los resultados del reconocimiento de los dos gestos utilizando solo el Kinect frontal. En la tabla \ref{table:D80LMK2} se presentan los resultados utilizando los dos dispositivos Kinect.    
 
 %\begin{figure}[h!]
 %\centering
@@ -743,10 +808,11 @@ En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kine
 %\caption{Gesto del puño de la mano a $80$ $cm$.} \label{fig:G2INO80}
 %\end{figure}
 
-
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 1 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 57 & 63 & 60 & 63 & 63 \\ \cline{2-7}
                       & {G4} & 100 & 100 & 100 & 100 & 100 \\ \hline \hline
@@ -754,11 +820,17 @@ En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kine
                       & {G4} & 100 & 93 & 97 & 93 & 98 \\ \hline \hline
 {\multirow{2}{*}{P3}} & {G3} & 80 & 87 & 67 & 77 & 63 \\ \cline{2-7}
                       & {G4} & 97 & 87 & 100 & 90 & 87 \\ \hline
-\end{tabular}\\
+\end{tabular}
+\end{center} 
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $80$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones} 
+\label{table:D80LMK1}
+\end{table}
 
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 2 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 63 & 70 & 90 & 80 & 77 \\ \cline{2-7}
                       & {G4} & 87 & 100 & 93 & 90 & 93 \\ \hline \hline
@@ -767,10 +839,16 @@ En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kine
 {\multirow{2}{*}{P3}} & {G3} & 87 & 100 & 73 & 83 & 80 \\ \cline{2-7}
                       & {G4} & 73 & 73 & 93 & 83 & 93 \\ \hline 
 \end{tabular}
+\end{center}
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $80$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D80LMK2}
+\end{table} 
+
+En este experimento se puede observar que las repeticiones del gesto 4 con cada participante obtienen mayor precision utilizando un Kinect. en este caso se observa que el gesto tres no es clasificado correctamente en la mayoría de las repeticiones de los participantes, a excepción del participante 3, que muestra mayor desempeño cuando se utilizan los dos dispositivos.
 
 %--
 
-En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos.    
+\item En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la tabla se encuentran los resultados del reconocimiento de los dos gestos. En la tabla \ref{table:D90LMK1} se encuentran los resultados del reconocimiento de los dos gestos utilizando solo el Kinect frontal. En la tabla \ref{table:D90LMK2} se presentan los resultados utilizando los dos dispositivos Kinect.     
 
 %\begin{figure}[h!]
 %\centering
@@ -790,10 +868,11 @@ En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinec
 %\caption{Gesto del puño de la mano $90$ $cm$.} \label{fig:G2INO90}
 %\end{figure}
 
-
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 1 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 57 & 70 & 70 & 67 & 77 \\ \cline{2-7}
                       & {G4} &  &  &  &  &  \\ \hline \hline
@@ -802,12 +881,16 @@ En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinec
 {\multirow{2}{*}{P3}} & {G3} & 70 & 83 & 80 & 100 & 97 \\ \cline{2-7}
                       & {G4} & 87 & 97 & 90 & 70 & 90 \\ \hline
 \end{tabular}
+\end{center} 
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $90$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D90LMK1}
+\end{table}
 
-
-
+\begin{table}[h!]
+\begin{center}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de reconocimiento en cada secuencia de 30 seg. 2 Kinect}\\ \cline{1-7}
+\multicolumn{7}{ |c| }{Porcentajes de reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
 {\multirow{2}{*}{P1}} & {G3} & 47 & 47 & 53 & 37 & 40 \\ \cline{2-7}
                       & {G4} &  &  &  &  &  \\ \hline \hline
@@ -816,15 +899,31 @@ En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinec
 {\multirow{2}{*}{P3}} & {G3} & 80 & 97 & 87 & 83 & 87 \\ \cline{2-7}
                       & {G4} & 87 & 100 & 97 & 78 & 95 \\ \hline
 \end{tabular}
+\end{center}
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $90$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D90LMK2}
+\end{table}
 
+En las tablas anteriores no se muestra ningún valor para el gestos 4 del participante uno por que el gesto cuatro no pudo ser ubicado, debido a imágenes obtenidas. Observando las repeticiones de cada participante se observa un mejor desempeño para el participante tres usando ambos dispositivos.  
 
-En las tablas anteriores el gesto cuatro no pudo ser ubicado para el participante uno. 
+\end{itemize}
 
 Como se vio en cada tabla se analizo el porcentaje de gestos localizados en cada secuencia de $30$, analizando cuando se tenia uno y dos dispositivos. En general si se observa cada elemento o gesto, se puede observar que el sistema tienen un mayor grado de reconocimiento cuando se utilizan los dos dispositivos.    
 
 También se observa que en algunas ocasiones el reconocimiento es bajo, usualmente para el gesto n\'umero tres, esto debido a la resolución de sensor, ya que en ocasiones las regiones de los dedos no son captadas y esto hace que reconozca erróneamente el gesto. 
 
-La secuencia de imágenes de cada experimento fue procesa como provenía del sensor, no se escogieron las mejores imágenes. Los resultados prometen que con una mejor resolución del sensor el grado de reconocimiento seria mayor
+La secuencia de imágenes de cada experimento fue procesa como provenía del sensor, no se escogieron las mejores imágenes. Los resultados prometen que con una mejor resolución del sensor el grado de reconocimiento seria mayor. 
+
+\section{Comparación con estado del arte.}  
+
+En el estado del arte los sistemas se enfocan al reconocimiento en ambientes ideales, o por lo menos las pruebas se realizan bajo esos estándares. De manera que resulta complicado comparar los resultados obtenidos con los existentes en el estado del arte.
+
+Los experimentos realizados se formularon para validar el sistema en un ambiente natural, de manera que las imágenes utilizadas no siempre contenían información adecuada o completa para la clasificación del gesto. Tomando en cuenta los mejores resultados el sistema obtuvo un $88 \%$ en el reconocimiento de gestos estáticos y para los dinámicos se presentaron un $100 \%$ en ciertos participantes para las repeticiones presentadas. 
+
+El trabajo realizado por Caputo, véase el capitulo \ref{capit:cap1} seccion \ref{sec:EstadoDelArte}. Utiliza también dos dispositivos Kinect como medio de captura, ellos logran obtener hasta un $85 \%$ en el reconocimiento de los gestos, en los gestos dinámicos no mencionan el porcentaje de exactitud, las condiciones es que es probado su sistema no son mencionadas. 
+
+Nuestro sistema logra superar el porcentaje de reconocimiento que se encuentra en el estado del arte, pese a las condiciones que nuestro sistema es probado.  
+
 
 %----------------------------------------------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------------------------------------------- 

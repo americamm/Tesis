@@ -109,16 +109,16 @@ Nayakwadi, V. (2014).
   Survey}.
 \newblock {\bf 3}(1): 10--19.
 
+\bibitem[Niblack(1985)Niblack]{Niblack1985}
+Niblack, W. (1985).
+\newblock {\em {An introduction to digital image processing}\/}.
+\newblock Strandberg Publishing Company Birkeroed, Denmark,.
+\newblock p. 215.
+
 \bibitem[Ong {\em \mbox{et al.}\/}(1998)Ong, Teh, y Tan]{Ong1998}
 Ong, K.~C., Teh, H.~C., y Tan, T.~S. (1998).
 \newblock {Resolving occlusion in image sequence made easy}.
 \newblock {\em The Visual Computer\/}, {\bf 14}(4): 153--165.
-
-\bibitem[Otsu(1979)Otsu]{Otsu1979}
-Otsu, N. (1979).
-\newblock {A Threshold Selection Method from Gray-Level Histograms}.
-\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics\/}, {\bf
-  9}(1): 62--66.
 
 \bibitem[Premaratne(2013)Premaratne]{Premaratne2013}
 Premaratne, P. (2013).
@@ -154,6 +154,12 @@ Silva, C. y Santos-Victor, J. (2001).
 Smith, S.~W. (1999).
 \newblock {\em {Digital signal processing}\/}.
 \newblock p. 688.
+
+\bibitem[Sultana y Rajapuspha(2012)Sultana y Rajapuspha]{Sultana2012}
+Sultana, a. y Rajapuspha, T. (2012).
+\newblock {Vision Based Gesture Recognition for Alphabetical Hand Gestures
+  Using the SVM Classifier}.
+\newblock {\em Ijcset.Com\/}, {\bf 3}(7): 218--223.
 
 \bibitem[Viola y Jones(2001)Viola y Jones]{Viola2001}
 Viola, P. y Jones, M. (2001).

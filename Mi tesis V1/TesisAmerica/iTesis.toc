@@ -26,45 +26,42 @@
 \contentsline {subsubsection}{\numberline {2.2.1.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas y seguimiento}{16}{subsubsection.2.2.1.3}
 \contentsline {subsubsection}{\numberline {2.2.1.4}Reconocimiento}{17}{subsubsection.2.2.1.4}
 \contentsline {section}{\numberline {2.3}Imagen}{18}{section.2.3}
-\contentsline {section}{\numberline {2.4}Ruido}{19}{section.2.4}
-\contentsline {section}{\numberline {2.5}Oclusi\IeC {\'o}n}{19}{section.2.5}
-\contentsline {section}{\numberline {2.6}M\IeC {\'e}tricas de desempe\IeC {\~n}o}{19}{section.2.6}
-\contentsline {chapter}{\numberline {3}Sistema de reconocimiento de gestos propuesto}{20}{chapter.3}
-\contentsline {section}{\numberline {3.1}Adquisici\IeC {\'o}n de los datos}{20}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Kinect}{20}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Filtro de mediana}{22}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Detecci\IeC {\'o}n}{22}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}M\IeC {\'e}todo detecci\IeC {\'o}n r\IeC {\'a}pida de objetos usando caracter\IeC {\'\i }sticas simples utilizando el clasificador AdaBoost en forma de cascada}{23}{subsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Caracter\IeC {\'\i }sticas Haar}{24}{subsubsection.3.2.1.1}
-\contentsline {subsubsection}{\numberline {3.2.1.2}Imagen integral}{25}{subsubsection.3.2.1.2}
-\contentsline {subsubsection}{\numberline {3.2.1.3}Algoritmo AdaBoost}{26}{subsubsection.3.2.1.3}
-\contentsline {subsubsection}{\numberline {3.2.1.4}Clasificador AdaBoost en cascada}{27}{subsubsection.3.2.1.4}
-\contentsline {subsection}{\numberline {3.2.2}Binarizaci\IeC {\'o}n}{29}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Operaciones Morfol\IeC {\'o}gicas}{30}{subsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.3.1}Dilataci\IeC {\'o}n}{30}{subsubsection.3.2.3.1}
-\contentsline {subsubsection}{\numberline {3.2.3.2}Erosi\IeC {\'o}n}{31}{subsubsection.3.2.3.2}
-\contentsline {subsubsection}{\numberline {3.2.3.3}Apertura}{31}{subsubsection.3.2.3.3}
-\contentsline {subsubsection}{\numberline {3.2.3.4}Cierre}{31}{subsubsection.3.2.3.4}
-\contentsline {section}{\numberline {3.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{31}{section.3.3}
-\contentsline {section}{\numberline {3.4}Reconocimiento}{36}{section.3.4}
-\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{40}{section.4.2}
-\contentsline {section}{\numberline {4.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{43}{section.4.3}
-\contentsline {section}{\numberline {4.4}Reconocimiento}{44}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Reconocimiento de gestos est\IeC {\'a}ticos}{44}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Reconocimiento de gestos din\IeC {\'a}micos}{45}{subsection.4.4.2}
-\contentsline {chapter}{\numberline {5}Resultados}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}Experimentos de gestos est\IeC {\'a}ticos}{47}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Experimentos con iluminaci\IeC {\'o}n}{48}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Experimentos con iluminaci\IeC {\'o}n media}{49}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Experimentos sin iluminaci\IeC {\'o}n}{51}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Experimentos de gestos din\IeC {\'a}micos}{53}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Experimentos con iluminaci\IeC {\'o}n media}{53}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Experimentos sin iluminaci\IeC {\'o}n}{56}{subsection.5.2.2}
-\contentsline {chapter}{\numberline {6}Conclusiones}{59}{chapter.6}
-\contentsline {section}{\numberline {6.1}Limitaciones del sistema}{59}{section.6.1}
-\contentsline {section}{\numberline {6.2}Aportaciones}{59}{section.6.2}
-\contentsline {section}{\numberline {6.3}Trabajo futuro}{60}{section.6.3}
-\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{61}{section.6.3}
-\contentsline {chapter}{\numberline {A}Algoritmo de reduccion de falsos positivos.}{63}{appendix.Alph7}
+\contentsline {section}{\numberline {2.4}Obstrucci\IeC {\'o}n}{19}{section.2.4}
+\contentsline {section}{\numberline {2.5}M\IeC {\'e}tricas de desempe\IeC {\~n}o}{19}{section.2.5}
+\contentsline {chapter}{\numberline {3}Sistema de reconocimiento de gestos propuesto}{22}{chapter.3}
+\contentsline {section}{\numberline {3.1}Adquisici\IeC {\'o}n de los datos}{22}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Kinect}{22}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Filtro de mediana}{24}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Detecci\IeC {\'o}n}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}M\IeC {\'e}todo detecci\IeC {\'o}n r\IeC {\'a}pida de objetos usando caracter\IeC {\'\i }sticas simples utilizando el clasificador AdaBoost en forma de cascada}{25}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Caracter\IeC {\'\i }sticas Haar}{26}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Imagen integral}{27}{subsubsection.3.2.1.2}
+\contentsline {subsubsection}{\numberline {3.2.1.3}Algoritmo AdaBoost}{28}{subsubsection.3.2.1.3}
+\contentsline {subsubsection}{\numberline {3.2.1.4}Clasificador AdaBoost en cascada}{29}{subsubsection.3.2.1.4}
+\contentsline {subsection}{\numberline {3.2.2}Binarizaci\IeC {\'o}n}{31}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Operaciones Morfol\IeC {\'o}gicas}{32}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Dilataci\IeC {\'o}n}{32}{subsubsection.3.2.3.1}
+\contentsline {subsubsection}{\numberline {3.2.3.2}Erosi\IeC {\'o}n}{33}{subsubsection.3.2.3.2}
+\contentsline {subsubsection}{\numberline {3.2.3.3}Apertura}{33}{subsubsection.3.2.3.3}
+\contentsline {subsubsection}{\numberline {3.2.3.4}Cierre}{33}{subsubsection.3.2.3.4}
+\contentsline {section}{\numberline {3.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{33}{section.3.3}
+\contentsline {section}{\numberline {3.4}Reconocimiento}{38}{section.3.4}
+\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n del sistema de reconocimiento de gestos propuesto}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Adquisici\IeC {\'o}n de los datos}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}Detecci\IeC {\'o}n}{42}{section.4.2}
+\contentsline {section}{\numberline {4.3}Extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas}{45}{section.4.3}
+\contentsline {section}{\numberline {4.4}Reconocimiento}{46}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Reconocimiento de gestos est\IeC {\'a}ticos}{46}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Reconocimiento de gestos din\IeC {\'a}micos}{47}{subsection.4.4.2}
+\contentsline {chapter}{\numberline {5}Resultados}{49}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experimentos de gestos est\IeC {\'a}ticos}{49}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Experimentos con iluminaci\IeC {\'o}n}{50}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Experimentos con iluminaci\IeC {\'o}n media}{53}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Experimentos sin iluminaci\IeC {\'o}n}{55}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Experimentos de gestos din\IeC {\'a}micos}{58}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Experimentos con iluminaci\IeC {\'o}n media}{58}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Experimentos sin iluminaci\IeC {\'o}n}{61}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Comparaci\IeC {\'o}n con estado del arte.}{64}{section.5.3}
+\contentsline {chapter}{\numberline {6}Conclusiones}{66}{chapter.6}
+\contentsline {section}{\numberline {6.1}Trabajo futuro}{67}{section.6.1}
+\contentsline {chapter}{\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {Lista de referencias bibliogr\'aficas}}{68}{section.6.1}

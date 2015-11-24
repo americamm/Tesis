@@ -5,21 +5,13 @@
 \vspace{-5.5ex}% 
 \newcommand{\pushline}{\Indp}% Indent puede ir o no :p
 
-El objetivo del trabajo era reconocer gestos con las manos bajo distintas circunstancias. 
+El reconocimiento de gestos basando en el modelo de la visión es un problema muy complejo ya que hay varios aspectos que se tiene que tomar en cuenta, el dispositivo de captura, la resolución de este, la variación en la intensidad de la luz del ambiente, el fondo, el tamaño de la mano, su color y la rotación que estas pueda presentar. Tomando en cuenta que el reconocimiento debe funcionar en tiempo real para que sea escalable a aplicaciones que pueden ser utilizadas en la vida diaria. 
 
-Se decidió como dispositivo de captura de las imágenes dos sensores Kinect, esto para sobrellevar la oclusión de los dedos. Para reconocer los gestos se analizo la información proveniente de cada uno de estos sensores por separado y cuadro por cuadro, sin necesidad de calibrar los dispositivos.  Por lo que la detección y extracción de características se realizo por separado, la cual se funciono en un vector de características para así poder ser entrenado mediante SVM. 
+En este trabajo se abordo el reconocimiento de gestos proponiendo una sistema que utiliza como media de captura dos dispositivos Kinect, en especifico los sensores de profundidad de estos dispositivos. La idea de utilizar estos dispositivos es que el reconocimiento de gestos funcione en condiciones bajas de iluminación y cuando exista obstrucción de la mano.  
 
-Los resultados sugieren que el sistema propuesto cumple con su objetivo pues funciona bajo distintas circunstancias y se justifica el uso de los dos dispositivos gracias a la mejora de la precision en comparación cuando se utiliza solo un dispositivo.
-
-
-\section{Limitaciones del sistema}
-
-Esta investigación utiliza dos dispositivos Kinect como medio de entrada del sistema. De  manera que las limitaciones del sistema propuesto están dadas por las características de dicho dispositivo, tales como la distancia a la que se encuentra el dispositivo con el usuario, $0.4m.$ a $2m.$, la resolución de las imágenes a color $640 \, x \, 480$ pixeles y la resolución del sensor infrarrojo $640 \, x \, 480$ pixeles y el ruido proveniente de ambos dispositivos.
-
-Otra limitante del sistema corresponde a las manos y por ende a los gestos que reconoce el sistema. Por ejemplo solo esta programado para detectar una mano y esta tiene que tener una ligera rotación en el eje vertical para que el sistema la detecte. El número de gestos que reconoce el sistema es limitados, pues solo reconoce dos gestos estáticos y dos dinámicos. 
-
-
-\section{Aportaciones}  
+Los resultados sugieren que, como era de esperarse, en algunas situaciones el reconocimiento mejora con la utilización de dos dispositivos. En los casos donde la mano no es vista por el Kinect principal o la información proporcionada por este dispositivo no es suficiente para discriminar el gesto.
+   
+Los experimentos fueron realizados en ambientes naturales, de manera que no siempre se obtuvo grado alto de exactitud en el reconocimiento pero se llego a obtener hasta $88 \%$ para los gestos estáticos y para los dinámicos un $100 \%$ de reconocimiento en secciones $5$ segundos. Los experimentos sugieren que en situaciones controladas la tasa de reconocimiento aumentaría considerablemente. 
 
 Debido a la realización de este trabajo se lograron las siguientes aportaciones, aparte del sistema creado: 
  
@@ -31,6 +23,9 @@ Debido a la realización de este trabajo se lograron las siguientes aportaciones
 \item Publicación de articulo y presentación de póster en el congreso SPIE Optics and Photonics 2015.     
 
 \end{itemize}
+
+
+%::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 \section{Trabajo futuro}\label{futureWork}  

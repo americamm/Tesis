@@ -71,7 +71,7 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 
 Los parámetros utilizados para la obtención del clasificador final fueron: el porcentaje de precision de detección de [$\%$] y la tasa de falsos positivos aceptados de [$\%$]. El resultado final del entrenamiento fue en clasificador AdoBoost en forma de cascada, que consta de 19 etapas. El clasificador resultante se encuentra en Github \ref{myrepo}, en formato XML.  
 
-Con el clasificado obtenido, se localiza la mano en cada cuadro proveniente de los dispositivos  Kinect, una ventana  inicial de tamaño $ka$ se desliza por la imagen. Para eliminar falsos positivos que pudieran ocurrir en la detección de la mano se utiliza un algoritmo equivalente al de [referencia], este se muestra en el apéndice \ref{chap:apendA}.\\ 
+Con el clasificador obtenido, se localiza la mano en cada cuadro proveniente de los dispositivos  Kinect, una ventana  inicial de tamaño $ka$ se desliza por la imagen. Para eliminar falsos positivos que pudieran ocurrir en la detección de la mano se utiliza un algoritmo equivalente al de [referencia], este se muestra en el apéndice \ref{chap:apendA}.\\ 
 Una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionada alrededor de la mano, como se observa en la figura \ref{fig:Roi}.
 
 \begin{figure}[h!]
@@ -93,7 +93,7 @@ Ya que se tiene localizada el área donde se encuentra la mano, el siguiente pas
 \end{figure} 
 
 %En la imagen [agregar imagen feita binarizada], se observa que el resultado de la bianrizacion no es el esperado. 
-Para mejorar la binarizaci\'on, el ruido existe en la imagen es eliminado aplicando dos operaciones morfológicas, apertura y cierre, en ese orden. Las operaciones anteriores utilizan un elemento estructural rectangular; para la operación de apertura el tamaño del elemento es de $3 \, x \, 9$ pixeles; para el cierre se aplic\'o con un tamaño  $3\, x \, 11$ pixeles.
+Para mejorar la binarizaci\'on, el ruido existe en la imagen es eliminado aplicando dos operaciones morfológicas, apertura y cierre, en respectivo ese orden. Las operaciones anteriores utilizan un elemento estructural rectangular. Para la operación de apertura el tamaño del elemento es de $3 \, x \, 9$ pixeles. Para el cierre se aplic\'o con un tamaño  $3\, x \, 11$ pixeles.
 
 %\begin{figure}[h!]
 %\begin{center} 
@@ -107,8 +107,7 @@ Para mejorar la binarizaci\'on, el ruido existe en la imagen es eliminado aplica
 
 \section{Extracción de características}\label{sec:ExtraccionCaracteristicasSystem}
 
-Como se vio en el capítulo \ref{capit:cap3} sección \ref{sec:Convexhull} las características de la mano son extraídas utilizando los algoritmos de envolvente convexa y  defectos de convexidad.\\
-La figura muestra un ejemplo de la aplicación de estos algoritmos al ROI binarizado.  
+Como se vio en el capítulo \ref{capit:cap3} sección \ref{sec:Convexhull} las características de la mano son extraídas utilizando los algoritmos de envolvente convexa y  defectos de convexidad.
 
 %\begin{figure}[!h]
 %\begin{center}
@@ -118,36 +117,37 @@ La figura muestra un ejemplo de la aplicación de estos algoritmos al ROI binari
 %\label{fig:Convex&Defects}
 %\end{figure}
 
-
-Una vez aplicados estos dos algoritmos se calcula: el número de dedos levantados, la posición de la punta de los dedos, \ref{fig:FeaturesOfHand} , la posición de la raíz de los dedos, \ref{fig:FeaturesOfHand} , el centro de la palma de mano, \ref{fig:FeaturesOfHand} , los ángulos que existe del centro de la mano a la punta de los dedos, los ángulos que existen del centro a la raíz de los dedos, la distancia que existe del centro de los dedos a la raíz de los dedos. y las puntas de estos que son fundamentales para calcular las demás características. En la imagen siguiente se muestran algunas de estas características.  
+Una vez aplicados estos dos algoritmos se calcula: el número de dedos levantados, la posición de la punta de los dedos, la posición de la raíz de los dedos, el centro de la palma de mano, los ángulos que existe del centro de la mano a la punta de los dedos, los ángulos que existen del centro a la raíz de los dedos, la distancia que existe del centro de los dedos a la raíz de los dedos. En la imagen \ref{fig:FeaturesOfHand} se muestran algunas de estas características. Para la implementación de la extracción de las características, se tomo parte del código proveniente de \footnote{buscar la pagina ;/}. 
 
 \begin{figure}[h!]
 \begin{center} 
 \includegraphics[scale=1]{./Figures/250_Dedos.png}
 \end{center}
-\caption{Resultado del cálculo de las características de la mano.Se muestra en color azul la punta de los dedos, en color verde la posición de la raíz de los dedos y en rojo el centro de la palma de la mano.}
+\caption{La imagen muestra algunas características de la mano. El contorno rojo representa la envolvente convexa, el rectángulo verde es el rectángulo que rodea a la mano, el rectángulo gris representa el área de la palma de la mano, los círculos en color amarillo la punta de los dedos, en color azul se encuentras los puntos de profundidad encontrados en medio de los dedos, en rosa el centro de la palma de la mano.}
 \label{fig:FeaturesOfHand}
 \end{figure}
 
-Para la implementación de las características, se tomo parte del código proveniente de \footnote{buscar la pagina ;/}. 
+Las características calculadas se guardan en un vector de características de dimensión $32$. El valor de la dimension del vector esta dada por la unión del conjunto de características obtenidas por cada imagen de la mano. En cada vector las características provenientes del Kinect 1 son almacenadas primero seguidas de las del Kinect 2.
 
-Las características se guardan en un vector de características de dimensión $32$. La valor de la dimension del vector esta dada por la unión del conjunto de características obtenidas por cada imagen de la mano  obtenida por cada Kinect. En cada vector las características provenientes del Kinect 1 son almacenadas primero seguidas de las del Kinect 2.
 
+
+%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 \section{Reconocimiento}\label{sec:ReconocimientoSystem}
 
-En este trabajo se reconocen gestos estáticos y dinámicos utilizando el algoritmo de clasificación de máquina de soporte vectorial.  
+En este trabajo se reconocen gestos estáticos y dinámicos utilizando el método de maquinas de soporte vectorial.  
 
-Como se vio en el capitulo \ref{capit:cap3} sección \ref{sec:SVM} SVM es un algoritmo de aprendizaje de máquina supervisado, por lo que es necesario tener imágenes de los gestos a reconocer ya que con estas el clasificador es entrenado y el modelo de clasificación puede ser creado. 
+Como se vio en el capitulo \ref{capit:cap3} sección \ref{sec:SVM} SVM es un algoritmo de aprendizaje de máquina supervisado, por lo que es necesario tener imágenes de los gestos a reconocer. Con el conjunto de imágenes el clasificador es entrenado y el modelo de clasificación puede ser calculado. 
 
 La implementación de SVM se lleva acabo usando LibSVMSharp \footnote{\url{https://github.com/ccerhan/LibSVMsharp}} un wrapper de la librería LibSVM \citep{Chang2011}.
+
 
 \subsection{Reconocimiento de gestos estáticos}\label{RecognitionEstatic}
 
 El sistema reconoce dos gestos estáticos: el puño y la palma de la mano con los dedos separados. El reconocimiento del gesto se lleva analizando un solo cuadro o imagen.  
 
-El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento se tomaron $200$ imágenes de las dos distintas pose como las que se muestran en la fig \ref{fig:SVMTrainingStatic}. Se utilizo un kernel exponencial y validación cruzada con 5 pliegues.   
+El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento se tomaron $200$ imágenes de las dos distintas pose como las que se muestran en la figura \ref{fig:SVMTrainingStatic}. Se utilizo un kernel exponencial y validación cruzada con 5 pliegues.   
 
 \begin{figure}[h!]
 \begin{center}
@@ -162,9 +162,9 @@ El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento
 \subsection{Reconocimiento de gestos dinámicos}\label{RecognitionDynamic}
 
 
-En este trabajo se toma un gesto dinámico como una secuencia de $30$ cuadros consecutivos en los cuales se realiza misma pose solo que esta en movimiento. De manera que el sistema reconoce el gesto dinámico identificando y siguiendo cada pose en cada cuadro en una secuencia. La trayectoria del gesto es obtenida tomando en cuenta la posición del centro de la mano el cual es calculado en cada cuadro. 
+En este trabajo se toma un gesto dinámico como una secuencia de $30$ cuadros consecutivos en los cuales se realiza la misma pose en cada cuadro, solo que la pose cambian de posición, es decir se encuentra en movimiento. De manera que el sistema reconoce el gesto dinámico identificando y siguiendo cada pose en cada cuadro. La trayectoria del gesto es obtenida tomando en cuenta la posición del centro de la mano el cual es calculado en cada cuadro. 
  
-El sistema reconoce dos gestos dinámicos, los cuales son los mismos gestos estáticos en movimiento.
+El sistema reconoce dos gestos dinámicos, los cuales son los gestos estáticos en movimiento. La figura \ref{fig:G3} muestra la secuencia del gesto dinámico de la palma de la mano. La figura \ref{fig:G4} muestra a secuencia del gesto dinámico del mano en forma de pu\~no.  
 \begin{figure}[h!]
 \begin{center}
 \subfigure[Cuadro inicial]{\includegraphics[scale=.25]{./Figures/G3_1.png}\label{fig:G3:1}}
@@ -173,7 +173,7 @@ El sistema reconoce dos gestos dinámicos, los cuales son los mismos gestos est�
 \subfigure[Cuadro número 45 ]{\includegraphics[scale=.25]{./Figures/G3_45.png}\label{fig:G3:4}}
 \subfigure[Cuadro final]{\includegraphics[scale=.25]{./Figures/G3_60.png}\label{fig:G3:5}}
 \end{center}
-\caption{Secuencia del gesto dinámico de la palma de la mano abierta, la vista es desde el Kinect frontal.}
+\caption{Secuencia del gesto dinámico de la palma de la mano con los dedos separados, la vista es desde el Kinect frontal.}
 \label{fig:G3}
 \end{figure}
 
@@ -186,7 +186,7 @@ El sistema reconoce dos gestos dinámicos, los cuales son los mismos gestos est�
 \subfigure[Cuadro final]{\includegraphics[scale=.25]{./Figures/G4_60.png}\label{fig:G4:5}}
 \end{center}
 \caption{Secuencia del gesto dinámico del puño, la vista es desde el Kinect frontal.}
-\label{fig:G3}
+\label{fig:G4}
 \end{figure}
 	
 \newpage
