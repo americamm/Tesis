@@ -7,7 +7,7 @@
 
 En este cap\'itulo se describen las etapas del sistema propuesto junto con los métodos y algoritmos que son utilizados en cada una de las fases.
  
-El sistema de reconocimiento de gestos propuesto consta de cuatro etapas principales \ref{fig:MyHGR}. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema. La siguiente etapa es la detección, aquí la mano es localizada y segmentada del fondo. En la etapa tres se extraen las características de la mano para ser procesadas. En la etapa final el gesto realizado es reconocido.   
+El sistema de reconocimiento de gestos propuesto consta de cuatro etapas principales, Figura \ref{fig:MyHGR}. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema. La siguiente etapa es la detección, aquí la mano es localizada y segmentada del fondo. En la etapa tres se extraen las características de la mano para ser procesadas. En la etapa final el gesto realizado es reconocido.   
 
 \begin{figure}[h!]
 \begin{center}
@@ -19,7 +19,7 @@ El sistema de reconocimiento de gestos propuesto consta de cuatro etapas princip
   
 \section{Adquisición de los datos}\label{sec:KinectSensor} 
 
-En la primera etapa del sistema los datos de entrada del sistema son capturados y preprocesados, la figura \ref{fig:Dadquisicion} muestra este etapas de este proceso. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect, debido a la naturaleza del sensor las imágenes capturadas contiene ruido tipo de [poner referenciar], este puede ser reducido utilizando filtro de medianas.
+En la primera etapa del sistema los datos de entrada del sistema son capturados y preprocesados, la Figura \ref{fig:Dadquisicion} muestra este etapas de este proceso. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect, debido a la naturaleza del sensor las imágenes capturadas contiene ruido por interferencia \citep{Mallick2014}, que puede ser reducido utilizando filtro de medianas \citep{Maimone2011}.
 
 \begin{figure}[h!]
 \begin{center}
@@ -34,7 +34,7 @@ En la primera etapa del sistema los datos de entrada del sistema son capturados 
 
 En noviembre del 2010 la compa\'nia Microsoft lanz\'o el sensor Kinect para consolas de vídeo juego Xbox 360 y en febrero del 2011 lanz\'o la versi\'on para Windows.   
 
-El dispositivo Kinect esta equipado con una serie de sensores que permiten obtener imágenes a color y de profundidad (las cuales indican la distancia a la que esta ubicada un objeto del sensor. La figura \ref{fig:KinectPic} muestra  la parte frontal del dispositivo Kinect para Windows. Los sensores permiten hacer detección y seguimiento de personas. El dispositivo tiene la capacidad de detectar hasta $6$ personas y hacer el seguimiento de hasta $2$ personas \footnote{https://msdn.microsoft.com/en-us/library/hh973074.aspx}.    
+El dispositivo Kinect esta equipado con una serie de sensores que permiten obtener imágenes a color y de profundidad (las cuales indican la distancia a la que esta ubicada un objeto del sensor. La Figura \ref{fig:KinectPic} muestra  la parte frontal del dispositivo Kinect para Windows. Los sensores permiten hacer detección y seguimiento de personas. El dispositivo tiene la capacidad de detectar hasta $6$ personas y hacer el seguimiento de hasta $2$ personas \footnote{https://msdn.microsoft.com/en-us/library/hh973074.aspx}.    
   
 \begin{figure}[h!]
 \begin{center}
@@ -46,8 +46,8 @@ El dispositivo Kinect esta equipado con una serie de sensores que permiten obten
 
 \footnotetext{http://blogs.msdn.com/b/eternalcoding/archive/2012/02/01/official-kinect-for-windows-sdk-and-kinect-toolbox-1-1-1-are-out.aspx}
 
-El sensor esta equipado con los siguientes componentes: un cámara de color (o sensor de color), un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED, figura\citep{Jana2013}.\\
-Enseguida se describen brevemente cada uno de los componentes del sensor Kinect, estos se muestran en la \ref{fig:KinectComponentes}. 
+El sensor esta equipado con los siguientes componentes: un cámara de color (o sensor de color), un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED, Figura\citep{Jana2013}.\\
+Enseguida se describen brevemente cada uno de los componentes del sensor Kinect, estos se muestran en la Figura \ref{fig:KinectComponentes}. 
 
 \begin{figure}[h!]
 \begin{center}
@@ -75,9 +75,14 @@ Enseguida se describen brevemente cada uno de los componentes del sensor Kinect,
 
 \subsection{Filtro de mediana} 
 
-Existen distintos métodos para eliminar el ruido proveniente del Kinect, algunos de estos métodos son invasivos pues el hardware del Kinect es modificado. Una opción es utilizar filtro de mediana, pues rellena los valores faltantes en la imagen proveniente del Kinect, 
+Existen distintos métodos para eliminar el ruido por interferencia causado por dos o más  Kinect, algunos de estos métodos son invasivos pues el hardware del Kinect es modificado \citep{Mallick2014}. Una opción es utilizar filtro de mediana, pues rellena los valores faltantes en la imagen proveniente del Kinect \citep{Maimone2011}. 
 
-El filtro de mediana reemplaza el valor del pixel usando la mediana de las intensidades del vecindario del pixel, el valor del pixel en la posición (x,y) es incluido en el calculo. 
+Sea $Sw_{xy}$ el vecindario de tamaño $m \times n$, centrado en el pixel que se encuentra en la posición $(x,y)$. El filtro de mediana de la imagen $S(x,y)$, se calcula como: 
+\begin{equation}
+\^S(x,y)=\underset{(s,t)\in S_{xy}}{\text{mediana}} \lbrace S(s,t)\rbrace
+\end{equation}
+
+El filtro de mediana reemplaza el valor del pixel usando la mediana de las intensidades del vecindario del pixel, el valor del pixel en la posición (x,y) es incluido en el calculo \citep{Gonzalez2002}. 
  
 
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -86,7 +91,7 @@ El filtro de mediana reemplaza el valor del pixel usando la mediana de las inten
 \section{Detección}\label{sec:Detection}
 
 En esta etapa del sistema el objetivo es localizar la mano en la imagen y segmentar la mano del fondo de la imagen. Para extraer las características necesarias para el reconocimiento.\\
-Este procedimiento se lleva acabo de la siguiente manera, la figura \ref{fig:ProcesoDeteccion} muestra el proceso para  realizar la etapa de detección. El primer paso es localizar la mano, en este trabajo se utiliza el método de detección rápida de objetos; el siguiente paso es segmentar la mano del fondo, binarizando la imagen de la mano usando el algoritmo propuesto por [Otsu]; finalmente se aplican las operaciones morfológicas apertura y cierre, para mejorar la segmentación, es decir eliminar ruido existente. 
+Este procedimiento se lleva acabo de la siguiente manera, la Figura \ref{fig:ProcesoDeteccion} muestra el proceso para  realizar la etapa de detección. El primer paso es localizar la mano, en este trabajo se utiliza el método de detección rápida de objetos; el siguiente paso es segmentar la mano del fondo, binarizando la imagen de la mano usando el algoritmo propuesto por [Otsu]; finalmente se aplican las operaciones morfológicas apertura y cierre, para mejorar la segmentación, es decir eliminar ruido existente. 
 
 \begin{figure}[h!]
 \begin{center}
@@ -98,11 +103,11 @@ Este procedimiento se lleva acabo de la siguiente manera, la figura \ref{fig:Pro
 
 \subsection{Método detección rápida de objetos usando características simples utilizando el clasificador AdaBoost en forma de cascada}\label{subsec:ViolaJones}
 
-En este trabajo se utiliza el método detección rápida de objetos usando características simples utilizando el clasificador AdaBoost en forma de cascada \citep{Viola2001}, el cual fue creado originalmente para atacar el problema de detección de rostros. El método puede ser usando para detectar cualquier objeto debido a que la detección se realiza clasificando imágenes basándose en el valor de características simples.
+En este trabajo se utiliza el método detección rápida de objetos usando características simples utilizando el clasificador AdaBoost en forma de cascada propuesto por \citep{Viola2001}, el cual fue creado originalmente para atacar el problema de detección de rostros. El método puede ser usando para detectar cualquier objeto debido a que la detección se realiza clasificando imágenes basándose en el valor de características simples.
 
 La técnica detecta si el objeto se encuentra en la escena, usando una versión modificada del clasificador AdaBoost \citep{Freund1995} en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}. Las características son seleccionadas usando también el clasificador AdaBoost y el valor de estas es calculado mediante el uso de una imagen integral \citep{Viola2001}. 
 
-La figura \ref{fig:ViolaJonesDiagram} muestra un diagrama del proceso del método de detección, el primer paso es obtener la muestras de entrenamiento con las cuales se construirá el clasificador; el siguiente paso es seleccionar las características que formarán el clasificador. Estas se escogen mediante el algoritmo de AdaBoost y su valor es calculado usando la imagen integral. El paso final  involucra construir el clasificador mediante el uso de Adaboost,  en forma de cascada.
+La Figura \ref{fig:ViolaJonesDiagram} muestra un diagrama del proceso del método de detección, el primer paso es obtener la muestras de entrenamiento con las cuales se construirá el clasificador; el siguiente paso es seleccionar las características que formarán el clasificador. Estas se escogen mediante el algoritmo de AdaBoost y su valor es calculado usando la imagen integral. El paso final  involucra construir el clasificador mediante el uso de Adaboost,  en forma de cascada.
 
 \begin{figure}[h!]
 \begin{center}
@@ -116,13 +121,13 @@ Enseguida se explica a detalle cada etapa del método \citep{Viola2001}.
 
 \subsubsection{Características Haar}\label{sssec:CaracteristicasHaar}  
 
-Las características Haar, son operadores rectangulares como los que se muestran en la figura \ref{fig:haarFeatures}. A continuación se explicarán los operadores Haar básicos:
+Las características Haar, son operadores rectangulares como los que se muestran en la Figura \ref{fig:haarFeatures}. A continuación se explicarán los operadores Haar básicos:
 \begin{itemize}
-\item Las características con dos rectángulos \ref{fig:haarFeatures:1}, \ref{fig:haarFeatures:2}, contienen dos regiones rectangulares adyacentes, y el valor de la característica se calcula tomando la diferencia de la suma de ambas regiones. 
+\item Las características con dos rectángulos Figura \ref{fig:haarFeatures:1}, Figura \ref{fig:haarFeatures:2}, contienen dos regiones rectangulares adyacentes, y el valor de la característica se calcula tomando la diferencia de la suma de ambas regiones. 
 
-\item Las características con tres rectángulos \ref{fig:haarFeatures:3}, contienen tres regiones rectangulares adyacentes, y el valor de la característica se calcula sumando las regiones exteriores y restando la suma de la región interior.
+\item Las características con tres rectángulos Figura \ref{fig:haarFeatures:3}, contienen tres regiones rectangulares adyacentes, y el valor de la característica se calcula sumando las regiones exteriores y restando la suma de la región interior.
 
-\item Las características con cuatro rectángulos \ref{fig:haarFeatures:4}, contienen cuatro regiones rectangulares adyacentes, y el valor de la característica se obtiene con la diferencia entre la suma de las regiones pares diagonales.
+\item Las características con cuatro rectángulos Figura \ref{fig:haarFeatures:4}, contienen cuatro regiones rectangulares adyacentes, y el valor de la característica se obtiene con la diferencia entre la suma de las regiones pares diagonales.
 \end{itemize} 
 
 \begin{figure}[h!]
@@ -143,7 +148,7 @@ La imagen integral, $SI$, de un imagen, $S(x,y)$, es calculada como la suma del 
 \begin{equation}
 SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1).
 \end{equation}   
-La figura \ref{fig:FigIntegralImage} muestra un  ejemplo donde se calcula la imagen integral, fig. \ref{fig:FigIntegralImage:2}, de la imagen original \ref{fig:FigIntegralImage:1}.
+La Figura \ref{fig:FigIntegralImage} muestra un  ejemplo donde se calcula la imagen integral, Figura \ref{fig:FigIntegralImage:2}, de la imagen original Figura \ref{fig:FigIntegralImage:1}.
 \begin{figure}[h!]
 \centering
 \subfigure[Imagen original]{\includegraphics[scale=.6]{./Figures/ImagetoIntegral}\label{fig:FigIntegralImage:1}} \qquad
@@ -156,7 +161,7 @@ La imagen integral permite calcular la suma de los pixeles de cierta región usa
 \begin{equation}
 REG(\alpha)=SI(A)+SI(D)-SI(B)-SI(C),
 \end{equation}
-donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la suma de sus pixeles; $A,B,C,D$ son las esquinas de dicha región. Como se muestra en la figura \ref{fig:figImageIntegral}, la región $\alpha$ se encuentra resaltada en color azul.  
+donde $REG(\alpha)$ es la región a la cual se quiere calcular el valor de la suma de sus pixeles; $A,B,C,D$ son las esquinas de dicha región. Como se muestra en la Figura \ref{fig:figImageIntegral}, la región $\alpha$ se encuentra resaltada en color azul.  
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.25]{./Figures/IntegralImage.png}
@@ -232,8 +237,8 @@ donde $\alpha_t = \log{\frac{1}{\beta_t}}$.
 
 El objetivo de realizar la detección utilizando un clasificador en forma de cascada es descartar de manera rápida las regiones donde no se encuentra el objeto.
 
-El clasificador en cascada  esta compuesto por etapas \ref{fig:Cascade}, cada una de estas es un clasificador fuerte. Este clasificador es entrenado por medio de AdaBoost.El cual se encarga de encontrar el orden de evaluación de las características relevantes. \\
-La selección se realiza como se muestra en el algoritmo \ref{alg:Cascade} , cumpliendo cierta precisión en la detección $D$, ver ecuacion \ref{eq:D} , y cierta tasa de falsos positivos $F$, ver ecuación \ref{eq:F} .
+El clasificador en cascada  esta compuesto por etapas Figura \ref{fig:Cascade}, cada una de estas es un clasificador fuerte. Este clasificador es entrenado por medio de AdaBoost.El cual se encarga de encontrar el orden de evaluación de las características relevantes. \\
+La selección se realiza como se muestra en el Algoritmo \ref{alg:Cascade} , cumpliendo cierta precisión en la detección $D$, ver Ecuación \ref{eq:D} , y cierta tasa de falsos positivos $F$, ver Ecuación \ref{eq:F} .
 
 \begin{figure}[h!]
 \begin{center}
@@ -243,7 +248,7 @@ La selección se realiza como se muestra en el algoritmo \ref{alg:Cascade} , cum
 \label{fig:Cascade}
 \end{figure}
 
-El proceso de detección funciona de la siguiente manera: la sub-ventana es evaluada en el primer clasificador; un resultado positivo desencadena la evaluación de un segundo clasificador, el cual también ha sido ajustado para alcanzar cierta precision; un resultado positivo en el segundo clasificador desencadena una tercera evaluación en el siguiente clasificador, y así sucesivamente. Un resultado negativo en cualquier punto del proceso de evaluación conduce al rechazo inmediato de la sub-ventana.
+El proceso de detección funciona de la siguiente manera: la sub-ventana es evaluada en el primer clasificador; un resultado positivo desencadena la evaluación de un segundo clasificador, el cual también ha sido ajustado para alcanzar cierta precisión; un resultado positivo en el segundo clasificador desencadena una tercera evaluación en el siguiente clasificador, y así sucesivamente. Un resultado negativo en cualquier punto del proceso de evaluación conduce al rechazo inmediato de la sub-ventana.
 
 La tasa de detección del clasificador en forma de cascada es: 
 \begin{equation} \label{eq:D}
@@ -299,13 +304,37 @@ B(x,y)=
 \end{cases}.
 \end{equation}
 
-
 Existen diversas técnicas para binarizar una imagen, estas se pueden clasificar en dos grupos: global y local. Los métodos globales calculan un umbral el cual es utilizado para todos los pixeles de la imagen y los métodos locales que calculan varios umbrales para ciertas regiones de la imagen \citep{Chaki2014}.  En este trabajo se utiliza el método desarrollado por \citep{Otsu1979}.
+
+El técnica desarrolla por Otsu's es un método de binarizaci\'on global. El algoritmo asume que existen dos clases de de pixeles los del fondo y los que representan el primer plano de la imagen. El método calcula el umbral optimo $T$ que separa a estas dos clases para el cual la varianza dentro las clases es la mínima. Para calcular $T$ que minimice las varianzas dentro clases, se define como una suma ponderada de las varianzas de las dos clases.\\ 
+La varianza ponderada dentro de clases es: 
+\begin{equation}
+\sigma^2_w(t) = q_1(t)\sigma^2_1(t) + q_2(t)\sigma^2_2(t),
+\end{equation} 
+donde las probabilidades de cada clase son calculadas mediante:  
+\begin{equation}
+q_1(t) = \sum ^t_{i=0} P(i) 
+\qquad \text{y} \qquad
+q_2(t) = \sum ^{255}_{i=t+1} P(i),
+\end{equation} 
+y la media de cada clase es calculada como:  
+\begin{equation}
+\mu_1(t) = \sum ^t_{i=0} \frac{i \cdot P(i)}{q_1(t)} 
+\qquad \text{y} \qquad
+\mu_2(t) = \sum ^{255}_{i=t+1} \frac{i \cdot P(i)}{q_2(t)}.
+\end{equation} 
+\\
+La varianza total $\sigma^2$, es igual a la suma de la varianza dentro de clase y la varianza entre clases $\sigma^2_b(t)$, es decir: 
+\begin{equation}
+\sigma^2 = \sigma^2_w(t) + \sigma^2_b(t),
+\end{equation}
+donde $\sigma^2_b(t)= q_1(t)\left[ 1- q_1(t) \right]\left[ \mu_1(t) - \mu_2(t) \right]^2 .$  \\
+Como la varianza total no depende de $t$, es una constante, entonces para encontrar el umbral que minimice la varianza dentro de clases equivale a encontrar el máximo de $\sigma^2_b(t)$. 
 
 \subsection{Operaciones Morfológicas}\label{subsec:OperacionesMorfologicas} 
 
 Otra técnica muy utilizada en procesamiento de imágenes son las operaciones morfológicas.Que son un conjunto de operaciones no lineales. La idea es que al aplicar alguna de estas operaciones el ruido sea removido tomando en cuenta la forma y estructura de la imagen.\\ 
-Las operaciones morfológicas \citep{Premaratne2013} utilizan un elemento estructural el cual se aplica por toda la imagen. Los elementos estructurales pueden ser de distintas formas como los que se muestran en la figura \ref{fig:EX}.
+Las operaciones morfológicas \citep{Premaratne2013} utilizan un elemento estructural el cual se aplica por toda la imagen. Los elementos estructurales pueden ser de distintas formas como los que se muestran en la Figura \ref{fig:EX}.
 \begin{figure}[h!]
 \centering
 \subfigure[Rectángulo de $3x3$.]{\includegraphics[scale=.68]{./Figures/EX1}\label{fig:EX:1}} \qquad
@@ -317,8 +346,8 @@ Las operaciones morfológicas \citep{Premaratne2013} utilizan un elemento estruc
 Existen distintas operaciones morfológicas, las básicas o principales son la dilatación y erosión las cuales se explican enseguida junto con la apertura y cierre. 
  
 \subsubsection{Dilatación}\label{sssec:Dilatation}
-La dilatación es una operación que añade pixeles a la orilla de los objetos que se encuentran en la imagen. En la figura \ref{fig:OM:2} 
-se aplica esta operación a la figura \ref{fig:OM:1}.\\
+La dilatación es una operación que añade pixeles a la orilla de los objetos que se encuentran en la imagen. En la Figura \ref{fig:OM:2} 
+se aplica esta operación a la Figura \ref{fig:OM:1}.\\
 La dilatación se define como:  
 \begin{equation}
 S \oplus EX = \lbrace S|EX_S \subseteq S \rbrace,
@@ -326,7 +355,7 @@ S \oplus EX = \lbrace S|EX_S \subseteq S \rbrace,
 donde $EX_S$ es el elemento estructural trasladado con la imagen. 
 
 \subsubsection{Erosión}\label{sssec:OMerosion}
-La erosión remueve pixeles a la orilla de los objetos que se encuentran en la imagen. En la figura \ref{fig:OM:3} se muestra el resultado de aplicar la operación a la figura \ref{fig:OM:1}.\\ 
+La erosión remueve pixeles a la orilla de los objetos que se encuentran en la imagen. En la Figura \ref{fig:OM:3} se muestra el resultado de aplicar la operación a la Figura \ref{fig:OM:1}.\\ 
 La erosión se define como: 
 \begin{equation}
 S \ominus EX = \lbrace S|EX_S \subseteq S \rbrace,
@@ -339,7 +368,7 @@ La apertura se define como:
 \begin{equation}
 S \circ EX = (S \ominus EX) \oplus EX.
 \end{equation}
-La figura \ref{fig:OM:4} muestra el resultado de aplicar la operación apertura a la figura \ref{fig:OM:1}.
+La Figura \ref{fig:OM:4} muestra el resultado de aplicar la operación apertura a la Figura \ref{fig:OM:1}.
 
 \subsubsection{Cierre}\label{sssec:Closure}
 La operación cierre elimina huecos pequeños y rellena huecos en los contornos. El cierre es calculado realizando las operación de dilatación seguida de la erosión.\\
@@ -347,7 +376,7 @@ El cierre se define como:
 \begin{equation}
 S \bullet EX = (S \oplus EX) \ominus EX.
 \end{equation}
-La figura \ref{fig:OM:5} muestra el resultado de aplicar la operación a la figura \ref{fig:OM:1}.
+La Figura \ref{fig:OM:5} muestra el resultado de aplicar la operación a la Figura \ref{fig:OM:1}.
 
 \begin{figure}[h!]
 \centering
@@ -369,7 +398,7 @@ La figura \ref{fig:OM:5} muestra el resultado de aplicar la operación a la figu
 
 La finalidad de esta etapa es obtener las características de la imagen que sean capaces de describir la mano, de manera que con estas, se pueda reconocer los gestos realizados.
    
-En este trabajo se extraen características geométricas, las cuales son extraídas de la siguiente forma \ref{fig:DiagramaExtraccionCaracteristicas}: el primer paso es encontrar la envolvente convexa de la mano para posteriormente calcular los defectos de convexidad, una vez aplicados estos algoritmos se calcula el número de dedos de la mano entre otras características; finalmente las características calculadas  se guardan en un vector.  
+En este trabajo se extraen características geométricas, las cuales son extraídas de la siguiente forma, ver Figura \ref{fig:DiagramaExtraccionCaracteristicas}: el primer paso es encontrar la envolvente convexa de la mano para posteriormente calcular los defectos de convexidad, una vez aplicados estos algoritmos se calcula el número de dedos de la mano entre otras características; finalmente las características calculadas  se guardan en un vector.  
 
 \begin{figure}[h!]
 \begin{center}
@@ -389,23 +418,23 @@ Sea $A$ un conjunto en el espacio euclidiano $\bold{\Re}^d$, donde $d$ es la dim
 \caption{Ejemplo de un conjunto conexo y un convexo. Image recuperada de \ref{ConvexFN} }\label{fig:Sets}
 \end{figure} 
 
-Sea $B$ un conjunto de puntos en el plano Euclidiano, la envolvente convexa de $B$ es el conjunto convexo más pequeño que contiene a todos los puntos en $B$. En la imagen \ref{fig:FigConvexHullDefects} se muestra de color rojo la envolvente convexa de la figura cuyo contorno se encuentra de color negro. 
+Sea $B$ un conjunto de puntos en el plano Euclidiano, la envolvente convexa de $B$ es el conjunto convexo más pequeño que contiene a todos los puntos en $B$. En la Figura \ref{fig:FigConvexHullDefects} se muestra de color rojo la envolvente convexa de la Figura cuyo contorno se encuentra de color negro. 
 
 Los defectos de convexidad de la envolvente convexa, son el conjunto de puntos que no pertenecen al casco convexo. El defecto es el espacio que existe entre el contorno de la envolvente convexa y del objeto.\\
 Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ el conjunto de defectos de convexidad de una envolvente convexa. Cada defecto esta compuesto por tres elementos: el punto de inicio del defecto $s_i(x,y)$, el punto con mayor distancia de la envolvente al objeto, $d_i(x,y)$ y el punto final del defecto, $e_i(x,y)$.
-En la imagen \ref{fig:FigConvexHullDefects} los puntos amarillos representan los puntos de profundidad de los defectos de convexidad. 
+En la Figura \ref{fig:FigConvexHullDefects} los puntos amarillos representan los puntos de profundidad de los defectos de convexidad. 
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.4]{./Figures/ConvexHullAndDefects.png}
 \end{center}
-\caption{En la imagen se aprecia de color rojo la envolvente convexa, de negro el contorno de la figura, y los puntos amarillos son el punto de profundidad de los defectos de convexidad.}
+\caption{En la imagen se aprecia de color rojo la envolvente convexa, de negro el contorno de la Figura, y los puntos amarillos son el punto de profundidad de los defectos de convexidad.}
 \label{fig:FigConvexHullDefects}
 \end{figure}  
 
 Usando las técnicas anteriores podemos extraer características importantes como el número de dedos, la posición del centro de la palma de mano, la posición de la punta de los dedos, la posición del inicio o raíz de los dedos, el ángulo del centro de la palma de la mano a la punta de los dedos, ángulo $TC$, el ángulo del centro de la palma de la mano a al inicio de los dedos, ángulo $RC$ y la distancia vertical del centro de la palma de la mano al inicio de los dedos. Enseguida se explica como son obtenidas las características mencionadas. 
 
-El número de dedos que se encuentran levantados es calculado con el algoritmo \ref{alg:NumDedos} desarrollado por \citep{Kathuria2011}, el cual utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$, los puntos de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, las distancias del punto de inicio al de mayor distancia, $\mathcal{\delta}=\lbrace \delta_1(x,y), \delta_2(x,y), \cdots, \delta_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa .\\
+El número de dedos que se encuentran levantados es calculado con el Algoritmo \ref{alg:NumDedos} desarrollado por \citep{Kathuria2011}, el cual utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$, los puntos de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, las distancias del punto de inicio al de mayor distancia, $\mathcal{\delta}=\lbrace \delta_1(x,y), \delta_2(x,y), \cdots, \delta_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa .\\
 Sea $C_r(x,y)$, el punto que representa el centroide del rectángulo más pequeño que encierra a la mano, $L_r$, la altura del rectángulo y $k$ una constante. 
 
 \begin{algorithm}[h!]
@@ -425,7 +454,7 @@ Sea $C_r(x,y)$, el punto que representa el centroide del rectángulo más peque�
 \end{algorithmic}
 \end{algorithm} 
 
-La posición de la raíz de los dedos, $Fr(s,y)$ puede ser calculada usando los defectos de convexidad \citep{Hummel2014}, en especifico los puntos de profundidad, $d(x,y)$. Se calcula tomando el punto medio de los puntos de profundidad consecutivos encontrados en medio de los dedos, como se muestra en la figura \ref{fig:RootFingers} . Es decir: 
+La posición de la raíz de los dedos, $Fr(s,y)$ puede ser calculada usando los defectos de convexidad \citep{Hummel2014}, en especifico los puntos de profundidad, $d(x,y)$. Se calcula tomando el punto medio de los puntos de profundidad consecutivos encontrados en medio de los dedos, como se muestra en la Figura \ref{fig:RootFingers} . Es decir: 
 \begin{equation}
 Fr_i(x,y)= \left( \frac{ x_{d_i}+x_{d_{i-1}} }{2},\frac{y_{d_i}+y_{d_{i-1}}}{2}  \right),
 \end{equation}
@@ -436,7 +465,7 @@ donde $i$ representa el número de dedo, cuando $i=0$ se toma el punto de profun
 \begin{center}
 \includegraphics[scale=.55]{./Figures/rootFingers.png}
 \end{center}
-\caption{La figura muestra parte de la mano y en ella se aprecia los siguientes elementos: en color rojo la envolvente convexa, en amarillo los puntos de inicio y final de los defectos de convexidad,  en color azul los puntos de profundidad de los defectos, en verde la linea que une a los puntos de profundidad consecutivos y finalmente en morado los puntos medios, \citep{Hummel2014}} 
+\caption{La Figura muestra parte de la mano y en ella se aprecia los siguientes elementos: en color rojo la envolvente convexa, en amarillo los puntos de inicio y final de los defectos de convexidad,  en color azul los puntos de profundidad de los defectos, en verde la linea que une a los puntos de profundidad consecutivos y finalmente en morado los puntos medios, \citep{Hummel2014}} 
 \label{fig:RootFingers}
 \end{figure} 
 
@@ -474,9 +503,9 @@ Una vez que todas las características son calculadas estas son guardadas en un 
 \section{Reconocimiento}\label{sec:SVM} 
 
 Es la etapa final del reconocimiento, es donde el gesto realizado por el usuario finalmente puede ser interpretado por la computadora.\\  
-En este trabajo el reconocimiento se realiza utilizando el algoritmo de máquinas de soporte vectorial SVM, \citep{Cortes1995}, un método de aprendizaje de máquina supervisado el cual es utilizado para resolver problemas de clasificación y regresión. SVM tiene como objetivo crear un modelo basado en datos conocimos, datos de entrenamiento, donde este modelo es capaz de predecir a que clase pertenecen datos nuevos. 
+En este trabajo el reconocimiento se realiza utilizando el algoritmo de máquinas de soporte vectorial SVM, por sus siglas en ingles \citep{Cortes1995}, un método de aprendizaje de máquina supervisado el cual es utilizado para resolver problemas de clasificación y regresión. SVM tiene como objetivo crear un modelo basado en datos conocidos, datos de entrenamiento, donde este modelo es capaz de predecir a que clase pertenecen datos nuevos. 
 
-SVM realiza la clasificación separando las clases calculando el hiperplano que tengan el margen de separación más grande. En la figura \ref{fig:SVM} se muestra en conjunto de clases separables por medio de un hiperplano .  
+SVM realiza la clasificación separando las clases calculando el hiperplano que tengan el margen de separación más grande. En la Figura \ref{fig:SVM} se muestra en conjunto de clases separables por medio de un hiperplano .  
 
 \begin{figure}[h!]
 \begin{center}
@@ -509,12 +538,12 @@ Combinando las desigualdades anteriores, se obtiene:
 y_i(x_i \cdot w + b) -1 \geqslant 0 \qquad \forall i 
 \end{equation} 
 
-Tomando en cuenta los puntos en donde se cumple la igualdad de \ref{eq:des+1}. Estos puntos se encuentran sobre el hiperplano $H_1$, el cual se escribe como: 
+Tomando en cuenta los puntos en donde se cumple la igualdad de la Ecuación \ref{eq:des+1}. Estos puntos se encuentran sobre el hiperplano $H_1$, el cual se escribe como: 
 \begin{equation}\label{eq:eq+1}
 w \cdot x_i + b = +1,  
 \end{equation} 
 con normal $w$ y una distancia perpendicular desde el origen de $\frac{\vert 1-b \vert}{ \Vert w \Vert}$. 
-Similarmente para la ecuación \ref{eq:des-1}, entonces el hiperplano $H_2$ se describe como: 
+Similarmente para la Ecuación \ref{eq:des-1}, entonces el hiperplano $H_2$ se describe como: 
 \begin{equation}\label{eq:eq+1}
 w \cdot x_i + b = -1,  
 \end{equation} 

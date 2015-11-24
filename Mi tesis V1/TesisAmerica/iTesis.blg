@@ -1,11 +1,13 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: iTesis.aux
+This is BibTeX, Version 0.99d (TeX Live 2013/TeX Live for SUSE Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: iTesis.aux
 The style file: cicese.bst
 Database file #1: iTesis.bib
-Repeated entry---line 288 of file iTesis.bib
+Repeated entry---line 360 of file iTesis.bib
  : @article{Premaratne2013
  :                        ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Otsu1979"
+Warning--I didn't find a database entry for "Sultana2012"
 Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at the end for entry Chih-WeiHsuChih-ChungChang2008
 while executing---line 1442 of file cicese.bst
 Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at the end for entry Chih-WeiHsuChih-ChungChang2008
@@ -28,4 +30,45 @@ Warning--empty journal in Nayakwadi2014
 Warning--empty publisher in Smith1999
 Warning--empty year in Ye; set to ????
 Warning--empty journal in Ye
+You've used 36 entries,
+            2727 wiz_defined-function locations,
+            964 strings with 11138 characters,
+and the built_in function-call counts, 16337 in all, are:
+= -- 1541
+> -- 897
+< -- 38
++ -- 255
+- -- 255
+* -- 1657
+:= -- 2481
+add.period$ -- 109
+call.type$ -- 36
+change.case$ -- 195
+chr.to.int$ -- 60
+cite$ -- 122
+duplicate$ -- 646
+empty$ -- 1083
+format.name$ -- 313
+if$ -- 3294
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 41
+newline$ -- 184
+num.names$ -- 144
+pop$ -- 323
+preamble$ -- 1
+purify$ -- 157
+quote$ -- 0
+skip$ -- 579
+stack$ -- 0
+substring$ -- 729
+swap$ -- 243
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 306
+warning$ -- 14
+while$ -- 166
+width$ -- 0
+write$ -- 458
 (There were 5 error messages)

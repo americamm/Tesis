@@ -8,9 +8,9 @@
 La interacción entre humanos se lleva a cabo gracias a la comunicación  que existe entre ellos, esta puede ser oral o escrita y generalmente viene acompañada de gestos realizados con la cara, manos o otra cualquier parte del cuerpo. 
 Estos gestos sirven como complemento de la comunicación pues ayudan a que el mensaje sea percibido de manera correcta.
 
-El creciente desarrollo de la tecnología en especial el desarrollo de computadoras, su incremento en procesamiento, la reducción de su tamaño y costos ha hecho que estas se incorporen cada vez más y sean parte esencial en nuestra vida diaria. De manera que se han creado y con ello estudiado distintas áreas de las ciencias computacionales, particularmente el área de interacción humano computadora (HCI, por sus siglas en ingl\'es Human Computer Interaction), el área encargada del estudio y diseño de la forma en que el humano interactua con la computadora. 
+El creciente desarrollo de la tecnología en especial el desarrollo de computadoras, su incremento en procesamiento, la reducción de su tamaño y costo ha hecho que estas se incorporen cada vez más y sean parte esencial en nuestra vida diaria. De manera que se han creado y con ello estudiado distintas áreas de las ciencias computacionales, particularmente el área de interacción humano computadora (HCI, por sus siglas en ingl\'es Human Computer Interaction), el área encargada del estudio y diseño de la forma en que el humano interactua con la computadora. 
 Uno de los objetivos principales de esta área es que la interacción se lleve acabo de manera natural. 
-La manera en que el humano interactua con la computadora ha sido básicamente la misma desde que se empezó a tener acceso a ellas, fue hasta principios de esta década cuando la interacción ha empezado a cambiar pues ahora existen pantallas táctiles, reconocimiento de voz. Estas formas de interacción has sido aceptadas por los usuarios ya que hacen que la forma en que nos ``comuniquemos'' con la computadora sea fácil y sencilla. No resulta extraño que los investigadores de HCI se hayan interesado en los gestos corporales, en especial los gestos realizados con las manos, para crear un ambiente natural entre el usuario y la computadora.  
+La manera en que el humano interactua con la computadora ha sido básicamente la misma desde que se empezó a tener acceso a ellas, fue hasta principios de esta década cuando la interacción ha empezado a cambiar pues ahora existen pantallas táctiles, reconocimiento de voz. Estas formas de interacción has sido aceptadas por los usuarios ya que hacen que la forma en que nos ``comunicamos'' con la computadora sea fácil y sencilla. No resulta extraño que los investigadores de HCI se hayan interesado en los gestos corporales, en especial los gestos realizados con las manos, para crear un ambiente natural entre el usuario y la computadora.  
 Por lo que es necesario que la computadora pueda identificar la o las manos del usuario y reconocer el gesto que este realiza. 
 
 A finales de los años noventa se empezar\'on a desarrollar t\'ecnicas para  el reconocimiento de gestos con las manos. Los primeros enfoques utilizaban como medio de captura sensores como: guantes de datos, marcadores de colores y acelerómetros; los cuales se colocaban en la o las manos para poder capturar la posición e identificar la pose realizada. 
@@ -19,7 +19,7 @@ Las técnicas desarrolladas posteriormente obtienen la información necesaria pa
 Los métodos que utilizan imágenes o vídeo son los más utilizados para realizar el reconocimiento de los gestos ya que la interacción entre el usuario y la computadora es más natural, el inconveniente con estos métodos es que es un problema difícil de resolver pues existen diversos aspectos que hay que tener en cuenta para obtener una buena precisión en el reconocimiento del gesto; por ejemplo tener en cuenta la resolución del dispositivo de captura, el ruido que existe en las imágenes, el tiempo de computo para realizar el procesamiento de las imágenes y las situaciones que se pueden presentar en la vida diaria que puedan entorpecer el reconocimiento del gesto. 
 
 Aunque existe una gran variedad de métodos y sistemas que hacen el reconocimiento de gestos de las manos no existe alguno que presente en el reconocimiento un alto grado de precisión en todas las situaciones que se presentan en el mundo real, tales como; condiciones diversas de iluminación ya sea baja o alta, que funcionen en tiempo real, que funcionen a diversas escalas, es decir no importando el tamaño de la mano, que sea invariante a rotación, invariante al color de la piel y cuando exista algún bloque parcial en el área de la mano.\\
-Es por eso que se propone crear un sistema que reconozca gestos realizados con las manos, en situaciones que presentan baja iluminación y cuando existe oclusión de los dedos. 
+Es por eso que se propone crear un sistema que reconozca gestos realizados con las manos, en situaciones que presentan baja iluminación y cuando existe obstrucción de los dedos. 
 El sistema se enfoca en atacar estos problemas cuando las manos no se encuentran en movimiento, pero también se abordar\'an los gestos con las manos que involucran movimiento. El objetivo del sistema es mostrar que en ciertas ocasiones es posible obtener mayor precisión en el reconocimiento de los gestos utilizando como medio de captura dos sensores Kinect.   
 
 
@@ -46,7 +46,7 @@ Una vez logrado lo anterior se pueden desarrollar nuevas aplicaciones y tecnolog
 
 \section{Objetivo general}\label{sec:ObjetivoGeneral}
  
-Desarrollar un sistema de reconocimiento de gestos con las manos, gestos estáticos y dinámicos. El sistema debe funcionar ciertas situaciones que se presentan en un ambiente natural. Es decir el sistema debe  funcionar en circunstancias de baja iluminación y cuando exista obstrucción causada por los dedos en gestos dinámicos.
+Desarrollar un sistema de reconocimiento de gestos con las manos, gestos estáticos y dinámicos. El sistema debe funcionar bajo ciertas situaciones que se presentan en un ambiente natural. Es decir el sistema debe funcionar en circunstancias de baja iluminación y cuando exista obstrucción causada por los dedos en gestos dinámicos.
 
 
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -57,11 +57,11 @@ Desarrollar un sistema de reconocimiento de gestos con las manos, gestos estáti
 \begin{itemize}
 	\item Identificar los m\'etodos actuales de reconocimiento de gestos, estáticos y din\'amicos cuando existe baja iluminación  y cuando existe oclusión. 
 	
-	\item  Obtener conocimiento acerca del funcionamiento de sistema Microsoft Kinect.
+	\item  Obtener conocimiento acerca del funcionamiento de sensor Microsoft Kinect.
 	
 	\item Desarrollar un sistema de reconocimiento de gestos estáticos y dinámicos, fusionando la información de los sensores de  profundidad de dos dispositivos kinect. El sistema desarrollado deberá funcionar en circunstancias de baja iluminación y también cuando existe oclusión, causada por los dedos. 
 	
-	\item Validar el sistema dise\~nado, en cuanto a su eficiencia presentada en base al reconocimiento de los gestos, en circunstancias de baja iluminación y oclusión. En el análisis del sistema se usar\'a información real.  
+	\item Validar el sistema dise\~nado, en cuanto a su eficiencia con base al reconocimiento de los gestos, en circunstancias de baja iluminación y obstrucción. En el análisis del sistema se usar\'a información real.  
 	
 	\item Comparar y validar el modelo propuesto haciendo uso de uno y dos dispositivos Kinect. 
 \end{itemize}
@@ -84,11 +84,11 @@ Otra limitante es el número de gestos que podrá reconocer el sistema.
 
 \section{Reconocimiento de gestos con la manos}\label{sec:ReconocimientoGestos} 
 
-Los gestos están definidos como movimientos del cuerpo expresivos y significativos que involucran a los dedos, manos, brazos, cabeza, cara o cuerpo con la intención de transmitir información relevante o de interactuar con el ambiente, \citep{Mitra2007}.
+Los gestos están definidos como movimientos del cuerpo expresivos y significativos que involucran a los  brazos, cabeza, cara, cuerpo, manos y dedos con la intención de transmitir información relevante o de interactuar con el ambiente, \citep{Mitra2007}.
 
 Los primeros enfoques para llevar acabo el reconocimiento de gestos con las manos fue usando modelos de contacto \citep{Rautaray2012} y \citep{Nayakwadi2014}.\\
-El modelo utiliza dispositivos que est\'an en contacto f\'isico con la mano del usuario \ref{fig:Modelos:1} para reconocer el gesto. Por ejemplo usan guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch. Este enfoque no es  tan aceptado pues entorpecen la naturalidad entre la interacción del humano y la computadora.\\
-Los modelos basados en la visión \ref{fig:Modelos:2} surgieron como respuesta a esta desventaja. Estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento. Los dispositivos van desde cámaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundidad.   
+El modelo utiliza dispositivos que est\'an en contacto f\'isico con la mano del usuario, ver la Figura \ref{fig:Modelos:1} para reconocer el gesto. Por ejemplo usan guantes de datos, marcadores de colores, acelerómetros y pantallas multi-touch. Este enfoque no es  tan aceptado pues entorpecen la naturalidad entre la interacción del humano y la computadora.\\
+Los modelos basados en la visión, ver la Figura \ref{fig:Modelos:2} surgieron como respuesta a esta desventaja. Estos utilizan cámaras para extraer la información necesaria para realizar el reconocimiento. Los dispositivos van desde cámaras web hasta algunas más sofisticadas por ejemplo c\'amaras de profundidad.   
 
 \begin{figure}[h!]
 \begin{center}
@@ -140,7 +140,7 @@ Una vez que la información es recibida, los datos son pre-procesados, es decir 
 La clasificación de gesto se realiza con un modelo de mezclas adaptativo. Para entrenar el modelo de mezclas se toman datos de $5$ personas, $300$ muestras de cada gestos, $8000$ por cada participante. Se realizaron pruebas con estos mismos datos; con un sujeto se alcanzó una precisión de $93.38 \%$ con los demás participantes se obtuvo una precisión de $89.97 \%$.\\  
 La principal desventaja del sistema es que este requiere tiempo para adaptarse a distintos usuarios. Otra desventaja para este sistema es que solo reconoce gestos estáticos. 
 
-A finales del año 2014 se lanzó el dispositivo MYO \footnote{\url{https://www.thalmic.com/en/myo/}}, el cual reconoce gestos dinámicos. Este aparato es un brazalete que reconoce $5$ gestos dinámicos. Leyendo la actividad de los músculos del antebrazo y mandando estas señales vía Bluetooth a la computadora donde estas señales son procesadas. \footnote{\url{http://www.digitaltrends.com/pc-accessory-reviews/myo-gesture-control-armband-review/}} 
+A finales del año 2014 se lanzó el dispositivo MYO \footnote{\url{https://www.thalmic.com/en/myo/}}, el cual reconoce gestos dinámicos, se muestra en la Figura \ref{fig:Myo}. Este aparato es un brazalete que reconoce $5$ gestos dinámicos. Leyendo la actividad de los músculos del antebrazo y mandando estas señales vía Bluetooth a la computadora donde estas señales son procesadas. \footnote{\url{http://www.digitaltrends.com/pc-accessory-reviews/myo-gesture-control-armband-review/}} 
 
 No se cuenta con la informacion detallada del funcionamiento de MYO, lo único que se conoce es que el reconocimiento consta de tres etapas \footnote{\url{https://www.quora.com/How-does-MYO-wearable-gesture-control-work}}. La primera es la adquisición de la señales eléctricas que producen los músculos del antebrazo, las cuales son capturadas mediante sensores EMG (estos detectan la actividad eléctrica), giroscopio, acelerómetro y magnetómetro; en la segunda etapa se amplifica la señal y se aplica un filtro pasa banda. Por último se realiza el procesamiento de la señal donde se reconoce el gesto usando un algoritmo de aprendizaje de máquina desarrollado por la compañía.  
 
@@ -226,7 +226,7 @@ Solo se conoce \footnote{ \url{http://blog.leapmotion.com/hardware-to-software-h
 Para realizar el seguimiento se extraen la características. Una de ellas son el dedos, el algoritmo de seguimiento interpreta la información 3D e infiere la posición de los objetos ocluidos. Se aplican filtros para suavizar los datos. 
 
 
-Enseguida se explica el software de reconocimiento de gestos estáticos Flutter, fig:\ref{fig:Flutter} el cual reconoce cuatro gestos estáticos usando la cámara web como dispositivo de entrada. 
+Enseguida se explica el software de reconocimiento de gestos estáticos Flutter, ver la Figura \ref{fig:Flutter} el cual reconoce cuatro gestos estáticos usando la cámara web como dispositivo de entrada. 
 
 Se desconoce como funciona el software, solo se sabe que la mano es detectada por la cámara, para que la detección sea correcta la mano tiene que estar totalmente frente a la cámara web. Los algoritmos utilizados para el reconocimiento no se conocen.  
 \begin{figure}[h!]

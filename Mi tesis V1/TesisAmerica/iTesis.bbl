@@ -36,6 +36,11 @@ Cortes, C. y Vapnik, V. (1995).
 \newblock {Support-vector networks}.
 \newblock {\em Machine Learning\/}, {\bf 20}(3): 273--297.
 
+\bibitem[Fawcett(2006)Fawcett]{Fawcett2006}
+Fawcett, T. (2006).
+\newblock {An introduction to ROC analysis}.
+\newblock {\em Pattern Recognition Letters\/}, {\bf 27}(8): 861--874.
+
 \bibitem[Freund y Schapire(1995)Freund y Schapire]{Freund1995}
 Freund, Y. y Schapire, R. (1995).
 \newblock {A desicion-theoretic generalization of on-line learning and an
@@ -86,6 +91,23 @@ Kathuria, P. (2011).
 \newblock {Hand Gesture Recognition}.
 \newblock {\bf 2012}(25): 63--69.
 
+\bibitem[Maimone y Fuchs(2011)Maimone y Fuchs]{Maimone2011}
+Maimone, A. y Fuchs, H. (2011).
+\newblock {Encumbrance-free telepresence system with real-time 3D capture and
+  display using commodity depth cameras}.
+\newblock {\em 2011 10th IEEE International Symposium on Mixed and Augmented
+  Reality\/}, pp. 137--146.
+
+\bibitem[Mallick {\em \mbox{et al.}\/}(2014)Mallick, Das, y
+  Majumdar]{Mallick2014}
+Mallick, T., Das, P.~P., y Majumdar, A.~K. (2014).
+\newblock {Characterizations of Noise in Kinect Depth Images: A Review}.
+\newblock {\em IEEE Sensors Journal\/}, {\bf 14}(6): 1731--1740.
+
+\bibitem[Mei {\em \mbox{et al.}\/}(2015)Mei, Xu, Li, Lin, y Wang]{Mei2015}
+Mei, K., Xu, L., Li, B., Lin, B., y Wang, F. (2015).
+\newblock {A real-time hand detection system based on multi-feature}.
+
 \bibitem[Mitra {\em \mbox{et al.}\/}(2007)Mitra, Member, y Acharya]{Mitra2007}
 Mitra, S., Member, S., y Acharya, T. (2007).
 \newblock {Gesture Recognition : A Survey}.
@@ -109,16 +131,16 @@ Nayakwadi, V. (2014).
   Survey}.
 \newblock {\bf 3}(1): 10--19.
 
-\bibitem[Niblack(1985)Niblack]{Niblack1985}
-Niblack, W. (1985).
-\newblock {\em {An introduction to digital image processing}\/}.
-\newblock Strandberg Publishing Company Birkeroed, Denmark,.
-\newblock p. 215.
-
 \bibitem[Ong {\em \mbox{et al.}\/}(1998)Ong, Teh, y Tan]{Ong1998}
 Ong, K.~C., Teh, H.~C., y Tan, T.~S. (1998).
 \newblock {Resolving occlusion in image sequence made easy}.
 \newblock {\em The Visual Computer\/}, {\bf 14}(4): 153--165.
+
+\bibitem[Otsu(1979)Otsu]{Otsu1979}
+Otsu, N. (1979).
+\newblock {A Threshold Selection Method from Gray-Level Histograms}.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics\/}, {\bf
+  9}(1): 62--66.
 
 \bibitem[Premaratne(2013)Premaratne]{Premaratne2013}
 Premaratne, P. (2013).
@@ -154,12 +176,6 @@ Silva, C. y Santos-Victor, J. (2001).
 Smith, S.~W. (1999).
 \newblock {\em {Digital signal processing}\/}.
 \newblock p. 688.
-
-\bibitem[Sultana y Rajapuspha(2012)Sultana y Rajapuspha]{Sultana2012}
-Sultana, a. y Rajapuspha, T. (2012).
-\newblock {Vision Based Gesture Recognition for Alphabetical Hand Gestures
-  Using the SVM Classifier}.
-\newblock {\em Ijcset.Com\/}, {\bf 3}(7): 218--223.
 
 \bibitem[Viola y Jones(2001)Viola y Jones]{Viola2001}
 Viola, P. y Jones, M. (2001).
