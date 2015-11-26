@@ -7,7 +7,6 @@ Repeated entry---line 360 of file iTesis.bib
  : @article{Premaratne2013
  :                        ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Sultana2012"
 Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at the end for entry Chih-WeiHsuChih-ChungChang2008
 while executing---line 1442 of file cicese.bst
 Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at the end for entry Chih-WeiHsuChih-ChungChang2008
@@ -30,45 +29,45 @@ Warning--empty journal in Nayakwadi2014
 Warning--empty publisher in Smith1999
 Warning--empty year in Ye; set to ????
 Warning--empty journal in Ye
-You've used 36 entries,
+You've used 37 entries,
             2727 wiz_defined-function locations,
-            964 strings with 11138 characters,
-and the built_in function-call counts, 16337 in all, are:
-= -- 1541
-> -- 897
-< -- 38
-+ -- 255
-- -- 255
-* -- 1657
-:= -- 2481
-add.period$ -- 109
-call.type$ -- 36
-change.case$ -- 195
-chr.to.int$ -- 60
-cite$ -- 122
-duplicate$ -- 646
-empty$ -- 1083
-format.name$ -- 313
-if$ -- 3294
+            969 strings with 11275 characters,
+and the built_in function-call counts, 16785 in all, are:
+= -- 1586
+> -- 919
+< -- 39
++ -- 261
+- -- 261
+* -- 1706
+:= -- 2548
+add.period$ -- 112
+call.type$ -- 37
+change.case$ -- 200
+chr.to.int$ -- 61
+cite$ -- 125
+duplicate$ -- 661
+empty$ -- 1114
+format.name$ -- 322
+if$ -- 3383
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 41
-newline$ -- 184
-num.names$ -- 144
-pop$ -- 323
+missing$ -- 42
+newline$ -- 189
+num.names$ -- 148
+pop$ -- 328
 preamble$ -- 1
-purify$ -- 157
+purify$ -- 161
 quote$ -- 0
-skip$ -- 579
+skip$ -- 594
 stack$ -- 0
-substring$ -- 729
-swap$ -- 243
+substring$ -- 757
+swap$ -- 249
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 306
+type$ -- 315
 warning$ -- 14
-while$ -- 166
+while$ -- 171
 width$ -- 0
-write$ -- 458
+write$ -- 471
 (There were 5 error messages)

@@ -9,7 +9,7 @@ En este capítulo se presentan los resultados de las pruebas realizadas al siste
 
 Los experimentos y el sistema propuesto fue implementado en una computadora de escritorio Dell con un procesador Intel(R) Xeon(R) CPU E5-1603, 16GB de memoria RAM, Windows 7 de 64 bits. La implementación del sistema se realizó en C\# utilizando Emgu 2.410 \footnote{\url{http://www.emgu.com/wiki/index.php/Main\_Page}} un wrapper de OpenCV\footnote{\url{http://opencv.org/}}. 
 
-Para analizar la tasa de precisión de reconocimiento del sistema propuesto se realizaron varios experimentos en distintas circunstancias. Por ejemplo se analizó el rendimiento del sistema a tres diferentes distancias $70$, $80$, $90$ $cm.$ del Kinect frontal. También en diferentes circunstancias de iluminación, con iluminación estándar, media y sin iluminación. Se escogió este tipo de escenarios para evaluar el sistema, para obtener el rendimiento en situaciones que representen o estén en condiciones naturales o reales.
+Para analizar la tasa de precisión de reconocimiento del sistema propuesto se realizaron varios experimentos en distintas circunstancias. Se analizó el rendimiento del sistema a tres diferentes distancias $70$, $80$, $90$ $cm.$ del Kinect frontal. También en diferentes circunstancias de iluminación, con iluminación estándar, media y sin iluminación. Se escogió este tipo de escenarios para evaluar el sistema, para obtener el rendimiento en situaciones que representen o estén en condiciones naturales o reales.
 
 Se utilizaron imágenes reales capturadas por ambos sensores de profundidad del Kinect de $640 \times 480$ pixeles. Las imágenes son $5$ personas distintas, realizando los gestos de puño y el de palma de la mano con los dedos separados, para los gestos estáticos. Para los gestos dinámicos se tomaron los gestos de $3$ personas cada una de ellas realizando los gestos estáticos en movimiento.\\
 Los gestos se realizaron usando una sola mano, en este caso todos los usuarios optaron por usar la mano derecha. Pero el sistema este hecho para que funcione no importando la mano que se utilice. La mano del usuario tiene que tener una ligera rotación en el eje vertical para que el sistema pueda detectar el gesto.
@@ -179,7 +179,7 @@ En este experimento se observa un resultado similar al anterior, pues otra vez s
 
 
 \subsection{Experimentos con iluminación media} 
-Para el conjunto de estos experimentos, las imágenes se capturaron en un laboratorio con iluminación media, como la que se muestra en la Figura. A dos distancias $70$ y $90$ $cm$.  
+Para el conjunto de estos experimentos, las imágenes se capturaron en un laboratorio con iluminación media, como la que se muestra en la Figura \ref{fig:LabMedioIluminado}. A dos distancias $70$ y $90$ $cm$.  
 
 \begin{figure}[h!]
 \begin{center} 
@@ -282,7 +282,7 @@ El experimento muestra que el uso de dos Kinect brinda en algunos casos mayor ex
 %:::::
 
 \subsection{Experimentos sin iluminación}
-Para este experimento las imágenes se capturaron en un laboratorio sin iluminación, como la que se muestra en la Figura.
+Para este experimento las imágenes se capturaron en un laboratorio sin iluminación, como la que se muestra en la Figura \ref{fig:LabNoIluminado}.
 
 \begin{figure}[h!]
 \begin{center} 
@@ -430,7 +430,7 @@ En este experimento se observa que hay mayor exactitud en el reconocimiento util
 \end{itemize}
 
 Lo experimentos explicados anteriormente muestran que el gesto uno produce un error mayor, debido a la resolución de sensor, pues no en todas las imágenes la mano esta completa, en los casos que no esta completamente vista por el sensor frontal y logra ser detectada por el sensor lateral con información favorable, es cuando se puede apreciar una mayor exactitud de reconocimiento usando ambos Kinect. 
-Seria conveniente hacer un experimento donde las imágenes tengan una buena resolución y ninguna obstrucción para validar el rendimiento del sistema. Debido a que la imágenes utilizadas no eran ideales pues contenían  ruido o obstrucciones. SE decidió hacer este tipo de pruebas para lograr resaltado mas apegados a la realidad es decir en ambientes naturales. 
+Seria conveniente hacer un experimento donde las imágenes tengan una buena resolución y ninguna obstrucción para validar el rendimiento del sistema. Debido a que la imágenes utilizadas no eran ideales pues contenían  ruido o obstrucciones. Se decidió hacer este tipo de pruebas para lograr resaltado mas apegados a la realidad es decir en ambientes naturales. 
   
 
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -444,95 +444,6 @@ Los gestos analizados fueron dos. El primero corresponde a la palma de la mano c
 También se probo el sistema usando un solo Kinect, el frontal, en las mismas circunstancias mencionadas anteriormente. 
 Enseguida se presentan los resultados de cada experimento realizado, por usuario. 
 
-%\subsection{Experimentos con iluminación} 
-%Para este experimento las imágenes se capturaron en un laboratorio con iluminación estándar,como la que se muestra en la Figura \ref{fig:LabIluminado}.
-%
-%En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario, para las imágenes de los demás usuarios ver el apéndice . En la Tabla se encuentran los resultados del reconocimiento de los dos gestos.  
-%
-%%\begin{figure}[h!]
-%%\centering
-%%\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I70:1}}
-%%\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I70:2}}
-%%\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I70:3}}
-%%\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I70:4}}
-%%\caption{Gesto de la palma con los dedos abiertas a $70$ $cm$.} \label{fig:G1I70}
-%%\end{figure}
-%%
-%%\begin{figure}[h!]
-%%\centering
-%%\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I70:1}}
-%%\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I70:2}}
-%%\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I70:3}}
-%%\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I70:4}}
-%%\caption{Gesto del puño de la mano a $70$ $cm$.} \label{fig:G2I70}
-%%\end{figure}
-%
-%
-%
-%%---
-%
-%En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la Tabla se encuentran los resultados del reconocimiento de los dos gestos.   
-%
-%%\begin{figure}[h!]
-%%\centering
-%%\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I80:1}}
-%%\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I80:2}}
-%%\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I80:3}}
-%%\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I80:4}}
-%%\caption{Gesto de la palma con los dedos abiertas a $80$ $cm$.} \label{fig:G1I80}
-%%\end{figure}
-%%
-%%\begin{figure}[h!]
-%%\centering
-%%\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I80:1}}
-%%\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I80:2}}
-%%\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I80:3}}
-%%\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I80:4}}
-%%\caption{Gesto del puño de la mano a $80$ $cm$.} \label{fig:G2I0}
-%%\end{figure}
-%
-%% 1 kinect 70 LM  
-%\begin{tabular}{ |l|l|l|l|l|l|l| }
-%\hline
-%\multicolumn{7}{ |c| }{70 LM}\\ \cline{1-7}
-%\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-%{\multirow{2}{*}{P1}} & {G3} & 77 & 80 & 83 & 73 & 70 \\ \cline{2-7}
-%                      & {G4} & 93 & 100 & 100 & 93 & 97 \\ \hline \hline
-%{\multirow{2}{*}{P2}} & {G3} & 87 & 80 & 87 & 70 & 97 \\ \cline{2-7}
-%                      & {G4} & 97 & 93 & 97 & 93 & 93 \\ \hline \hline
-%{\multirow{2}{*}{P3}} & {G3} & 83 & 100 & 80 & 53 & 90 \\ \cline{2-7}
-%                      & {G4} & 100 & 93 & 93 & 87 & 100 \\ \hline
-%\end{tabular}\\\\
-%
-%%--- 
-%
-%En el tercer experimento el usuario esta a una distancia de $90$ $cm.$ del Kinect frontal. Se muestra un ejemplo de las imágenes obtenidas de un usuario. En la Tabla se encuentran los resultados del reconocimiento de los dos gestos.    
-%
-%\begin{figure}[h!]
-%\centering
-%\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I90:1}}
-%\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I90:2}}
-%\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I90:3}}
-%\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1I90:4}}
-%\caption{Gesto de la palma con los dedos abiertas $90$ $cm$.} \label{fig:G1I90}
-%\end{figure}
-%
-%\begin{figure}[h!]
-%\centering
-%\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I90:1}}
-%\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I90:2}}
-%\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I90:3}}
-%\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2I90:4}}
-%\caption{Gesto del puño de la mano $90$ $cm$.} \label{fig:G2I90}
-%\end{figure}
-%
-%%\begin{tabular} { c c c }
-%% cell1 & cell2 & cell3 \\ 
-%% cell4 & cell5 & cell6 \\  
-%% cell7 & cell8 & cell9    
-%%\end{tabular}
-%
-%
 
 \subsection{Experimentos con iluminación media} 
 Para el conjunto de estos experimentos, las imágenes se capturaron en un laboratorio con iluminación media, véase la Figura \ref{fig:LabMedioIluminado}.
@@ -540,24 +451,6 @@ Para el conjunto de estos experimentos, las imágenes se capturaron en un labora
 \begin{itemize}
 
 \item En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. En la Tabla \ref{table:D70LK1} se encuentran los resultados del reconocimiento de los dos gestos utilizando solo el Kinect frontal. En la Tabla \ref{table:D70LK2} se presentan los resultados utilizando los dos dispositivos Kinect.  
-
-%\begin{figure}[h!]
-%\centering
-%\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM70:1}}
-%\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM70:2}}
-%\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM70:3}}
-%\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G1IM70:4}}
-%\caption{Gesto de la palma con los dedos abiertas a $70$ $cm$.} \label{fig:G1IM70}
-%\end{figure}
-%
-%\begin{figure}[h!]
-%\centering
-%\subfigure[Cuadro inicial]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM70:1}}
-%\subfigure[Cuadro número 20]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM70:2}}
-%\subfigure[Cuadro número 40]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM70:3}}
-%\subfigure[Cuadro final]{\includegraphics[scale=.3]{./Figures/pusheen}\label{fig:G2IM70:4}}
-%\caption{Gesto del puño de la mano a $70$ $cm$.} \label{fig:G2IM70}
-%\end{figure}
 
 \begin{table}[h!]
 \begin{center}
@@ -577,14 +470,15 @@ Para el conjunto de estos experimentos, las imágenes se capturaron en un labora
 \label{table:D70LK1}
 \end{table} 
 
-En la Tabla anterior se observa que arriba del $90\%$ de los gestos realizados por cada participante son reconocidos correctamente. A excepción del participante uno al realizar el gesto 3, pues solo reconoció $2$ gestos dinámicos de los $5$ realizados. Esto se debe al sensor, pues las manos del participante uno no son tan grandes y el sensor no logra captar en todas la imágenes los dedos del participante. 
+En la tabla anterior se observa que arriba del $90 \%$ de los gestos realizados por cada participante son reconocidos correctamente. A excepción del participante uno al realizar el gesto 3, pues solo reconoció $2$ gestos dinámicos de los $5$ realizados. Esto se debe al sensor, pues las manos del participante uno no son tan grandes y el sensor no logra captar en todas la imágenes los dedos del participante. 
 
 \begin{table}[h!]
+\begin{center}
+\begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 73 & 63 & 77 & 73 & 63 \\ \cline{2-7}
-                      & {G4} & 100 & 100 & 100 & 100 & 100 \\ \hline \hline
+{\multirow{}{*}{P1}} & {G3} & 73 & 63 & 77 & 73 & 63 \\ \cline{2-7}
 {\multirow{2}{*}{P2}} & {G3} & 100 & 93 & 87 & 93 & 87 \\ \cline{2-7}
                       & {G4} & 93 & 77 & 77 & 67 & 60 \\ \hline \hline
 {\multirow{2}{*}{P3}} & {G3} & 100 & 100 & 93 & 97 & 93 \\ \cline{2-7}
@@ -872,8 +766,7 @@ En este experimento se puede observar que las repeticiones del gesto 4 con cada 
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 57 & 70 & 70 & 67 & 77 \\ \cline{2-7}
-                      & {G4} &  &  &  &  &  \\ \hline \hline
+{\multirow{1}{*}{P1}} & {G3} & 57 & 70 & 70 & 67 & 77 \\ \cline{2-7}
 {\multirow{2}{*}{P2}} & {G3} & 70 & 80 & 80 & 77 & 80 \\ \cline{2-7}
                       & {G4} & 73 & 80 & 83 & 97 & 80 \\ \hline \hline
 {\multirow{2}{*}{P3}} & {G3} & 70 & 83 & 80 & 100 & 97 \\ \cline{2-7}
@@ -890,8 +783,7 @@ En este experimento se puede observar que las repeticiones del gesto 4 con cada 
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
 \multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 47 & 47 & 53 & 37 & 40 \\ \cline{2-7}
-                      & {G4} &  &  &  &  &  \\ \hline \hline
+{\multirow{1}{*}{P1}} & {G3} & 47 & 47 & 53 & 37 & 40 \\ \cline{2-7}
 {\multirow{2}{*}{P2}} & {G3} & 37 & 63 & 63 & 75 & 80 \\ \cline{2-7}
                       & {G4} & 100 & 98 & 95 & 90 & 92 \\ \hline \hline
 {\multirow{2}{*}{P3}} & {G3} & 80 & 97 & 87 & 83 & 87 \\ \cline{2-7}
@@ -902,7 +794,7 @@ En este experimento se puede observar que las repeticiones del gesto 4 con cada 
 \label{table:D90LMK2}
 \end{table}
 
-En las tablas anteriores no se muestra ningún valor para el gestos 4 del participante uno por que el gesto cuatro no pudo ser ubicado, debido a imágenes obtenidas. Observando las repeticiones de cada participante se observa un mejor desempeño para el participante tres usando ambos dispositivos.  
+En las Tablas \ref{table:D90LMK1}, \ref{table:D90LMK2} no se muestra ningún valor para el gestos 4 del participante uno por que el gesto cuatro no pudo ser ubicado, debido a imágenes obtenidas. Observando las repeticiones de cada participante se observa un mejor desempeño para el participante tres usando ambos dispositivos.  
 
 \end{itemize}
 

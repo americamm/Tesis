@@ -9,9 +9,9 @@ El reconocimiento de gestos basando en el modelo de la visión es un problema mu
 
 En este trabajo se abordo el reconocimiento de gestos proponiendo una sistema que utiliza como media de captura dos dispositivos Kinect, en especifico los sensores de profundidad de estos dispositivos. La idea de utilizar estos dispositivos es que el reconocimiento de gestos funcione en condiciones bajas de iluminación y cuando exista obstrucción de la mano.  
 
-Los resultados sugieren que, como era de esperarse, en algunas situaciones el reconocimiento mejora con la utilización de dos dispositivos. En los casos donde la mano no es vista por el Kinect principal o la información proporcionada por este dispositivo no es suficiente para discriminar el gesto.
+Los resultados sugieren que, como era de esperarse, en algunas situaciones el reconocimiento mejora con la utilización de dos dispositivos. Estas situaciones son donde la mano no es vista por el Kinect principal o la información proporcionada por este dispositivo no es suficiente para discriminar el gesto.
    
-Los experimentos fueron realizados en ambientes naturales, de manera que no siempre se obtuvo grado alto de exactitud en el reconocimiento pero se llego a obtener hasta $88 \%$ para los gestos estáticos y para los dinámicos un $100 \%$ de reconocimiento en secciones $5$ segundos. Los experimentos sugieren que en situaciones controladas la tasa de reconocimiento aumentaría considerablemente. 
+Los experimentos fueron realizados en ambientes naturales, de manera que no siempre se obtuvo un alto grado de exactitud en el reconocimiento pero se llego a obtener hasta $88 \%$ para los gestos estáticos y para los dinámicos un $100 \%$ de reconocimiento en secciones $5$ segundos. Los experimentos sugieren que en situaciones controladas la tasa de reconocimiento aumentaría considerablemente. 
 
 Debido a la realización de este trabajo se lograron las siguientes aportaciones, aparte del sistema creado: 
  
@@ -30,7 +30,7 @@ Debido a la realización de este trabajo se lograron las siguientes aportaciones
 
 \section{Trabajo futuro}\label{futureWork}  
 
-En la sección anterior se menciono que una limitante es la resolución del sensor, una opción seria probar con la nueva versión del sensor Kinect, ya que el dispositivo tiene mayor resolución y las imágenes provenientes del sensor contienen menos ruido en comparación con la versión anterior. 
+En la sección anterior se menciono que una limitante es la resolución del sensor, una opción seria probar con la nueva versión del sensor Kinect, ya que el dispositivo tiene mayor resolución y las imágenes provenientes del sensor contienen menos ruido en comparación con la versión usada en este trabajo. 
 
 El sistema podría mejorarse y alcanzar un mayor grado de precisión, si se mejora la detección, la propuesta es entrenar nuevamente el clasificador; incrementando el número de imágenes de entrenamiento, que contengan distintas poses, para así tener un número mayor de gestos a reconocer.
 

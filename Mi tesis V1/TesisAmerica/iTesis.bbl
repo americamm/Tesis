@@ -177,6 +177,12 @@ Smith, S.~W. (1999).
 \newblock {\em {Digital signal processing}\/}.
 \newblock p. 688.
 
+\bibitem[Sultana y Rajapuspha(2012)Sultana y Rajapuspha]{Sultana2012}
+Sultana, a. y Rajapuspha, T. (2012).
+\newblock {Vision Based Gesture Recognition for Alphabetical Hand Gestures
+  Using the SVM Classifier}.
+\newblock {\em Ijcset.Com\/}, {\bf 3}(7): 218--223.
+
 \bibitem[Viola y Jones(2001)Viola y Jones]{Viola2001}
 Viola, P. y Jones, M. (2001).
 \newblock {Rapid object detection using a boosted cascade of simple features}.

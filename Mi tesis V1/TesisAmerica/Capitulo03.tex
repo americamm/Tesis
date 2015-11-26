@@ -91,7 +91,7 @@ El filtro de mediana reemplaza el valor del pixel usando la mediana de las inten
 \section{Detección}\label{sec:Detection}
 
 En esta etapa del sistema el objetivo es localizar la mano en la imagen y segmentar la mano del fondo de la imagen. Para extraer las características necesarias para el reconocimiento.\\
-Este procedimiento se lleva acabo de la siguiente manera, la Figura \ref{fig:ProcesoDeteccion} muestra el proceso para  realizar la etapa de detección. El primer paso es localizar la mano, en este trabajo se utiliza el método de detección rápida de objetos; el siguiente paso es segmentar la mano del fondo, binarizando la imagen de la mano usando el algoritmo propuesto por [Otsu]; finalmente se aplican las operaciones morfológicas apertura y cierre, para mejorar la segmentación, es decir eliminar ruido existente. 
+Este procedimiento se lleva acabo de la siguiente manera, la Figura \ref{fig:ProcesoDeteccion} muestra el proceso para  realizar la etapa de detección. El primer paso es localizar la mano, en este trabajo se utiliza el método de detección rápida de objetos; el siguiente paso es segmentar la mano del fondo, binarizando la imagen de la mano usando el algoritmo propuesto por \citep{Otsu1979}; finalmente se aplican las operaciones morfológicas apertura y cierre, para mejorar la segmentación, es decir eliminar ruido existente. 
 
 \begin{figure}[h!]
 \begin{center}
