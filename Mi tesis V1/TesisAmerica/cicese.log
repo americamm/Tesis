@@ -1,0 +1,14 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdftex 2014.8.1)  27 NOV 2015 01:29
+entering extended mode
+**C:/Users/AmericaIvone/Documents/Tesis/Mi*tesis*V1/TesisAmerica/cicese.sty
+("C:/Users/AmericaIvone/Documents/Tesis/Mi tesis V1/TesisAmerica/cicese.sty"
+! Undefined control sequence.
+l.2 \usepackage
+               {natbib}
+? 
+! Emergency stop.
+l.2 \usepackage
+               {natbib}
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
