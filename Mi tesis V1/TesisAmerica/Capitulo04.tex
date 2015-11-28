@@ -69,7 +69,7 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 \label{fig:ImagenFondo}
 \end{figure}  
 
-Los parámetros utilizados para la obtención del clasificador final fueron: el porcentaje de precision de detección de [$95%$] y la tasa de falsos positivos aceptados de [$5%$]. El resultado final del entrenamiento fue en clasificador AdoBoost en forma de cascada, que consta de 19 etapas. El clasificador resultante se encuentra en Github \ref{myrepo}, en formato XML.  
+Los parámetros utilizados para la obtención del clasificador final fueron: el porcentaje de precisión de detección de $95%$ y la tasa de falsos positivos aceptados de $5%$. El resultado final del entrenamiento fue en clasificador AdoBoost en forma de cascada, que consta de 19 etapas. El clasificador resultante se encuentra en Github \ref{myrepo}, en formato XML.  
 
 Con el clasificador obtenido, se localiza la mano en cada cuadro proveniente de los dispositivos  Kinect, una ventana  inicial de tamaño $60 \times 60$ pixeles se desliza por la imagen. Para eliminar falsos positivos que pudieran ocurrir en la detección de la mano se utiliza un algoritmo equivalente al de \cite{Mei2015}, este se muestra en el apéndice \ref{chap:apendA}.\\ 
 Una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionada alrededor de la mano, como se observa en la Figura \ref{fig:Roi}.
@@ -88,7 +88,7 @@ Ya que se tiene localizada el área donde se encuentra la mano, el siguiente pas
 \begin{center}
 \includegraphics[scale=1]{./Figures/250B_Otsu.png}
 \end{center}
-\caption{Binarización de ROI y aplicación de las operaciones morfológicas a la mano localizada en la Figura anterior.}
+\caption{Binarización de ROI y aplicación de las operaciones morfológicas de la mano localizada en la Figura anterior.}
 \label{fig:BinarizationRoi}
 \end{figure} 
 
@@ -123,7 +123,7 @@ Una vez aplicados estos dos algoritmos se calcula: el número de dedos levantado
 \begin{center} 
 \includegraphics[scale=1]{./Figures/250_Dedos.png}
 \end{center}
-\caption{La imagen muestra algunas características de la mano. El contorno rojo representa la envolvente convexa, el rectángulo verde es el rectángulo que rodea a la mano, el rectángulo gris representa el área de la palma de la mano, los círculos en color amarillo la punta de los dedos, en color azul se encuentras los puntos de profundidad encontrados en medio de los dedos, en rosa el centro de la palma de la mano.}
+\caption{La imagen muestra algunas características de la mano. El contorno rojo representa la envolvente convexa, el rectángulo verde es el rectángulo que rodea a la mano, el rectángulo gris representa el área de la palma de la mano, los círculos en color amarillo la punta de los dedos, en color azul se encuentran los puntos de profundidad encontrados en medio de los dedos, en rosa el centro de la palma de la mano.}
 \label{fig:FeaturesOfHand}
 \end{figure}
 

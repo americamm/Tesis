@@ -57,29 +57,29 @@ Para este experimento se usaron imágenes capturadas en un laboratorio con ilumi
 %\end{figure}
 
 \begin{table}[h!] 
-\begin{center}
+\begin{center} 
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $70$ $cm$, utilizando ambos Kinect.} 
+\label{table:70L2K}
 \begin{tabular}{ r || c | c |}  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 170  &  30  \\ \hline  
 Gesto 2 & 21   & 179 \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $70$ $cm$, utilizando ambos Kinect.} 
-\label{table:70L2K}
 \end{table}
 
 La matriz de confusión muestra que $170$ gestos de la clase 1 y $179$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $87.25 \%$  
 
 \begin{table}[h!] 
 \begin{center}
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $70$ $cm$, utilizando el Kinect frontal.}
+\label{table:70L1K}
 \begin{tabular}{ r || c | c |} 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 127  &  73  \\ \hline  
 Gesto 2 & 6    &  194 \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $70$ $cm$, utilizando el Kinect frontal.}
-\label{table:70L1K}
 \end{table}
 
 La matriz de confusión muestra que $127$ gestos de la clase 1 y $194$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $80.25\%$ 
@@ -101,28 +101,28 @@ Como se observa en las matrices de confusión, se obtiene una mayor exactitud en
 
 \begin{table}[h!] 
 \begin{center}
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $80$ $cm$, utilizando ambos Kinect.} 
+\label{table:80LK2}
 \begin{tabular}{ r || c | c |} 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 96     &  104     \\ \hline  
 Gesto 2 & 16     & 185     \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $80$ $cm$, utilizando ambos Kinect.} 
-\label{table:80LK2}
 \end{table}
 
 La matriz de confusión muestra que $96$ gestos de la clase 1 y $185$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $70.25\%$  
 
 \begin{table}[h!] 
-\begin{center}
+\begin{center} 
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $80$ $cm$, utilizando el Kinect frontal.} 
+\label{table:80LK1}
 \begin{tabular}{ r || c | c |}  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 88     &  112     \\ \hline  
 Gesto 2 & 6     & 183     \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $80$ $cm$, utilizando el Kinect frontal.} 
-\label{table:80LK1}
 \end{table}  
 
 La matriz de confusión muestra que $88$ gestos de la clase 1 y $183$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $70.5\%$ 
@@ -145,28 +145,28 @@ En este experimento la exactitud del reconocimiento es baja para el uso de ambos
 
 \begin{table}[h!] 
 \begin{center}
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $90$ $cm$, utilizando ambos Kinect.}
+\label{table:90LK2}
 \begin{tabular}{ r || c | c |} 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 &  93    & 107      \\ \hline  
 Gesto 2 &  10    & 190     \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $90$ $cm$, utilizando ambos Kinect.}
-\label{table:90LK2}
 \end{table} 
 
 La matriz de confusión muestra que $93$ gestos de la clase 1 y $190$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $70.75\%$ 
 
 \begin{table}[h!] 
 \begin{center}
+\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $70$ $cm$, utilizando el Kinect frontal.}
+\label{table:90LK1}
 \begin{tabular}{ r || c | c |} 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 &  101   & 99      \\ \hline  
 Gesto 2 &  17    & 183     \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento con iluminación estándar a una distancia de $70$ $cm$, utilizando el Kinect frontal.}
-\label{table:90LK1}
 \end{table} 
 
 La matriz de confusión muestra que $101$ gestos de la clase 1 y $183$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $71 \%$  
@@ -206,28 +206,29 @@ Para el conjunto de estos experimentos, las imágenes se capturaron en un labora
 
 \begin{table}[h!] 
 \begin{center}
+\caption{Matriz de confusión del experimento con iluminación media a una distancia de $70$ $cm$, utilizando ambos Kinect.}
+\label{table:70LMK2}
 \begin{tabular}{ r || c | c |}  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 178    &  22     \\ \hline  
 Gesto 2 & 84     & 105     \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento con iluminación media a una distancia de $70$ $cm$, utilizando ambos Kinect.}
-\label{table:70LMK2}
+
 \end{table}
 
 La matriz de confusión muestra que $178$ gestos de la clase 1 y $105$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $72.75 \%$ 
 
 \begin{table}[h!] 
-\begin{center}
+\begin{center} 
+\caption{Matriz de confusión del experimento con iluminación media a una distancia de $70$ $cm$, utilizando el Kinect frontal.} 
+\label{table:70LMK1}
 \begin{tabular}{ r || c | c |} 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 136    &  64     \\ \hline  
 Gesto 2 & 7     &  193     \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento con iluminación media a una distancia de $70$ $cm$, utilizando el Kinect frontal.} 
-\label{table:70LMK1}
 \end{table} 
 
 La matriz de confusión muestra que $136$ gestos de la clase 1 y $193$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $82.25 \%$  
@@ -249,28 +250,28 @@ En este caso se observa una mejor exactitud cuando se utiliza solo un Kinect.
 %\end{figure}
 
 \begin{table}[h!] 
-\begin{center}
+\begin{center} 
+\caption{Matriz de confusión del experimento con iluminación media a una distancia de $90$ $cm$, utilizando ambos Kinect.} 
+\label{table:90LMK2}
 \begin{tabular}{ r || c | c |}  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 153     &  47     \\ \hline  
 Gesto 2 & 26      & 174     \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento con iluminación media a una distancia de $90$ $cm$, utilizando ambos Kinect.} 
-\label{table:90LMK2}
 \end{table}
 
 La matriz de confusión muestra que $153$ gestos de la clase 1 y $174$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $81.75 \%$ 
 
 \begin{table}[h!] 
-\begin{center}
+\begin{center} 
+\caption{Matriz de confusión del experimento con iluminación media a una distancia de $90$ $cm$, utilizando el Kinect frontal.} 
+\label{table:90LMK1} 
 \begin{tabular}{ r || c | c |} 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 &  54    &   95    \\ \hline  
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento con iluminación media a una distancia de $90$ $cm$, utilizando el Kinect frontal.} 
-\label{table:90LMK1} 
 \end{table}  
 
 En este caso cuando solo se utilizo un Kinect, este no pudo identificar el gesto 2, ni tampoco todos los gestos 1. Debido a la posición que se encontraba la mano, solo se detectaron $149$ gestos de la clase uno de los cuales $54$ fueron clasificados correctamente.
@@ -308,7 +309,9 @@ Para este experimento las imágenes se capturaron en un laboratorio sin iluminac
 %\end{figure}
 
 \begin{table}[h!] 
-\begin{center}
+\begin{center} 
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $70$ $cm$, utilizando ambos Kinect.} 
+\label{table:70LnoK2}
 \begin{tabular}{ r || c | c |} 
  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
@@ -317,22 +320,20 @@ Gesto 2 & 196     &  4     \\
 
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento sin iluminación a una distancia de $70$ $cm$, utilizando ambos Kinect.} 
-\label{table:70LnoK2}
 \end{table}  
 
 La matriz de confusión muestra que $190$ gestos de la clase 1 y $4$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $48.5 \%$ 
 
 \begin{table}[h!] 
-\begin{center}
+\begin{center} 
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $70$ $cm$, utilizando el Kinect frontal.}
+\label{table:70LnoK1} 
 \begin{tabular}{ r || c | c |} 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 154     &  46     \\ \hline  
 Gesto 2 & 167     &  33     \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento sin iluminación a una distancia de $70$ $cm$, utilizando el Kinect frontal.}
-\label{table:70LnoK1} 
 \end{table}  
 
 La matriz de confusión muestra que $154$ gestos de la clase 1 y $133$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $46.75 \%$ 
@@ -351,7 +352,9 @@ La matriz de confusión muestra que $154$ gestos de la clase 1 y $133$ de la cla
 %\end{figure}
 
 \begin{table}[h!] 
-\begin{center}
+\begin{center} 
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $80$ $cm$, utilizando ambos Kinect.}
+\label{table:80LnoK2}
 \begin{tabular}{ r || c | c |} 
  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
@@ -360,14 +363,14 @@ Gesto 2 & 90     &  110     \\
 
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento sin iluminación a una distancia de $80$ $cm$, utilizando ambos Kinect.}
-\label{table:80LnoK2}
 \end{table}  
 
 La matriz de confusión muestra que $187$ gestos de la clase 1 y $110$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $74.25 \%$ 
 
 \begin{table}[h!] 
-\begin{center}
+\begin{center} 
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $80$ $cm$, utilizando el Kinect frontal.}
+\label{table:80LnoK1}
 \begin{tabular}{ r || c | c |} 
  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
@@ -375,8 +378,6 @@ Gesto 1 & 162     &  37     \\ \hline
 Gesto 2 & 4     &  166     \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento sin iluminación a una distancia de $80$ $cm$, utilizando el Kinect frontal.}
-\label{table:80LnoK1}
 \end{table} 
 
 La matriz de confusión muestra que $162$ gestos de la clase 1 y $166$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $88.8\%$  
@@ -398,28 +399,28 @@ En este caso se obtiene una mayor exactitud utilizando un Kinect, sin embargo se
 
 \begin{table}[h!] 
 \begin{center}
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $90$ $cm$, utilizando ambos Kinect.}
+\label{table:90LnoK2}
 \begin{tabular}{ r || c | c |} 
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 150     &  50     \\ \hline  
 Gesto 2 & 6      &  194     \\   
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento sin iluminación a una distancia de $90$ $cm$, utilizando ambos Kinect.}
-\label{table:90LnoK2}
 \end{table}
 
 La matriz de confusión muestra que $150$ gestos de la clase 1 y $194$ de la clase 2 fueron clasificados correctamente. De manera que se obtuvo una tasa de exactitud de $86 \%$ 
 
 \begin{table}[h!] 
 \begin{center}
+\caption{Matriz de confusión del experimento sin iluminación a una distancia de $90$ $cm$, utilizando el Kinect frontal.}
+\label{table:90LnoK1}
 \begin{tabular}{ r || c | c |} 
  
         & Gesto 1 & Gesto 2 \\ \hline \hline  
 Gesto 1 & 138     &  61     \\ \hline  
 \end{tabular}
 \end{center} 
-\caption{Matriz de confusión del experimento sin iluminación a una distancia de $90$ $cm$, utilizando el Kinect frontal.}
-\label{table:90LnoK1}
 \end{table} 
 
 En el caso cuando se toma como entrada solo un Kinect, al igual que en el experimento de iluminación media y con distancia también de $90$ $cm$. Solo se detectaron los gestos de la clase 1, $199$, de los cuales se clasificaron correctamente $138$. 
@@ -453,7 +454,9 @@ Para el conjunto de estos experimentos, las imágenes se capturaron en un labora
 \item En el primer experimento el usuario esta a una distancia de $70$ $cm.$ del Kinect frontal. En la Tabla \ref{table:D70LK1} se encuentran los resultados del reconocimiento de los dos gestos utilizando solo el Kinect frontal. En la Tabla \ref{table:D70LK2} se presentan los resultados utilizando los dos dispositivos Kinect.  
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $70$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D70LK1}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precision del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -466,14 +469,14 @@ Para el conjunto de estos experimentos, las imágenes se capturaron en un labora
                       & {G4} & 100 & 93 & 93 & 87 & 100 \\ \hline
 \end{tabular}
 \end{center} 
-\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $70$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
-\label{table:D70LK1}
 \end{table} 
 
 En la tabla anterior se observa que arriba del $90 \%$ de los gestos realizados por cada participante son reconocidos correctamente. A excepción del participante uno al realizar el gesto 3, pues solo reconoció $2$ gestos dinámicos de los $5$ realizados. Esto se debe al sensor, pues las manos del participante uno no son tan grandes y el sensor no logra captar en todas la imágenes los dedos del participante. 
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $70$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.}
+\label{table:D70LK2}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -485,8 +488,6 @@ En la tabla anterior se observa que arriba del $90 \%$ de los gestos realizados 
                       & {G4} & 73 & 90 & 83 & 63 & 83 \\ \hline
 \end{tabular}  
 \end{center} 
-\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $70$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.}
-\label{table:D70LK2}
 \end{table} 
 
 Al utilizar ambos Kinect se observa que hay menor exactitud de reconocimiento de los gestos. Como se usan las mismas imágenes para uno y dos Kinect en cada prueba, pues se tiene la misma justificación en la exactitud del participante 1. 
@@ -514,7 +515,9 @@ Al utilizar ambos Kinect se observa que hay menor exactitud de reconocimiento de
 
 % 1 kinect 80 LM 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $80$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D80LK1}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -527,12 +530,12 @@ Al utilizar ambos Kinect se observa que hay menor exactitud de reconocimiento de
                       & {G4} & 100 & 90 & 97 & 92 & 95 \\ \hline
 \end{tabular} 
 \end{center} 
-\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $80$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
-\label{table:D80LK1}
 \end{table}
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $80$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D80LK2}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -545,8 +548,6 @@ Al utilizar ambos Kinect se observa que hay menor exactitud de reconocimiento de
                       & {G4} & 100 & 93 & 87 & 83 & 90 \\ \hline
 \end{tabular}
 \end{center} 
-\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $80$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
-\label{table:D80LK2}
 \end{table} 
 
 Para ambas pruebas con uno y dos Kinect se tuvieron resultados similares, desafortunadamente hubo mayores casos de reconocimiento fallido, en especial cuando se realiza el gesto 3. Aquí se puede observar un mejor reconocimiento con el uso de ambos Kinect.
@@ -574,7 +575,9 @@ Para ambas pruebas con uno y dos Kinect se tuvieron resultados similares, desafo
 %\end{figure}
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $90$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
+\label{table:D90LK1}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -587,12 +590,12 @@ Para ambas pruebas con uno y dos Kinect se tuvieron resultados similares, desafo
                       & {G4} & 77 & 90 & 80 & 75 & 80 \\ \hline
 \end{tabular}
 \end{center} 
-\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $90$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
-\label{table:D90LK1}
 \end{table}
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $90$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones.} 
+\label{table:D90LK2}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -605,8 +608,6 @@ Para ambas pruebas con uno y dos Kinect se tuvieron resultados similares, desafo
                       & {G4} & 77 & 90 & 91 & 80 & 75 \\ \hline
 \end{tabular}
 \end{center}
-\caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $90$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
-\label{table:D90LK2}
 \end{table}
 
 En este caso el experimento mostró un mejor reconocimiento al usar un solo dispositivo, si existe gran diferencia en el uso de dos dispositivos generalmente en la realización del gesto 3.
@@ -640,7 +641,9 @@ Para este experimento las imágenes se capturaron en un laboratorio sin iluminac
 %\end{figure}
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $70$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones.} 
+\label{table:D70LMK1}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -653,12 +656,12 @@ Para este experimento las imágenes se capturaron en un laboratorio sin iluminac
                       & {G4} & 100 & 93 & 97 & 93 & 93 \\ \hline
 \end{tabular}
 \end{center} 
-\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $70$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
-\label{table:D70LMK1}
 \end{table}
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $70$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones} 
+\label{table:D70LMK2}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -671,8 +674,6 @@ Para este experimento las imágenes se capturaron en un laboratorio sin iluminac
                       & {G4} & 100 & 97 & 93 & 87 & 90 \\ \hline
 \end{tabular}
 \end{center} 
-\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $70$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones} 
-\label{table:D70LMK2}
 \end{table}
 
 
@@ -701,7 +702,9 @@ Analizando cada repetición de cada gesto se observa que una mayor reconocimient
 %\end{figure}
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $80$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones} 
+\label{table:D80LMK1}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -714,12 +717,12 @@ Analizando cada repetición de cada gesto se observa que una mayor reconocimient
                       & {G4} & 97 & 87 & 100 & 90 & 87 \\ \hline
 \end{tabular}
 \end{center} 
-\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $80$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones} 
-\label{table:D80LMK1}
 \end{table}
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $80$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones.} 
+\label{table:D80LMK2}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -732,8 +735,6 @@ Analizando cada repetición de cada gesto se observa que una mayor reconocimient
                       & {G4} & 73 & 73 & 93 & 83 & 93 \\ \hline 
 \end{tabular}
 \end{center}
-\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $80$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
-\label{table:D80LMK2}
 \end{table} 
 
 En este experimento se puede observar que las repeticiones del gesto 4 con cada participante obtienen mayor precision utilizando un Kinect. en este caso se observa que el gesto tres no es clasificado correctamente en la mayoría de las repeticiones de los participantes, a excepción del participante 3, que muestra mayor desempeño cuando se utilizan los dos dispositivos.
@@ -761,7 +762,9 @@ En este experimento se puede observar que las repeticiones del gesto 4 con cada 
 %\end{figure}
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $90$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones.} 
+\label{table:D90LMK1}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -773,12 +776,12 @@ En este experimento se puede observar que las repeticiones del gesto 4 con cada 
                       & {G4} & 87 & 97 & 90 & 70 & 90 \\ \hline
 \end{tabular}
 \end{center} 
-\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $90$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
-\label{table:D90LMK1}
 \end{table}
 
 \begin{table}[h!]
-\begin{center}
+\begin{center} 
+\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $90$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones.} 
+\label{table:D90LMK2}
 \begin{tabular}{ |l|l|l|l|l|l|l| }
 \hline
 \multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
@@ -790,8 +793,6 @@ En este experimento se puede observar que las repeticiones del gesto 4 con cada 
                       & {G4} & 87 & 100 & 97 & 78 & 95 \\ \hline
 \end{tabular}
 \end{center}
-\caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $90$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
-\label{table:D90LMK2}
 \end{table}
 
 En las Tablas \ref{table:D90LMK1}, \ref{table:D90LMK2} no se muestra ningún valor para el gestos 4 del participante uno por que el gesto cuatro no pudo ser ubicado, debido a imágenes obtenidas. Observando las repeticiones de cada participante se observa un mejor desempeño para el participante tres usando ambos dispositivos.  

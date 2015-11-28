@@ -1,4 +1,4 @@
-\chapter{Sistema de reconocimiento de gestos propuesto}\label{capit:cap3}
+\chapter{Sistema propuesto de reconocimiento de gestos}\label{capit:cap3}
 \vspace{-2.0325ex}%
 \noindent
 \rule{\textwidth}{0.5pt}
@@ -7,7 +7,7 @@
 
 En este cap\'itulo se describen las etapas del sistema propuesto junto con los métodos y algoritmos que son utilizados en cada una de las fases.
  
-El sistema de reconocimiento de gestos propuesto consta de cuatro etapas principales, Figura \ref{fig:MyHGR}. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema. La siguiente etapa es la detección, aquí la mano es localizada y segmentada del fondo. En la etapa tres se extraen las características de la mano para ser procesadas. En la etapa final el gesto realizado es reconocido.   
+El sistema propuesto de reconocimiento de gestos consta de cuatro etapas principales, Figura \ref{fig:MyHGR}. La primera etapa es la adquisición de los datos, en la cual se capturan las imágenes de entrada del sistema. La siguiente etapa es la detección, aquí la mano es localizada y segmentada del fondo. En la etapa tres se extraen las características de la mano para ser procesadas. En la etapa final el gesto realizado es reconocido.   
 
 \begin{figure}[h!]
 \begin{center}
@@ -19,7 +19,7 @@ El sistema de reconocimiento de gestos propuesto consta de cuatro etapas princip
   
 \section{Adquisición de los datos}\label{sec:KinectSensor} 
 
-En la primera etapa del sistema los datos de entrada del sistema son capturados y preprocesados, la Figura \ref{fig:Dadquisicion} muestra este etapas de este proceso. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect, debido a la naturaleza del sensor las imágenes capturadas contiene ruido por interferencia \citep{Mallick2014}, que puede ser reducido utilizando filtro de medianas \citep{Maimone2011}.
+En la primera etapa del sistema los datos de entrada del sistema son capturados y preprocesados, la Figura \ref{fig:Dadquisicion} muestra las etapas de este proceso. Los datos provienen de los sensores de profundidad de dos dispositivos Kinect. Debido a la naturaleza del sensor las imágenes capturadas contiene ruido por interferencia \citep{Mallick2014}, que puede ser reducido utilizando filtro de medianas \citep{Maimone2011}.
 
 \begin{figure}[h!]
 \begin{center}
@@ -34,7 +34,7 @@ En la primera etapa del sistema los datos de entrada del sistema son capturados 
 
 En noviembre del 2010 la compa\'nia Microsoft lanz\'o el sensor Kinect para consolas de vídeo juego Xbox 360 y en febrero del 2011 lanz\'o la versi\'on para Windows.   
 
-El dispositivo Kinect esta equipado con una serie de sensores que permiten obtener imágenes a color y de profundidad (las cuales indican la distancia a la que esta ubicada un objeto del sensor. La Figura \ref{fig:KinectPic} muestra  la parte frontal del dispositivo Kinect para Windows. Los sensores permiten hacer detección y seguimiento de personas. El dispositivo tiene la capacidad de detectar hasta $6$ personas y hacer el seguimiento de hasta $2$ personas \footnote{https://msdn.microsoft.com/en-us/library/hh973074.aspx}.    
+El dispositivo Kinect está equipado con una serie de sensores que permiten obtener imágenes a color y de profundidad (las cuales indican la distancia a la que está ubicada un objeto del sensor). La Figura \ref{fig:KinectPic} muestra la parte frontal del dispositivo Kinect para Windows. Los sensores permiten hacer detección y seguimiento de personas. El dispositivo tiene la capacidad de detectar hasta seis personas y hacer el seguimiento de hasta dos personas \footnote{https://msdn.microsoft.com/en-us/library/hh973074.aspx}.    
   
 \begin{figure}[h!]
 \begin{center}
@@ -46,7 +46,7 @@ El dispositivo Kinect esta equipado con una serie de sensores que permiten obten
 
 \footnotetext{http://blogs.msdn.com/b/eternalcoding/archive/2012/02/01/official-kinect-for-windows-sdk-and-kinect-toolbox-1-1-1-are-out.aspx}
 
-El sensor esta equipado con los siguientes componentes: un cámara de color (o sensor de color), un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED, Figura\citep{Jana2013}.\\
+El sensor está equipado con los siguientes componentes: un cámara de color (o sensor de color), un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED \citep{Jana2013}.
 Enseguida se describen brevemente cada uno de los componentes del sensor Kinect, estos se muestran en la Figura \ref{fig:KinectComponentes}. 
 
 \begin{figure}[h!]
@@ -62,7 +62,7 @@ Enseguida se describen brevemente cada uno de los componentes del sensor Kinect,
 \begin{itemize}
 \item La cámara de color captura y transmite datos de vídeo a color, detectando los colores rojo, verde y azul (RGB, por sus siglas en ingl\'es, red, green and blue). La transmisión de datos que brinda la cámara es una secuencia de imágenes (cuadros), a una velocidad de hasta $30$ cuadros por segundo con una resolución de hasta $1280\, x \, 960$ p\'ixeles. La velocidad de los cuadros por segundo varia según la resolución de la imagen.
 
-\item El emisor infrarrojo proyecta puntos de luz infrarroja, estos puntos son proyectados frente al sensor. Estos puntos junto con el sensor de profundidad es posible medir la distancia que existe del sensor a algún objeto que este frente a el.  
+\item El emisor infrarrojo proyecta puntos de luz infrarroja, estos puntos son proyectados frente al sensor. Estos puntos junto con el sensor de profundidad es posible medir la distancia que existe del sensor a algún objeto que esté frente a él.  
 
 \item El sensor infrarrojo lee los puntos infrarrojos proyectados por el emisor infrarrojo, con la lectura de los datos se calcula la distancia que existe entre el objeto y el sensor. El sensor transmite los datos de profundidad con una velocidad de hasta $30$ cuadros por segundo con una resolución de hasta $640 \, x \, 480$ pixeles.   
 
@@ -70,7 +70,7 @@ Enseguida se describen brevemente cada uno de los componentes del sensor Kinect,
 
 \item La entrada de audio compuesta por un arreglo de  $4$ micrófonos permite capturar el sonido y calcular la posición de la fuente.
 
-\item LED este indica el estado del sensor. El LED en color verde indica que el sensor esta disponible para utilizarse. El LED en color rojo indica que no existe conexión entre el Kinecy y la computadora. La ausencia de color en el LED indica que el Kinect no se encuentra conectado a la fuente de energía eléctrica.
+\item LED indica el estado del sensor. El LED en color verde indica que el sensor está disponible para utilizarse. El LED en color rojo indica que no existe conexión entre el Kinect y la computadora. La ausencia de color en el LED indica que el Kinect no se encuentra conectado a la fuente de energía eléctrica.
 \end{itemize}
 
 \subsection{Filtro de mediana} 
@@ -90,8 +90,8 @@ El filtro de mediana reemplaza el valor del pixel usando la mediana de las inten
 
 \section{Detección}\label{sec:Detection}
 
-En esta etapa del sistema el objetivo es localizar la mano en la imagen y segmentar la mano del fondo de la imagen. Para extraer las características necesarias para el reconocimiento.\\
-Este procedimiento se lleva acabo de la siguiente manera, la Figura \ref{fig:ProcesoDeteccion} muestra el proceso para  realizar la etapa de detección. El primer paso es localizar la mano, en este trabajo se utiliza el método de detección rápida de objetos; el siguiente paso es segmentar la mano del fondo, binarizando la imagen de la mano usando el algoritmo propuesto por \citep{Otsu1979}; finalmente se aplican las operaciones morfológicas apertura y cierre, para mejorar la segmentación, es decir eliminar ruido existente. 
+En esta etapa del sistema el objetivo es localizar la mano en la imagen y segmentar la mano del fondo de la imagen. Para extraer las características necesarias para el reconocimiento.
+La Figura \ref{fig:ProcesoDeteccion} muestra el proceso para  realizar la etapa de detección. El primer paso es localizar la mano, en este trabajo se utiliza el método de detección rápida de objetos; el siguiente paso es segmentar la mano del fondo, binarizando la imagen de la mano usando el algoritmo propuesto por \citep{Otsu1979}; finalmente se aplican las operaciones morfológicas apertura y cierre, para mejorar la segmentación, es decir eliminar ruido existente. 
 
 \begin{figure}[h!]
 \begin{center}
@@ -105,7 +105,7 @@ Este procedimiento se lleva acabo de la siguiente manera, la Figura \ref{fig:Pro
 
 En este trabajo se utiliza el método detección rápida de objetos usando características simples utilizando el clasificador AdaBoost en forma de cascada propuesto por \citep{Viola2001}, el cual fue creado originalmente para atacar el problema de detección de rostros. El método puede ser usando para detectar cualquier objeto debido a que la detección se realiza clasificando imágenes basándose en el valor de características simples.
 
-La técnica detecta si el objeto se encuentra en la escena, usando una versión modificada del clasificador AdaBoost \citep{Freund1995} en forma de cascada, y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}. Las características son seleccionadas usando también el clasificador AdaBoost y el valor de estas es calculado mediante el uso de una imagen integral \citep{Viola2001}. 
+La técnica detecta si el objeto se encuentra en la escena, usando una versión modificada del clasificador AdaBoost \citep{Freund1995} en forma de cascada y discrimina el objeto tomando en cuenta el valor de las características Haar \citep{Viola2001}. Las características son seleccionadas usando también el clasificador AdaBoost y el valor de éstas es calculado mediante el uso de una imagen integral \citep{Viola2001}. 
 
 La Figura \ref{fig:ViolaJonesDiagram} muestra un diagrama del proceso del método de detección, el primer paso es obtener la muestras de entrenamiento con las cuales se construirá el clasificador; el siguiente paso es seleccionar las características que formarán el clasificador. Estas se escogen mediante el algoritmo de AdaBoost y su valor es calculado usando la imagen integral. El paso final  involucra construir el clasificador mediante el uso de Adaboost,  en forma de cascada.
 
@@ -123,11 +123,11 @@ Enseguida se explica a detalle cada etapa del método \citep{Viola2001}.
 
 Las características Haar, son operadores rectangulares como los que se muestran en la Figura \ref{fig:haarFeatures}. A continuación se explicarán los operadores Haar básicos:
 \begin{itemize}
-\item Las características con dos rectángulos Figura \ref{fig:haarFeatures:1}, Figura \ref{fig:haarFeatures:2}, contienen dos regiones rectangulares adyacentes, y el valor de la característica se calcula tomando la diferencia de la suma de ambas regiones. 
+\item Las características con dos rectángulos Figura \ref{fig:haarFeatures:1}, Figura \ref{fig:haarFeatures:2}, contienen dos regiones rectangulares adyacentes, el valor de la característica se calcula tomando la diferencia de la suma de ambas regiones. 
 
-\item Las características con tres rectángulos Figura \ref{fig:haarFeatures:3}, contienen tres regiones rectangulares adyacentes, y el valor de la característica se calcula sumando las regiones exteriores y restando la suma de la región interior.
+\item Las características con tres rectángulos Figura \ref{fig:haarFeatures:3}, contienen tres regiones rectangulares adyacentes, el valor de la característica se calcula sumando las regiones exteriores y restando la suma de la región interior.
 
-\item Las características con cuatro rectángulos Figura \ref{fig:haarFeatures:4}, contienen cuatro regiones rectangulares adyacentes, y el valor de la característica se obtiene con la diferencia entre la suma de las regiones pares diagonales.
+\item Las características con cuatro rectángulos Figura \ref{fig:haarFeatures:4}, contienen cuatro regiones rectangulares adyacentes, el valor de la característica se obtiene con la diferencia entre la suma de las regiones pares diagonales.
 \end{itemize} 
 
 \begin{figure}[h!]
@@ -144,7 +144,7 @@ Las características Haar, son operadores rectangulares como los que se muestran
 
 Uno de los aportes del método desarrollado por Viola y Jones es el concepto de imagen integral con la cual se calcula el valor de las características de manera rápida, es decir en tiempo constante, $O(1)$.  
 
-La imagen integral, $SI$, de un imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se le quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}   
+La imagen integral, $SI$, de una imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se le quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}   
 \begin{equation}
 SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1).
 \end{equation}   
@@ -237,8 +237,8 @@ donde $\alpha_t = \log{\frac{1}{\beta_t}}$.
 
 El objetivo de realizar la detección utilizando un clasificador en forma de cascada es descartar de manera rápida las regiones donde no se encuentra el objeto.
 
-El clasificador en cascada  esta compuesto por etapas Figura \ref{fig:Cascade}, cada una de estas es un clasificador fuerte. Este clasificador es entrenado por medio de AdaBoost.El cual se encarga de encontrar el orden de evaluación de las características relevantes. \\
-La selección se realiza como se muestra en el Algoritmo \ref{alg:Cascade} , cumpliendo cierta precisión en la detección $D$, ver Ecuación \ref{eq:D} , y cierta tasa de falsos positivos $F$, ver Ecuación \ref{eq:F} .
+El clasificador en cascada está compuesto por etapas Figura \ref{fig:Cascade}, cada una de estas es un clasificador fuerte. Este clasificador es entrenado por medio de AdaBoost. El cual se encarga de encontrar el orden de evaluación de las características relevantes. 
+La selección se realiza como se muestra en el Algoritmo \ref{alg:Cascade} , cumpliendo cierta precisión en la detección $D$, ver Ecuación \ref{eq:D}, cierta tasa de falsos positivos $F$, ver Ecuación \ref{eq:F} .
 
 \begin{figure}[h!]
 \begin{center}
@@ -248,7 +248,7 @@ La selección se realiza como se muestra en el Algoritmo \ref{alg:Cascade} , cum
 \label{fig:Cascade}
 \end{figure}
 
-El proceso de detección funciona de la siguiente manera: la sub-ventana es evaluada en el primer clasificador; un resultado positivo desencadena la evaluación de un segundo clasificador, el cual también ha sido ajustado para alcanzar cierta precisión; un resultado positivo en el segundo clasificador desencadena una tercera evaluación en el siguiente clasificador, y así sucesivamente. Un resultado negativo en cualquier punto del proceso de evaluación conduce al rechazo inmediato de la sub-ventana.
+El proceso de detección funciona de la siguiente manera: la sub-ventana es evaluada en el primer clasificador; un resultado positivo desencadena la evaluación de un segundo clasificador, el cual también ha sido ajustado para alcanzar cierta precisión; un resultado positivo en el segundo clasificador desencadena una tercera evaluación en el siguiente clasificador y así sucesivamente. Un resultado negativo en cualquier punto del proceso de evaluación conduce al rechazo inmediato de la sub-ventana.
 
 La tasa de detección del clasificador en forma de cascada es: 
 \begin{equation} \label{eq:D}
@@ -385,7 +385,7 @@ La Figura \ref{fig:OM:5} muestra el resultado de aplicar la operación a la Figu
 \subfigure[erosión]{\includegraphics[scale=.55]{./Figures/erosionMO}\label{fig:OM:3}} \hspace{10mm}
 \subfigure[apertura]{\includegraphics[scale=.55]{./Figures/openingMO}\label{fig:OM:4}} \hspace{10mm}
 \subfigure[cierre]{\includegraphics[scale=.55]{./Figures/closingMO}\label{fig:OM:5}}
-\caption{Aplicación de las principales operaciones morfológicas a la imagen que se encuentra en el inciso a, \citep{Smith1999}.\quad }\label{fig:OM}
+\caption{Aplicación de las principales operaciones morfológicas a la imagen que se encuentra en el inciso a), \protect\citep{Smith1999} } \label{fig:OM}
 \end{figure} 
 
 
@@ -465,7 +465,7 @@ donde $i$ representa el número de dedo, cuando $i=0$ se toma el punto de profun
 \begin{center}
 \includegraphics[scale=.55]{./Figures/rootFingers.png}
 \end{center}
-\caption{La Figura muestra parte de la mano y en ella se aprecia los siguientes elementos: en color rojo la envolvente convexa, en amarillo los puntos de inicio y final de los defectos de convexidad,  en color azul los puntos de profundidad de los defectos, en verde la linea que une a los puntos de profundidad consecutivos y finalmente en morado los puntos medios, \citep{Hummel2014}} 
+\caption{La Figura muestra parte de la mano y en ella se aprecia los siguientes elementos: en color rojo la envolvente convexa, en amarillo los puntos de inicio y final de los defectos de convexidad,  en color azul los puntos de profundidad de los defectos, en verde la linea que une a los puntos de profundidad consecutivos y finalmente en morado los puntos medios, \protect\citep{Hummel2014}} 
 \label{fig:RootFingers}
 \end{figure} 
 
@@ -489,7 +489,7 @@ La distancia $PC$ es la distancia vertical de la raíz del dedo al centro de la 
 \begin{center}
 \includegraphics[scale=.6]{./Figures/angles.png}
 \end{center}
-\caption{En la imagen se representan los siguientes elementos, el eje vertical con respecto a la mano se encuentra como una línea de color verde; la línea roja represente la distancia del eje vertical a la raíz de los dedos; el punto rosa representa el centro de la palma de la mano, el área azul representa el ángulo de que existe de la línea que una al centro con la raíz de los dedos y finalmente el área amarilla representa el ángulo que forma la línea del centro a la punta de los dedos, \citep{Sgouropoulos2014}.}
+\caption{En la imagen se representan los siguientes elementos, el eje vertical con respecto a la mano se encuentra como una línea de color verde; la línea roja represente la distancia del eje vertical a la raíz de los dedos; el punto rosa representa el centro de la palma de la mano, el área azul representa el ángulo de que existe de la línea que una al centro con la raíz de los dedos y finalmente el área amarilla representa el ángulo que forma la línea del centro a la punta de los dedos, \protect\citep{Sgouropoulos2014}.}
 \label{fig:anglesFingers}
 \end{figure} 
 
@@ -511,7 +511,7 @@ SVM realiza la clasificación separando las clases calculando el hiperplano que 
 \begin{center}
 \includegraphics[scale=.55]{./Figures/SVMarticle.png}
 \end{center}
-\caption{La imagen muestra la separación de dos clases, (los círculos en color azul y negro), mediante un hiperplano óptimo; donde $\textbf{w}$ representa la normal al hiperplano, $\frac{\textbf{-b}}{\textbf{w}}$ la distancia el hiperplano al origen. \citep{Burges1998}.}
+\caption{La imagen muestra la separación de dos clases, (los círculos en color azul y negro), mediante un hiperplano óptimo; donde $\textbf{w}$ representa la normal al hiperplano, $\frac{\textbf{-b}}{\textbf{w}}$ la distancia el hiperplano al origen. \protect\citep{Burges1998}.}
 \label{fig:SVM}
 \end{figure} 
 
