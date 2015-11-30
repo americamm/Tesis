@@ -1,0 +1,26 @@
+\appendix{}
+
+\chapter{Algoritmo que calcula el número de dedos.} \label{aped:C}
+\vspace{-3ex}%
+\noindent
+\rule{\textwidth}{1pt}
+\vspace{-2ex}% 
+
+A  se presenta el algoritmo para calcular el numero de dedos.  
+
+\begin{algorithm}[h!]
+\begin{algorithmic}[1]
+\REQUIRE Los conjuntos $\mathcal{S}$, $\mathcal{D}$, el punto $C_r$ y el valor $L_r$.   
+\ENSURE Número de dedos levantados, $Nf$.  
+\FOR{$i=1$ hasta $n$}  
+	\STATE $k=6$. 	
+	
+	\IF{$ \left[ s_i(x,y) < C_r(x,y)$ \textbf{O} $d_i(s,y) < C_r(x,y) ]$ \textbf{Y} $s_i(x,y) < d_i(x,y)$ \textbf{Y} $ \delta_i > \frac{L_r}{k}$ } 
+	\STATE $Nf=Nf+1$
+	\ENDIF 
+\ENDFOR 
+
+\caption{Cálculo del número de dedos levantados de la mano.}
+\label{alg:NumDedos} 
+\end{algorithmic}
+\end{algorithm} 

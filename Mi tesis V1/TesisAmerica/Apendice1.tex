@@ -1,0 +1,54 @@
+\appendix{}
+
+\chapter{Algoritmo AdaBoost}\label{aped:apendA}
+%
+\setcounter{figure}{0}
+\numberwithin{figure}{chapter}
+\numberwithin{table}{section} 
+\vspace{-3ex}%
+\noindent
+\rule{\textwidth}{1pt}
+\vspace{-2ex}%  
+
+Enseguida se presenta el algoritmo AdaBoost:
+
+\begin{algorithm}[h!]
+\begin{algorithmic}[1]
+
+\REQUIRE El conjunto $\lbrace (x_1,y_1), \cdots, (x_n,y_n) \rbrace$ donde $x_i$ representa las imágenes de entrenamiento, $y_i= 0,1,$ representa las imágenes negativas y positivas respectivamente. 
+\ENSURE El clasificador fuerte $h(x)$.  
+
+\STATE Se inicializan los pesos $w_{1,i}=\frac{1}{2m} , \frac{1}{2l},$ para $y_i=0,1$ respectivamente, donde $m$ y $l$ son el número de imágenes negativas y positivas respectivamente.  
+
+\FOR {$t=1$ hasta $T$}   
+	\STATE Se normalizan los pesos 
+	$$w_{t,i}=\frac{w_{t,i}}{\sum_{j=1}^n w_{t,j}},$$ 
+	para que $w_t$ sea una distribución  de probabilidad. 	
+	
+	\FOR {cada características $j$} 
+	Entrenar un clasificador $h_j,$ donde se utiliza una sola característica. 
+	El error $\epsilon$ es evaluado con respecto a $w_t$, 
+	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}.$$ 
+    \ENDFOR
+	
+	\STATE Escoger el clasificador $h_i$ con el error más pequeño. 
+	
+	\STATE Se actualizan los pesos  
+	$$w_{t+1,i}=w_{t,i} \beta_t^{1-e_i},$$ 
+	donde $\beta_t = \frac{\epsilon_T}{1-\epsilon_t}$, el valor de  
+	$e_i=0$ si $x_i$ es clasificado correctamente de otra forma $e_i=1$. 
+\ENDFOR  
+
+\STATE El clasificador final o clasificador fuerte es: 
+$$ h(x) = 
+\begin{cases}  
+1, \quad \sum_{t=1}^T \alpha_th_t(x) \geqslant \frac{1}{2}\sum_{t=1}^T \alpha_t\\  
+0, \quad de \quad otra \quad forma. 
+\end{cases} ,$$
+donde $\alpha_t = \log{\frac{1}{\beta_t}}$.
+
+\caption{}\label{alg:AdaBoost}
+\end{algorithmic}
+\end{algorithm} 
+
+ 

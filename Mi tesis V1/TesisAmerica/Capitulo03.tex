@@ -183,55 +183,13 @@ h_i(x)=
 0, \quad de \quad otra \quad forma.\\
 \end{cases} ,
 \end{equation}
-donde $x$ es una sub-ventana de la imagen, $f_i(x)$ es una característica, $\theta$ es un umbral, y $p_i(x)$ representa el signo de la desigualdad.   
+donde $x$ es una sub-ventana de la imagen, $f_i(x)$ es una característica, $\theta$ es un umbral, y $p_i$ representa el signo de la desigualdad.   
 
 El clasificador fuerte es una combinación lineal de los clasificadores débiles, y se define de la siguiente forma: 
 \begin{equation}
 h(x)= \alpha_1h_1(x)+\alpha_2h_2(x)+ \cdots +\alpha_nh_n(x) ,
 \end{equation}
-donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a cada característica, el cual va entre $0$ y $1$.
-
-Enseguida se presenta el algoritmo AdaBoost:
-
-\begin{algorithm}[h!]
-\begin{algorithmic}[1]
-
-\REQUIRE El conjunto $\lbrace (x_1,y_1), \cdots, (x_n,y_n) \rbrace$ donde $x_i$ representa las imágenes de entrenamiento, $y_i= 0,1,$ representa las imágenes negativas y positivas respectivamente. 
-\ENSURE El clasificador fuerte $h(x)$.  
-
-\STATE Se inicializan los pesos $w_{1,i}=\frac{1}{2m} , \frac{1}{2l},$ para $y_i=0,1$ respectivamente, donde $m$ y $l$ son el número de imágenes negativas y positivas respectivamente.  
-
-\FOR {$t=1$ hasta $T$}   
-	\STATE Se normalizan los pesos 
-	$$w_{t,i}=\frac{w_{t,i}}{\sum_{j=1}^n w_{t,j}},$$ 
-	para que $w_t$ sea una distribución  de probabilidad. 	
-	
-	\FOR {cada características $j$} 
-	Entrenar un clasificador $h_j,$ donde se utiliza una sola característica. 
-	El error $\epsilon$ es evaluado con respecto a $w_t$, 
-	$$\epsilon = \sum_i w_i | h_i(x_i) - y_i |}.$$ 
-    \ENDFOR
-	
-	\STATE Escoger el clasificador $h_i$ con el error más pequeño. 
-	
-	\STATE Se actualizan los pesos  
-	$$w_{t+1,i}=w_{t,i} \beta_t^{1-e_i},$$ 
-	donde $\beta_t = \frac{\epsilon_T}{1-\epsilon_t}$, el valor de  
-	$e_i=0$ si $x_i$ es clasificado correctamente de otra forma $e_i=1$. 
-\ENDFOR  
-
-\STATE El clasificador final o clasificador fuerte es: 
-$$ h(x) = 
-\begin{cases}  
-1, \quad \sum_{t=1}^T \alpha_th_t(x) \geqslant \frac{1}{2}\sum_{t=1}^T \alpha_t\\  
-0, \quad de \quad otra \quad forma. 
-\end{cases} ,$$
-donde $\alpha_t = \log{\frac{1}{\beta_t}}$.
-
-\caption{}\label{alg:AdaBoost}
-\end{algorithmic}
-\end{algorithm} 
-
+donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a cada característica, el cual va entre $0$ y $1$. En el Apéndice \ref{aped:A}
 
 \subsubsection{Clasificador AdaBoost en cascada}\label{sssec:AdaboostCascade}   
 
@@ -261,36 +219,7 @@ La tasa de precisión de falsos positivos, $F$ del clasificador de cascada es:
 F = \prod^K_{i=1} f_i ,
 \end{equation}
 donde $K$ es el número de clasificadores fuertes y $f_i$ es la tasa de precisión del $i$-ésimo clasificador. 
-
-\begin{algorithm}[h!]
-\begin{algorithmic}[2]
-
-\REQUIRE Imágenes positivas $P$, negativas $N$, $f$ el valor máximo de precisión de falsos positivos por etapa, $d$ es el valor mínimo de precisión en la detección por etapa. 
-\ENSURE El clasificador en forma de cascada.  
-
-\STATE  $F_0 = 1$, $D_0=1.$
-
-\STATE  $i=0.$ 
-
-\WHILE {$F_i > F_{Tarjet}$} 
-	\STATE $i=i+1.$
-	\STATE $n_i=0$, $F_i=F_{i-1}.$
-	\WHILE {$F_I > F \times fp_{i-1}$} 
-		\STATE $n_i = n_i +1.$ 
-		\STATE Entrenar un clasificador usando AdaBoost con $P$, $N$ y $n_i$ características. 
-		\STATE Evaluar el clasificador de cascada para determinar $F_i$ y $D_i$ en el conjunto de validación. 
-		\STATE Decrementar el umbral para el $i$-ésimo clasificador hasta que el actual clasificador en cascada tenga un grado 			de detección de por lo menos $d \times D_i-1$.
-	\ENDWHILE
-	\STATE $N=0.$ 
-	\IF {$F_i > F_{Tarjet}$} 
-		\STATE Evaluar el actual clasificador en cascada en el conjunto de imágenes negativas y poner cualquier detección 				falsa en el conjunto $N$.
-	\ENDIF
-
-\ENDWHILE    
-\caption{}\label{alg:Cascade} 
-\end{algorithmic}
-\end{algorithm} 
-
+ 
 
 \subsection{Binarización}\label{subsec:Binarization} 
 
@@ -306,8 +235,10 @@ B(x,y)=
 
 Existen diversas técnicas para binarizar una imagen, estas se pueden clasificar en dos grupos: global y local. Los métodos globales calculan un umbral el cual es utilizado para todos los pixeles de la imagen y los métodos locales que calculan varios umbrales para ciertas regiones de la imagen \citep{Chaki2014}.  En este trabajo se utiliza el método desarrollado por \citep{Otsu1979}.
 
-El técnica desarrolla por Otsu's es un método de binarizaci\'on global. El algoritmo asume que existen dos clases de de pixeles los del fondo y los que representan el primer plano de la imagen. El método calcula el umbral optimo $T$ que separa a estas dos clases para el cual la varianza dentro las clases es la mínima. Para calcular $T$ que minimice las varianzas dentro clases, se define como una suma ponderada de las varianzas de las dos clases.\\ 
-La varianza ponderada dentro de clases es: 
+El técnica desarrolla por Otsu es un método de binarizaci\'on global. El algoritmo supone que existen dos clases de pixeles: los del fondo y los que representan el primer plano de la imagen. 
+
+El método calcula el umbral optimo $T$ que separa a estas dos clases para el cual la varianza dentro las clases es la mínima. Para calcular $T$ que minimice las varianzas dentro de las clases, se define como una suma ponderada de las varianzas de las dos clases.
+La varianza ponderada dentro de las clases es: 
 \begin{equation}
 \sigma^2_w(t) = q_1(t)\sigma^2_1(t) + q_2(t)\sigma^2_2(t),
 \end{equation} 
@@ -323,17 +254,16 @@ y la media de cada clase es calculada como:
 \qquad \text{y} \qquad
 \mu_2(t) = \sum ^{255}_{i=t+1} \frac{i \cdot P(i)}{q_2(t)}.
 \end{equation} 
-\\
 La varianza total $\sigma^2$, es igual a la suma de la varianza dentro de clase y la varianza entre clases $\sigma^2_b(t)$, es decir: 
 \begin{equation}
 \sigma^2 = \sigma^2_w(t) + \sigma^2_b(t),
 \end{equation}
-donde $\sigma^2_b(t)= q_1(t)\left[ 1- q_1(t) \right]\left[ \mu_1(t) - \mu_2(t) \right]^2 .$  \\
+donde $\sigma^2_b(t)= q_1(t)\left[ 1- q_1(t) \right]\left[ \mu_1(t) - \mu_2(t) \right]^2 .$  
 Como la varianza total no depende de $t$, es una constante, entonces para encontrar el umbral que minimice la varianza dentro de clases equivale a encontrar el máximo de $\sigma^2_b(t)$. 
 
 \subsection{Operaciones Morfológicas}\label{subsec:OperacionesMorfologicas} 
 
-Otra técnica muy utilizada en procesamiento de imágenes son las operaciones morfológicas.Que son un conjunto de operaciones no lineales. La idea es que al aplicar alguna de estas operaciones el ruido sea removido tomando en cuenta la forma y estructura de la imagen.\\ 
+Otra técnica muy utilizada en procesamiento de imágenes son las operaciones morfológicas. Que son un conjunto de operaciones no lineales. La idea es que al aplicar alguna de estas operaciones el ruido sea removido tomando en cuenta la forma y estructura de la imagen. 
 Las operaciones morfológicas \citep{Premaratne2013} utilizan un elemento estructural el cual se aplica por toda la imagen. Los elementos estructurales pueden ser de distintas formas como los que se muestran en la Figura \ref{fig:EX}.
 \begin{figure}[h!]
 \centering
@@ -347,7 +277,7 @@ Existen distintas operaciones morfológicas, las básicas o principales son la d
  
 \subsubsection{Dilatación}\label{sssec:Dilatation}
 La dilatación es una operación que añade pixeles a la orilla de los objetos que se encuentran en la imagen. En la Figura \ref{fig:OM:2} 
-se aplica esta operación a la Figura \ref{fig:OM:1}.\\
+se aplica esta operación a la Figura \ref{fig:OM:1}.
 La dilatación se define como:  
 \begin{equation}
 S \oplus EX = \lbrace S|EX_S \subseteq S \rbrace,
@@ -355,7 +285,7 @@ S \oplus EX = \lbrace S|EX_S \subseteq S \rbrace,
 donde $EX_S$ es el elemento estructural trasladado con la imagen. 
 
 \subsubsection{Erosión}\label{sssec:OMerosion}
-La erosión remueve pixeles a la orilla de los objetos que se encuentran en la imagen. En la Figura \ref{fig:OM:3} se muestra el resultado de aplicar la operación a la Figura \ref{fig:OM:1}.\\ 
+La erosión remueve pixeles a la orilla de los objetos que se encuentran en la imagen. En la Figura \ref{fig:OM:3} se muestra el resultado de aplicar la operación a la Figura \ref{fig:OM:1}.
 La erosión se define como: 
 \begin{equation}
 S \ominus EX = \lbrace S|EX_S \subseteq S \rbrace,
@@ -363,7 +293,7 @@ S \ominus EX = \lbrace S|EX_S \subseteq S \rbrace,
 donde $EX_S$ es el elemento estructural trasladado con la imagen. 
 
 \subsubsection{Apertura}\label{sssec:Opening} 
-La operación apertura abre huecos entre objetos conectados por un enlace delgado de pixeles, también suaviza los contornos del objeto. Esta operación se calculada realizado dos operaciones básicas una erosión seguida de una dilatación \\ 
+La operación apertura abre huecos entre objetos conectados por un enlace delgado de pixeles, también suaviza los contornos del objeto. Esta operación es calculada realizando dos operaciones básicas: una erosión seguida de una dilatación. 
 La apertura se define como:  
 \begin{equation}
 S \circ EX = (S \ominus EX) \oplus EX.
@@ -371,7 +301,7 @@ S \circ EX = (S \ominus EX) \oplus EX.
 La Figura \ref{fig:OM:4} muestra el resultado de aplicar la operación apertura a la Figura \ref{fig:OM:1}.
 
 \subsubsection{Cierre}\label{sssec:Closure}
-La operación cierre elimina huecos pequeños y rellena huecos en los contornos. El cierre es calculado realizando las operación de dilatación seguida de la erosión.\\
+La operación cierre elimina huecos pequeños y rellena huecos en los contornos. El cierre es calculado realizando las operación de dilatación seguida de la erosión.
 El cierre se define como:
 \begin{equation}
 S \bullet EX = (S \oplus EX) \ominus EX.
@@ -387,8 +317,6 @@ La Figura \ref{fig:OM:5} muestra el resultado de aplicar la operación a la Figu
 \subfigure[cierre]{\includegraphics[scale=.55]{./Figures/closingMO}\label{fig:OM:5}}
 \caption{Aplicación de las principales operaciones morfológicas a la imagen que se encuentra en el inciso a), \protect\citep{Smith1999} } \label{fig:OM}
 \end{figure} 
-
-
 
 
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -420,56 +348,39 @@ Sea $A$ un conjunto en el espacio euclidiano $\bold{\Re}^d$, donde $d$ es la dim
 
 Sea $B$ un conjunto de puntos en el plano Euclidiano, la envolvente convexa de $B$ es el conjunto convexo más pequeño que contiene a todos los puntos en $B$. En la Figura \ref{fig:FigConvexHullDefects} se muestra de color rojo la envolvente convexa de la Figura cuyo contorno se encuentra de color negro. 
 
-Los defectos de convexidad de la envolvente convexa, son el conjunto de puntos que no pertenecen al casco convexo. El defecto es el espacio que existe entre el contorno de la envolvente convexa y del objeto.\\
-Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ el conjunto de defectos de convexidad de una envolvente convexa. Cada defecto esta compuesto por tres elementos: el punto de inicio del defecto $s_i(x,y)$, el punto con mayor distancia de la envolvente al objeto, $d_i(x,y)$ y el punto final del defecto, $e_i(x,y)$.
+Los defectos de convexidad de la envolvente convexa, son el conjunto de puntos que no pertenecen a la envolvente convexa. El defecto es el espacio que existe entre el contorno de la envolvente convexa y del objeto.
+
+Sea $CD=\lbrace cd_1, cd_2, \cdots, cd_n \rbrace$ el conjunto de defectos de convexidad de una envolvente convexa. Cada defecto está compuesto por tres elementos: el punto de inicio del defecto $s_i(x,y)$, el punto con mayor distancia de la envolvente al objeto, $d_i(x,y)$ y el punto final del defecto, $e_i(x,y)$.
 En la Figura \ref{fig:FigConvexHullDefects} los puntos amarillos representan los puntos de profundidad de los defectos de convexidad. 
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.4]{./Figures/ConvexHullAndDefects.png}
 \end{center}
-\caption{En la imagen se aprecia de color rojo la envolvente convexa, de negro el contorno de la Figura, y los puntos amarillos son el punto de profundidad de los defectos de convexidad.}
+\caption{En la imagen se aprecia de color rojo la envolvente convexa, de negro el contorno de la figura y los puntos amarillos son el punto de profundidad de los defectos de convexidad.}
 \label{fig:FigConvexHullDefects}
 \end{figure}  
 
-Usando las técnicas anteriores podemos extraer características importantes como el número de dedos, la posición del centro de la palma de mano, la posición de la punta de los dedos, la posición del inicio o raíz de los dedos, el ángulo del centro de la palma de la mano a la punta de los dedos, ángulo $TC$, el ángulo del centro de la palma de la mano a al inicio de los dedos, ángulo $RC$ y la distancia vertical del centro de la palma de la mano al inicio de los dedos. Enseguida se explica como son obtenidas las características mencionadas. 
+Usando las técnicas anteriores podemos extraer características importantes como el número de dedos, la posición del centro de la palma de mano, la posición de la punta de los dedos, la posición del inicio o raíz de los dedos, el ángulo del centro de la palma de la mano a la punta de los dedos, ángulo $TC$, el ángulo del centro de la palma de la mano al inicio de los dedos, ángulo $RC$ y la distancia vertical del centro de la palma de la mano al inicio de los dedos. Enseguida se explica cómo son obtenidas las características mencionadas. 
 
-El número de dedos que se encuentran levantados es calculado con el Algoritmo \ref{alg:NumDedos} desarrollado por \citep{Kathuria2011}, el cual utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$, los puntos de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, las distancias del punto de inicio al de mayor distancia, $\mathcal{\delta}=\lbrace \delta_1(x,y), \delta_2(x,y), \cdots, \delta_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa .\\
+El número de dedos que se encuentran levantados es calculado con el Algoritmo \ref{alg:NumDedos} desarrollado por \citep{Kathuria2011}, el cual utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$, los puntos de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, las distancias del punto de inicio al de mayor distancia, $\mathcal{\delta}=\lbrace \delta_1(x,y), \delta_2(x,y), \cdots, \delta_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa.
 Sea $C_r(x,y)$, el punto que representa el centroide del rectángulo más pequeño que encierra a la mano, $L_r$, la altura del rectángulo y $k$ una constante. 
-
-\begin{algorithm}[h!]
-\begin{algorithmic}[1]
-\REQUIRE Los conjuntos $\mathcal{S}$, $\mathcal{D}$, el punto $C_r$ y el valor $L_r$.   
-\ENSURE Número de dedos levantados, $Nf$.  
-\FOR{$i=1$ hasta $n$}  
-	\STATE $k=6$. 	
-	
-	\IF{$ \left[ s_i(x,y) < C_r(x,y)$ \textbf{O} $d_i(s,y) < C_r(x,y) ]$ \textbf{Y} $s_i(x,y) < d_i(x,y)$ \textbf{Y} $ \delta_i > \frac{L_r}{k}$ } 
-	\STATE $Nf=Nf+1$
-	\ENDIF 
-\ENDFOR 
-
-\caption{Cálculo del número de dedos levantados de la mano.}
-\label{alg:NumDedos} 
-\end{algorithmic}
-\end{algorithm} 
 
 La posición de la raíz de los dedos, $Fr(s,y)$ puede ser calculada usando los defectos de convexidad \citep{Hummel2014}, en especifico los puntos de profundidad, $d(x,y)$. Se calcula tomando el punto medio de los puntos de profundidad consecutivos encontrados en medio de los dedos, como se muestra en la Figura \ref{fig:RootFingers} . Es decir: 
 \begin{equation}
 Fr_i(x,y)= \left( \frac{ x_{d_i}+x_{d_{i-1}} }{2},\frac{y_{d_i}+y_{d_{i-1}}}{2}  \right),
 \end{equation}
-
 donde $i$ representa el número de dedo, cuando $i=0$ se toma el punto de profundidad anterior al dedo, si $i=6$ se toma el punto de profundidad posterior al dedo. 
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.55]{./Figures/rootFingers.png}
 \end{center}
-\caption{La Figura muestra parte de la mano y en ella se aprecia los siguientes elementos: en color rojo la envolvente convexa, en amarillo los puntos de inicio y final de los defectos de convexidad,  en color azul los puntos de profundidad de los defectos, en verde la linea que une a los puntos de profundidad consecutivos y finalmente en morado los puntos medios, \protect\citep{Hummel2014}} 
+\caption{La figura muestra parte de la mano y en ella se aprecia los siguientes elementos: en color rojo la envolvente convexa, en amarillo los puntos de inicio y final de los defectos de convexidad,  en color azul los puntos de profundidad de los defectos, en verde la linea que une a los puntos de profundidad consecutivos y finalmente en morado los puntos medios, \protect\citep{Hummel2014}} 
 \label{fig:RootFingers}
 \end{figure} 
 
-El centro de la palma de mano también es calculado, con los puntos de profundidad de los defectos de convexidad, para ello se toma como centro de la palma el centro del rectángulo mas chico que une rodea a los puntos de convexidad. 
+El centro de la palma de mano también se calcula, con los puntos de profundidad de los defectos de convexidad. Se toma como centro de la palma de la mano el centro del rectángulo más chico que une rodea a los puntos de convexidad. 
 
 El ángulo $RC$ es el formado por el eje $y$  y la línea que une al punto que representa la posición de la raíz de los dedos, $Fr(x,y)$ con el centro de la palma de la mano, $Ch(x,y)$, \citep{Sgouropoulos2014}. 
 \begin{equation}
@@ -552,8 +463,6 @@ Como $d_+ = d_- = \frac{1}{\Vert w \Vert}$, el margen es $\frac{2}{\Vert w \Vert
 \begin{equation}
 \text{min} \quad \frac{1}{2} \Vert w \Vert \quad \text{tal que} \quad y_i(w \cdot x_i + b) -1 \geq 0.
 \end{equation}  
-
-
 
 
 \newpage

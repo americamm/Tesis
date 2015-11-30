@@ -1,0 +1,37 @@
+\appendix{}
+
+\chapter{Algoritmo Adaboost en forma de cascada.} \label{aped:B}
+\vspace{-3ex}%
+\noindent
+\rule{\textwidth}{1pt}
+\vspace{-2ex}%  
+
+
+\begin{algorithm}[h!]
+\begin{algorithmic}[2]
+
+\REQUIRE Imágenes positivas $P$, negativas $N$, $f$ el valor máximo de precisión de falsos positivos por etapa, $d$ es el valor mínimo de precisión en la detección por etapa. 
+\ENSURE El clasificador en forma de cascada.  
+
+\STATE  $F_0 = 1$, $D_0=1.$
+
+\STATE  $i=0.$ 
+
+\WHILE {$F_i > F_{Tarjet}$} 
+	\STATE $i=i+1.$
+	\STATE $n_i=0$, $F_i=F_{i-1}.$
+	\WHILE {$F_I > F \times fp_{i-1}$} 
+		\STATE $n_i = n_i +1.$ 
+		\STATE Entrenar un clasificador usando AdaBoost con $P$, $N$ y $n_i$ características. 
+		\STATE Evaluar el clasificador de cascada para determinar $F_i$ y $D_i$ en el conjunto de validación. 
+		\STATE Decrementar el umbral para el $i$-ésimo clasificador hasta que el actual clasificador en cascada tenga un grado 			de detección de por lo menos $d \times D_i-1$.
+	\ENDWHILE
+	\STATE $N=0.$ 
+	\IF {$F_i > F_{Tarjet}$} 
+		\STATE Evaluar el actual clasificador en cascada en el conjunto de imágenes negativas y poner cualquier detección 				falsa en el conjunto $N$.
+	\ENDIF
+
+\ENDWHILE    
+\caption{}\label{alg:Cascade} 
+\end{algorithmic}
+\end{algorithm} 
