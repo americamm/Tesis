@@ -11,7 +11,8 @@ Los experimentos y el sistema propuesto fue implementado en una computadora de e
 
 Para analizar la tasa de precisión de reconocimiento del sistema propuesto se realizaron varios experimentos en distintas circunstancias. Se analizó el rendimiento del sistema a tres diferentes distancias $70$, $80$, $90$ $cm.$ del Kinect frontal. También en diferentes circunstancias de iluminación, con iluminación estándar, media y sin iluminación. Se escogió este tipo de escenarios para evaluar el sistema, para obtener el rendimiento en situaciones que representen o estén en condiciones naturales o reales.
 
-Se utilizaron imágenes reales capturadas por ambos sensores de profundidad del Kinect de $640 \times 480$ pixeles. Las imágenes son $5$ personas distintas, realizando los gestos de puño y el de palma de la mano con los dedos separados, para los gestos estáticos. Para los gestos dinámicos se tomaron los gestos de $3$ personas cada una de ellas realizando los gestos estáticos en movimiento.\\
+Se utilizaron imágenes reales capturadas por ambos sensores de profundidad del Kinect de $640 \times 480$ pixeles. Las imágenes son cinco personas distintas, realizando los gestos de puño y el de palma de la mano con los dedos separados, para los gestos estáticos. Para los gestos dinámicos se tomaron los gestos de tres personas cada una de ellas realizando los gestos estáticos en movimiento.
+
 Los gestos se realizaron usando una sola mano, en este caso todos los usuarios optaron por usar la mano derecha. Pero el sistema este hecho para que funcione no importando la mano que se utilice. La mano del usuario tiene que tener una ligera rotación en el eje vertical para que el sistema pueda detectar el gesto.
 
 En cada experimento se analizo el rendimiento del sistema usando un solo Kinect (kinect frontal) y usando los dos dispositivos.  
@@ -24,7 +25,7 @@ En cada experimento se analizo el rendimiento del sistema usando un solo Kinect 
 
 La evaluación del sistema en cuanto al reconocimiento de los gestos estáticos, se determino conforme al resultado de los experimentos realizados en circunstancias de iluminación, (estándar, media, baja). En cada conjunto de experimentos se tomo en cuenta la distancia, ya que en cada grupo se analizaron tres diferentes distancias: $70$, $80$, $90$ $cm$.  
 
-Se analizaron dos gestos estáticos la palma de la mano con los dedos separados, Gesto 1 y el puño, Gesto 2, de $5$ usuarios distintos. Para cada experimento se escogió al azar $200$ imágenes de cada gesto del conjunto de las imágenes capturadas. Cada imagen de un gesto tenia su correspondiente imagen con el Kinect lateral, de manera que eran $400$ imágenes por cada gesto. 
+Se analizaron dos gestos estáticos la palma de la mano con los dedos separados, Gesto 1 y el puño, Gesto 2, de cinco usuarios distintos. Para cada experimento se escogió al azar doscientas imágenes de cada gesto del conjunto de las imágenes capturadas. Cada imagen de un gesto tenia su correspondiente imagen con el Kinect lateral, de manera que eran cuatrocientas imágenes por cada gesto. 
 
 En el análisis del sistema con un solo Kinect, solo se tomaron las imágenes provenientes del Kinect frontal. Para el análisis con dos Kinect se tomaron estas mismas imágenes del Kinect frontal con su correspondiente imagen del Kinect lateral.
 
@@ -441,7 +442,7 @@ Seria conveniente hacer un experimento donde las imágenes tengan una buena reso
 
 La evaluación del sistema en cuanto al reconocimiento de los gestos dinámicos se realizo de la siguiente forma: al igual que en los gestos estáticos se hicieron dos conjuntos de experimentos cada uno con diferentes tipos de iluminación, media y sin iluminación. En cada conjunto de experimentos se tomo en cuenta la distancia, debido a que en cada grupo se analizaron tres distancias, $70$, $80$, $90$ $cm$. 
 
-Los gestos analizados fueron dos. El primero corresponde a la palma de la mano con los dedos separados, Gesto 3, en movimiento y el segundo el puño de la mano, Gesto 4, también en movimiento. Estos gestos fueron realizados por $3$ usuarios distintos. Para cada experimento se realizaron $5$ repeticiones de cada gesto y cada uno tenia una duración de $30$ cuadros por segundo. Se tomo como gesto valido si el porcentaje de reconocimiento de cada gestos estático presente en cada segundo es mayor o igual a $80 \%$, esto en base al trabajo realizado por \citep{Sultana2012}. \\
+Los gestos analizados fueron dos. El primero corresponde a la palma de la mano con los dedos separados, Gesto 3, en movimiento y el segundo el puño de la mano, Gesto 4, también en movimiento. Estos gestos fueron realizados por tres usuarios distintos. Para cada experimento se realizaron cinco repeticiones de cada gesto y cada uno tenia una duración de treinta cuadros por segundo. Se tomo como gesto valido si el porcentaje de reconocimiento de cada gestos estático presente en cada segundo es mayor o igual a $80 \%$, esto en base al trabajo realizado por \citep{Sultana2012}. 
 También se probo el sistema usando un solo Kinect, el frontal, en las mismas circunstancias mencionadas anteriormente. 
 Enseguida se presentan los resultados de cada experimento realizado, por usuario. 
 
@@ -456,41 +457,45 @@ Para el conjunto de estos experimentos, las imágenes se capturaron en un labora
 \begin{table}[h!]
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $70$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
-\label{table:D70LK1}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
-\hline
-\multicolumn{7}{ |c| }{Porcentajes de precision del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 77 & 80 & 83 & 73 & 70 \\ \cline{2-7}
-                      & {G4} & 93 & 100 & 100 & 93 & 97 \\ \hline \hline
-{\multirow{2}{*}{P2}} & {G3} & 87 & 80 & 87 & 70 & 97 \\ \cline{2-7}
-                      & {G4} & 97 & 93 & 97 & 93 & 93 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 83 & 100 & 80 & 53 & 90 \\ \cline{2-7}
-                      & {G4} & 100 & 93 & 93 & 87 & 100 \\ \hline
+\label{table:D70LK1} 
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
+\hline 
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} & R1 & R2 & R3 & R4  & R5\\  \cline{3-7} \hline\hline
+{\multirow{2}{*}{\textbf{P1}}} & {G3} & 77 & 80 & 83 & 73 & 70 \\ \cline{2-7}
+                               & {G4} & 93 & 100 & 100 & 93 & 97 \\ \hline \hline
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 87 & 80 & 87 & 70 & 97 \\ \cline{2-7}
+                      		   & {G4} & 97 & 93 & 97 & 93 & 93 \\ \hline \hline
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 83 & 100 & 80 & 53 & 90 \\ \cline{2-7}
+                      		   & {G4} & 100 & 93 & 93 & 87 & 100 \\ \hline
 \end{tabular}
 \end{center} 
 \end{table} 
 
-En la tabla anterior se observa que arriba del $90 \%$ de los gestos realizados por cada participante son reconocidos correctamente. A excepción del participante uno al realizar el gesto 3, pues solo reconoció $2$ gestos dinámicos de los $5$ realizados. Esto se debe al sensor, pues las manos del participante uno no son tan grandes y el sensor no logra captar en todas la imágenes los dedos del participante. 
+En la tabla \ref{table:D70LK1} se observa que arriba del $90 \%$ de los gestos realizados por cada participante son reconocidos correctamente. A excepción del participante uno al realizar el gesto 3, pues solo reconoció dos gestos dinámicos de los cinco realizados. Esto se debe al sensor, pues las manos del participante uno no son tan grandes y el sensor no logra captar en todas la imágenes los dedos del participante. 
 
 \begin{table}[h!]
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $70$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.}
 \label{table:D70LK2}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{}{*}{P1}} & {G3} & 73 & 63 & 77 & 73 & 63 \\ \cline{2-7}
-{\multirow{2}{*}{P2}} & {G3} & 100 & 93 & 87 & 93 & 87 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{1}{*}{\textbf{P1}}} & {G3} & 73 & 63 & 77 & 73 & 63 \\ \cline{2-7} \hline \hline
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 100 & 93 & 87 & 93 & 87 \\ \cline{2-7}
                       & {G4} & 93 & 77 & 77 & 67 & 60 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 100 & 100 & 93 & 97 & 93 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 100 & 100 & 93 & 97 & 93 \\ \cline{2-7}
                       & {G4} & 73 & 90 & 83 & 63 & 83 \\ \hline
 \end{tabular}  
 \end{center} 
 \end{table} 
 
-Al utilizar ambos Kinect se observa que hay menor exactitud de reconocimiento de los gestos. Como se usan las mismas imágenes para uno y dos Kinect en cada prueba, pues se tiene la misma justificación en la exactitud del participante 1. 
+Al utilizar ambos Kinect se observa que hay menor exactitud de reconocimiento de los gestos. Como se usan las mismas imágenes para uno y dos Kinect en cada prueba, pues se tiene la misma justificación en la exactitud del participante uno. 
 %---
 
 \item En el segundo experimento el usuario esta a una distancia de $80$ $cm.$ del Kinect frontal. En la Tabla \ref{table:D80LK1} se encuentran los resultados del reconocimiento de los dos gestos utilizando solo el Kinect frontal. En la Tabla \ref{table:D80LK2} se presentan los resultados utilizando los dos dispositivos Kinect.   
@@ -518,15 +523,17 @@ Al utilizar ambos Kinect se observa que hay menor exactitud de reconocimiento de
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $80$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
 \label{table:D80LK1}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 33 & 27 & 30 & 50 & 57 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{2}{*}{\textbf{P1}}} & {G3} & 33 & 27 & 30 & 50 & 57 \\ \cline{2-7}
                       & {G4} & 100 & 100 & 70 & 87 & 77 \\ \hline \hline
-{\multirow{2}{*}{P2}} & {G3} & 37 & 27 & 33 & 38 & 29 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 37 & 27 & 33 & 38 & 29 \\ \cline{2-7}
                       & {G4} & 100 & 93 & 90 & 80 & 75 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 47 & 87 & 60 & 60 & 63 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 47 & 87 & 60 & 60 & 63 \\ \cline{2-7}
                       & {G4} & 100 & 90 & 97 & 92 & 95 \\ \hline
 \end{tabular} 
 \end{center} 
@@ -536,15 +543,17 @@ Al utilizar ambos Kinect se observa que hay menor exactitud de reconocimiento de
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $80$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
 \label{table:D80LK2}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 83 & 86 & 67 & 87 & 70 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{2}{*}{\textbf{P1}}} & {G3} & 83 & 86 & 67 & 87 & 70 \\ \cline{2-7}
                       & {G4} & 35 & 53 & 70 & 77 & 57 \\ \hline \hline
-{\multirow{2}{*}{P2}} & {G3} & 33 & 57 & 57 & 73 & 60 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 33 & 57 & 57 & 73 & 60 \\ \cline{2-7}
                       & {G4} & 93 & 93 & 90 & 90 & 80 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 93 & 100 & 67 & 100 & 80 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 93 & 100 & 67 & 100 & 80 \\ \cline{2-7}
                       & {G4} & 100 & 93 & 87 & 83 & 90 \\ \hline
 \end{tabular}
 \end{center} 
@@ -578,15 +587,17 @@ Para ambas pruebas con uno y dos Kinect se tuvieron resultados similares, desafo
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $90$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representa el número de repeticiones.} 
 \label{table:D90LK1}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 87 & 87 & 53 & 87 & 67 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{2}{*}{\textbf{P1}}} & {G3} & 87 & 87 & 53 & 87 & 67 \\ \cline{2-7}
                       & {G4} & 100 & 100 & 100 & 90 & 92 \\ \hline \hline
-{\multirow{2}{*}{P2}} & {G3} & 87 & 87 & 90 & 93 & 80 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 87 & 87 & 90 & 93 & 80 \\ \cline{2-7}
                       & {G4} & 83 & 73 & 97 & 80 & 75 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 90 & 97 & 97 & 100 & 90 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 90 & 97 & 97 & 100 & 90 \\ \cline{2-7}
                       & {G4} & 77 & 90 & 80 & 75 & 80 \\ \hline
 \end{tabular}
 \end{center} 
@@ -596,15 +607,17 @@ Para ambas pruebas con uno y dos Kinect se tuvieron resultados similares, desafo
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente de iluminación media a una distancia de $90$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones.} 
 \label{table:D90LK2}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 30 & 37 & 13 & 13 & 30 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{2}{*}{\textbf{P1}}} & {G3} & 30 & 37 & 13 & 13 & 30 \\ \cline{2-7}
                       & {G4} & 100 & 98 & 95 & 100 & 98 \\ \hline \hline
-{\multirow{2}{*}{P2}} & {G3} & 50 & 60 & 67 & 70 & 75 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 50 & 60 & 67 & 70 & 75 \\ \cline{2-7}
                       & {G4} & 77 & 78 & 75 & 80 & 70 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 77 & 73 & 80 & 97 & 90 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 77 & 73 & 80 & 97 & 90 \\ \cline{2-7}
                       & {G4} & 77 & 90 & 91 & 80 & 75 \\ \hline
 \end{tabular}
 \end{center}
@@ -644,15 +657,17 @@ Para este experimento las imágenes se capturaron en un laboratorio sin iluminac
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $70$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones.} 
 \label{table:D70LMK1}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 77 & 80 & 57 & 70 & 60 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{2}{*}{\textbf{P1}}} & {G3} & 77 & 80 & 57 & 70 & 60 \\ \cline{2-7}
                       & {G4} & 100 & 97 & 93 & 100 & 97 \\ \hline \hline
-{\multirow{2}{*}{P2}} & {G3} & 97 & 57 & 80 & 53 & 87 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 97 & 57 & 80 & 53 & 87 \\ \cline{2-7}
                       & {G4} & 100 & 97 & 83 & 87 & 87 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 73 & 43 & 43 & 47 & 60 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 73 & 43 & 43 & 47 & 60 \\ \cline{2-7}
                       & {G4} & 100 & 93 & 97 & 93 & 93 \\ \hline
 \end{tabular}
 \end{center} 
@@ -662,15 +677,17 @@ Para este experimento las imágenes se capturaron en un laboratorio sin iluminac
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $70$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones} 
 \label{table:D70LMK2}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 93 & 83 & 100 & 77 & 87 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{2}{*}{\textbf{P1}}} & {G3} & 93 & 83 & 100 & 77 & 87 \\ \cline{2-7}
                       & {G4} & 100 & 100 & 97 & 97 & 100 \\ \hline \hline
-{\multirow{2}{*}{P2}} & {G3} & 97 & 97 & 87 & 93 & 97 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 97 & 97 & 87 & 93 & 97 \\ \cline{2-7}
                       & {G4} & 80 & 93 & 90 & 97 & 97 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 83 & 87 & 97 & 97 & 100 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 83 & 87 & 97 & 97 & 100 \\ \cline{2-7}
                       & {G4} & 100 & 97 & 93 & 87 & 90 \\ \hline
 \end{tabular}
 \end{center} 
@@ -705,15 +722,17 @@ Analizando cada repetición de cada gesto se observa que una mayor reconocimient
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $80$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones} 
 \label{table:D80LMK1}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 57 & 63 & 60 & 63 & 63 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{2}{*}{\textbf{P1}}} & {G3} & 57 & 63 & 60 & 63 & 63 \\ \cline{2-7}
                       & {G4} & 100 & 100 & 100 & 100 & 100 \\ \hline \hline
-{\multirow{2}{*}{P2}} & {G3} & 40 & 43 & 60 & 70 & 75 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 40 & 43 & 60 & 70 & 75 \\ \cline{2-7}
                       & {G4} & 100 & 93 & 97 & 93 & 98 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 80 & 87 & 67 & 77 & 63 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 80 & 87 & 67 & 77 & 63 \\ \cline{2-7}
                       & {G4} & 97 & 87 & 100 & 90 & 87 \\ \hline
 \end{tabular}
 \end{center} 
@@ -723,21 +742,23 @@ Analizando cada repetición de cada gesto se observa que una mayor reconocimient
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $80$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones.} 
 \label{table:D80LMK2}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{2}{*}{P1}} & {G3} & 63 & 70 & 90 & 80 & 77 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{2}{*}{\textbf{P1}}} & {G3} & 63 & 70 & 90 & 80 & 77 \\ \cline{2-7}
                       & {G4} & 87 & 100 & 93 & 90 & 93 \\ \hline \hline
-{\multirow{2}{*}{P2}} & {G3} & 60 & 73 & 47 & 63 & 73 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 60 & 73 & 47 & 63 & 73 \\ \cline{2-7}
                       & {G4} & 100 & 97 & 87 & 90 & 90 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 87 & 100 & 73 & 83 & 80 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 87 & 100 & 73 & 83 & 80 \\ \cline{2-7}
                       & {G4} & 73 & 73 & 93 & 83 & 93 \\ \hline 
 \end{tabular}
 \end{center}
 \end{table} 
 
-En este experimento se puede observar que las repeticiones del gesto 4 con cada participante obtienen mayor precision utilizando un Kinect. en este caso se observa que el gesto tres no es clasificado correctamente en la mayoría de las repeticiones de los participantes, a excepción del participante 3, que muestra mayor desempeño cuando se utilizan los dos dispositivos.
+En este experimento se puede observar que las repeticiones del gesto 4 con cada participante obtienen mayor precision utilizando un Kinect. en este caso se observa que el gesto tres no es clasificado correctamente en la mayoría de las repeticiones de los participantes, a excepción del participante tres, que muestra mayor desempeño cuando se utilizan los dos dispositivos.
 
 %--
 
@@ -765,14 +786,16 @@ En este experimento se puede observar que las repeticiones del gesto 4 con cada 
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $90$ $cm$ utilizando el Kinect frontal. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones.} 
 \label{table:D90LMK1}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{1}{*}{P1}} & {G3} & 57 & 70 & 70 & 67 & 77 \\ \cline{2-7}
-{\multirow{2}{*}{P2}} & {G3} & 70 & 80 & 80 & 77 & 80 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{1}{*}{\textbf{P1}}} & {G3} & 57 & 70 & 70 & 67 & 77 \\ \cline{2-7}\hline\hline
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 70 & 80 & 80 & 77 & 80 \\ \cline{2-7}
                       & {G4} & 73 & 80 & 83 & 97 & 80 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 70 & 83 & 80 & 100 & 97 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 70 & 83 & 80 & 100 & 97 \\ \cline{2-7}
                       & {G4} & 87 & 97 & 90 & 70 & 90 \\ \hline
 \end{tabular}
 \end{center} 
@@ -782,14 +805,16 @@ En este experimento se puede observar que las repeticiones del gesto 4 con cada 
 \begin{center} 
 \caption{Precisión de gestos realizados en un ambiente sin iluminación a una distancia de $90$ $cm$ utilizando ambos Kinect. P1, P2, P3 representan a los participantes, R1, R2, R3, R4, R5 representan el número de repeticiones.} 
 \label{table:D90LMK2}
-\begin{tabular}{ |l|l|l|l|l|l|l| }
+\renewcommand{\arraystretch}{1.2}
+\setlength{\tabcolsep}{17pt}
+\begin{tabular}{ c  c || c  c  c  c  c  } 
 \hline
-\multicolumn{7}{ |c| }{Porcentajes de precisión del reconocimiento de cada repetición.}\\ \cline{1-7}
-\multicolumn{2}{ |c| }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
-{\multirow{1}{*}{P1}} & {G3} & 47 & 47 & 53 & 37 & 40 \\ \cline{2-7}
-{\multirow{2}{*}{P2}} & {G3} & 37 & 63 & 63 & 75 & 80 \\ \cline{2-7}
+\multicolumn{7}{ c }{\textbf{Porcentajes de precisión del reconocimiento de cada repetición.}}\\ \cline{1-7}
+\multicolumn{2}{ c }{} &R1 & R2 & R3 & R4  & R5\\ \cline{1-7} \hline\hline
+{\multirow{1}{*}{\textbf{P1}}} & {G3} & 47 & 47 & 53 & 37 & 40 \\ \cline{2-7} \hline\hline
+{\multirow{2}{*}{\textbf{P2}}} & {G3} & 37 & 63 & 63 & 75 & 80 \\ \cline{2-7}
                       & {G4} & 100 & 98 & 95 & 90 & 92 \\ \hline \hline
-{\multirow{2}{*}{P3}} & {G3} & 80 & 97 & 87 & 83 & 87 \\ \cline{2-7}
+{\multirow{2}{*}{\textbf{P3}}} & {G3} & 80 & 97 & 87 & 83 & 87 \\ \cline{2-7}
                       & {G4} & 87 & 100 & 97 & 78 & 95 \\ \hline
 \end{tabular}
 \end{center}
@@ -799,7 +824,7 @@ En las Tablas \ref{table:D90LMK1}, \ref{table:D90LMK2} no se muestra ningún val
 
 \end{itemize}
 
-Como se vio en cada tabla se analizo el porcentaje de gestos localizados en cada secuencia de $30$, analizando cuando se tenia uno y dos dispositivos. En general si se observa cada elemento o gesto, se puede observar que el sistema tienen un mayor grado de reconocimiento cuando se utilizan los dos dispositivos.    
+Como se vio en cada tabla se analizo el porcentaje de gestos localizados en cada secuencia de treinta cuadros, analizando cuando se tenia uno y dos dispositivos. En general si se observa cada elemento o gesto, se puede observar que el sistema tienen un mayor grado de reconocimiento cuando se utilizan los dos dispositivos.    
 
 También se observa que en algunas ocasiones el reconocimiento es bajo, usualmente para el gesto n\'umero tres, esto debido a la resolución de sensor, ya que en ocasiones las regiones de los dedos no son captadas y esto hace que reconozca erróneamente el gesto. 
 

@@ -1,5 +1,12 @@
 \begin{thebibliography}{}
 
+\bibitem[Asaari {\em \mbox{et al.}\/}(2014)Asaari, Rosdi, y
+  Suandi]{MohdAsaari2014}
+Asaari, M. S.~M., Rosdi, B.~A., y Suandi, S.~A. (2014).
+\newblock {Adaptive Kalman Filter Incorporated Eigenhand (AKFIE) for real-time
+  hand tracking system}.
+\newblock {\em Multimedia Tools and Applications\/}, pp. 1--27.
+
 \bibitem[Burges(1998)Burges]{Burges1998}
 Burges, C. (1998).
 \newblock {A Tutorial on Support Vector Machines for Pattern Recognition}.
@@ -16,7 +23,7 @@ Caputo, M., Denker, K., Dums, B., y Umlauf, G. (2012).
 \bibitem[Chaki {\em \mbox{et al.}\/}(2014)Chaki, Shaikh, y Saeed]{Chaki2014}
 Chaki, N., Shaikh, S.~H., y Saeed, K. (2014).
 \newblock {\em {Exploring Image Binarization Techniques}\/}.
-\newblock Springer, primera edici\'on.
+\newblock Springer India.
 \newblock p.~90.
 
 \bibitem[Chang y Lin(2011)Chang y Lin]{Chang2011}
@@ -50,13 +57,15 @@ Freund, Y. y Schapire, R. (1995).
 \bibitem[Gonzalez y Woods(2002)Gonzalez y Woods]{Gonzalez2002}
 Gonzalez, R. y Woods, R. (2002).
 \newblock {\em {Digital image processing}\/}.
+\newblock Pearson Education, Inc.
 \newblock p. 190.
 
 \bibitem[Hasan y Mishra(2012)Hasan y Mishra]{Hasan2012}
 Hasan, M.~M. y Mishra, P.~K. (2012).
 \newblock {Hand Gesture Modeling and Recognition using Geometric Features : A
   Review}.
-\newblock {\bf 3}(1).
+\newblock {\em Canadian Journal on Image Processing and Computer Vision\/},
+  {\bf 3}(1): 12--26.
 
 \bibitem[Huang {\em \mbox{et al.}\/}(2011)Huang, Hu, y Chang]{Huang2011}
 Huang, D.-Y., Hu, W.-C., y Chang, S.-H. (2011).
@@ -68,16 +77,20 @@ Huang, D.-Y., Hu, W.-C., y Chang, S.-H. (2011).
   Ovtcharova]{Hummel2014}
 Hummel, S., H\"{a}fner, V., H\"{a}fner, P., y Ovtcharova, J. (2014).
 \newblock {New Techniques for Hand Pose Estimation Based on Kinect Depth Data}.
+\newblock En: {\em EuroVR 2014 - Conference and Exhibition of the European
+  Association of Virtual and Augmented Reality\/}. The Eurographics
+  Association.
 
 \bibitem[Ibraheem(2013)Ibraheem]{Ibraheem2013}
 Ibraheem, N.~A. (2013).
 \newblock {Comparative Study of Skin Color based Segmentation Techniques}.
-\newblock {\bf 5}(10): 24--38.
+\newblock {\em International Journal of Applied Information Systems\/}, {\bf
+  5}(10): 24--38.
 
 \bibitem[Jana(2013)Jana]{Jana2013}
 Jana, A. (2013).
 \newblock {\em {Kinect for Windows SDK - Programming Guide - Face Tracking}\/}.
-\newblock Packt, primera edici\'on.
+\newblock Packt.
 \newblock p. 392.
 
 \bibitem[Kang {\em \mbox{et al.}\/}(2013)Kang, Bernhard, Kim, Srinivasa, y
@@ -86,10 +99,11 @@ Kang, C., Bernhard, P., Kim, S., Srinivasa, P., y Satti, R. (2013).
 \newblock {A Framework for Hand Gesture Recognition with Machine Learning
   Techniques}.
 
-\bibitem[Kathuria(2011)Kathuria]{Kathuria2011}
-Kathuria, P. (2011).
-\newblock {Hand Gesture Recognition}.
-\newblock {\bf 2012}(25): 63--69.
+\bibitem[Kathuria y Yoshitaka(2011)Kathuria y Yoshitaka]{Kathuria2011}
+Kathuria, P. y Yoshitaka, A. (2011).
+\newblock {Hand Gesture Recognition by using Logical Heuristics}.
+\newblock {\em Research report Human-Computer Interaction (HCI)\/}, {\bf
+  2012}(25): 63--69.
 
 \bibitem[Maimone y Fuchs(2011)Maimone y Fuchs]{Maimone2011}
 Maimone, A. y Fuchs, H. (2011).
@@ -107,29 +121,26 @@ Mallick, T., Das, P.~P., y Majumdar, A.~K. (2014).
 \bibitem[Mei {\em \mbox{et al.}\/}(2015)Mei, Xu, Li, Lin, y Wang]{Mei2015}
 Mei, K., Xu, L., Li, B., Lin, B., y Wang, F. (2015).
 \newblock {A real-time hand detection system based on multi-feature}.
+\newblock {\em Neurocomputing\/}, {\bf 158}(C): 184--193.
 
 \bibitem[Mitra {\em \mbox{et al.}\/}(2007)Mitra, Member, y Acharya]{Mitra2007}
 Mitra, S., Member, S., y Acharya, T. (2007).
 \newblock {Gesture Recognition : A Survey}.
-\newblock {\bf 37}(3): 311--324.
-
-\bibitem[{Mohd Asaari} {\em \mbox{et al.}\/}(2014){Mohd Asaari}, Rosdi, y
-  Suandi]{MohdAsaari2014}
-{Mohd Asaari}, M.~S., Rosdi, B.~A., y Suandi, S.~A. (2014).
-\newblock {Adaptive Kalman Filter Incorporated Eigenhand (AKFIE) for real-time
-  hand tracking system}.
-\newblock {\em Multimedia Tools and Applications\/}.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part C:
+  Applications and Reviews\/}, {\bf 37}(3): 311--324.
 
 \bibitem[Murthy y Jadon(2009)Murthy y Jadon]{Murthy2009}
 Murthy, G. R.~S. y Jadon, R.~S. (2009).
-\newblock {A REVIEW OF VISION BASED HAND GESTURES RECOGNITION}.
-\newblock {\bf 2}(2): 405--410.
+\newblock {A Review of Vision Based Hand Gestures Recognition}.
+\newblock {\em International Journal. Of Information Technology and
+  Knowledge\/}, {\bf 2}(2): 405--410.
 
 \bibitem[Nayakwadi(2014)Nayakwadi]{Nayakwadi2014}
 Nayakwadi, V. (2014).
 \newblock {Natural Hand Gestures Recognition System for Intelligent HCI : A
   Survey}.
-\newblock {\bf 3}(1): 10--19.
+\newblock {\em International Journal of Computer Applications Technology and
+  Research\/}, {\bf 3}(1): 10--19.
 
 \bibitem[Ong {\em \mbox{et al.}\/}(1998)Ong, Teh, y Tan]{Ong1998}
 Ong, K.~C., Teh, H.~C., y Tan, T.~S. (1998).
@@ -145,14 +156,14 @@ Otsu, N. (1979).
 \bibitem[Premaratne(2013)Premaratne]{Premaratne2013}
 Premaratne, P. (2013).
 \newblock {\em {Human Computer Interaction Using Hand Gestures}\/}.
-\newblock Springer, primera edici\'on.
+\newblock Springer.
 \newblock p. 182.
 
-\bibitem[Rautaray y Agrawal(2012)Rautaray y Agrawal]{Rautaray2012}
-Rautaray, S.~S. y Agrawal, A. (2012).
+\bibitem[Rautaray y Agrawal(2015)Rautaray y Agrawal]{Rautaray2012}
+Rautaray, S.~S. y Agrawal, A. (2015).
 \newblock {Vision based hand gesture recognition for human computer
   interaction: a survey}.
-\newblock {\em Artificial Intelligence Review\/}.
+\newblock {\em Artificial Intelligence Review\/}, {\bf 43}(1): 1--54.
 
 \bibitem[Sgouropoulos {\em \mbox{et al.}\/}(2014)Sgouropoulos, Stergiopoulou, y
   Papamarkos]{Sgouropoulos2014}
@@ -164,7 +175,7 @@ Sgouropoulos, K., Stergiopoulou, E., y Papamarkos, N. (2014).
 \bibitem[Shin(2013)Shin]{Shin2013}
 Shin, S. (2013).
 \newblock {\em {Emgu CV Essentials}\/}.
-\newblock Packt Publishing, primera edici\'on.
+\newblock Packt Publishing.
 \newblock p. 118.
 
 \bibitem[Silva y Santos-Victor(2001)Silva y Santos-Victor]{Silva2001}
@@ -175,6 +186,7 @@ Silva, C. y Santos-Victor, J. (2001).
 \bibitem[Smith(1999)Smith]{Smith1999}
 Smith, S.~W. (1999).
 \newblock {\em {Digital signal processing}\/}.
+\newblock California Technical Publishing, segunda edici\'on.
 \newblock p. 688.
 
 \bibitem[Sultana y Rajapuspha(2012)Sultana y Rajapuspha]{Sultana2012}
@@ -196,10 +208,12 @@ Weichert, F., Bachmann, D., Rudak, B., y Fisseler, D. (2013).
   Controller}.
 \newblock {\em Sensors\/}, {\bf 13}(5): 6380--6393.
 
-\bibitem[Ye {\em \mbox{et al.}\/}(????)Ye, Zhang, Wang, y Zhu]{Ye}
-Ye, M., Zhang, Q., Wang, L., y Zhu, J. (????).
+\bibitem[Ye {\em \mbox{et al.}\/}(2013)Ye, Zhang, Wang, y Zhu]{Ye}
+Ye, M., Zhang, Q., Wang, L., y Zhu, J. (2013).
 \newblock {A Survey on Human Motion Analysis}.
-\newblock pp. 149--187.
+\newblock En: M.~Grzegorzek, C.~Theobalt, R.~Koch, y A.~Kolb (eds.), {\em
+  Time-of-Flight and Depth Imaging. Sensors, Algorithms, and Applications\/},
+  Vol. 8200. Springer Berlin Heidelberg, pp. 149--187.
 
 \bibitem[Yilmaz {\em \mbox{et al.}\/}(2006)Yilmaz, Omar, y
   Mubarak]{YilmazA.JavedO.andShah2006}

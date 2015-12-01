@@ -1,4 +1,4 @@
-\chapter{Implementación del sistema de reconocimiento de gestos propuesto}\label{capit:cap4}
+\chapter{Implementación del sistema propuesto de reconocimiento de gestos}\label{capit:cap4}
 \vspace{-2.0325ex}%
 \noindent
 \rule{\textwidth}{0.5pt}
@@ -29,7 +29,8 @@ En la siguiente imagen se puede apreciar un ejemplo de las imágenes de profundi
 \label{fig:ImagenCapturada}
 \end{figure}  
 
-Por la naturaleza del Kinect, las imágenes obtenidas de ambos sensores contiene ruido, como el se muestra en la Figura \ref{fig:ImagenCapturadaNoNoise}; el ruido es reducido usando un filtro de mediana, este es aplicado en toda la imagen usando una ventada de tamaño $13$. La imagen resultante $S(x,y)$ es como la que se muestra en la Figura \ref{fig:ImagenCapturadaNoNoise}.\\ 
+Por la naturaleza del Kinect, las imágenes obtenidas de ambos sensores contiene ruido, como el se muestra en la Figura \ref{fig:ImagenCapturadaNoNoise}; el ruido es reducido usando un filtro de mediana, este es aplicado en toda la imagen usando una ventada de tamaño trece. La imagen resultante $S(x,y)$ es como la que se muestra en la Figura \ref{fig:ImagenCapturadaNoNoise}.
+
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.35]{./Figures/166_W13.png}
@@ -37,6 +38,7 @@ Por la naturaleza del Kinect, las imágenes obtenidas de ambos sensores contiene
 \caption{Representación de los datos capturados por los Kinect}
 \label{fig:ImagenCapturadaNoNoise}
 \end{figure}  
+
 Se aprecia en la imagen siguiente  que gran parte del ruido es reducido obteniendo una mejora en la imagen, desafortunadamente todavía existe ruido en la imagen, este puede ser eliminado casi en su mayoría  si el tamaño de la ventana aumenta pero se pierde información importante de la imagen, de manera que se decidió optar por el tamaño de ventana, antes mencionado. En la imagen también se aprecia el fondo negro, esto es debido a que se discrimino el fondo lo que estuviera a un distancia de más de $2$ $m.$ del sensor. 
 
 
@@ -46,9 +48,9 @@ Se aprecia en la imagen siguiente  que gran parte del ruido es reducido obtenien
 En este trabajo se utiliza el algoritmo de detección de objetos desarrollado por Viola y Jones (2001), como se mostró en el Cap\'itulo \ref{capit:cap3} Sección \ref{subsec:ViolaJones}, el algoritmo clasifica las imágenes basándose en el valor de características, el clasificador es construido usando el algoritmo de AdaBoost en forma de cascada. 
 
 
-La selección de las características se llev\'o acabo por medio de una versión modificada del algoritmo AdaBoost; la implementaci\'on se realiz\'o utilizando el software OpenCV Haar training classifier \footnote{{https://github.com/mrnugget/opencv-haar-classifier-training}}. Se entren\'o con $1000$ imágenes positivas (imágenes de profundidad de la mano), y $2000$ negativas, (imágenes de fondo de distintos escenarios). Las imágenes positivas fueron generadas de $300$ imágenes de poses; $3$ poses distintas, $100$ de cada pose, usando el software Create Samples \footnote{\url{http://note.sonots.com/SciSoftware/haartraining.html}}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{\label{myrepo} https://github.com/americamm}.
+La selección de las características se llev\'o acabo por medio de una versión modificada del algoritmo AdaBoost; la implementaci\'on se realiz\'o utilizando el software OpenCV Haar training classifier \footnote{{https://github.com/mrnugget/opencv-haar-classifier-training}}. Se entren\'o con mil imágenes positivas (imágenes de profundidad de la mano), y dos mil negativas, (imágenes de fondo de distintos escenarios). Las imágenes positivas fueron generadas de trescientos imágenes de poses; tres poses distintas, cien de cada pose, usando el software Create Samples \footnote{\url{http://note.sonots.com/SciSoftware/haartraining.html}}. Todas las imágenes usadas fueron tomadas de nuestra base de  datos \footnote{\label{myrepo} https://github.com/americamm}.
 
-Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de poses de la mano, estas fueron tomadas a una distancia de entre $60$ y $200$ $cm$. Las imágenes de profundidad de la mano fueron tomadas de $6$ personas distintas con tres distintas poses: palma con los dedos separados, como en la Figura \ref{fig:ImagenesPoses:2}, palma con dedos juntos, ver Figura \ref{fig:ImagenesPoses:3} y finalmente el pu\~no, ver Figura \ref{fig:ImagenesPoses:1}, como se muestran en la Figura \ref{fig:ImagenesPoses}. Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la Figura \ref{fig:ImagenFondo}. El programa de captura de las imágenes puede ser encontrado en Github \ref{myrepo}.  
+Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imágenes de fondo y de poses de la mano, estas fueron tomadas a una distancia de entre $60$ y $200$ $cm$. Las imágenes de profundidad de la mano fueron tomadas de seis personas distintas con tres distintas poses: palma con los dedos separados, como en la Figura \ref{fig:ImagenesPoses:2}, palma con dedos juntos, ver Figura \ref{fig:ImagenesPoses:3} y finalmente el pu\~no, ver Figura \ref{fig:ImagenesPoses:1}, como se muestran en la Figura \ref{fig:ImagenesPoses}. Las imágenes de fondo fueron tomadas de distintos escenarios como se muestra en la Figura \ref{fig:ImagenFondo}. El programa de captura de las imágenes puede ser encontrado en Github \ref{myrepo}.  
 
 \begin{figure}[h!]
 \begin{center}
@@ -69,9 +71,10 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 \label{fig:ImagenFondo}
 \end{figure}  
 
-Los parámetros utilizados para la obtención del clasificador final fueron: el porcentaje de precisión de detección de $95%$ y la tasa de falsos positivos aceptados de $5%$. El resultado final del entrenamiento fue en clasificador AdoBoost en forma de cascada, que consta de 19 etapas. El clasificador resultante se encuentra en Github \ref{myrepo}, en formato XML.  
+Los parámetros utilizados para la obtención del clasificador final fueron: el porcentaje de precisión de detección de $95 \%$ y la tasa de falsos positivos aceptados de $5 \%$. El resultado final del entrenamiento fue en clasificador AdoBoost en forma de cascada, que consta de diecinueve etapas. El clasificador resultante se encuentra en Github \ref{myrepo}, en formato XML.  
 
-Con el clasificador obtenido, se localiza la mano en cada cuadro proveniente de los dispositivos  Kinect, una ventana  inicial de tamaño $60 \times 60$ pixeles se desliza por la imagen. Para eliminar falsos positivos que pudieran ocurrir en la detección de la mano se utiliza un algoritmo equivalente al de \cite{Mei2015}, este se muestra en el apéndice \ref{chap:apendA}.\\ 
+Con el clasificador obtenido, se localiza la mano en cada cuadro proveniente de los dispositivos  Kinect, una ventana  inicial de tamaño $60 \times 60$ pixeles se desliza por la imagen. Para eliminar falsos positivos que pudieran ocurrir en la detección de la mano se utiliza un algoritmo equivalente al de \cite{Mei2015}, este se muestra en el apéndice \ref{capit:apendD}.
+
 Una vez que la mano se localiza la región de interés $ROI(x,y)$ es seleccionada alrededor de la mano, como se observa en la Figura \ref{fig:Roi}.
 
 \begin{figure}[h!]
@@ -127,7 +130,7 @@ Una vez aplicados estos dos algoritmos se calcula: el número de dedos levantado
 \label{fig:FeaturesOfHand}
 \end{figure}
 
-Las características calculadas se guardan en un vector de características de dimensión $32$. El valor de la dimension del vector esta dada por la unión del conjunto de características obtenidas por cada imagen de la mano. En cada vector las características provenientes del Kinect 1 son almacenadas primero seguidas de las del Kinect 2.
+Las características calculadas se guardan en un vector de características de dimensión $32$. El valor de la dimension del vector esta dada por la unión del conjunto de características obtenidas por cada imagen de la mano. En cada vector las características provenientes del Kinect frontal son almacenadas primero, seguidas de las del Kinect lateral.
 
 
 
@@ -147,7 +150,7 @@ La implementación de SVM se lleva acabo usando LibSVMSharp \footnote{\url{https
 
 El sistema reconoce dos gestos estáticos: el puño y la palma de la mano con los dedos separados. El reconocimiento del gesto se lleva analizando un solo cuadro o imagen.  
 
-El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento se tomaron $200$ imágenes de las dos distintas pose como las que se muestran en la Figura \ref{fig:SVMTrainingStatic}. Se utilizo un kernel exponencial y validación cruzada con 5 pliegues.   
+El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento se tomaron doscientas imágenes de las dos distintas pose como las que se muestran en la Figura \ref{fig:SVMTrainingStatic}. Se utilizo un kernel exponencial y validación cruzada con cinco pliegues.   
 
 \begin{figure}[h!]
 \begin{center}
@@ -162,7 +165,7 @@ El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento
 \subsection{Reconocimiento de gestos dinámicos}\label{RecognitionDynamic}
 
 
-En este trabajo se toma un gesto dinámico como una secuencia de $30$ cuadros consecutivos en los cuales se realiza la misma pose en cada cuadro, solo que la pose cambian de posición, es decir se encuentra en movimiento. De manera que el sistema reconoce el gesto dinámico identificando y siguiendo cada pose en cada cuadro. La trayectoria del gesto es obtenida tomando en cuenta la posición del centro de la mano el cual es calculado en cada cuadro. 
+En este trabajo se toma un gesto dinámico como una secuencia de treinta cuadros consecutivos en los cuales se realiza la misma pose en cada cuadro, solo que la pose cambian de posición, es decir se encuentra en movimiento. De manera que el sistema reconoce el gesto dinámico identificando y siguiendo cada pose en cada cuadro. La trayectoria del gesto es obtenida tomando en cuenta la posición del centro de la mano el cual es calculado en cada cuadro. 
  
 El sistema reconoce dos gestos dinámicos, los cuales son los gestos estáticos en movimiento. La Figura \ref{fig:G3} muestra la secuencia del gesto dinámico de la palma de la mano. La Figura \ref{fig:G4} muestra a secuencia del gesto dinámico del mano en forma de pu\~no.  
 \begin{figure}[h!]

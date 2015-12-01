@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: iTesis.aux
 The style file: cicese.bst
 Database file #1: iTesis.bib
-Repeated entry---line 360 of file iTesis.bib
+Repeated entry---line 373 of file iTesis.bib
  : @article{Premaratne2013
  :                        ,
 I'm skipping whatever remains of this entry
@@ -16,58 +16,47 @@ Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at th
 while executing---line 1513 of file cicese.bst
 Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at the end for entry Chih-WeiHsuChih-ChungChang2008
 while executing---line 1513 of file cicese.bst
-Warning--empty publisher in Gonzalez2002
-Warning--empty journal in Hasan2012
-Warning--empty journal in Hummel2014
-Warning--empty journal in Ibraheem2013
 Warning--can't use both author and editor fields in Jana2013
 Warning--empty journal in Kang2013
-Warning--empty journal in Kathuria2011
-Warning--empty journal in Mitra2007
-Warning--empty journal in Murthy2009
-Warning--empty journal in Nayakwadi2014
-Warning--empty publisher in Smith1999
-Warning--empty year in Ye; set to ????
-Warning--empty journal in Ye
 You've used 37 entries,
             2727 wiz_defined-function locations,
-            969 strings with 11275 characters,
-and the built_in function-call counts, 16785 in all, are:
-= -- 1586
-> -- 919
-< -- 39
-+ -- 261
-- -- 261
-* -- 1706
-:= -- 2548
-add.period$ -- 112
+            990 strings with 12138 characters,
+and the built_in function-call counts, 17230 in all, are:
+= -- 1653
+> -- 938
+< -- 35
++ -- 268
+- -- 268
+* -- 1768
+:= -- 2606
+add.period$ -- 118
 call.type$ -- 37
-change.case$ -- 200
-chr.to.int$ -- 61
-cite$ -- 125
-duplicate$ -- 661
-empty$ -- 1114
-format.name$ -- 322
-if$ -- 3383
+change.case$ -- 199
+chr.to.int$ -- 43
+cite$ -- 114
+duplicate$ -- 667
+empty$ -- 1160
+format.name$ -- 331
+if$ -- 3491
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 42
-newline$ -- 189
-num.names$ -- 148
-pop$ -- 328
+missing$ -- 43
+newline$ -- 193
+num.names$ -- 150
+pop$ -- 299
 preamble$ -- 1
-purify$ -- 161
+purify$ -- 162
 quote$ -- 0
-skip$ -- 594
+skip$ -- 604
 stack$ -- 0
-substring$ -- 757
-swap$ -- 249
-text.length$ -- 9
+substring$ -- 824
+swap$ -- 261
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 315
-warning$ -- 14
-while$ -- 171
+warning$ -- 3
+while$ -- 178
 width$ -- 0
-write$ -- 471
+write$ -- 489
 (There were 5 error messages)

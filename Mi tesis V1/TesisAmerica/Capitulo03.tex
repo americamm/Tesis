@@ -189,7 +189,7 @@ El clasificador fuerte es una combinación lineal de los clasificadores débiles
 \begin{equation}
 h(x)= \alpha_1h_1(x)+\alpha_2h_2(x)+ \cdots +\alpha_nh_n(x) ,
 \end{equation}
-donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a cada característica, el cual va entre $0$ y $1$. En el Apéndice \ref{aped:A}
+donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a cada característica, el cual va entre $0$ y $1$. En el Apéndice \ref{capit:apendA}.
 
 \subsubsection{Clasificador AdaBoost en cascada}\label{sssec:AdaboostCascade}   
 
@@ -220,6 +220,7 @@ F = \prod^K_{i=1} f_i ,
 \end{equation}
 donde $K$ es el número de clasificadores fuertes y $f_i$ es la tasa de precisión del $i$-ésimo clasificador. 
  
+El algoritmo para calcular el clasificador en forma de cascada se encuentra en el Apéndice \ref{capit:apendB}. 
 
 \subsection{Binarización}\label{subsec:Binarization} 
 
@@ -363,7 +364,7 @@ En la Figura \ref{fig:FigConvexHullDefects} los puntos amarillos representan los
 
 Usando las técnicas anteriores podemos extraer características importantes como el número de dedos, la posición del centro de la palma de mano, la posición de la punta de los dedos, la posición del inicio o raíz de los dedos, el ángulo del centro de la palma de la mano a la punta de los dedos, ángulo $TC$, el ángulo del centro de la palma de la mano al inicio de los dedos, ángulo $RC$ y la distancia vertical del centro de la palma de la mano al inicio de los dedos. Enseguida se explica cómo son obtenidas las características mencionadas. 
 
-El número de dedos que se encuentran levantados es calculado con el Algoritmo \ref{alg:NumDedos} desarrollado por \citep{Kathuria2011}, el cual utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$, los puntos de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, las distancias del punto de inicio al de mayor distancia, $\mathcal{\delta}=\lbrace \delta_1(x,y), \delta_2(x,y), \cdots, \delta_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa.
+El número de dedos que se encuentran levantados es calculado con el Algoritmo \ref{alg:NumDedos} desarrollado por \citep{Kathuria2011}, ver Apéndice \ref{capit:apendC}, el cual utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$, los puntos de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, las distancias del punto de inicio al de mayor distancia, $\mathcal{\delta}=\lbrace \delta_1(x,y), \delta_2(x,y), \cdots, \delta_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa.
 Sea $C_r(x,y)$, el punto que representa el centroide del rectángulo más pequeño que encierra a la mano, $L_r$, la altura del rectángulo y $k$ una constante. 
 
 La posición de la raíz de los dedos, $Fr(s,y)$ puede ser calculada usando los defectos de convexidad \citep{Hummel2014}, en especifico los puntos de profundidad, $d(x,y)$. Se calcula tomando el punto medio de los puntos de profundidad consecutivos encontrados en medio de los dedos, como se muestra en la Figura \ref{fig:RootFingers} . Es decir: 
@@ -413,7 +414,7 @@ Una vez que todas las características son calculadas estas son guardadas en un 
 
 \section{Reconocimiento}\label{sec:SVM} 
 
-Es la etapa final del reconocimiento, es donde el gesto realizado por el usuario finalmente puede ser interpretado por la computadora.\\  
+Es la etapa final del reconocimiento, es donde el gesto realizado por el usuario finalmente puede ser interpretado por la computadora.
 En este trabajo el reconocimiento se realiza utilizando el algoritmo de máquinas de soporte vectorial SVM, por sus siglas en ingles \citep{Cortes1995}, un método de aprendizaje de máquina supervisado el cual es utilizado para resolver problemas de clasificación y regresión. SVM tiene como objetivo crear un modelo basado en datos conocidos, datos de entrenamiento, donde este modelo es capaz de predecir a que clase pertenecen datos nuevos. 
 
 SVM realiza la clasificación separando las clases calculando el hiperplano que tengan el margen de separación más grande. En la Figura \ref{fig:SVM} se muestra en conjunto de clases separables por medio de un hiperplano .  
@@ -426,7 +427,8 @@ SVM realiza la clasificación separando las clases calculando el hiperplano que 
 \label{fig:SVM}
 \end{figure} 
 
-Enseguida se explica el caso cuando las clases son linealmente separables.\\
+Enseguida se explica el caso cuando las clases son linealmente separables.
+
 Dado $N$ muestras de entrenamiento $x_i$, de dimensión $D$, dos clases distintas $y_i=-1$ ó $+1$ es decir: 
 $$\lbrace x_i,y_i \rbrace \quad \text{donde} \quad  i=1, \cdots ,N \quad y\in \lbrace -1,1 \rbrace \quad x \in \Re^D.$$
 Sea  
@@ -458,7 +460,7 @@ Similarmente para la Ecuación \ref{eq:des-1}, entonces el hiperplano $H_2$ se d
 \begin{equation}\label{eq:eq+1}
 w \cdot x_i + b = -1,  
 \end{equation} 
-con normal $w$ y una distancia perpendicular desde el origen de $\frac{\vert-1-b\vert}{ \Vert w \Vert}$.\\ 
+con normal $w$ y una distancia perpendicular desde el origen de $\frac{\vert-1-b\vert}{ \Vert w \Vert}$.
 Como $d_+ = d_- = \frac{1}{\Vert w \Vert}$, el margen es $\frac{2}{\Vert w \Vert}$. Los hiperplanos son paralelos pues tienen la misma normal, también ninguna muestra de entrenamiento caen entre ellos. Entonces se puede encontrar un par de hiperplanos  que tengan un margen máximo minimizando $\Vert w \Vert^2$, es decir:  
 \begin{equation}
 \text{min} \quad \frac{1}{2} \Vert w \Vert \quad \text{tal que} \quad y_i(w \cdot x_i + b) -1 \geq 0.
