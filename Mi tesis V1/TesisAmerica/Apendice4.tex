@@ -1,9 +1,26 @@
 \appendix{}
 
-\chapter{Algoritmo de reduccion de falsos positivos.}\label{capit:apendD}
+\chapter{Algoritmo de reducci\'on de falsos positivos en la localizaci\'on de la mano.}\label{capit:apendD}
 %
 \setcounter{figure}{0}
 \numberwithin{figure}{chapter}
 \numberwithin{table}{section} 
 
-El fin de este algoritmo es mejorar la detección de la mano. 
+\begin{algorithm}[h!]
+\begin{algorithmic}[1]
+\REQUIRE $RoiA$ arreglo de rectángulos que representan los ROIs encontrados por el clasificador. $N$ número de elementos de $RoiA$.   
+\ENSURE $Rect$ ROI resultante.   
+\STATE $\'area=0$.
+\STATE $t = 0.6$.  	 
+\STATE $Rect = RoiA[1]$
+\FOR{$i=2$ hasta $N$}   
+	\STATE Calcular el $\'area$ sobrepuesta de los rectángulos $Rect$ y $RoiA[i]$
+	\IF {$\'area$ $\geq$ $t$} 
+		\STATE $Rect$ es unión de los rectángulos.   
+	\ENDIF  
+\ENDFOR 
+
+\caption{Unión de ROIs (regiones de interés) sobrepuestas.}
+\label{alg:MergeRois} 
+\end{algorithmic}
+\end{algorithm} 

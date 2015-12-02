@@ -32,9 +32,10 @@ En la primera etapa del sistema los datos de entrada del sistema son capturados 
 
 \subsection{Kinect}
 
-En noviembre del 2010 la compa\'nia Microsoft lanz\'o el sensor Kinect para consolas de vídeo juego Xbox 360 y en febrero del 2011 lanz\'o la versi\'on para Windows.   
+En noviembre del 2010 la compa\'nia Microsoft lanz\'o el sensor Kinect para consolas de vídeo juego Xbox 360 y en febrero del 2011 lanz\'o la versi\'on para Windows. El dispositivo fue desarrollado por la compa\~nia PrimeSense en conjunto con Microsoft \footnote{\url{engadget.com/2013/06/21/life-after-kinect-primesense-post-microsoft/}}. El sensor de profundidad que utiliza el dispositivo fue desarrollado por Zeev Zalesvky, Alexanser Shpunt, Aviad Maizels y Javier Garcia en 2005 \footnote{\url{https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2007043036&recNum=1&maxRec=&office=&prevFilter=&sortOption=&queryString=&tab=PCT+Biblio}}   
 
-El dispositivo Kinect está equipado con una serie de sensores que permiten obtener imágenes a color y de profundidad (las cuales indican la distancia a la que está ubicada un objeto del sensor). La Figura \ref{fig:KinectPic} muestra la parte frontal del dispositivo Kinect para Windows. Los sensores permiten hacer detección y seguimiento de personas. El dispositivo tiene la capacidad de detectar hasta seis personas y hacer el seguimiento de hasta dos personas \footnote{https://msdn.microsoft.com/en-us/library/hh973074.aspx}.    
+
+El dispositivo Kinect está equipado con una serie de sensores que permiten obtener imágenes a color y de profundidad (las cuales indican la distancia a la que está ubicada un objeto del sensor). La Figura \ref{fig:KinectPic} muestra la parte frontal del dispositivo Kinect para Windows. Los sensores permiten hacer detección y seguimiento de personas. El dispositivo tiene la capacidad de detectar hasta seis personas y hacer el seguimiento de hasta dos personas \footnote{\url{https://msdn.microsoft.com/en-us/library/hh973074.aspx}}.    
   
 \begin{figure}[h!]
 \begin{center}
@@ -44,7 +45,7 @@ El dispositivo Kinect está equipado con una serie de sensores que permiten obte
 \label{fig:KinectPic}
 \end{figure} 
 
-\footnotetext{http://blogs.msdn.com/b/eternalcoding/archive/2012/02/01/official-kinect-for-windows-sdk-and-kinect-toolbox-1-1-1-are-out.aspx}
+\footnotetext{\url{http://blogs.msdn.com/b/eternalcoding/archive/2012/02/01/official-kinect-for-windows-sdk-and-kinect-toolbox-1-1-1-are-out.aspx}}
 
 El sensor está equipado con los siguientes componentes: un cámara de color (o sensor de color), un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED \citep{Jana2013}.
 Enseguida se describen brevemente cada uno de los componentes del sensor Kinect, estos se muestran en la Figura \ref{fig:KinectComponentes}. 
@@ -57,29 +58,29 @@ Enseguida se describen brevemente cada uno de los componentes del sensor Kinect,
 \label{fig:KinectComponentes}
 \end{figure}   
 
-\footnotetext{https://msdn.microsoft.com/en-us/library/jj131033.aspx}
+\footnotetext{\url{https://msdn.microsoft.com/en-us/library/jj131033.aspx}}
 
 \begin{itemize}
-\item La cámara de color captura y transmite datos de vídeo a color, detectando los colores rojo, verde y azul (RGB, por sus siglas en ingl\'es, red, green and blue). La transmisión de datos que brinda la cámara es una secuencia de imágenes (cuadros), a una velocidad de hasta $30$ cuadros por segundo con una resolución de hasta $1280\, x \, 960$ p\'ixeles. La velocidad de los cuadros por segundo varia según la resolución de la imagen.
+\item La cámara de color captura y transmite datos de vídeo a color, detectando los colores rojo, verde y azul (RGB, por sus siglas en ingl\'es, red, green and blue). La transmisión de datos que brinda la cámara es una secuencia de imágenes (cuadros), a una velocidad de hasta treinta cuadros por segundo con una resolución de hasta $1280\, x \, 960$ p\'ixeles. La velocidad de los cuadros por segundo varia según la resolución de la imagen.
 
 \item El emisor infrarrojo proyecta puntos de luz infrarroja, estos puntos son proyectados frente al sensor. Estos puntos junto con el sensor de profundidad es posible medir la distancia que existe del sensor a algún objeto que esté frente a él.  
 
-\item El sensor infrarrojo lee los puntos infrarrojos proyectados por el emisor infrarrojo, con la lectura de los datos se calcula la distancia que existe entre el objeto y el sensor. El sensor transmite los datos de profundidad con una velocidad de hasta $30$ cuadros por segundo con una resolución de hasta $640 \, x \, 480$ pixeles.   
+\item El sensor infrarrojo lee los puntos infrarrojos proyectados por el emisor infrarrojo, con la lectura de los datos se calcula la distancia que existe entre el objeto y el sensor. El sensor transmite los datos de profundidad con una velocidad de hasta treinta cuadros por segundo con una resolución de hasta $640 \, x \, 480$ pixeles.   
 
 \item El motor de inclinación controla el \'angulo de la posición vertical de los sensores del dispositivo. El motor puede moverse desde un \'angulo de $-27^ \circ$ a $+27^\circ$, con respecto al eje vertical del sensor.  
 
-\item La entrada de audio compuesta por un arreglo de  $4$ micrófonos permite capturar el sonido y calcular la posición de la fuente.
+\item La entrada de audio compuesta por un arreglo de cuatro micrófonos permite capturar el sonido y calcular la posición de la fuente.
 
 \item LED indica el estado del sensor. El LED en color verde indica que el sensor está disponible para utilizarse. El LED en color rojo indica que no existe conexión entre el Kinect y la computadora. La ausencia de color en el LED indica que el Kinect no se encuentra conectado a la fuente de energía eléctrica.
 \end{itemize}
 
 \subsection{Filtro de mediana} 
 
-Existen distintos métodos para eliminar el ruido por interferencia causado por dos o más  Kinect, algunos de estos métodos son invasivos pues el hardware del Kinect es modificado \citep{Mallick2014}. Una opción es utilizar filtro de mediana, pues rellena los valores faltantes en la imagen proveniente del Kinect \citep{Maimone2011}. 
+Existen distintos métodos para eliminar el ruido por interferencia causado por dos o más  Kinect, algunos de estos métodos son invasivos pues el hardware del Kinect es modificado \citep{Mallick2014}. Una opción es utilizar filtro de mediana, debido a que rellena los valores faltantes en la imagen proveniente del Kinect \citep{Maimone2011}. 
 
-Sea $Sw_{xy}$ el vecindario de tamaño $m \times n$, centrado en el pixel que se encuentra en la posición $(x,y)$. El filtro de mediana de la imagen $S(x,y)$, se calcula como: 
+Sea $W_{mn}$ el vecindario de tamaño $m \times n$, centrado en el pixel, $s$, que se encuentra en la posición $(x,y)$. El filtro de mediana de la imagen $S(x,y)$, se calcula como: 
 \begin{equation}
-\^S(x,y)=\underset{(s,t)\in S_{xy}}{\text{mediana}} \lbrace S(s,t)\rbrace
+s(x,y)=\underset{(u,v)\in W_{mn}}{\text{mediana}} \lbrace S(u,v)\rbrace
 \end{equation}
 
 El filtro de mediana reemplaza el valor del pixel usando la mediana de las intensidades del vecindario del pixel, el valor del pixel en la posición (x,y) es incluido en el calculo \citep{Gonzalez2002}. 
@@ -144,7 +145,7 @@ Las características Haar, son operadores rectangulares como los que se muestran
 
 Uno de los aportes del método desarrollado por Viola y Jones es el concepto de imagen integral con la cual se calcula el valor de las características de manera rápida, es decir en tiempo constante, $O(1)$.  
 
-La imagen integral, $SI$, de una imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se le quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}   
+La imagen integral, $SI$, de una imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se le quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{\url{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}}   
 \begin{equation}
 SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1).
 \end{equation}   
@@ -157,7 +158,7 @@ La Figura \ref{fig:FigIntegralImage} muestra un  ejemplo donde se calcula la ima
 \label{fig:FigIntegralImage}
 \end{figure}
 
-La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de la imagen integral de dicha región, la cual se obtiene como: \footnote{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}    
+La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de la imagen integral de dicha región, la cual se obtiene como: \footnote{\url{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}}    
 \begin{equation}
 REG(\alpha)=SI(A)+SI(D)-SI(B)-SI(C),
 \end{equation}
@@ -189,20 +190,20 @@ El clasificador fuerte es una combinación lineal de los clasificadores débiles
 \begin{equation}
 h(x)= \alpha_1h_1(x)+\alpha_2h_2(x)+ \cdots +\alpha_nh_n(x) ,
 \end{equation}
-donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a cada característica, el cual va entre $0$ y $1$. En el Apéndice \ref{capit:apendA}.
+donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a cada característica, el cual va entre $0$ y $1$. En el Apéndice \ref{capit:apendA} se encuentra el algoritmo para calcular el clasificador fuerte.
 
 \subsubsection{Clasificador AdaBoost en cascada}\label{sssec:AdaboostCascade}   
 
 El objetivo de realizar la detección utilizando un clasificador en forma de cascada es descartar de manera rápida las regiones donde no se encuentra el objeto.
 
 El clasificador en cascada está compuesto por etapas Figura \ref{fig:Cascade}, cada una de estas es un clasificador fuerte. Este clasificador es entrenado por medio de AdaBoost. El cual se encarga de encontrar el orden de evaluación de las características relevantes. 
-La selección se realiza como se muestra en el Algoritmo \ref{alg:Cascade} , cumpliendo cierta precisión en la detección $D$, ver Ecuación \ref{eq:D}, cierta tasa de falsos positivos $F$, ver Ecuación \ref{eq:F} .
+La selección se realiza como se muestra en el Algoritmo \ref{alg:Cascade}, cumpliendo cierta precisión en la detección $D$, ver Ecuación \ref{eq:D}, cierta tasa de falsos positivos $F$, ver Ecuación \ref{eq:F} .
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.60]{./Figures/DCascade.png}
 \end{center}
-\caption{Proceso del clasificador en forma de cascada, donde F representa la tasa de falsos positivos del clasificador de cascada y T .}
+\caption{Proceso del clasificador en forma de cascada, donde F representa la tasa de falsos positivos del clasificador de cascada y T representa el n\'umero de características.}
 \label{fig:Cascade}
 \end{figure}
 
@@ -401,7 +402,7 @@ La distancia $PC$ es la distancia vertical de la raíz del dedo al centro de la 
 \begin{center}
 \includegraphics[scale=.6]{./Figures/angles.png}
 \end{center}
-\caption{En la imagen se representan los siguientes elementos, el eje vertical con respecto a la mano se encuentra como una línea de color verde; la línea roja represente la distancia del eje vertical a la raíz de los dedos; el punto rosa representa el centro de la palma de la mano, el área azul representa el ángulo de que existe de la línea que una al centro con la raíz de los dedos y finalmente el área amarilla representa el ángulo que forma la línea del centro a la punta de los dedos, \protect\citep{Sgouropoulos2014}.}
+\caption{En la imagen se representan los siguientes elementos, el eje vertical con respecto a la mano se encuentra como una línea de color verde; la línea roja represente la distancia del eje vertical a la raíz de los dedos; el punto rosa representa el centro de la palma de la mano, el área azul representa el ángulo de que existe de la línea que une al centro con la raíz de los dedos y finalmente el área anaranjada representa el ángulo que forma la línea del centro a la punta de los dedos, \protect\citep{Sgouropoulos2014}.}
 \label{fig:anglesFingers}
 \end{figure} 
 
@@ -415,15 +416,15 @@ Una vez que todas las características son calculadas estas son guardadas en un 
 \section{Reconocimiento}\label{sec:SVM} 
 
 Es la etapa final del reconocimiento, es donde el gesto realizado por el usuario finalmente puede ser interpretado por la computadora.
-En este trabajo el reconocimiento se realiza utilizando el algoritmo de máquinas de soporte vectorial SVM, por sus siglas en ingles \citep{Cortes1995}, un método de aprendizaje de máquina supervisado el cual es utilizado para resolver problemas de clasificación y regresión. SVM tiene como objetivo crear un modelo basado en datos conocidos, datos de entrenamiento, donde este modelo es capaz de predecir a que clase pertenecen datos nuevos. 
+En este trabajo el reconocimiento se realiza utilizando el algoritmo de máquinas de soporte vectorial SVM, por sus siglas en ingl\'es \citep{Cortes1995}, un método de aprendizaje de máquina supervisado el cual es utilizado para resolver problemas de clasificación y regresión. SVM tiene como objetivo crear un modelo basado en datos conocidos, datos de entrenamiento, donde este modelo es capaz de predecir a que clase pertenecen datos nuevos. 
 
-SVM realiza la clasificación separando las clases calculando el hiperplano que tengan el margen de separación más grande. En la Figura \ref{fig:SVM} se muestra en conjunto de clases separables por medio de un hiperplano .  
+SVM realiza la clasificación separando las clases calculando el hiperplano que tengan el margen de separación más grande. En la Figura \ref{fig:SVM} se muestra en conjunto de clases separables por medio de un hiperplano.  
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.55]{./Figures/SVMarticle.png}
 \end{center}
-\caption{La imagen muestra la separación de dos clases, (los círculos en color azul y negro), mediante un hiperplano óptimo; donde $\textbf{w}$ representa la normal al hiperplano, $\frac{\textbf{-b}}{\textbf{w}}$ la distancia el hiperplano al origen. \protect\citep{Burges1998}.}
+\caption{La imagen muestra la separación de dos clases, (los círculos en color azul y negro), mediante un hiperplano óptimo; donde $\text{w}$ representa la normal al hiperplano, $\frac{\textbf{-b}}{\textbf{\text{w}}}$ la distancia el hiperplano al origen \protect\citep{Burges1998}.}
 \label{fig:SVM}
 \end{figure} 
 
@@ -433,37 +434,37 @@ Dado $N$ muestras de entrenamiento $x_i$, de dimensión $D$, dos clases distinta
 $$\lbrace x_i,y_i \rbrace \quad \text{donde} \quad  i=1, \cdots ,N \quad y\in \lbrace -1,1 \rbrace \quad x \in \Re^D.$$
 Sea  
 \begin{equation}\label{eq:hiper}
-w \cdot x + b = 0 ,
+\text{w} \cdot x + \text{b} = 0 ,
 \end{equation}  
-el hiperplano óptimo que separa a las clases, donde $w$ es la normal al hiperplano, $\frac{b}{ \Vert w \Vert}$ es la distancia perpendicular desde el hiperplano al origen.
+el hiperplano óptimo que separa a las clases, donde $\text{w}$ es la normal al hiperplano, $\frac{\text{b}}{ \Vert \text{w} \Vert}$ es la distancia perpendicular desde el hiperplano al origen.
 
 Sea $d_+$, la menor distancia del hiperplano que separa a las muestras positivas de las negativas y $d_-$, la menor distancia del hiperplano que separa a las muestras negativas de las positivas. Se define el margen del hiperplano como la suma de estas distancias, es decir: $d_+ + d_-$.
 
-Para el caso cuando las clases son linealmente separables basta con encontrar el hiperplano con el margen mayor. Es decir que el hiperplano puede ser calculado seleccionando $w$ y $b$ de manera que los datos de entrenamiento cumplan con:  
+Para el caso cuando las clases son linealmente separables basta con encontrar el hiperplano con el margen mayor. Es decir que el hiperplano puede ser calculado seleccionando $\text{w}$ y $\text{b}$ de manera que los datos de entrenamiento cumplan con:  
 \begin{equation}\label{eq:des+1}
-w \cdot x_i + b \geqslant +1 \quad \textrm{ para } \quad y_i=+1
+\text{w} \cdot x_i + \text{b} \geqslant +1 \quad \textrm{ para } \quad y_i=+1
 \end{equation} 
 \begin{equation}\label{eq:des-1}
-w \cdot x_i + b \leqslant -1 \quad \textrm{ para } \quad y_i=-1
+\text{w} \cdot x_i + \text{b} \leqslant -1 \quad \textrm{ para } \quad y_i=-1
 \end{equation} 
 Combinando las desigualdades anteriores, se obtiene:  
 \begin{equation}
-y_i(x_i \cdot w + b) -1 \geqslant 0 \qquad \forall i 
+y_i(x_i \cdot \text{w} + \text{b}) -1 \geqslant 0 \qquad \forall i 
 \end{equation} 
 
 Tomando en cuenta los puntos en donde se cumple la igualdad de la Ecuación \ref{eq:des+1}. Estos puntos se encuentran sobre el hiperplano $H_1$, el cual se escribe como: 
 \begin{equation}\label{eq:eq+1}
-w \cdot x_i + b = +1,  
+\text{w} \cdot x_i + \text{b} = +1,  
 \end{equation} 
-con normal $w$ y una distancia perpendicular desde el origen de $\frac{\vert 1-b \vert}{ \Vert w \Vert}$. 
+con normal $\text{w}$ y una distancia perpendicular desde el origen de $\frac{\vert 1-\text{b} \vert}{ \Vert \text{w} \Vert}$. 
 Similarmente para la Ecuación \ref{eq:des-1}, entonces el hiperplano $H_2$ se describe como: 
 \begin{equation}\label{eq:eq+1}
-w \cdot x_i + b = -1,  
+\text{w} \cdot x_i + \text{b} = -1,  
 \end{equation} 
-con normal $w$ y una distancia perpendicular desde el origen de $\frac{\vert-1-b\vert}{ \Vert w \Vert}$.
-Como $d_+ = d_- = \frac{1}{\Vert w \Vert}$, el margen es $\frac{2}{\Vert w \Vert}$. Los hiperplanos son paralelos pues tienen la misma normal, también ninguna muestra de entrenamiento caen entre ellos. Entonces se puede encontrar un par de hiperplanos  que tengan un margen máximo minimizando $\Vert w \Vert^2$, es decir:  
+con normal $\text{w}$ y una distancia perpendicular desde el origen de $\frac{\vert-1-\text{b}\vert}{ \Vert \text{w} \Vert}$.
+Como $d_+ = d_- = \frac{1}{\Vert \text{w} \Vert}$, el margen es $\frac{2}{\Vert \text{w} \Vert}$. Los hiperplanos son paralelos pues tienen la misma normal, también ninguna muestra de entrenamiento caen entre ellos. Entonces se puede encontrar un par de hiperplanos  que tengan un margen máximo minimizando $\Vert \text{w} \Vert^2$, es decir:  
 \begin{equation}
-\text{min} \quad \frac{1}{2} \Vert w \Vert \quad \text{tal que} \quad y_i(w \cdot x_i + b) -1 \geq 0.
+\text{min} \quad \frac{1}{2} \Vert \text{w} \Vert \quad \text{tal que} \quad y_i(\text{w} \cdot x_i + \text{b}) -1 \geq 0.
 \end{equation}  
 
 

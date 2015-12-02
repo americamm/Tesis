@@ -66,12 +66,13 @@ La segmentación es la partición o separación de la imagen en regiones represe
 
 \subsubsection{Extracción de características y seguimiento}\label{sssec:EtapaSeguimiento}  
 
-La extracción de características consiste en obtener ciertas entradas medibles de la imagen de la mano, generalmente segmentada, las cuales son utilizadas para reconocer el gesto realizado, \citep{Premaratne2013}, \citep{Nayakwadi2014}.\\
-Existen dos tipos de características geométricas tales como: las yemas de los dedos, la dirección de los dedos, el contorno de la mano y entre otras características; y las características no geométricas como el color, siluetas y texturas. \citep{Murthy2009}. 
+La extracción de características consiste en obtener ciertas entradas medibles de la imagen de la mano, generalmente segmentada, las cuales son utilizadas para reconocer el gesto realizado, \citep{Premaratne2013}, \citep{Nayakwadi2014}.
+
+Existen dos tipos de características geométricas y no geométricas. Un ejemplo de características geométricas son las yemas de los dedos, la dirección de los dedos, el contorno de la mano y entre otras características. Y un ejemplo de características no geométricas son el color, siluetas y texturas de la mano. \citep{Murthy2009}. 
 
 Enseguida se mencionan algunas de los métodos para la obtención de características \citep{Premaratne2013}. 
 \begin{itemize}
-\item Descriptores de Fourier los cuales describen formas en la imagen, haciendo uso de la serie de Fourier. Estas características son invariantes a escala.
+\item Descriptores de Fourier los cuales describen formas en la imagen, haciendo uso de la serie de Fourier. Por ejemplo la forma de la pose de la mano.
 \item Descriptores de Contorno nos dan el contorno  o el límite del objeto con invariancia a traslación, escala  y reflexión.     
 \item Características descritas por histogramas. Histogramas de gradientes orientados (HOG) es un descriptor de características. Se trata de contar la orientación de los gradientes en cierta porción de la imagen.  
 \end{itemize}
@@ -134,9 +135,9 @@ Existen tres tipos distintos de obstrucción las cuales dependen de la forma en 
 
 Existen diversos métodos para medir el rendimiento de un algoritmo de clasificación, una manera de representarlo es mediante una matriz de confusión. 
 
-Considerando una clasificación de solo dos clases. Cada instancia es mapeada a un elemento del conjunto de etiquetas (positiva o negativa). El clasificador se encarga de mapear las instancias a las clases existentes, indicando la clase a la que pertenece la instancia.
-El resultado de clasificación de alguna instancia puede resultar en cuatro posibles estados. Si la instancia es positiva y la clasificación es positiva, es un verdadero positivo; si la clasificación es negativa es un falso negativo. Si la instancia es negativa y la clasificación es negativa, es un verdadero negativo; si la clasificación es positiva, es un falso positivo.  
-Dado un clasificador y un conjunto de instancias, una matriz de confusión de $2 \times 2$, como la que se muestra en la Figura \ref{fig:Matrix} , puede ser construida por el resultado del conjunto de instancias \citep{Fawcett2006}.   
+Si consideramos una clasificación de un conjunto, donde cada elemento del conjunto es mapeado a un elemento del conjunto de etiquetas (positiva o negativa). El clasificador se encarga de mapear los elementos a las clases existentes, indicando la clase a la que pertenece la elemento.
+El resultado de clasificación de algún elemento puede resultar en cuatro posibles estados. Si el elemento es positivo y la clasificación es positiva, es un verdadero positivo; si la clasificación es negativa es un falso negativo. Si el elemento es negativo y la clasificación es negativa, es un verdadero negativo; si la clasificación es positiva, es un falso positivo.  
+Dado un clasificador y un conjunto de elementos, una matriz de confusión de $2 \times 2$, como la que se muestra en la Figura \ref{fig:Matrix}, puede ser construida por el resultado del conjunto de los elementos \citep{Fawcett2006}.   
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.4]{./Figures/MatrixConfusion.png}
@@ -147,7 +148,7 @@ Dado un clasificador y un conjunto de instancias, una matriz de confusión de $2
 Los valores de la diaginal de la matriz de confusion representan las predicciones correctas, y los valores fuera de la diagonal representan los errores.
 
 Distintas métricas de desempeño pueden ser calculadas gracias a esta matriz.\\ 
-La tasa de precision del clasificador puede ser calculado como: 
+La tasa de precisi\'on del clasificador puede ser calculado como: 
 \begin{equation}
 Presici\'on = \frac{Verdaderos \quad positivos}{Verdaderos \quad positivos + Falsos \quad positivos}
 \end{equation}

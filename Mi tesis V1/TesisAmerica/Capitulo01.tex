@@ -14,7 +14,7 @@ La manera en que el humano interactua con la computadora ha sido básicamente la
 Por lo que es necesario que la computadora pueda identificar la o las manos del usuario y reconocer el gesto que este realiza. 
 
 A finales de los años noventa se empezaron a desarrollar t\'ecnicas para  el reconocimiento de gestos con las manos. Los primeros enfoques utilizaban como medio de captura sensores como guantes de datos, marcadores de colores y acelerómetros, los cuales se colocaban en la o las manos para poder capturar la posición e identificar la pose realizada. 
-Las técnicas desarrolladas posteriormente obtienen la información necesaria para reconocer el gesto usando distintos tipos de imágenes o videos, que son obtenidos mediante diversos tipos de cámaras, por lo que no es necesario vestir algún dispositivo para reconocer un gesto hecho con las manos.
+Las técnicas desarrolladas posteriormente obtienen la información necesaria para reconocer el gesto usando distintos tipos de imágenes o videos, que son obtenidos mediante diversos tipos de cámaras, por lo que no es necesario portar algún dispositivo para reconocer un gesto hecho con las manos.
 
 Los métodos que utilizan imágenes o video son los más utilizados para realizar el reconocimiento de los gestos ya que la interacción entre el usuario y la computadora es más natural, el inconveniente con estos métodos es que es un problema difícil de resolver pues existen diversos aspectos que hay que tener en cuenta para obtener una buena precisión en el reconocimiento del gesto; por ejemplo tener en cuenta la resolución del dispositivo de captura, el ruido que existe en las imágenes, el tiempo de computo para realizar el procesamiento de las imágenes y las situaciones que se pueden presentar en la vida diaria que puedan entorpecer el reconocimiento del gesto. 
 
@@ -134,15 +134,15 @@ En esta sección se presentan los trabajos relevantes de cada uno de estos enfoq
  
 Los primeros trabajos de reconocimiento de gestos con las manos utilizan este modelo, actualmente se sigue utilizando pero en menor grado. 
 
-Un método de reconocimiento de gestos con las manos que utiliza guantes de datos \citep{Yoon2012} propone un sistema de reconocimiento de gestos estáticos, el cual reconoce $24$ gestos tomados del Lenguaje de Señas Americano, ASL (por sus siglas en inglés, American Sign Lenguaje). Este modelo consta de tres etapas. 
+Un método de reconocimiento de gestos con las manos que utiliza guantes de datos \citep{Yoon2012} propone un sistema de reconocimiento de gestos estáticos, el cual reconoce veinticuatro gestos tomados del Lenguaje de Señas Americano, ASL (por sus siglas en inglés, American Sign Lenguaje). Este modelo consta de tres etapas. 
 La primera etapa del sistema consiste en capturar la información proporcionada por un guante de datos, la cual esta siendo enviada por un protocolo de control de transmisión TCP, (por sus siglas en inglés, Transmission Control Protocol).
 Una vez que la información es recibida, los datos son pre-procesados, es decir son normalizados y las características son extraídas, las características son las correlaciones que existe entre los ejes.   
-La clasificación de gesto se realiza con un modelo de mezclas adaptativo. Para entrenar el modelo de mezclas se toman datos de $5$ personas, $300$ muestras de cada gestos, $8000$ por cada participante. Se realizaron pruebas con estos mismos datos; con un sujeto se alcanzó una precisión de $93.38 \%$ con los demás participantes se obtuvo una precisión de $89.97 \%$.  
+La clasificación de gesto se realiza con un modelo de mezclas adaptativo. Para entrenar el modelo de mezclas se toman datos de cinco personas, trescientas muestras de cada gestos, ocho mil por cada participante. Se realizaron pruebas con estos mismos datos; con un sujeto se alcanzó una precisión de $93.38 \%$ con los demás participantes se obtuvo una precisión de $89.97 \%$.  
 La principal desventaja del sistema es que este requiere tiempo para adaptarse a distintos usuarios. Otra desventaja para este sistema es que solo reconoce gestos estáticos. 
 
-A finales del año 2014 se lanzó el dispositivo MYO \footnote{\url{https://www.thalmic.com/en/myo/}}, el cual reconoce gestos dinámicos, se muestra en la Figura \ref{fig:Myo}. Este aparato es un brazalete que reconoce $5$ gestos dinámicos. Leyendo la actividad de los músculos del antebrazo y mandando estas señales vía bluetooth a la computadora donde estas señales son procesadas. \footnote{\url{http://www.digitaltrends.com/pc-accessory-reviews/myo-gesture-control-armband-review/}} 
+A finales del año 2014 se lanzó el dispositivo MYO \footnote{\url{https://www.thalmic.com/en/myo/}}, el cual reconoce gestos dinámicos, se muestra en la Figura \ref{fig:Myo}. Este aparato es un brazalete que reconoce cinco gestos dinámicos. Leyendo la actividad de los músculos del antebrazo y mandando estas señales vía bluetooth a la computadora donde estas señales son procesadas. \footnote{\url{http://www.digitaltrends.com/pc-accessory-reviews/myo-gesture-control-armband-review/}} 
 
-No se cuenta con la informacion detallada del funcionamiento de MYO, lo único que se conoce es que el reconocimiento consta de tres etapas \footnote{\url{https://www.quora.com/How-does-MYO-wearable-gesture-control-work}}. La primera es la adquisición de la señales eléctricas que producen los músculos del antebrazo, las cuales son capturadas mediante sensores EMG (estos detectan la actividad eléctrica), giroscopio, acelerómetro y magnetómetro; en la segunda etapa se amplifica la señal y se aplica un filtro pasa banda. Por último se realiza el procesamiento de la señal donde se reconoce el gesto usando un algoritmo de aprendizaje de máquina desarrollado por la compañía.  
+No se cuenta con la informacion detallada del funcionamiento de MYO, lo único que se conoce es que el reconocimiento consta de tres etapas \footnote{\url{https://www.quora.com/How-does-MYO-wearable-gesture-control-work}}. La primera es la adquisición de la señales eléctricas que producen los músculos esqueléticos del antebrazo, las cuales son capturadas mediante sensores que detectan la actividad eléctrica, giroscopio, acelerómetro y magnetómetro; en la segunda etapa se amplifica la señal y se aplica un filtro pasa banda. Por último se realiza el procesamiento de la señal donde se reconoce el gesto usando un algoritmo de aprendizaje de máquina desarrollado por la compañía.  
 
 \begin{figure}[h!]
 \begin{center}
@@ -160,7 +160,7 @@ La principal desventaja es la calibración debido a que puede ser tediosa pues e
 
 \subsection{Modelos basados en la visión}   
 
-Este modelo es el más popular debido a la variedad de sus aplicaciones y la diversidad de cámaras existentes que proporcionan distinto tipo de información. Existe una gran gama de datos que se pueden extraer con este modelo, usando las técnicas o métodos adecuados para el tipo de datos extraído se puede llegar a tener gran precision en el reconocimiento. Enseguida se presenta tres trabajos relevantes los cuales utilizaron distintos tipos de cámaras y número de ellas. 
+Este modelo es el más popular debido a la variedad de sus aplicaciones y la diversidad de cámaras existentes que proporcionan distinto tipo de información. Existe una gran gama de datos que se pueden extraer con este modelo, usando las técnicas o métodos adecuados para el tipo de datos extraído se puede llegar a tener gran precisi\'on en el reconocimiento. Enseguida se presenta tres trabajos relevantes los cuales utilizaron distintos tipos de cámaras y número de ellas. 
 
 %En el trabajo propuesto por \cite{Premaratne2013} realizan un modelo de reconocimiento de gestos estático y dinámico basados en el algoritmo de Lucas-Kanade. Las principales ventajas de este método son que es invariante a rotación, escala y al fondo. Aunque el modelo es afectado por los cambios en la iluminación.
 %::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -170,7 +170,8 @@ En trabajo de \citep{Huang2011} se propone un método que reconoce once gestos e
 Antes de realizar la segmentación de la mano se le aplica a la imagen un preprocesamiento que consiste en aplicar un filtro de Gabor. Después se escoge uno de los tres modelos del color; YCbCr, Gaussiano o Soriano, tomando en cuenta un nivel de gris.  
 Una vez que es realizado el preprocesamiento el paso siguiente es segmentar de la imagen de la mano el antebrazo, para esto se hace un barrido de la imagen por filas. Se segmenta la mano tomando en cuenta la distancia que existe entre la parte superior de la imagen y el número máximo de pixeles de un solo valor (el valor mayor del histograma).
 
-Una vez realizada la segmentación se obtienen las características necesarias para el reconocimiento. Las características son obtenidas utilizando análisis de componentes principales, PCA (por sus siglas en inglés, Principal Component Analysis).\\
+Una vez realizada la segmentación se obtienen las características necesarias para el reconocimiento. Las características son obtenidas utilizando análisis de componentes principales, PCA (por sus siglas en inglés, Principal Component Analysis).
+
 La clasificación se realiza por medio de máquinas de vectores de soporte, SVM (por sus siglas en inglés, Support Vector Machines).   
 
 La precisión del reconocimiento varía dependiendo de las imágenes, si son reales o si se les aplica antes un filtro de Gabor. También cambia si el usuario usa manga corta o larga.  
@@ -184,7 +185,7 @@ La primera es la configuración de los dispositivos de captura de datos del sist
 
 La parte de la detección y seguimiento  se lleva acabo utilizando la librería OPENNI, en específico usando la detección del esqueleto. El esqueleto nos proporciona el punto de la palma de la mano por la cual la región de interés, ROI (por sus siglas en inglés, Region of Interest) es seleccionada. Para tener una  mejor aproximación de la localización de la mano, se utiliza la cámara RGB. La localización de la mano se realiza convirtiendo la imagen en una imagen binaria, usando un umbral que es determinado por el espacio del color HSV (Matiz, Saturación, Valor); son utilizados guantes neón color rosa o verde para ubicar con mayor facilidad las manos.   
 
-Una vez obtenida la imagen binaria se calcula el contorno de la mano usando el algoritmo de Chang y Chen, dicho contorno es extraído como polígono y  es simplificado con el algoritmo de Douglas Peuker. 
+Una vez obtenida la imagen binaria se calcula el contorno de la mano usando el algoritmo de \citep{Chang2004}, dicho contorno es extraído como polígono y  es simplificado con el algoritmo de Douglas Peuker. 
 
 El reconocimiento del gesto utiliza el empatamiento de polígonos, el cual se basa en comparar dos polígonos, mediante distancias. Esto usando distancia de momentos HU y ángulo de giro. 
 Los gestos 3D son calculados usando la diferencia de las posiciones de la mano en cada cuadro. Las fórmulas para calcular estos gestos depende de qué gesto se  realice.  
@@ -218,7 +219,7 @@ El dispositivo Leap Motion (Figura \ref{fig:LeapMotion}) fue creado para el segu
 \begin{center}
 \includegraphics[scale=.3]{./Figures/LeapMotion.png}
 \end{center}
-\caption{Ejemplo del reconocimiento del gesto usando Leap Motion, mostrando una aplicación donde los gestos son representados en 3D. Leap Motion es el dispositivo que se encuentra conectado a la laptop. Imagen recuperada de \ref{LeapMotionFN}.}
+\caption{Ejemplo del reconocimiento del gesto usando Leap Motion, mostrando una aplicación donde los gestos son representados en 3D. Leap Motion es el dispositivo que se encuentra conectado a la laptop. Imagen recuperada de \textsuperscript{\ref{LeapMotionFN}}.}
 \label{fig:LeapMotion}
 \end{figure}
 
@@ -233,7 +234,7 @@ Se desconoce cómo funciona el software, solo se sabe que la mano es detectada p
 \begin{center}
 \includegraphics[scale=.4]{./Figures/Flutter.jpg}
 \end{center}
-\caption{La imagen anterior representa el funcionamiento del software Flutter. Imagen recuperada de \ref{FlutterFN} .}
+\caption{La imagen anterior representa el funcionamiento del software Flutter. Imagen recuperada de \textsuperscript{\ref{FlutterFN}}.}
 \label{fig:Flutter}
 \end{figure}
 

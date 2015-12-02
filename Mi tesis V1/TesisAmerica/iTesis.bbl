@@ -32,6 +32,13 @@ Chang, C.-C. y Lin, C.-J. (2011).
 \newblock {\em ACM Transactions on Intelligent Systems and Technology\/}, {\bf
   2}(3): 1--27.
 
+\bibitem[Chang {\em \mbox{et al.}\/}(2004)Chang, Chen, y Lu]{Chang2004}
+Chang, F., Chen, C.~J., y Lu, C.~J. (2004).
+\newblock {A linear-time component-labeling algorithm using contour tracing
+  technique}.
+\newblock {\em Computer Vision and Image Understanding\/}, {\bf 93}(2):
+  206--220.
+
 \bibitem[{Chih-Wei Hsu, Chih-Chung Chang} y Lin(2008){Chih-Wei Hsu, Chih-Chung
   Chang} y Lin]{Chih-WeiHsuChih-ChungChang2008}
 {Chih-Wei Hsu, Chih-Chung Chang} y Lin, C.-J. (2008).
@@ -42,6 +49,12 @@ Chang, C.-C. y Lin, C.-J. (2011).
 Cortes, C. y Vapnik, V. (1995).
 \newblock {Support-vector networks}.
 \newblock {\em Machine Learning\/}, {\bf 20}(3): 273--297.
+
+\bibitem[Cruz {\em \mbox{et al.}\/}(2012)Cruz, Lucio, y Velho]{Cruz2012}
+Cruz, L., Lucio, D., y Velho, L. (2012).
+\newblock {Kinect and RGBD Images: Challenges and Applications}.
+\newblock En: {\em 2012 25th SIBGRAPI Conference on Graphics, Patterns and
+  Images Tutorials\/}. IEEE, pp. 36--49.
 
 \bibitem[Fawcett(2006)Fawcett]{Fawcett2006}
 Fawcett, T. (2006).
