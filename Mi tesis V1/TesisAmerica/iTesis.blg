@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/TeX Live for SUSE Linux)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: iTesis.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: iTesis.aux
 The style file: cicese.bst
 Database file #1: iTesis.bib
 Repeated entry---line 404 of file iTesis.bib
@@ -18,45 +16,4 @@ Name 1 in "{Chih-Wei Hsu, Chih-Chung Chang}, and Chih-Jen Lin" has a comma at th
 while executing---line 1513 of file cicese.bst
 Warning--can't use both author and editor fields in Jana2013
 Warning--empty journal in Kang2013
-You've used 39 entries,
-            2727 wiz_defined-function locations,
-            1007 strings with 12557 characters,
-and the built_in function-call counts, 18322 in all, are:
-= -- 1758
-> -- 1000
-< -- 36
-+ -- 286
-- -- 286
-* -- 1884
-:= -- 2763
-add.period$ -- 125
-call.type$ -- 39
-change.case$ -- 213
-chr.to.int$ -- 45
-cite$ -- 120
-duplicate$ -- 712
-empty$ -- 1235
-format.name$ -- 351
-if$ -- 3717
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 45
-newline$ -- 203
-num.names$ -- 158
-pop$ -- 321
-preamble$ -- 1
-purify$ -- 172
-quote$ -- 0
-skip$ -- 640
-stack$ -- 0
-substring$ -- 879
-swap$ -- 279
-text.length$ -- 12
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 333
-warning$ -- 3
-while$ -- 189
-width$ -- 0
-write$ -- 516
 (There were 5 error messages)

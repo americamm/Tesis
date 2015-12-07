@@ -1,8 +1,8 @@
 \select@language {spanish}
 \addvspace {0\p@ }
 \contentsline {figure}{\numberline {1}{\ignorespaces Dispositivos utilizados para la captura de gestos.\relax }}{5}{figure.caption.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Dispositivos basados en contacto: a la izquierda de la imagen se observan los guantes de datos \footnotemark {} , en el centro los guantes de colores \footnotemark {} y a la derecha se encuentra el dispositivo wii \footnotemark {} . \addtocounter {footnote}{-3}}}}{5}{figure.caption.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Dispositivos basados en visi\IeC {\'o}n: en la imagen se observan distintos tipos de c\IeC {\'a}maras. A la izquierda de la imagen se observa una c\IeC {\'a}mara web \footnotemark {}, en el centro una c\IeC {\'a}mara digital \footnotemark {} y a la derecha de la imagen una c\IeC {\'a}mara TOF \footnotemark {} .}}}{5}{figure.caption.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Dispositivos basados en contacto: a la izquierda de la imagen se observan los guantes de datos \footnotemark {}, en el centro los guantes de colores \footnotemark {} y a la derecha se encuentra el dispositivo wii \footnotemark {}. \addtocounter {footnote}{-3}}}}{5}{figure.caption.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Dispositivos basados en visi\IeC {\'o}n: en la imagen se observan distintos tipos de c\IeC {\'a}maras. A la izquierda de la imagen se observa una c\IeC {\'a}mara web \footnotemark {}, en el centro una c\IeC {\'a}mara digital \footnotemark {} y a la derecha de la imagen una c\IeC {\'a}mara TOF \footnotemark {}.}}}{5}{figure.caption.8}
 \contentsline {figure}{\numberline {2}{\ignorespaces Ejemplo del reconocimiento del gesto usando MYO, controlando el volumen de la computadora. El dispositivo es el que aparece en el brazo del sujeto. Imagen recuperada de \footnotemark {}.\relax }}{7}{figure.caption.9}
 \contentsline {figure}{\numberline {3}{\ignorespaces Ejemplo del reconocimiento del gesto usando Leap Motion, mostrando una aplicaci\IeC {\'o}n donde los gestos son representados en 3D. Leap Motion es el dispositivo que se encuentra conectado a la laptop. Imagen recuperada de \textsuperscript {\ref {LeapMotionFN}}.\relax }}{10}{figure.caption.10}
 \contentsline {figure}{\numberline {4}{\ignorespaces La imagen anterior representa el funcionamiento del software Flutter. Imagen recuperada de \textsuperscript {\ref {FlutterFN}}.\relax }}{11}{figure.caption.11}
@@ -13,8 +13,8 @@
 \addvspace {0\p@ }
 \contentsline {figure}{\numberline {8}{\ignorespaces Metodolog\IeC {\'\i }a del sistema propuesto.\relax }}{21}{figure.caption.15}
 \contentsline {figure}{\numberline {9}{\ignorespaces Proceso de la etapa de adquisici\IeC {\'o}n de datos.\relax }}{21}{figure.caption.16}
-\contentsline {figure}{\numberline {10}{\ignorespaces Parte frontal del dispositivo Kinect en su versi\IeC {\'o}n para Windows, imagen recuperada de \FN@sf@gobble@optonly {}.\relax }}{22}{figure.caption.17}
-\contentsline {figure}{\numberline {11}{\ignorespaces Componentes del sensor Kinect, imagen recuperada de \FN@sf@gobble@optonly {}.\relax }}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {10}{\ignorespaces Parte frontal del dispositivo Kinect en su versi\IeC {\'o}n para Windows, imagen recuperada de \footnotemark {}.\relax }}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {11}{\ignorespaces Componentes del sensor Kinect, imagen recuperada de \FN@sf@gobble@optonly {}.\relax }}{22}{figure.caption.18}
 \contentsline {figure}{\numberline {12}{\ignorespaces Proceso de detecci\IeC {\'o}n de la mano.\relax }}{24}{figure.caption.19}
 \contentsline {figure}{\numberline {13}{\ignorespaces Procedimiento del algoritmo de detecci\IeC {\'o}n r\IeC {\'a}pida de objetos.\relax }}{25}{figure.caption.20}
 \contentsline {figure}{\numberline {14}{\ignorespaces Ejemplo de tipos de operadores Haar.\relax }}{26}{figure.caption.21}

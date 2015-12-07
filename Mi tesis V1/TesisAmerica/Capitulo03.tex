@@ -41,11 +41,11 @@ El dispositivo Kinect está equipado con una serie de sensores que permiten obte
 \begin{center}
 \includegraphics[scale=.65]{./Figures/Kinect.jpg}
 \end{center}
-\caption{Parte frontal del dispositivo Kinect en su versión para Windows, imagen recuperada de \footnotemark{}.} 
+\caption{Parte frontal del dispositivo Kinect en su versión para Windows, imagen recuperada de \protect\footnotemark{}.} 
 \label{fig:KinectPic}
 \end{figure} 
 
-\footnotetext{\url{http://blogs.msdn.com/b/eternalcoding/archive/2012/02/01/official-kinect-for-windows-sdk-and-kinect-toolbox-1-1-1-are-out.aspx}}
+\footnotetext{\url{http://goo.gl/2GlwI}}
 
 El sensor está equipado con los siguientes componentes: un cámara de color (o sensor de color), un emisor infrarrojo, un sensor infrarrojo de profundidad, un motor que controla la inclinación, un arreglo de cuatro micrófonos y un LED \citep{Jana2013}.
 Enseguida se describen brevemente cada uno de los componentes del sensor Kinect, estos se muestran en la Figura \ref{fig:KinectComponentes}. 
@@ -145,7 +145,7 @@ Las características Haar, son operadores rectangulares como los que se muestran
 
 Uno de los aportes del método desarrollado por Viola y Jones es el concepto de imagen integral con la cual se calcula el valor de las características de manera rápida, es decir en tiempo constante, $O(1)$.  
 
-La imagen integral, $SI$, de una imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se le quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{\url{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}}   
+La imagen integral, $SI$, de una imagen, $S(x,y)$, es calculada como la suma del valor de los pixeles que se encuentran arriba y a la izquierda de cierta posición de la imagen a la cual se le quiere hacer el cálculo. Lo anterior se puede escribir como: \footnote{\url{https://goo.gl/0oIJBz}}   
 \begin{equation}
 SI(x,y)=S(x,y) + S(x-1,y) + SI(x,y-1)-SI(x-1,y-1).
 \end{equation}   
@@ -158,7 +158,7 @@ La Figura \ref{fig:FigIntegralImage} muestra un  ejemplo donde se calcula la ima
 \label{fig:FigIntegralImage}
 \end{figure}
 
-La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de la imagen integral de dicha región, la cual se obtiene como: \footnote{\url{https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/}}    
+La imagen integral permite calcular la suma de los pixeles de cierta región usando solo los valores de las esquinas de la imagen integral de dicha región, la cual se obtiene como: \footnote{\url{https://goo.gl/0oIJBz}}    
 \begin{equation}
 REG(\alpha)=SI(A)+SI(D)-SI(B)-SI(C),
 \end{equation}
@@ -340,7 +340,7 @@ En este trabajo se extraen características geométricas, las cuales son extraí
 
 A continuación se definen los conceptos anteriores y el de conjunto convexo.
 
-Sea $A$ un conjunto en el espacio euclidiano $\bold{\Re}^d$, donde $d$ es la dimensión del espacio euclidiano. $A$ es un conjunto convexo \footnote{\label{ConvexFN} Weisstein, Eric W. "Convex." From MathWorld--A Wolfram Web Resource. http://mathworld.wolfram.com/Convex.html} si contiene todos los segmentos de línea que unen a cualquier par de puntos pertenecientes al conjunto.  
+Sea $A$ un conjunto en el espacio euclidiano $\bold{\Re}^d$, donde $d$ es la dimensión del espacio euclidiano. $A$ es un conjunto convexo \footnote{\label{ConvexFN} Weisstein, Eric W. "Convex." From MathWorld--A Wolfram Web Resource. \url{http://mathworld.wolfram.com/Convex.html}} si contiene todos los segmentos de línea que unen a cualquier par de puntos pertenecientes al conjunto.  
 \begin{figure}[h!]
 \centering
 \subfigure[Convexo]{\includegraphics[scale=.8]{./Figures/ConvexSet.png}\label{fig:Sets:Convex}} \hspace{10mm}

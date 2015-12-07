@@ -92,15 +92,14 @@ Los modelos basados en la visión, ver la Figura \ref{fig:Modelos:2} surgieron c
 
 \begin{figure}[h!]
 \begin{center}
-\subfigure [Dispositivos basados en contacto: a la izquierda de la imagen se observan los guantes de datos \protect\footnotemark{}
-, en el centro los guantes de colores  \protect\footnotemark{}  y a la derecha se encuentra el dispositivo wii \protect\footnotemark{} .   \protect\addtocounter{footnote}{-3}]
+\subfigure [Dispositivos basados en contacto: a la izquierda de la imagen se observan los guantes de datos \protect\footnotemark{}, en el centro los guantes de colores  \protect\footnotemark{}  y a la derecha se encuentra el dispositivo wii \protect\footnotemark{}.   \protect\addtocounter{footnote}{-3}]
 {
     {\includegraphics[scale=.25]{./Figures/Dataglove.jpg}}  \qquad
 	{\includegraphics[scale=.25]{./Figures/colorGloves.jpg}} \qquad   	
 	{\includegraphics[scale=.29]{./Figures/wii.jpg}} 	  	
 	\label{fig:Modelos:1}
 }
-\subfigure [Dispositivos basados en visión: en la imagen se observan distintos tipos de cámaras. A la izquierda de la imagen se observa una cámara web \protect\footnotemark{}, en el centro una cámara digital \protect\footnotemark{} y a la derecha de la imagen una cámara  TOF \protect\footnotemark{} .]
+\subfigure [Dispositivos basados en visión: en la imagen se observan distintos tipos de cámaras. A la izquierda de la imagen se observa una cámara web \protect\footnotemark{}, en el centro una cámara digital \protect\footnotemark{} y a la derecha de la imagen una cámara  TOF \protect\footnotemark{}.]
 {
 	{\includegraphics[scale=.3]{./Figures/webcam.jpg}} 		\qquad
 	{\includegraphics[scale=.2]{./Figures/digitalCamera.jpg}}  \qquad
@@ -224,7 +223,7 @@ El dispositivo Leap Motion (Figura \ref{fig:LeapMotion}) fue creado para el segu
 \end{figure}
 
 El proceso de captura de los datos, la segmentación, la extracción de características, el seguimiento y el reconocimiento del dispositivo no se conoce a detalle, pues no ha sido publicado.
-Solo se conoce \footnote{ \url{http://blog.leapmotion.com/hardware-to-software-how-does-the-leap-motion-controller-work/}} que se utilizan tres cámaras infrarrojas. Con la imágenes obtenidas con se hace una representación 3D de las manos. Antes de realizar el modelo,  se sustrae el fondo de las imágenes para eliminar el ruido generado por la iluminación u otros objetos. 
+Solo se conoce \footnote{\url{http://goo.gl/INzrdR}} que se utilizan tres cámaras infrarrojas. Con la imágenes obtenidas con se hace una representación 3D de las manos. Antes de realizar el modelo,  se sustrae el fondo de las imágenes para eliminar el ruido generado por la iluminación u otros objetos. 
 Para realizar el seguimiento se extraen la características. Una de ellas son los dedos, el algoritmo de seguimiento interpreta la información 3D e infiere la posición de los objetos ocluidos. Se aplican filtros para suavizar los datos. 
 
 Enseguida se explica el software de reconocimiento de gestos estáticos Flutter, ver la Figura \ref{fig:Flutter}, el cual reconoce cuatro gestos estáticos usando la cámara web como dispositivo de entrada. 
