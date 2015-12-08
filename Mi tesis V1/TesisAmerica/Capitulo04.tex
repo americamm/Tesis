@@ -168,6 +168,7 @@ El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento
 En este trabajo se toma un gesto dinámico como una secuencia de treinta cuadros consecutivos en los cuales se realiza la misma pose en cada cuadro, solo que la pose cambia de posición, es decir se encuentra en movimiento. De manera que el sistema reconoce el gesto dinámico identificando y siguiendo cada pose en cada cuadro. La trayectoria del gesto es obtenida tomando en cuenta la posición del centro de la mano el cual es calculado en cada cuadro. 
  
 El sistema reconoce dos gestos dinámicos, los cuales son los gestos estáticos en movimiento. La Figura \ref{fig:G3} muestra dos secuencias del gesto dinámico de la palma de la mano. La Figura \ref{fig:G4} muestra dos secuencias del gesto dinámico del mano en forma de pu\~no.  
+
 \begin{figure}[h!]
 \begin{center}
 \subfigure[Cuadro inicial]{\includegraphics[scale=.25]{./Figures/G3_1.png}\label{fig:G3:1}}
@@ -178,19 +179,25 @@ El sistema reconoce dos gestos dinámicos, los cuales son los gestos estáticos 
 \end{center}
 \caption{Secuencia del gesto dinámico de la palma de la mano con los dedos separados, la vista es desde el Kinect frontal.}
 \label{fig:G3}
-\end{figure}
+\end{figure}    
 
-\begin{figure}[t!]
+
+\clearpage
+
+%\begin{minipage}{\linewidth}
+\begin{figure}[th!]
 \begin{center}
 \subfigure[Cuadro inicial]{\includegraphics[scale=.25]{./Figures/G4_1.png}\label{fig:G4:1}}  
 \subfigure[Cuadro número 15 ]{\includegraphics[scale=.25]{./Figures/G4_15.png}\label{fig:G4:2}}
 \subfigure[Cuadro número 30 ]{\includegraphics[scale=.25]{./Figures/G4_30.png}\label{fig:G4:3}}
 \subfigure[Cuadro número 45 ]{\includegraphics[scale=.25]{./Figures/G4_45.png}\label{fig:G4:4}}
-\subfigure[Cuadro final]{\includegraphics[scale=.25]{./Figures/G4_60.png}\label{fig:G4:5}}
+\subfigure[Cuadro final]{\includegraphics[scale=.25]{./Figures/G4_60.png}\label{fig:G4:5}} 
 \end{center}
 \caption{Secuencia del gesto dinámico del puño, la vista es desde el Kinect frontal.}
 \label{fig:G4}
 \end{figure}
+%\end{minipage}
+
 	
 \newpage
 %%=====================================================
