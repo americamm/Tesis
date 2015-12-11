@@ -14,7 +14,7 @@ Como se vi\'o en el Capítulo \ref{capit:cap3}, Sección \ref{sec:KinectSensor},
 \begin{center}
 \includegraphics[scale=.2]{./Figures/system.png}
 \end{center}
-\caption{Configuración del sistema de reconocimiento de gestos}
+\caption{Configuración del sistema de reconocimiento de gestos.}
 \label{fig:SetupSystem}
 \end{figure}  
 
@@ -25,21 +25,21 @@ En la siguiente imagen se puede apreciar un ejemplo de las imágenes de profundi
 \begin{center}
 \includegraphics[scale=.35]{./Figures/166.png}
 \end{center}
-\caption{Representación de los datos capturados por los Kinect}
+\caption{Representación de los datos capturados por los Kinect.}
 \label{fig:ImagenCapturada}
 \end{figure}  
 
-Por la naturaleza del Kinect, las imágenes obtenidas de ambos sensores contiene ruido, como el que se muestra en la Figura \ref{fig:ImagenCapturadaNoNoise}; el ruido es reducido usando un filtro de mediana, este es aplicado en toda la imagen usando una ventada de tamaño trece. La imagen resultante $S(x,y)$ es como la que se muestra en la Figura \ref{fig:ImagenCapturadaNoNoise}.
+Por la naturaleza del Kinect, las imágenes obtenidas de ambos sensores contienen ruido, como el que se muestra en la Figura \ref{fig:ImagenCapturadaNoNoise}; el ruido es reducido usando un filtro de mediana, este es aplicado en toda la imagen usando una ventada de tamaño trece. La imagen resultante $S(x,y)$ es como la que se muestra en la Figura \ref{fig:ImagenCapturadaNoNoise}.
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=.35]{./Figures/166_W13.png}
 \end{center}
-\caption{Representación de los datos capturados por los Kinect}
+\caption{Imagen capturada por el Kinect, a la cual se le aplic\'o un filtro de mediana.}
 \label{fig:ImagenCapturadaNoNoise}
 \end{figure}  
 
-Se aprecia en la imagen siguiente  que gran parte del ruido es reducido obteniendo una mejora en la imagen, desafortunadamente todavía existe ruido en la imagen, este puede ser eliminado casi en su mayoría  si el tamaño de la ventana aumenta pero se pierde información importante de la imagen, de manera que se decidió optar por el tamaño de ventana, antes mencionado. En la imagen también se aprecia el fondo negro, esto es debido a que se discrimin\'o el fondo, lo que estuviera a un distancia de más de $2$ $m$ del sensor. 
+Se aprecia en la imagen siguiente, que gran parte del ruido es reducido obteniendo una mejora en la imagen, desafortunadamente todavía existe ruido en la imagen, este puede ser eliminado casi en su mayoría  si el tamaño de la ventana aumenta pero se pierde información importante de la imagen, de manera que se decidió optar por el tamaño de ventana, antes mencionado. En la imagen también se aprecia el fondo negro, esto es debido a que se discrimin\'o lo que estuviera a un distancia de más de $2$ $m$ del sensor. 
 
 
 
@@ -73,7 +73,7 @@ Nuestra base de datos contiene gran cantidad de imágenes de profundidad. Imáge
 
 Los parámetros utilizados para la obtención del clasificador final fueron: el porcentaje de precisión de detección de $95 \%$ y la tasa de falsos positivos aceptados de $5 \%$. El resultado final del entrenamiento fue en clasificador AdoBoost en forma de cascada, que consta de diecinueve etapas. El clasificador resultante se encuentra en Github \textsuperscript{\ref{myrepo}}, en formato XML.  
 
-Con el clasificador obtenido, se localiza la mano en cada cuadro proveniente de los dispositivos  Kinect, una ventana  inicial de tamaño $60 \times 60$ pixeles se desliza por la imagen. Para eliminar falsos positivos que pudieran ocurrir en la detección de la mano se utiliza un algoritmo equivalente al de \cite{Mei2015}, este se muestra en el apéndice \ref{capit:apendD}.
+Con el clasificador obtenido, se localiza la mano en cada cuadro proveniente de los dispositivos  Kinect, una ventana  inicial de tamaño $60 \times 60$ pixeles se desliza por la imagen. Para eliminar falsos positivos que pudieran ocurrir en la detección de la mano se utiliza un algoritmo equivalente al de \citep{Mei2015}, este se muestra en el apéndice \ref{capit:apendD}.
 
 Una vez que la mano se localiza, la región de interés $ROI(x,y)$ es seleccionada alrededor de la mano, como se observa en la Figura \ref{fig:Roi}.
 
@@ -165,7 +165,7 @@ El modelo que reconoce los gestos fue creado mediante SVM. Para el entrenamiento
 \subsection{Reconocimiento de gestos dinámicos}\label{RecognitionDynamic}
 
 
-En este trabajo se toma un gesto dinámico como una secuencia de treinta cuadros consecutivos en los cuales se realiza la misma pose en cada cuadro, solo que la pose cambia de posición, es decir se encuentra en movimiento. De manera que el sistema reconoce el gesto dinámico identificando y siguiendo cada pose en cada cuadro. La trayectoria del gesto es obtenida tomando en cuenta la posición del centro de la mano el cual es calculado en cada cuadro. 
+En este trabajo, se toma un gesto dinámico como una secuencia de treinta cuadros consecutivos en los cuales la misma pose es realizada. La diferencia entre los gestos estáticos es que la pose cambia de posición, es decir se encuentra en movimiento. De manera que el sistema reconoce el gesto dinámico identificando y siguiendo cada pose en cada cuadro. La trayectoria del gesto es obtenida tomando en cuenta la posición del centro de la mano el cual es calculado en cada cuadro. 
  
 El sistema reconoce dos gestos dinámicos, los cuales son los gestos estáticos en movimiento. La Figura \ref{fig:G3} muestra dos secuencias del gesto dinámico de la palma de la mano. La Figura \ref{fig:G4} muestra dos secuencias del gesto dinámico del mano en forma de pu\~no.  
 

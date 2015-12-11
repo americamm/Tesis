@@ -197,7 +197,7 @@ donde $n$ es el n\'umero de características, $\alpha_i$ es el valor asociado a 
 El objetivo de realizar la detección utilizando un clasificador en forma de cascada es descartar de manera rápida las regiones donde no se encuentra el objeto.
 
 El clasificador en cascada está compuesto por etapas Figura \ref{fig:Cascade}, cada una de estas es un clasificador fuerte. Este clasificador es entrenado por medio de AdaBoost. El cual se encarga de encontrar el orden de evaluación de las características relevantes. 
-La selección se realiza como se muestra en el Algoritmo \ref{alg:Cascade}, cumpliendo cierta precisión en la detección $D$, ver Ecuación \ref{eq:D}, cierta tasa de falsos positivos $F$, ver Ecuación \ref{eq:F} .
+La selección se realiza como se muestra en el Algoritmo \ref{alg:Cascade}, cumpliendo cierta precisión en la detección $D$, ver Ecuación \ref{eq:D}, cierta tasa de falsos positivos $F$, ver Ecuación \ref{eq:F}.
 
 \begin{figure}[h!]
 \begin{center}
@@ -266,7 +266,8 @@ Como la varianza total no depende de $t$, es una constante, entonces para encont
 \subsection{Operaciones Morfológicas}\label{subsec:OperacionesMorfologicas} 
 
 Otra técnica muy utilizada en procesamiento de imágenes son las operaciones morfológicas. Que son un conjunto de operaciones no lineales. La idea es que al aplicar alguna de estas operaciones el ruido sea removido tomando en cuenta la forma y estructura de la imagen. 
-Las operaciones morfológicas \citep{Premaratne2013} utilizan un elemento estructural el cual se aplica por toda la imagen. Los elementos estructurales pueden ser de distintas formas como los que se muestran en la Figura \ref{fig:EX}.
+Las operaciones morfológicas \citep{Premaratne2013} utilizan un elemento estructural el cual se aplica por toda la imagen. 
+Los elementos estructurales pueden ser de distintas formas como los que se muestran en la Figura \ref{fig:EX}.
 \begin{figure}[h!]
 \centering
 \subfigure[Rectángulo de $3x3$.]{\includegraphics[scale=.68]{./Figures/EX1}\label{fig:EX:1}} \qquad
@@ -317,7 +318,7 @@ La Figura \ref{fig:OM:5} muestra el resultado de aplicar la operación a la Figu
 \subfigure[erosión]{\includegraphics[scale=.55]{./Figures/erosionMO}\label{fig:OM:3}} \hspace{10mm}
 \subfigure[apertura]{\includegraphics[scale=.55]{./Figures/openingMO}\label{fig:OM:4}} \hspace{10mm}
 \subfigure[cierre]{\includegraphics[scale=.55]{./Figures/closingMO}\label{fig:OM:5}}
-\caption{Aplicación de las principales operaciones morfológicas a la imagen que se encuentra en el inciso a), \protect\citep{Smith1999} } \label{fig:OM}
+\caption{Aplicación de las principales operaciones morfológicas a la imagen que se encuentra en el inciso a), \protect\citep{Smith1999}.} \label{fig:OM}
 \end{figure} 
 
 
@@ -345,7 +346,7 @@ Sea $A$ un conjunto en el espacio euclidiano $\bold{\Re}^d$, donde $d$ es la dim
 \centering
 \subfigure[Convexo]{\includegraphics[scale=.8]{./Figures/ConvexSet.png}\label{fig:Sets:Convex}} \hspace{10mm}
 \subfigure[conexo]{\includegraphics[scale=.75]{./Figures/ConcaveSet.png}\label{fig:OM:Concave}} \hspace{10mm}
-\caption{Ejemplo de un conjunto conexo y un convexo. Image recuperada de \ref{ConvexFN} }\label{fig:Sets}
+\caption{Ejemplo de un conjunto conexo y un convexo. Image recuperada de \ref{ConvexFN}. }\label{fig:Sets}
 \end{figure} 
 
 Sea $B$ un conjunto de puntos en el plano Euclidiano, la envolvente convexa de $B$ es el conjunto convexo más pequeño que contiene a todos los puntos en $B$. En la Figura \ref{fig:FigConvexHullDefects} se muestra de color rojo la envolvente convexa de la Figura cuyo contorno se encuentra de color negro. 
@@ -365,10 +366,10 @@ En la Figura \ref{fig:FigConvexHullDefects} los puntos amarillos representan los
 
 Usando las técnicas anteriores podemos extraer características importantes como el número de dedos, la posición del centro de la palma de mano, la posición de la punta de los dedos, la posición del inicio o raíz de los dedos, el ángulo del centro de la palma de la mano a la punta de los dedos, ángulo $TC$, el ángulo del centro de la palma de la mano al inicio de los dedos, ángulo $RC$ y la distancia vertical del centro de la palma de la mano al inicio de los dedos. Enseguida se explica cómo son obtenidas las características mencionadas. 
 
-El número de dedos que se encuentran levantados es calculado con el Algoritmo \ref{alg:NumDedos} desarrollado por \citep{Kathuria2011}, ver Apéndice \ref{capit:apendC}, el cual utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, s_n(x,y) \rbrace$, los puntos de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, las distancias del punto de inicio al de mayor distancia, $\mathcal{\delta}=\lbrace \delta_1(x,y), \delta_2(x,y), \cdots, \delta_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa.
+El número de dedos que se encuentran levantados es calculado con el Algoritmo \ref{alg:NumDedos} desarrollado por \citep{Kathuria2011}, ver Apéndice \ref{capit:apendC}, el cual utiliza los defectos de convexidad en especifico los conjuntos de puntos de inicio, $\mathcal{S}=\lbrace s_1(x,y), s_2(x,y), \cdots, \allowbreak s_n(x,y) \rbrace$, los puntos de mayor distancia, $\mathcal{D}=\lbrace d_1(x,y), d_2(x,y), \cdots, d_n(x,y) \rbrace$, las distancias del punto de inicio al de mayor distancia, $\mathcal{\delta}=\lbrace \delta_1(x,y), \delta_2(x,y), \cdots, \delta_n(x,y) \rbrace$, donde $n$ es el número total de defectos de la envolvente convexa.
 Sea $C_r(x,y)$, el punto que representa el centroide del rectángulo más pequeño que encierra a la mano, $L_r$, la altura del rectángulo y $k$ una constante. 
 
-La posición de la raíz de los dedos, $Fr(s,y)$ puede ser calculada usando los defectos de convexidad \citep{Hummel2014}, en especifico los puntos de profundidad, $d(x,y)$. Se calcula tomando el punto medio de los puntos de profundidad consecutivos encontrados en medio de los dedos, como se muestra en la Figura \ref{fig:RootFingers} . Es decir: 
+La posición de la raíz de los dedos, $Fr(s,y)$ puede ser calculada usando los defectos de convexidad \citep{Hummel2014}, en especifico los puntos de profundidad, $d(x,y)$. Se calcula tomando el punto medio de los puntos de profundidad consecutivos encontrados en medio de los dedos, como se muestra en la Figura \ref{fig:RootFingers}. Es decir: 
 \begin{equation}
 Fr_i(x,y)= \left( \frac{ x_{d_i}+x_{d_{i-1}} }{2},\frac{y_{d_i}+y_{d_{i-1}}}{2}  \right),
 \end{equation}
@@ -378,11 +379,11 @@ donde $i$ representa el número de dedo, cuando $i=0$ se toma el punto de profun
 \begin{center}
 \includegraphics[scale=.55]{./Figures/rootFingers.png}
 \end{center}
-\caption{La figura muestra parte de la mano y en ella se aprecia los siguientes elementos: en color rojo la envolvente convexa, en amarillo los puntos de inicio y final de los defectos de convexidad,  en color azul los puntos de profundidad de los defectos, en verde la linea que une a los puntos de profundidad consecutivos y finalmente en morado los puntos medios, \protect\citep{Hummel2014}} 
+\caption{La figura muestra parte de la mano y en ella se aprecia los siguientes elementos: en color rojo la envolvente convexa, en amarillo los puntos de inicio y final de los defectos de convexidad,  en color azul los puntos de profundidad de los defectos, en verde la linea que une a los puntos de profundidad consecutivos y finalmente en morado los puntos medios, \protect\citep{Hummel2014}.} 
 \label{fig:RootFingers}
 \end{figure} 
 
-El centro de la palma de mano también se calcula, con los puntos de profundidad de los defectos de convexidad. Se toma como centro de la palma de la mano el centro del rectángulo más chico que une rodea a los puntos de convexidad. 
+El centro de la palma de la mano también se calcula, con los puntos de profundidad de los defectos de convexidad. Se toma como centro de la palma de la mano, el centro del rectángulo más chico que une rodea a los puntos de convexidad. 
 
 El ángulo $RC$ es el formado por el eje $y$  y la línea que une al punto que representa la posición de la raíz de los dedos, $Fr(x,y)$ con el centro de la palma de la mano, $Ch(x,y)$, \citep{Sgouropoulos2014}. 
 \begin{equation}

@@ -11,73 +11,73 @@
 \contentsline {figure}{\numberline {6}{\ignorespaces Representaci\IeC {\'o}n de un imagen digital. Recuperada de \citep {Shin2013}. \relax }}{19}{figure.caption.13}
 \contentsline {figure}{\numberline {7}{\ignorespaces La siguiente imagen representa una matriz de confusi\IeC {\'o}n, de un problema de clasificaci\IeC {\'o}n de dos clases.\relax }}{20}{figure.caption.14}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {8}{\ignorespaces Metodolog\IeC {\'\i }a del sistema propuesto.\relax }}{21}{figure.caption.15}
-\contentsline {figure}{\numberline {9}{\ignorespaces Proceso de la etapa de adquisici\IeC {\'o}n de datos.\relax }}{21}{figure.caption.16}
-\contentsline {figure}{\numberline {10}{\ignorespaces Parte frontal del dispositivo Kinect en su versi\IeC {\'o}n para Windows, imagen recuperada de \footnotemark {}.\relax }}{22}{figure.caption.17}
-\contentsline {figure}{\numberline {11}{\ignorespaces Componentes del sensor Kinect, imagen recuperada de \FN@sf@gobble@optonly {}.\relax }}{22}{figure.caption.18}
-\contentsline {figure}{\numberline {12}{\ignorespaces Proceso de detecci\IeC {\'o}n de la mano.\relax }}{24}{figure.caption.19}
-\contentsline {figure}{\numberline {13}{\ignorespaces Procedimiento del algoritmo de detecci\IeC {\'o}n r\IeC {\'a}pida de objetos.\relax }}{25}{figure.caption.20}
-\contentsline {figure}{\numberline {14}{\ignorespaces Ejemplo de tipos de operadores Haar.\relax }}{26}{figure.caption.21}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{26}{figure.caption.21}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{26}{figure.caption.21}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{26}{figure.caption.21}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{26}{figure.caption.21}
-\contentsline {figure}{\numberline {15}{\ignorespaces Ejemplo del c\IeC {\'a}lculo de la imagen integral.\relax }}{26}{figure.caption.22}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagen original}}}{26}{figure.caption.22}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagen integral}}}{26}{figure.caption.22}
-\contentsline {figure}{\numberline {16}{\ignorespaces Regiones de la imagen integral.\relax }}{27}{figure.caption.23}
-\contentsline {figure}{\numberline {17}{\ignorespaces Proceso del clasificador en forma de cascada, donde F representa la tasa de falsos positivos del clasificador de cascada y T representa el n\'umero de caracter\IeC {\'\i }sticas.\relax }}{28}{figure.caption.24}
-\contentsline {figure}{\numberline {18}{\ignorespaces Ejemplos de elementos estructurales.\relax }}{31}{figure.caption.25}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rect\IeC {\'a}ngulo de $3x3$.}}}{31}{figure.caption.25}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Figura de $3x2$.}}}{31}{figure.caption.25}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cruz de $5x5$.}}}{31}{figure.caption.25}
-\contentsline {figure}{\numberline {19}{\ignorespaces Aplicaci\IeC {\'o}n de las principales operaciones morfol\IeC {\'o}gicas a la imagen que se encuentra en el inciso a), \citep {Smith1999} \relax }}{32}{figure.caption.26}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {original}}}{32}{figure.caption.26}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {dilataci\IeC {\'o}n}}}{32}{figure.caption.26}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {erosi\IeC {\'o}n}}}{32}{figure.caption.26}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {apertura}}}{32}{figure.caption.26}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {cierre}}}{32}{figure.caption.26}
-\contentsline {figure}{\numberline {20}{\ignorespaces Proceso de la extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas.\relax }}{33}{figure.caption.27}
-\contentsline {figure}{\numberline {21}{\ignorespaces Ejemplo de un conjunto conexo y un convexo. Image recuperada de \ref {ConvexFN} \relax }}{33}{figure.caption.28}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Convexo}}}{33}{figure.caption.28}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {conexo}}}{33}{figure.caption.28}
-\contentsline {figure}{\numberline {22}{\ignorespaces En la imagen se aprecia de color rojo la envolvente convexa, de negro el contorno de la figura y los puntos amarillos son el punto de profundidad de los defectos de convexidad.\relax }}{34}{figure.caption.29}
-\contentsline {figure}{\numberline {23}{\ignorespaces La figura muestra parte de la mano y en ella se aprecia los siguientes elementos: en color rojo la envolvente convexa, en amarillo los puntos de inicio y final de los defectos de convexidad, en color azul los puntos de profundidad de los defectos, en verde la linea que une a los puntos de profundidad consecutivos y finalmente en morado los puntos medios, \citep {Hummel2014}\relax }}{35}{figure.caption.30}
-\contentsline {figure}{\numberline {24}{\ignorespaces En la imagen se representan los siguientes elementos, el eje vertical con respecto a la mano se encuentra como una l\IeC {\'\i }nea de color verde; la l\IeC {\'\i }nea roja represente la distancia del eje vertical a la ra\IeC {\'\i }z de los dedos; el punto rosa representa el centro de la palma de la mano, el \IeC {\'a}rea azul representa el \IeC {\'a}ngulo de que existe de la l\IeC {\'\i }nea que une al centro con la ra\IeC {\'\i }z de los dedos y finalmente el \IeC {\'a}rea anaranjada representa el \IeC {\'a}ngulo que forma la l\IeC {\'\i }nea del centro a la punta de los dedos, \citep {Sgouropoulos2014}.\relax }}{36}{figure.caption.31}
-\contentsline {figure}{\numberline {25}{\ignorespaces La imagen muestra la separaci\IeC {\'o}n de dos clases, (los c\IeC {\'\i }rculos en color azul y negro), mediante un hiperplano \IeC {\'o}ptimo; donde $\text {w}$ representa la normal al hiperplano, $\frac {\textbf {-b}}{\textbf {\text {w}}}$ la distancia el hiperplano al origen \citep {Burges1998}.\relax }}{37}{figure.caption.32}
+\contentsline {figure}{\numberline {8}{\ignorespaces Metodolog\IeC {\'\i }a del sistema propuesto.\relax }}{22}{figure.caption.15}
+\contentsline {figure}{\numberline {9}{\ignorespaces Proceso de la etapa de adquisici\IeC {\'o}n de datos.\relax }}{22}{figure.caption.16}
+\contentsline {figure}{\numberline {10}{\ignorespaces Parte frontal del dispositivo Kinect en su versi\IeC {\'o}n para Windows, imagen recuperada de \footnotemark {}.\relax }}{23}{figure.caption.17}
+\contentsline {figure}{\numberline {11}{\ignorespaces Componentes del sensor Kinect, imagen recuperada de \FN@sf@gobble@optonly {}.\relax }}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {12}{\ignorespaces Proceso de detecci\IeC {\'o}n de la mano.\relax }}{25}{figure.caption.19}
+\contentsline {figure}{\numberline {13}{\ignorespaces Procedimiento del algoritmo de detecci\IeC {\'o}n r\IeC {\'a}pida de objetos.\relax }}{26}{figure.caption.20}
+\contentsline {figure}{\numberline {14}{\ignorespaces Ejemplo de tipos de operadores Haar.\relax }}{27}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{27}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{27}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{27}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{27}{figure.caption.21}
+\contentsline {figure}{\numberline {15}{\ignorespaces Ejemplo del c\IeC {\'a}lculo de la imagen integral.\relax }}{27}{figure.caption.22}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagen original}}}{27}{figure.caption.22}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagen integral}}}{27}{figure.caption.22}
+\contentsline {figure}{\numberline {16}{\ignorespaces Regiones de la imagen integral.\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {17}{\ignorespaces Proceso del clasificador en forma de cascada, donde F representa la tasa de falsos positivos del clasificador de cascada y T representa el n\'umero de caracter\IeC {\'\i }sticas.\relax }}{29}{figure.caption.24}
+\contentsline {figure}{\numberline {18}{\ignorespaces Ejemplos de elementos estructurales.\relax }}{32}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rect\IeC {\'a}ngulo de $3x3$.}}}{32}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Figura de $3x2$.}}}{32}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cruz de $5x5$.}}}{32}{figure.caption.25}
+\contentsline {figure}{\numberline {19}{\ignorespaces Aplicaci\IeC {\'o}n de las principales operaciones morfol\IeC {\'o}gicas a la imagen que se encuentra en el inciso a), \citep {Smith1999}.\relax }}{33}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {original}}}{33}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {dilataci\IeC {\'o}n}}}{33}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {erosi\IeC {\'o}n}}}{33}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {apertura}}}{33}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {cierre}}}{33}{figure.caption.26}
+\contentsline {figure}{\numberline {20}{\ignorespaces Proceso de la extracci\IeC {\'o}n de caracter\IeC {\'\i }sticas.\relax }}{34}{figure.caption.27}
+\contentsline {figure}{\numberline {21}{\ignorespaces Ejemplo de un conjunto conexo y un convexo. Image recuperada de \ref {ConvexFN}. \relax }}{34}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Convexo}}}{34}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {conexo}}}{34}{figure.caption.28}
+\contentsline {figure}{\numberline {22}{\ignorespaces En la imagen se aprecia de color rojo la envolvente convexa, de negro el contorno de la figura y los puntos amarillos son el punto de profundidad de los defectos de convexidad.\relax }}{35}{figure.caption.29}
+\contentsline {figure}{\numberline {23}{\ignorespaces La figura muestra parte de la mano y en ella se aprecia los siguientes elementos: en color rojo la envolvente convexa, en amarillo los puntos de inicio y final de los defectos de convexidad, en color azul los puntos de profundidad de los defectos, en verde la linea que une a los puntos de profundidad consecutivos y finalmente en morado los puntos medios, \citep {Hummel2014}.\relax }}{36}{figure.caption.30}
+\contentsline {figure}{\numberline {24}{\ignorespaces En la imagen se representan los siguientes elementos, el eje vertical con respecto a la mano se encuentra como una l\IeC {\'\i }nea de color verde; la l\IeC {\'\i }nea roja represente la distancia del eje vertical a la ra\IeC {\'\i }z de los dedos; el punto rosa representa el centro de la palma de la mano, el \IeC {\'a}rea azul representa el \IeC {\'a}ngulo de que existe de la l\IeC {\'\i }nea que une al centro con la ra\IeC {\'\i }z de los dedos y finalmente el \IeC {\'a}rea anaranjada representa el \IeC {\'a}ngulo que forma la l\IeC {\'\i }nea del centro a la punta de los dedos, \citep {Sgouropoulos2014}.\relax }}{37}{figure.caption.31}
+\contentsline {figure}{\numberline {25}{\ignorespaces La imagen muestra la separaci\IeC {\'o}n de dos clases, (los c\IeC {\'\i }rculos en color azul y negro), mediante un hiperplano \IeC {\'o}ptimo; donde $\text {w}$ representa la normal al hiperplano, $\frac {\textbf {-b}}{\textbf {\text {w}}}$ la distancia el hiperplano al origen \citep {Burges1998}.\relax }}{38}{figure.caption.32}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {26}{\ignorespaces Configuraci\IeC {\'o}n del sistema de reconocimiento de gestos\relax }}{40}{figure.caption.33}
-\contentsline {figure}{\numberline {27}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{41}{figure.caption.34}
-\contentsline {figure}{\numberline {28}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect\relax }}{41}{figure.caption.35}
-\contentsline {figure}{\numberline {29}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{42}{figure.caption.36}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{42}{figure.caption.36}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{42}{figure.caption.36}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Palma de la mano con los dedos juntos.}}}{42}{figure.caption.36}
-\contentsline {figure}{\numberline {30}{\ignorespaces Im\IeC {\'a}genes del fondo de nuestra base de datos.\relax }}{43}{figure.caption.37}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ejemplo de imagen de fondo, donde se encuentra una silla y escritorio.}}}{43}{figure.caption.37}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ejemplo de imagen de fondo, donde se aprecian objetos en un escritorio.}}}{43}{figure.caption.37}
-\contentsline {figure}{\numberline {31}{\ignorespaces Localizaci\IeC {\'o}n y selecci\IeC {\'o}n de la mano, en la imagen de entrada del Kinect 2.\relax }}{43}{figure.caption.38}
-\contentsline {figure}{\numberline {32}{\ignorespaces Binarizaci\IeC {\'o}n de ROI y aplicaci\IeC {\'o}n de las operaciones morfol\IeC {\'o}gicas de la mano localizada en la Figura anterior.\relax }}{44}{figure.caption.39}
-\contentsline {figure}{\numberline {33}{\ignorespaces La imagen muestra algunas caracter\IeC {\'\i }sticas de la mano. El contorno rojo representa la envolvente convexa, el rect\IeC {\'a}ngulo verde es el rect\IeC {\'a}ngulo que rodea a la mano, el rect\IeC {\'a}ngulo gris representa el \IeC {\'a}rea de la palma de la mano, los c\IeC {\'\i }rculos en color amarillo la punta de los dedos, en color azul se encuentran los puntos de profundidad encontrados en medio de los dedos, en rosa el centro de la palma de la mano.\relax }}{45}{figure.caption.40}
-\contentsline {figure}{\numberline {34}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{46}{figure.caption.41}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{46}{figure.caption.41}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{46}{figure.caption.41}
-\contentsline {figure}{\numberline {35}{\ignorespaces Secuencia del gesto din\IeC {\'a}mico de la palma de la mano con los dedos separados, la vista es desde el Kinect frontal.\relax }}{46}{figure.caption.42}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{46}{figure.caption.42}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 15 }}}{46}{figure.caption.42}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 30 }}}{46}{figure.caption.42}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro n\IeC {\'u}mero 45 }}}{46}{figure.caption.42}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Cuadro final}}}{46}{figure.caption.42}
-\contentsline {figure}{\numberline {36}{\ignorespaces Secuencia del gesto din\IeC {\'a}mico del pu\IeC {\~n}o, la vista es desde el Kinect frontal.\relax }}{47}{figure.caption.43}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{47}{figure.caption.43}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 15 }}}{47}{figure.caption.43}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 30 }}}{47}{figure.caption.43}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro n\IeC {\'u}mero 45 }}}{47}{figure.caption.43}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Cuadro final}}}{47}{figure.caption.43}
+\contentsline {figure}{\numberline {26}{\ignorespaces Configuraci\IeC {\'o}n del sistema de reconocimiento de gestos.\relax }}{41}{figure.caption.33}
+\contentsline {figure}{\numberline {27}{\ignorespaces Representaci\IeC {\'o}n de los datos capturados por los Kinect.\relax }}{42}{figure.caption.34}
+\contentsline {figure}{\numberline {28}{\ignorespaces Imagen capturada por el Kinect, a la cual se le aplic\'o un filtro de mediana.\relax }}{42}{figure.caption.35}
+\contentsline {figure}{\numberline {29}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{43}{figure.caption.36}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{43}{figure.caption.36}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{43}{figure.caption.36}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Palma de la mano con los dedos juntos.}}}{43}{figure.caption.36}
+\contentsline {figure}{\numberline {30}{\ignorespaces Im\IeC {\'a}genes del fondo de nuestra base de datos.\relax }}{44}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ejemplo de imagen de fondo, donde se encuentra una silla y escritorio.}}}{44}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ejemplo de imagen de fondo, donde se aprecian objetos en un escritorio.}}}{44}{figure.caption.37}
+\contentsline {figure}{\numberline {31}{\ignorespaces Localizaci\IeC {\'o}n y selecci\IeC {\'o}n de la mano, en la imagen de entrada del Kinect 2.\relax }}{44}{figure.caption.38}
+\contentsline {figure}{\numberline {32}{\ignorespaces Binarizaci\IeC {\'o}n de ROI y aplicaci\IeC {\'o}n de las operaciones morfol\IeC {\'o}gicas de la mano localizada en la Figura anterior.\relax }}{45}{figure.caption.39}
+\contentsline {figure}{\numberline {33}{\ignorespaces La imagen muestra algunas caracter\IeC {\'\i }sticas de la mano. El contorno rojo representa la envolvente convexa, el rect\IeC {\'a}ngulo verde es el rect\IeC {\'a}ngulo que rodea a la mano, el rect\IeC {\'a}ngulo gris representa el \IeC {\'a}rea de la palma de la mano, los c\IeC {\'\i }rculos en color amarillo la punta de los dedos, en color azul se encuentran los puntos de profundidad encontrados en medio de los dedos, en rosa el centro de la palma de la mano.\relax }}{46}{figure.caption.40}
+\contentsline {figure}{\numberline {34}{\ignorespaces Ejemplo de im\IeC {\'a}genes de poses de nuestra base de datos.\relax }}{47}{figure.caption.41}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Palma de la mano con los dedos separados.}}}{47}{figure.caption.41}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pu\IeC {\~n}o.}}}{47}{figure.caption.41}
+\contentsline {figure}{\numberline {35}{\ignorespaces Secuencia del gesto din\IeC {\'a}mico de la palma de la mano con los dedos separados, la vista es desde el Kinect frontal.\relax }}{47}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{47}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 15 }}}{47}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 30 }}}{47}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro n\IeC {\'u}mero 45 }}}{47}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Cuadro final}}}{47}{figure.caption.42}
+\contentsline {figure}{\numberline {36}{\ignorespaces Secuencia del gesto din\IeC {\'a}mico del pu\IeC {\~n}o, la vista es desde el Kinect frontal.\relax }}{48}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cuadro inicial}}}{48}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cuadro n\IeC {\'u}mero 15 }}}{48}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Cuadro n\IeC {\'u}mero 30 }}}{48}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Cuadro n\IeC {\'u}mero 45 }}}{48}{figure.caption.43}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {Cuadro final}}}{48}{figure.caption.43}
 \addvspace {0\p@ }
-\contentsline {figure}{\numberline {37}{\ignorespaces Laboratorio en condiciones est\IeC {\'a}ndar de iluminaci\IeC {\'o}n.\relax }}{49}{figure.caption.44}
-\contentsline {figure}{\numberline {38}{\ignorespaces Laboratorio en condiciones con iluminaci\IeC {\'o}n media.\relax }}{52}{figure.caption.51}
-\contentsline {figure}{\numberline {39}{\ignorespaces Laboratorio en condiciones con baja iluminaci\IeC {\'o}n.\relax }}{54}{figure.caption.56}
+\contentsline {figure}{\numberline {37}{\ignorespaces Laboratorio en condiciones est\IeC {\'a}ndar de iluminaci\IeC {\'o}n.\relax }}{50}{figure.caption.44}
+\contentsline {figure}{\numberline {38}{\ignorespaces Laboratorio en condiciones con iluminaci\IeC {\'o}n media.\relax }}{53}{figure.caption.51}
+\contentsline {figure}{\numberline {39}{\ignorespaces Laboratorio en condiciones con baja iluminaci\IeC {\'o}n.\relax }}{55}{figure.caption.56}
 \addvspace {0\p@ }
 \addvspace {0\p@ }
 \addvspace {0\p@ }
